@@ -6,7 +6,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.jasonmeridth.com/</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2006/</loc>
@@ -26,63 +26,63 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/01/29/pair-programming.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/01/31/slicehost-articles.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/02/09/hudson-and-nginx.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/02/26/git-and-sharedrepository.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/04/06/nerds.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/05/28/git-post-receive-hook-with-integrity-post-call.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/06/09/hudson-service-files.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/10/08/git-instaweb.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/10/08/git-local-pre-commit-hook.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/10/08/moved-blog-to-jekyll.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/10/08/ruby-design-patterns-by-russ-olsen.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/12/06/pair-programming-with-screen.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/12/13/agile_coaching.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/12/20/suspicious-patch-lines.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2009/12/22/git-post-merge-hook-to-auto-fire-rails-migrations.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/</loc>
@@ -90,47 +90,47 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/01/18/refspec-matches-more-than-one.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/03/22/git-reset-checkout-bare-double-dash-revert.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/03/23/git-tracking-branches.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/03/30/pro-git-cliff-notes.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/04/02/oauth.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/05/22/git-ps1.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/05/22/gitosis-and-gitweb-part-1.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/05/22/gitosis-and-gitweb-part-2.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/05/26/gitosis-and-gitweb-part-3.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/05/26/gotcha-with-gitosis-and-python-setuptools.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2010/11/25/readline-error-with-rvm-and-rails-3.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2011/</loc>
@@ -142,55 +142,55 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/03/21/git-achievements-on-windows.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/03/23/how-to-capture-exception-message-from-assert-throws.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/03/30/do-not-issue-pull-requests-from-your-master-branch.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/03/30/git-clone-mirror-vs-git-clone-bare.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/04/05/nuget-dependency-versioning-and-log4net-1.2.11.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/05/22/automatically-execute-mistyped-git-commands.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/05/22/git-and-seeing-what-commits-are-not-in-another-branch.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/07/11/using-latest-version-of-git-on-ubuntu.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/09/19/testing-mail-from-the-command-line-on-ubuntu.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/10/02/postgresql-command-line-cheat-sheet.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/10/06/bash_profile_vs_bashrc.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/10/15/dell-information-via-command-line.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2012/10/24/your-filename.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/</loc>
@@ -198,55 +198,55 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/02/03/double_exclamations_in_ruby.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/02/03/has_and_belongs_to_many_join_table_name_must_be_in_alphabetical_order.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/02/05/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/02/11/use_git_grep_to_replace_strings_in_files_in_your_git_repository.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/02/21/edit-sudoers-no-password.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/03/06/get-sinatra-and-shotgun-gem-working-on-vagrant.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/03/06/install-and-setup-postgresql-on-new-ubuntu-vm.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/03/06/set-vim-as-default-editor.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/03/06/setup-rvm-and-ruby.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/03/06/tmux-cheat-sheet.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/03/23/run-a-specific-rspec-spec.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/03/31/fix-rendering-with-presence-of-doctype.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2013/04/02/using-default-scope-and-unscoped-in-rails.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2014/</loc>
@@ -262,7 +262,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/agile.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/agile.xml</loc>
@@ -270,7 +270,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/bash.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/bash.xml</loc>
@@ -294,7 +294,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/dell.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/dell.xml</loc>
@@ -302,7 +302,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/funny.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/funny.xml</loc>
@@ -310,15 +310,15 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/git.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/git.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/github.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/github.xml</loc>
@@ -326,7 +326,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/gitosis.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/gitosis.xml</loc>
@@ -374,7 +374,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/networking.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/networking.xml</loc>
@@ -390,7 +390,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/personal.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/personal.xml</loc>
@@ -398,7 +398,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/postgresql.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/postgresql.xml</loc>
@@ -406,7 +406,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/presentation.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/presentation.xml</loc>
@@ -414,7 +414,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/python.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/python.xml</loc>
@@ -422,7 +422,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rails.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rails.xml</loc>
@@ -430,7 +430,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rspec.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rspec.xml</loc>
@@ -438,7 +438,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ruby.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ruby.xml</loc>
@@ -454,7 +454,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/sinatra.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/sinatra.xml</loc>
@@ -462,7 +462,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/source-control.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/source-control.xml</loc>
@@ -470,7 +470,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/svn.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/svn.xml</loc>
@@ -486,7 +486,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/tmux.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/tmux.xml</loc>
@@ -502,7 +502,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ubuntu.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ubuntu.xml</loc>
@@ -510,7 +510,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/vagrant.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/vagrant.xml</loc>
@@ -534,7 +534,7 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/wireless.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/wireless.xml</loc>
@@ -659,6 +659,10 @@
  <url>
   <loc>http://blog.jasonmeridth.com/posts/agile-cheat-sheet/</loc>
   <lastmod>2014-02-24</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.jasonmeridth.com/posts/agile-coaching-book-review/</loc>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/posts/agile-development/</loc>
@@ -1435,6 +1439,10 @@
  <url>
   <loc>http://blog.jasonmeridth.com/posts/subversion-web-browser-30/</loc>
   <lastmod>2014-02-24</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.jasonmeridth.com/posts/suspicious-patch-lines/</loc>
+  <lastmod>2014-02-25</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/posts/svnrepository-com-rocks/</loc>
