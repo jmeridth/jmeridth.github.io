@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog (old posts, page 17) | Jason Meridth's Blog</title><link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/index-17.html"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    
+        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/twitterfeed-com-killed-the-my-google-reader/" class="u-url">Twitterfeed.com killed my Google Reader</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-30T23:37:00-06:00">Nov 30, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_3.png"></p>
+<p>We recently created a <a href="http://www.twitterfeed.com">TwitterFeed.com</a> account for LosTechies.  What this service does is query your RSS feed and whenever a new post is created, it will tweet the blog entry information.  I'm back on twitter and read it religiously.  The "real-time" information is priceless.  Being notified about posts is awesome.  Heck, it even notifies me when one of the other LosTechies members posts.</p>
+<p>This is a call out to all bloggers that use twitter.  Create a TwitterFeed.com account and you no longer have to announce your posts manually and it will help all your followers read your ideas that exceed 140 characters.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/twitterfeed-com-killed-the-my-google-reader/#311" title="2008-12-02 04:54:31">John Smith</a>:</strong> Here's my issue with it. WTF do they need my twitter account? Giving them my username and password doesn't really cut it with me.</p>
+<p><strong><a href="posts/twitterfeed-com-killed-the-my-google-reader/#312" title="2008-12-02 13:18:20">Jason Meridth</a>:</strong> @John Smith How else would twitterfeed make a tweet to twitter? If you are that scared, create a dummy twitter account, follow it and make an announcement on yours to tell people to follow it. Paranoid much? Can't even comment with your real name.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/twitterfeed-com-killed-the-my-google-reader/#disqus_thread" data-disqus-identifier="cache/posts/twitterfeed-com-killed-the-my-google-reader.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/ptom-november-2008-visitor-design-pattern/" class="u-url">PTOM: November 2008: Visitor Design Pattern</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-30T21:15:00-06:00">Nov 30, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><h3>Definition</h3>
+<p>Visitor Design Pattern - <em>"_Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates. " <a href="http://dofactory.com/Patterns/PatternVisitor.aspx">dofactory.com</a> Another term you may hear when working with the Visitor Pattern, is <a href="http://en.wikipedia.org/wiki/Double_dispatch">Double Dispatch</a>.  How that applies to Visitor is that the accept method takes a visitor instance, which in turn  has a visit method that takes the concrete instance (aka "this").  Inside the visitor visit method is where the core of the visitor pattern occurs.  It is where you can extend the concrete class without actually editing the concrete class. </em><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb.png">_</p>
+<h3>Open Closed Principle (OCP)</h3>
+<p>"...using the visitor pattern helps conformance with the open/closed principle." (<a href="http://en.wikipedia.org/wiki/Visitor_pattern">Wikipedia</a>)  The <a href="blogs/joe_ocampo/archive/2008/03/21/ptom-the-open-closed-principle.aspx">Open/Closed Principle</a> is that "a class is open for extension, closed for modification". (<a href="http://en.wikipedia.org/wiki/Open_Closed_Principle">Thank you Mr. Meyer</a>)  I recently used the Visitor pattern inline with usage of a State Pattern.  The Visitor would be able to determine, based on it's algorithms, which was changing regularly by the needs of the end user, whether an object could move to the next state in the machine.  Adhering to our theme, a coffee shop, I decided to generat a paycheck stub .  My C# example is showing how to report the coffee shop employees earned wages, deductions via sick days and number of vacation days taken: </p>
+<h3>C# Code</h3>
+<p>Test Firsts (NUnit): [gist id=1067984] I have two test fixtures, one for hourly employees and one for full-time employees.  Hopefully, via my rough version of Behavior Driven Development (BDD), you can read my tests without any problems. Implementation: [gist id=1067988] Please remember, this is "blog friendly" code.  I would definitely break the visitor class apart into a few classes (i.e., WageCalculator, SickPayDeductionCalculator, etc). </p>
+<h3>Ruby Code</h3>
+<p>Please understand that I'm a Ruby newbie and I'm petty sure there is a more "Ruby-ish" way to do this._ _I've recently been placed on a Ruby team and I'm making the transition from the static language mind-set to the dynamic language mind-set.  I do understand with mix-ins you can dynamically add functionality to a class based on context, so visitor may not be necessary at all.  I'm still grokking that concept.  I still believe in the Open/Closed principle, but it may be moot with dynamic languages. It's actually very exciting being a newbie developer again.  It feeds my insatiable need to learn. Test (Using RSpec): [gist id=1067994] Implementation: [gist id=1067996] </p>
+<h3>What I Learned</h3>
+<p>I personally use the strategy pattern more than any other pattern.  That is why I chose this pattern.  So I could understand it better. A good example I saw recently, using lambdas and all the new .NET features was <a href="http://mokhan.ca/blog/CommentView,guid,0480cc5f-54e4-452f-b0d5-661f0a8289d7.aspx#commentstart">Chad's comment</a> (<a href="http://pastie.org/245770">pastie.org</a>) on <a href="http://mokhan.ca/blog/2008/08/01/Recursive+Command.aspx">Mo's Recursive Command Post</a> Hope this helps someone understand the Visitor Design Pattern better.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/ptom-november-2008-visitor-design-pattern/#disqus_thread" data-disqus-identifier="cache/posts/ptom-november-2008-visitor-design-pattern.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/library-thing/" class="u-url">Library Thing</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-27T17:11:00-06:00">Nov 27, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p><strong><em>UPDATE: Shelfari.com has a much better UI and is just as awesome.  I've made the switch</em></strong></p>
+<p>I can't remember whose blogger profile I was looking at but I saw a link for <a href="http://www.librarything.com">LibraryThing.com</a>.  I had created a personal web application at home to query Amazon Web Services to bring back all the information I could about my books.  I did this years ago so that I could save it all to a CD and put it in my firebox in case of theft or fire/water damage.  I also sent a copy of the CD to my renters insurance company.  They were very surprised and actually starting querying their members for such items.</p>
+<p>I like <a href="http://www.librarything.com">LibraryThing.com</a> because it does everything I need.  I can tag items for grouping and it has links to buyers, like Borders, Amazon, Barnes and Noble, etc.  There are reviews and a "social" network to see who else owns the book or is currently reading it.  You can catalog when you read the book and other great metrics.  I like the comments section to put peoples names into, in case I loan the book out.  Helps me remember where it is.</p>
+<p>If you don't have an account, it is almost mandatory as a nerd with a library. It's a centralized way of remembering what books you own.</p>
+<p>Yes, <a href="http://safari.oreilly.com">Safari Books Online</a> is freaking awesome, but sometimes a normal book is what is needed.  I know I can't study with Safari (personal opinion).  I use it more as a reference.</p>
+<p>Check out my library <a href="http://www.librarything.com/profile/jmeridth">here</a>.</p>
+<p><em><strong>Special Note: They are in Beta and are a growing website.  If the visitor load gets to big sometimes, you can't view catalogs without signing in.</strong></em></p>
+<h3>Comments</h3>
+<p><strong><a href="posts/library-thing/#308" title="2008-11-27 21:45:42">Matt D.</a>:</strong> Also a cool program -- <a href="http://www.delicious-monster.com/">Delicious Library</a> I got a license via MacHeist, and while it's not exactly what you're saying, it lets you keep a catalog of all of your books, movies and games and uses AWS to give you up to the date information (and download cover/case art) for each and displays them on a virtual shelf.</p>
+<p><strong><a href="posts/library-thing/#309" title="2008-11-27 22:24:20">Jason Meridth</a>:</strong> @Matt D. Awesome. Looks very cool. I prefer free tools that run on the web, like delicious.com for bookmarks, etc. Mainly because I'm cheap. :) I actually have a Mac Book Pro, so I'll definitely check it out.</p>
+<p><strong><a href="posts/library-thing/#310" title="2008-12-03 15:19:57">James W.</a>:</strong> You should also check out http://www.shelfari.com</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/library-thing/#disqus_thread" data-disqus-identifier="cache/posts/library-thing.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/ot-child-s-play-charity/" class="u-url">[OT] Child's Play Charity</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-27T02:30:38-06:00">Nov 27, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p><img alt="image" src="posts/ot-child-s-play-charity/jasonmeridth/files/2011/03/image_5.png"></p>
+<p>A few of my posts lately have been non-technical, and this one is following suit, hence the OT (Off Topic) prefix on the post.  If you play video games, via console or PC/MAC, please take a moment and check out the <a href="http://www.childsplaycharity.org">Child's Play Charity</a>.  It is a merging between gamers of the world and the hospitals of the world.  What it consists of, is the ability to choose a registered hospital, listed on a map:</p>
+<p><img alt="image" src="posts/ot-child-s-play-charity/jasonmeridth/files/2011/03/image_6.png"></p>
+<p>(on the homepage of the site), and choose a toy from amazon to send to the hospital for children at the hospital.  You can also make a monetary donation via <a href="https://www.paypal.com/xclick/business=childsplaycharity@penny-arcade.com&amp;item_name=Childs%2BPlay%2BCharity&amp;no_note=1&amp;tax=0&amp;currency_code=USD">PayPal</a>.  They have a goal of $750K for the charity.  They are around $460K.  Any help you can give will bring a smile to a child's face and show the world that gamers give back too. </p>
+<p>Thank you to <a href="http://www.twitter.com/cerberus98">Matt Dietz</a> for making me aware of this charity.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/ot-child-s-play-charity/#307" title="2008-11-27 16:19:02">mo</a>:</strong> This is awesome, thanks for sharing!</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/ot-child-s-play-charity/#disqus_thread" data-disqus-identifier="cache/posts/ot-child-s-play-charity.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/" class="u-url">Creating an older rails project with multiple (newer) versions installed</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-25T20:27:55-06:00">Nov 25, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I have been studying rspec the last week or two and have been using Rail 2.1.2 to do my exploring.  I was finally ready to jump into some legacy code and couldn't even create a spec folder on the directory tree because the version of rails was older: </p>
+<div class="code"><pre>  <span class="mi">1</span><span class="o">:</span> <span class="n">user</span><span class="err">$</span> <span class="n">ruby</span> <span class="n">script</span><span class="o">/</span><span class="n">generate</span> <span class="n">rspec</span>
+
+
+
+  <span class="mi">2</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">gem</span> <span class="k">for</span> <span class="n">Rails</span> <span class="o">~&gt;</span><span class="mf">1.2.3.0</span><span class="o">:</span>
+
+
+
+  <span class="mi">3</span><span class="o">:</span>     <span class="n">Install</span> <span class="n">the</span> <span class="n">missing</span> <span class="n">gem</span> <span class="n">with</span> <span class="err">'</span><span class="n">gem</span> <span class="n">install</span> <span class="o">-</span><span class="n">v</span><span class="o">=</span><span class="mf">1.2.3</span> <span class="n">rails</span><span class="err">'</span><span class="p">,</span> <span class="n">or</span>
+
+
+
+  <span class="mi">4</span><span class="o">:</span>     <span class="n">change</span> <span class="n">environment</span><span class="p">.</span><span class="n">rb</span> <span class="n">to</span> <span class="n">define</span> <span class="n">RAILS_GEM_VERSION</span> <span class="n">with</span> <span class="n">your</span> <span class="n">desired</span> <span class="n">version</span><span class="p">.</span>
+</pre></div>
+
+
+<p>After looking at the rails file in /usr/bin, I noticed the regex was looking for something that matched the following regex string: </p>
+<div class="code"><pre>  <span class="mi">1</span><span class="o">:</span> <span class="o">/^</span><span class="n">_</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="n">_</span><span class="err">$</span><span class="o">/</span>
+</pre></div>
+
+
+<p>If my recollection holds, that means I'm looking for any character set that begins and ends with underscores (i.e., _1.x.x). </p>
+<p>So I tried the following: </p>
+<div class="code"><pre>  <span class="mi">1</span><span class="p">:</span> <span class="nx">rails</span> <span class="nx">_1.2.3_</span> <span class="o">&lt;</span><span class="nx">projectname</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>and it succeeded. </p>
+<p>Hope this helps someone else. Continuing my Ruby journey. </p>
+<p>I'm also looking at Fluent NHibernate now, so it's going to be a few couple weeks.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/#306" title="2009-01-16 19:51:36">bubba</a>:</strong> hey, that helped me. thanks!</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/#disqus_thread" data-disqus-identifier="cache/posts/creating-an-older-rails-project-with-multiple-newer-versions-installed.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/partnership/" class="u-url">Partnership</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-25T16:51:00-06:00">Nov 25, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Since LosTechies was started we've tried to make sure we have created a community that educates.  By doing that we've had to stand on the shoulders of a few giants/masters/leaders.  One of those leaders for us was Brendan Tompkins of <a href="http://www.codebetter.com">CodeBetter.com</a> and <a href="http://www.devlicio.us">Devlico.us</a>.  His <a href="http://devlicio.us/blogs/brendantompkins/default.aspx">blog is on Devlicio.us</a>.  I'm currently one of the maintainers for LosTechies and have queried Brendan's mind/help many times.  He has been an invaluable resource.</p>
+<p>Recently we decided to create a partnership.  You can see two "badges" linking to his two sites under a new Partnerships section on the side of our home page and blogs page.  You will also now see a LosTechies "badge" on the CB and DL sites.  The scope of the partnership will be defined as we grow and communicate.</p>
+<p>Educating, helping, and growing a pragmatic community can be shown by reading all three of our communities.</p>
+<p>This post is the partnership announcement and also a very big "Thank you" to Brendan for being a helping hand and mentor when necessary.</p>
+<p>P.S. Congratulations to Brendan on the new addition to his family.  Many blessings to him and your family.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/partnership/#305" title="2008-11-26 16:33:04">Billy McCafferty</a>:</strong> Most excellent...glad to hear the bridge is formed. You guys have done a terrific job with lostechies.com...it's nice to be partnered with you!</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/partnership/#disqus_thread" data-disqus-identifier="cache/posts/partnership.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/gmail-labs/" class="u-url">Gmail Labs</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-14T13:51:08-06:00">Nov 14, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Maybe I'm a little late noticing this, but the Labs option once you're in your gmail settings:</p>
+<p><img alt="image" src="posts/gmail-labs/jasonmeridth/files/2011/03/image_thumb.png"></p>
+<p>I was using the <a href="http://lifehacker.com/software/gmail/lifehacker-code-better-gmail-firefox-extension-251923.php">Better Gmail plugin</a> from LifeHacker for a while before Google upgraded gmail.  I enjoyed the fact that my signature was going to be before the email text I was replying.  Well, that is offered on the "Labs" tab now with a whole slue of other features.  Don't get me wrong, I still use the new <a href="http://lifehacker.com/software/exclusive-lifehacker-download/better-gmail-2-firefox-extension-for-new-gmail-320618.php">Better Gmail2 plugin</a> to ensure https is used when reading my mail.</p>
+<p><img alt="image" src="posts/gmail-labs/jasonmeridth/files/2011/03/image_thumb_1.png"></p>
+<p>The calendar gadget is another favorite because my wife and I use it a lot.  We have calendars for each of our sons and have their prespective doctor's appointments and school related events on there.  It's nice seeing all that information on the side of my mail.</p>
+<p><img alt="image" src="posts/gmail-labs/jasonmeridth/files/2011/03/image_thumb_2.png"></p>
+<p>Good job Google.</p>
+<p>Update: The new gmail skins offered by the Better Gmail 2 plugin are sweet, check out this redesign one:</p>
+<p><img alt="image" src="posts/gmail-labs/jasonmeridth/files/2011/03/image_thumb_4.png"></p>
+<h3>Comments</h3>
+<p><strong><a href="posts/gmail-labs/#299" title="2008-11-14 14:48:19">Dan</a>:</strong> Good stuff... "I still use the new Better Gmail2 plugin to ensure https is used when reading my mail." Am I missing something? There is a 'Always use https' option in the Gmail settings. Is this not reliable?</p>
+<p><strong><a href="posts/gmail-labs/#300" title="2008-11-14 15:00:08">Jason Meridth</a>:</strong> @Dan You are absolutely correct. Wow, they've added a lot to the settings.</p>
+<p><strong><a href="posts/gmail-labs/#301" title="2008-11-14 19:12:35">Brad Mead</a>:</strong> Schweet! Didn't know about any of this stuff. And I dig the Better gmail plugin -- going to take it for a spin right now. Never thought of HTTPs for reading e-mail but seems like a good idea... I wonder if HTTPs would prevent my corporate benefactors from prying? Keeping in mind of course that on company equipment prying into my browser sessions is their privilege.</p>
+<p><strong><a href="posts/gmail-labs/#302" title="2008-11-16 20:40:06">JH</a>:</strong> Thank you for bringing my attention to this. The signature thing has irritated me since I started using GMail.</p>
+<p><strong><a href="posts/gmail-labs/#303" title="2008-11-17 04:31:05">Lee Brandt</a>:</strong> the redesign skin in Better GMail2 is very sweet.... made my pants feel a little.. tight. :0)</p>
+<p><strong><a href="posts/gmail-labs/#304" title="2008-11-17 22:17:49">mbratton</a>:</strong> Why are you reading Gina's e-mail?</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/gmail-labs/#disqus_thread" data-disqus-identifier="cache/posts/gmail-labs.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/visual-svn-server/" class="u-url">Visual SVN Server</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-13T20:54:54-06:00">Nov 13, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Due to the new policies by <a href="http://www.assembla.com">Assembla.com</a> (not allowing free private source repositories), I've had to finally grab another server and stand-up <a href="http://www.visualsvn.com/server/">Visual SVN Server</a>.  It's free, VERY easy to manage and worked like a charm once installed.  Kudos to the <a href="http://www.visualsvn.com/">Visual SVN</a> team.</p>
+<p>Yes, this is against my better nature as a fan of Linux and "free" software, but I had heard good things about Visual SVN Server and wanted to see for myself.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/visual-svn-server/#296" title="2008-11-17 14:43:17">Vlad</a>:</strong> You could have your code hosted at devjavu (http://www.devjavu.com/). They offer simple Trac+SVN, and they felt simpler compared to the plethora of tools that assembla offers.</p>
+<p><strong><a href="posts/visual-svn-server/#297" title="2008-11-17 14:47:44">Jason Meridth</a>:</strong> @Vlad Awesome. Except, they just made the same announcement that Assembla did about closing free private repositories: http://blog.devjavu.com/2008/11/02/closing-free-project-registration/ That is what I was looking for. Thanks though.</p>
+<p><strong><a href="posts/visual-svn-server/#298" title="2008-11-17 18:05:15">Tom Opgenorth</a>:</strong> Totally agree with you here. VisualSVN is the best way to get an SVN server going, and I too have a bit of a bias towards Linux and "free" software.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/visual-svn-server/#disqus_thread" data-disqus-identifier="cache/posts/visual-svn-server.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/trying-to-restore-my-twitter-account/" class="u-url">Trying to restore my Twitter account</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-13T13:51:00-06:00">Nov 13, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p><em>update:  created armmer account after following Ben's advice below.</em></p>
+<p><strong>To any <a href="http://www.twitter.com">Twitter</a> employees out there:</strong></p>
+<p>I have been trying for about a month now to get my twitter account restored.  I decided to delete it and focus on other things or a while.  I decided to come back, via the information I was told that a deleted account could be restored within 60 days.  I've submitted 2 tickets to no avail.  I know you have tons of users and you're fighting the growing pains, but can one of you please restore my account.</p>
+<p>The account name is jmeridth.</p>
+<p>Please help.</p>
+<p><strong>To everyone who might comment:</strong></p>
+<p>I had decided to just let my prior account go and create a new one, but alas I cannot.  My old account is still holding onto my email address.  I only have one email address and don't see why I should just create a new one for a twitter account.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/trying-to-restore-my-twitter-account/#294" title="2008-11-13 18:11:16">Ben Scheirman</a>:</strong> If you use gmail, then you can add a period anywhere in the name and it will still arrive. su.b.di.gi.tal AT geemail dotcom will still make it to me.</p>
+<p><strong><a href="posts/trying-to-restore-my-twitter-account/#295" title="2008-11-13 18:54:00">Jason Meridth</a>:</strong> @Ben Cool. Did not know that.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/trying-to-restore-my-twitter-account/#disqus_thread" data-disqus-identifier="cache/posts/trying-to-restore-my-twitter-account.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/" class="u-url">"Printer Friendly Versions" of our posts now available</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2008-11-05T06:53:11-06:00">Nov 05, 2008</time></small></h1>
+        <hr><div class="e-content">
+        <div><p><img alt="Printer Friendly Version Example" src="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/jasonmeridth/files/2011/03/Picture-1_thumb.png"></p>
+<p>As shown in the example post above (thanks <a href="http://jimmybogard.lostechies.com">Jimmy</a>), you know have the ability to view a "Printer Friendly Version" of the current post.  This was a result of one of our readers contacting <a href="http://chadmyers.lostechies.com">Chad</a> and us responding.  Thank you to our reader for sharing his needs and helping us to provide a better user experience.  We will be making some changes to the <a href="http://www.lostechies.com">LosTechies</a> homepage and other areas in the near future.  If you subscribe via <a href="http://feeds.feedburner.com/lostechies">RSS</a> come check out the site sometime.</p>
+<p>Hail Pablo!</p>
+<p><img alt="Pablo" src="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/jasonmeridth/files/2011/03/Pablo_thumb.png"></p>
+<h3>Comments</h3>
+<p><strong><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#287" title="2008-11-05 16:14:48">mbratton</a>:</strong> Pablo be praised!</p>
+<p><strong><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#288" title="2008-11-05 18:06:58">jdn</a>:</strong> You're welcome. Thanks for the quick fix.</p>
+<p><strong><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#289" title="2008-11-05 18:11:42">Jason Meridth</a>:</strong> @marcus Agreed @jdn Glad we got it out there for you. Let us know if we can help in any other ways.</p>
+<p><strong><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#290" title="2008-11-05 19:54:10">Brad Mead</a>:</strong> Awesome enhancement guys. Thanks!</p>
+<p><strong><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#291" title="2008-11-06 16:16:44">JoeTheDeveloper</a>:</strong> Jason, Still tinkering with the site, I presume? The front page is really really hard to read from user standpoint. It's now basically showing work history instead of 'real' information. Yeah, I <em>could</em> look at the RSS stuff or even use an RSS reader but I'm not that sophisticated yet... I do like the site :)</p>
+<p><strong><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#292" title="2008-11-06 16:21:53">Jason Meridth</a>:</strong> @ Joe It's funny you mention that. We are working on a re-vamp of the home page. We have it in staging and will be moving it over soon. I may fix the home page to show blogs and media temporarily. Good input. Thanks.</p>
+<p><strong><a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#293" title="2008-11-06 16:37:27">Jason Meridth</a>:</strong> @JoeTheDeveloper I've changed the home page for now. We'll be putting up our custom one soon. Thanks for the input.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/quot-printer-friendly-versions-quot-of-our-posts-now-available/#disqus_thread" data-disqus-identifier="cache/posts/quot-printer-friendly-versions-quot-of-our-posts-now-available.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><div>
+        <ul class="pager"><li class="previous">
+                <a href="index-18.html" rel="prev">← Newer posts</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="index-16.html" rel="next">Older posts →</a>
+            </li>
+        
+        </ul></div>
+    
+
+    
+    
+        
+    
+       <script>var disqus_shortname="jasonmeridth";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

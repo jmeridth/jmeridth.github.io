@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Domain Model Overuse post by David Laribee on CodeBetter | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/domain-model-overuse-post-by-david-laribee-on-codebetter/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Domain Model Overuse post by David Laribee on CodeBetter</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2007-09-25T12:21:44-05:00" itemprop="datePublished">Sep 25, 2007</time>
+        
+    
+
+		
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p>David Laribee recently posted on <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx">Domain Model Overuse</a> and my colleague <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx#comments">Joe Ocampo (AgileJoe) responded</a>.  Check out the comments.</p>
+<p>Note: If you want to read Fowler's article on AnemicDomainModel, check out the <a href="http://64.233.169.104/search?q=cache:biq9rdhXyz4J:martinfowler.com/bliki/AnemicDomainModel.html+anemic+domain+model&amp;hl=en&amp;client=firefox-a&amp;gl=us&amp;strip=1">cached version on Google</a>, since the entry is down.</p>
+<p>I'm not worshipping Joe, but the conversation between him and David is worth reading.</p>
+<p>Enjoy.</p>
+<h3>Comments</h3>
+<p><strong><a href=".#118" title="2007-09-25 16:53:16">Joey Beninghove</a>:</strong> Good discussions indeed! From my perspective, a lot of these DDD approaches and the domain model pattern itself, are just good object-oriented design practices in the first place that help adhere to OOD principles. [http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod] For instance, the Specification pattern, while really nothing more than an implementation of a strategy pattern, can be very useful in a domain model. Very interesting logic can be encapsulated in these tiny highly-cohesive classes (i.e. calculations, policies, criteria, etc.) that can really help to stay as close to SRP &amp; OCP as possible (with OCP arguably being one of the hardest principles to adhere to in a real world system). Not to mention it makes testing these little jokers in isolation very easy. Are you guys making use of Specifications? If so, I'd be curious as to how far you take it? (And yes Joe, I know, "it depends"...) :D</p>
+<p><strong><a href=".#119" title="2007-09-25 17:08:12">Jason Meridth</a>:</strong> We are using it in our domain currently to handle status changes of a loan record. We started using the state pattern but the natural progression elevated to exceed that purpose. Once we put in specifications, we could just say something like: bool canChangeStatusToNewLead = CanChangeStatusFor(LoanRecord, LoanRecordStatusType.NewLead); this is not the exact syntax, but that's how we're using it. You mention criteria. Wouldn't that just be a value object and not really a specification.</p>
+<p><strong><a href=".#120" title="2007-09-25 17:17:50">Joey Beninghove</a>:</strong> Well, yeah, the search criteria data itself would really just be a value object, but the ability to chain together multiple criteria together can be attractive. For example, a tip I picked up from JP was to create your own IRichList interface and overloading Find() and FindAll() to take in an ISpecification implementation. Then you can create a nice mechanism for chaining together specifications when passing them in like: addressBook.FindAll(PersonsOverTheAgeOf16.And(PersonsWhoLiveInTexas)) Simple example, but you get the point. A better example can be found here: [http://devlicio.us/blogs/jeff_perrin/archive/2006/12/13/the-specification-pattern.aspx]</p>
+<p><strong><a href=".#121" title="2007-09-25 17:27:39">Jason Meridth</a>:</strong> Excellent information. Thanks Joey.</p>
+<p><strong><a href=".#122" title="2007-09-25 17:28:11">Jason Meridth</a>:</strong> When are you going to Simpsonize?! j/k</p>
+<p><strong><a href=".#123" title="2007-09-25 17:52:24">Joey Beninghove</a>:</strong> Ok, Ok, already. Guess it's official now... :)</p>
+<p><strong><a href=".#124" title="2007-09-25 18:09:25">Joe Ocampo</a>:</strong> @Joey &gt;"For instance, the Specification pattern, while really nothing more than an implementation of a strategy pattern..." Well that depends ... :-) The model specification as it relates to DDD purpose is to make implicit engineering concepts explicit for the "Ubiquitous Language". The OOP strategy pattern is a form of the EPP specification pattern but within a Domain Model the "Specificaton" is a term reserved for predicate operations that allow for greater incite to be captured towards to model. For instance the method "isCool" evaluates height, dress and odor of a person. In this case the "CoolPersonSpecification" object can be talked towards in a model and everyone understands what it does. Does it use a strategy pattern maybe or is it simply a switch statement encapsulated to provide greater incite? Perhaps. The point is (drum role) it depends! Simplicity first, patterns second. If all you are doing is evaluating 3 criterion maybe a strategy pattern is overkill. The important question to ask is, "When I mention the Cool Person Specification does everyone understand what I am talking about?" If they don't then go back and see if it is even applicable in the domain or does it belong outside the domain layer? "Do you take the blue pill or the red pill?" :-)</p>
+<p><strong><a href=".#125" title="2007-09-25 18:23:15">Joe Ocampo</a>:</strong> Awesome Joey!</p>
+<p><strong><a href=".#126" title="2007-09-25 18:24:24">Joey Beninghove</a>:</strong> Ahh, ok. I see what you mean. BTW, I'm still working my way through the official Evans book, so forgive me if my application of DDD is not quite in-line. :) So I'm currently encapsulating certain calculations into little strategy classes because I already know that the details of <em>how</em> the calculations will work is going to change (as in next week). So in this case, my thoughts are that by encapsulating frequently changing logic like this into small isolated classes it will keep me from having to keep modifying my domain objects themselves if all I need to do is introduce a new <em>implementation</em> of a certain calculation. As to whether this is just a simple OOP strategy pattern or a DDD specification... well, guess it depends... :) Thanks for the correction Joe!</p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../ruby-on-rails-wow/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../monorail-4-validation/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/domain-model-overuse-post-by-david-laribee-on-codebetter/",
+        
+        disqus_title="Domain Model Overuse post by David Laribee on CodeBetter",
+        disqus_identifier="cache/posts/domain-model-overuse-post-by-david-laribee-on-codebetter.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

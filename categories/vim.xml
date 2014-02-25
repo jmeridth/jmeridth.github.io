@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (vim)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/vim.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Feb 2014 15:51:06 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><description>&lt;div class="code"&gt;&lt;pre&gt;sudo update-alternatives –config editor
+
+OUTPUT:
+There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /bin/nano            40        auto mode
+  1            /bin/ed             -100       manual mode
+  2            /bin/nano            40        manual mode
+  3            /usr/bin/vim.basic   30        manual mode
+  4            /usr/bin/vim.tiny    10        manual mode
+
+Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type &lt;/span&gt;selection number: 3
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
+&lt;/pre&gt;&lt;/div&gt;</description><category>tools</category><category>vim</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item></channel></rss>

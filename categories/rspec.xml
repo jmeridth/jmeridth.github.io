@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (rspec)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/rspec.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Feb 2014 15:51:05 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Run a Specific RSpec Spec</title><link>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</link><description>&lt;div&gt;&lt;p&gt;Tired of looking this up and want to use my writing part of my brain to blog it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rake spec &lt;span class="nv"&gt;SPEC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;spec/controllers/sessions_controller_spec.rb &lt;span class="se"&gt;\&lt;/span&gt;
+  &lt;span class="nv"&gt;SPEC_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"-e \"should log in with cookie\""&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is importatnt to me while coding Rails because if I just run&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rspec specs/controllers/sessions_controller_spec.rb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the test database isn’t cleared out. By running &lt;code&gt;rake spec&lt;/code&gt; I get that.  &lt;/p&gt;&lt;/div&gt;</description><category>testing</category><category>tools</category><category>rspec</category><guid>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</guid><pubDate>Sat, 23 Mar 2013 05:00:00 GMT</pubDate></item></channel></rss>

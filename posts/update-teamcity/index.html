@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Update: TeamCity | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/update-teamcity/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Update: TeamCity</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2008-02-18T16:09:56-06:00" itemprop="datePublished">Feb 18, 2008</time>
+        
+    
+
+		
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p>As you saw from my <a href="http://www.lostechies.com/blogs/jason_meridth/archive/2008/01/24/jetbrains-teamcity.aspx">last TeamCity post</a>, I was a little frustrated about the fact that I had to create an environment variable to use the NAnt runner.  A colleague, <a href="http://geekswithblogs.net/dsellers/Default.aspx">Dru Sellers</a>, contacted me and mentioned the Command Line Build Runner.  He understood that I don't like my build process to be dependent on anything on the server, so I should be able to deploy my source to any server (minus the website being setup in IIS - automating that process is a post for another day).</p>
+<p>So, from the screen shot below you can see that Command Line is an option in the Build Runner drop down, just as NAnt was.  The Command executable is the path to the NAnt exe that I have in my tools folder that I have in my repository.  The Command parameters is the name of the build file.  This is not necessary because NAnt will find the build file in the current directory, but I like to be explicit. (/f:<buildfilename> or -buildfile:<buildfilename> are the same, if you are using the latter).</buildfilename></buildfilename></p>
+<p><img alt="image" src="blogs/jason_meridth/WindowsLiveWriter/c84155d26dd2_9957/image_thumb.png"></p>
+<p>I had to bug Dru further when making this change because I couldn't get it to work.  He was patient and kind enough to help me realize that my setup in step 2 (Version control settings), were not correct.  I didn't have the correct path to my repository trunk folder. </p>
+<p>After having my "Homer" moment (aka brain fart):</p>
+<p><img alt="image" src="blogs/jason_meridth/WindowsLiveWriter/c84155d26dd2_9957/image_thumb_1.png"></p>
+<p>I thanked Dru and looked forward to being more productive this weekend.  Thank you for your patience Dru.  Hope this is able to help another build coordinator (aka all developers who have side jobs) out there.</p>
+<h3>Comments</h3>
+<p><strong><a href=".#220" title="2008-03-06 14:39:54">Alexander Groß</a>:</strong> I also used the Command Line runner for the last couple of months because I didn't want to rely on some NAnt version being deployed on the TeamCity build agent. I've upgraded to TC 3.1 today and found that switching to the NAnt runner with the "NAnt home" property set to %system.teamcity.build.workingDir%\tools\NAnt also works and uses the NAnt version under source control. (NAnt is checked into my SVN repository under trunk/tools/NAnt/nant.exe)</p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../naming-your-test-methods/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../nant-and-net-3-5/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/update-teamcity/",
+        
+        disqus_title="Update: TeamCity",
+        disqus_identifier="cache/posts/update-teamcity.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

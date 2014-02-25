@@ -1,0 +1,18 @@
+.. title: The Sims meet .NET developers
+.. link: http://lostechies.com/jasonmeridth/2007/06/30/the-sims-meet-net-developers/
+.. description: 
+.. date: 2007/06/30 02:27:00
+.. slug: the-sims-meet-net-developers
+.. type: text
+
+
+I was reading Brad Abrams blog [entry](http://blogs.msdn.com/brada/archive/2007/06/28/visual-studio-in-second-life.aspx) today about [Visual Studio Island](https://www.visualstudioisland.com/) and decided to check it out.
+
+![Visual Studio Island](/blogs/jason_meridth/VisualStudioIsland.jpg) 
+
+This is the SIMS meet .NET Development.
+
+I'm still playing around but it can get pretty addictive.  
+ 
+
+![Second Life](/blogs/jason_meridth/secondLife.JPG)

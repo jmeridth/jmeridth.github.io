@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>SharpDevelop | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/sharpdevelop/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">SharpDevelop</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2007-11-01T23:02:03-05:00" itemprop="datePublished">Nov 01, 2007</time>
+        
+    
+
+		
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p><strong><em>UPDATE: Be aware that SharpDevelop doesn't seem to support the Web Application Project support.  It will handle ASP.NET Web Site Creation (Normal 2.0 web site project) but is doesn't have the ability to handle the legacy (1.1-) way of site project layout.</em></strong></p>
+<p><strong><em>UPDATE #2: Keyboard shortcuts can be found <a href="http://wiki.sharpdevelop.net/KeyboardShortcuts.ashx">here</a>. The trunk can be found <a href="http://wiki.sharpdevelop.net/AccessingTheRepository.ashx">here</a> for version 3.0. </em></strong></p>
+<p>I know Oren has <a href="http://www.ayende.com/Blog/archive/2007/09/21/ReSharper-for-Boo.aspx">commented</a> on <a href="http://www.icsharpcode.net/OpenSource/SD/">SharpDevelop</a> before because of it's Boo support, but I decided to dive into it further today and I'm thoroughly amazed.  I'm not a <a href="http://boo.codehaus.org/">Boo</a> developer (not yet) so I can't comment to that support yet.  I have used it in the past for <a href="http://wix.sourceforge.net/">WiX</a> project UI development, because I hate dealing with the XML files for the UI templates for WiX.</p>
+<p>Here is a screen shot:</p>
+<p><img alt="image" src="jasonmeridth/files/2011/03SharpDevelop_10570/image_thumb_1.png"></p>
+<p>If you can tell:<br>
+Left window is my "Solution Explorer".  There is built-in Subversion support, hence the green checkmarks.  There is good syntax highlighting and intellisense in the main window. I currently have a build file open (XML Tree tab is an option on the bottom, it uses the nant.xsd and it is a more user friendly experience)  The top-right window is a NAnt helper.  It pulls up the targets of my build file and allows me to run it from the IDE.  Also, there is a built-in test runner (bottom-right) window.</p>
+<p>What I have installed or am using in Visual Studio 2005/2008:<br><a href="http://ankhsvn.tigris.org/">Ankh</a> (Subversion)<br><a href="http://nantgui.berlios.de/">NAnt GUI</a> (NAnt GUI helper) - I only use this for presentations.  I'm a command line guy.<br>
+JetBrains Test Runner [<a href="http://www.jetbrains.com/unitrun/download/index.html">UnitRun</a>] (Comes with my ReSharper install, you used to be able to download it separately, but not anymore)<br><a href="http://wix.sourceforge.net/votive.html">Votive</a> (For WiX projects)<br><a href="http://testdriven.net/">TestDriven.NET</a><br><a href="http://www.kiwidude.com/dotnet/DownloadPage.html">NCoverExplorer</a></p>
+<p><img alt="image" src="jasonmeridth/files/2011/03SharpDevelop_10570/image_thumb_2.png"></p>
+<p>This is ALL Built-into SharpDevelop.  I think you have to have NUnit and NCover in your PATH environment variable.</p>
+<p>My last selling point was that it has built-in keystrokes for ReSharper-esqe commands.</p>
+<p>In <a href="http://www.jetbrains.com/resharper/">ReSharper</a> you can do Ctrl+N or Ctrl+Shift+N to look for files or classes by name.  In SharpDevelop it is Ctrl+G.  In Visual Studio this goes to a specific line number, but in SharpDevelop it does ALL 3.</p>
+<p><img alt="image" src="jasonmeridth/files/2011/03SharpDevelop_10570/image_thumb.png"></p>
+<p>Oh yeah, and guess what......It's FREE and open source.  You need a new feature, contribute. :)</p>
+<h3>Comments</h3>
+<p><strong><a href=".#190" title="2007-11-01 23:41:32">Sean Chambers</a>:</strong> I am downloading it as we speak. I played with it about a year ago but it didn't have all of those features. I am installing on my vmware fusion xp drive on my macbook right now. Hopefully it runs a little better than VS does in vmware</p>
+<p><strong><a href=".#191" title="2007-11-02 00:37:26">Jason Meridth</a>:</strong> I'm in the same boat sean. I tried it 2 years ago and it was not near what it is now. It loaded my project pretty fast. The only thing I've noticed is that it doesn't have a built-in web server like Visual Studio (Cassini), so when I try to run my web project from the IDE it doesn't work. The other positives outway the negatives so far. I'm very impressed.</p>
+<p><strong><a href=".#192" title="2007-11-02 00:42:55">Sean Chambers</a>:</strong> I am very impressed as well. I have my web project setup through IIS so i dont think the cassini problem will be a problem for me, although it would be handy It is very quick AND lightweight. it runs a hell of alot faster than VS does, thats for sure. i'm going to install it on my work machine tommorrow and see how it runs. I suppose asking for R# integration is too much to ask? =)</p>
+<p><strong><a href=".#193" title="2007-11-02 00:52:36">cramsay</a>:</strong> I tried it a couple of days ago, it's very fast. I like how it doesn't force its own project format on you, meaning you could potentially use SD at home and VS at work. Version 3 will have built-in refactoring and support for additional refactorings as add-ins; if they pull that off I could see it being popular but until then I won't switch because I'm so reliant on R#.</p>
+<p><strong><a href=".#194" title="2007-11-02 02:29:18">Tom Opgenorth</a>:</strong> #Develop has really come a long way in the past three years or so. I've notice that it doesn't seem to want to play nice with VS2005 solutions files though.</p>
+<p><strong><a href=".#195" title="2007-11-02 03:08:26">Sean Chambers</a>:</strong> @Tom that was the problem I saw when I played with it a year ago, although today when I downloaded version 2.2 I opened a 2005 solution and everything seemed to work perfectly. Like I said earlier, the real task will be to open a couple of my larger projects at work and see how it reacts to those. The project I was testing it on in vmware was just a bare bones webapp that I dont have alot of code in atm</p>
+<p><strong><a href=".#196" title="2007-11-02 04:02:47">Joe Ocampo</a>:</strong> reaffirming that VS is notepad with ReSharper. LOL Nope, wait a minute it is has an awesome file management explorer. To bad I always use [Control-N] to Navigate it.</p>
+<p><strong><a href=".#197" title="2007-11-02 04:03:50">Joe Ocampo</a>:</strong> Here is another question if Jet-Brains offered ReSharper for SharpDevelop would you switch?</p>
+<p><strong><a href=".#198" title="2007-11-02 08:45:25">cramsay</a>:</strong> Joe: I'd definitely look at it more seriously. At the moment I'm a bit, "well, it's nice but no R#" so I haven't given it much serious use. Even if it did have R# I might then come across something that was a dealbreaker when I started giving it serious use. That said, there are few things in an IDE with as much awesome-factor as R#, so I can't wait to see what SD3 brings.</p>
+<p><strong><a href=".#199" title="2007-11-02 11:36:25">Jason Meridth</a>:</strong> @Joe: YES! if Re# was a plugin for #Develop. I would switch. As a matter of fact, I switched last night. I'm going to grok #Develop.</p>
+<p><strong><a href=".#200" title="2007-11-02 12:25:05">jlockwood</a>:</strong> I tried using #Develop about 3 years ago and I felt I was better off trying to use Eclipse for C# development. It's really looking nice now. I'll need to try compiling it with mono and see how it fares on Linux...</p>
+<p><strong><a href=".#201" title="2007-11-02 17:05:37">Ben Scheirman</a>:</strong> I'm glad you posted this. I also tried it a while back and it wasn't near ready. Can you post again on things that might not be so nice if you transition from VS 2005 to #D?</p>
+<p><strong><a href=".#202" title="2007-11-02 17:44:52">Jason Meridth</a>:</strong> @Ben: Definitely. I've posted 2 updates to the top of the post already. I just downloaded the 3.0 trunk and installed and it is missing NAnt, and a few other common features, but that is to be expected from Alpha. :)</p>
+<p><strong><a href=".#203" title="2007-11-02 20:17:14">Sean Chambers</a>:</strong> I installed at work today and played with it for a little while. It is really fast on my machine at work that is a little beefier than my macbook. One thing that I don't like too much is the fonts and colors. In VS I have a fonts and colors .settings file that i've carried around for awhile that has alot of special key mappings and coloring that I can't carry to #Develop. I wouldn't say its a deal breaker but it would be nice. I loaded up a large project at work to test it. It loaded so fast that I was going to read an email waiting for it to load and before I could look away it had already loaded the solution. This is probably one of the strongest points for me if you can't tell. Far too often VS hangs or stalls for a second or two. Nothing aggravates me more than when the cursor is supposed to be typing characters and instead it just sits there waiting for the IDE to play catch up. I had a problem with associating a .retl (rhino-etl) file with boo because it didnt have a .boo extension so I posted a question to the forum and had a response within a couple of minutes. The response didn't fix the problem but it's nice to see an active community around it. I'll probably play more with it over the weekend and post some more findings.</p>
+<p><strong><a href=".#204" title="2007-11-08 14:24:59">J.P. Hamilton</a>:</strong> I installed it about a month ago, admittedly just for the Boo support. What a surprise! This is nothing like the SharpDevelop I remember from a few years back. It is very mature.</p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../thoughtworks-mingle/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../monorail-5-sending-an-email-and-authentication/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/sharpdevelop/",
+        
+        disqus_title="SharpDevelop",
+        disqus_identifier="cache/posts/sharpdevelop.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

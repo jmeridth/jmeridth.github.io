@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Naming your test methods | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/naming-your-test-methods/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Naming your test methods</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2008-02-10T04:23:43-06:00" itemprop="datePublished">Feb 10, 2008</time>
+        
+    
+
+		
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p>Today I had an opportunity to go to the TDD Coding Dojo hosting by <a href="http://feeds.feedburner.com/ChadMyersBlog">Chad Myers</a> and <a href="http://www.rayhouston.com/blog">Ray Houston</a> and I had a blast.  Some of the attendees have been doing TDD for a while (some have even migrated to instituting BDD into their development process) and some of them were trying to see what TDD was all about.  I think those people left with a better understanding of what TDD truly is and can be in their own development environments.</p>
+<p>Getting to the purpose of this post:  I was noticing that there was a lot of hang up on test method names during the dojo.  I know that you almost can't even write a test without knowing what you want to assert on your domain/service/etc..  I personally sometimes start with the following:</p>
+<div class="code"><pre>   <span class="mi">1</span><span class="o">:</span> <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+
+
+   <span class="mi">2</span><span class="o">:</span> <span class="n">public</span> <span class="kt">void</span> <span class="n">X</span><span class="p">()</span>
+
+
+   <span class="mi">3</span><span class="o">:</span> <span class="p">{</span>
+
+
+   <span class="mi">4</span><span class="o">:</span>
+
+
+   <span class="mi">5</span><span class="o">:</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>After making the test fail, I rename it to this (say this test was in the context of a US citizen having a passport):</p>
+<div class="code"><pre>   <span class="mi">1</span><span class="o">:</span> <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+
+
+   <span class="mi">2</span><span class="o">:</span> <span class="n">public</span> <span class="kt">void</span> <span class="n">should_be_able_to_travel_abroad</span><span class="p">()</span>
+
+
+   <span class="mi">3</span><span class="o">:</span> <span class="p">{</span>
+
+
+   <span class="mi">4</span><span class="o">:</span>
+
+
+   <span class="mi">5</span><span class="o">:</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>I usually write my test and my assertions, just to "do the simplest thing to get it to work".  I apply that philosophy to TDD too.  I want to do the simplest thing to get through Red-Green-Refactor.  I've paired with developers -- and have been guilty of this in the past too -- that spend more time on thinking of the test method name or the class context name instead of writing code.  It's a test in the first place, right?  I'm not "Joshing" the method-naming-first developers.  I can appreciate the fact that this is a personal choice.  I also expect to be asked, "how can you write your test if you don't know what you are going to test?"  My answer is, "I let the code tell me and I just want fingertips on the keyboard".  Hell, that is what F2 (Rename in ReSharper) is for.  I rename my method and context (TestFixture class name) accordingly after I see Red.  If upon passing and refactoring the test, the name needs to change again, hit F2.</p>
+<p>What are your thoughts?</p>
+<h3>Comments</h3>
+<p><strong><a href=".#214" title="2008-02-10 16:14:46">Chris Patterson</a>:</strong> A good way to break the log jam in naming your tests is to look at the acceptance criteria of the story you are developing. - When the passenger is traveling to another country, they must have a passport. public class When_the_passenger_is_traveling_to_another_country() { [Test] public void They_must_have_a_passport() { } } Just an example I know, but it makes sense if you start from a well defined story with solid acceptance criteria.</p>
+<p><strong><a href=".#215" title="2008-02-11 14:10:28">Christopher Bennage</a>:</strong> I pretty much do the same thing as you Jason. I care a lot about names, but I was wasting a lot of time naming things up front. Now, I either 'X' or best guess and take solace in the fact that I can easily F2 it as soon as I know more.</p>
+<p><strong><a href=".#216" title="2008-02-11 18:19:38">joeyDotNet</a>:</strong> The only thing you don't get with F2 is the ability to easily create a sentence like test name by actually writing a sentence. At least not as easily. One of my R# live templates (nt) is for creating a new test which looks like this: [Test] public void "TESTNAME"() { } With the TESTNAME part highlighted so I can just start typing a sentence including spaces. Then a short Alt-S + Alt-U later (spaces to underscores) I'm in business...using a tweaked version of the BDD macro that JP, Scott, Joe and others have showed. Might seem like a small thing, but I've found it speeds me up. And of course you can always F2 it later if you need to change it.</p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../jetbrains-teamcity/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../update-teamcity/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/naming-your-test-methods/",
+        
+        disqus_title="Naming your test methods",
+        disqus_identifier="cache/posts/naming-your-test-methods.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

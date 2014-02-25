@@ -1,0 +1,537 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog | Jason Meridth's Blog</title><link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    
+        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/using-sed-and-regex-to-remove-prefix-on-filenames/" class="u-url">Using sed and regex to Remove Prefix on Filenames</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2014-02-24T21:39:00-06:00">Feb 24, 2014</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I used <a href="https://github.com/dreikanter/wp2md">wp2md</a> recently to generate <a href="http://daringfireball.net/projects/markdown/">markdown</a> files out of my wordpress posts so that I could migrate to a static blog generator (like <a href="http://getnikola.com">Nikola</a>, the one I chose to use on this blog).  However, this exported the files with a prefixing datetime stamp (e.g., 20140224-blog-title.md)</p>
+<p>I have used <a href="http://www.gnu.org/software/sed/manual/sed.html">sed</a> many times from my command line toolbox to rename files or content inside of files.  Here is how I removed the prefixing datetime stamp from my filenames.</p>
+<div class="code"><pre><span class="k">for </span>f in *.md; <span class="k">do </span><span class="nb">echo</span> <span class="nv">$f</span> | sed -r <span class="s1">'s/.*(\d*)-(.*\.md)/\2/'</span>; <span class="k">done</span>
+</pre></div>
+
+
+<ul><li>the for loop iterates over just my mardown files (files with the md extension)</li>
+<li>I echo out the filename into the sed command line tool via a pipe, you can send the results of one command to the input of another by piping them together (e.e., command1 | command2)</li>
+<li>Then I setup the regex s/old_string/new_string/<ul><li>I've learned when using group matching (the sections in the parenthses) and trying to replace the old_string with an entirely new string, you need to start the old_string with .*.  This causes the entire line to be replaced with the contents of the new string</li>
+<li>old_string regex<ul><li>(\d*) - first group match - any digit, 1 or more times</li>
+<li>"-" - a hyphen separating the match groups</li>
+<li>(.*.md) - second group match - anything, ending in .md</li>
+</ul></li>
+<li>new_string regex<ul><li>\2 - replace the entire old string with the contents of the second group match</li>
+</ul></li>
+</ul></li>
+</ul><p>Example</p>
+<p><code>20140224-test-driven-development.md</code> becomes <code>test-driven-development.md</code></p>
+<p>NB: the ; do and ; done are just bash scripting loop notation when put onto one line.  This script could have also been written as</p>
+<div class="code"><pre><span class="k">for </span>f in *.md; <span class="k">do</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="nv">$f</span> | sed -r <span class="s1">'s/.*(\d*)-(.*\.md)/\2/'</span>
+<span class="k">done</span>
+</pre></div>
+
+
+<p>I am aware that <a href="http://getnikola.com">Nikola</a> has a <a href="http://getnikola.com/handbook.html#importing-your-wordpress-site-into-nikola">wordpress importer</a>, but it imports the files to <em>.wp and </em>.meta.  I wanted <a href="http://daringfireball.net/projects/markdown/">markdown</a> files (*.md)</p>
+<p>NB: I also use <a href="http://rubular.com">Rubular.com</a> all the time to test out my regex expressions.  You should check it out.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/using-sed-and-regex-to-remove-prefix-on-filenames/#disqus_thread" data-disqus-identifier="cache/posts/using-sed-and-regex-to-remove-prefix-on-filenames.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/consolidated-my-blogs/" class="u-url">Consolidated My Blogs</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2014-02-24T05:43:14-06:00">Feb 24, 2014</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I finally consolidate my blogs that were located at:</p>
+<ul><li><a href="http://jason.lostechies.com">http://jason.lostechies.com</a> - old posts</li>
+<li><a href="http://blog.jasonmeridth.com">http://blog.jasonmeridth.com</a> - current posts</li>
+</ul><p>and unified them here.  I also decided to move to <a href="http://getnikola.com">Nikola</a> since I'm coding in Python full-time now and it is a nice Python Static Site Generator.  New posts and theme changes coming soon.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/consolidated-my-blogs/#disqus_thread" data-disqus-identifier="cache/posts/consolidated-my-blogs.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/using-default-scope-and-unscoped-in-rails/" class="u-url">Using Deafult Scope and Unscoped in Rails</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-04-02T00:00:00-05:00">Apr 02, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:</p>
+<div class="code"><pre><span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="ss">deleted</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+</pre></div>
+
+
+<p>That does lean towards not having DRY (don’t repeat yourself) code. It’s a balancing act. I decided to give default_scope a chance this time. I quickly experienced the downside of that choice. I added the default_scope to my model:</p>
+<div class="code"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+  <span class="n">default_scope</span> <span class="n">where</span><span class="p">(</span><span class="ss">deleted</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>Well, I needed to write a migration to add the column and then update any existing records to have a default value of false. I generated my migration and added the following:</p>
+<div class="code"><pre><span class="k">class</span> <span class="nc">AddDeletedFlagToUsers</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">add_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:deleted</span><span class="p">,</span> <span class="ss">:boolean</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="kp">false</span>
+    <span class="no">User</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>However, when I looked at the database, none of the pre-existing records had false as their deleted flag. I went to the rails console and typed in the update_all command again:</p>
+<div class="code"><pre><span class="no">User</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+</pre></div>
+
+
+<p>and that’s when I saw how default_scope can bite you in the butt:</p>
+<div class="code"><pre>~/code/project<span class="o">(</span>master<span class="o">)</span> &amp;gt; rails c
+Loading development environment <span class="o">(</span>Rails 3.2.12<span class="o">)</span>
+&gt;&gt; User.update_all <span class="o">[</span><span class="s2">"deleted = ?"</span>, <span class="nb">false</span><span class="o">]</span>
+  SQL <span class="o">(</span>35.9ms<span class="o">)</span>  UPDATE <span class="s2">"users"</span> SET <span class="nv">deleted</span> <span class="o">=</span> <span class="s1">'f'</span> WHERE <span class="s2">"users"</span>.<span class="s2">"deleted"</span> <span class="o">=</span> <span class="s1">'f'</span>
+<span class="o">=</span>&gt; 0
+</pre></div>
+
+
+<p>Notice the <code>WHERE</code> clause. That is what the default_scope adds automatically. Duh!! So in order to bypass the default_scope I had to use <code>unscoped</code>:</p>
+<div class="code"><pre><span class="no">User</span><span class="o">.</span><span class="n">unscoped</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+</pre></div>
+
+
+<p>in my migration. That then caused all existing records to be updated.</p>
+<p>Yes, I’m aware this violates “Explicit over implicit” but it does keep my code “DRY (do not repeat yourself)”. There are pros and cons to all tools. Use them wisely.  </p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/using-default-scope-and-unscoped-in-rails/#disqus_thread" data-disqus-identifier="cache/posts/using-default-scope-and-unscoped-in-rails.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/fix-rendering-with-presence-of-doctype/" class="u-url">Fix Rendering With Presence of Doctype</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-31T00:00:00-05:00">Mar 31, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.</p>
+<p>In HTML or ERB:</p>
+<div class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</pre></div>
+
+
+<p>In <a href="http://haml.info">HAML</a>:</p>
+<div class="code"><pre>!!! 5
+</pre></div>
+
+
+<p>Other <a href="http://haml.info/docs/yardoc/file.REFERENCE.html#doctype_">HAML Doctypes</a></p>
+<p>The above is the format for HTML 5. I don’t bother with the <a href="http://www.w3schools.com/tags/tag_doctype.asp">HTML 4.01 DOCTYPEs</a></p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/fix-rendering-with-presence-of-doctype/#disqus_thread" data-disqus-identifier="cache/posts/fix-rendering-with-presence-of-doctype.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/run-a-specific-rspec-spec/" class="u-url">Run a Specific RSpec Spec</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-23T00:00:00-05:00">Mar 23, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Tired of looking this up and want to use my writing part of my brain to blog it:</p>
+<div class="code"><pre>rake spec <span class="nv">SPEC</span><span class="o">=</span>spec/controllers/sessions_controller_spec.rb <span class="se">\</span>
+  <span class="nv">SPEC_OPTS</span><span class="o">=</span><span class="s2">"-e \"should log in with cookie\""</span>
+</pre></div>
+
+
+<p>This is importatnt to me while coding Rails because if I just run</p>
+<div class="code"><pre>rspec specs/controllers/sessions_controller_spec.rb
+</pre></div>
+
+
+<p>the test database isn’t cleared out. By running <code>rake spec</code> I get that.  </p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/run-a-specific-rspec-spec/#disqus_thread" data-disqus-identifier="cache/posts/run-a-specific-rspec-spec.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/set-vim-as-default-editor/" class="u-url">Set VIM as Default Editor</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div class="code"><pre>sudo update-alternatives –config editor
+
+OUTPUT:
+There are 4 choices <span class="k">for </span>the alternative editor <span class="o">(</span>providing /usr/bin/editor<span class="o">)</span>.
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /bin/nano            40        auto mode
+  1            /bin/ed             -100       manual mode
+  2            /bin/nano            40        manual mode
+  3            /usr/bin/vim.basic   30        manual mode
+  4            /usr/bin/vim.tiny    10        manual mode
+
+Press enter to keep the current choice<span class="o">[</span>*<span class="o">]</span>, or <span class="nb">type </span>selection number: 3
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span class="o">(</span>editor<span class="o">)</span> in manual mode
+</pre></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/set-vim-as-default-editor/#disqus_thread" data-disqus-identifier="cache/posts/set-vim-as-default-editor.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/tmux-cheat-sheet/" class="u-url">TMUX Cheat Sheet</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Install TMUX</p>
+<div class="code"><pre>sudo apt-get install tmux
+</pre></div>
+
+
+<p>personal config file is at ~/.tmux.conf</p>
+<p>change prefix to ctrl-a instead of default ctrl-b (easier on my hands)</p>
+<div class="code"><pre>unbind C-b
+<span class="nb">set</span> -g prefix C-a
+</pre></div>
+
+
+<h4>Outside of session</h4>
+<ul><li><strong>tmux list-sessions</strong> List all sessions</li>
+<li><strong>tmux list-keys</strong> List all key bindings</li>
+<li><strong>tmux list-commands</strong> List all commands</li>
+<li><strong>tmux source-file ~/.tmux.conf</strong> Reload TMUX conf file</li>
+<li><strong>tmux a -t session_name</strong> Attach to named session</li>
+</ul><h4>Inside of session</h4>
+<ul><li><strong>Ctrl-a, new -s session_name</strong> Create new named session</li>
+<li><strong>Ctrl-a, c</strong> Create new window</li>
+<li><strong>Ctrl-a, ,</strong> Rename window</li>
+<li><strong>Ctrl-a, w</strong> List windows</li>
+<li><strong>Ctrl-a, l</strong> Move to previously selected window</li>
+<li><strong>Ctrl-a, n</strong> Move to next window</li>
+<li><strong>Ctrl-a, p</strong> Move to previous window</li>
+<li><strong>Ctrl-a, d</strong> Leave session</li>
+<li><strong>Ctrl-a, s</strong> List sessions</li>
+<li><strong>Ctrl-a, ?</strong> List all keybindings</li>
+<li><strong>Ctrl-a, %</strong> Split into vertical panes</li>
+<li><strong>Ctrl-a, ”</strong> Split into horizontal panes</li>
+<li><strong>Ctrl-a, {or}</strong> Switch between panes</li>
+<li><strong>Ctrl-a, KeyUp</strong> Switch to pane above</li>
+<li><strong>Ctrl-a, KeyDown</strong> Switch to pane below</li>
+<li><strong>Ctrl-a, KeyLeft</strong> Switch to pane to the left</li>
+<li><strong>Ctrl-a, KeyRight</strong> Switch to pane to the right  </li>
+</ul></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/tmux-cheat-sheet/#disqus_thread" data-disqus-identifier="cache/posts/tmux-cheat-sheet.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/setup-rvm-and-ruby/" class="u-url">Setup RVM and Ruby</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….</p>
+<p>Install curl</p>
+<div class="code"><pre>sudo apt-get install curl
+</pre></div>
+
+
+<p>Install RVM (forgot this, thanks <a href="http://twitter.com/jssingh">Jasdeep</a>)</p>
+<div class="code"><pre>curl -L get.rvm.io | bash -s stable --auto
+</pre></div>
+
+
+<p>Reload .bash_profile</p>
+<div class="code"><pre>. ~/.bash_profile
+</pre></div>
+
+
+<p>Run rvm requirements to see what needs to be installed</p>
+<div class="code"><pre>rvm requirements
+...
+Requirements <span class="k">for </span>ubuntu/12.10/x86_64
+
+NOTE: <span class="s1">'ruby'</span> represents Matz<span class="s1">'s Ruby Interpreter (MRI) (1.8.X, 1.9.X)</span>
+<span class="s1">             This is the *original* / standard Ruby Language Interpreter</span>
+<span class="s1">      '</span>ree<span class="s1">'  represents Ruby Enterprise Edition</span>
+<span class="s1">      '</span>rbx<span class="err">'</span>  represents Rubinius
+
+Additional Dependencies:
+<span class="c"># For update-system:</span>
+sudo apt-get update
+
+<span class="c"># For rvm:</span>
+sudo apt-get --no-install-recommends install bash curl git patch bzip2
+
+<span class="c"># For ruby:</span>
+sudo apt-get --no-install-recommends install build-essential openssl libreadline6 libreadline6-dev <span class="se">\</span>
+curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 <span class="se">\</span>
+libxml2-dev libxslt-dev autoconf libc6-dev libgdbm-dev ncurses-dev automake libtool bison <span class="se">\</span>
+subversion pkg-config libffi-dev
+
+<span class="c"># For jruby:</span>
+sudo apt-get --no-install-recommends install curl g%2B%2B openjdk-6-jre-headless
+</pre></div>
+
+
+<p>Install everything you need</p>
+<div class="code"><pre>sudo apt-get install build-essential openssl libreadline6 libreadline6-dev <span class="se">\</span>
+curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 <span class="se">\</span>
+libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison  <span class="se">\</span>
+subversion pkg-config libffi-dev
+</pre></div>
+
+
+<p>Install Ruby</p>
+<div class="code"><pre>rvm install 1.9.3
+...
+Searching <span class="k">for </span>binary rubies, this might take some time.
+ruby-1.9.3-p392 - <span class="c">#configure</span>
+ruby-1.9.3-p392 - <span class="c">#download</span>
+<span class="c">#############################################                             62.9%</span>
+</pre></div>
+
+
+<p>Begin to use ruby</p>
+<div class="code"><pre>rvm use 1.9.3
+...
+Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
+</pre></div>
+
+
+<p>Check your Ruby version</p>
+<div class="code"><pre>ruby -v
+...
+ruby 1.9.3p392 <span class="o">(</span>2013-02-22 revision 39386<span class="o">)</span> <span class="o">[</span>x86_64-linux<span class="o">]</span>
+</pre></div>
+
+
+<p>Set your default ruby version</p>
+<div class="code"><pre>rvm --default use 1.9.3-p327
+...
+Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
+</pre></div>
+
+
+<p>As [Jasdeep][2] says in the comments, it is worth knowing that you’ll need a javascript runtime to use Rails so you might as well install nodejs (because it is fun):</p>
+<div class="code"><pre>sudo apt-get install nodejs
+</pre></div></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/setup-rvm-and-ruby/#disqus_thread" data-disqus-identifier="cache/posts/setup-rvm-and-ruby.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/get-sinatra-and-shotgun-gem-working-on-vagrant/" class="u-url">Get Sinatra and Shotgun gem working on Vagrant</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>TL;DR</p>
+<div class="code"><pre>shotgun -o 0.0.0.0 config.ru
+</pre></div>
+
+
+<p>You have to tell <a href="https://github.com/rtomayko/shotgun/blob/master/bin/shotgun#L46">shotgun</a> to use 0.0.0.0, the “all IP addresses on this box” IP address listen on. The default is 127.0.0.1, which is the loopback IP address on the vagrant instance.</p>
+<p>Hope this helps someone.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/get-sinatra-and-shotgun-gem-working-on-vagrant/#disqus_thread" data-disqus-identifier="cache/posts/get-sinatra-and-shotgun-gem-working-on-vagrant.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/install-and-setup-postgresql-on-new-ubuntu-vm/" class="u-url">Install and Setup PostgreSQL on New Ubuntu VM</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Install PostgresSQL and the dev package:</p>
+<div class="code"><pre>sudo apt-get install postgresql libpq-dev
+</pre></div>
+
+
+<p>Reference <a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html">Cheat Sheet</a> after installation</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/install-and-setup-postgresql-on-new-ubuntu-vm/#disqus_thread" data-disqus-identifier="cache/posts/install-and-setup-postgresql-on-new-ubuntu-vm.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><div>
+        <ul class="pager"><li class="next">
+                <a href="index-23.html" rel="next">Older posts →</a>
+            </li>
+        
+        </ul></div>
+    
+
+    
+    
+        
+    
+       <script>var disqus_shortname="jasonmeridth";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

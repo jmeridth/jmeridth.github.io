@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (testing)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/testing.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Feb 2014 15:51:03 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Run a Specific RSpec Spec</title><link>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</link><description>&lt;div&gt;&lt;p&gt;Tired of looking this up and want to use my writing part of my brain to blog it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rake spec &lt;span class="nv"&gt;SPEC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;spec/controllers/sessions_controller_spec.rb &lt;span class="se"&gt;\&lt;/span&gt;
+  &lt;span class="nv"&gt;SPEC_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"-e \"should log in with cookie\""&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is importatnt to me while coding Rails because if I just run&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rspec specs/controllers/sessions_controller_spec.rb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the test database isn’t cleared out. By running &lt;code&gt;rake spec&lt;/code&gt; I get that.  &lt;/p&gt;&lt;/div&gt;</description><category>testing</category><category>tools</category><category>rspec</category><guid>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</guid><pubDate>Sat, 23 Mar 2013 05:00:00 GMT</pubDate></item><item><title>How to Capture the Exception Message From Assert.Throws in NUnit</title><link>http://blog.jasonmeridth.com/posts/how-to-capture-exception-message-from-assert-throws/</link><description>&lt;div&gt;&lt;p&gt;In the past I’ve used:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="na"&gt;[ExpectedException(typeof(CustomException), ExpectedMessage="blah blah blah")]&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to set an exception expectation and assert on the message. With the recent releases of NUnit I’ve finally transitioned all my code to use:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;Assert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Throws&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;CustomException&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;someType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;someValue&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;or&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;Assert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Throws&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;CustomException&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt;&lt;span class="n"&gt;someType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someMethod&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;if the method has no parameters.&lt;/p&gt;
+&lt;p&gt;Only lately have I needed to capture the exception message and validate it. To do this you do the following:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;ex&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Assert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Throws&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;CustomException&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(()&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;someType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;someMethod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;someValue&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+&lt;span class="n"&gt;Assert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;That&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ex&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Is&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;EqualTo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"expected message here"&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I am blogging about this because I keep forgetting how to capture the exception message. Hope it helps someone else.&lt;/p&gt;&lt;/div&gt;</description><category>.net</category><category>testing</category><guid>http://blog.jasonmeridth.com/posts/how-to-capture-exception-message-from-assert-throws/</guid><pubDate>Fri, 23 Mar 2012 05:00:00 GMT</pubDate></item></channel></rss>

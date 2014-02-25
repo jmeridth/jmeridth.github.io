@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><atom:link href="http://blog.jasonmeridth.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 25 Feb 2014 14:26:05 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using sed and regex to Remove Prefix on Filenames</title><link>http://blog.jasonmeridth.com/posts/using-sed-and-regex-to-remove-prefix-on-filenames/</link><description>&lt;div&gt;&lt;p&gt;I used &lt;a href="https://github.com/dreikanter/wp2md"&gt;wp2md&lt;/a&gt; recently to generate &lt;a href="http://daringfireball.net/projects/markdown/"&gt;markdown&lt;/a&gt; files out of my wordpress posts so that I could migrate to a static blog generator (like &lt;a href="http://getnikola.com"&gt;Nikola&lt;/a&gt;, the one I chose to use on this blog).  However, this exported the files with a prefixing datetime stamp (e.g., 20140224-blog-title.md)&lt;/p&gt;
+&lt;p&gt;I have used &lt;a href="http://www.gnu.org/software/sed/manual/sed.html"&gt;sed&lt;/a&gt; many times from my command line toolbox to rename files or content inside of files.  Here is how I removed the prefixing datetime stamp from my filenames.&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="k"&gt;for &lt;/span&gt;f in *.md; &lt;span class="k"&gt;do &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$f&lt;/span&gt; | sed -r &lt;span class="s1"&gt;'s/.*(\d*)-(.*\.md)/\2/'&lt;/span&gt;; &lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;&lt;li&gt;the for loop iterates over just my mardown files (files with the md extension)&lt;/li&gt;
+&lt;li&gt;I echo out the filename into the sed command line tool via a pipe, you can send the results of one command to the input of another by piping them together (e.e., command1 | command2)&lt;/li&gt;
+&lt;li&gt;Then I setup the regex s/old_string/new_string/&lt;ul&gt;&lt;li&gt;I've learned when using group matching (the sections in the parenthses) and trying to replace the old_string with an entirely new string, you need to start the old_string with .*.  This causes the entire line to be replaced with the contents of the new string&lt;/li&gt;
+&lt;li&gt;old_string regex&lt;ul&gt;&lt;li&gt;(\d*) - first group match - any digit, 1 or more times&lt;/li&gt;
+&lt;li&gt;"-" - a hyphen separating the match groups&lt;/li&gt;
+&lt;li&gt;(.*.md) - second group match - anything, ending in .md&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;new_string regex&lt;ul&gt;&lt;li&gt;\2 - replace the entire old string with the contents of the second group match&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Example&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;20140224-test-driven-development.md&lt;/code&gt; becomes &lt;code&gt;test-driven-development.md&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;NB: the ; do and ; done are just bash scripting loop notation when put onto one line.  This script could have also been written as&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="k"&gt;for &lt;/span&gt;f in *.md; &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$f&lt;/span&gt; | sed -r &lt;span class="s1"&gt;'s/.*(\d*)-(.*\.md)/\2/'&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I am aware that &lt;a href="http://getnikola.com"&gt;Nikola&lt;/a&gt; has a &lt;a href="http://getnikola.com/handbook.html#importing-your-wordpress-site-into-nikola"&gt;wordpress importer&lt;/a&gt;, but it imports the files to &lt;em&gt;.wp and &lt;/em&gt;.meta.  I wanted &lt;a href="http://daringfireball.net/projects/markdown/"&gt;markdown&lt;/a&gt; files (*.md)&lt;/p&gt;
+&lt;p&gt;NB: I also use &lt;a href="http://rubular.com"&gt;Rubular.com&lt;/a&gt; all the time to test out my regex expressions.  You should check it out.&lt;/p&gt;&lt;/div&gt;</description><category>command line</category><guid>http://blog.jasonmeridth.com/posts/using-sed-and-regex-to-remove-prefix-on-filenames/</guid><pubDate>Tue, 25 Feb 2014 03:39:00 GMT</pubDate></item><item><title>Consolidated My Blogs</title><link>http://blog.jasonmeridth.com/posts/consolidated-my-blogs/</link><description>&lt;div&gt;&lt;p&gt;I finally consolidate my blogs that were located at:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="http://jason.lostechies.com"&gt;http://jason.lostechies.com&lt;/a&gt; - old posts&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.jasonmeridth.com"&gt;http://blog.jasonmeridth.com&lt;/a&gt; - current posts&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;and unified them here.  I also decided to move to &lt;a href="http://getnikola.com"&gt;Nikola&lt;/a&gt; since I'm coding in Python full-time now and it is a nice Python Static Site Generator.  New posts and theme changes coming soon.&lt;/p&gt;&lt;/div&gt;</description><category>notification</category><guid>http://blog.jasonmeridth.com/posts/consolidated-my-blogs/</guid><pubDate>Mon, 24 Feb 2014 11:43:14 GMT</pubDate></item><item><title>Using Deafult Scope and Unscoped in Rails</title><link>http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</link><description>&lt;div&gt;&lt;p&gt;I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That does lean towards not having DRY (don’t repeat yourself) code. It’s a balancing act. I decided to give default_scope a chance this time. I quickly experienced the downside of that choice. I added the default_scope to my model:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="ss"&gt;ActiveRecord&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="ss"&gt;:Base&lt;/span&gt;
+  &lt;span class="n"&gt;default_scope&lt;/span&gt; &lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Well, I needed to write a migration to add the column and then update any existing records to have a default value of false. I generated my migration and added the following:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AddDeletedFlagToUsers&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="ss"&gt;ActiveRecord&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="ss"&gt;:Migration&lt;/span&gt;
+  &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;change&lt;/span&gt;
+    &lt;span class="n"&gt;add_column&lt;/span&gt; &lt;span class="ss"&gt;:users&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:deleted&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:boolean&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:default&lt;/span&gt; &lt;span class="o"&gt;=&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;
+    &lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update_all&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"deleted = ?"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;However, when I looked at the database, none of the pre-existing records had false as their deleted flag. I went to the rails console and typed in the update_all command again:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update_all&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"deleted = ?"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and that’s when I saw how default_scope can bite you in the butt:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;~/code/project&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;amp;gt; rails c
+Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.2.12&lt;span class="o"&gt;)&lt;/span&gt;
+&amp;gt;&amp;gt; User.update_all &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"deleted = ?"&lt;/span&gt;, &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+  SQL &lt;span class="o"&gt;(&lt;/span&gt;35.9ms&lt;span class="o"&gt;)&lt;/span&gt;  UPDATE &lt;span class="s2"&gt;"users"&lt;/span&gt; SET &lt;span class="nv"&gt;deleted&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'f'&lt;/span&gt; WHERE &lt;span class="s2"&gt;"users"&lt;/span&gt;.&lt;span class="s2"&gt;"deleted"&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'f'&lt;/span&gt;
+&lt;span class="o"&gt;=&lt;/span&gt;&amp;gt; 0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Notice the &lt;code&gt;WHERE&lt;/code&gt; clause. That is what the default_scope adds automatically. Duh!! So in order to bypass the default_scope I had to use &lt;code&gt;unscoped&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;unscoped&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update_all&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"deleted = ?"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;in my migration. That then caused all existing records to be updated.&lt;/p&gt;
+&lt;p&gt;Yes, I’m aware this violates “Explicit over implicit” but it does keep my code “DRY (do not repeat yourself)”. There are pros and cons to all tools. Use them wisely.  &lt;/p&gt;&lt;/div&gt;</description><category>rails</category><guid>http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</guid><pubDate>Tue, 02 Apr 2013 05:00:00 GMT</pubDate></item><item><title>Fix Rendering With Presence of Doctype</title><link>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</link><description>&lt;div&gt;&lt;p&gt;A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.&lt;/p&gt;
+&lt;p&gt;In HTML or ERB:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In &lt;a href="http://haml.info"&gt;HAML&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;!!! 5
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Other &lt;a href="http://haml.info/docs/yardoc/file.REFERENCE.html#doctype_"&gt;HAML Doctypes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The above is the format for HTML 5. I don’t bother with the &lt;a href="http://www.w3schools.com/tags/tag_doctype.asp"&gt;HTML 4.01 DOCTYPEs&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>html5</category><category>haml</category><guid>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</guid><pubDate>Sun, 31 Mar 2013 05:00:00 GMT</pubDate></item><item><title>Run a Specific RSpec Spec</title><link>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</link><description>&lt;div&gt;&lt;p&gt;Tired of looking this up and want to use my writing part of my brain to blog it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rake spec &lt;span class="nv"&gt;SPEC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;spec/controllers/sessions_controller_spec.rb &lt;span class="se"&gt;\&lt;/span&gt;
+  &lt;span class="nv"&gt;SPEC_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"-e \"should log in with cookie\""&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is importatnt to me while coding Rails because if I just run&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rspec specs/controllers/sessions_controller_spec.rb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;the test database isn’t cleared out. By running &lt;code&gt;rake spec&lt;/code&gt; I get that.  &lt;/p&gt;&lt;/div&gt;</description><category>testing</category><category>tools</category><category>rspec</category><guid>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</guid><pubDate>Sat, 23 Mar 2013 05:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><description>&lt;div class="code"&gt;&lt;pre&gt;sudo update-alternatives –config editor
+
+OUTPUT:
+There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /bin/nano            40        auto mode
+  1            /bin/ed             -100       manual mode
+  2            /bin/nano            40        manual mode
+  3            /usr/bin/vim.basic   30        manual mode
+  4            /usr/bin/vim.tiny    10        manual mode
+
+Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type &lt;/span&gt;selection number: 3
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
+&lt;/pre&gt;&lt;/div&gt;</description><category>tools</category><category>vim</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>TMUX Cheat Sheet</title><link>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</link><description>&lt;div&gt;&lt;p&gt;Install TMUX&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install tmux
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;personal config file is at ~/.tmux.conf&lt;/p&gt;
+&lt;p&gt;change prefix to ctrl-a instead of default ctrl-b (easier on my hands)&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;unbind C-b
+&lt;span class="nb"&gt;set&lt;/span&gt; -g prefix C-a
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Outside of session&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;tmux list-sessions&lt;/strong&gt; List all sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux list-keys&lt;/strong&gt; List all key bindings&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux list-commands&lt;/strong&gt; List all commands&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux source-file ~/.tmux.conf&lt;/strong&gt; Reload TMUX conf file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tmux a -t session_name&lt;/strong&gt; Attach to named session&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;Inside of session&lt;/h4&gt;
+&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Ctrl-a, new -s session_name&lt;/strong&gt; Create new named session&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, c&lt;/strong&gt; Create new window&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, ,&lt;/strong&gt; Rename window&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, w&lt;/strong&gt; List windows&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, l&lt;/strong&gt; Move to previously selected window&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, n&lt;/strong&gt; Move to next window&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, p&lt;/strong&gt; Move to previous window&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, d&lt;/strong&gt; Leave session&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, s&lt;/strong&gt; List sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, ?&lt;/strong&gt; List all keybindings&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, %&lt;/strong&gt; Split into vertical panes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, ”&lt;/strong&gt; Split into horizontal panes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, {or}&lt;/strong&gt; Switch between panes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyUp&lt;/strong&gt; Switch to pane above&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyDown&lt;/strong&gt; Switch to pane below&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyLeft&lt;/strong&gt; Switch to pane to the left&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyRight&lt;/strong&gt; Switch to pane to the right  &lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>tools</category><category>tmux</category><guid>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Setup RVM and Ruby</title><link>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</link><description>&lt;div&gt;&lt;p&gt;I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p&gt;
+&lt;p&gt;Install curl&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install curl
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install RVM (forgot this, thanks &lt;a href="http://twitter.com/jssingh"&gt;Jasdeep&lt;/a&gt;)&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;curl -L get.rvm.io | bash -s stable --auto
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Reload .bash_profile&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;. ~/.bash_profile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Run rvm requirements to see what needs to be installed&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rvm requirements
+...
+Requirements &lt;span class="k"&gt;for &lt;/span&gt;ubuntu/12.10/x86_64
+
+NOTE: &lt;span class="s1"&gt;'ruby'&lt;/span&gt; represents Matz&lt;span class="s1"&gt;'s Ruby Interpreter (MRI) (1.8.X, 1.9.X)&lt;/span&gt;
+&lt;span class="s1"&gt;             This is the *original* / standard Ruby Language Interpreter&lt;/span&gt;
+&lt;span class="s1"&gt;      '&lt;/span&gt;ree&lt;span class="s1"&gt;'  represents Ruby Enterprise Edition&lt;/span&gt;
+&lt;span class="s1"&gt;      '&lt;/span&gt;rbx&lt;span class="err"&gt;'&lt;/span&gt;  represents Rubinius
+
+Additional Dependencies:
+&lt;span class="c"&gt;# For update-system:&lt;/span&gt;
+sudo apt-get update
+
+&lt;span class="c"&gt;# For rvm:&lt;/span&gt;
+sudo apt-get --no-install-recommends install bash curl git patch bzip2
+
+&lt;span class="c"&gt;# For ruby:&lt;/span&gt;
+sudo apt-get --no-install-recommends install build-essential openssl libreadline6 libreadline6-dev &lt;span class="se"&gt;\&lt;/span&gt;
+curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 &lt;span class="se"&gt;\&lt;/span&gt;
+libxml2-dev libxslt-dev autoconf libc6-dev libgdbm-dev ncurses-dev automake libtool bison &lt;span class="se"&gt;\&lt;/span&gt;
+subversion pkg-config libffi-dev
+
+&lt;span class="c"&gt;# For jruby:&lt;/span&gt;
+sudo apt-get --no-install-recommends install curl g%2B%2B openjdk-6-jre-headless
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install everything you need&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install build-essential openssl libreadline6 libreadline6-dev &lt;span class="se"&gt;\&lt;/span&gt;
+curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 &lt;span class="se"&gt;\&lt;/span&gt;
+libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison  &lt;span class="se"&gt;\&lt;/span&gt;
+subversion pkg-config libffi-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Install Ruby&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rvm install 1.9.3
+...
+Searching &lt;span class="k"&gt;for &lt;/span&gt;binary rubies, this might take some time.
+ruby-1.9.3-p392 - &lt;span class="c"&gt;#configure&lt;/span&gt;
+ruby-1.9.3-p392 - &lt;span class="c"&gt;#download&lt;/span&gt;
+&lt;span class="c"&gt;#############################################                             62.9%&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Begin to use ruby&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rvm use 1.9.3
+...
+Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Check your Ruby version&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;ruby -v
+...
+ruby 1.9.3p392 &lt;span class="o"&gt;(&lt;/span&gt;2013-02-22 revision 39386&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;x86_64-linux&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Set your default ruby version&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;rvm --default use 1.9.3-p327
+...
+Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;As [Jasdeep][2] says in the comments, it is worth knowing that you’ll need a javascript runtime to use Rails so you might as well install nodejs (because it is fun):&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install nodejs
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description><category>tools</category><category>rvm</category><category>ruby</category><guid>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Get Sinatra and Shotgun gem working on Vagrant</title><link>http://blog.jasonmeridth.com/posts/get-sinatra-and-shotgun-gem-working-on-vagrant/</link><description>&lt;div&gt;&lt;p&gt;TL;DR&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;shotgun -o 0.0.0.0 config.ru
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You have to tell &lt;a href="https://github.com/rtomayko/shotgun/blob/master/bin/shotgun#L46"&gt;shotgun&lt;/a&gt; to use 0.0.0.0, the “all IP addresses on this box” IP address listen on. The default is 127.0.0.1, which is the loopback IP address on the vagrant instance.&lt;/p&gt;
+&lt;p&gt;Hope this helps someone.&lt;/p&gt;&lt;/div&gt;</description><category>sinatra</category><category>vagrant</category><guid>http://blog.jasonmeridth.com/posts/get-sinatra-and-shotgun-gem-working-on-vagrant/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><description>&lt;div&gt;&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install postgresql libpq-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;&lt;/div&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog (old posts, page 10) | Jason Meridth's Blog</title><link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/index-10.html"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    
+        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/net-internalsvisibleto-attribute-c-friend-assemblies/" class="u-url">.NET InternalsVisibleTo attribute == C++ Friend Assemblies</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-10-02T19:57:02-05:00">Oct 02, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>To all developers who haven't heard of this, there is an ability to have a project, say a test project, to have access to another project's Internal classes. (<a href="http://msdn2.microsoft.com/en-us/library/0tke9fxk(VS.80).aspx">MSDN definition</a>).</p>
+<p>For security reasons, make sure that your test assembly is strongly named.  You can achieve this via the "Signing" tab on the project properties.</p>
+<p>Don't ask why I'm playing with COM projects with .NET (I'm messing with the <a href="http://www.gotdotnet.com/Community/UserSamples/Details.aspx?SampleGuid=2cb20e79-d706-4706-9ea0-26188257ee7d">MSBuild sdc tasks</a> and their automated COM components install tasks)</p>
+<p><img alt="image" src="posts/net-internalsvisibleto-attribute-c-friend-assemblies/jasonmeridth/files/2011/0342c.NETInternalsVisibleToattributeCFrien_E05B/image_thumb.png"></p>
+<p><strong>However, </strong>I still choose to use the Visual Studio command line to create my keys via the <a href="http://msdn2.microsoft.com/en-us/library/k5b5tt23(VS.80).aspx">Strong Name tool</a> (sn.exe) and then browse for it via the "Signing" tab on project properties. Make sure you are in the same directory as your solution file (.sln)</p>
+<ul><li>
+<p>sn -k TestComComponent.snk // Generate strong name key</p>
+</li>
+<li>
+<p>sn -p TestComComponent.snk key.publickey // Extract public key from TestComComponent.snk into key.publickey</p>
+</li>
+<li>
+<p>sn -tp key.publickey // Display public key stored in file 'key.publickey'<img alt="image" src="posts/net-internalsvisibleto-attribute-c-friend-assemblies/jasonmeridth/files/2011/0342c.NETInternalsVisibleToattributeCFrien_E05B/image_thumb_2.png"> </p>
+</li>
+</ul><p>This gives us the public key blob that we need to embed into the InternalsVisibleTo attribute we are going to add to our AssemblyInfo.cs file.</p>
+<p>This is what you would need to add to your AssemblyInfo.cs file of your main assembly:</p>
+<div class="code"><pre><span class="cp">[</span><span class="nx">assembly</span><span class="p">:</span><span class="nx">InternalsVisibleToAttribute</span><span class="p">(</span><span class="s2">"&lt;TestAssemblyName&gt;, PublicKey=00240000048000...RestOfPublicKeyFromAbove"</span><span class="p">)</span><span class="cp">]</span>
+</pre></div>
+
+
+<p>David Kean has even created a tool to create your attribute for you with the public key and everything.  Check it out <a href="http://davidkean.net/downloads/publickey.zip">here</a>.  Blog post <a href="http://davidkean.net/archive/2005/10/06/1183.aspx">here</a>.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/net-internalsvisibleto-attribute-c-friend-assemblies/#136" title="2007-10-03 11:33:54">Nelson Montalvo</a>:</strong> As an alternative, if you have the strongly named assembly, use a capital T, like so: sn -Tp &lt;&gt; This will extract the public key from the assembly's manifest.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/net-internalsvisibleto-attribute-c-friend-assemblies/#disqus_thread" data-disqus-identifier="cache/posts/net-internalsvisibleto-attribute-c-friend-assemblies.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/apple-s-new-product-ibrick/" class="u-url">Apple's new product - iBrick</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-28T19:46:04-05:00">Sep 28, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <p><a href="http://bits.blogs.nytimes.com/2007/09/28/more-on-apples-latest-product-the-ibrick/">This</a> is what happens to your iPhone if you opened it up for use with other carriers.  I haven't gotten one yet, but will hopefully.  Someday.</p>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/apple-s-new-product-ibrick/#disqus_thread" data-disqus-identifier="cache/posts/apple-s-new-product-ibrick.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/ubuntu-7-10-gutsy-gibbon-beta-released-yesterday-final-release-in-october/" class="u-url">Ubuntu 7.10 (Gutsy Gibbon) BETA released yesterday - final release in October</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-28T13:54:51-05:00">Sep 28, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Ubuntu 7.10 released yesterday.  Go here to download and help Canonical with beta testing.  I am downloading it at home and will load one of my "mutt" PCs tonight and start using it.  Instructions on how to insert bugs into the tracking system is at the bottom of <a href="http://www.ubuntu.com/testing/gutsybeta">this</a> page.</p>
+<p>There is also <a href="https://help.ubuntu.com/community/GutsyUpgrades">instructions</a> on how to upgrade from 7.04 (Feisty Fawn).</p>
+<p>There are known caveats (problems) (listed at the bottom of <a href="http://www.ubuntu.com/testing/gutsybeta">this</a> page).</p>
+<p>Here is a list of some of the new features: (Also listed <a href="http://www.ubuntu.com/testing/gutsybeta">here</a>)<br>
+-GNOME 2.20<br>
+-Desktop 3D effects<br>
+-Desktop Search<br>
+-Fast User Switching<br>
+-Firefox plugins in Ubuntu<br>
+-Dynamic search configuration<br>
+-Graphical configuration tool for X <br>
+-Fully automatic printer installation<br>
+-Handling of non-free device drivers<br>
+-NTFS writing<br>
+-Power consumption<br>
+-AppArmor security framework<br>
+-Additional installation profiles for Ubuntu Server<br>
+-Profile-based Authenticaition Configuration<br>
+-Improved thin-client support</p>
+<p><a href="http://www.reviewlinux.com/?m=show&amp;id=7302">Here</a> is a good review/post about it.</p>
+<p>Please be aware that Ubuntu no longer supports any versions prior to 6.06 (Dapper Drake).  Those include 4.10 (Warty Warthog), 5.04 (Hoary Hedgehog), and 5.10 (Breezy Badger).</p>
+<p>Side Note: Version 8.04 will be named Hardy Heron and is predicted for release in April 2008.  Upgrade instructions will accompany that, so those that believe this is too many versions, upgrading has always been a breeze (usually).</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/ubuntu-7-10-gutsy-gibbon-beta-released-yesterday-final-release-in-october/#disqus_thread" data-disqus-identifier="cache/posts/ubuntu-7-10-gutsy-gibbon-beta-released-yesterday-final-release-in-october.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/be-kind-to-your-testers/" class="u-url">Be kind to your testers</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-27T00:31:44-05:00">Sep 27, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Jeremy Miller posted about <a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/09/18/testers-are-pigs.aspx">Testers being pigs</a>.  I have learned through my current position that he is completely correct.</p>
+<p>We have the "corporate" agile going at our place of business. </p>
+<p>Legend:<br>
+Developer<br>
+Systems Analyst (tester)<br>
+Business Analyst (domain expert)</p>
+<p>In our planning sessions all three groups are involved.  If questions arise during development, it is the developer's responsibility to make sure all parties are informed of any new changes.  Today we had something come up.  The other developer I was pair programming with and I went to the domain expert and clarified the question which did result in changes.  We then headed to the tester and made sure he was aware of the changes and also asked him if this would change his initial estimate on testing time.  We also made sure to see if he had any new questions after the change was decided (he may have thought of something we didn't).</p>
+<p>There was a period at the beginning of this process that developers were going straight to the domain experts and then not informing the tester of the changes.  It created a problem for them and it is completely understandable. </p>
+<p>Jeremy is completely correct that sometimes it is not a 1:1 ratio on time needed to develop and test the change.  Be fair to your testers. (if you have them).</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/be-kind-to-your-testers/#disqus_thread" data-disqus-identifier="cache/posts/be-kind-to-your-testers.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/monorail-4-validation/" class="u-url">MonoRail #4: Validation</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-26T15:08:25-05:00">Sep 26, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>This post was decided upon after watching <a href="http://hammett.castleproject.org/">Hammet</a>'s <a href="http://hammett.castleproject.org/wp-content/uploads/2007/01/mr%20formvalidation.html">screencast</a> on using attribute-based validation in MonoRail.</p>
+<p><strong>*NOTE</strong>: I do not agree with embedding validation into the domain model.  I would prefer a service handle this, but I'm utilizing the validation that is in the framework.  I've been skimming some of Bill McCafferty's MonoRail posts and have seen him use items like fValidate, but haven't had an opportunity to use them.  Anyone have any preferences?</p>
+<p>Be aware that I'm using the latest trunk code: <a href="http://builds.castleproject.org/cruise/index.castle">Get it here from the Castle MonoRail build server</a>.</p>
+<p>First, you need a reference to Castle.Components.Validator in your project:<br><img alt="image" src="posts/monorail-4-validation/jasonmeridth/files/2011/03MonoRail4Validation_11854/image_thumb.png"></p>
+<h3>THE MODEL:</h3>
+<p>Next, you need to add the necessary attributes to the domain entity's properties:  </p>
+<div class="code"><pre>   <span class="mi">1</span><span class="o">:</span> <span class="n">using</span> <span class="n">Castle</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Validator</span><span class="p">;</span>
+
+
+   <span class="mi">2</span><span class="o">:</span>
+
+
+   <span class="mi">3</span><span class="o">:</span> <span class="n">namespace</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Models</span>
+
+
+   <span class="mi">4</span><span class="o">:</span> <span class="p">{</span>
+
+
+   <span class="mi">5</span><span class="o">:</span>     <span class="n">public</span> <span class="n">class</span> <span class="n">Contact</span>
+
+
+   <span class="mi">6</span><span class="o">:</span>     <span class="p">{</span>
+
+
+   <span class="mi">7</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+
+
+   <span class="mi">8</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">email</span><span class="p">;</span>
+
+
+   <span class="mi">9</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">message</span><span class="p">;</span>
+
+
+  <span class="mi">10</span><span class="o">:</span>
+
+
+  <span class="mi">11</span><span class="o">:</span>         <span class="p">[</span><span class="n">ValidateNonEmpty</span><span class="p">(</span><span class="s">"Name is a required field"</span><span class="p">)</span>
+</pre></div>
+
+
+<h3>Comments</h3>
+<p><strong><a href="posts/monorail-4-validation/#127" title="2007-09-26 17:08:12">cramsay</a>:</strong> Hi Jason, Did the error you were getting in IE7 match the one in that blog post? AFAIK the MR validation uses this library: http://www.tetlaw.id.au/view/javascript/really-easy-field-validation That in turn uses prototype, which should be able to handle inserting stuff in IE7 with ease. I assume the error was happening when the validation messages were trying to appear?</p>
+<p><strong><a href="posts/monorail-4-validation/#128" title="2007-09-26 19:38:08">Jason Meridth</a>:</strong> I did comment on Hammett's post but can't find the comment. Did he update the blog entry? Where is it exactly? Nice post on validation. I will definitely try it out. Yes, the error was appearing when the messages were trying to appear.</p>
+<p><strong><a href="posts/monorail-4-validation/#129" title="2007-09-26 20:21:19">Joe Ocampo</a>:</strong> Nice post... Don't know how crazy I am about decorating my Domain object with validation constructs BUT I am in simplification rehab for this. (mumbling to self) must simplify, it will be ok. must simplify, its ok..... :-)</p>
+<p><strong><a href="posts/monorail-4-validation/#130" title="2007-09-26 22:07:00">Sean Chambers</a>:</strong> Jason, Very detailed post! I agree with Joe that I cringe at the idea of decorating domain objects with validation attributes. Although I have done quite a bit of research and thought about it alot without coming up with a better scenario without creating more headaches as a result. At one point in a recent project I had a generic ValidationBase controller that the controller derived from and I could then call a Validate method returning errors if not passed. This was for a Controller Wizard, hence the generics. I have been thinking about this a lot recently so perhaps I can come up with an alternative. Great post, keep it up!</p>
+<p><strong><a href="posts/monorail-4-validation/#131" title="2007-09-27 00:03:59">Jason Meridth</a>:</strong> I completely agree with you and Joe, hence my second opening paragraph. I love the idea of a ValidationBase controller. I'm check out Colin's javascript validation stuff and I look forward to posts about your base validation mechanism. Excellent!</p>
+<p><strong><a href="posts/monorail-4-validation/#132" title="2007-09-27 00:51:41">joeyDotNet</a>:</strong> Well I'd agree mostly about not wanting to put a bunch of validation attributes on domain objects. BUT! Like Joe, I too have been applying the "replace unnecessary complexity wth simplification" refactoring to myself for a while now. (Hmm, refactoring <em>yourself</em>, smells like a blog post...) :) And it's all the Castle project's fault when I saw the simplicity of how quickly you could get a decently designed web app up and running using MonoRail + ActiveRecord. Now that I'm digging into RoR, it's like that whole Castle MR + AR experience all over again, but this time it's like X 10. There really is just something beautiful about having lines like this in your domain object: <code>validates_presence_of :title validates_numericality_of :quantity</code> especially when you can constrain them like this: <code>validates_presence_of :title :on =&gt; :create</code> I dunno. It's definitely starting to grow on me. And I have a feeling that an Active Record implementation in a dynamic language is completely different than in a static language when it comes corrupting your design. But, I'm still learning... (Sorry this kinda turned into a AR comment, but is kinda along the same lines...)</p>
+<p><strong><a href="posts/monorail-4-validation/#133" title="2008-03-05 12:04:29">deman</a>:</strong> Jason, I'm waiting for your authentication post. Or did I miss it somewhere? Thank you.</p>
+<p><strong><a href="posts/monorail-4-validation/#134" title="2008-10-23 15:09:54">Isidro</a>:</strong> I'm having troubles with regex validations. If I put any kind of regexes in the validators the validation stops working! Is this a know issue?</p>
+<p><strong><a href="posts/monorail-4-validation/#135" title="2008-10-28 12:11:28">Jason Meridth</a>:</strong> @ isidro Whenever that happens to me, it isn't the Monorail Validator, it's my regex. I use Roy Osherove's Regulator tool to test my regex queries and that usually straightens me out. Hope this helps.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/monorail-4-validation/#disqus_thread" data-disqus-identifier="cache/posts/monorail-4-validation.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/" class="u-url">Domain Model Overuse post by David Laribee on CodeBetter</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-25T12:21:44-05:00">Sep 25, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>David Laribee recently posted on <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx">Domain Model Overuse</a> and my colleague <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx#comments">Joe Ocampo (AgileJoe) responded</a>.  Check out the comments.</p>
+<p>Note: If you want to read Fowler's article on AnemicDomainModel, check out the <a href="http://64.233.169.104/search?q=cache:biq9rdhXyz4J:martinfowler.com/bliki/AnemicDomainModel.html+anemic+domain+model&amp;hl=en&amp;client=firefox-a&amp;gl=us&amp;strip=1">cached version on Google</a>, since the entry is down.</p>
+<p>I'm not worshipping Joe, but the conversation between him and David is worth reading.</p>
+<p>Enjoy.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#118" title="2007-09-25 16:53:16">Joey Beninghove</a>:</strong> Good discussions indeed! From my perspective, a lot of these DDD approaches and the domain model pattern itself, are just good object-oriented design practices in the first place that help adhere to OOD principles. [http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod] For instance, the Specification pattern, while really nothing more than an implementation of a strategy pattern, can be very useful in a domain model. Very interesting logic can be encapsulated in these tiny highly-cohesive classes (i.e. calculations, policies, criteria, etc.) that can really help to stay as close to SRP &amp; OCP as possible (with OCP arguably being one of the hardest principles to adhere to in a real world system). Not to mention it makes testing these little jokers in isolation very easy. Are you guys making use of Specifications? If so, I'd be curious as to how far you take it? (And yes Joe, I know, "it depends"...) :D</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#119" title="2007-09-25 17:08:12">Jason Meridth</a>:</strong> We are using it in our domain currently to handle status changes of a loan record. We started using the state pattern but the natural progression elevated to exceed that purpose. Once we put in specifications, we could just say something like: bool canChangeStatusToNewLead = CanChangeStatusFor(LoanRecord, LoanRecordStatusType.NewLead); this is not the exact syntax, but that's how we're using it. You mention criteria. Wouldn't that just be a value object and not really a specification.</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#120" title="2007-09-25 17:17:50">Joey Beninghove</a>:</strong> Well, yeah, the search criteria data itself would really just be a value object, but the ability to chain together multiple criteria together can be attractive. For example, a tip I picked up from JP was to create your own IRichList interface and overloading Find() and FindAll() to take in an ISpecification implementation. Then you can create a nice mechanism for chaining together specifications when passing them in like: addressBook.FindAll(PersonsOverTheAgeOf16.And(PersonsWhoLiveInTexas)) Simple example, but you get the point. A better example can be found here: [http://devlicio.us/blogs/jeff_perrin/archive/2006/12/13/the-specification-pattern.aspx]</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#121" title="2007-09-25 17:27:39">Jason Meridth</a>:</strong> Excellent information. Thanks Joey.</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#122" title="2007-09-25 17:28:11">Jason Meridth</a>:</strong> When are you going to Simpsonize?! j/k</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#123" title="2007-09-25 17:52:24">Joey Beninghove</a>:</strong> Ok, Ok, already. Guess it's official now... :)</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#124" title="2007-09-25 18:09:25">Joe Ocampo</a>:</strong> @Joey &gt;"For instance, the Specification pattern, while really nothing more than an implementation of a strategy pattern..." Well that depends ... :-) The model specification as it relates to DDD purpose is to make implicit engineering concepts explicit for the "Ubiquitous Language". The OOP strategy pattern is a form of the EPP specification pattern but within a Domain Model the "Specificaton" is a term reserved for predicate operations that allow for greater incite to be captured towards to model. For instance the method "isCool" evaluates height, dress and odor of a person. In this case the "CoolPersonSpecification" object can be talked towards in a model and everyone understands what it does. Does it use a strategy pattern maybe or is it simply a switch statement encapsulated to provide greater incite? Perhaps. The point is (drum role) it depends! Simplicity first, patterns second. If all you are doing is evaluating 3 criterion maybe a strategy pattern is overkill. The important question to ask is, "When I mention the Cool Person Specification does everyone understand what I am talking about?" If they don't then go back and see if it is even applicable in the domain or does it belong outside the domain layer? "Do you take the blue pill or the red pill?" :-)</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#125" title="2007-09-25 18:23:15">Joe Ocampo</a>:</strong> Awesome Joey!</p>
+<p><strong><a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#126" title="2007-09-25 18:24:24">Joey Beninghove</a>:</strong> Ahh, ok. I see what you mean. BTW, I'm still working my way through the official Evans book, so forgive me if my application of DDD is not quite in-line. :) So I'm currently encapsulating certain calculations into little strategy classes because I already know that the details of <em>how</em> the calculations will work is going to change (as in next week). So in this case, my thoughts are that by encapsulating frequently changing logic like this into small isolated classes it will keep me from having to keep modifying my domain objects themselves if all I need to do is introduce a new <em>implementation</em> of a certain calculation. As to whether this is just a simple OOP strategy pattern or a DDD specification... well, guess it depends... :) Thanks for the correction Joe!</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/domain-model-overuse-post-by-david-laribee-on-codebetter/#disqus_thread" data-disqus-identifier="cache/posts/domain-model-overuse-post-by-david-laribee-on-codebetter.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/ruby-on-rails-wow/" class="u-url">Ruby on Rails - WOW!</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-23T19:45:04-05:00">Sep 23, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Okay, I've been hearing about Ruby and even went through the <a href="http://tryruby.hobix.com/">"Try Ruby" on hobbix walk-through</a>. I've scripted in Python, another dynamic language, for my Linux bash scripts and I've also create a web site to interact with Amazon web services with <a href="http://www.codeplex.com/IronPython">IronPython</a> (post coming soon on that), but wasn't impressed enough to pursue learning of Ruby hard-core.  After the few posts on LosTechies from <a href="http://www.lostechies.com/blogs/joeydotnet">Joey</a>, <a href="http://www.lostechies.com/blogs/joe_ocampo">Joe</a>, and <a href="http://www.lostechies.com/blogs/sean_chambers">Sean</a>, I decided to follow <a href="http://www.lostechies.com/blogs/sean_chambers/archive/2007/09/23/647.aspx#669">Sean's advice</a> and watch the <a href="http://www.rubyonrails.org/screencasts">screencasts on Ruby.com</a>.  I'm not even through the <a href="http://media.rubyonrails.org/video/rails_take2_with_sound.mov">blog creation screencast</a> and I need to post on this.</p>
+<p>People go check it out. Here.  You'll be utterly amazed.</p>
+<p>I'll update this post after I see more.  Wow!</p>
+<p>The speaker's comment at 11:18, "Yeah, it goes fast, don't blink." was priceless.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/ruby-on-rails-wow/#108" title="2007-09-23 20:21:49">Joey Beninghove</a>:</strong> Hehe, yep. There are lots of screencasts and presentations out there you can watch. Here are few more to wet your appetite: 2006 RailsConf: http://www.scribemedia.org/?s=railsconf 2006 RailsConf Europe: http://skillsmatter.com/menu/368 Google Videos: http://video.google.com/videosearch?q=%22ruby+on+rails%22 Skills Matter / RoR eXchange: http://skillsmatter.com/menu/479 RailsCasts: http://railscasts.com/ PeepCode ($$) : http://peepcode.com/ There are many more, but those should get you started... :)</p>
+<p><strong><a href="posts/ruby-on-rails-wow/#109" title="2007-09-23 20:56:50">Joe Ocampo</a>:</strong> I knew once you saw the light you wouldn't be able to resist! lol</p>
+<p><strong><a href="posts/ruby-on-rails-wow/#110" title="2007-09-23 21:15:10">Sean Chambers</a>:</strong> Great isn't it? Now, my only gripe with all of RoR is the whole production headaches. Perhaps someone can shed some light in this area of deploying a RoR app to a production server. There are alot of different options and it's hard to tell which is the best route. Alot of people have capistrano scripts deploying to Apache with a Mongrel cluster and a load balancer but I had a real hard time getting it to work correctly. Comments anyone?</p>
+<p><strong><a href="posts/ruby-on-rails-wow/#111" title="2007-09-23 21:21:59">Joey Beninghove</a>:</strong> @Sean, Well since I'm only going on my 2nd real coding week with learning RoR, I can't be of much help. But from what I've seen I am going to have to beef up my <em>nix skills quite a bit. But sounds like you and Jason are pretty comfortable in a </em>nix environment, so shouldn't be as much of a problem for you guys. About Capistrano, everything I hear about it, folks say it is simply amazing and is something every RoR developer should be using. Hopefully I'll get to that point soon... :D</p>
+<p><strong><a href="posts/ruby-on-rails-wow/#112" title="2007-09-23 21:43:34">Jason Meridth</a>:</strong> Wow. This is exactly why we created LosTechies. Thanks for the support guys. @Sean: Sounds like a challenge for us to create an open-source product to make production deployment easier. :)</p>
+<p><strong><a href="posts/ruby-on-rails-wow/#113" title="2007-09-23 22:09:49">Joey Beninghove</a>:</strong> @Jason, Capistrano is pretty much the de-facto deployment tool in Rails-land right now, from what I can see. So I'd probably take a serious look at that before creating an alternative. Just my 0.02...</p>
+<p><strong><a href="posts/ruby-on-rails-wow/#114" title="2007-09-23 23:45:31">Sean Chambers</a>:</strong> Jason, sounds like a plan! Let me know if you setup a vm or anything to play with it. It would be neat if we could swap virtual machine disks if one of us sets up a Linux deployment server. Granted we would all have to be using VirtualBox or VMWare, but it would be cool to all be working with the same configuration.</p>
+<p><strong><a href="posts/ruby-on-rails-wow/#115" title="2007-09-24 00:01:21">Joe Ocampo</a>:</strong> Lets create a that site that Joey and I were talking about for displaced softies that need $$$ for MacBook Pro's! If someone can raise money for their college tuition why can't we raise a little for us poor developers. ;-)</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/ruby-on-rails-wow/#disqus_thread" data-disqus-identifier="cache/posts/ruby-on-rails-wow.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/monorail-hotswap/" class="u-url">MonoRail HotSwap</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-23T19:27:16-05:00">Sep 23, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Ayende (pronounced A-yend  (no eh at the end) - verified in this <a href="http://ayende.com/Blog/archive/2007/09/23/MonoRail.HotSwap-in-Action.aspx">post</a> after hearing Colin pronounce it) posted on an idea he has - <a href="http://ayende.com/Blog/archive/2007/09/22/Introducing-MonoRail.HotSwap.aspx">MonoRail HotSwap</a> and <a href="http://colinramsay.co.uk/">Colin Ramsay</a> did a <a href="http://colinramsay.co.uk/2007/09/23/hotswap-for-monorail-in-action/">screencast of MonoRail HotSwap</a>.  I know that the AppDomain having to reset because a code change occurred can be annoying sometimes, but it hasn't bothered me to the point where I would need this feature.  However, it is still very cool how the Windsor container is swapping out the old code for the new but doesn't change the dll in the bin directory, therefore the AppDomain doesn't need to refresh.  Check out the screencast.</p>
+<p>SideNote: It's been ages since I've used the Opera browser.  Kind of cool how the refresh button and stop button are the same.  Depends on what the browser is currently doing.  Anyone see any strengths in Opera?  At least more than Firefox?</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/monorail-hotswap/#104" title="2007-09-23 20:02:17">Colin Ramsay</a>:</strong> Hi Jason, The HotSwap thing appeals to me because it will allow me to quickly act upon ideas without being stopped by a limitation in ASP.NET. By beating the appdomain refresh I can keep up the code flowing! About Opera, I was a Firefox user for years, but I decided to give Opera a go again about two months ago and when I realised I was able to configure the toolbars in the same way I could with my FF install (all in a single line), I was hooked by the browsing speed and the SpeedDial feature. I still use FF for Firebug though.</p>
+<p><strong><a href="posts/monorail-hotswap/#105" title="2007-09-23 21:38:55">Jason Meridth</a>:</strong> Very cool Colin. Being limited by your environment is not fun. Great screencast. Thank you.</p>
+<p><strong><a href="posts/monorail-hotswap/#106" title="2007-09-28 12:06:08">Matthew</a>:</strong> Opera is IMHO the best browser out there. Mouse gestures built in, the garbage (re-open closed tabs quickly), browsing speed and compatibility with 99% of websites gives me all I need. The speeddial also is utterly nice. I'm so much more productive than with Firefox. Really, plugins are nice in FF, but never as good as a fast, simple solution that Opera is. The only thing that really sucks in Opera is the Email client. But I prefer Gmail over offline clients anyways. Nice blog BTW Jason, you got me started with Monorails ! I was looking for an alternative at my dot-net only job :)</p>
+<p><strong><a href="posts/monorail-hotswap/#107" title="2007-09-28 13:29:28">Jason Meridth</a>:</strong> @Matthew Thanks for the Opera information. I started using it, but there are some gmail firefox plugins that I use regularly. I'm researching plugins to Opera. Great news about MonoRail. Glad I could help.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/monorail-hotswap/#disqus_thread" data-disqus-identifier="cache/posts/monorail-hotswap.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/forget-subversion-s-blame-we-need-the-microsoft-s-wsyp-program-joke/" class="u-url">Forget Subversion's blame, we need the Microsoft's WSYP program (joke)</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-23T02:18:40-05:00">Sep 23, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Originally posted <a href="http://bugthis.blogspot.com/2007/09/microsoft-cares-so-much-about-your-pain.html">here</a>, where I found it.</p>
+<h3>Comments</h3>
+<p><strong><a href="posts/forget-subversion-s-blame-we-need-the-microsoft-s-wsyp-program-joke/#103" title="2007-09-24 16:32:44">jssingh</a>:</strong> This is awesome!</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/forget-subversion-s-blame-we-need-the-microsoft-s-wsyp-program-joke/#disqus_thread" data-disqus-identifier="cache/posts/forget-subversion-s-blame-we-need-the-microsoft-s-wsyp-program-joke.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/castle-1-0-release-candidate-3-is-out/" class="u-url">Castle 1.0 Release Candidate 3 is out</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2007-09-22T01:10:41-05:00">Sep 22, 2007</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Hammet <a href="http://hammett.castleproject.org/?p=206">posted that RC3 is out</a>.  For those of you who were on RC2 and hesitant to use the trunk, this is great news.</p>
+<p>Hammet also posted <a href="http://hammett.castleproject.org/?p=207">what the changes were</a>.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/castle-1-0-release-candidate-3-is-out/#disqus_thread" data-disqus-identifier="cache/posts/castle-1-0-release-candidate-3-is-out.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><div>
+        <ul class="pager"><li class="previous">
+                <a href="index-11.html" rel="prev">← Newer posts</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="index-9.html" rel="next">Older posts →</a>
+            </li>
+        
+        </ul></div>
+    
+
+    
+    
+        
+    
+       <script>var disqus_shortname="jasonmeridth";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

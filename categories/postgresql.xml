@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (postgresql)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/postgresql.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Feb 2014 15:51:04 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><description>&lt;div&gt;&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install postgresql libpq-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;&lt;/div&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>PostgreSQL Commond Line Cheat Sheet</title><link>http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/</link><description>&lt;div&gt;&lt;p&gt;change to postgres user and open psql prompt&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo -u postgres psql postgres
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;list databases&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;postgres&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c"&gt;# \l&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;list roles&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;postgres&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c"&gt;# \du&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;create role&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;postgres&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c"&gt;#CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD 'password1' CREATEDB;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;alter role&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;postgres&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c"&gt;#ALTER ROLE demorole1 CREATEROLE CREATEDB REPLICATION SUPERUSER;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;drop role&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;postgres&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c"&gt;#DROP ROLE demorole1;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;create database&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;postgres&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c"&gt;#CREATE DATABASE demodb1 WITH OWNER demorole1 ENCODING 'UTF8';&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;grant privileges to new user&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;GRANT ALL PRIVILEGES ON DATABASE demodb1 TO demorole1;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;drop database&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;postgres&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="c"&gt;#DROP DATABASE demodb1;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;connect to database&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="se"&gt;\c&lt;/span&gt; &amp;lt;databasename&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;list tables in connected database&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="se"&gt;\d&lt;/span&gt;t
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;list columns on table&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="se"&gt;\d&lt;/span&gt; &amp;lt;tablename&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;backup database&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;pg_dump &amp;lt;databasename&amp;gt; &amp;gt; &amp;lt;outfile&amp;gt; 
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description><category>postgresql</category><category>command line</category><guid>http://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/</guid><pubDate>Tue, 02 Oct 2012 05:00:00 GMT</pubDate></item></channel></rss>

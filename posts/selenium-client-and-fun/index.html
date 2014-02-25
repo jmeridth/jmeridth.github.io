@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Selenium-client and fun | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/selenium-client-and-fun/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Selenium-client and fun</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2009-02-12T04:35:00-06:00" itemprop="datePublished">Feb 12, 2009</time>
+        
+    
+
+		
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p>So I've had the pleasure of working with <a href="http://github.com/ph7/selenium-client/tree/master">selenium-client</a>, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I'm going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions. </p>
+<p>1. </p>
+<div class="code"><pre><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">selenium</span><span class="o">-</span><span class="n">client</span>
+</pre></div>
+
+
+<p>2. download the <a href="http://release.seleniumhq.org/selenium-remote-control/1.0-beta-2/selenium-remote-control-1.0-beta-2-dist.zip">selenium remote control</a> (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it. </p>
+<p>3. update your .bashrc (usually on Ubuntu) or .bash_profile (what I have on my Mac) with a alias to start the selenium server (for me I have unzipped the download into a ~/code/seleniumrc folder: </p>
+<div class="code"><pre><span class="cp"># commands</span>
+<span class="n">alias</span> <span class="n">selsrvr</span><span class="o">=</span><span class="s">"java -jar ~/code/seleniumrc/selenium-server-1.0-beta-2/selenium-server.jar"</span>
+</pre></div>
+
+
+<p>after you add that, re-source your bash file. For me on my Mac </p>
+<div class="code"><pre><span class="p">.</span> <span class="o">~/</span><span class="p">.</span><span class="n">bash_profile</span>
+</pre></div>
+
+
+<p>For me on my Ubuntu box: </p>
+<div class="code"><pre><span class="p">.</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span>
+</pre></div>
+
+
+<p>4. Create a test file, test.rb somewhere (for me ~/code/seleniumrc/test.rb): </p>
+<p>5. Write a test that: </p>
+<ol><li>
+<p>Logs in   </p>
+</li>
+<li>
+<p>Creates a slice   </p>
+</li>
+<li>
+<p>Captures the new root password   </p>
+</li>
+<li>
+<p>Captures the new IP Address   </p>
+</li>
+<li>
+<p>SSHs onto the new slice   </p>
+</li>
+<li>
+<p>Adds a file, and lists out the content of ~ (aka /home/root)   </p>
+</li>
+<li>
+<p>Deletes the slice   </p>
+</li>
+<li>
+<p>Logs out</p>
+</li>
+</ol><p>6.</p>
+<div class="code"><pre><span class="n">require</span> <span class="s">"test/unit"</span>
+<span class="n">require</span> <span class="s">"rubygems"</span>
+<span class="n">gem</span> <span class="s">"selenium-client"</span><span class="p">,</span> <span class="s">"&gt;=1.2.9"</span>
+<span class="n">require</span> <span class="s">"selenium/client"</span>
+<span class="n">require</span> <span class="s">"net/ssh"</span>
+
+<span class="n">class</span> <span class="n">NewTest</span> <span class="o">&lt;</span> <span class="n">Test</span><span class="o">::</span><span class="n">Unit</span><span class="o">::</span><span class="n">TestCase</span>
+  <span class="n">attr_reader</span> <span class="o">:</span><span class="n">browser</span>
+
+  <span class="n">def</span> <span class="n">setup</span>
+    <span class="err">@</span><span class="n">slice_name</span> <span class="o">=</span> <span class="s">"slice3"</span>
+    <span class="err">@</span><span class="n">browser</span> <span class="o">=</span> <span class="n">Selenium</span><span class="o">::</span><span class="n">Client</span><span class="o">::</span><span class="n">Driver</span><span class="p">.</span><span class="n">new</span> <span class="s">"localhost"</span><span class="p">,</span> <span class="mi">4444</span><span class="p">,</span> <span class="s">"*firefox"</span><span class="p">,</span> <span class="s">"https://manage.slicehost.com/"</span><span class="p">,</span> <span class="mi">10000</span>
+    <span class="n">browser</span><span class="p">.</span><span class="n">start_new_browser_session</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">teardown</span>
+    <span class="n">browser</span><span class="p">.</span><span class="n">close_current_browser_session</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">test_should_be_able_to_ssh_onto_new_slice_and_add_new_file</span>
+    <span class="n">login</span>
+    <span class="n">begin</span>
+        <span class="n">create_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
+        <span class="n">root_password</span> <span class="o">=</span> <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">get_text</span><span class="p">(</span><span class="s">"id=flash"</span><span class="p">).</span><span class="n">sub</span><span class="p">(</span><span class="o">/</span><span class="n">You</span> <span class="n">will</span> <span class="n">receive</span> <span class="n">an</span> <span class="n">email</span> <span class="n">upon</span> <span class="n">completion</span><span class="p">.</span> <span class="n">The</span> <span class="n">new</span> <span class="n">root</span> <span class="n">password</span> <span class="n">will</span> <span class="n">be</span><span class="o">:</span> <span class="o">/</span><span class="p">,</span> <span class="err">''</span><span class="p">)</span>
+        <span class="n">ip_address</span> <span class="o">=</span> <span class="err">@</span><span class="n">browser</span> 
+          <span class="p">.</span><span class="n">get_text</span><span class="p">(</span><span class="s">"xpath=/html/body/div[@id='container']/div[@id='main']/div[1]/div[@id='slice_action']/div[@id='show_slice']/table/tbody/tr[4]/td[2]"</span><span class="p">)</span> 
+          <span class="p">.</span><span class="n">scan</span><span class="p">(</span><span class="o">/</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}.</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}.</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}.</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span><span class="o">/</span><span class="p">)</span>
+        <span class="n">assert</span> <span class="o">!</span><span class="mf">180.</span><span class="n">times</span><span class="p">{</span> <span class="k">break</span> <span class="k">if</span> <span class="p">(</span><span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">is_text_present</span><span class="p">(</span><span class="s">"active"</span><span class="p">)</span> <span class="n">rescue</span> <span class="nb">false</span><span class="p">);</span> <span class="n">sleep</span> <span class="mi">1</span> <span class="p">}</span>
+        <span class="n">Net</span><span class="o">::</span><span class="n">SSH</span><span class="p">.</span><span class="n">start</span><span class="p">(</span><span class="n">ip_address</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">to_s</span><span class="p">,</span> <span class="err">'</span><span class="n">root</span><span class="err">'</span><span class="p">,</span> <span class="o">:</span><span class="n">password</span> <span class="o">=&gt;</span> <span class="n">root_password</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">ssh</span><span class="o">|</span>
+            <span class="n">ssh</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">"rm selenium_test_file.txt"</span><span class="p">)</span>
+            <span class="n">ssh</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">"touch selenium_test_file.txt"</span><span class="p">)</span>
+
+            <span class="n">stdout</span> <span class="o">=</span> <span class="s">""</span>
+            <span class="n">ssh</span><span class="p">.</span><span class="n">exec</span><span class="o">!</span><span class="p">(</span><span class="s">"ls -lah ~"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">channel</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">data</span><span class="o">|</span>
+              <span class="n">stdout</span> <span class="o">&lt;&lt;</span> <span class="n">data</span> <span class="k">if</span> <span class="n">stream</span> <span class="o">==</span> <span class="o">:</span><span class="n">stdout</span>
+            <span class="n">end</span>
+            <span class="n">puts</span> <span class="n">stdout</span>
+        <span class="n">end</span>
+        <span class="n">go_to_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
+    <span class="n">ensure</span>
+        <span class="n">assert</span> <span class="o">!</span><span class="mf">180.</span><span class="n">times</span><span class="p">{</span> <span class="k">break</span> <span class="k">if</span> <span class="p">(</span><span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">is_text_present</span><span class="p">(</span><span class="s">"active"</span><span class="p">)</span> <span class="n">rescue</span> <span class="nb">false</span><span class="p">);</span> <span class="n">sleep</span> <span class="mi">1</span> <span class="p">}</span>
+        <span class="n">delete_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span> 
+    <span class="n">end</span>
+    <span class="n">logout</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">test_should_be_able_to_delete_an_existing_slice</span>
+    <span class="n">login</span>
+    <span class="n">go_to_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
+    <span class="n">delete_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
+    <span class="n">logout</span>
+  <span class="n">end</span>
+
+
+  <span class="n">def</span> <span class="n">login</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">open</span> <span class="s">"/login"</span>
+    <span class="n">assert_equal</span> <span class="s">"Slicehost Login"</span><span class="p">,</span> <span class="n">browser</span><span class="p">.</span><span class="n">title</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">type</span> <span class="s">"email"</span><span class="p">,</span> <span class="s">"youemail@domain.com"</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">type</span> <span class="s">"password"</span><span class="p">,</span> <span class="s">"yourpassword"</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"commit"</span>
+    <span class="n">browser_wait</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">create_slice</span><span class="p">(</span><span class="n">slice_name</span><span class="p">)</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Add a Slice"</span>
+    <span class="n">browser_wait</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">type</span> <span class="s">"name"</span><span class="p">,</span> <span class="n">slice_name</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"commit"</span>
+    <span class="n">browser_wait</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">go_to_slice</span><span class="p">(</span><span class="n">slice_name</span><span class="p">)</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=My Slices"</span>
+    <span class="n">browser_wait</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=#{slice_name}"</span>
+    <span class="n">browser_wait</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">delete_slice</span><span class="p">(</span><span class="n">slice_name</span><span class="p">)</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Delete"</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Delete #{slice_name}"</span>
+    <span class="n">assert</span> <span class="o">/^</span><span class="n">Permanently</span> <span class="n">delete</span> <span class="n">this</span> <span class="n">Slice</span> <span class="n">and</span> <span class="n">all</span> <span class="n">of</span> <span class="n">its</span> <span class="n">data</span><span class="p">[</span><span class="n">sS</span><span class="p">]</span> <span class="n">There</span> <span class="n">is</span> <span class="n">no</span> <span class="n">turning</span> <span class="n">back</span><span class="o">!</span><span class="err">$</span><span class="o">/</span> <span class="o">=~</span> <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">get_confirmation</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">logout</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Logout"</span>
+    <span class="n">browser_wait</span>
+  <span class="n">end</span>
+
+  <span class="n">def</span> <span class="n">browser_wait</span>
+    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">wait_for_page_to_load</span> <span class="s">"30000"</span>
+  <span class="n">end</span>
+<span class="n">end</span>
+</pre></div>
+
+
+<p>7. Start the selenium server: </p>
+<div class="code"><pre><span class="n">selsrvr</span>
+</pre></div>
+
+
+<p>8. run the test: </p>
+<div class="code"><pre><span class="n">ruby</span> <span class="o">~/</span><span class="n">code</span><span class="o">/</span><span class="n">seleniumrc</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">rb</span>
+</pre></div>
+
+
+<p>You should see the firefox browser open up in two windows and see the automation in process. Once the slice is created, I've setup a timer at 180 seconds (3 min) to wait for the slice to be created and set to a status of active. Like #5 above states, once complete the test captures the root password and ip address off the web UI and uses them to SSH into the new slice. This is my 3rd time using selenium and I like what I see. More to come.</p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../houston-alt-net-open-space-april-3rd-april-5th-2009/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../hudson-and-nginx/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/selenium-client-and-fun/",
+        
+        disqus_title="Selenium-client and fun",
+        disqus_identifier="cache/posts/selenium-client-and-fun.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

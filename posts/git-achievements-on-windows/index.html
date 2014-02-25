@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Git-Achievements on Windows | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/git-achievements-on-windows/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Git-Achievements on Windows</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2010-09-25T02:30:00-05:00" itemprop="datePublished">Sep 25, 2010</time>
+        
+    
+
+		
+    
+          |  More posts about
+        
+            <a class="tag" href="../../categories/git.html"><span class="badge badge-info">git</span></a>
+        
+            <a class="tag" href="../../categories/windows.html"><span class="badge badge-info">windows</span></a>
+        
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p><strong>UPDATE</strong>: <em>Needed to add newly clone git-achievements to your PATH env variable.  Otherwise it will push an index.html file to your current repo and not the git-achievements repo.  Thank you __<a href="http://twitter.com/adymitruk">Adam_</a></em> for finding that._</p>
+<p><strong>IMPORTANT:</strong> <em>Make sure you save your ~/.git-achievements-action.log and ~/.git-achievements.log files if you are transferring from your primary machine.  If you make these files mobile you will be able to use multiple machines.  I forgot mine and now have to start over with git-achievements.  Meh.  More fun.</em></p>
+<ul><li>I’m using Msysgit Bash CLI (<a href="../../blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">up-to-date install instructions</a>) </li>
+<li>
+<p>I’ve forked the <a href="http://github.com/icefox/git-achievements">git-achievements github repository</a></p>
+<ul><li>notice it forks to a gh-pages branch, not a master branch </li>
+<li>this allows github to fire jekyll off against your github account and generate your git-achievements page </li>
+</ul></li>
+<li>
+<p><img alt="clone_git_achievements" src="//lostechies.com/jasonmeridth/files/2011/03/clone_git_achievements_thumb_44954553.png"> </p>
+<ul><li>cloned repository locally into my C:code folder (resulting in /c/code/git-achievements by Git Bash CLI path terms) </li>
+</ul></li>
+<li>
+<p><img alt="vim_bashrc" src="//lostechies.com/jasonmeridth/files/2011/03/vim_bashrc_thumb_0EE93888.png"> </p>
+<ul><li>~/ (tilde + forward slash means home directory, where the .bashrc file needs to be) </li>
+</ul></li>
+<li>
+<p><img alt="vim_bashrc_export" src="//lostechies.com/jasonmeridth/files/2011/03/vim_bashrc_export_thumb_18CE29F3.png"></p>
+<ul><li>add the newly clone git-achievements directory to your PATH environment variable </li>
+<li>alias the git command to call git-achievements </li>
+<li>git-achievements calls the real git.exe, this just allows it to wrap it and intercept calls </li>
+</ul></li>
+<li>
+<p><img alt="source_bashrc" src="//lostechies.com/jasonmeridth/files/2011/03/source_bashrc_thumb_534929C7.png"></p>
+<ul><li>source means to refresh/reapply </li>
+<li>if you don’t do this, your new changes won’t take effect </li>
+</ul></li>
+<li>
+<p><img alt="echo_path" src="//lostechies.com/jasonmeridth/files/2011/03/echo_path_thumb_38305AB9.png"></p>
+<ul><li>this outputs your PATH environment variable content. </li>
+<li>Notice the git-achievements folder at the end. :) </li>
+</ul></li>
+<li>
+<p><img alt="git_config" src="//lostechies.com/jasonmeridth/files/2011/03/git_config_thumb_4133ADAB.png"></p>
+<ol><li>this allows uploads to your fork, on the gh-pages branch </li>
+</ol></li>
+<li>
+<p><img alt="check_git_still_works" src="//lostechies.com/jasonmeridth/files/2011/03/check_git_still_works_thumb_51CBA899.png"></p>
+<ol><li>to ensure you didn’t break git </li>
+</ol></li>
+<li>
+<p><img alt="git_achievements_help" src="//lostechies.com/jasonmeridth/files/2011/03/git_achievements_help_thumb_2BF58236.png"></p>
+<ol><li>shows the git achievements help </li>
+<li>generates your first achievement as a “Student” (I already had mine) </li>
+</ol></li>
+</ul><p>Hope you guys have as much fun as I did.  Yeah, yeah, I’m a nerd.  So what?  ;)</p>
+<p><a href="http://blog.jasonmeridth.com/git-achievements">http://blog.jasonmeridth.com/git-achievements</a></p>
+<h3>Comments</h3>
+<p><strong><a href=".#485" title="2010-09-25 21:51:29">Adam D. </a>:</strong> Hmmm.. can't get the uploading of achievements to work... Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git push Counting objects: 31, done. Delta compression using up to 2 threads. Compressing objects: 100% (16/16), done. Writing objects: 100% (16/16), 2.19 KiB, done. Total 16 (delta 15), reused 0 (delta 0) To git@scanit.unfuddle.com:scanit/cqrs.git fe265ce..81bafd5 master -&gt; master <strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em> Git Achievement Unlocked! Apprentice Socialite (Level 1) pushed a branch to a remote repository using git push </em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong><strong><em>*</em></strong> Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git achievements -p cat: git-achievements: No such file or directory Global achievement.upload not set to true, updates left uncommited Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ cd ../git-achievements/ Adam@ADAM-LAPTOP /c/dev/git-achievements (gh-pages) $ git commit -am "another achievment" &amp;&amp; git push # On branch gh-pages nothing to commit (working directory clean) Adam@ADAM-LAPTOP /c/dev/git-achievements (gh-pages) $ git status # On branch gh-pages nothing to commit (working directory clean) Adam@ADAM-LAPTOP /c/dev/git-achievements (gh-pages) $ cd - /c/dev/cqrs</p>
+<p><strong><a href=".#486" title="2010-09-25 23:02:27">Jason Meridth</a>:</strong> @Adam I updated post. I messed up on the .bashrc. Needed to add git-achievements to your PATH env. screenshots above. Sorry</p>
+<p><strong><a href=".#487" title="2010-09-25 23:23:14">Adam D. </a>:</strong> I did it but I still get this: Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git achievements -p Global achievement.upload not set to true, updates left uncommited Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git config -l core.symlinks=false core.autocrlf=false color.diff=auto pack.packsizelimit=2g help.format=html http.sslcainfo=/bin/curl-ca-bundle.crt sendemail.smtpserver=/bin/msmtp.exe merge.tool=kdiff3 mergetool.kdiff3.path=c:/Program Files (x86)/KDiff3/kdiff3.exe mergetool.kdiff3.cmd="c:/Program Files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMOTE" "$MERGED" user.name=Adam Dymitruk user.email=adam@dymitruk.com core.editor=vim core.autocrlf=false mergetool.keepbackup=true branch.autosetupmerge=true gui.recentrepo=C:/dev/scanitinternational achievment.upload=true &lt;------------------------------------------- !!!! core.repositoryformatversion=0 core.filemode=false core.bare=false core.logallrefupdates=true core.symlinks=false core.ignorecase=true remote.origin.url=git@scanit.unfuddle.com:scanit/cqrs.git remote.origin.fetch=+refs/heads/<em>:refs/remotes/origin/</em> branch.master.remote=origin branch.master.merge=refs/heads/master branch.autosetuprebase=always submodule.libs.url=git@github.com:adymitruk/altnetdllstack.git branch.FileStorage.remote=origin branch.FileStorage.merge=refs/heads/FileStorage branch.FileStorage.rebase=true remote.local.url=../chrisrepo remote.local.fetch=+refs/heads/<em>:refs/remotes/local/</em> gui.wmstate=normal gui.geometry=887x427+75+75 171 192 branch.scheduler.remote=origin branch.scheduler.merge=refs/heads/scheduler branch.scheduler.rebase=true branch.EquipmentMaintenance.remote=origin branch.EquipmentMaintenance.merge=refs/heads/EquipmentMaintenance branch.EquipmentMaintenance.rebase=true</p>
+<p><strong><a href=".#488" title="2010-09-25 23:24:57">Adam D. </a>:</strong> Never mind. I can't spell :)</p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../gotcha-with-gitosis-and-python-setuptools/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../readline-error-with-rvm-and-rails-3/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/git-achievements-on-windows/",
+        
+        disqus_title="Git-Achievements on Windows",
+        disqus_identifier="cache/posts/git-achievements-on-windows.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

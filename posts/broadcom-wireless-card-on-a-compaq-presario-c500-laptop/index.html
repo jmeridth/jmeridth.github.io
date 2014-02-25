@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Ubuntu Feisty Fawn and the Broadcom wireless card on a Compaq Presario C500 Laptop | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/broadcom-wireless-card-on-a-compaq-presario-c500-laptop/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Ubuntu Feisty Fawn and the Broadcom wireless card on a Compaq Presario C500 Laptop</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2007-05-29T21:06:00-05:00" itemprop="datePublished">May 29, 2007</time>
+        
+    
+
+		
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p>You'd start to think that I'm no longer a developer, and more of a architecture IT person now with all of the latest Linux installation posts I've had lately.  These are do to the new tricks/fixes I'm having to learn to get Ubuntu Feisty Fawn to not be so feisty.  It's still better than Vista (for AgileJoe, knowing his comments are coming)</p>
+<p>This past weekend I had a friend ask me to come over and help with a wireless printer server.  (Side Note:  D-Link Wireless printer servers claim to be using DHCP but they lie.  They are using static IPs.  You have to set your network IP scheme to match, get access to the print server, then set it's IP scheme to match your original IP scheme, then set your scheme back.  The reason I had to set his back was because SBC/AT&amp;T won't allow his internal IP scheme be anything but 192.168.1.x - Don't ask me.) I digress.</p>
+<p>Anyways his Compaq Presario C500 laptop had Vista on it and it could see his printer but still couldn't print.  Same 'ol, same 'ol with there not being any Vista printer drivers ready. After an hour of looking for drivers I suggested Linux.  He had never heard of it.  I asked him if he trusted me and did he use any software that was specific to Windows.  He said yes to the first question and no to the second.</p>
+<p>I took his laptop home and loaded Ubuntu 7.04 (Feisty Fawn).  No problems.  I copied off his photos from his My Docs folder to my USB key drive and then plugged it in and put back in his /home/<username>/photos folder after loading Ubuntu. I could not get the wireless card to work.  It detected the interface and I verified that it was in the /etc/network/interfaces file.  The wireless blue key on the main board of the laptop would not light up no matter was I tried.</username></p>
+<p>I plugged in my CAT5 cable and updated the OS with the latest patches and also loaded Automatix 2.0.  Got RealPlayer and a few other software programs loaded he mentioned that he liked.</p>
+<p>Now to the core of this post.</p>
+<p>I tried the following fixes and they DID NOT work for me:</p>
+<p>1. <a href="http://ubuntuforums.org/showthread.php?t=405990">Ubuntu Forums Thread 405990</a><br>
+2. <a href="http://ubuntuforums.org/showthread.php?t=185174">Ubuntu Forums Thread 185874</a>  </p>
+<p>I tried the following post (all commands literally) and it WORKED great:</p>
+<p><a href="http://ubuntuforums.org/showthread.php?t=297092">Ubuntu Forums Thread 297092</a></p>
+<p>Thanks to <a href="http://ubuntuforums.org/member.php?u=217506">Bmartin</a> on the Ubuntu Forums for his help.</p>
+<h3>Comments</h3>
+<p><strong><a href=".#46" title="2007-08-04 13:22:51">jon</a>:</strong> the one that worked for you shows a dell driver for the c500 compaq notebook. the first link that you show did work for me on compaq</p>
+<p><strong><a href=".#47" title="2008-04-08 01:39:20">Khalil</a>:</strong> I have installed Ubuntu 7.10 (Gutsy) and am trying to run the NDISwrapper to get the wireless to work, but I am stuck on Step 3.</p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../knoppix-ntfsfix-fixes-windows-xp-corrupted-ntfs/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../scott-guthrie-uses-firefox-in-his-posts-where-s-ie/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/broadcom-wireless-card-on-a-compaq-presario-c500-laptop/",
+        
+        disqus_title="Ubuntu Feisty Fawn and the Broadcom wireless card on a Compaq Presario C500 Laptop",
+        disqus_identifier="cache/posts/broadcom-wireless-card-on-a-compaq-presario-c500-laptop.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>

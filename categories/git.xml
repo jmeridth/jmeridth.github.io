@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (git)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/git.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Feb 2014 21:51:43 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Use Git Grep to Replace Strings in Files in Your Git Repository</title><link>http://blog.jasonmeridth.com/posts/use-git-grep-to-replace-strings-in-files-in-your-git-repository/</link><description>&lt;div&gt;&lt;p&gt;TL;DR&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;git grep -l &lt;span class="s1"&gt;'original_text'&lt;/span&gt; | xargs sed -i &lt;span class="s1"&gt;'s/original_text/new_text/g'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I needed to changed a string in a bunch of files and used the command above using git grep to do it. Worked like a charm.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;-l&lt;/code&gt; argument to git grep only returns the file names and not the location in the file like it usually does.  &lt;/p&gt;&lt;/div&gt;</description><category>git</category><guid>http://blog.jasonmeridth.com/posts/use-git-grep-to-replace-strings-in-files-in-your-git-repository/</guid><pubDate>Mon, 11 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</link><description>&lt;div&gt;&lt;p&gt;Whenever you do&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install git-core
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;on Ubuntu you will only get git version 1.7.5.x. I needed 1.7.6%2B.&lt;/p&gt;
+&lt;p&gt;To do this you have to run the following commands:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install python-software-properties
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git-core
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This should give you git version 1.7.11 (as of today)  &lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</guid><pubDate>Wed, 11 Jul 2012 05:00:00 GMT</pubDate></item><item><title>Git and Seeting What Commits Are Not In Another Branch</title><link>http://blog.jasonmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/</link><description>&lt;div&gt;&lt;p&gt;A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff&lt;code&gt;but I've started telling them to look at&lt;/code&gt;git cherry` (NOT git-cherry-pick).&lt;/p&gt;
+&lt;p&gt;From &lt;a href="http://git-scm.com/docs/git-cherry"&gt;the new Git documentation&lt;/a&gt;, git-cherry finds commits not merged upstream.&lt;/p&gt;
+&lt;p&gt;I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git cherry -v master feature-branch-name
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The -v option prints out the commit SHAs and messages. If I am already on the feature-branch-name branch, I can type the following to get the same effect:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git cherry -v master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The results typically looks something like:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;%2B a4d0f79fccbbc12a53e8f0e5c2a4ef960ad69ba2 commit 1 message
+%2B 7e71afd1faf36f17a0ff506e63cd2ca51496dad3 commit 2 message
+%2B 5e815ece05d8813354e60ca1affb8cdb8c5d78fc commit 3 message
+%2B 956f4cec5684544066a0d261ff8ac80aff7a57ea commit 4 message
+%2B 6c6cdb4342ed935f8fbd38f48f51dec469dd1823 commit 5 message
+%2B c3481fd0d6279f5bd45c455b915e0b4b1c0d8909 commit 6 message
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That means those commits are on feature-branch-name branch but not in master&lt;/p&gt;&lt;/div&gt;</description><category>git</category><guid>http://blog.jasonmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/</guid><pubDate>Tue, 22 May 2012 05:00:00 GMT</pubDate></item><item><title>Automatically Execute Mistyped Git Commands</title><link>http://blog.jasonmeridth.com/posts/automatically-execute-mistyped-git-commands/</link><description>&lt;div&gt;&lt;p&gt;I use the command line with Git. I do this because I type faster than I use my mouse. It is a personal preference. Due to this, I sometimes fat finger Git commands. Yeah, it does happen. For example, I can type:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git chekcout -b new_branch_name
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Notice the checkout command is mistyped (kc instead of ck). I misspell that and branch (usually brnach) often. Git will usually give notice this and give you a suggestion on which command you might have meant.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git chekcout -b new_branch
+git: &lt;span class="s1"&gt;'chekcout'&lt;/span&gt; is not a git command. See &lt;span class="s1"&gt;'git --help'&lt;/span&gt;.
+
+Did you mean this?
+        checkout
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;There is hope for us misspellers. There is a Git config option called &lt;a href="http://git-scm.com/docs/git-config"&gt;help.autocorrect&lt;/a&gt;. &lt;a href="http://git-scm.com/book/ch7-1.html"&gt;“If you set help.autocorrect to 1, Git will automatically run the command if it has only one match under this scenario”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To set it:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git config --global help.autocorrect 1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then when you misspell again:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git chekcout -b new_branch
+WARNING: You called a Git &lt;span class="nb"&gt;command &lt;/span&gt;named &lt;span class="s1"&gt;'chekcout'&lt;/span&gt;, which does not exist.
+Continuing under the assumption that you meant &lt;span class="s1"&gt;'checkout'&lt;/span&gt;
+in 0.1 seconds automatically...
+Switched to a new branch &lt;span class="s1"&gt;'new_branch'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Git warns you that it will be making an assumption. That is nice. It just speeds things up and allows me to keep misspelling things. Hardy har har.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><guid>http://blog.jasonmeridth.com/posts/automatically-execute-mistyped-git-commands/</guid><pubDate>Tue, 22 May 2012 05:00:00 GMT</pubDate></item><item><title>git clone --mirror vs git clone --bare</title><link>http://blog.jasonmeridth.com/posts/git-clone-mirror-vs-git-clone-bare/</link><description>&lt;div&gt;&lt;p&gt;I setup &lt;a href="http://progit.org/book/ch4-6.html"&gt;GitWeb&lt;/a&gt; at work recently. It is very fast and extremely useful. I noticed that the repositories the web view was looking at didn’t show any tags or other branches. Only the master branch. I had used&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;bare&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to get the code. This ensures that no working directory is created. Pretty much only the contents of the .git directory. In order to get the .git directory but also any tags, non-master branches, etc, I learned to use:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;git clone --mirror git@host:repository.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;By definition from the man page of &lt;a href="http://schacon.github.com/git/git-clone.html"&gt;git clone&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;--mirror
+    Set up a mirror of the &lt;span class="nb"&gt;source &lt;/span&gt;repository. This implies --bare. Compared to --bare,
+    --mirror not only maps &lt;span class="nb"&gt;local &lt;/span&gt;branches of the &lt;span class="nb"&gt;source &lt;/span&gt;to &lt;span class="nb"&gt;local &lt;/span&gt;branches of the target,
+    it maps all refs &lt;span class="o"&gt;(&lt;/span&gt;including remote-tracking branches, notes etc.&lt;span class="o"&gt;)&lt;/span&gt; and sets up a
+    refspec configuration such that all these refs are overwritten by a git remote
+    update in the target repository.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After I used &lt;code&gt;--mirror&lt;/code&gt; instead of &lt;code&gt;--bare&lt;/code&gt;, the other branches and tags showed up. Winning.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><guid>http://blog.jasonmeridth.com/posts/git-clone-mirror-vs-git-clone-bare/</guid><pubDate>Fri, 30 Mar 2012 05:00:00 GMT</pubDate></item><item><title>Do Not Issue Pull Requests From Your Master Branch</title><link>http://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/</link><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;PROBLEM:&lt;/strong&gt; You do not want to issue pull requests from your fork’s master branch on &lt;a href="http://github.com"&gt;Github.com&lt;/a&gt; to the parent repisitory because any new changes you add to the master branch will &lt;strong&gt;&lt;em&gt;automatically&lt;/em&gt;&lt;/strong&gt; show up in the pull request. That means changes you did not intend to be there, would now be there.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SOLUTION:&lt;/strong&gt; Issue your pull requests from a feature/topic branch&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BAD SCENARIO:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fork repo ABC&lt;/li&gt;
+&lt;li&gt;Clone it locally (&lt;code&gt;git clone git@github.com:jmeridth/jekyll.git&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Add upstream repo (&lt;code&gt;git remote add upstream git@github.com:mojombo/jekyll.git&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Code fix/feature on master branch&lt;ul&gt;&lt;li&gt;don’t forget to add tests/specs and make sure they pass&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Commit code (&lt;code&gt;git add . &amp;amp;&amp;amp; git commit -m “awesome”&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Pull latest from upstream (&lt;code&gt;git pull upstream master&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Push your changes (&lt;code&gt;git push origin master&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;On &lt;a href="http://github.com"&gt;Github&lt;/a&gt; website&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The issue here is if you continue to work on your local master branch and push to your fork again, &lt;strong&gt;&lt;em&gt;BEFORE&lt;/em&gt;&lt;/strong&gt; the pull request is accepted and merged. Why is this an issue? It is an issue because any further commits on the branch that a pull request is based on will &lt;strong&gt;&lt;em&gt;AUTOMATICALLY&lt;/em&gt;&lt;/strong&gt; be added to the pull request. This usually ensures that you are requested to fix the pull request before it will be accepted.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GOOD SCENARIO:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Fork repo ABC&lt;/li&gt;
+&lt;li&gt;Clone it locally (&lt;code&gt;git clone git@github.com:jmeridth/jekyll.git&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Add upstream repo (&lt;code&gt;git remote add upstream git@github.com:mojombo/jekyll.git&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Create a feature/topic branch (`git checkout -b awesome_feature)&lt;/li&gt;
+&lt;li&gt;Code fix/feature&lt;ul&gt;&lt;li&gt;don’t forget to add tests/specs and make sure they pass&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Commit code on feature/topic branch (&lt;code&gt;git add . &amp;amp;&amp;amp; git commit -m “awesome”&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Checkout master (&lt;code&gt;git checkout master&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Pull latest from upstream (&lt;code&gt;git pull upstream master&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Checkout feature/topic branch (&lt;code&gt;git checkout awesome_feature&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Rebase your changes onto the latest changes in master (&lt;code&gt;git rebase master&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Push your fix/feature branch to your fork (&lt;code&gt;git push origin awesome_feature&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;On &lt;a href="http://github.com"&gt;Github&lt;/a&gt; website&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>git</category><category>github</category><guid>http://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/</guid><pubDate>Fri, 30 Mar 2012 05:00:00 GMT</pubDate></item><item><title>Git Achievements on Windows (Part 2)</title><link>http://blog.jasonmeridth.com/posts/git-achievements-on-windows-part-2/</link><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/git-achievements-on-windows"&gt;Part 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I’m using Msysgit Bash CLI (up-to-date install instructions&lt;/p&gt;
+&lt;p&gt;I’ve forked the git-achievements github repository&lt;/p&gt;
+&lt;p&gt;notice it forks to a gh-pages branch, not a master branch&lt;/p&gt;
+&lt;p&gt;this allows github to fire jekyll off against your github account and generate your git-achievements page&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;span class="nv"&gt;$ &lt;/span&gt;git clone git@github.com:jmeridth/git-achievments.git
+Cloning into git-achievements...
+remote: Counting objects: 1168, &lt;span class="k"&gt;done&lt;/span&gt;.
+remote: Compressing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;742/742&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+Receiving objects: 91% &lt;span class="o"&gt;(&lt;/span&gt;1063/1168&lt;span class="o"&gt;)&lt;/span&gt;
+Receiving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;1168/1168&lt;span class="o"&gt;)&lt;/span&gt;, 155.28 KiB, &lt;span class="k"&gt;done&lt;/span&gt;.
+Resolving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;801/801&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;cloned repository locally into my C:code folder (resulting in /c/code/git-achievements by Git Bash CLI path terms)&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;span class="nv"&gt;$ &lt;/span&gt;vim ~/.bashrc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;~/ (tilde %2B forward slash means home directory, where the .bashrc file needs to be)&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"$PATH:/c/code/git-achievements"&lt;/span&gt;
+&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;git&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"git-achievements"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;add the newly clone git-achievements directory to your PATH environment variable&lt;/p&gt;
+&lt;p&gt;alias the git command to call git-achievements&lt;/p&gt;
+&lt;p&gt;git-achievements calls the real git.exe, this just allows it to wrap it and intercept calls&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;source means to refresh/reapply&lt;/p&gt;
+&lt;p&gt;if you don’t do this, your new changes won’t take effect&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$PATH&lt;/span&gt;
+......:/c/code/git-achievements
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;this outputs your PATH environment variable content.&lt;/p&gt;
+&lt;p&gt;Notice the git-achievements folder at the end. :)&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;span class="nv"&gt;$ &lt;/span&gt;git config --global achievement.upload &lt;span class="s2"&gt;"true"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;this allows uploads to your fork, on the gh-pages branch&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;span class="nv"&gt;$ &lt;/span&gt;git --version
+git version 1.7.2.3.msysgit.0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to ensure you didn’t break git&lt;/p&gt;
+&lt;div class="code"&gt;&lt;pre&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;span class="nv"&gt;$ &lt;/span&gt;git achievements --help
+Git Achievements
+
+you currently have:     1 achievements
+
+Options:
+    -l --list   Show all achievements
+    -p --publish Publish existing achievemetns and push to origin.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;shows the git achievements help&lt;/p&gt;
+&lt;p&gt;generates your first achievement as a “Student” (I already had mine)&lt;/p&gt;
+&lt;p&gt;Hope you guys have as much fun as I did. Yeah, yeah, I’m a nerd. So what? ;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/git-achievements"&gt;My Achievements&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>windows</category><guid>http://blog.jasonmeridth.com/posts/git-achievements-on-windows-part-2/</guid><pubDate>Wed, 21 Mar 2012 05:00:00 GMT</pubDate></item><item><title>Git-Achievements on Windows</title><link>http://blog.jasonmeridth.com/posts/git-achievements-on-windows/</link><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: &lt;em&gt;Needed to add newly clone git-achievements to your PATH env variable.  Otherwise it will push an index.html file to your current repo and not the git-achievements repo.  Thank you __&lt;a href="http://twitter.com/adymitruk"&gt;Adam_&lt;/a&gt;&lt;/em&gt; for finding that._&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; &lt;em&gt;Make sure you save your ~/.git-achievements-action.log and ~/.git-achievements.log files if you are transferring from your primary machine.  If you make these files mobile you will be able to use multiple machines.  I forgot mine and now have to start over with git-achievements.  Meh.  More fun.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;I’m using Msysgit Bash CLI (&lt;a href="http://blog.jasonmeridth.com/blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx"&gt;up-to-date install instructions&lt;/a&gt;) &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I’ve forked the &lt;a href="http://github.com/icefox/git-achievements"&gt;git-achievements github repository&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;notice it forks to a gh-pages branch, not a master branch &lt;/li&gt;
+&lt;li&gt;this allows github to fire jekyll off against your github account and generate your git-achievements page &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="clone_git_achievements" src="http://lostechies.com/jasonmeridth/files/2011/03/clone_git_achievements_thumb_44954553.png"&gt; &lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;cloned repository locally into my C:code folder (resulting in /c/code/git-achievements by Git Bash CLI path terms) &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="vim_bashrc" src="http://lostechies.com/jasonmeridth/files/2011/03/vim_bashrc_thumb_0EE93888.png"&gt; &lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;~/ (tilde + forward slash means home directory, where the .bashrc file needs to be) &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="vim_bashrc_export" src="http://lostechies.com/jasonmeridth/files/2011/03/vim_bashrc_export_thumb_18CE29F3.png"&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;add the newly clone git-achievements directory to your PATH environment variable &lt;/li&gt;
+&lt;li&gt;alias the git command to call git-achievements &lt;/li&gt;
+&lt;li&gt;git-achievements calls the real git.exe, this just allows it to wrap it and intercept calls &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="source_bashrc" src="http://lostechies.com/jasonmeridth/files/2011/03/source_bashrc_thumb_534929C7.png"&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;source means to refresh/reapply &lt;/li&gt;
+&lt;li&gt;if you don’t do this, your new changes won’t take effect &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="echo_path" src="http://lostechies.com/jasonmeridth/files/2011/03/echo_path_thumb_38305AB9.png"&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;this outputs your PATH environment variable content. &lt;/li&gt;
+&lt;li&gt;Notice the git-achievements folder at the end. :) &lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="git_config" src="http://lostechies.com/jasonmeridth/files/2011/03/git_config_thumb_4133ADAB.png"&gt;&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;this allows uploads to your fork, on the gh-pages branch &lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="check_git_still_works" src="http://lostechies.com/jasonmeridth/files/2011/03/check_git_still_works_thumb_51CBA899.png"&gt;&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;to ensure you didn’t break git &lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img alt="git_achievements_help" src="http://lostechies.com/jasonmeridth/files/2011/03/git_achievements_help_thumb_2BF58236.png"&gt;&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;shows the git achievements help &lt;/li&gt;
+&lt;li&gt;generates your first achievement as a “Student” (I already had mine) &lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Hope you guys have as much fun as I did.  Yeah, yeah, I’m a nerd.  So what?  ;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/git-achievements"&gt;http://blog.jasonmeridth.com/git-achievements&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Comments&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/git-achievements-on-windows/#485" title="2010-09-25 21:51:29"&gt;Adam D. &lt;/a&gt;:&lt;/strong&gt; Hmmm.. can't get the uploading of achievements to work... Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git push Counting objects: 31, done. Delta compression using up to 2 threads. Compressing objects: 100% (16/16), done. Writing objects: 100% (16/16), 2.19 KiB, done. Total 16 (delta 15), reused 0 (delta 0) To git@scanit.unfuddle.com:scanit/cqrs.git fe265ce..81bafd5 master -&amp;gt; master &lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt; Git Achievement Unlocked! Apprentice Socialite (Level 1) pushed a branch to a remote repository using git push &lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;*&lt;/em&gt;&lt;/strong&gt; Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git achievements -p cat: git-achievements: No such file or directory Global achievement.upload not set to true, updates left uncommited Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ cd ../git-achievements/ Adam@ADAM-LAPTOP /c/dev/git-achievements (gh-pages) $ git commit -am "another achievment" &amp;amp;&amp;amp; git push # On branch gh-pages nothing to commit (working directory clean) Adam@ADAM-LAPTOP /c/dev/git-achievements (gh-pages) $ git status # On branch gh-pages nothing to commit (working directory clean) Adam@ADAM-LAPTOP /c/dev/git-achievements (gh-pages) $ cd - /c/dev/cqrs&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/git-achievements-on-windows/#486" title="2010-09-25 23:02:27"&gt;Jason Meridth&lt;/a&gt;:&lt;/strong&gt; @Adam I updated post. I messed up on the .bashrc. Needed to add git-achievements to your PATH env. screenshots above. Sorry&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/git-achievements-on-windows/#487" title="2010-09-25 23:23:14"&gt;Adam D. &lt;/a&gt;:&lt;/strong&gt; I did it but I still get this: Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git achievements -p Global achievement.upload not set to true, updates left uncommited Adam@ADAM-LAPTOP /c/dev/cqrs (BuildingManagement) $ git config -l core.symlinks=false core.autocrlf=false color.diff=auto pack.packsizelimit=2g help.format=html http.sslcainfo=/bin/curl-ca-bundle.crt sendemail.smtpserver=/bin/msmtp.exe merge.tool=kdiff3 mergetool.kdiff3.path=c:/Program Files (x86)/KDiff3/kdiff3.exe mergetool.kdiff3.cmd="c:/Program Files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMOTE" "$MERGED" user.name=Adam Dymitruk user.email=adam@dymitruk.com core.editor=vim core.autocrlf=false mergetool.keepbackup=true branch.autosetupmerge=true gui.recentrepo=C:/dev/scanitinternational achievment.upload=true &amp;lt;------------------------------------------- !!!! core.repositoryformatversion=0 core.filemode=false core.bare=false core.logallrefupdates=true core.symlinks=false core.ignorecase=true remote.origin.url=git@scanit.unfuddle.com:scanit/cqrs.git remote.origin.fetch=+refs/heads/&lt;em&gt;:refs/remotes/origin/&lt;/em&gt; branch.master.remote=origin branch.master.merge=refs/heads/master branch.autosetuprebase=always submodule.libs.url=git@github.com:adymitruk/altnetdllstack.git branch.FileStorage.remote=origin branch.FileStorage.merge=refs/heads/FileStorage branch.FileStorage.rebase=true remote.local.url=../chrisrepo remote.local.fetch=+refs/heads/&lt;em&gt;:refs/remotes/local/&lt;/em&gt; gui.wmstate=normal gui.geometry=887x427+75+75 171 192 branch.scheduler.remote=origin branch.scheduler.merge=refs/heads/scheduler branch.scheduler.rebase=true branch.EquipmentMaintenance.remote=origin branch.EquipmentMaintenance.merge=refs/heads/EquipmentMaintenance branch.EquipmentMaintenance.rebase=true&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/git-achievements-on-windows/#488" title="2010-09-25 23:24:57"&gt;Adam D. &lt;/a&gt;:&lt;/strong&gt; Never mind. I can't spell :)&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>windows</category><guid>http://blog.jasonmeridth.com/posts/git-achievements-on-windows/</guid><pubDate>Sat, 25 Sep 2010 07:30:00 GMT</pubDate></item><item><title>Gotcha with Gitosis and python-setuptools</title><link>http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</link><description>&lt;div&gt;&lt;p&gt;Today I decided to upgrade my slicehost slice from Intrepid Ibex to Lucid Lynx (Intrepid → Jaunty → Karmic → Lucid). Yeah, yeah, I’m a little behind. Anyways, It upgraded just fine. However when I was trying to push code to my gitosis instance (which I installed over a year ago), I got the following stack trace:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-27-at-12.06.50-AM.png"&gt;&lt;/p&gt;
+&lt;p&gt;This told me that I had been using python-setuptools for python 2.5. A little googling and praying that I wouldn’t have to roll back to the snapshot I took before I started the upgrade (Thank God!), I found the solution. I went onto the gitosis slice, cloned the gitosis repository:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-27-at-12.07.06-AM.png"&gt;&lt;/p&gt;
+&lt;p&gt;and then ran the setup again:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-27-at-12.09.48-AM.png"&gt;&lt;/p&gt;
+&lt;p&gt;and it fixed the issue. Did I mention how much I love google. Hope this helps someone else.&lt;/p&gt;
+&lt;h3&gt;Comments&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/#484" title="2010-08-22 22:11:46"&gt;kathleen s.&lt;/a&gt;:&lt;/strong&gt; HI--This is about your blog on removing the Hard Drive of a Dell Dimension 3000. I think its closed for comments now, but I wanted to thank you for posting how to do it or I would've been lost. I am a technotard. Thanks again.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</guid><pubDate>Wed, 26 May 2010 09:58:00 GMT</pubDate></item><item><title>Gitosis and Gitweb - Part 3</title><link>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/</link><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-1-setup.aspx"&gt;Gitosis and Gitweb – Part 1&lt;br&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-2-add-projects-and-contributors.aspx"&gt;Gitosis and Gitweb – Part 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So we are setup, have a project, and have contributors via the first 2 parts.&lt;/p&gt;
+&lt;p&gt;I know that we are all enamored by the UI of &lt;a href="http://github.com"&gt;GitHub.com&lt;/a&gt;. I am. Unfortunately you can’t get private repositories for free (In all fairness it’s only $7/mo. – a &lt;em&gt;very&lt;/em&gt; wise investment). I am aware of &lt;a href="http://gitorious.com"&gt;Gitorious&lt;/a&gt; like I mentioned in the first part, but I have no experience with that. I will after this series and update this series if I find it better. Again, I like to use the simplest thing that works. (Of course, “simplest” is in the eye of the beholder)&lt;/p&gt;
+&lt;p&gt;In this section I’m going to show you how to install Gitweb, a UI tool that let’s you view your repositories. I’m also going to mention how to get it to auto-detect any new repositories and ensure they show up on the web UI. I learned how to do most of this from my co-worker &lt;a href="http://twitter.com/ajmesserli"&gt;Antony Messerli&lt;/a&gt;. He is a true Linux and problem-solving Jedi.&lt;/p&gt;
+&lt;h3&gt;Install Apache&lt;/h3&gt;
+&lt;p&gt;First, you need to ensure apache2 is installed. Check to see if you have an /etc/apache2 folder. If you do, you should be okay. If you don’t, you need to install it.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.15-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;For more in-depth advice, I always reference the &lt;a href="http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu"&gt;Slicehost Articles&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Once you have that installed the daemon restarted, go to your slices ip address in the browser of your choice (i.e,. http://123.123.123.123) and you should something like “It Works”&lt;/p&gt;
+&lt;p&gt;Voila! You have apache running.&lt;/p&gt;
+&lt;h3&gt;Install the Package&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.22-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;This will install gitweb into /var/www/gitweb, create a conf file at /etc/gitweb.conf, and add three files to /usr/share/gitweb (git-favicon.png, git-logo.png, gitweb.css).&lt;/p&gt;
+&lt;p&gt;Note: If for some reason, the /var/www/gitweb folder &lt;em&gt;is not&lt;/em&gt; created, you can clone the git source (git clone git://git.kernel.org/pub/scm/git/git.git) and then just copy the git/gitweb folder to /var/www/gitweb&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.28-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;You only need to edit the $projectroot variable in the /etc/gitweb.conf to point to your gitosis repositories folder:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.34-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;Since this isn’t a post about Apache, I just add the gitweb directory setup to the base Apache config. Since Ubuntu includes the entire /etc/apache2/conf.d directory, I just added the following information into /etc/apach2/conf.d/gitweb:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.44-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;Restart Apache to make sure everything works&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.52-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;The first time you go to your website again, you’ll see Gitweb, but it’ll say no projects are available. Fix mentioned below.&lt;/p&gt;
+&lt;h4&gt;Two Hacks (open to suggestions)&lt;/h4&gt;
+&lt;p&gt;1. I had to copy the git-favicon.png, git-logo.png, gitweb.css files from /usr/share/gitweb to /var/www/gitweb/. (if you had to do what is mentioned in the Note above, you don’t have to do this, since the gitweb folder from the git source clone includes these files already)&lt;/p&gt;
+&lt;p&gt;2. I had to make the repositories that I wanted visible in gitweb have permissions of 755 (aka owner has read, write, execute. group and others have read, execute.)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.58-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;Once that was done I can see the repository and it’s information on Gitweb.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.48.07-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;If you want to edit the project description from "Unnamed repository; edit this file 'description' to name the repository." go to the repositories description file (/home/git/repositories/          lostechies.git/description for this repo) and edit the file and save.&lt;/p&gt;
+&lt;h4&gt;Cron job&lt;/h4&gt;
+&lt;p&gt;I, again with the leadership of Ant, utilized a cron job he wrote to automatically make the repositories have permissions of 755. I do have some repositories, like gitosis-admin, that I do not ever want visible on Gitweb. The cron job excludes them. Here is the cron job code, showing that I don’t want to show my personal.git and gitosis-admin.git repositories. This could be easily written in Ruby or any other “scripting language” of your choice:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.48.19-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;I chose bash, so that I could take that time to learn it.&lt;br&gt;
+Translation: Find all the directories in my gitosis repository path (/home/git/repositories) and if they are not gitosis-admin or personal, change their permissions, recursively, to 0755.&lt;/p&gt;
+&lt;p&gt;I put this in a file called set_gitosis_permissions_to_view_on_gitweb.sh and put it in root’s home folder, /root. I then called the file from root’s crontab:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.48.26-PM.png"&gt;&lt;/p&gt;
+&lt;p&gt;This means that every 5 minutes, my bash file will set any new repositories to 0755. This is how to get Gitweb stood up. The next post will show how to hide it behind HTTP basic auth and a self-signed certificate.&lt;/p&gt;
+&lt;p&gt;Next Part: Hiding the Gitweb site&lt;/p&gt;
+&lt;h3&gt;Comments&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/#483" title="2010-07-09 22:07:08"&gt;katy lavallee&lt;/a&gt;:&lt;/strong&gt; Anxiously awaiting the next part :)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/#513" title="2011-11-05 01:16:00"&gt;Thorpe&lt;/a&gt;:&lt;/strong&gt; You said you chose Bash so that you could take some time to learn it. Unfortunately however, your shebang points to sh not bash. There is some differences.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/</guid><pubDate>Wed, 26 May 2010 09:45:00 GMT</pubDate></item></channel></rss>

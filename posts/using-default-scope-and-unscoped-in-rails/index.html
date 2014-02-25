@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Using Deafult Scope and Unscoped in Rails | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top" id="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="http://blog.jasonmeridth.com/">
+            Jason Meridth's Blog
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../../archive.html">Archives</a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../categories/index.html">Tags</a>
+            
+        
+    
+        
+            
+                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
+            
+        
+    
+        
+            
+                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
+            
+        
+    
+
+                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
+<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
+<!-- End of custom search -->
+
+                
+                <ul class="nav pull-right"></ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
+    
+    <h1 class="p-name" itemprop="headline name">Using Deafult Scope and Unscoped in Rails</h1>
+    
+
+    <hr><small>
+        Posted: <time class="published dt-published" datetime="2013-04-02T00:00:00-05:00" itemprop="datePublished">Apr 02, 2013</time>
+        
+    
+
+		
+    
+          |  More posts about
+        
+            <a class="tag" href="../../categories/rails.html"><span class="badge badge-info">rails</span></a>
+        
+    
+
+          |  
+		
+		
+			<a href="index.md" id="sourcelink">Source</a>
+		
+		
+    </small>
+    <hr><div class="e-content" itemprop="articleBody text">
+    <div><p>I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:</p>
+<div class="code"><pre><span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="ss">deleted</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+</pre></div>
+
+
+<p>That does lean towards not having DRY (don’t repeat yourself) code. It’s a balancing act. I decided to give default_scope a chance this time. I quickly experienced the downside of that choice. I added the default_scope to my model:</p>
+<div class="code"><pre><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Base</span>
+  <span class="n">default_scope</span> <span class="n">where</span><span class="p">(</span><span class="ss">deleted</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>Well, I needed to write a migration to add the column and then update any existing records to have a default value of false. I generated my migration and added the following:</p>
+<div class="code"><pre><span class="k">class</span> <span class="nc">AddDeletedFlagToUsers</span> <span class="o">&lt;</span> <span class="ss">ActiveRecord</span><span class="p">:</span><span class="ss">:Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">add_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:deleted</span><span class="p">,</span> <span class="ss">:boolean</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="kp">false</span>
+    <span class="no">User</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>However, when I looked at the database, none of the pre-existing records had false as their deleted flag. I went to the rails console and typed in the update_all command again:</p>
+<div class="code"><pre><span class="no">User</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+</pre></div>
+
+
+<p>and that’s when I saw how default_scope can bite you in the butt:</p>
+<div class="code"><pre>~/code/project<span class="o">(</span>master<span class="o">)</span> &amp;gt; rails c
+Loading development environment <span class="o">(</span>Rails 3.2.12<span class="o">)</span>
+&gt;&gt; User.update_all <span class="o">[</span><span class="s2">"deleted = ?"</span>, <span class="nb">false</span><span class="o">]</span>
+  SQL <span class="o">(</span>35.9ms<span class="o">)</span>  UPDATE <span class="s2">"users"</span> SET <span class="nv">deleted</span> <span class="o">=</span> <span class="s1">'f'</span> WHERE <span class="s2">"users"</span>.<span class="s2">"deleted"</span> <span class="o">=</span> <span class="s1">'f'</span>
+<span class="o">=</span>&gt; 0
+</pre></div>
+
+
+<p>Notice the <code>WHERE</code> clause. That is what the default_scope adds automatically. Duh!! So in order to bypass the default_scope I had to use <code>unscoped</code>:</p>
+<div class="code"><pre><span class="no">User</span><span class="o">.</span><span class="n">unscoped</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+</pre></div>
+
+
+<p>in my migration. That then caused all existing records to be updated.</p>
+<p>Yes, I’m aware this violates “Explicit over implicit” but it does keep my code “DRY (do not repeat yourself)”. There are pros and cons to all tools. Use them wisely.  </p></div>
+    </div>
+    
+    </div>
+    
+    
+        <ul class="pager"><li class="previous">
+                <a href="../fix-rendering-with-presence-of-doctype/" rel="prev">← Previous post</a>
+            </li>
+        
+        
+            <li class="next">
+                <a href="../consolidated-my-blogs/" rel="next">Next post →</a>
+            </li>
+        
+        </ul><div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="jasonmeridth",
+        
+            disqus_url="http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/",
+        
+        disqus_title="Using Deafult Scope and Unscoped in Rails",
+        disqus_identifier="cache/posts/using-default-scope-and-unscoped-in-rails.html",
+        disqus_config = function () {
+            this.language = "";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+    
+
+    
+    
+    
+
+    </article></div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+</div>
+
+    
+        
+            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul><li><a class="addthis_button_facebook"></a>
+</li><li><a class="addthis_button_google_plusone_share"></a>
+</li><li><a class="addthis_button_linkedin"></a>
+</li><li><a class="addthis_button_twitter"></a>
+</li></ul></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+    $(window).on('hashchange', function(){
+        if (location.hash && $(location.hash)[0]) {
+            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
+        }
+    });
+    $(document).ready(function(){$(window).trigger('hashchange')});
+    </script></body></html>
