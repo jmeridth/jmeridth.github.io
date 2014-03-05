@@ -225,26 +225,74 @@ Translation: Find all the directories in my gitosis repository path (/home/git/r
         <small>  
              Posted: <time class="published dt-published" datetime="2010-05-25T03:02:00-05:00">May 25, 2010</time></small></h1>
         <hr><div class="e-content">
-        <div><p><a href="blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-1-setup.aspx">Gitosis and Gitweb – Part 1</a></p>
+        <div><p><a href="posts/gitosis-and-gitweb-part-1">Gitosis and Gitweb – Part 1</a></p>
 <p>So we are setup now thanks to Part 1.</p>
 <h3>Gitosis repository contents</h3>
 <p>If we issue the “find .” command locally inside the gitosis-admin directory we will see the following:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.04-PM.png"></p>
+<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; find .
+&lt;a bunch of files from .git folder<span class="o">)</span>
+./gitosis.conf
+./keydir
+./keydir/user@local.pub
+</pre></div>
+
+
 <p>We have the .git folder, a gitosis.conf file, and a keydir with a pub key file.</p>
 <h3>Add our first project</h3>
 <p>Our project name for this example is lostechies. If you view the gitosis-admin.conf file you will see the initial content like so:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.11-PM.png"></p>
+<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; cat gitosis.conf
+<span class="o">[</span>gitosis<span class="o">]</span>
+
+<span class="o">[</span>group gitosis-admin<span class="o">]</span>
+<span class="nv">writable</span> <span class="o">=</span> gitosis-admin
+<span class="nv">members</span> <span class="o">=</span> user@local
+</pre></div>
+
+
 <p>This is the result of the following command from the last part:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.20-PM.png"></p>
+<div class="code"><pre>sudo -H -u git gitosis-init &lt; /tmp/id_rsa.pub
+</pre></div>
+
+
 <p>That command puts the public ssh key into the keydirs directory and adds the associated username from the file to be the first member of the gisotis-admin project. Hence seeing user@local as the member. It matches the filename of the pub file in the keydir directory (user@local.pub). That’s how gitosis relates members listed in the conf file to the keys in the keydir directory, filename minus the pub extension.</p>
 <p>Let’s edit this conf file to include our lostechies project:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.27-PM.png"></p>
+<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; cat gitosis.conf
+<span class="o">[</span>gitosis<span class="o">]</span>
+
+<span class="o">[</span>group gitosis-admin<span class="o">]</span>
+<span class="nv">writable</span> <span class="o">=</span> gitosis-admin
+<span class="nv">memebers</span> <span class="o">=</span> user@local
+
+<span class="o">[</span>group meridth<span class="o">]</span>
+<span class="nv">writable</span> <span class="o">=</span> meridth
+<span class="nv">members</span> <span class="o">=</span> user@local
+</pre></div>
+
+
 <p>It looks exactly like the gitosis-admin one. Now we commit it just like we would normally when using Git. We can add, then commit or commit with the -am argument. This is possible since the gitosis-admin.conf file is already tracked by the repository.</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.06-PM.png"></p>
+<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git commit -am <span class="s2">"add meridth project"</span>
+<span class="o">[</span>master 6b7a5da<span class="o">]</span> add meridth project
+1 file changed, 3 insertions<span class="o">(</span>+<span class="o">)</span>, 0 deletions<span class="o">(</span>-<span class="o">)</span>
+</pre></div>
+
+
 <p>and push it to the remote gitosis-admin repository:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.12-PM.png"></p>
+<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git push
+Counting objects: 5, <span class="k">done</span>.
+Delta compression using up to 2 threads
+Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
+Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, 385 bytes, <span class="k">done</span>.
+Total 3 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
+To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
+   23842e9..6b7a5da master -&gt; master
+</pre></div>
+
+
 <p>We need to create the lostechies repository locally, add an initial item (README in this case), and push it remotely. Gitosis won’t create the repository until something it pushed to it.</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.20-PM.png"></p>
+<div class="code"><pre>START HERE
+</pre></div>
+
+
 <p>The lostechies repository now exists remotely. Currently my account is the only that has access. Let’s add another contributor.</p>
 <h3>Add our first contributors</h3>
 <p>Say I want to allow my friend Joe to have commit (writable) access to my lostechies repository and I want my friend Ryan to only have readonly access. I tell them to send me their public ssh keys. I make sure the files are named joe.pub and ryan.pub. I then put them into my local gitosis-admin repository’s keydir directory and then I edit the gitosis.conf file to be:</p>
@@ -514,25 +562,25 @@ drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
              Posted: <time class="published dt-published" datetime="2010-05-23T02:55:00-05:00">May 23, 2010</time></small></h1>
         <hr><div class="e-content">
         <div><p>I like knowing which Git branch I’m currently in. I use the git-ps1 function feature that comes with git-core. If you clone or download the git source:</p>
-<div class="code"><pre><span class="nl">git:</span><span class="c1">//git.kernel.org/pub/scm/git/git.git</span>
+<div class="code"><pre>git://git.kernel.org/pub/scm/git/git.git
 </pre></div>
 
 
-<p>There is a file in the contrib/completion folder called git-completion.bash:</p>
-<div class="code"><pre><span class="o">~/</span><span class="n">code</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">completion</span><span class="p">(</span><span class="n">master</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">ls</span>
-<span class="n">total</span> <span class="mi">96</span>
-<span class="o">-</span><span class="n">rwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>  <span class="mi">1</span> <span class="n">user</span>  <span class="n">staff</span>    <span class="mi">44</span><span class="n">K</span> <span class="n">Apr</span> <span class="mi">14</span> <span class="mi">15</span><span class="o">:</span><span class="mi">26</span> <span class="n">git</span><span class="o">-</span><span class="n">completion</span><span class="p">.</span><span class="n">bash</span>
+<p>There is a file in the contrib/completion folder called git-prompt.sh:</p>
+<div class="code"><pre>~/code/git/contrib/completion<span class="o">(</span>master<span class="o">)</span> &gt; ls
+total 96
+-rwxr-xr-x  1 user  staff    44K Apr 14 15:26 git-prompt.sh
 </pre></div>
 
 
-<p>I copy this file to my $HOME folder as .git-completion.bash and then reference it and the ps1 propt feature in my .bashrc file</p>
-<div class="code"><pre><span class="n">source</span> <span class="o">~/</span><span class="p">.</span><span class="n">git</span><span class="o">-</span><span class="n">completion</span><span class="p">.</span><span class="n">bash</span>
-<span class="n">export</span> <span class="n">PS1</span><span class="o">=</span><span class="err">'</span><span class="n">w</span><span class="err">$</span><span class="p">(</span><span class="n">__git_ps1</span> <span class="s">"(%s)"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="err">'</span>
+<p>I copy this file to my $HOME folder as .git-prompt.sh and then reference it and the ps1 propt feature in my .bashrc file</p>
+<div class="code"><pre><span class="nb">source</span> ~/.git-prompt.sh
+<span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">'w$(__git_ps1 "(%s)") &gt; '</span>
 </pre></div>
 
 
 <p>And now whenever I cd into a folder that is a Git repository I see something like the following prompt:</p>
-<div class="code"><pre><span class="o">~/</span><span class="n">gitosis</span><span class="o">-</span><span class="n">admin</span><span class="p">(</span><span class="n">master</span><span class="p">)</span> <span class="o">&gt;</span>
+<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt;
 </pre></div>
 
 
@@ -645,138 +693,142 @@ drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
     
 
         
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/pro-git-quot-cliff-notes/" class="u-url">"Pro Git" Cliff Notes</a>
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/pro-git-cliff-notes/" class="u-url">"Pro Git" Cliff Notes</a>
         <small>  
              Posted: <time class="published dt-published" datetime="2010-04-05T04:17:00-05:00">Apr 05, 2010</time></small></h1>
         <hr><div class="e-content">
         <div><p>These are my notes from reading Scott Chacon’s <a href="http://progit.org/book">Pro Git</a> I highly suggest <a href="http://tinyurl.com/amazonprogit">buying this book</a> if you are serious about using the Git version control tool. <a href="http://progit.org/book/ch3-1.html">pg 48</a> A branch in Git is simply a lightweight movable pointer <a href="http://progit.org/book/ch3-1.html">pg 50</a> a special pointer called HEAD…is a pointer to the local branch you’re currently on <a href="http://progit.org/book/ch3-1.html">pg 52</a> Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline). <a href="http://progit.org/book/ch3-2.html">pg 53</a> To create a branch and switch to it at the same time…git checkout command with the -b switch <a href="http://progit.org/book/ch3-3.html">pg 61</a> To see the last commit on each branch, you can run git branch -v <a href="http://progit.org/book/ch3-5.html">pg 69</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="p">[</span><span class="n">branch</span><span class="p">]</span> <span class="p">[</span><span class="n">remotename</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">branch</span><span class="p">]</span>
+<div class="code"><pre>git checkout -b <span class="o">[</span>branch<span class="o">]</span> <span class="o">[</span>remotename<span class="o">]</span>/<span class="o">[</span>branch<span class="o">]</span>
 </pre></div>
 
 
 <p>is the same as </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span><span class="n">track</span> <span class="p">[</span><span class="n">remotename</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">branch</span><span class="p">]</span>
+<div class="code"><pre>git checkout --track <span class="o">[</span>remotename<span class="o">]</span>/<span class="o">[</span>branch<span class="o">]</span>
 </pre></div>
 
 
-<p><a href="http://progit.org/book/ch4-1.html">pg 81</a> Git protocol…listens on a dedicated port (9418) <a href="http://progit.org/book/ch4-1.html">pg 82</a> The Git protocol is the fastst transfer protocol available. <a href="http://progit.org/book/ch5-2.html">pg 111</a> The Git project provides a document that lays out a number of good tips for creating commits from which to submit patches—you can read it in the Git source code in the Documentation/SubmittingPatches file. <a href="http://progit.org/book/ch5-2.html">pg 116</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">merges</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span> <span class="o">^</span><span class="n">issue54</span>
+<p><a href="http://progit.org/book/ch4-1.html">pg 81</a> Git protocol…listens on a dedicated port (9418) </p>
+<p><a href="http://progit.org/book/ch4-1.html">pg 82</a> The Git protocol is the fastst transfer protocol available. </p>
+<p><a href="http://progit.org/book/ch5-2.html">pg 111</a> The Git project provides a document that lays out a number of good tips for creating commits from which to submit patches—you can read it in the Git source code in the Documentation/SubmittingPatches file. </p>
+<p><a href="http://progit.org/book/ch5-2.html">pg 116</a></p>
+<div class="code"><pre>git log --no-merges origin/master ^issue54
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch5-2.html">pg 121</a> Compare origin changes with local changes before merging: </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">log</span> <span class="n">origin</span><span class="o">/</span><span class="n">featureA</span> <span class="o">^</span><span class="n">feature</span>
+<div class="code"><pre>git log origin/featureA ^feature
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch5-2.html">pg 126</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">merge</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">commit</span> <span class="o">--</span><span class="n">squash</span> <span class="n">featureB</span>
+<div class="code"><pre>git merge --no-commit --squash featureB
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch5-3.html">pg 130</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">apply</span>
+<div class="code"><pre>git apply
 </pre></div>
 
 
 <p>It’s almost identical to running a patch -p1 command to apply the patch, although it’s more paranoid and accepts fewer fuzzy matches then patch. <a href="http://progit.org/book/ch5-3.html">pg 131</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">apply</span> <span class="o">--</span><span class="n">check</span>
+<div class="code"><pre>git apply --check
 </pre></div>
 
 
 <p>check to see if a patch applies cleanly before you try actually applying it <a href="http://progit.org/book/ch5-3.html">pg 134</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">log</span> <span class="n">contrib</span> <span class="o">--</span><span class="n">not</span> <span class="n">master</span>
+<div class="code"><pre>git log contrib --not master
 </pre></div>
 
 
 <p>To find common ancestor of both branches </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">merge</span><span class="o">-</span><span class="n">base</span> <span class="n">contrib</span> <span class="n">master</span>
+<div class="code"><pre>git merge-base contrib master
+</pre></div>
 
 
-<span class="n">git</span> <span class="n">diff</span> <span class="p">[</span><span class="n">sha1</span> <span class="n">from</span> <span class="n">previous</span> <span class="n">command</span><span class="p">]</span>
+<div class="code"><pre>git diff <span class="o">[</span>sha1 from previous <span class="nb">command</span><span class="o">]</span>
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch5-3.html">pg 135</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">diff</span> <span class="n">master</span><span class="p">...</span><span class="n">topic</span>
+<div class="code"><pre>git diff master...topic
 </pre></div>
 
 
 <p>shows you only the work your topic branch has introduced since its common ancestor with master. <a href="http://progit.org/book/ch5-3.html">pg 140</a> tagging releases with signed keys <a href="http://progit.org/book/ch5-3.html">pg 141</a> generating a build number with your tags preparing a release as a tarball <a href="http://progit.org/book/ch5-3.html">pg 142</a> Show work by author since a specific time </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">shortlog</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">merges</span> <span class="n">master</span> <span class="o">--</span><span class="n">not</span> <span class="n">v1</span><span class="mf">.0.1</span>
+<div class="code"><pre>git shortlog --no-merges master --not v1.0.1
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch6-1.html">pg 144</a> Git can figure out a short, unique abbreviation for your SHA-1 values </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">abbrev</span><span class="o">-</span><span class="n">commit</span> <span class="o">--</span><span class="n">pretty</span><span class="o">=</span><span class="n">oneline</span>
+<div class="code"><pre>git log --abbrev-commit --pretty<span class="o">=</span>oneline
 </pre></div>
 
 
 <p>wolves paragraph <a href="http://progit.org/book/ch6-1.html">pg 145</a> Find out the SHA1 of a branch </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">rev</span><span class="o">-</span><span class="n">parse</span> <span class="p">[</span><span class="n">branch</span><span class="p">]</span>
+<div class="code"><pre>git rev-parse <span class="o">[</span>branch<span class="o">]</span>
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch6-1.html">pg 146</a> To see reflog information inline with your normal log information </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">log</span> <span class="o">-</span><span class="n">g</span> <span class="n">master</span>
+<div class="code"><pre>git log -g master
 </pre></div>
 
 
 <p>Because reflog is a log, it will show you where the HEAD pointer was 2 months ago – if the repo is older than that </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">show</span> <span class="n">HEAD</span><span class="err">@</span><span class="p">{</span><span class="mf">2.</span><span class="n">months</span><span class="p">.</span><span class="n">ago</span><span class="p">}</span>
+<div class="code"><pre>git show HEAD@<span class="o">{</span>2.months.ago<span class="o">}</span>
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch6-1.html">pg 147</a> ^ is the first parent of the current commit ^2 is the second parent of the current commit (only works if the current commit is a merge commit, where first parent is the branch you on when you merged, second was the other) ~ is the first parent ~2 (or any number) is the grandparent(s) of the current commit only on the current branch or branch you were on when you merged <a href="http://progit.org/book/ch6-1.html">pg 148</a> Shows you any commits in your current branch that aren’t in the master branch on your origin remote </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">log</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span><span class="p">..</span><span class="n">HEAD</span>
+<div class="code"><pre>git log origin/master..HEAD
 </pre></div>
 
 
 <p>Git substitutes HEAD if one side is missing (git log origin/master..) Just like above command and example shown on pg134 </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">log</span> <span class="n">refB</span> <span class="o">--</span><span class="n">not</span> <span class="n">refA</span>
+<div class="code"><pre>git log refB --not refA
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch6-3.html">pg 155</a> Tells the stash command to try to reapply the staged changes </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">stash</span> <span class="n">apply</span> <span class="o">--</span><span class="n">index</span>
+<div class="code"><pre>git stash apply --index
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch6-3.html">pg 156</a> Create a branch from a stash, testchanges </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">stash</span> <span class="n">branch</span> <span class="n">testchanges</span>
+<div class="code"><pre>git stash branch testchanges
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch6-4.html">pg 157</a> …don’t amend your last commit if you’ve already pushed it (git commit —amend command) </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">rebase</span> <span class="o">-</span><span class="n">i</span> <span class="n">HEAD</span><span class="o">~</span><span class="mi">3</span>
+<div class="code"><pre>git rebase -i HEAD~3
 </pre></div>
 
 
 <p>Don’t include any commit you’ve already pushed to a central server—doing so will confuse other developers by providing an alternate version of the same change <a href="http://progit.org/book/ch6-4.html">pg 158</a> It’s important to note that these commits (interactive rebase) are listed in the opposite order (oldest first, newest last) than you normally see then using the log command (newest first). <a href="http://progit.org/book/ch6-4.html">pg 160</a> …make sure no commit shows up in that list (git log -4 —pretty=format:“%h %s”) that you’ve already pushed to a shared repository <a href="http://progit.org/book/ch6-5.html">pg 164</a> was wondering how to automate the good/bad declaration <a href="http://progit.org/book/ch6-6.html">pg 168</a> git submodule update You have to do this every time you pull down a submodule change in the main projects. It’s strange, but it works. <a href="http://progit.org/book/ch6-7.html">pg 172 (subtree merging)</a> You want to pull the Rack project into your master project as a subdirectory </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">read</span><span class="o">-</span><span class="n">tree</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=</span><span class="n">rack</span><span class="o">/</span> <span class="o">-</span><span class="n">u</span> <span class="n">rack_branch</span>
+<div class="code"><pre>git <span class="nb">read</span>-tree --prefix<span class="o">=</span>rack/ -u rack_branch
 </pre></div>
 
 
 <p><a href="http://progit.org/book/ch7-1.html">pg 175</a> global git config /etc/gitconfig user global git config ~/.gitconfig local repository git config .git/config <a href="http://progit.org/book/ch7-1.html">pg 182</a></p>
-<div class="code"><pre><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">core</span><span class="p">.</span><span class="n">autocrlf</span> <span class="n">input</span>
+<div class="code"><pre>git config --global core.autocrlf input
 </pre></div>
 
 
 <p>This setup should leave you with CRLF endings in Windows checkouts but LF endings on Mac and Linux systems and in the repository <a href="http://progit.org/book/ch7-2.html">pg 184</a> To tell Git to treat a specific file as binary data, add the following line to your .gitattributes file: *.extension -crlf -diff <a href="http://progit.org/book/ch7-2.html">pg 185</a> …one of the most annoying problems known to humanity: version-controlling Word documents (LOL) <a href="http://progit.org/book/ch7-3.html">pg 192</a> post-receive hook…This scripts can’t stop the push process, but the client doesn’t disconnect until it has completed; so, be careful when you try to do anything that may take a long time <a href="http://progit.org/book/ch7-4.html">pg 194</a> Is practically the git log command…it prints out only the SHA-1 values and no other information </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">rev</span><span class="o">-</span><span class="n">list</span> <span class="p">[</span><span class="n">SHA</span><span class="o">-</span><span class="mi">1</span><span class="p">]..[</span><span class="n">SHA</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="code"><pre>git rev-list <span class="o">[</span>SHA-1<span class="o">]</span>..<span class="o">[</span>SHA-1<span class="o">]</span>
 </pre></div>
 
 
 <p>Get the commit message from each of these commits to test git cat-file commit [SHA-1] Incantation: </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">cat</span><span class="o">-</span><span class="n">file</span> <span class="n">commit</span> <span class="p">[</span><span class="n">SHA</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">|</span> <span class="n">sed</span> <span class="err">'</span><span class="mi">1</span><span class="p">,</span><span class="o">/^</span><span class="err">$</span><span class="o">/</span><span class="n">d</span><span class="err">'</span>
+<div class="code"><pre>git cat-file commit <span class="o">[</span>SHA-1<span class="o">]</span> | sed <span class="s1">'1,/^$/d'</span>
 </pre></div>
 
 
 <h3>Comments</h3>
-<p><strong><a href="posts/pro-git-quot-cliff-notes/#471" title="2010-04-14 01:04:47">Ricardo</a>:</strong> Thanks for the compilation!</p>
-<p><strong><a href="posts/pro-git-quot-cliff-notes/#472" title="2010-04-14 01:25:01">Jason Meridth</a>:</strong> Ricardo: You're welcome</p>
-<p><strong><a href="posts/pro-git-quot-cliff-notes/#473" title="2010-05-10 03:55:33">Simon</a>:</strong> You've convinced me to buy this book now.</p>
-<p><strong><a href="posts/pro-git-quot-cliff-notes/#474" title="2010-05-12 12:59:43">Jason Meridth</a>:</strong> @Simon: Awesome. It's worth it's weight in gold.</p></div>
+<p><strong><a href="posts/pro-git-cliff-notes/#471" title="2010-04-14 01:04:47">Ricardo</a>:</strong> Thanks for the compilation!</p>
+<p><strong><a href="posts/pro-git-cliff-notes/#472" title="2010-04-14 01:25:01">Jason Meridth</a>:</strong> Ricardo: You're welcome</p>
+<p><strong><a href="posts/pro-git-cliff-notes/#473" title="2010-05-10 03:55:33">Simon</a>:</strong> You've convinced me to buy this book now.</p>
+<p><strong><a href="posts/pro-git-cliff-notes/#474" title="2010-05-12 12:59:43">Jason Meridth</a>:</strong> @Simon: Awesome. It's worth it's weight in gold.</p></div>
         
         </div>
         
@@ -785,7 +837,7 @@ drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
         
     <p>
     
-        <a href="posts/pro-git-quot-cliff-notes/#disqus_thread" data-disqus-identifier="cache/posts/pro-git-cliff-notes.html">Comments</a>
+        <a href="posts/pro-git-cliff-notes/#disqus_thread" data-disqus-identifier="cache/posts/pro-git-cliff-notes.html">Comments</a>
     
 
     

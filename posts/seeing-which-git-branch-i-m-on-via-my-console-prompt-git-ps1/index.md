@@ -9,30 +9,30 @@
 
 I like knowing which Git branch I’m currently in. I use the git-ps1 function feature that comes with git-core. If you clone or download the git source:
     
-    
-    git://git.kernel.org/pub/scm/git/git.git
-    
+```bash    
+git://git.kernel.org/pub/scm/git/git.git
+```
 
-There is a file in the contrib/completion folder called git-completion.bash:
+There is a file in the contrib/completion folder called git-prompt.sh:
     
-    
-    ~/code/git/contrib/completion(master) > ls
-    total 96
-    -rwxr-xr-x  1 user  staff    44K Apr 14 15:26 git-completion.bash
-    
+```bash
+~/code/git/contrib/completion(master) > ls
+total 96
+-rwxr-xr-x  1 user  staff    44K Apr 14 15:26 git-prompt.sh
+```
 
-I copy this file to my $HOME folder as .git-completion.bash and then reference it and the ps1 propt feature in my .bashrc file
+I copy this file to my $HOME folder as .git-prompt.sh and then reference it and the ps1 propt feature in my .bashrc file
     
-    
-    source ~/.git-completion.bash
-    export PS1='w$(__git_ps1 "(%s)") > '
-    
+```bash    
+source ~/.git-prompt.sh
+export PS1='w$(__git_ps1 "(%s)") > '
+```    
 
 And now whenever I cd into a folder that is a Git repository I see something like the following prompt:
     
-    
-    ~/gitosis-admin(master) >
-    
+```bash    
+~/gitosis-admin(master) >
+```    
 
 Notice the (master) notation. That is telling me I’m on the master branch. It’s just easier than issuing a “git branch” command everytime I want to know.
 

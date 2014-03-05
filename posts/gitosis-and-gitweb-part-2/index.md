@@ -6,8 +6,7 @@
 .. type: text
 .. tags: git, gitosis
 
-
-[Gitosis and Gitweb – Part 1](/blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-1-setup.aspx)
+[Gitosis and Gitweb – Part 1](/posts/gitosis-and-gitweb-part-1)
 
 So we are setup now thanks to Part 1.
 
@@ -15,7 +14,13 @@ So we are setup now thanks to Part 1.
 
 If we issue the “find .” command locally inside the gitosis-admin directory we will see the following:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.04-PM.png)
+```bash
+~/gitosis-admin(master) > find .
+<a bunch of files from .git folder)
+./gitosis.conf
+./keydir
+./keydir/user@local.pub
+```
 
 We have the .git folder, a gitosis.conf file, and a keydir with a pub key file.
 
@@ -23,29 +28,64 @@ We have the .git folder, a gitosis.conf file, and a keydir with a pub key file.
 
 Our project name for this example is lostechies. If you view the gitosis-admin.conf file you will see the initial content like so:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.11-PM.png)
+```bash
+~/gitosis-admin(master) > cat gitosis.conf
+[gitosis]
+
+[group gitosis-admin]
+writable = gitosis-admin
+members = user@local
+```
 
 This is the result of the following command from the last part:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.20-PM.png)
+```bash
+sudo -H -u git gitosis-init < /tmp/id_rsa.pub
+```
 
 That command puts the public ssh key into the keydirs directory and adds the associated username from the file to be the first member of the gisotis-admin project. Hence seeing user@local as the member. It matches the filename of the pub file in the keydir directory (user@local.pub). That’s how gitosis relates members listed in the conf file to the keys in the keydir directory, filename minus the pub extension.
 
 Let’s edit this conf file to include our lostechies project:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.11.27-PM.png)
+```bash
+~/gitosis-admin(master) > cat gitosis.conf
+[gitosis]
+
+[group gitosis-admin]
+writable = gitosis-admin
+memebers = user@local
+
+[group meridth]
+writable = meridth
+members = user@local
+```
 
 It looks exactly like the gitosis-admin one. Now we commit it just like we would normally when using Git. We can add, then commit or commit with the -am argument. This is possible since the gitosis-admin.conf file is already tracked by the repository.
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.06-PM.png)
+```bash
+~/gitosis-admin(master) > git commit -am "add meridth project"
+[master 6b7a5da] add meridth project
+1 file changed, 3 insertions(+), 0 deletions(-)
+```
 
 and push it to the remote gitosis-admin repository:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.12-PM.png)
+```bash
+~/gitosis-admin(master) > git push
+Counting objects: 5, done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 385 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
+   23842e9..6b7a5da master -> master
+```
 
 We need to create the lostechies repository locally, add an initial item (README in this case), and push it remotely. Gitosis won’t create the repository until something it pushed to it.
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.20-PM.png)
+```bash
+START HERE
+```
 
 The lostechies repository now exists remotely. Currently my account is the only that has access. Let’s add another contributor.
 

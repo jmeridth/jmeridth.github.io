@@ -6,7 +6,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://blog.jasonmeridth.com/</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/2006/</loc>
@@ -258,379 +258,391 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/agile.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/agile.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/bash.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/bash.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/books.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/books.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.jasonmeridth.com/categories/cli.html</loc>
+  <lastmod>2014-03-05</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.jasonmeridth.com/categories/cli.xml</loc>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/command-line.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/command-line.xml</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/dell.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/dell.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/funny.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/funny.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/git.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/git.xml</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/github.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/github.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/gitosis.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/gitosis.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/haml.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/haml.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/help.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/help.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/html5.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/html5.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/information.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/information.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/net.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/net.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/networking.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/networking.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/notification.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/notification.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/personal.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/personal.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/postgresql.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/postgresql.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/presentation.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/presentation.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/python.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/python.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rails.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rails.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rspec.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rspec.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ruby.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ruby.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rvm.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/rvm.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/sinatra.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/sinatra.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/source-control.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/source-control.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/svn.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/svn.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/testing.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/testing.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/tmux.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/tmux.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/tools.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/tools.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ubuntu.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/ubuntu.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/vagrant.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/vagrant.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/vim.html</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/vim.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/windows.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/windows.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/wireless.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/categories/wireless.xml</loc>
-  <lastmod>2014-02-24</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-1.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-10.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-11.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-12.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-13.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-14.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-15.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-16.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-17.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-18.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-19.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-2.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-20.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-21.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-22.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-23.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
+ </url>
+ <url>
+  <loc>http://blog.jasonmeridth.com/index-24.html</loc>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-3.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-4.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-5.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-6.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-7.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-8.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/index-9.html</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/</loc>
@@ -1293,6 +1305,10 @@
   <lastmod>2014-02-24</lastmod>
  </url>
  <url>
+  <loc>http://blog.jasonmeridth.com/posts/pro-git-cliff-notes/</loc>
+  <lastmod>2014-03-05</lastmod>
+ </url>
+ <url>
   <loc>http://blog.jasonmeridth.com/posts/pro-git-quot-cliff-notes/</loc>
   <lastmod>2014-02-24</lastmod>
  </url>
@@ -1569,6 +1585,10 @@
   <lastmod>2014-02-24</lastmod>
  </url>
  <url>
+  <loc>http://blog.jasonmeridth.com/posts/vim-commands-i-use-all-the-time/</loc>
+  <lastmod>2014-03-05</lastmod>
+ </url>
+ <url>
   <loc>http://blog.jasonmeridth.com/posts/visual-studio-2005-make-new-classes-public-by-default/</loc>
   <lastmod>2014-02-24</lastmod>
  </url>
@@ -1602,6 +1622,6 @@
  </url>
  <url>
   <loc>http://blog.jasonmeridth.com/rss.xml</loc>
-  <lastmod>2014-02-25</lastmod>
+  <lastmod>2014-03-05</lastmod>
  </url>
 </urlset>
