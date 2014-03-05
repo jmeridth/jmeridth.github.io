@@ -10,7 +10,10 @@
 
 Will be adding to this post as I remember new keyboard shortcuts
 
-# Normal Mode Commands
+### Normal Mode Commands
+
 `.` - repeat last command in normal mode
+
 `@:` then `@@` - repeat last command entered with `:` [source](http://vim.wikia.com/wiki/Repeat_last_colon_command)
+
 `#` - find all occurances of the word I'm currently on
