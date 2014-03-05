@@ -89,9 +89,9 @@
 		
     </small>
     <hr><div class="e-content" itemprop="articleBody text">
-    <div><p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <em>git rebase --interactive</em></p>
+    <div><p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <code>git rebase --interactive</code></p>
 <p><strong>UPDATE</strong>: If you need to unstage a file prior to your first commit: </p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="n">filename</span>
+<div class="code"><pre><span class="nv">$ </span>git rm --cached filename
 </pre></div>
 
 
@@ -100,35 +100,35 @@
 <h2><strong>Before</strong> you have committed the code</h2>
 <p>Well, if you want to unstage a file you simply do the following:</p>
 <h3>git reset</h3>
-<p>Say you staged a change (“git add”) and you realize you either don’t want the file tracked or the change staged. <em>git reset</em> is the command that will do this:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span> <span class="n">filename</span>
+<p>Say you staged a change (“git add”) and you realize you either don’t want the file tracked or the change staged. <code>git reset</code> is the command that will do this:</p>
+<div class="code"><pre><span class="nv">$ </span>git reset HEAD filename
 </pre></div>
 
 
 <p>One of the suggestions I’ve <a href="http://learn.github.com/p/undoing.html">read about</a> and have given is to create an alias called unstage:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">alias</span><span class="p">.</span><span class="n">unstage</span> <span class="err">'</span><span class="n">reset</span> <span class="n">HEAD</span><span class="err">'</span>
+<div class="code"><pre><span class="nv">$ </span>git config --global alias.unstage <span class="s1">'reset HEAD'</span>
 </pre></div>
 
 
 <p>So now instead of:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">reset</span> <span class="n">HEAD</span> <span class="n">README</span>
+<div class="code"><pre><span class="nv">$ </span>git reset HEAD README
 </pre></div>
 
 
 <p>you can do:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">unstage</span> <span class="n">README</span>
+<div class="code"><pre><span class="nv">$ </span>git unstage README 
 </pre></div>
 
 
-<p>I personally just stick to <em>git reset HEAD filename</em>. “Why?” you ask. It’s so that if I have to use git on another system that doesn’t have my aliases, I know the commands.</p>
+<p>I personally just stick to <code>git reset HEAD filename</code>. “Why?” you ask. It’s so that if I have to use git on another system that doesn’t have my aliases, I know the commands.</p>
 <h3>git checkout</h3>
-<p>Another common question is “How do I undo an unstaged/uncommitted change? I just want to roll my file back…”. <em>git checkout — filename</em> handles this:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span> <span class="n">README</span>
+<p>Another common question is “How do I undo an unstaged/uncommitted change? I just want to roll my file back…”. <code>git checkout — filename</code> handles this:</p>
+<div class="code"><pre><span class="nv">$ </span>git checkout -- README 
 </pre></div>
 
 
 <p>This will roll the README file back to the last committed version in the working directory. Another question after I answer this is, “Why do you have to put the two dashes there?” The two dashes are canonically called the “bare double dashes”. The reason they are there is because it ensures that the checkout command know that we are trying to roll back a file and not change branches. Remember that the typical usage of the checkout command is to change branches. If you had a branch called README, this command:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">README</span>
+<div class="code"><pre><span class="nv">$ </span>git checkout README 
 </pre></div>
 
 
@@ -136,32 +136,32 @@
 <h3><strong>After</strong> you have committed the code</h3>
 <p>If you committed code that you realized you shouldn’t have, you have two options:</p>
 <h3>git revert</h3>
-<p><em>git revert</em> will create a new commit which undoes a specifc commit that you pass to it. The usual use is to undo the last commit:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">revert</span> <span class="n">HEAD</span>
+<p><code>git revert</code> will create a new commit which undoes a specifc commit that you pass to it. The usual use is to undo the last commit:</p>
+<div class="code"><pre><span class="nv">$ </span>git revert HEAD
 </pre></div>
 
 
 <p>If you need to undo a commit that happened before the last commit you can pass it a <a href="http://book.git-scm.com/4_git_treeishes.html">treeish</a> argument or a specific SHA1 of the commit you want to undo:</p>
 <p>Revert the next-to-last commit:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">revert</span> <span class="n">HEAD</span><span class="o">^</span>
+<div class="code"><pre><span class="nv">$ </span>git revert HEAD^
 </pre></div>
 
 
 <p>Revert a specific commit by SHA:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">revert</span> <span class="n">f8c7dd34</span>
+<div class="code"><pre><span class="nv">$ </span>git revert f8c7dd34
 </pre></div>
 
 
 <p>Just be aware that if you pass a reference to a commit other than the last one, if there are any merge conflicts created by undoing the change, you will have to deal with those at the time of your new commit (the revert one).</p>
 <h3>git commit —amend</h3>
-<p><em>git commit —amend</em> is another command that allows you to change your last commit. Say I forgot to stage a file for the commit and I need to edit the commit message:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="err">'</span><span class="n">initial</span> <span class="n">commit</span><span class="err">'</span> 
-<span class="err">$</span> <span class="n">git</span> <span class="n">add</span> <span class="n">awesome_file</span>
-<span class="err">$</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">amend</span>
+<p><code>git commit —amend</code> is another command that allows you to change your last commit. Say I forgot to stage a file for the commit and I need to edit the commit message:</p>
+<div class="code"><pre><span class="nv">$ </span>git commit -m <span class="s1">'initial commit'</span> 
+<span class="nv">$ </span>git add awesome_file
+<span class="nv">$ </span>git commit --amend
 </pre></div>
 
 
-<p>My visual editor of choice will open with the prior commit message allowing me to edit it, I change the message, save it and exit. The previous commit is overridden by adding the content of my awesome_file and now has my new commit message. Personally, I’ve only had to use this a couple times because I’m usually editing tracked files and by doing <em>git commit -am “message”</em> I rarely forget to stage my files. The times I’ve had to use <em>git commit —amend</em> is when I forget to add/stage a new/untracked file.</p>
+<p>My visual editor of choice will open with the prior commit message allowing me to edit it, I change the message, save it and exit. The previous commit is overridden by adding the content of my awesome_file and now has my new commit message. Personally, I’ve only had to use this a couple times because I’m usually editing tracked files and by doing <code>git commit -am “message”</code> I rarely forget to stage my files. The times I’ve had to use <code>git commit —amend</code> is when I forget to add/stage a new/untracked file.</p>
 <h3>Comments</h3>
 <p><strong><a href=".#456" title="2010-03-23 21:41:06">derick.bailey</a>:</strong> dude, you're a life saver. i was just wondering about reverts earlier today while doing a lunch-n-learn session on git. fortunately, the topic never came up. :) next time, i guess... i've done the reset thing a bajillion times, but never looked up the right way to revert something that was committed. and the --amend is awesome, too. so much nicer than having a bunch of "oops, i forgot xyz" commits like i do with subversion.</p>
 <p><strong><a href=".#457" title="2010-03-23 21:58:11">Adam Ford</a>:</strong> git commit --amend is also useful when you made a typo or forgot something in the commit message, as it allows you to edit that as well!</p>

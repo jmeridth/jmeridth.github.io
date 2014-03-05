@@ -7,17 +7,15 @@
 .. tags: git
 
 
-**UPDATE**: Please make sure to read Alexander's comments on _git rebase --interactive_
+**UPDATE**: Please make sure to read Alexander's comments on `git rebase --interactive`
 
 **UPDATE**: If you need to unstage a file prior to your first commit: 
     
-    
-    $ git rm --cached filename
-    
+```bash    
+$ git rm --cached filename
+```    
 
 Thanks to [Sean Chambers](http://schambers.lostechies.com) for tweeting about [this](http://twitter.com/schambers/status/11005630400)
-
- 
 
 Some of the common questions I get are about how to reset or revert changes in Git. There are two typical scenarios you have to deal with. One is if you haven’t committed the code yet. The other is if you _have_ committed the code.
 
@@ -27,45 +25,45 @@ Well, if you want to unstage a file you simply do the following:
 
 ## git reset
 
-Say you staged a change (“git add”) and you realize you either don’t want the file tracked or the change staged. _git reset_ is the command that will do this:
+Say you staged a change (“git add”) and you realize you either don’t want the file tracked or the change staged. `git reset` is the command that will do this:
     
-    
-    $ git reset HEAD filename
-    
+```bash    
+$ git reset HEAD filename
+```  
 
 One of the suggestions I’ve [read about](http://learn.github.com/p/undoing.html) and have given is to create an alias called unstage:
     
-    
-    $ git config --global alias.unstage 'reset HEAD'
-    
+```bash    
+$ git config --global alias.unstage 'reset HEAD'
+```    
 
 So now instead of:
     
-    
-    $ git reset HEAD README
-    
+```bash    
+$ git reset HEAD README
+```    
 
 you can do:
     
-    
-    $ git unstage README 
-    
+```bash    
+$ git unstage README 
+```    
 
-I personally just stick to _git reset HEAD filename_. “Why?” you ask. It’s so that if I have to use git on another system that doesn’t have my aliases, I know the commands.
+I personally just stick to `git reset HEAD filename`. “Why?” you ask. It’s so that if I have to use git on another system that doesn’t have my aliases, I know the commands.
 
 ## git checkout
 
-Another common question is “How do I undo an unstaged/uncommitted change? I just want to roll my file back…”. _git checkout — filename_ handles this:
+Another common question is “How do I undo an unstaged/uncommitted change? I just want to roll my file back…”. `git checkout — filename` handles this:
     
-    
-    $ git checkout -- README 
-    
+```bash    
+$ git checkout -- README 
+```    
 
 This will roll the README file back to the last committed version in the working directory. Another question after I answer this is, “Why do you have to put the two dashes there?” The two dashes are canonically called the “bare double dashes”. The reason they are there is because it ensures that the checkout command know that we are trying to roll back a file and not change branches. Remember that the typical usage of the checkout command is to change branches. If you had a branch called README, this command:
     
-    
-    $ git checkout README 
-    
+```bash    
+$ git checkout README 
+```    
 
 would checkout the README branch and not rollback the current README file in the working directory.
 
@@ -75,39 +73,39 @@ If you committed code that you realized you shouldn’t have, you have two optio
 
 ## git revert
 
-_git revert_ will create a new commit which undoes a specifc commit that you pass to it. The usual use is to undo the last commit:
+`git revert` will create a new commit which undoes a specifc commit that you pass to it. The usual use is to undo the last commit:
     
-    
-    $ git revert HEAD
-    
+```bash    
+$ git revert HEAD
+```    
 
 If you need to undo a commit that happened before the last commit you can pass it a [treeish](http://book.git-scm.com/4_git_treeishes.html) argument or a specific SHA1 of the commit you want to undo:
 
 Revert the next-to-last commit:
     
-    
-    $ git revert HEAD^
-    
+```bash    
+$ git revert HEAD^
+```    
 
 Revert a specific commit by SHA:
     
-    
-    $ git revert f8c7dd34
-    
+```bash    
+$ git revert f8c7dd34
+```    
 
 Just be aware that if you pass a reference to a commit other than the last one, if there are any merge conflicts created by undoing the change, you will have to deal with those at the time of your new commit (the revert one).
 
 ## git commit —amend
 
-_git commit —amend_ is another command that allows you to change your last commit. Say I forgot to stage a file for the commit and I need to edit the commit message:
+`git commit —amend` is another command that allows you to change your last commit. Say I forgot to stage a file for the commit and I need to edit the commit message:
     
-    
-    $ git commit -m 'initial commit' 
-    $ git add awesome_file
-    $ git commit --amend
-    
+```bash    
+$ git commit -m 'initial commit' 
+$ git add awesome_file
+$ git commit --amend
+```    
 
-My visual editor of choice will open with the prior commit message allowing me to edit it, I change the message, save it and exit. The previous commit is overridden by adding the content of my awesome_file and now has my new commit message. Personally, I’ve only had to use this a couple times because I’m usually editing tracked files and by doing _git commit -am “message”_ I rarely forget to stage my files. The times I’ve had to use _git commit —amend_ is when I forget to add/stage a new/untracked file.
+My visual editor of choice will open with the prior commit message allowing me to edit it, I change the message, save it and exit. The previous commit is overridden by adding the content of my awesome_file and now has my new commit message. Personally, I’ve only had to use this a couple times because I’m usually editing tracked files and by doing `git commit -am “message”` I rarely forget to stage my files. The times I’ve had to use `git commit —amend` is when I forget to add/stage a new/untracked file.
 
 ## Comments
 
