@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Refspec matches more than one | Jason Meridth's Blog</title><link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/refspec-matches-more-than-one/"><!--[if lt IE 9]>
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Refspec matches more than one | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/refspec-matches-more-than-one/"><!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
 <!-- Menubar -->
@@ -85,24 +85,24 @@
     </small>
     <hr><div class="e-content" itemprop="articleBody text">
     <div><p>I was trying to push to a canonical repository this morning and got the following error:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
-<span class="nl">error:</span> <span class="n">src</span> <span class="n">refspec</span> <span class="n">master</span> <span class="n">matches</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span><span class="p">.</span>
-<span class="nl">error:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">push</span> <span class="n">some</span> <span class="n">refs</span> <span class="n">to</span> <span class="err">'</span><span class="n">ssh</span><span class="o">:</span><span class="c1">//user@host/srv/git/repo'</span>
+<div class="code"><pre><span class="nv">$ </span>git push origin master
+error: src refspec master matches more than one.
+error: failed to push some refs to <span class="s1">'ssh://user@host/srv/git/repo'</span>
 </pre></div>
 
 
 <p>This happened because I had accidentally created a master tag locally:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">tag</span>
-<span class="n">master</span>
-<span class="n">tag1</span>
-<span class="n">tag2</span>
-<span class="n">tag3</span>
-<span class="n">tag4</span>
+<div class="code"><pre><span class="nv">$ </span>git tag
+master
+tag1
+tag2
+tag3
+tag4
 </pre></div>
 
 
 <p>Once I deleted the tag locally:</p>
-<div class="code"><pre><span class="n">tag</span> <span class="o">-</span><span class="n">d</span> <span class="n">master</span>
+<div class="code"><pre>tag -d master
 </pre></div>
 
 
@@ -159,7 +159,7 @@
 
     
         
-            <script src="../../assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
 <ul><li><a class="addthis_button_facebook"></a>
 </li><li><a class="addthis_button_google_plusone_share"></a>

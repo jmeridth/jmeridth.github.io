@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog (old posts, page 24) | Jason Meridth's Blog</title><link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/index-24.html"><!--[if lt IE 9]>
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog (old posts, page 24) | Jason Meridth's Blog</title><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="assets/css/rst.css" rel="stylesheet" type="text/css"><link href="assets/css/code.css" rel="stylesheet" type="text/css"><link href="assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/index-24.html"><!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"></head><body>
 <!-- Menubar -->
@@ -64,7 +64,32 @@
     <div class="span8">
     
     
-        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/install-and-setup-postgresql-on-new-ubuntu-vm/" class="u-url">Install and Setup PostgreSQL on New Ubuntu VM</a>
+        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/get-sinatra-and-shotgun-gem-working-on-vagrant/" class="u-url">Get Sinatra and Shotgun gem working on Vagrant</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>TL;DR</p>
+<div class="code"><pre>shotgun -o 0.0.0.0 config.ru
+</pre></div>
+
+
+<p>You have to tell <a href="https://github.com/rtomayko/shotgun/blob/master/bin/shotgun#L46">shotgun</a> to use 0.0.0.0, the “all IP addresses on this box” IP address listen on. The default is 127.0.0.1, which is the loopback IP address on the vagrant instance.</p>
+<p>Hope this helps someone.</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/get-sinatra-and-shotgun-gem-working-on-vagrant/#disqus_thread" data-disqus-identifier="cache/posts/get-sinatra-and-shotgun-gem-working-on-vagrant.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/install-and-setup-postgresql-on-new-ubuntu-vm/" class="u-url">Install and Setup PostgreSQL on New Ubuntu VM</a>
         <small>  
              Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
         <hr><div class="e-content">
@@ -117,7 +142,7 @@
 
     
         
-            <script src="assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+            <script src="assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="assets/js/bootstrap.min.js" type="text/javascript"></script><script src="assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
 <ul><li><a class="addthis_button_facebook"></a>
 </li><li><a class="addthis_button_google_plusone_share"></a>

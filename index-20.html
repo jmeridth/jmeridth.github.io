@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog (old posts, page 20) | Jason Meridth's Blog</title><link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/index-20.html"><!--[if lt IE 9]>
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog (old posts, page 20) | Jason Meridth's Blog</title><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="assets/css/rst.css" rel="stylesheet" type="text/css"><link href="assets/css/code.css" rel="stylesheet" type="text/css"><link href="assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/index-20.html"><!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"></head><body>
 <!-- Menubar -->
@@ -172,24 +172,24 @@
              Posted: <time class="published dt-published" datetime="2010-02-27T19:31:00-06:00">Feb 27, 2010</time></small></h1>
         <hr><div class="e-content">
         <div><p>I was trying to push to a canonical repository this morning and got the following error:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
-<span class="nl">error:</span> <span class="n">src</span> <span class="n">refspec</span> <span class="n">master</span> <span class="n">matches</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span><span class="p">.</span>
-<span class="nl">error:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">push</span> <span class="n">some</span> <span class="n">refs</span> <span class="n">to</span> <span class="err">'</span><span class="n">ssh</span><span class="o">:</span><span class="c1">//user@host/srv/git/repo'</span>
+<div class="code"><pre><span class="nv">$ </span>git push origin master
+error: src refspec master matches more than one.
+error: failed to push some refs to <span class="s1">'ssh://user@host/srv/git/repo'</span>
 </pre></div>
 
 
 <p>This happened because I had accidentally created a master tag locally:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">git</span> <span class="n">tag</span>
-<span class="n">master</span>
-<span class="n">tag1</span>
-<span class="n">tag2</span>
-<span class="n">tag3</span>
-<span class="n">tag4</span>
+<div class="code"><pre><span class="nv">$ </span>git tag
+master
+tag1
+tag2
+tag3
+tag4
 </pre></div>
 
 
 <p>Once I deleted the tag locally:</p>
-<div class="code"><pre><span class="n">tag</span> <span class="o">-</span><span class="n">d</span> <span class="n">master</span>
+<div class="code"><pre>tag -d master
 </pre></div>
 
 
@@ -212,7 +212,15 @@
         <small>  
              Posted: <time class="published dt-published" datetime="2010-02-27T19:28:00-06:00">Feb 27, 2010</time></small></h1>
         <hr><div class="e-content">
-        <div><p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter: <a href="http://twitter.com/bellware/status/6952706099">for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder</a> <a href="http://twitter.com/cory_foy">Cory Foy</a>, <a href="http://twitter.com/aaronjensen">Aaron Jensen</a>, and <a href="http://twitter.com/armmer">myself</a> all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it <a href="http://twitter.com/cory_foy/status/6954512284">first</a> and it was the post-merge/post-rebase hooks. I researched the <a href="http://www.kernel.org/pub/software/scm/git/docs/githooks.html">post-merge hook</a> (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the <a href="http://gist.github.com/262319">following</a> : [gist id=1401466] This will grab the previous diff and look for “db/migrations” in the text. If it’s present, it would auto-run “rake db:migrate &amp;&amp; rake db:test:migrate”. In other words, it will migrate the development database schema, then the test database schema.</p>
+        <div><p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter:</p>
+<p><a href="http://twitter.com/bellware/status/6952706099">for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder</a></p>
+<p><a href="http://twitter.com/cory_foy">Cory Foy</a>, <a href="http://twitter.com/aaronjensen">Aaron Jensen</a>, and <a href="http://twitter.com/jmeridth">myself</a> all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it <a href="http://twitter.com/cory_foy/status/6954512284">first</a> and it was the post-merge/post-rebase hooks. I researched the <a href="http://www.kernel.org/pub/software/scm/git/docs/githooks.html">post-merge hook</a> (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the <a href="http://gist.github.com/262319">following</a></p>
+<div class="code"><pre><span class="c1">#!/usr/bin/env ruby</span>
+<span class="sb">`rake db:migrate &amp;amp;&amp;amp; rake db:test:prepare`</span> <span class="k">if</span> <span class="sb">`git diff --name-only HEAD@{1} HEAD`</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">"db/migrations)</span>
+</pre></div>
+
+
+<p>This will grab the previous diff and look for “db/migrations” in the text. If it’s present, it would auto-run “rake db:migrate &amp;&amp; rake db:test:migrate”. In other words, it will migrate the development database schema, then the test database schema.</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#455" title="2010-03-05 00:13:19">Scott Bellware</a>:</strong> Thanks, Jason!</p>
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#515" title="2011-11-28 17:03:00">Marcelo Andrade</a>:</strong> Hi, Looks like this only works if the pull contains 1 commit, if it has many commits, if the latest commit doesn't have something on migrations, it doesn't do nothing.</p>
@@ -627,7 +635,7 @@ git confit core.safecrlf <span class="nb">true</span>
 
     
         
-            <script src="assets/js/all-nocdn.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+            <script src="assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="assets/js/bootstrap.min.js" type="text/javascript"></script><script src="assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
 <ul><li><a class="addthis_button_facebook"></a>
 </li><li><a class="addthis_button_google_plusone_share"></a>
