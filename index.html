@@ -64,7 +64,30 @@
     <div class="span8">
     
     
-        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/how-to-run-a-single-test-with-tox/" class="u-url">How to Run a Single Test With Tox</a>
+        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/" class="u-url">How to Get The SHA of The Last Commit on a Branch With Git</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2014-03-11T02:30:23-05:00">Mar 11, 2014</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I've been asked this a few times and have had to do it lately a few times.</p>
+<p>To get the SHA of the last commit from a specific branch, use <a href="http://git-scm.com/docs/git-rev-parse"><code>git rev-parse</code></a></p>
+<p><code>git rev-parse origin/master</code> (remote branch)</p>
+<p>or </p>
+<p><code>git rev-parse master</code> (local branch)</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/#disqus_thread" data-disqus-identifier="cache/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/how-to-run-a-single-test-with-tox/" class="u-url">How to Run a Single Test With Tox</a>
         <small>  
              Posted: <time class="published dt-published" datetime="2014-03-07T04:49:53-06:00">Mar 07, 2014</time></small></h1>
         <hr><div class="e-content">
@@ -387,110 +410,6 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span c
     <p>
     
         <a href="posts/tmux-cheat-sheet/#disqus_thread" data-disqus-identifier="cache/posts/tmux-cheat-sheet.html">Comments</a>
-    
-
-    
-
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/setup-rvm-and-ruby/" class="u-url">Setup RVM and Ruby</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….</p>
-<p>Install curl</p>
-<div class="code"><pre>sudo apt-get install curl
-</pre></div>
-
-
-<p>Install RVM (forgot this, thanks <a href="http://twitter.com/jssingh">Jasdeep</a>)</p>
-<div class="code"><pre>curl -L get.rvm.io | bash -s stable --auto
-</pre></div>
-
-
-<p>Reload .bash_profile</p>
-<div class="code"><pre>. ~/.bash_profile
-</pre></div>
-
-
-<p>Run rvm requirements to see what needs to be installed</p>
-<div class="code"><pre>rvm requirements
-...
-Requirements <span class="k">for </span>ubuntu/12.10/x86_64
-
-NOTE: <span class="s1">'ruby'</span> represents Matz<span class="s1">'s Ruby Interpreter (MRI) (1.8.X, 1.9.X)</span>
-<span class="s1">             This is the *original* / standard Ruby Language Interpreter</span>
-<span class="s1">      '</span>ree<span class="s1">'  represents Ruby Enterprise Edition</span>
-<span class="s1">      '</span>rbx<span class="err">'</span>  represents Rubinius
-
-Additional Dependencies:
-<span class="c"># For update-system:</span>
-sudo apt-get update
-
-<span class="c"># For rvm:</span>
-sudo apt-get --no-install-recommends install bash curl git patch bzip2
-
-<span class="c"># For ruby:</span>
-sudo apt-get --no-install-recommends install build-essential openssl libreadline6 libreadline6-dev <span class="se">\</span>
-curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 <span class="se">\</span>
-libxml2-dev libxslt-dev autoconf libc6-dev libgdbm-dev ncurses-dev automake libtool bison <span class="se">\</span>
-subversion pkg-config libffi-dev
-
-<span class="c"># For jruby:</span>
-sudo apt-get --no-install-recommends install curl g%2B%2B openjdk-6-jre-headless
-</pre></div>
-
-
-<p>Install everything you need</p>
-<div class="code"><pre>sudo apt-get install build-essential openssl libreadline6 libreadline6-dev <span class="se">\</span>
-curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 <span class="se">\</span>
-libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison  <span class="se">\</span>
-subversion pkg-config libffi-dev
-</pre></div>
-
-
-<p>Install Ruby</p>
-<div class="code"><pre>rvm install 1.9.3
-...
-Searching <span class="k">for </span>binary rubies, this might take some time.
-ruby-1.9.3-p392 - <span class="c">#configure</span>
-ruby-1.9.3-p392 - <span class="c">#download</span>
-<span class="c">#############################################                             62.9%</span>
-</pre></div>
-
-
-<p>Begin to use ruby</p>
-<div class="code"><pre>rvm use 1.9.3
-...
-Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
-</pre></div>
-
-
-<p>Check your Ruby version</p>
-<div class="code"><pre>ruby -v
-...
-ruby 1.9.3p392 <span class="o">(</span>2013-02-22 revision 39386<span class="o">)</span> <span class="o">[</span>x86_64-linux<span class="o">]</span>
-</pre></div>
-
-
-<p>Set your default ruby version</p>
-<div class="code"><pre>rvm --default use 1.9.3-p327
-...
-Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
-</pre></div>
-
-
-<p>As [Jasdeep][2] says in the comments, it is worth knowing that you’ll need a javascript runtime to use Rails so you might as well install nodejs (because it is fun):</p>
-<div class="code"><pre>sudo apt-get install nodejs
-</pre></div></div>
-        
-        </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/setup-rvm-and-ruby/#disqus_thread" data-disqus-identifier="cache/posts/setup-rvm-and-ruby.html">Comments</a>
     
 
     
