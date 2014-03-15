@@ -8,6 +8,6 @@
 .. type: text
 -->
 
-I go to [choosealicense.com] to refresh my memory on open source licenses.  [MIT](http://choosealicense.com/licenses/mit/) is usually my favorite.
+I go to [choosealicense.com](http://choosealicense.com) to refresh my memory on open source licenses.  [MIT](http://choosealicense.com/licenses/mit/) is usually my favorite.
 
 A good resource, in my opinion
