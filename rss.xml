@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><atom:link href="http://blog.jasonmeridth.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 11 Mar 2014 02:32:33 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to Get The SHA of The Last Commit on a Branch With Git</title><link>http://blog.jasonmeridth.com/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/</link><description>&lt;div&gt;&lt;p&gt;I've been asked this a few times and have had to do it lately a few times.&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><atom:link href="http://blog.jasonmeridth.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 15 Mar 2014 00:46:42 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><description>&lt;div&gt;&lt;p&gt;I've switched from using irssi to &lt;a href="http://weechat.org"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf"&gt;Here&lt;/a&gt; is my current weechat.conf file&lt;/p&gt;
+&lt;p&gt;Some of the ones I use often:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;ctrl+h - window left&lt;/li&gt;
+&lt;li&gt;ctrl+j - window down&lt;/li&gt;
+&lt;li&gt;ctrl+k - window up&lt;/li&gt;
+&lt;li&gt;ctrl+l - window right&lt;/li&gt;
+&lt;li&gt;ctrl+z - window zoom (make current small window full screen)&lt;/li&gt;
+&lt;li&gt;ctrl+n - next buffer&lt;/li&gt;
+&lt;li&gt;ctrl+p - previous buffer&lt;/li&gt;
+&lt;li&gt;ctrl+y - clipboard paste&lt;/li&gt;
+&lt;li&gt;ctrl+r - search&lt;/li&gt;
+&lt;li&gt;ctrl+[j|m] - stop search&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;normal commands not included with my weechat.conf that I use:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;/window resize &lt;number&gt; - resizes window to that percentage&lt;/number&gt;&lt;/li&gt;
+&lt;li&gt;/buffer clear - clears the buffer, i use this often with the &lt;a href="http://weechat.org/scripts/source/highmon.pl.html/"&gt;highlight monitor plugin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;/buffer merge &lt;other buffer number&gt; - merges two buffers into one (use ctrl+x to switch between them)&lt;/other&gt;&lt;/li&gt;
+&lt;li&gt;/buffer unmerge - unmerge the buffer you're currently on out to its own&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>weechat</category><category>irc</category><category>cli</category><guid>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</guid><pubDate>Sat, 15 Mar 2014 04:52:39 GMT</pubDate></item><item><title>Where I Go To Choose An Open Source License</title><link>http://blog.jasonmeridth.com/posts/where-i-go-to-choose-an-open-source-license/</link><description>&lt;div&gt;&lt;p&gt;I go to [choosealicense.com] to refresh my memory on open source licenses.  &lt;a href="http://choosealicense.com/licenses/mit/"&gt;MIT&lt;/a&gt; is usually my favorite.&lt;/p&gt;
+&lt;p&gt;A good resource, in my opinion&lt;/p&gt;&lt;/div&gt;</description><category>resources</category><category>open source</category><guid>http://blog.jasonmeridth.com/posts/where-i-go-to-choose-an-open-source-license/</guid><pubDate>Sat, 15 Mar 2014 04:50:13 GMT</pubDate></item><item><title>How to Get The SHA of The Last Commit on a Branch With Git</title><link>http://blog.jasonmeridth.com/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/</link><description>&lt;div&gt;&lt;p&gt;I've been asked this a few times and have had to do it lately a few times.&lt;/p&gt;
 &lt;p&gt;To get the SHA of the last commit from a specific branch, use &lt;a href="http://git-scm.com/docs/git-rev-parse"&gt;&lt;code&gt;git rev-parse&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git rev-parse origin/master&lt;/code&gt; (remote branch)&lt;/p&gt;
 &lt;p&gt;or &lt;/p&gt;
@@ -109,55 +128,4 @@ Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.2.12
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;the test database isn’t cleared out. By running &lt;code&gt;rake spec&lt;/code&gt; I get that.  &lt;/p&gt;&lt;/div&gt;</description><category>testing</category><category>tools</category><category>rspec</category><guid>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</guid><pubDate>Sat, 23 Mar 2013 05:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><description>&lt;div class="code"&gt;&lt;pre&gt;sudo update-alternatives –config editor
-
-OUTPUT:
-There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
-
-  Selection    Path                Priority   Status
-------------------------------------------------------------
-* 0            /bin/nano            40        auto mode
-  1            /bin/ed             -100       manual mode
-  2            /bin/nano            40        manual mode
-  3            /usr/bin/vim.basic   30        manual mode
-  4            /usr/bin/vim.tiny    10        manual mode
-
-Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type &lt;/span&gt;selection number: 3
-update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
-&lt;/pre&gt;&lt;/div&gt;</description><category>tools</category><category>vim</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>TMUX Cheat Sheet</title><link>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</link><description>&lt;div&gt;&lt;p&gt;Install TMUX&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install tmux
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;personal config file is at ~/.tmux.conf&lt;/p&gt;
-&lt;p&gt;change prefix to ctrl-a instead of default ctrl-b (easier on my hands)&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;unbind C-b
-&lt;span class="nb"&gt;set&lt;/span&gt; -g prefix C-a
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h4&gt;Outside of session&lt;/h4&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;tmux list-sessions&lt;/strong&gt; List all sessions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;tmux list-keys&lt;/strong&gt; List all key bindings&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;tmux list-commands&lt;/strong&gt; List all commands&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;tmux source-file ~/.tmux.conf&lt;/strong&gt; Reload TMUX conf file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;tmux a -t session_name&lt;/strong&gt; Attach to named session&lt;/li&gt;
-&lt;/ul&gt;&lt;h4&gt;Inside of session&lt;/h4&gt;
-&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Ctrl-a, new -s session_name&lt;/strong&gt; Create new named session&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, c&lt;/strong&gt; Create new window&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, ,&lt;/strong&gt; Rename window&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, w&lt;/strong&gt; List windows&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, l&lt;/strong&gt; Move to previously selected window&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, n&lt;/strong&gt; Move to next window&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, p&lt;/strong&gt; Move to previous window&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, d&lt;/strong&gt; Leave session&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, s&lt;/strong&gt; List sessions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, ?&lt;/strong&gt; List all keybindings&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, %&lt;/strong&gt; Split into vertical panes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, ”&lt;/strong&gt; Split into horizontal panes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, {or}&lt;/strong&gt; Switch between panes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyUp&lt;/strong&gt; Switch to pane above&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyDown&lt;/strong&gt; Switch to pane below&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyLeft&lt;/strong&gt; Switch to pane to the left&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, KeyRight&lt;/strong&gt; Switch to pane to the right  &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>tools</category><category>tmux</category><guid>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;the test database isn’t cleared out. By running &lt;code&gt;rake spec&lt;/code&gt; I get that.  &lt;/p&gt;&lt;/div&gt;</description><category>testing</category><category>tools</category><category>rspec</category><guid>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</guid><pubDate>Sat, 23 Mar 2013 05:00:00 GMT</pubDate></item></channel></rss>

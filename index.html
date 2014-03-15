@@ -64,7 +64,64 @@
     <div class="span8">
     
     
-        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/" class="u-url">How to Get The SHA of The Last Commit on a Branch With Git</a>
+        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/weechat-keyboard-shortcuts/" class="u-url">Weechat keyboard shortcuts</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2014-03-14T23:52:39-05:00">Mar 14, 2014</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I've switched from using irssi to <a href="http://weechat.org">Weechat</a> since I rejoined the ranks as a <a href="http://www.rackspace.com">Racker</a>.</p>
+<p><a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf">Here</a> is my current weechat.conf file</p>
+<p>Some of the ones I use often:</p>
+<ul><li>ctrl+h - window left</li>
+<li>ctrl+j - window down</li>
+<li>ctrl+k - window up</li>
+<li>ctrl+l - window right</li>
+<li>ctrl+z - window zoom (make current small window full screen)</li>
+<li>ctrl+n - next buffer</li>
+<li>ctrl+p - previous buffer</li>
+<li>ctrl+y - clipboard paste</li>
+<li>ctrl+r - search</li>
+<li>ctrl+[j|m] - stop search</li>
+</ul><p>normal commands not included with my weechat.conf that I use:</p>
+<ul><li>/window resize <number> - resizes window to that percentage</number></li>
+<li>/buffer clear - clears the buffer, i use this often with the <a href="http://weechat.org/scripts/source/highmon.pl.html/">highlight monitor plugin</a></li>
+<li>/buffer merge <other buffer number> - merges two buffers into one (use ctrl+x to switch between them)</other></li>
+<li>/buffer unmerge - unmerge the buffer you're currently on out to its own</li>
+</ul></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/weechat-keyboard-shortcuts/#disqus_thread" data-disqus-identifier="cache/posts/weechat-keyboard-shortcuts.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/where-i-go-to-choose-an-open-source-license/" class="u-url">Where I Go To Choose An Open Source License</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2014-03-14T23:50:13-05:00">Mar 14, 2014</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>I go to [choosealicense.com] to refresh my memory on open source licenses.  <a href="http://choosealicense.com/licenses/mit/">MIT</a> is usually my favorite.</p>
+<p>A good resource, in my opinion</p></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/where-i-go-to-choose-an-open-source-license/#disqus_thread" data-disqus-identifier="cache/posts/where-i-go-to-choose-an-open-source-license.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/" class="u-url">How to Get The SHA of The Last Commit on a Branch With Git</a>
         <small>  
              Posted: <time class="published dt-published" datetime="2014-03-11T02:30:23-05:00">Mar 11, 2014</time></small></h1>
         <hr><div class="e-content">
@@ -321,95 +378,6 @@ Loading development environment <span class="o">(</span>Rails 3.2.12<span class=
     <p>
     
         <a href="posts/run-a-specific-rspec-spec/#disqus_thread" data-disqus-identifier="cache/posts/run-a-specific-rspec-spec.html">Comments</a>
-    
-
-    
-
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/set-vim-as-default-editor/" class="u-url">Set VIM as Default Editor</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
-        <hr><div class="e-content">
-        <div class="code"><pre>sudo update-alternatives –config editor
-
-OUTPUT:
-There are 4 choices <span class="k">for </span>the alternative editor <span class="o">(</span>providing /usr/bin/editor<span class="o">)</span>.
-
-  Selection    Path                Priority   Status
-------------------------------------------------------------
-* 0            /bin/nano            40        auto mode
-  1            /bin/ed             -100       manual mode
-  2            /bin/nano            40        manual mode
-  3            /usr/bin/vim.basic   30        manual mode
-  4            /usr/bin/vim.tiny    10        manual mode
-
-Press enter to keep the current choice<span class="o">[</span>*<span class="o">]</span>, or <span class="nb">type </span>selection number: 3
-update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span class="o">(</span>editor<span class="o">)</span> in manual mode
-</pre></div>
-        
-        </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/set-vim-as-default-editor/#disqus_thread" data-disqus-identifier="cache/posts/set-vim-as-default-editor.html">Comments</a>
-    
-
-    
-
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/tmux-cheat-sheet/" class="u-url">TMUX Cheat Sheet</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>Install TMUX</p>
-<div class="code"><pre>sudo apt-get install tmux
-</pre></div>
-
-
-<p>personal config file is at ~/.tmux.conf</p>
-<p>change prefix to ctrl-a instead of default ctrl-b (easier on my hands)</p>
-<div class="code"><pre>unbind C-b
-<span class="nb">set</span> -g prefix C-a
-</pre></div>
-
-
-<h4>Outside of session</h4>
-<ul><li><strong>tmux list-sessions</strong> List all sessions</li>
-<li><strong>tmux list-keys</strong> List all key bindings</li>
-<li><strong>tmux list-commands</strong> List all commands</li>
-<li><strong>tmux source-file ~/.tmux.conf</strong> Reload TMUX conf file</li>
-<li><strong>tmux a -t session_name</strong> Attach to named session</li>
-</ul><h4>Inside of session</h4>
-<ul><li><strong>Ctrl-a, new -s session_name</strong> Create new named session</li>
-<li><strong>Ctrl-a, c</strong> Create new window</li>
-<li><strong>Ctrl-a, ,</strong> Rename window</li>
-<li><strong>Ctrl-a, w</strong> List windows</li>
-<li><strong>Ctrl-a, l</strong> Move to previously selected window</li>
-<li><strong>Ctrl-a, n</strong> Move to next window</li>
-<li><strong>Ctrl-a, p</strong> Move to previous window</li>
-<li><strong>Ctrl-a, d</strong> Leave session</li>
-<li><strong>Ctrl-a, s</strong> List sessions</li>
-<li><strong>Ctrl-a, ?</strong> List all keybindings</li>
-<li><strong>Ctrl-a, %</strong> Split into vertical panes</li>
-<li><strong>Ctrl-a, ”</strong> Split into horizontal panes</li>
-<li><strong>Ctrl-a, {or}</strong> Switch between panes</li>
-<li><strong>Ctrl-a, KeyUp</strong> Switch to pane above</li>
-<li><strong>Ctrl-a, KeyDown</strong> Switch to pane below</li>
-<li><strong>Ctrl-a, KeyLeft</strong> Switch to pane to the left</li>
-<li><strong>Ctrl-a, KeyRight</strong> Switch to pane to the right  </li>
-</ul></div>
-        
-        </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/tmux-cheat-sheet/#disqus_thread" data-disqus-identifier="cache/posts/tmux-cheat-sheet.html">Comments</a>
     
 
     

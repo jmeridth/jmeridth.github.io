@@ -64,7 +64,96 @@
     <div class="span8">
     
     
-        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/setup-rvm-and-ruby/" class="u-url">Setup RVM and Ruby</a>
+        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/set-vim-as-default-editor/" class="u-url">Set VIM as Default Editor</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div class="code"><pre>sudo update-alternatives –config editor
+
+OUTPUT:
+There are 4 choices <span class="k">for </span>the alternative editor <span class="o">(</span>providing /usr/bin/editor<span class="o">)</span>.
+
+  Selection    Path                Priority   Status
+------------------------------------------------------------
+* 0            /bin/nano            40        auto mode
+  1            /bin/ed             -100       manual mode
+  2            /bin/nano            40        manual mode
+  3            /usr/bin/vim.basic   30        manual mode
+  4            /usr/bin/vim.tiny    10        manual mode
+
+Press enter to keep the current choice<span class="o">[</span>*<span class="o">]</span>, or <span class="nb">type </span>selection number: 3
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span class="o">(</span>editor<span class="o">)</span> in manual mode
+</pre></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/set-vim-as-default-editor/#disqus_thread" data-disqus-identifier="cache/posts/set-vim-as-default-editor.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/tmux-cheat-sheet/" class="u-url">TMUX Cheat Sheet</a>
+        <small>  
+             Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
+        <hr><div class="e-content">
+        <div><p>Install TMUX</p>
+<div class="code"><pre>sudo apt-get install tmux
+</pre></div>
+
+
+<p>personal config file is at ~/.tmux.conf</p>
+<p>change prefix to ctrl-a instead of default ctrl-b (easier on my hands)</p>
+<div class="code"><pre>unbind C-b
+<span class="nb">set</span> -g prefix C-a
+</pre></div>
+
+
+<h4>Outside of session</h4>
+<ul><li><strong>tmux list-sessions</strong> List all sessions</li>
+<li><strong>tmux list-keys</strong> List all key bindings</li>
+<li><strong>tmux list-commands</strong> List all commands</li>
+<li><strong>tmux source-file ~/.tmux.conf</strong> Reload TMUX conf file</li>
+<li><strong>tmux a -t session_name</strong> Attach to named session</li>
+</ul><h4>Inside of session</h4>
+<ul><li><strong>Ctrl-a, new -s session_name</strong> Create new named session</li>
+<li><strong>Ctrl-a, c</strong> Create new window</li>
+<li><strong>Ctrl-a, ,</strong> Rename window</li>
+<li><strong>Ctrl-a, w</strong> List windows</li>
+<li><strong>Ctrl-a, l</strong> Move to previously selected window</li>
+<li><strong>Ctrl-a, n</strong> Move to next window</li>
+<li><strong>Ctrl-a, p</strong> Move to previous window</li>
+<li><strong>Ctrl-a, d</strong> Leave session</li>
+<li><strong>Ctrl-a, s</strong> List sessions</li>
+<li><strong>Ctrl-a, ?</strong> List all keybindings</li>
+<li><strong>Ctrl-a, %</strong> Split into vertical panes</li>
+<li><strong>Ctrl-a, ”</strong> Split into horizontal panes</li>
+<li><strong>Ctrl-a, {or}</strong> Switch between panes</li>
+<li><strong>Ctrl-a, KeyUp</strong> Switch to pane above</li>
+<li><strong>Ctrl-a, KeyDown</strong> Switch to pane below</li>
+<li><strong>Ctrl-a, KeyLeft</strong> Switch to pane to the left</li>
+<li><strong>Ctrl-a, KeyRight</strong> Switch to pane to the right  </li>
+</ul></div>
+        
+        </div>
+        
+            
+    
+        
+    <p>
+    
+        <a href="posts/tmux-cheat-sheet/#disqus_thread" data-disqus-identifier="cache/posts/tmux-cheat-sheet.html">Comments</a>
+    
+
+    
+
+        
+        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/setup-rvm-and-ruby/" class="u-url">Setup RVM and Ruby</a>
         <small>  
              Posted: <time class="published dt-published" datetime="2013-03-06T00:00:00-06:00">Mar 06, 2013</time></small></h1>
         <hr><div class="e-content">
