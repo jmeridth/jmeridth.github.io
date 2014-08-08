@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (tools)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 08 Aug 2014 16:00:49 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Run a Specific RSpec Spec</title><link>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Tired of looking this up and want to use my writing part of my brain to blog it:&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (tools)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 08 Aug 2014 16:42:03 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Run a Specific RSpec Spec</title><link>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Tired of looking this up and want to use my writing part of my brain to blog it:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;rake spec &lt;span class="nv"&gt;SPEC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;spec/controllers/sessions_controller_spec.rb &lt;span class="se"&gt;\&lt;/span&gt;
   &lt;span class="nv"&gt;SPEC_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"-e \"should log in with cookie\""&lt;/span&gt;
 &lt;/pre&gt;
@@ -125,7 +125,7 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 &lt;li&gt;&lt;strong&gt;Ctrl-a, n&lt;/strong&gt; Move to next window&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, p&lt;/strong&gt; Move to previous window&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, d&lt;/strong&gt; Leave session&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ctrl-a, s&lt;/strong&gt; List sessions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, s&lt;/strong&gt; List sessions - default, if not mapped elsewhere&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, ?&lt;/strong&gt; List all keybindings&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, %&lt;/strong&gt; Split into vertical panes&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, ”&lt;/strong&gt; Split into horizontal panes&lt;/li&gt;
@@ -134,6 +134,8 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 &lt;li&gt;&lt;strong&gt;Ctrl-a, KeyDown&lt;/strong&gt; Switch to pane below&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, KeyLeft&lt;/strong&gt; Switch to pane to the left&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, KeyRight&lt;/strong&gt; Switch to pane to the right  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, space&lt;/strong&gt; Make each pane equal sizes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ctrl-a, s&lt;/strong&gt; Sync sessions - what you type shows in all &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.tmux.conf#L13"&gt;mapping&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description><category>tmux</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;sudo update-alternatives –config editor
 
 OUTPUT:

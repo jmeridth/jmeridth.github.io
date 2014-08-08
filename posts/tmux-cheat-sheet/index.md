@@ -39,7 +39,7 @@ set -g prefix C-a
   * **Ctrl-a, n** Move to next window
   * **Ctrl-a, p** Move to previous window
   * **Ctrl-a, d** Leave session
-  * **Ctrl-a, s** List sessions
+  * **Ctrl-a, s** List sessions - default, if not mapped elsewhere
   * **Ctrl-a, ?** List all keybindings
   * **Ctrl-a, %** Split into vertical panes
   * **Ctrl-a, ”** Split into horizontal panes
@@ -48,3 +48,5 @@ set -g prefix C-a
   * **Ctrl-a, KeyDown** Switch to pane below
   * **Ctrl-a, KeyLeft** Switch to pane to the left
   * **Ctrl-a, KeyRight** Switch to pane to the right  
+  * **Ctrl-a, space** Make each pane equal sizes
+  * **Ctrl-a, s** Sync sessions - what you type shows in all [mapping](https://github.com/jmeridth/dotfiles/blob/master/.tmux.conf#L13)

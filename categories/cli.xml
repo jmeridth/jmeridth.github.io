@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (cli)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 08 Aug 2014 16:00:50 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I've switched from using irssi to &lt;a href="http://weechat.org"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (cli)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 08 Aug 2014 16:42:03 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I've switched from using irssi to &lt;a href="http://weechat.org"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf"&gt;Here&lt;/a&gt; is my current weechat.conf file&lt;/p&gt;
 &lt;p&gt;Some of the ones I use often:&lt;/p&gt;
 &lt;ul&gt;
@@ -22,7 +22,7 @@
 &lt;li&gt;/buffer unmerge - unmerge the buffer you're currently on out to its own&lt;/li&gt;
 &lt;/ul&gt;</description><category>cli</category><category>irc</category><category>weechat</category><guid>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</guid><pubDate>Sat, 15 Mar 2014 04:52:39 GMT</pubDate></item><item><title>How to Run a Single Test With Tox</title><link>http://blog.jasonmeridth.com/posts/how-to-run-a-single-test-with-tox/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I have to run a single python test once in a while and keep forgetting how to do it with Tox.&lt;/p&gt;
 &lt;p&gt;Here it is:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;tox -e py27 -- project_name_here.tests.folder_name1_here.folder_name2_here.test_file_name_here.TestClassName.test_method_name
+&lt;pre class="code literal-block"&gt;tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
 &lt;/pre&gt;
 
 

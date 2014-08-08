@@ -30,7 +30,7 @@ article: http://ogp.me/ns/article#
         <meta name="og:url" content="http://blog.jasonmeridth.com/posts/how-to-run-a-single-test-with-tox/">
             <meta name="og:description" content="I have to run a single python test once in a while and keep forgetting how to do it with Tox.
 Here it is:
-tox -e py27 -- project_name_here.tests.folder_name1_here.folder_name2_here.test_file_name_here">
+tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -75,7 +75,7 @@ tox -e py27 -- project_name_here.tests.folder_name1_here.folder_name2_here.test_
         <div class="body">
             <p>I have to run a single python test once in a while and keep forgetting how to do it with Tox.</p>
 <p>Here it is:</p>
-<pre class="code literal-block">tox -e py27 -- project_name_here.tests.folder_name1_here.folder_name2_here.test_file_name_here.TestClassName.test_method_name
+<pre class="code literal-block">tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
 </pre>
 
 
