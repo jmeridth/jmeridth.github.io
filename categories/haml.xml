@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (haml)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/haml.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 15 Mar 2014 00:46:42 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fix Rendering With Presence of Doctype</title><link>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</link><description>&lt;div&gt;&lt;p&gt;A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (haml)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 08 Aug 2014 16:00:48 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fix Rendering With Presence of Doctype</title><link>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.&lt;/p&gt;
 &lt;p&gt;In HTML or ERB:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
 
 
 &lt;p&gt;In &lt;a href="http://haml.info"&gt;HAML&lt;/a&gt;:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;!!! 5
-&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="code literal-block"&gt;!!! 5
+&lt;/pre&gt;
 
 
 &lt;p&gt;Other &lt;a href="http://haml.info/docs/yardoc/file.REFERENCE.html#doctype_"&gt;HAML Doctypes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The above is the format for HTML 5. I don’t bother with the &lt;a href="http://www.w3schools.com/tags/tag_doctype.asp"&gt;HTML 4.01 DOCTYPEs&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>html5</category><category>haml</category><guid>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</guid><pubDate>Sun, 31 Mar 2013 05:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;The above is the format for HTML 5. I don’t bother with the &lt;a href="http://www.w3schools.com/tags/tag_doctype.asp"&gt;HTML 4.01 DOCTYPEs&lt;/a&gt;&lt;/p&gt;</description><category>haml</category><category>html5</category><guid>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</guid><pubDate>Sun, 31 Mar 2013 05:00:00 GMT</pubDate></item></channel></rss>

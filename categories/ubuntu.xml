@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ubuntu)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/ubuntu.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 15 Mar 2014 00:46:41 GMT</lastBuildDate><generator>Nikola &lt;http://getnikola.com/&gt;</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><description>&lt;div&gt;&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install postgresql libpq-dev
-&lt;/pre&gt;&lt;/div&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ubuntu)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 08 Aug 2014 16:00:49 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo apt-get install postgresql libpq-dev
+&lt;/pre&gt;
 
 
-&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;&lt;/div&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><description>&lt;div class="code"&gt;&lt;pre&gt;sudo update-alternatives –config editor
+&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;sudo update-alternatives –config editor
 
 OUTPUT:
 There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
@@ -19,61 +19,61 @@ There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative edito
 
 Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type &lt;/span&gt;selection number: 3
 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
-&lt;/pre&gt;&lt;/div&gt;</description><category>tools</category><category>vim</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><description>&lt;div&gt;&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;sudo visudo
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;</description><category>tools</category><category>ubuntu</category><category>vim</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo visudo
+&lt;/pre&gt;
 
 
 &lt;p&gt;Add or edit the following line to be:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;%sudo &lt;span class="nv"&gt;ALL&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;ALL&lt;span class="o"&gt;)&lt;/span&gt; NOPASSWD: ALL
-&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="code literal-block"&gt;%sudo &lt;span class="nv"&gt;ALL&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;ALL&lt;span class="o"&gt;)&lt;/span&gt; NOPASSWD: ALL
+&lt;/pre&gt;
 
 
-&lt;p&gt;This will prevent password prompts for everyone in the sudo group (%sudo) when issuing all commands (NOPASSWD: ALL)&lt;/p&gt;&lt;/div&gt;</description><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</guid><pubDate>Thu, 21 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks</title><link>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</link><description>&lt;div&gt;&lt;p&gt;TL;DR&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;sudo dhclient -r &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt; &amp;amp;amp;&amp;amp;amp; sudo dhclient &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will prevent password prompts for everyone in the sudo group (%sudo) when issuing all commands (NOPASSWD: ALL)&lt;/p&gt;</description><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</guid><pubDate>Thu, 21 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks</title><link>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;TL;DR&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo dhclient -r &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt; &amp;amp;amp;&amp;amp;amp; sudo dhclient &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;
 
 
 &lt;p&gt;I add that command as an alias to my ~/.bashrc file&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;resetdhcp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'sudo dhclient -r eth0 &amp;amp;amp;&amp;amp;amp; sudo dhclient eth0'&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="nb"&gt;alias &lt;/span&gt;&lt;span class="nv"&gt;resetdhcp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'sudo dhclient -r eth0 &amp;amp;amp;&amp;amp;amp; sudo dhclient eth0'&lt;/span&gt;
+&lt;/pre&gt;
 
 
 &lt;p&gt;then resourced it so I could use it in the bash session I was in&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bashrc&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bashrc&lt;/span&gt;
+&lt;/pre&gt;
 
 
 &lt;p&gt;I constantly have my Ubuntu VM (VirtualBox) running on my Windows laptop and dock/undock it between work and home. Obviously those are two different wireless networks. Well, I was unable to find a dhcp renewal command that would work until today (look above).&lt;/p&gt;
 &lt;p&gt;This command releases and renews your DHCP IP Address.&lt;/p&gt;
 &lt;p&gt;I’m very happy about this.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://linux.about.com/library/cmd/blcmdl8_dhclient.htm"&gt;dhclient man page&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;When run by itself, your instance will seek out a new ip lease.&lt;/p&gt;&lt;/div&gt;</description><category>ubuntu</category><category>networking</category><category>wireless</category><guid>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</guid><pubDate>Tue, 05 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Testing Mail From the Command Line on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</link><description>&lt;div&gt;&lt;p&gt;Install mailutils&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install mailutils
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When run by itself, your instance will seek out a new ip lease.&lt;/p&gt;</description><category>networking</category><category>ubuntu</category><category>wireless</category><guid>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</guid><pubDate>Tue, 05 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Testing Mail From the Command Line on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Install mailutils&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo apt-get install mailutils
+&lt;/pre&gt;
 
 
 &lt;p&gt;Send some test piped into the mail command&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"testing"&lt;/span&gt; | mail -s Test user@emailhost.com
-&lt;/pre&gt;&lt;/div&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"testing"&lt;/span&gt; | mail -s Test user@emailhost.com
+&lt;/pre&gt;
 
 
-&lt;p&gt;Check the email address listed above&lt;/p&gt;&lt;/div&gt;</description><category>command line</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</guid><pubDate>Wed, 19 Sep 2012 05:00:00 GMT</pubDate></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</link><description>&lt;div&gt;&lt;p&gt;Whenever you do&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install git-core
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Check the email address listed above&lt;/p&gt;</description><category>command line</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</guid><pubDate>Wed, 19 Sep 2012 05:00:00 GMT</pubDate></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Whenever you do&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo apt-get install git-core
+&lt;/pre&gt;
 
 
 &lt;p&gt;on Ubuntu you will only get git version 1.7.5.x. I needed 1.7.6%2B.&lt;/p&gt;
 &lt;p&gt;To do this you have to run the following commands:&lt;/p&gt;
-&lt;div class="code"&gt;&lt;pre&gt;sudo apt-get install python-software-properties
+&lt;pre class="code literal-block"&gt;sudo apt-get install python-software-properties
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get install git-core
-&lt;/pre&gt;&lt;/div&gt;
+&lt;/pre&gt;
 
 
-&lt;p&gt;This should give you git version 1.7.11 (as of today)  &lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</guid><pubDate>Wed, 11 Jul 2012 05:00:00 GMT</pubDate></item><item><title>xkcd - ubuntu, python comics</title><link>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</link><description>&lt;div&gt;&lt;p&gt;If you don't currently read &lt;a href="http://www.xkcd.com"&gt;xkcd.com&lt;/a&gt;, you should be.  It has some mushy lovey dovey junk in it sometimes, but the python references and open source references are hilarious.&lt;/p&gt;
+&lt;p&gt;This should give you git version 1.7.11 (as of today)  &lt;/p&gt;</description><category>git</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</guid><pubDate>Wed, 11 Jul 2012 05:00:00 GMT</pubDate></item><item><title>xkcd - ubuntu, python comics</title><link>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;If you don't currently read &lt;a href="http://www.xkcd.com"&gt;xkcd.com&lt;/a&gt;, you should be.  It has some mushy lovey dovey junk in it sometimes, but the python references and open source references are hilarious.&lt;/p&gt;
 &lt;p&gt;Today's comic: (mouse over for the Ubuntu reference)  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/zealous_autoconfig.png"&gt;&lt;/p&gt;
 &lt;p&gt;One of my other favs:  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/python.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>funny</category><category>python</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</guid><pubDate>Mon, 28 Apr 2008 21:34:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/python.png"&gt;&lt;/p&gt;</description><category>funny</category><category>python</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</guid><pubDate>Mon, 28 Apr 2008 21:34:00 GMT</pubDate></item></channel></rss>

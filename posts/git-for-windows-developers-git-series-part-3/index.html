@@ -1,91 +1,76 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Git For Windows Developers – Git Series – Part 3 | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-3/"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Git For Windows Developers – Git Series – Part 3 | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-3/">
+
+
+
     
-        
-            
-                </li><li><a href="../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
+    
+    <meta name="author" content="Jason Meridth">
+            <meta name="og:title" content="Git For Windows Developers – Git Series – Part 3">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-3/">
+            <meta name="og:description" content="Git For Windows Developers - Git Series - Part 1
+Git For Windows Developers - Git Series - Part 2 
 
-                
-                <ul class="nav pull-right"></ul></div>
+Git For Windows Developers - Git Series - Part 3
+THE .GIT FOLDER
+Note: The SHA1s and tags in this po">
+        <meta name="og:site_name" content="Jason Meridth's Blog">
+        <meta name="og:type" content="article">
+
+    
+    
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Git For Windows Developers – Git Series – Part 3</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2009-06-08T02:45:00-05:00">Jun 08, 2009</time>
+            
+            
+            </div>
+            
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">Git For Windows Developers – Git Series – Part 3</h1>
-    
-
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2009-06-08T02:45:00-05:00" itemprop="datePublished">Jun 08, 2009</time>
-        
-    
-
-		
-    
-
-          |  
-		
-		
-			<a href="index.md" id="sourcelink">Source</a>
-		
-		
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p><a href="../../blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a></p>
-<p><a href="../../blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 <br></a></p>
+        <div class="body">
+            <p><a href="../../blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a></p>
+<p><a href="../../blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 <br>
+</a></p>
 <p><a href="../../blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx">Git For Windows Developers - Git Series - Part 3</a></p>
 <h2><strong>THE .GIT FOLDER</strong></h2>
 <p><strong><em>Note</em></strong>: The SHA1s and tags in this post are unique to my system.  The examples with SHA1s will not work on your system if you try the commands verbatim.  The commands that use tags will work if you name your tags the same.</p>
@@ -111,7 +96,8 @@
 <p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_1ED807A5.png"></p>
 <p>Consists of all your objects (duh!).  What are the objects?  That’s a little ambiguous.  It looks like a bunch of two character alpha-numeric folders, plus info and pack folders.  In Git, objects are blobs, trees, commits, and tags.  What are the two characters?  They are the first two characters of an objects SHA1.  Then the files in those folders are named with the remaining 38 characters. (i.e., 9a438f1e971835a3ad724eb408a68fae45d7470a would translate to .git/objects/9a/438f1e971835a3ad724eb408a68fae45d7470a)</p>
 <h4><strong>BLOB</strong></h4>
-<p>A blob is generally a file. <br><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_77341C2B.png"><br>
+<p>A blob is generally a file. <br>
+<img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_77341C2B.png"> <br>
 (<a href="http://book.git-scm.com/assets/images/figure/object-blob.png">http://book.git-scm.com/assets/images/figure/object-blob.png</a>)</p>
 <p>Consists of the binary content that is stored in the blob.  No filename.  Really?  Yep.  Git does not track files, it tracks content.  So if you have two files with the same content but different names (shame on you for violating “<a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Don’t Repeat Yourself (DRY)</a>”) they will most likely point at the same blob object.  “The object is totally independent of its location in the directory tree…”.  This is usually handled by tree objects.  “…and renaming a file does not change the object that the file is associated with” (<a href="http://book.git-scm.com/1_the_git_object_model.html">http://book.git-scm.com/1_the_git_object_model.html</a>)</p>
 <p>When I issue the “<strong>git show 0e0fdc6</strong>” command:</p>
@@ -119,7 +105,7 @@
 <p>where 0e0fdc6 is the SHA1 of the solution file on my initial commit, I see the files contents.  “<strong>git show</strong>” is a way to view information about Git objects (blobs, commits, trees, tags).</p>
 <p><strong>TREE</strong></p>
 <p>A tree usually represents a directory or sub-directory, containing a list of other trees and blobs. </p>
-<p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_7A018331.png"><br>
+<p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_7A018331.png"> <br>
 (<a href="http://book.git-scm.com/assets/images/figure/object-tree.png">http://book.git-scm.com/assets/images/figure/object-tree.png</a>)</p>
 <p>Consists of the type, SHA1 and filename of blobs and sub-trees.  When I run the “<strong>git ls-tree 97107ec</strong>“ command:</p>
 <p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_0BE0A7B0.png"></p>
@@ -128,7 +114,7 @@
 <p>I see the names of the contents, but not the types or SHA1s. </p>
 <h4><strong>COMMIT</strong></h4>
 <p>A commit is a pointer to the SHA1 of a tree. </p>
-<p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_155E8788.png"><br>
+<p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_155E8788.png"> <br>
 (<a href="http://book.git-scm.com/assets/images/figure/object-commit.png">http://book.git-scm.com/assets/images/figure/object-commit.png</a>)</p>
 <p>Consists of the SHA1 of the tree it’s pointing at, the SHA1 of the parent commit, if not the initial commit, and the names of the author and committer.  Huh?  There’s a difference between the author and the committer.  Imagine you write a patch for an open source project.  When you tell the owner of the project to pull from your repository, you are the author, but they would the person committing it to the primary repository, the committer.  If I issue the “<strong>git show –s --pretty=raw 1731c38</strong>“ command, where 1731c38 is the SHA1 of my “initial commit” commit:</p>
 <p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_201E6F8E.png"></p>
@@ -137,7 +123,7 @@
 <p>I actually see the diffs for all changes in the commit.  Since this was the initial commit SHA1, I see lots of plus signs (+) in the diffs.</p>
 <h4><strong>TAG</strong></h4>
 <p>A tag is a pointer to the SHA1 of a Git object.</p>
-<p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_370783CE.png"><br>
+<p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_370783CE.png"> <br>
 (<a href="http://book.git-scm.com/assets/images/figure/object-tag.png">http://book.git-scm.com/assets/images/figure/object-tag.png</a>) </p>
 <p>Consists of an object SHA1, the type of object the SHA1 represents and the name of the person who issued the tag, the tagger.  I issue the “<strong>git tag v0.1 –m ‘v0.1’</strong>” command:</p>
 <p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_14464C11.png"></p>
@@ -185,27 +171,21 @@
 <p><strong><a href=".#445" title="2009-06-08 16:10:48">Jason Meridth</a>:</strong> @Granville I'm a Linux user by heart, but just coded .NET for a living for years. We are in complete agreement on terminal vs. GUI. It is my evil plan to convert as many mouse-dependent users back to the keyboard full-time. I agree. After writing these entries, I've not had a single issue with Msysgit. I've read many of the threads on the git mailing list. You are correct, excellent information to be found in there.</p>
 <p><strong><a href=".#502" title="2011-05-27 09:31:00">Blakshmireddy</a>:</strong> Hi Jason, Your post is really helpful and easy to understand. I want to set-up remote repository in windows server rather than in github. I didn't find any tutorial. If you have one please share it..</p>
 <p><strong><a href=".#503" title="2011-05-27 11:53:00">Jason Meridth</a>:</strong> Blackshmireddy: These are the 2 best posts out there: http://www.shannoncornish.com/blog/2009/04/git-server-windows-2008/ http://www.shannoncornish.com/blog/2009/04/gitosis-windows-server-2008/ They show you how to install cygwin, git, python setuptools and gitosis on a Windows 2008 Server box.</p>
-<p><strong><a href=".#505" title="2011-06-25 23:08:00">Lewis bradbrook</a>:</strong> i think it is good but does not work</p></div>
-    </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="../git-for-windows-developers-git-series-part-2/" rel="prev">← Previous post</a>
+<p><strong><a href=".#505" title="2011-06-25 23:08:00">Lewis bradbrook</a>:</strong> i think it is good but does not work</p>
+        </div>
+                <ul class="pager">
+            <li class="previous">
+                <a href="../git-for-windows-developers-git-series-part-2/" rel="prev" title="Git For Windows Developers – Git Series – Part 2">Previous post</a>
             </li>
-        
-        
             <li class="next">
-                <a href="../git-for-windows-developers-git-series-part-4/" rel="next">Next post →</a>
+                <a href="../git-for-windows-developers-git-series-part-4/" rel="next" title="Git For Windows Developers – Git Series – Part 4">Next post</a>
             </li>
-        
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+                            <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-        
             disqus_url="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-3/",
-        
         disqus_title="Git For Windows Developers \u2013 Git Series \u2013 Part 3",
         disqus_identifier="cache/posts/git-for-windows-developers-git-series-part-3.html",
         disqus_config = function () {
@@ -216,40 +196,55 @@
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
-
-    
         
-            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    </div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

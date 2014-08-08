@@ -1,133 +1,112 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Gitosis and Gitweb - Part 1 - Setup | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Gitosis and Gitweb - Part 1 - Setup | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/">
+
+
+
     
-        
-            
-                </li><li><a href="../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
+    
+    <meta name="author" content="Jason Meridth">
+            <meta name="og:title" content="Gitosis and Gitweb - Part 1 - Setup">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/">
+            <meta name="og:description" content="I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “pu">
+        <meta name="og:site_name" content="Jason Meridth's Blog">
+        <meta name="og:type" content="article">
 
-                
-                <ul class="nav pull-right"></ul></div>
+    
+    
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Gitosis and Gitweb - Part 1 - Setup</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2010-05-25T02:42:00-05:00">May 25, 2010</time>
+            
+            
+            </div>
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../../categories/git/" rel="tag">git</a></li>
+           <li><a class="tag p-category" href="../../categories/gitosis/" rel="tag">gitosis</a></li>
+        </ul>
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">Gitosis and Gitweb - Part 1 - Setup</h1>
-    
 
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2010-05-25T02:42:00-05:00" itemprop="datePublished">May 25, 2010</time>
-        
-    
-
-		
-    
-          |  More posts about
-        
-            <a class="tag" href="../../categories/git.html"><span class="badge badge-info">git</span></a>
-        
-            <a class="tag" href="../../categories/gitosis.html"><span class="badge badge-info">gitosis</span></a>
-        
-    
-
-          |  
-		
-		
-			<a href="index.md" id="sourcelink">Source</a>
-		
-		
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p>I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is <a href="http://github.com">Github.com</a>. If they say, “private” I still say Github.  If they don't <a href="http://github.com/security">"trust" Github</a>, which they should - click the link, then my response is <a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary">Gitosis</a> and <a href="http://git.wiki.kernel.org/index.php/Gitweb">Gitweb</a>. This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.</p>
+        </div>
+        <div class="body">
+            <p>I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is <a href="http://github.com">Github.com</a>. If they say, “private” I still say Github.  If they don't <a href="http://github.com/security">"trust" Github</a>, which they should - click the link, then my response is <a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary">Gitosis</a> and <a href="http://git.wiki.kernel.org/index.php/Gitweb">Gitweb</a>. This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.</p>
 <p>Back to Gitosis. My personal Gitosis server is a slice at <a href="http://slicehost.com">Slicehost.com</a>. You can use an Ubuntu server at home as long as you have remote access. I’ve personally only used Gitosis with an Ubuntu slice, so I don’t know if there are any quirks with other Linux distributions. After setting up a slice (after following the instructions <a href="http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-1">here</a> and <a href="http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-2">here</a>) I am ready to go.</p>
 <p>Notice: This post is a combination of <a href="http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way">scie.nti.st’s gitosis post</a> and <a href="http://progit.org/book/ch4-7.html">Scott Chacon’s Pro Git gitosis section</a>. They are my de facto references. Maybe my own will be now. :)</p>
 <p>“Enough talk. Let’s fight” ~Po, Kung Fu Panda</p>
 <h3>Intall Git</h3>
 <p>After logging into your box, let’s install Git (if not already installed):</p>
-<div class="code"><pre><span class="nv">$ </span>sudo apt-get install git-core
+<pre class="code literal-block"><span class="nv">$ </span>sudo apt-get install git-core
 ...
 After this operation, 16.3MB of additional disk space will be used.
 Do you want to <span class="k">continue</span> <span class="o">[</span>Y/n<span class="o">]</span>?
-</pre></div>
+</pre>
 
 
 <p>Press enter or type ‘Y’ and press enter and git will be installed. Type the following to confirm:</p>
-<div class="code"><pre>~ &gt; git --version
-</pre></div>
+<pre class="code literal-block">~ &gt; git --version
+</pre>
 
 
 <p>and you’ll see something like:</p>
-<div class="code"><pre>~ &gt; git --version
+<pre class="code literal-block">~ &gt; git --version
 git version 1.6.3.3
-</pre></div>
+</pre>
 
 
 <h3>Intall python-setuptools</h3>
 <p>Also install the python-setuptools because we’ll need them (gitosis is written in python):</p>
-<div class="code"><pre><span class="nv">$ </span>apt-get install python-setuptools
+<pre class="code literal-block"><span class="nv">$ </span>apt-get install python-setuptools
 ...
 After this operation, 1126kB of additonal disk space will be used.
 Do you want to <span class="k">continue</span> <span class="o">[</span>Y/n<span class="o">]</span>?
-</pre></div>
+</pre>
 
 
 <p>Press enter or type ‘Y’ and press enter and python-setuptools will be installed.</p>
 <h3>Download Gitosis</h3>
 <p>We need to clone the gitosis source locally to install it:</p>
-<div class="code"><pre><span class="nv">$ </span>mkdir src <span class="o">&amp;&amp;</span> <span class="nb">cd </span>src
+<pre class="code literal-block"><span class="nv">$ </span>mkdir src <span class="o">&amp;&amp;</span> <span class="nb">cd </span>src
 ~/src <span class="nv">$ </span>git clone git://eagain.net/gitosis.git
 Initialized empty Git repository in /root/src/gitosis/.git/
 remote: Counting objects: 614, <span class="k">done</span>.
@@ -135,20 +114,20 @@ remote: Compressing objects: 100% <span class="o">(</span>183/183<span class="o"
 remote: Total 614 <span class="o">(</span>delta 434<span class="o">)</span>, reused 594 <span class="o">(</span>delta 422<span class="o">)</span>
 Receiving objects: 100% <span class="o">(</span>614/614<span class="o">)</span>, 93.82 KiB, <span class="k">done</span>.
 Resolving deltas: 100% <span class="o">(</span>434/434<span class="o">)</span>, <span class="k">done</span>.
-</pre></div>
+</pre>
 
 
 <h3>Install Gitosis</h3>
 <p>Now let’s install it:</p>
-<div class="code"><pre>~/src <span class="nv">$ </span><span class="nb">cd </span>gitosis
+<pre class="code literal-block">~/src <span class="nv">$ </span><span class="nb">cd </span>gitosis
 ~/src/gitosis <span class="nv">$ </span>python setup.py install
-</pre></div>
+</pre>
 
 
 <p><a href="https://gist.github.com/jmeridth/352769">Result of Installation</a></p>
 <p>Gitosis is now installed. Next steps are to create git user and handle a file permission on a git hook.</p>
 <h3>Create Git User</h3>
-<div class="code"><pre>sudo adduser <span class="se">\</span>
+<pre class="code literal-block">sudo adduser <span class="se">\</span>
     --system <span class="se">\</span>
     --shell /bin/bash <span class="se">\</span>
     --gecos <span class="s1">'git version control'</span> <span class="se">\</span>
@@ -156,61 +135,61 @@ Resolving deltas: 100% <span class="o">(</span>434/434<span class="o">)</span>, 
     --disabled-password <span class="se">\</span>
     --home /home/git <span class="se">\</span>
     git
-</pre></div>
+</pre>
 
 
 <p>You’ll see something like the following if it is successful</p>
-<div class="code"><pre>Adding system user <span class="s1">'git'</span> <span class="o">(</span>UID 103<span class="o">)</span> ...
+<pre class="code literal-block">Adding system user <span class="s1">'git'</span> <span class="o">(</span>UID 103<span class="o">)</span> ...
 Adding new group <span class="s1">'git'</span> <span class="o">(</span>GID 105<span class="o">)</span> ...
 Adding new user <span class="s1">'git'</span> <span class="o">(</span>UID 103<span class="o">)</span> with group <span class="s1">'git'</span> ...
 Creating home directory <span class="s1">'/home/git'</span> ...
-</pre></div>
+</pre>
 
 
 <h3>Use local, public ssh key</h3>
 <p>You need to initially use your public ssh key (id_rsa.pub). If you have one, it will be at $HOME/.ssh/id_rsa.pub and if you have never generated one, you can do so by running the following command (accept the default location and you don’t need to enter a passphrase when prompted):</p>
-<div class="code"><pre>ssh-keygen -t rsa
-</pre></div>
+<pre class="code literal-block">ssh-keygen -t rsa
+</pre>
 
 
 <p>Now you need to upload it to the server/slice. I usually use the scp (secure copy command):</p>
-<div class="code"><pre>scp <span class="nv">$HOME</span>/.ssh/id_rsa.pub user@123.123.123.123:/tmp/
-</pre></div>
+<pre class="code literal-block">scp <span class="nv">$HOME</span>/.ssh/id_rsa.pub user@123.123.123.123:/tmp/
+</pre>
 
 
 <p>This will upload the local id_rsa.pub file to the /tmp/ folder on the server. Why there? So that the git user can use it. How is that possible? The folder has permissions of 777 (drwxrwxrwt) meaning everyone has read and write access to it.</p>
 <h4>Sidenote: SSH Port</h4>
 <p>If you have your sshd daemon running on a different port other than 22 (which is the default, but I highly suggest changing), then you need to use scp like this:</p>
-<div class="code"><pre>scp -P 12345 <span class="nv">$HOME</span>/.ssh/id_rsa.pub user@123.123.123.123:/tmp/
-</pre></div>
+<pre class="code literal-block">scp -P 12345 <span class="nv">$HOME</span>/.ssh/id_rsa.pub user@123.123.123.123:/tmp/
+</pre>
 
 
 <p>I believe the “-P” option must be capitalized.</p>
 <h3>Initialize gitosis-admin repository</h3>
 <p>On the server, issue the following command to set your public ssh key as the first authorized key of a new gitosis-admin repository:</p>
-<div class="code"><pre>sudo -H -u git gitosis-init &lt; /tmp/id_rsa.pub
-</pre></div>
+<pre class="code literal-block">sudo -H -u git gitosis-init &lt; /tmp/id_rsa.pub
+</pre>
 
 
 <p>You will see something like the following:</p>
-<div class="code"><pre>~ <span class="nv">$ </span>sudo -H -u git gitosis-init &lt; /tmp/id_rsa.pub
+<pre class="code literal-block">~ <span class="nv">$ </span>sudo -H -u git gitosis-init &lt; /tmp/id_rsa.pub
 Initialized empty Git repository in /home/git/repositories/gitosis-admin.git/
 Reinitialized existing Git repository in /home/git/repositories/gitosis-admin.git/
-</pre></div>
+</pre>
 
 
 <p>This means it was successful.</p>
 <p>Take note: If you put your id_rsa.pub file in a different location you need to use that instead of /tmp/id_rsa.pub</p>
 <h3>Change Permissions on post-update hook</h3>
 <p>You have to set the permissions on the post-update git hook of the gitosis-admin repository so that gitosis-admin can add new repository structures when they are added/removed to/from the gitosis.conf file.</p>
-<div class="code"><pre>sudo chmod 7555 /home/git/repositories/gitosis-admin.git/hooks/post-update
-</pre></div>
+<pre class="code literal-block">sudo chmod 7555 /home/git/repositories/gitosis-admin.git/hooks/post-update
+</pre>
 
 
 <p>Note: <em>First round of this post, I didn’t make this change. When I added a new project, it failed because this hook didn’t have the right permissions.</em></p>
 <h3>Clone gitosis-admin repository</h3>
 <p>Now we’re going to use Git to administrate this gitosis instance. I think that is pretty ingenius. Let’s clone the gitosis-admin repository locally:</p>
-<div class="code"><pre>~ &gt; git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
+<pre class="code literal-block">~ &gt; git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
 Initialized empty Git repository in /Users/user/gitosis-admin/.git/
 remote: Counting objects: 5, <span class="k">done</span>.
 remote: Compressing objects: 100% <span class="o">(</span>4/4<span class="o">)</span>, <span class="k">done</span>.
@@ -218,77 +197,71 @@ Receiving objects: 100% <span class="o">(</span>5/5<span class="o">)</span>, <sp
 Resolving deltas: 100% <span class="o">(</span>1/1<span class="o">)</span>, <span class="k">done</span>.
 remote: Total 5 <span class="o">(</span>delta 1<span class="o">)</span>, reused 5 <span class="o">(</span>delta 1<span class="o">)</span>
 ~ &gt; <span class="nb">cd </span>gitosis-admin
-</pre></div>
+</pre>
 
 
 <p>We are now in the gitosis-admin repository folder locally</p>
 <h4>Two most common errors</h4>
 <p><strong>FIRST ONE:</strong></p>
-<div class="code"><pre>~ &gt; git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
+<pre class="code literal-block">~ &gt; git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
 Initialzed empty Git repository in /Users/user/gitosis-admin/.git/
 ssh: connect to host YOUR_SERVER_HOSTNAME port 22: Connection refused
 fatal: The remote end hung up unexpectedly
-</pre></div>
+</pre>
 
 
 <p>it is because you have used a port for SSH other than port 22 (the default). To fix this, you need to edit your .ssh/config file and add the following:</p>
-<div class="code"><pre>Host YOUR_SERVER_HOSTNAME
+<pre class="code literal-block">Host YOUR_SERVER_HOSTNAME
 Port YOUR_PORT
-</pre></div>
+</pre>
 
 
 <p>Of course, you need to put in your server hostname and port number (i.e., mydomain.com and 12345)</p>
 <p><strong>SECOND ONE:</strong></p>
-<div class="code"><pre>~ &gt; git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
+<pre class="code literal-block">~ &gt; git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
 Initialzed empty Git repository in /Users/user/gitosis-admin/.git/
 Permission denied <span class="o">(</span>publickey<span class="o">)</span>.
 fatal: The remote end hung up unexpectedly
-</pre></div>
+</pre>
 
 
 <p>This has usually hit me because I locked down my /etc/ssh/sshd_config file to only allow in certain users or groups. I have to change the AllowUsers line in my file from:</p>
-<div class="code"><pre>AllowUsers jmeridth
-</pre></div>
+<pre class="code literal-block">AllowUsers jmeridth
+</pre>
 
 
 <p>to</p>
-<div class="code"><pre>AllowUsers jmeridth git
-</pre></div>
+<pre class="code literal-block">AllowUsers jmeridth git
+</pre>
 
 
 <p>Once I restart the ssh daemon:</p>
-<div class="code"><pre>~ &gt; sudo /etc/init.d/ssh restart
-</pre></div>
+<pre class="code literal-block">~ &gt; sudo /etc/init.d/ssh restart
+</pre>
 
 
 <p>Now the git user has access to reach my server/slice via ssh.</p>
 <h4>The local gitosis-admin repository</h4>
 <p>You now have a local clone of the gitosis-admin repository. The contents are only a conf file and key directory:</p>
-<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; ls
+<pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; ls
 total 8
 -rw-r--r-- 1 user staff  1148 May 22 21:31 gitosis.conf
 drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
-</pre></div></div>
-    </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="../my-quot-git-branching-and-workflows-quot-presentation-at-austin-code-camp-2010/" rel="prev">← Previous post</a>
+</pre>
+        </div>
+                <ul class="pager">
+            <li class="previous">
+                <a href="../my-quot-git-branching-and-workflows-quot-presentation-at-austin-code-camp-2010/" rel="prev" title="My " git branching and workflows presentation at austin code camp>Previous post</a>
             </li>
-        
-        
             <li class="next">
-                <a href="../gitosis-and-gitweb-part-2/" rel="next">Next post →</a>
+                <a href="../gitosis-and-gitweb-part-2/" rel="next" title="Gitosis and Gitweb - Part 2 - Add Projects and Contributors">Next post</a>
             </li>
-        
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+                            <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-        
             disqus_url="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/",
-        
         disqus_title="Gitosis and Gitweb - Part 1 - Setup",
         disqus_identifier="cache/posts/gitosis-and-gitweb-part-1.html",
         disqus_config = function () {
@@ -299,40 +272,55 @@ drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
-
-    
         
-            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    </div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

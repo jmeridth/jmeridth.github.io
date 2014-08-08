@@ -1,92 +1,71 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Git For Windows Developers – Git Series - Part 1 | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-1/"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Git For Windows Developers – Git Series - Part 1 | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-1/">
+
+
+
     
-        
-            
-                </li><li><a href="../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
+    
+    <meta name="author" content="Jason Meridth">
+            <meta name="og:title" content="Git For Windows Developers – Git Series - Part 1">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-1/">
+            <meta name="og:description" content="UPDATE: I’ve updated the msysgit installation screens so they are more current.  Git-1.7.7.1 is the latest one as of this update.  The subsequent screens show Git-1.6.3.  I assure you that all of the ">
+        <meta name="og:site_name" content="Jason Meridth's Blog">
+        <meta name="og:type" content="article">
 
-                
-                <ul class="nav pull-right"></ul></div>
+    
+    
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Git For Windows Developers – Git Series - Part 1</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2009-06-01T06:04:00-05:00">Jun 01, 2009</time>
+            
+            
+            </div>
+            
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">Git For Windows Developers – Git Series - Part 1</h1>
-    
-
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2009-06-01T06:04:00-05:00" itemprop="datePublished">Jun 01, 2009</time>
-        
-    
-
-		
-    
-
-          |  
-		
-		
-			<a href="index.md" id="sourcelink">Source</a>
-		
-		
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p><em><strong>UPDATE:</strong> I’ve updated the msysgit installation screens so they are more current.  Git-1.7.7.1 is the latest one as of this update.  The subsequent screens show Git-1.6.3.  I assure you that all of the commands in the first three parts of this series will work on 1.6.3.</em> <a href="../../blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a> <a href="../../blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 </a> <a href="../../blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx">Git For Windows Developers - Git Series - Part 3</a> This post is going to be the first of a few. I plan to convey everything I've learned the past 8 months while using git on a development team. I'm currently working on a Macbook Pro, doing Ruby on Rails development with git as the source control.  These posts will be specific to using git on the Windows operating system. This post is going to talk about installing msysgit, creating ssh keys, and creating a local git repository. If you already have msysgit installed, have created your ssh keys, and have an existing application you just want to put in a git repository, go here</p>
+        <div class="body">
+            <p><em><strong>UPDATE:</strong> I’ve updated the msysgit installation screens so they are more current.  Git-1.7.7.1 is the latest one as of this update.  The subsequent screens show Git-1.6.3.  I assure you that all of the commands in the first three parts of this series will work on 1.6.3.</em> <a href="../../blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a> <a href="../../blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 </a> <a href="../../blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx">Git For Windows Developers - Git Series - Part 3</a> This post is going to be the first of a few. I plan to convey everything I've learned the past 8 months while using git on a development team. I'm currently working on a Macbook Pro, doing Ruby on Rails development with git as the source control.  These posts will be specific to using git on the Windows operating system. This post is going to talk about installing msysgit, creating ssh keys, and creating a local git repository. If you already have msysgit installed, have created your ssh keys, and have an existing application you just want to put in a git repository, go here</p>
 <h4>Installing msysgit On Windows</h4>
-<p>For windows, install <a href="http://code.google.com/p/msysgit/downloads/list">msysgit</a> (both ssh key generation capabilities and git come with this tool): Download the latest version of msysgit: <img alt="" src="jasonmeridth/files/2009/06/download11.png"><img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/download21.png"> Going through the setup.  Click next past the first window. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install11.png"> Agree to the GPL terms: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install21.png"> Set the installation location (default was fine for me: C:Program FilesGit): <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install31.png"> Choose installation options.  I don’t like to clutter my desktop, so that one is unchecked.  I also use Console2 so that is on my Quick Launch, not Git Bash  The context menu entries options give a user two new options on files when right-clicked in Windows Explorer.  We’ll talk about this later in the post. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install41.png"> The next screen asks what name the folder that the program will be available from when I click Start-&gt;Programs, etc: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install51.png"> I use the “Git Bash only” option because it’s the only reason I downloaded msysgit.  The other two options are tightly coupled to the operating system’s current setup. _ <strong>UPDATE</strong>:  Via <a href="http://joshuaflanagan.lostechies.com">Joshua Flanagan</a>, I was informed that tortoisegit, a UI tool, suggests that you choose the second option "Run Git from the Windows Command Prompt".  I've done both, I just prefer the first option because I don't use tortoisegit.  Just be aware._ <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install61.png"> Typical Windows developers won’t interact with other operating systems so choosing the 3rd option, in regards to non-handling of line-endings is usually best. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install71.png"> Click next and the installation starts. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install81.png"> Uncheck the readme (who reads those anyway?) and click Finish. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install91.png"> Once installed, when I click the Windows button and type git (since I’m using Windows 7) I’ll see “Git Bash”, “Git Gui'”, “Uninstall Git”.  Click “Git Bash”.  You will see the version at the top of the window.  We're good to go: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/done.png"> I also issue the following commands, “git config –global user.email <a href="mailto:my@email.com">my@email.com</a>” and “git config –global user.name ‘Jason Meridth’”: <img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_3E2DDA4E.png"> After I commit code in my new repository, later in the post, we will see why these are relevant. </p>
+<p>For windows, install <a href="http://code.google.com/p/msysgit/downloads/list">msysgit</a> (both ssh key generation capabilities and git come with this tool): Download the latest version of msysgit: <img alt="" src="jasonmeridth/files/2009/06/download11.png"> <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/download21.png"> Going through the setup.  Click next past the first window. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install11.png"> Agree to the GPL terms: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install21.png"> Set the installation location (default was fine for me: C:Program FilesGit): <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install31.png"> Choose installation options.  I don’t like to clutter my desktop, so that one is unchecked.  I also use Console2 so that is on my Quick Launch, not Git Bash  The context menu entries options give a user two new options on files when right-clicked in Windows Explorer.  We’ll talk about this later in the post. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install41.png"> The next screen asks what name the folder that the program will be available from when I click Start-&gt;Programs, etc: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install51.png"> I use the “Git Bash only” option because it’s the only reason I downloaded msysgit.  The other two options are tightly coupled to the operating system’s current setup. _ <strong>UPDATE</strong>:  Via <a href="http://joshuaflanagan.lostechies.com">Joshua Flanagan</a>, I was informed that tortoisegit, a UI tool, suggests that you choose the second option "Run Git from the Windows Command Prompt".  I've done both, I just prefer the first option because I don't use tortoisegit.  Just be aware._ <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install61.png"> Typical Windows developers won’t interact with other operating systems so choosing the 3rd option, in regards to non-handling of line-endings is usually best. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install71.png"> Click next and the installation starts. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install81.png"> Uncheck the readme (who reads those anyway?) and click Finish. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install91.png"> Once installed, when I click the Windows button and type git (since I’m using Windows 7) I’ll see “Git Bash”, “Git Gui'”, “Uninstall Git”.  Click “Git Bash”.  You will see the version at the top of the window.  We're good to go: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/done.png"> I also issue the following commands, “git config –global user.email <a href="mailto:my@email.com">my@email.com</a>” and “git config –global user.name ‘Jason Meridth’”: <img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_3E2DDA4E.png"> After I commit code in my new repository, later in the post, we will see why these are relevant. </p>
 <h4>Generating SSH Keys</h4>
 <p>I’ve met a good number of Windows developers who don’t know what SSH is.  My quick definition of Secure Shell (aka SSH): A secure connection mechanism to other networked machines that support SSH, usually over port 22. It is pretty much the default form of remote communication for other platforms. <a href="http://en.wikipedia.org/wiki/Secure_Shell">More information if you're interested</a>. <em>History and Retrospective</em>: I used to use cygwin + ssh keys for my git stuff on my windows VMs, but have realized, via advice from a friend, that cygwin will not be the easiest thing to teach to a typical Windows user. I am in no way assuming that any of our readers are "typical" windows users, but he's right. And msysgit needs to become the defacto Windows git tool anyway. What better way to help that project succeed than to give it more users.</p>
 <h3>Comments</h3>
@@ -122,27 +101,21 @@
 <p><strong><a href=".#524" title="2012-03-09 07:16:00">sb22</a>:</strong> to create a dot file in Windows, put a dot at the end too. For example to create .htaccess in explorer, rename to .htaccess.  windows will drop the dot at the end since the extension is nothing command prompt rename works as expected, rename to .htaccess Works in Vista and Win 7.</p>
 <p><strong><a href=".#525" title="2012-03-09 07:19:00">Jason Meridth</a>:</strong> I did not know that.  Nice trick.  Thank you for sharing.</p>
 <p><strong><a href=".#526" title="2012-03-14 18:17:00">Cherif</a>:</strong> Great tuto! Thanks a lot!</p>
-<p><strong><a href=".#527" title="2012-03-29 20:33:00">Mark Webb</a>:</strong> Your the Man Jason! Been a bit confused jumping from local unix and MS machines. Your tutorial was excellent! By the way, "trying to not let best be the enemy of the better" is a refrain that soothes my OCD. Thanks again, looking forward to more of your work!</p></div>
-    </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="../textmate-and-community-server-2008-5/" rel="prev">← Previous post</a>
+<p><strong><a href=".#527" title="2012-03-29 20:33:00">Mark Webb</a>:</strong> Your the Man Jason! Been a bit confused jumping from local unix and MS machines. Your tutorial was excellent! By the way, "trying to not let best be the enemy of the better" is a refrain that soothes my OCD. Thanks again, looking forward to more of your work!</p>
+        </div>
+                <ul class="pager">
+            <li class="previous">
+                <a href="../textmate-and-community-server-2008-5/" rel="prev" title="TextMate and Community Server 2008.5">Previous post</a>
             </li>
-        
-        
             <li class="next">
-                <a href="../git-for-windows-developers-git-series-part-2/" rel="next">Next post →</a>
+                <a href="../git-for-windows-developers-git-series-part-2/" rel="next" title="Git For Windows Developers – Git Series – Part 2">Next post</a>
             </li>
-        
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+                            <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-        
             disqus_url="http://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-1/",
-        
         disqus_title="Git For Windows Developers \u2013 Git Series - Part 1",
         disqus_identifier="cache/posts/git-for-windows-developers-git-series-part-1.html",
         disqus_config = function () {
@@ -153,40 +126,55 @@
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
-
-    
         
-            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    </div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

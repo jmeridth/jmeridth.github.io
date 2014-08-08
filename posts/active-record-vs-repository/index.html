@@ -1,90 +1,70 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Active Record vs. Repository | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/active-record-vs-repository/"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Active Record vs. Repository | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/active-record-vs-repository/">
+
+
+
     
-        
-            
-                </li><li><a href="../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
+    
+    <meta name="author" content="Jason Meridth">
+            <meta name="og:title" content="Active Record vs. Repository">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/active-record-vs-repository/">
+            <meta name="og:description" content='I was reading an blog entry by Ayende Rahien (aka Oren Eini) again, "Entities, Services and what goes between them..." and one of his commenters asked the following question:  
+re: Entities, Services '>
+        <meta name="og:site_name" content="Jason Meridth's Blog">
+        <meta name="og:type" content="article">
 
-                
-                <ul class="nav pull-right"></ul></div>
+    
+    
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Active Record vs. Repository</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2007-03-11T21:34:00-05:00">Mar 11, 2007</time>
+            
+            
+            </div>
+            
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">Active Record vs. Repository</h1>
-    
-
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2007-03-11T21:34:00-05:00" itemprop="datePublished">Mar 11, 2007</time>
-        
-    
-
-		
-    
-
-          |  
-		
-		
-			<a href="index.md" id="sourcelink">Source</a>
-		
-		
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p>I was reading an blog entry by Ayende Rahien (aka Oren Eini) again, "<a href="http://ayende.com/Blog/archive/2007/02/27/Entities-Services-and-what-goes-between-them.aspx">Entities, Services and what goes between them...</a>" and one of his commenters asked the following question:  </p>
+        <div class="body">
+            <p>I was reading an blog entry by Ayende Rahien (aka Oren Eini) again, "<a href="http://ayende.com/Blog/archive/2007/02/27/Entities-Services-and-what-goes-between-them.aspx">Entities, Services and what goes between them...</a>" and one of his commenters asked the following question:  </p>
 <h5>re: Entities, Services and what goes between them... 2/27/2007 6:44 PM Gustavo Cores</h5>
 <p>@Ayende &amp; @Hammet<br>
 But doesn't all this entities not talking to repositories go against the Castle project philosophy (ActiveRecord) which you are part of?<br>
@@ -98,27 +78,21 @@ That said, my personal belief is that a repository driven approach is a more fle
 I keep the power of AR, but I can now operate at much greater flexibility, see my article on MSDN to see some of the things that I can do with repositories.  </p>
 <p>Oren defends his stance further with the following blog entry: "<a href="http://www.ayende.com/Blog/archive/2006/11/02/7116.aspx">What should I use, NHiberante or Active Record?!</a>"  </p>
 <p>I plan on trying out both mechanisms and, like Oren, decide what's more important: speed or clean domain objects and testability.  </p>
-<p>I'll keep you posted.</p></div>
-    </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="../google-source-code-hosting/" rel="prev">← Previous post</a>
+<p>I'll keep you posted.</p>
+        </div>
+                <ul class="pager">
+            <li class="previous">
+                <a href="../google-source-code-hosting/" rel="prev" title="Google source code hosting">Previous post</a>
             </li>
-        
-        
             <li class="next">
-                <a href="../reminder-how-to-enable-syntax-highlighting-for-html-files-with-non-standard-extensions/" rel="next">Next post →</a>
+                <a href="../reminder-how-to-enable-syntax-highlighting-for-html-files-with-non-standard-extensions/" rel="next" title="Reminder - How to enable syntax highlighting for HTML files with non-standard extensions">Next post</a>
             </li>
-        
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+                            <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-        
             disqus_url="http://blog.jasonmeridth.com/posts/active-record-vs-repository/",
-        
         disqus_title="Active Record vs. Repository",
         disqus_identifier="cache/posts/active-record-vs-repository.html",
         disqus_config = function () {
@@ -129,40 +103,55 @@ I keep the power of AR, but I can now operate at much greater flexibility, see m
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
-
-    
         
-            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    </div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

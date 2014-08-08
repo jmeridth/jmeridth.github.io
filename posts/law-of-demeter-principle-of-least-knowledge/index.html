@@ -1,124 +1,102 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Law of Demeter (Principle of Least Knowledge) | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/law-of-demeter-principle-of-least-knowledge/"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Law of Demeter (Principle of Least Knowledge) | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/law-of-demeter-principle-of-least-knowledge/">
+
+
+
     
-        
-            
-                </li><li><a href="../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
+    
+    <meta name="author" content="Jason Meridth">
+            <meta name="og:title" content="Law of Demeter (Principle of Least Knowledge)">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/law-of-demeter-principle-of-least-knowledge/">
+            <meta name="og:description" content="I was reading up on the Law of Demeter again after reading Jeremy Miller's post about orthogonality (good post by the way).
+The Law of Demeter (LoD from now on) was created at NorthEastern University,">
+        <meta name="og:site_name" content="Jason Meridth's Blog">
+        <meta name="og:type" content="article">
 
-                
-                <ul class="nav pull-right"></ul></div>
+    
+    
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Law of Demeter (Principle of Least Knowledge)</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2007-01-10T00:46:00-06:00">Jan 10, 2007</time>
+            
+            
+            </div>
+            
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">Law of Demeter (Principle of Least Knowledge)</h1>
-    
-
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2007-01-10T00:46:00-06:00" itemprop="datePublished">Jan 10, 2007</time>
-        
-    
-
-		
-    
-
-          |  
-		
-		
-			<a href="index.md" id="sourcelink">Source</a>
-		
-		
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p>I was reading up on the Law of Demeter again after reading <a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/01/08/Orthogonal-Code.aspx">Jeremy Miller's post about orthogonality</a> (good post by the way).</p>
+        <div class="body">
+            <p>I was reading up on the Law of Demeter again after reading <a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/01/08/Orthogonal-Code.aspx">Jeremy Miller's post about orthogonality</a> (good post by the way).</p>
 <p><strong>The Law of Demeter</strong> (LoD from now on) was created at NorthEastern University, Boston in 1987 while a team was working on the Demeter project.<br>
 LoD dictates that object A, when calling object B should call a service on object C through B.  </p>
-<hr><p><em>Example:</em></p>
+<hr>
+<p><em>Example:</em></p>
 <p>Bad (Common): <br>
 inventory.SalesInfo.Items.Count = 2500;  </p>
 <p>Good:<br>
 SalesInfo si = inventory.SalesInfo;<br>
 int salesItemsCount = si.GetSalesItemsCount();  </p>
 <p><em>[granted this might possibly be a violation of Single Responsibility Principle (SRP)  - Thanks Josh (Joshua Lockwood)]</em></p>
-<hr><p>I'm definitely guilty of violating this "law".  I know via reading and experience that this idea does help decouple your code.  You are able to re-use and place your code under test coverage more easily.</p>
+<hr>
+<p>I'm definitely guilty of violating this "law".  I know via reading and experience that this idea does help decouple your code.  You are able to re-use and place your code under test coverage more easily.</p>
 <p>LoD brings out the basic OO principle of encapsulation, hence the name "Principle of Least Knowledge".  With our current IDEs out there today it is very easy to forget about not walking a list of dots.  What I mean is, if you have more than 1 dot in your call (i.e., person.spouse.name (bad) instead of person.GetSpouseName() (good)) you are most likely violating LoD.</p>
 <p>An idea that Deane had on his post about LoD (hist first comment), was to create a tool that would walk a developer's code and let the developer know if they have violated LoD.  I can see writing something like this using reflection in Java/.NET.  An idea for the future maybe.</p>
-<p>Two books to read about this:<br><a href="http://www.amazon.com/Code-Complete-Second-Steve-McConnell/dp/0735619670/sr%3d1-1/qid%3d1168346902/ref%3dpd_bbs_sr_1/105-8994370-6387607%3fie%3dUTF8%26s%3dbooks">Code Complete (2nd Ed.) by Steve McConnell</a><br><a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">Pragmatic Programmer by Thomas, Hunt</a></p>
-<p>[If you look at the first amazon link you can buy both books together for ~$66 - very much worth it]</p></div>
-    </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="../agile-programming-comics/" rel="prev">← Previous post</a>
+<p>Two books to read about this:<br>
+<a href="http://www.amazon.com/Code-Complete-Second-Steve-McConnell/dp/0735619670/sr%3d1-1/qid%3d1168346902/ref%3dpd_bbs_sr_1/105-8994370-6387607%3fie%3dUTF8%26s%3dbooks">Code Complete (2nd Ed.) by Steve McConnell</a><br>
+<a href="http://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">Pragmatic Programmer by Thomas, Hunt</a></p>
+<p>[If you look at the first amazon link you can buy both books together for ~$66 - very much worth it]</p>
+        </div>
+                <ul class="pager">
+            <li class="previous">
+                <a href="../agile-programming-comics/" rel="prev" title="Agile Programming Comics">Previous post</a>
             </li>
-        
-        
             <li class="next">
-                <a href="../code-complete-by-steve-mcconnell/" rel="next">Next post →</a>
+                <a href="../code-complete-by-steve-mcconnell/" rel="next" title="Code Complete by Steve McConnell">Next post</a>
             </li>
-        
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+                            <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-        
             disqus_url="http://blog.jasonmeridth.com/posts/law-of-demeter-principle-of-least-knowledge/",
-        
         disqus_title="Law of Demeter (Principle of Least Knowledge)",
         disqus_identifier="cache/posts/law-of-demeter-principle-of-least-knowledge.html",
         disqus_config = function () {
@@ -129,40 +107,55 @@ int salesItemsCount = si.GetSalesItemsCount();  </p>
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
-
-    
         
-            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    </div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

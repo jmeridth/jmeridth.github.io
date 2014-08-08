@@ -1,128 +1,111 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>Gitosis and Gitweb - Part 2 - Add Projects and Contributors | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Gitosis and Gitweb - Part 2 - Add Projects and Contributors | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/">
+
+
+
     
-        
-            
-                </li><li><a href="../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
+    
+    <meta name="author" content="Jason Meridth">
+            <meta name="og:title" content="Gitosis and Gitweb - Part 2 - Add Projects and Contributors">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/">
+            <meta name="og:description" content="Gitosis and Gitweb – Part 1
+So we are setup now thanks to Part 1.
+Gitosis repository contents
+If we issue the “find .” command locally inside the gitosis-admin directory we will see the following:
+~/g">
+        <meta name="og:site_name" content="Jason Meridth's Blog">
+        <meta name="og:type" content="article">
 
-                
-                <ul class="nav pull-right"></ul></div>
+    
+    
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">Gitosis and Gitweb - Part 2 - Add Projects and Contributors</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2010-05-25T03:02:00-05:00">May 25, 2010</time>
+            
+            
+            </div>
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../../categories/git/" rel="tag">git</a></li>
+           <li><a class="tag p-category" href="../../categories/gitosis/" rel="tag">gitosis</a></li>
+        </ul>
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">Gitosis and Gitweb - Part 2 - Add Projects and Contributors</h1>
-    
 
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2010-05-25T03:02:00-05:00" itemprop="datePublished">May 25, 2010</time>
-        
-    
-
-		
-    
-          |  More posts about
-        
-            <a class="tag" href="../../categories/git.html"><span class="badge badge-info">git</span></a>
-        
-            <a class="tag" href="../../categories/gitosis.html"><span class="badge badge-info">gitosis</span></a>
-        
-    
-
-          |  
-		
-		
-			<a href="index.md" id="sourcelink">Source</a>
-		
-		
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p><a href="../gitosis-and-gitweb-part-1">Gitosis and Gitweb – Part 1</a></p>
+        </div>
+        <div class="body">
+            <p><a href="../gitosis-and-gitweb-part-1">Gitosis and Gitweb – Part 1</a></p>
 <p>So we are setup now thanks to Part 1.</p>
 <h3>Gitosis repository contents</h3>
 <p>If we issue the “find .” command locally inside the gitosis-admin directory we will see the following:</p>
-<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; find .
+<pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; find .
 &lt;a bunch of files from .git folder<span class="o">)</span>
 ./gitosis.conf
 ./keydir
 ./keydir/user@local.pub
-</pre></div>
+</pre>
 
 
 <p>We have the .git folder, a gitosis.conf file, and a keydir with a pub key file.</p>
 <h3>Add our first project</h3>
 <p>Our project name for this example is lostechies. If you view the gitosis-admin.conf file you will see the initial content like so:</p>
-<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; cat gitosis.conf
+<pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; cat gitosis.conf
 <span class="o">[</span>gitosis<span class="o">]</span>
 
 <span class="o">[</span>group gitosis-admin<span class="o">]</span>
 <span class="nv">writable</span> <span class="o">=</span> gitosis-admin
 <span class="nv">members</span> <span class="o">=</span> user@local
-</pre></div>
+</pre>
 
 
 <p>This is the result of the following command from the last part:</p>
-<div class="code"><pre>sudo -H -u git gitosis-init &lt; /tmp/id_rsa.pub
-</pre></div>
+<pre class="code literal-block">sudo -H -u git gitosis-init &lt; /tmp/id_rsa.pub
+</pre>
 
 
 <p>That command puts the public ssh key into the keydirs directory and adds the associated username from the file to be the first member of the gisotis-admin project. Hence seeing user@local as the member. It matches the filename of the pub file in the keydir directory (user@local.pub). That’s how gitosis relates members listed in the conf file to the keys in the keydir directory, filename minus the pub extension.</p>
 <p>Let’s edit this conf file to include our lostechies project:</p>
-<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; cat gitosis.conf
+<pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; cat gitosis.conf
 <span class="o">[</span>gitosis<span class="o">]</span>
 
 <span class="o">[</span>group gitosis-admin<span class="o">]</span>
@@ -132,18 +115,18 @@
 <span class="o">[</span>group meridth<span class="o">]</span>
 <span class="nv">writable</span> <span class="o">=</span> meridth
 <span class="nv">members</span> <span class="o">=</span> user@local
-</pre></div>
+</pre>
 
 
 <p>It looks exactly like the gitosis-admin one. Now we commit it just like we would normally when using Git. We can add, then commit or commit with the -am argument. This is possible since the gitosis-admin.conf file is already tracked by the repository.</p>
-<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git commit -am <span class="s2">"add meridth project"</span>
+<pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git commit -am <span class="s2">"add meridth project"</span>
 <span class="o">[</span>master 6b7a5da<span class="o">]</span> add meridth project
 1 file changed, 3 insertions<span class="o">(</span>+<span class="o">)</span>, 0 deletions<span class="o">(</span>-<span class="o">)</span>
-</pre></div>
+</pre>
 
 
 <p>and push it to the remote gitosis-admin repository:</p>
-<div class="code"><pre>~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git push
+<pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git push
 Counting objects: 5, <span class="k">done</span>.
 Delta compression using up to 2 threads
 Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
@@ -151,12 +134,12 @@ Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, 385 b
 Total 3 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
 To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
    23842e9..6b7a5da master -&gt; master
-</pre></div>
+</pre>
 
 
 <p>We need to create the lostechies repository locally, add an initial item (README in this case), and push it remotely. Gitosis won’t create the repository until something it pushed to it.</p>
-<div class="code"><pre>START HERE
-</pre></div>
+<pre class="code literal-block">START HERE
+</pre>
 
 
 <p>The lostechies repository now exists remotely. Currently my account is the only that has access. Let’s add another contributor.</p>
@@ -190,27 +173,21 @@ To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
 <p><strong><a href=".#480" title="2010-07-24 22:06:47">salfordwil</a>:</strong> volunteer physical llc</p>
 <p><strong><a href=".#481" title="2010-08-21 08:53:11">ashlynnega</a>:</strong> increased link <a href="http://www.unesco.org">rise sectors windows past</a> [url=http://water.usgs.gov]videos comment president android[/url] http://www.newswire.ca</p>
 <p><strong><a href=".#482" title="2010-08-21 08:53:28">garrmankor</a>:</strong> economy regions hypothesis special</p>
-<p><strong><a href=".#496" title="2011-05-12 10:24:00">Mullins</a>:</strong> After creating the losttechies repository locally I needed to create the remote 'origin' by executing: $ git remote add origin git@MYSERVER.com:losttechies.git</p></div>
-    </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="../gitosis-and-gitweb-part-1/" rel="prev">← Previous post</a>
+<p><strong><a href=".#496" title="2011-05-12 10:24:00">Mullins</a>:</strong> After creating the losttechies repository locally I needed to create the remote 'origin' by executing: $ git remote add origin git@MYSERVER.com:losttechies.git</p>
+        </div>
+                <ul class="pager">
+            <li class="previous">
+                <a href="../gitosis-and-gitweb-part-1/" rel="prev" title="Gitosis and Gitweb - Part 1 - Setup">Previous post</a>
             </li>
-        
-        
             <li class="next">
-                <a href="../gitosis-and-gitweb-part-3/" rel="next">Next post →</a>
+                <a href="../gitosis-and-gitweb-part-3/" rel="next" title="Gitosis and Gitweb - Part 3">Next post</a>
             </li>
-        
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+                            <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-        
             disqus_url="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/",
-        
         disqus_title="Gitosis and Gitweb - Part 2 - Add Projects and Contributors",
         disqus_identifier="cache/posts/gitosis-and-gitweb-part-2.html",
         disqus_config = function () {
@@ -221,40 +198,55 @@ To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
-
-    
         
-            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    </div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

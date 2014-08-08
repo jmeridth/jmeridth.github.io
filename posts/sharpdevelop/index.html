@@ -1,98 +1,82 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="author" content="Jason Meridth"><title>SharpDevelop | Jason Meridth's Blog</title><link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../../assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/posts/sharpdevelop/"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SharpDevelop | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="../../archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/sharpdevelop/">
+
+
+
     
-        
-            
-                </li><li><a href="../../categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="../../rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
+    
+    <meta name="author" content="Jason Meridth">
+            <meta name="og:title" content="SharpDevelop">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/sharpdevelop/">
+            <meta name="og:description" content="UPDATE: Be aware that SharpDevelop doesn't seem to support the Web Application Project support.  It will handle ASP.NET Web Site Creation (Normal 2.0 web site project) but is doesn't have the ability ">
+        <meta name="og:site_name" content="Jason Meridth's Blog">
+        <meta name="og:type" content="article">
 
-                
-                <ul class="nav pull-right"></ul></div>
+    
+    
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="../../index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="../../archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="../../rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">SharpDevelop</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2007-11-01T23:02:03-05:00">Nov 01, 2007</time>
+            
+            
+            </div>
+            
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    <article class="postbox post-text"><div class="h-entry" itemscope="itemscope" itemtype="http://schema.org/Article">
-    
-    <h1 class="p-name" itemprop="headline name">SharpDevelop</h1>
-    
-
-    <hr><small>
-        Posted: <time class="published dt-published" datetime="2007-11-01T23:02:03-05:00" itemprop="datePublished">Nov 01, 2007</time>
-        
-    
-
-		
-    
-
-          |  
-		
-		
-			<a href="index.md" id="sourcelink">Source</a>
-		
-		
-    </small>
-    <hr><div class="e-content" itemprop="articleBody text">
-    <div><p><strong><em>UPDATE: Be aware that SharpDevelop doesn't seem to support the Web Application Project support.  It will handle ASP.NET Web Site Creation (Normal 2.0 web site project) but is doesn't have the ability to handle the legacy (1.1-) way of site project layout.</em></strong></p>
+        <div class="body">
+            <p><strong><em>UPDATE: Be aware that SharpDevelop doesn't seem to support the Web Application Project support.  It will handle ASP.NET Web Site Creation (Normal 2.0 web site project) but is doesn't have the ability to handle the legacy (1.1-) way of site project layout.</em></strong></p>
 <p><strong><em>UPDATE #2: Keyboard shortcuts can be found <a href="http://wiki.sharpdevelop.net/KeyboardShortcuts.ashx">here</a>. The trunk can be found <a href="http://wiki.sharpdevelop.net/AccessingTheRepository.ashx">here</a> for version 3.0. </em></strong></p>
 <p>I know Oren has <a href="http://www.ayende.com/Blog/archive/2007/09/21/ReSharper-for-Boo.aspx">commented</a> on <a href="http://www.icsharpcode.net/OpenSource/SD/">SharpDevelop</a> before because of it's Boo support, but I decided to dive into it further today and I'm thoroughly amazed.  I'm not a <a href="http://boo.codehaus.org/">Boo</a> developer (not yet) so I can't comment to that support yet.  I have used it in the past for <a href="http://wix.sourceforge.net/">WiX</a> project UI development, because I hate dealing with the XML files for the UI templates for WiX.</p>
 <p>Here is a screen shot:</p>
 <p><img alt="image" src="jasonmeridth/files/2011/03SharpDevelop_10570/image_thumb_1.png"></p>
 <p>If you can tell:<br>
 Left window is my "Solution Explorer".  There is built-in Subversion support, hence the green checkmarks.  There is good syntax highlighting and intellisense in the main window. I currently have a build file open (XML Tree tab is an option on the bottom, it uses the nant.xsd and it is a more user friendly experience)  The top-right window is a NAnt helper.  It pulls up the targets of my build file and allows me to run it from the IDE.  Also, there is a built-in test runner (bottom-right) window.</p>
-<p>What I have installed or am using in Visual Studio 2005/2008:<br><a href="http://ankhsvn.tigris.org/">Ankh</a> (Subversion)<br><a href="http://nantgui.berlios.de/">NAnt GUI</a> (NAnt GUI helper) - I only use this for presentations.  I'm a command line guy.<br>
-JetBrains Test Runner [<a href="http://www.jetbrains.com/unitrun/download/index.html">UnitRun</a>] (Comes with my ReSharper install, you used to be able to download it separately, but not anymore)<br><a href="http://wix.sourceforge.net/votive.html">Votive</a> (For WiX projects)<br><a href="http://testdriven.net/">TestDriven.NET</a><br><a href="http://www.kiwidude.com/dotnet/DownloadPage.html">NCoverExplorer</a></p>
+<p>What I have installed or am using in Visual Studio 2005/2008:<br>
+<a href="http://ankhsvn.tigris.org/">Ankh</a> (Subversion)<br>
+<a href="http://nantgui.berlios.de/">NAnt GUI</a> (NAnt GUI helper) - I only use this for presentations.  I'm a command line guy.<br>
+JetBrains Test Runner [<a href="http://www.jetbrains.com/unitrun/download/index.html">UnitRun</a>] (Comes with my ReSharper install, you used to be able to download it separately, but not anymore)<br>
+<a href="http://wix.sourceforge.net/votive.html">Votive</a> (For WiX projects)<br>
+<a href="http://testdriven.net/">TestDriven.NET</a><br>
+<a href="http://www.kiwidude.com/dotnet/DownloadPage.html">NCoverExplorer</a></p>
 <p><img alt="image" src="jasonmeridth/files/2011/03SharpDevelop_10570/image_thumb_2.png"></p>
 <p>This is ALL Built-into SharpDevelop.  I think you have to have NUnit and NCover in your PATH environment variable.</p>
 <p>My last selling point was that it has built-in keystrokes for ReSharper-esqe commands.</p>
@@ -114,27 +98,21 @@ JetBrains Test Runner [<a href="http://www.jetbrains.com/unitrun/download/index.
 <p><strong><a href=".#201" title="2007-11-02 17:05:37">Ben Scheirman</a>:</strong> I'm glad you posted this. I also tried it a while back and it wasn't near ready. Can you post again on things that might not be so nice if you transition from VS 2005 to #D?</p>
 <p><strong><a href=".#202" title="2007-11-02 17:44:52">Jason Meridth</a>:</strong> @Ben: Definitely. I've posted 2 updates to the top of the post already. I just downloaded the 3.0 trunk and installed and it is missing NAnt, and a few other common features, but that is to be expected from Alpha. :)</p>
 <p><strong><a href=".#203" title="2007-11-02 20:17:14">Sean Chambers</a>:</strong> I installed at work today and played with it for a little while. It is really fast on my machine at work that is a little beefier than my macbook. One thing that I don't like too much is the fonts and colors. In VS I have a fonts and colors .settings file that i've carried around for awhile that has alot of special key mappings and coloring that I can't carry to #Develop. I wouldn't say its a deal breaker but it would be nice. I loaded up a large project at work to test it. It loaded so fast that I was going to read an email waiting for it to load and before I could look away it had already loaded the solution. This is probably one of the strongest points for me if you can't tell. Far too often VS hangs or stalls for a second or two. Nothing aggravates me more than when the cursor is supposed to be typing characters and instead it just sits there waiting for the IDE to play catch up. I had a problem with associating a .retl (rhino-etl) file with boo because it didnt have a .boo extension so I posted a question to the forum and had a response within a couple of minutes. The response didn't fix the problem but it's nice to see an active community around it. I'll probably play more with it over the weekend and post some more findings.</p>
-<p><strong><a href=".#204" title="2007-11-08 14:24:59">J.P. Hamilton</a>:</strong> I installed it about a month ago, admittedly just for the Boo support. What a surprise! This is nothing like the SharpDevelop I remember from a few years back. It is very mature.</p></div>
-    </div>
-    
-    </div>
-    
-    
-        <ul class="pager"><li class="previous">
-                <a href="../thoughtworks-mingle/" rel="prev">← Previous post</a>
+<p><strong><a href=".#204" title="2007-11-08 14:24:59">J.P. Hamilton</a>:</strong> I installed it about a month ago, admittedly just for the Boo support. What a surprise! This is nothing like the SharpDevelop I remember from a few years back. It is very mature.</p>
+        </div>
+                <ul class="pager">
+            <li class="previous">
+                <a href="../thoughtworks-mingle/" rel="prev" title="ThoughtWorks Mingle">Previous post</a>
             </li>
-        
-        
             <li class="next">
-                <a href="../monorail-5-sending-an-email-and-authentication/" rel="next">Next post →</a>
+                <a href="../monorail-5-sending-an-email-and-authentication/" rel="next" title="MonoRail #5: Sending an Email and Authentication">Next post</a>
             </li>
-        
-        </ul><div id="disqus_thread"></div>
+        </ul>
+
+                            <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-        
             disqus_url="http://blog.jasonmeridth.com/posts/sharpdevelop/",
-        
         disqus_title="SharpDevelop",
         disqus_identifier="cache/posts/sharpdevelop.html",
         disqus_config = function () {
@@ -145,40 +123,55 @@ JetBrains Test Runner [<a href="http://www.jetbrains.com/unitrun/download/index.
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-    
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    
 
-    
-    
-    
-
-    </article></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
-
-    
         
-            <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    </div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="../../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="../../assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

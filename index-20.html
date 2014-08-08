@@ -1,143 +1,139 @@
-<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content="Learn, Converse, Share"><meta name="author" content="Jason Meridth"><title>Jason Meridth's Blog (old posts, page 20) | Jason Meridth's Blog</title><link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="assets/css/rst.css" rel="stylesheet" type="text/css"><link href="assets/css/code.css" rel="stylesheet" type="text/css"><link href="assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="assets/css/theme.css" rel="stylesheet" type="text/css"><link rel="canonical" href="http://blog.jasonmeridth.com/index-20.html"><!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml"></head><body>
-<!-- Menubar -->
-<div class="navbar navbar-fixed-top" id="navbar">
-    <div class="navbar-inner">
-        <div class="container">
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn, Converse, Share">
+    <meta name="viewport" content="width=device-width">
+    <title>Jason Meridth's Blog (old posts, page 20) | Jason Meridth's Blog</title>
 
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
+                <link href="assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/code.css" rel="stylesheet" type="text/css">
 
-            <a class="brand" href="http://blog.jasonmeridth.com/">
-            Jason Meridth's Blog
-            </a>
-            <!-- Everything you want hidden at 940px or less, place within here -->
-            <div class="nav-collapse collapse">
-                <ul class="nav"><li><a href="archive.html">Archives</a>
-            
-        
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/index-20.html">
+
+
+
     
-        
-            
-                </li><li><a href="categories/index.html">Tags</a>
-            
-        
-    
-        
-            
-                </li><li><a href="https://github.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/github.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="http://twitter.com/jmeridth"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/twitter.png" border="0"></a>
-            
-        
-    
-        
-            
-                </li><li><a href="rss.xml"><img src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/rss.png" border="0"></a>
-            
-        
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
     
 
-                </li></ul><!-- Custom search with google--><form id="search" action="http://google.com/search" method="get" class="navbar-form pull-left">
-<input type="hidden" name="q" value="site:http://blog.jasonmeridth.com/"><input type="text" name="q" maxlength="255" results="0" placeholder="Search"></form>
-<!-- End of custom search -->
 
-                
-                <ul class="nav pull-right"></ul></div>
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+        <div class="post">
+            <h1 class="title"><a href="posts/git-reset-checkout-bare-double-dash-revert/">Git reset, checkout &amp; "bare double dash", and revert</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2010-03-23T21:29:00-05:00">Mar 23, 2010</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/git-reset-checkout-bare-double-dash-revert/#disqus_thread" data-disqus-identifier="cache/posts/git-reset-checkout-bare-double-dash-revert.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/git/" rel="tag">git</a></li>
+        </ul>
         </div>
-    </div>
-</div>
-<!-- End of Menubar -->
-<div class="container-fluid" id="container-fluid">
-    <!--Body content-->
-    <div class="row-fluid">
-    <div class="span2"></div>
-    <div class="span8">
-    
-    
-        <article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/git-reset-checkout-bare-double-dash-revert/" class="u-url">Git reset, checkout &amp; "bare double dash", and revert</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2010-03-23T21:29:00-05:00">Mar 23, 2010</time></small></h1>
-        <hr><div class="e-content">
-        <div><p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <code>git rebase --interactive</code></p>
+
+            </div>
+            <div class="body">
+                <p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <code>git rebase --interactive</code></p>
 <p><strong>UPDATE</strong>: If you need to unstage a file prior to your first commit: </p>
-<div class="code"><pre><span class="nv">$ </span>git rm --cached filename
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git rm --cached filename
+</pre>
 
 
 <p>Thanks to <a href="http://schambers.lostechies.com">Sean Chambers</a> for tweeting about <a href="http://twitter.com/schambers/status/11005630400">this</a></p>
 <p>Some of the common questions I get are about how to reset or revert changes in Git. There are two typical scenarios you have to deal with. One is if you haven’t committed the code yet. The other is if you <em>have</em> committed the code.</p>
-<h2><strong>Before</strong> you have committed the code</h2>
+<h2>
+<strong>Before</strong> you have committed the code</h2>
 <p>Well, if you want to unstage a file you simply do the following:</p>
 <h3>git reset</h3>
 <p>Say you staged a change (“git add”) and you realize you either don’t want the file tracked or the change staged. <code>git reset</code> is the command that will do this:</p>
-<div class="code"><pre><span class="nv">$ </span>git reset HEAD filename
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git reset HEAD filename
+</pre>
 
 
 <p>One of the suggestions I’ve <a href="http://learn.github.com/p/undoing.html">read about</a> and have given is to create an alias called unstage:</p>
-<div class="code"><pre><span class="nv">$ </span>git config --global alias.unstage <span class="s1">'reset HEAD'</span>
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git config --global alias.unstage <span class="s1">'reset HEAD'</span>
+</pre>
 
 
 <p>So now instead of:</p>
-<div class="code"><pre><span class="nv">$ </span>git reset HEAD README
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git reset HEAD README
+</pre>
 
 
 <p>you can do:</p>
-<div class="code"><pre><span class="nv">$ </span>git unstage README 
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git unstage README 
+</pre>
 
 
 <p>I personally just stick to <code>git reset HEAD filename</code>. “Why?” you ask. It’s so that if I have to use git on another system that doesn’t have my aliases, I know the commands.</p>
 <h3>git checkout</h3>
 <p>Another common question is “How do I undo an unstaged/uncommitted change? I just want to roll my file back…”. <code>git checkout — filename</code> handles this:</p>
-<div class="code"><pre><span class="nv">$ </span>git checkout -- README 
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git checkout -- README 
+</pre>
 
 
 <p>This will roll the README file back to the last committed version in the working directory. Another question after I answer this is, “Why do you have to put the two dashes there?” The two dashes are canonically called the “bare double dashes”. The reason they are there is because it ensures that the checkout command know that we are trying to roll back a file and not change branches. Remember that the typical usage of the checkout command is to change branches. If you had a branch called README, this command:</p>
-<div class="code"><pre><span class="nv">$ </span>git checkout README 
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git checkout README 
+</pre>
 
 
 <p>would checkout the README branch and not rollback the current README file in the working directory.</p>
-<h3><strong>After</strong> you have committed the code</h3>
+<h3>
+<strong>After</strong> you have committed the code</h3>
 <p>If you committed code that you realized you shouldn’t have, you have two options:</p>
 <h3>git revert</h3>
 <p><code>git revert</code> will create a new commit which undoes a specifc commit that you pass to it. The usual use is to undo the last commit:</p>
-<div class="code"><pre><span class="nv">$ </span>git revert HEAD
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git revert HEAD
+</pre>
 
 
 <p>If you need to undo a commit that happened before the last commit you can pass it a <a href="http://book.git-scm.com/4_git_treeishes.html">treeish</a> argument or a specific SHA1 of the commit you want to undo:</p>
 <p>Revert the next-to-last commit:</p>
-<div class="code"><pre><span class="nv">$ </span>git revert HEAD^
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git revert HEAD^
+</pre>
 
 
 <p>Revert a specific commit by SHA:</p>
-<div class="code"><pre><span class="nv">$ </span>git revert f8c7dd34
-</pre></div>
+<pre class="code literal-block"><span class="nv">$ </span>git revert f8c7dd34
+</pre>
 
 
 <p>Just be aware that if you pass a reference to a commit other than the last one, if there are any merge conflicts created by undoing the change, you will have to deal with those at the time of your new commit (the revert one).</p>
 <h3>git commit —amend</h3>
 <p><code>git commit —amend</code> is another command that allows you to change your last commit. Say I forgot to stage a file for the commit and I need to edit the commit message:</p>
-<div class="code"><pre><span class="nv">$ </span>git commit -m <span class="s1">'initial commit'</span> 
+<pre class="code literal-block"><span class="nv">$ </span>git commit -m <span class="s1">'initial commit'</span> 
 <span class="nv">$ </span>git add awesome_file
 <span class="nv">$ </span>git commit --amend
-</pre></div>
+</pre>
 
 
 <p>My visual editor of choice will open with the prior commit message allowing me to edit it, I change the message, save it and exit. The previous commit is overridden by adding the content of my awesome_file and now has my new commit message. Personally, I’ve only had to use this a couple times because I’m usually editing tracked files and by doing <code>git commit -am “message”</code> I rarely forget to stage my files. The times I’ve had to use <code>git commit —amend</code> is when I forget to add/stage a new/untracked file.</p>
@@ -152,72 +148,68 @@
 <p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#463" title="2010-03-24 03:44:42">Jason Meridth</a>:</strong> @derick http://www.kernel.org/pub/software/scm/git/docs/howto/revert-a-faulty-merge.txt summarizes this situation. Wicked stuff. I'll be researching this problem in more depth</p>
 <p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#464" title="2010-03-24 04:11:55">Jason Meridth</a>:</strong> @derick @qrush responded to your tweet and his solution is easier: Just create a new branch from the commit on master, prior to the merge, delete master and rename the new branch to master. this will work if you haven't deleted the topic you merged into master.</p>
 <p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#465" title="2010-03-25 01:53:30">derick.bailey</a>:</strong> @qrush got me squared away: git reset --hard HEAD^ I've used reset --hard to clean out my current working set and get back to last commit... just didn't think about it in this case. i was so fixated on "revert" (from my svn experience) that I couldn't see past the git revert command.</p>
-<p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#466" title="2010-03-25 02:17:04">Jason Meridth</a>:</strong> @derick Excellent. I'm going to update the post to make sure people read your comments so that the knowledge is shared. Thank you for following up on this.</p></div>
-        
+<p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#466" title="2010-03-25 02:17:04">Jason Meridth</a>:</strong> @derick Excellent. I'm going to update the post to make sure people read your comments so that the knowledge is shared. Thank you for following up on this.</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/git-reset-checkout-bare-double-dash-revert/#disqus_thread" data-disqus-identifier="cache/posts/git-reset-checkout-bare-double-dash-revert.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/refspec-matches-more-than-one/">Refspec matches more than one</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2010-02-27T19:31:00-06:00">Feb 27, 2010</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/refspec-matches-more-than-one/#disqus_thread" data-disqus-identifier="cache/posts/refspec-matches-more-than-one.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/refspec-matches-more-than-one/" class="u-url">Refspec matches more than one</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2010-02-27T19:31:00-06:00">Feb 27, 2010</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>I was trying to push to a canonical repository this morning and got the following error:</p>
-<div class="code"><pre><span class="nv">$ </span>git push origin master
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>I was trying to push to a canonical repository this morning and got the following error:</p>
+<pre class="code literal-block"><span class="nv">$ </span>git push origin master
 error: src refspec master matches more than one.
 error: failed to push some refs to <span class="s1">'ssh://user@host/srv/git/repo'</span>
-</pre></div>
+</pre>
 
 
 <p>This happened because I had accidentally created a master tag locally:</p>
-<div class="code"><pre><span class="nv">$ </span>git tag
+<pre class="code literal-block"><span class="nv">$ </span>git tag
 master
 tag1
 tag2
 tag3
 tag4
-</pre></div>
+</pre>
 
 
 <p>Once I deleted the tag locally:</p>
-<div class="code"><pre>tag -d master
-</pre></div>
+<pre class="code literal-block">tag -d master
+</pre>
 
 
-<p>I was able to push again.</p></div>
-        
+<p>I was able to push again.</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/refspec-matches-more-than-one/#disqus_thread" data-disqus-identifier="cache/posts/refspec-matches-more-than-one.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/">Git post-merge hook to auto-fire rails migrations</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2010-02-27T19:28:00-06:00">Feb 27, 2010</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#disqus_thread" data-disqus-identifier="cache/posts/git-post-merge-hook-to-auto-fire-rails-migrations.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/" class="u-url">Git post-merge hook to auto-fire rails migrations</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2010-02-27T19:28:00-06:00">Feb 27, 2010</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter:</p>
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter:</p>
 <p><a href="http://twitter.com/bellware/status/6952706099">for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder</a></p>
 <p><a href="http://twitter.com/cory_foy">Cory Foy</a>, <a href="http://twitter.com/aaronjensen">Aaron Jensen</a>, and <a href="http://twitter.com/jmeridth">myself</a> all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it <a href="http://twitter.com/cory_foy/status/6954512284">first</a> and it was the post-merge/post-rebase hooks. I researched the <a href="http://www.kernel.org/pub/software/scm/git/docs/githooks.html">post-merge hook</a> (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the <a href="http://gist.github.com/262319">following</a></p>
-<div class="code"><pre><span class="c1">#!/usr/bin/env ruby</span>
+<pre class="code literal-block"><span class="c1">#!/usr/bin/env ruby</span>
 <span class="sb">`rake db:migrate &amp;amp;&amp;amp; rake db:test:prepare`</span> <span class="k">if</span> <span class="sb">`git diff --name-only HEAD@{1} HEAD`</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">"db/migrations)</span>
-</pre></div>
+</pre>
 
 
 <p>This will grab the previous diff and look for “db/migrations” in the text. If it’s present, it would auto-run “rake db:migrate &amp;&amp; rake db:test:migrate”. In other words, it will migrate the development database schema, then the test database schema.</p>
@@ -225,29 +217,33 @@ tag4
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#455" title="2010-03-05 00:13:19">Scott Bellware</a>:</strong> Thanks, Jason!</p>
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#515" title="2011-11-28 17:03:00">Marcelo Andrade</a>:</strong> Hi, Looks like this only works if the pull contains 1 commit, if it has many commits, if the latest commit doesn't have something on migrations, it doesn't do nothing.</p>
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#516" title="2011-11-28 17:09:00">Marcelo Andrade</a>:</strong> you can tweak it with git diff --name-only HEAD@{1} HEAD instead of  git diff HEAD^</p>
-<p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#517" title="2011-11-28 18:45:00">Jason Meridth</a>:</strong> Thank you Marcelo.  Post updated.</p></div>
-        
+<p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#517" title="2011-11-28 18:45:00">Jason Meridth</a>:</strong> Thank you Marcelo.  Post updated.</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#disqus_thread" data-disqus-identifier="cache/posts/git-post-merge-hook-to-auto-fire-rails-migrations.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/suspicious-patch-lines/">Suspicious Patch Lines</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2010-02-27T19:21:00-06:00">Feb 27, 2010</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/suspicious-patch-lines/#disqus_thread" data-disqus-identifier="cache/posts/suspicious-patch-lines.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/suspicious-patch-lines/" class="u-url">Suspicious Patch Lines</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2010-02-27T19:21:00-06:00">Feb 27, 2010</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>DISCLAIMER: This is <em>only</em> relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.</p>
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/git/" rel="tag">git</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <p>DISCLAIMER: This is <em>only</em> relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.</p>
 <h3>The Problem</h3>
 <p>While trying to commit changes to a file I have under source control with Git on a Windows box using cygwin, I received the following error:</p>
-<div class="code"><pre>jmeridth@web1 /cygdrive/d/site
+<pre class="code literal-block">jmeridth@web1 /cygdrive/d/site
 <span class="nv">$ </span>git commit -am <span class="s2">"changed the README to show authors"</span>
 *
 * You have some suspicious patch lines:
@@ -255,104 +251,100 @@ tag4
 * In README
 * trailing whitespace <span class="o">(</span>line 26<span class="o">)</span>
 README:26:
-</pre></div>
+</pre>
 
 
 <p>This type of error has been discussed quite a bit amongst .NET developers who are transitioning to Git. It has to due with the difference in handling of newlines between Windows and the Mac/*nix world. There are five solutions to this:</p>
 <p>1) Run the following from inside the repository: (the one I usually use, due to my cross-platform development)</p>
-<div class="code"><pre>git config core.autocrlf <span class="nb">true</span>
+<pre class="code literal-block">git config core.autocrlf <span class="nb">true</span>
 git confit core.safecrlf <span class="nb">true</span>
-</pre></div>
+</pre>
 
 
 <p>The <a href="http://help.github.com/dealing-with-lineendings/">Github Help Pages</a> provide an excellent explanation about this. Also read the <a href="http://www.kernel.org/pub/software/scm/git-core/docs/git-config.html">direct documentation from git-core</a>. This makes Git convert CRLF at the end of lines in the text files to LF when reading from the filesystem, and convert in reverse when writing to the filesystem. Just be aware also that if you do set this and one of your stored binary files is accidentally marked as text, there is a chance for it to become corrupted.</p>
 <p>2) Edit the .git/hooks/pre-commit file and comment out the following lines:</p>
-<div class="code"><pre><span class="k">if</span> <span class="o">(</span>/s<span class="nv">$/</span><span class="o">){</span>
+<pre class="code literal-block"><span class="k">if</span> <span class="o">(</span>/s<span class="nv">$/</span><span class="o">){</span>
   bad_line<span class="o">(</span><span class="s2">"trailing whitespace"</span>, <span class="nv">$_</span><span class="o">)</span>
 <span class="o">}</span>
-</pre></div>
+</pre>
 
 
 <p>The reason why this is a problem is because there is a space (s in posix regex) just before the end of the line (aka a trailing whitespace). Normally this file wouldn’t fire off unless you made it executable, but on Windows all of the git hooks run because there is no concept of whether they are executable or not, they all are by default. On Mac/*nix Git repositories, you need to “chmod +x” (change to executable) the git hook files before Git will run them.</p>
 <p>3) When commiting do the following:</p>
-<div class="code"><pre>git commit --no-verify
-</pre></div>
+<pre class="code literal-block">git commit --no-verify
+</pre>
 
 
 <p>and the pre-commit hook will be ignored.</p>
 <p>4) Rename/Move/Delete the .git/hooks/pre-commit file</p>
-<div class="code"><pre>mv .git/hooks/pre-commit .git/hooks/pre-commit.stop_working
-</pre></div>
+<pre class="code literal-block">mv .git/hooks/pre-commit .git/hooks/pre-commit.stop_working
+</pre>
 
 
 <p>5) Change the permissions on the .git/hooks/pre-commit file. In this case, I’m clearing the executable bit for all users (owner, group and rest of the world)</p>
-<div class="code"><pre>chmod a-x .git/hooks/pre-commit
-</pre></div></div>
-        
+<pre class="code literal-block">chmod a-x .git/hooks/pre-commit
+</pre>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/suspicious-patch-lines/#disqus_thread" data-disqus-identifier="cache/posts/suspicious-patch-lines.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/pair-programming-with-screen/">Pair Programming with Screen</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2010-02-04T16:44:00-06:00">Feb 04, 2010</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/pair-programming-with-screen/#disqus_thread" data-disqus-identifier="cache/posts/pair-programming-with-screen.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/pair-programming-with-screen/" class="u-url">Pair Programming with Screen</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2010-02-04T16:44:00-06:00">Feb 04, 2010</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using <a href="http://http//www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> (<a href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/">example</a>) and <a href="http://rails.vim.tpope.net/">vim.rails</a> (<a href="http://cheat.errtheblog.com/s/rails_vim/">cheat sheet</a>) by <a href="http://twitter.com/tpope">@tpope</a> has made my VIM experience much more pleasant..</p>
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using <a href="http://http//www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> (<a href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/">example</a>) and <a href="http://rails.vim.tpope.net/">vim.rails</a> (<a href="http://cheat.errtheblog.com/s/rails_vim/">cheat sheet</a>) by <a href="http://twitter.com/tpope">@tpope</a> has made my VIM experience much more pleasant..</p>
 <p>Checkout my vim files on <a href="http://github.com/armmer/vim_files">github</a></p>
 <p>This post is for me to remember how to use <a href="http://www.gnu.org/software/screen/">Gnu screen</a> to pair program. side note: <a href="http://cheat.errtheblog.com/s/screen/">here</a> is the best cheat sheet on Gnu Screen.</p>
 <p>startup screen:</p>
-<div class="code"><pre><span class="n">screen</span> <span class="o">-</span><span class="n">S</span> <span class="n">sessionname</span>
-</pre></div>
+<pre class="code literal-block"><span class="n">screen</span> <span class="o">-</span><span class="n">S</span> <span class="n">sessionname</span>
+</pre>
 
 
 <p>turn on multi-user</p>
-<div class="code"><pre><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
+<pre class="code literal-block"><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
 <span class="o">:</span><span class="n">multiuser</span> <span class="n">on</span>
-</pre></div>
+</pre>
 
 
 <p>add permissions for the other user:</p>
-<div class="code"><pre><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
+<pre class="code literal-block"><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
 <span class="o">:</span><span class="n">acladd</span> <span class="n">user</span>
-</pre></div>
+</pre>
 
 
 <p>instruct second user to connect with:</p>
-<div class="code"><pre><span class="n">screen</span> <span class="o">-</span><span class="n">x</span> <span class="n">yourusername</span><span class="o">/</span><span class="n">sessionname</span>
-</pre></div>
+<pre class="code literal-block"><span class="n">screen</span> <span class="o">-</span><span class="n">x</span> <span class="n">yourusername</span><span class="o">/</span><span class="n">sessionname</span>
+</pre>
 
 
 <h3>Comments</h3>
 <p><strong><a href="posts/pair-programming-with-screen/#453" title="2010-02-04 18:34:17">len smith</a>:</strong> This doesn't sound too fun. I have a distributed team and we pair with LogMeIn Pro ($15/mo) it works absurdly great, it's as responsive as being rdped into a box... much more responsive than sharedview, gotomeeting, vnc.</p>
-<p><strong><a href="posts/pair-programming-with-screen/#454" title="2010-02-04 18:50:02">Jason Meridth</a>:</strong> @Ien Smith The team I code with uses Vim so we don't need a desktop/rdp/vnc type sharing. Thanks for mentioning the other product. I'm personally a cheapskate and like free items over paid items. ;)</p></div>
-        
+<p><strong><a href="posts/pair-programming-with-screen/#454" title="2010-02-04 18:50:02">Jason Meridth</a>:</strong> @Ien Smith The team I code with uses Vim so we don't need a desktop/rdp/vnc type sharing. Thanks for mentioning the other product. I'm personally a cheapskate and like free items over paid items. ;)</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/pair-programming-with-screen/#disqus_thread" data-disqus-identifier="cache/posts/pair-programming-with-screen.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/agile-coaching-book-review/">Agile Coaching Book Review</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2010-01-07T05:28:00-06:00">Jan 07, 2010</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/agile-coaching-book-review/#disqus_thread" data-disqus-identifier="cache/posts/agile-coaching-book-review.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/agile-coaching-book-review/" class="u-url">Agile Coaching Book Review</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2010-01-07T05:28:00-06:00">Jan 07, 2010</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>Cross-posted from <a href="http://blog.jasonmeridth.com">my github pages blog</a>.  Rachel Davies, one of the author's was kind enough to comment there.</p>
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>Cross-posted from <a href="http://blog.jasonmeridth.com">my github pages blog</a>.  Rachel Davies, one of the author's was kind enough to comment there.</p>
 <p><img alt="" src="http://pragprog.com/images/covers/original/sdcoach.jpg">My manager let me borrow his copy of <a href="http://pragprog.com/titles/sdcoach/agile-coaching">Pragmatic Programmer’s Agile Coaching</a>. I’ve read a good number of Agile process and management books. I’m partial to the Pragmatic Programmer publishers due to their consistently well-written books. I also started using stickies instead of pens/pencils when I read my books. Mainly because they stand out better and allow me to find my notes quicker. The other reason is because I can remove them when I give the book away (which I’ve done a good deal lately. Of course, not with this book since it was my boss’). The stickies I use are <a href="http://www.3m.com/us/office/postit/products/prod_ft_pgm.html">these</a> and can be found at most office stores.</p>
 <p>Anyways, back to the book. The authors, Rachel Davies and Liz Sedley, do a good job explaining the different ways to start/continue agile coaching. The format of the book, multiple sections relevant to the chapter, Hurdles, and Checklist, worked very well for me. They share their experience, pain points, and give you a list that you can contain in your short-term memory.</p>
 <p>I enjoyed reading this book because it made me, once again, focus more on the people aspect of software development and less on the coding. I haven’t focused much on that part because I’ve assumed the people I work with are all professionals. Unfortunately, I’ve forgotten that they are human, too and need to be approached as humans and not machines. I’m still convinced that all software developers are control freaks. Our computer does what we tell it to. If it doesn’t, it is usually our fault.</p>
@@ -361,205 +353,241 @@ git confit core.safecrlf <span class="nb">true</span>
 <p>—</p>
 <h3>Chapter 1 – Starting the Journey</h3>
 <p>Developing a Coaching attitude</p>
-<ul><li>Lead by example – follow the agile principles yourself</li>
+<ul>
+<li>Lead by example – follow the agile principles yourself</li>
 <li>Keep your balance – never take criticism personally</li>
 <li>Set a realistic pace – patience, change takes time</li>
 <li>Mind your language – stay professional, of course, but use terms like “our/we/us” instead of “I/you/they”.</li>
 <li>Learn as you go – most powerful lessons are learned from mistakes, expect to make them</li>
-</ul><p>PrOpER cycle</p>
-<ul><li>Problem: Pick a problem to work on. Watch how the team works. What needs to be improved</li>
+</ul>
+<p>PrOpER cycle</p>
+<ul>
+<li>Problem: Pick a problem to work on. Watch how the team works. What needs to be improved</li>
 <li>Options: Consider your options. What could you try that might influence the situation for the better? List at least three options</li>
 <li>Experiment: Pick one option to try</li>
 <li>Review: Review the outcome. Did you improve things? Even if things haven’t improved, have you learned something?</li>
-</ul><p>Credit the Team</p>
-<ul><li>Don’t expect to get recognition</li>
+</ul>
+<p>Credit the Team</p>
+<ul>
+<li>Don’t expect to get recognition</li>
 <li>Supporting Role</li>
 <li>Success – credit goes to team</li>
 <li>Failure – commiserate with the team</li>
-</ul><p>No Experience</p>
-<ul><li>Uknown situation – be open about it to the team rather than bluffing.</li>
-</ul><p>—</p>
+</ul>
+<p>No Experience</p>
+<ul>
+<li>Uknown situation – be open about it to the team rather than bluffing.</li>
+</ul>
+<p>—</p>
 <h3>Chapter 2 – Working with People</h3>
 <p>Yes, I’m Listening</p>
-<ul><li>Create space</li>
+<ul>
+<li>Create space</li>
 <li>Be open</li>
 <li>Show interest</li>
 <li>Affirm</li>
-</ul><p>Gradient Scale for building agreement</p>
-<ul><li>Endorse</li>
+</ul>
+<p>Gradient Scale for building agreement</p>
+<ul>
+<li>Endorse</li>
 <li>Agree with reservations</li>
 <li>Mixed feelings</li>
 <li>Disagree but go with majority</li>
 <li>Block</li>
-</ul><p>—</p>
+</ul>
+<p>—</p>
 <h3>Chapter 3 – Leading Change</h3>
 <p>Five Whys</p>
-<ul><li>will usually help you get to the real problem</li>
-</ul><p>When Not to Ask Questions</p>
-<ul><li>Take care not to ask questions when you actually want to give guidance.</li>
+<ul>
+<li>will usually help you get to the real problem</li>
+</ul>
+<p>When Not to Ask Questions</p>
+<ul>
+<li>Take care not to ask questions when you actually want to give guidance.</li>
 <li>If you ask a question, you have to accept the answer, even if you disagree, and this makes it harder to give the advice you wanted to give.</li>
-</ul><p>—</p>
+</ul>
+<p>—</p>
 <h3>Chapter 4 – Building an Agile Team</h3>
 <p>If people feel really unsafe—for example, if the are scared that they will lose their jobs—you won’t be able to do any Agile coaching.</p>
 <p>Not Too Easy, Not Too Hard</p>
-<ul><li>Foster a culture where is’s OK to experiment to learn more about a problem that the team is trying to solve.</li>
+<ul>
+<li>Foster a culture where is’s OK to experiment to learn more about a problem that the team is trying to solve.</li>
 <li>Although, developing more than one solution may feel like a waste of time, it can be a quick qay to learn and a cheap way to mitigate the rise of making the wrong decision.</li>
-</ul><p>Find a Compelling Goal</p>
-<ul><li>Once they understand that they don’t need to wait for permission, it can free them to make a start.</li>
-</ul><p>Time For Innovation</p>
-<ul><li>If they don’t get time to explore new technology or experiment with innovative product ideas, teams become demotivated. Make time in iteration plans for them to explore new ideas. This can do wonders for motivation—and for the product.</li>
-</ul><p>Teams Aren’t Cross-Functional</p>
-<ul><li>Some companies organize teams by discipline, such as analysts, designers, testsers, software engineers, and so on, with separate reporting lines. This is a serious blocker to becoming Agile because a fundamental Agile principle is cross-functional teams with different disciplines working together to build the best software.</li>
-</ul><p>—</p>
+</ul>
+<p>Find a Compelling Goal</p>
+<ul>
+<li>Once they understand that they don’t need to wait for permission, it can free them to make a start.</li>
+</ul>
+<p>Time For Innovation</p>
+<ul>
+<li>If they don’t get time to explore new technology or experiment with innovative product ideas, teams become demotivated. Make time in iteration plans for them to explore new ideas. This can do wonders for motivation—and for the product.</li>
+</ul>
+<p>Teams Aren’t Cross-Functional</p>
+<ul>
+<li>Some companies organize teams by discipline, such as analysts, designers, testsers, software engineers, and so on, with separate reporting lines. This is a serious blocker to becoming Agile because a fundamental Agile principle is cross-functional teams with different disciplines working together to build the best software.</li>
+</ul>
+<p>—</p>
 <h3>Chapter 5 – Daily Standup</h3>
 <p>For the Team by the Team</p>
-<ul><li>Standup is for them to synchronize their work.</li>
+<ul>
+<li>Standup is for them to synchronize their work.</li>
 <li>It is <em>not</em> held for a project manager or team lead to gather progress from the team or give feedback on their work.</li>
 <li>Encourage the team to direct their answers toward other team members.</li>
-</ul><p>Establising a Team Focus</p>
-<ul><li>Asking questions in the daily standup could cause members to focus responses to you, avoid this.</li>
+</ul>
+<p>Establising a Team Focus</p>
+<ul>
+<li>Asking questions in the daily standup could cause members to focus responses to you, avoid this.</li>
 <li>If response are continually directed at you, deflect them like this: “Please, can you direct your replies to the whole team? The daily standup is for you all to work out what you need to do today, not me”. Worst case: do not attend the daily standup at all</li>
 <li>Avoid giving praise during the stand-up, again to avoid focus of work and responses on you</li>
-</ul><p>Handling Issues</p>
-<ul><li>Parking lot of issues on the whiteboard</li>
-</ul><p>Forget the Formula</p>
-<ul><li>Don’t let the rules, which are there to help you get started, become a straightjacket once you are more established.</li>
+</ul>
+<p>Handling Issues</p>
+<ul>
+<li>Parking lot of issues on the whiteboard</li>
+</ul>
+<p>Forget the Formula</p>
+<ul>
+<li>Don’t let the rules, which are there to help you get started, become a straightjacket once you are more established.</li>
 <li>Don’t let the stand-ups/scrum lose it’s meaning</li>
-</ul><p>Hurdle: Dail Standup Isn’t Wanted</p>
-<ul><li>…if the whole team objects to the daily standups, you have a more serious problem on your hands. It is possible that they’re struggling to work as a team or that the meetings are being badly run. We suggest you discuss their concerns in the retrospective.</li>
-</ul><p>—</p>
+</ul>
+<p>Hurdle: Dail Standup Isn’t Wanted</p>
+<ul>
+<li>…if the whole team objects to the daily standups, you have a more serious problem on your hands. It is possible that they’re struggling to work as a team or that the meetings are being badly run. We suggest you discuss their concerns in the retrospective.</li>
+</ul>
+<p>—</p>
 <h3>Chapter 6 – Understanding What to Build</h3>
 <p>Life Cycle of a User Story</p>
-<ul><li>A story is a placeholder for a conversation and eventual task breakdown.</li>
+<ul>
+<li>A story is a placeholder for a conversation and eventual task breakdown.</li>
 <li>Ron Jefferies summarizes the critical aspects of users stories as the 3Cs</li>
 <li>Card</li>
 <li>Conversation</li>
 <li>Confirmation</li>
-</ul><p>Story Templates</p>
-<ul><li>Purpose is to help team improve their understanding rather than a form to be filled in.</li>
-</ul><p>Confirming the Details</p>
-<ul><li>Another common term for story tests is acceptance criteria</li>
-</ul><p>Hurdle: No User-Facing Functionality</p>
-<ul><li>Still use your story templates and not short ambiguous task names</li>
-</ul><p>—</p>
+</ul>
+<p>Story Templates</p>
+<ul>
+<li>Purpose is to help team improve their understanding rather than a form to be filled in.</li>
+</ul>
+<p>Confirming the Details</p>
+<ul>
+<li>Another common term for story tests is acceptance criteria</li>
+</ul>
+<p>Hurdle: No User-Facing Functionality</p>
+<ul>
+<li>Still use your story templates and not short ambiguous task names</li>
+</ul>
+<p>—</p>
 <h3>Chapter 7 – Planning Ahead</h3>
 <p>Decomposing into Tasks</p>
-<ul><li>…if the team already has a clear idea of the work, decomposing into tasks may be overkill.</li>
-</ul><p>Arriving at an Estimate</p></div>
-        
+<ul>
+<li>…if the team already has a clear idea of the work, decomposing into tasks may be overkill.</li>
+</ul>
+<p>Arriving at an Estimate</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/agile-coaching-book-review/#disqus_thread" data-disqus-identifier="cache/posts/agile-coaching-book-review.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/">“Bad Interpreter: No Medium” error when running Ruby from Git Bash</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2009-10-06T14:50:00-05:00">Oct 06, 2009</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/#disqus_thread" data-disqus-identifier="cache/posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/" class="u-url">“Bad Interpreter: No Medium” error when running Ruby from Git Bash</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2009-10-06T14:50:00-05:00">Oct 06, 2009</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>I opened my Windows VM last night for the first time in months to finally work on a .NET project from Github.  When I found out I needed the rspec gem installed (I'm normally a shoulda guy), I decided to see what gems I had installed first:</p>
-<div class="code"><pre><span class="n">gem</span> <span class="n">list</span>
-</pre></div>
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>I opened my Windows VM last night for the first time in months to finally work on a .NET project from Github.  When I found out I needed the rspec gem installed (I'm normally a shoulda guy), I decided to see what gems I had installed first:</p>
+<pre class="code literal-block"><span class="n">gem</span> <span class="n">list</span>
+</pre>
 
 
 <p>and got the following error:</p>
-<div class="code"><pre><span class="err">$</span> <span class="n">gem</span> <span class="n">list</span>  
+<pre class="code literal-block"><span class="err">$</span> <span class="n">gem</span> <span class="n">list</span>  
 <span class="n">sh</span><span class="p">.</span><span class="n">exe</span><span class="s">": /c/Ruby/bin/gem: D:/Users/Luis/projects/oss/oci/installer2-trunk/ruby/bin/ruby.exe: bad interpreter: no medium</span>
-</pre></div>
+</pre>
 
 
 <p>Umm..... D:/Users/Luis? After some googling I found <a href="http://stackoverflow.com/questions/835865/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash">this article on StackOverflow</a> that directed me to this <a href="http://www.liquidfish.net/2009/04/ruby-and-git-bash-woes.htm">blog</a>.  It pretty much states that the shebang line (#!) at the top of my Ruby One-Click installer file had changed/been corrupted, I don't know.  I changed the line to point to my ruby exe (#!C:Rubybinruby.exe) and my gem commands started working again.</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/#451" title="2009-10-07 16:57:09">derick.bailey</a>:</strong> dude, i can't tell you how many times this error has frustrated the crap out of me! thanks for the post and providing a link to the solution. -derick</p>
-<p><strong><a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/#452" title="2009-10-07 17:13:38">Jason Meridth</a>:</strong> @Derick Glad it helped. I was baffled that some random guys path was on my system. :)</p></div>
-        
+<p><strong><a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/#452" title="2009-10-07 17:13:38">Jason Meridth</a>:</strong> @Derick Glad it helped. I was baffled that some random guys path was on my system. :)</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/#disqus_thread" data-disqus-identifier="cache/posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/moving-servers/">Moving servers</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2009-10-03T03:32:00-05:00">Oct 03, 2009</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/moving-servers/#disqus_thread" data-disqus-identifier="cache/posts/moving-servers.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/moving-servers/" class="u-url">Moving servers</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2009-10-03T03:32:00-05:00">Oct 03, 2009</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>To our readers,</p>
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>To our readers,</p>
 <p>We wanted to give you all a heads-up that we will be moving servers tomorrow evening, October 3rd, 2009.  We plan to turn off all comments at 8 PM CST.  The migration will begin at 9 PM CST.  We do not have an estimate on the time that the move will take.  We ask for your patience and look forward to being back to normal standing some time Sunday, October 4, 2009.</p>
-<p>Again, we thank you for your patience.</p></div>
-        
+<p>Again, we thank you for your patience.</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/moving-servers/#disqus_thread" data-disqus-identifier="cache/posts/moving-servers.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/git-instaweb/">git instaweb</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2009-09-27T00:53:00-05:00">Sep 27, 2009</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/git-instaweb/#disqus_thread" data-disqus-identifier="cache/posts/git-instaweb.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/git-instaweb/" class="u-url">git instaweb</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2009-09-27T00:53:00-05:00">Sep 27, 2009</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>I was reading <a href="http://progit.org/book/ch4-6.html">"Pro Git" by Scott Chacon</a> and was on the section about "git instaweb". This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view): </p>
-<div class="code"><pre><span class="n">cd</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="p">.</span><span class="n">git</span>
-</pre></div>
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>I was reading <a href="http://progit.org/book/ch4-6.html">"Pro Git" by Scott Chacon</a> and was on the section about "git instaweb". This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view): </p>
+<pre class="code literal-block"><span class="n">cd</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="p">.</span><span class="n">git</span>
+</pre>
 
 
 <p>and run the instaweb command (note: I'm on a macbook pro that already has ruby installed, hence my choice of using webrick instead of the default lighttpd): </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">start</span>
-</pre></div>
+<pre class="code literal-block"><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">start</span>
+</pre>
 
 
 <p>I tried the command without the "--start" command and it kept trying to seek a browser. I tried "-b firefox", "-b Firefox", "-b /Application/Firefox.app/MacOS/firefox-bin", etc and they all failed. I found the "--start" suggestion on <a href="http://stackoverflow.com/questions/1258353/running-git-instaweb-on-boot">StackOverflow.com</a> Once I ran this command, I could see the git log, commits, diffs, etc in gitweb for my local changes. What this will do is run the daemon on port 1234 of localhost. If you open your browser of choice and go to <a href="http://localhost:1234">http://localhost:1234</a> then you will see gitweb for the git repository you ran the command in. </p>
 <p>To stop the process, just exchange "--start" with "--stop" </p>
-<div class="code"><pre><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">stop</span>
-</pre></div>
+<pre class="code literal-block"><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">stop</span>
+</pre>
 
 
 <p>Note: I personally use "git log --graph", gitk, gitx, or other tools for this, usually. Just thought it was a good addition to my git toolset.</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/git-instaweb/#448" title="2009-10-09 13:07:11">Joe Ocampo</a>:</strong> You can simply add this to your .gitconfig [instaweb] httpd=webrick port=4000 browser=open The 'open' command is for safari. OH and to stop instaweb all you have to do is use the following command: git instaweb --stop</p>
 <p><strong><a href="posts/git-instaweb/#449" title="2009-10-09 13:16:37">Jason Meridth</a>:</strong> @Joe Thanks.</p>
-<p><strong><a href="posts/git-instaweb/#450" title="2009-10-30 12:53:48">duplicate mp3 finder</a>:</strong> This is very good and informative site.</p></div>
-        
+<p><strong><a href="posts/git-instaweb/#450" title="2009-10-30 12:53:48">duplicate mp3 finder</a>:</strong> This is very good and informative site.</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/git-instaweb/#disqus_thread" data-disqus-identifier="cache/posts/git-instaweb.html">Comments</a>
-    
+        <div class="post">
+            <h1 class="title"><a href="posts/using-gsub-to-wrap-substring/">Using gsub to wrap substring</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2009-09-10T19:56:47-05:00">Sep 10, 2009</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/using-gsub-to-wrap-substring/#disqus_thread" data-disqus-identifier="cache/posts/using-gsub-to-wrap-substring.html">Comments</a>
 
-    
 
-        
-        </p></article><article class="postbox h-entry post-text"><h1 class="p-name"><a href="posts/using-gsub-to-wrap-substring/" class="u-url">Using gsub to wrap substring</a>
-        <small>  
-             Posted: <time class="published dt-published" datetime="2009-09-10T19:56:47-05:00">Sep 10, 2009</time></small></h1>
-        <hr><div class="e-content">
-        <div><p>Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak's <a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block">"gsub with a block"</a> post on <a href="http://robots.thoughtbot.com">the Thoughtbot blog</a>.</p>
+                </div>
+                
+            </div>
+            <div class="body">
+                <p>Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak's <a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block">"gsub with a block"</a> post on <a href="http://robots.thoughtbot.com">the Thoughtbot blog</a>.</p>
 <p>I use the twitter gem and just display my last status on my personal homepage at <a href="http://jasonmeridth.com">JasonMeridth.com</a>. I didn't want to hand out my username and password so all I do is encapsulate the twitter piece in a module called TwitterHelper and put it into my app/helpers/ folder in my Rails application:</p>
-<div class="code"><pre><span class="k">require</span> <span class="err">'</span><span class="n">twitter</span><span class="s1">'</span>
+<pre class="code literal-block"><span class="k">require</span> <span class="err">'</span><span class="n">twitter</span><span class="s1">'</span>
 <span class="s1">require '</span><span class="nx">pp</span><span class="s1">'</span>
 
 <span class="s1">module TwitterHelper  </span>
@@ -576,77 +604,80 @@ git confit core.safecrlf <span class="nb">true</span>
 <span class="s1">    end</span>
 <span class="s1">  end</span>
 <span class="s1">end</span>
-</pre></div>
+</pre>
 
 
 <p>and then in my view I just call:</p>
-<div class="code"><pre><span class="n">latest_twitter_status</span>
-</pre></div>
+<pre class="code literal-block"><span class="n">latest_twitter_status</span>
+</pre>
 
 
 <p>The important part of code to look at is:</p>
-<div class="code"><pre><span class="n">status</span> <span class="o">=</span> <span class="nx">status.gsub</span><span class="p">(</span><span class="o">/</span><span class="p">(</span><span class="nx">http</span><span class="p">:</span><span class="c1">//.*)/) do |url|</span>
+<pre class="code literal-block"><span class="n">status</span> <span class="o">=</span> <span class="nx">status.gsub</span><span class="p">(</span><span class="o">/</span><span class="p">(</span><span class="nx">http</span><span class="p">:</span><span class="c1">//.*)/) do |url|</span>
   <span class="s2">" &lt;a href='#{url}' target='_blank'&gt;#{url}&lt;/a&gt; "</span>
 <span class="nb">end</span>
-</pre></div>
+</pre>
 
 
-<p>This code will wrap any strings that start with http:// with an html href.</p></div>
-        
+<p>This code will wrap any strings that start with http:// with an html href.</p>
+            </div>
         </div>
-        
-            
-    
-        
-    <p>
-    
-        <a href="posts/using-gsub-to-wrap-substring/#disqus_thread" data-disqus-identifier="cache/posts/using-gsub-to-wrap-substring.html">Comments</a>
-    
-
-    
-
-        
-        </p></article><div>
-        <ul class="pager"><li class="previous">
-                <a href="index-21.html" rel="prev">← Newer posts</a>
+            <nav class="postindexpager">
+        <ul class="pager">
+            <li class="previous">
+                <a href="index-21.html" rel="prev">Newer posts</a>
             </li>
-        
-        
             <li class="next">
-                <a href="index-19.html" rel="next">Older posts →</a>
+                <a href="index-19.html" rel="next">Older posts</a>
             </li>
-        
-        </ul></div>
-    
+        </ul>
+        </nav>
+
+                   <script>var disqus_shortname="jasonmeridth";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+
 
     
-    
-        
-    
-       <script>var disqus_shortname="jasonmeridth";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></div>
-    </div>
-    <!--End of body content-->
-</div>
-<div class="footerbox">
-    Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<br><br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
-</div>
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a></p>
+            
+        </footer>
 
+        </div>
+    </section>
     
-        
-            <script src="assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="assets/js/bootstrap.min.js" type="text/javascript"></script><script src="assets/js/jquery.colorbox-min.js" type="text/javascript"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    
+                <script src="assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 <a class="addthis_button_more">Share</a>
-<ul><li><a class="addthis_button_facebook"></a>
-</li><li><a class="addthis_button_google_plusone_share"></a>
-</li><li><a class="addthis_button_linkedin"></a>
-</li><li><a class="addthis_button_twitter"></a>
-</li></ul></div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
-    $(window).on('hashchange', function(){
-        if (location.hash && $(location.hash)[0]) {
-            $('body').animate({scrollTop: $(location.hash).offset().top - $('#navbar').outerHeight(true)*1.2 }, 1);
-        }
-    });
-    $(document).ready(function(){$(window).trigger('hashchange')});
-    </script></body></html>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>
