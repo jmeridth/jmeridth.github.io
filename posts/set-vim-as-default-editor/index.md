@@ -6,8 +6,10 @@
 .. type: text
 .. tags: tools, vim, ubuntu
 
+Environment: Ubuntu
+
 ```bash
-sudo update-alternatives –config editor
+sudo update-alternatives --config editor
 
 OUTPUT:
 There are 4 choices for the alternative editor (providing /usr/bin/editor).

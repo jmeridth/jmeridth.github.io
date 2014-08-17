@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ubuntu)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 08 Aug 2014 16:00:49 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ubuntu)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Sun, 17 Aug 2014 06:15:57 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install postgresql libpq-dev
 &lt;/pre&gt;
 
 
-&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;sudo update-alternatives –config editor
+&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Environment: Ubuntu&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo update-alternatives --config editor
 
 OUTPUT:
 There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
@@ -19,7 +20,7 @@ There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative edito
 
 Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type &lt;/span&gt;selection number: 3
 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
-&lt;/p&gt;</description><category>tools</category><category>ubuntu</category><category>vim</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
+&lt;/pre&gt;</description><category>tools</category><category>ubuntu</category><category>vim</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo visudo
 &lt;/pre&gt;
 
