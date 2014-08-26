@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><language>en</language><lastBuildDate>Fri, 22 Aug 2014 12:30:55 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I've switched from using irssi to &lt;a href="http://weechat.org"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><language>en</language><lastBuildDate>Tue, 26 Aug 2014 09:07:58 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>When Git or SSH Protocols Blocked</title><link>http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Recently I had issues connecting to &lt;a href="http://github.com/roaet"&gt;Github&lt;/a&gt; because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker &lt;a href="https://github.com"&gt;Justin Hammond&lt;/a&gt; found a git config option that lets you force all git commands to use &lt;code&gt;https://&lt;/code&gt; (port 443) instead of &lt;code&gt;git://&lt;/code&gt; (port 22).&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;git config --global url.&lt;span class="s2"&gt;"https://"&lt;/span&gt;.insteadOf git://
+&lt;/pre&gt;
+
+
+&lt;p&gt;Worked like a charm.  Thanks Justin.  Hope this helps someone else.&lt;/p&gt;
+&lt;p&gt;NB: Don't use &lt;code&gt;--global&lt;/code&gt; if you don't want this applied to all repositories.  Without it only sets for the current repository you're in.&lt;/p&gt;</description><category>git</category><guid>http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/</guid><pubDate>Tue, 26 Aug 2014 13:47:42 GMT</pubDate></item><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I've switched from using irssi to &lt;a href="http://weechat.org"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf"&gt;Here&lt;/a&gt; is my current weechat.conf file&lt;/p&gt;
 &lt;p&gt;Some of the ones I use often:&lt;/p&gt;
 &lt;ul&gt;
@@ -146,15 +152,4 @@ Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.2.12
 
 
 &lt;p&gt;Other &lt;a href="http://haml.info/docs/yardoc/file.REFERENCE.html#doctype_"&gt;HAML Doctypes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The above is the format for HTML 5. I don’t bother with the &lt;a href="http://www.w3schools.com/tags/tag_doctype.asp"&gt;HTML 4.01 DOCTYPEs&lt;/a&gt;&lt;/p&gt;</description><category>haml</category><category>html5</category><guid>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</guid><pubDate>Sun, 31 Mar 2013 05:00:00 GMT</pubDate></item><item><title>Run a Specific RSpec Spec</title><link>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Tired of looking this up and want to use my writing part of my brain to blog it:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;rake spec &lt;span class="nv"&gt;SPEC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;spec/controllers/sessions_controller_spec.rb &lt;span class="se"&gt;\&lt;/span&gt;
-  &lt;span class="nv"&gt;SPEC_OPTS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"-e \"should log in with cookie\""&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;This is importatnt to me while coding Rails because if I just run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;rspec specs/controllers/sessions_controller_spec.rb
-&lt;/pre&gt;
-
-
-&lt;p&gt;the test database isn’t cleared out. By running &lt;code&gt;rake spec&lt;/code&gt; I get that.  &lt;/p&gt;</description><category>rspec</category><category>testing</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/</guid><pubDate>Sat, 23 Mar 2013 05:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;The above is the format for HTML 5. I don’t bother with the &lt;a href="http://www.w3schools.com/tags/tag_doctype.asp"&gt;HTML 4.01 DOCTYPEs&lt;/a&gt;&lt;/p&gt;</description><category>haml</category><category>html5</category><guid>http://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/</guid><pubDate>Sun, 31 Mar 2013 05:00:00 GMT</pubDate></item></channel></rss>

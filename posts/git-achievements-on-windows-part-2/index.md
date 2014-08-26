@@ -1,4 +1,4 @@
-.. title: Git Achievements on Windows (Part 2)
+.. title: Git Achievements on Windows (Part 3)
 .. link: http://blog.jasonmeridth.com/2012/03/21/git-achievements-on-windows.html
 .. description: 
 .. date: 2012/03/21 00:00:00

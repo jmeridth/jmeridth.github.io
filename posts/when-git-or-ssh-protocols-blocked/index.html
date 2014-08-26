@@ -6,7 +6,7 @@ article: http://ogp.me/ns/article#
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Weechat keyboard shortcuts | Jason Meridth's Blog</title>
+    <title>When Git or SSH Protocols Blocked | Jason Meridth's Blog</title>
 
                 <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
         <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@ article: http://ogp.me/ns/article#
 
                 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 
-      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/">
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/">
 
 
 
@@ -26,15 +26,9 @@ article: http://ogp.me/ns/article#
 
     
     <meta name="author" content="Jason Meridth">
-            <meta name="og:title" content="Weechat keyboard shortcuts">
-        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/">
-            <meta name="og:description" content="I've switched from using irssi to Weechat since I rejoined the ranks as a Racker.
-Here is my current weechat.conf file
-Some of the ones I use often:
-
-ctrl+h - window left
-ctrl+j - window down
-ctrl+k -">
+            <meta name="og:title" content="When Git or SSH Protocols Blocked">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/">
+            <meta name="og:description" content="Recently I had issues connecting to Github because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker Justin Hammond found a git config o">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -58,66 +52,43 @@ ctrl+k -">
     <section class="page-content">
         <div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">Weechat keyboard shortcuts</h1>
+        <h1 class="p-name entry-title" itemprop="headline name">When Git or SSH Protocols Blocked</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2014-03-14T23:52:39-05:00">Mar 14, 2014</time>
+                <time class="timeago" datetime="2014-08-26T08:47:42-05:00">Aug 26, 2014</time>
             
             
             </div>
                     <div itemprop="keywords" class="tags">
         <ul>
         Tags : 
-           <li><a class="tag p-category" href="../../categories/cli/" rel="tag">cli</a></li>
-           <li><a class="tag p-category" href="../../categories/irc/" rel="tag">irc</a></li>
-           <li><a class="tag p-category" href="../../categories/weechat/" rel="tag">weechat</a></li>
+           <li><a class="tag p-category" href="../../categories/git/" rel="tag">git</a></li>
         </ul>
         </div>
 
         </div>
         <div class="body">
-            <p>I've switched from using irssi to <a href="http://weechat.org">Weechat</a> since I rejoined the ranks as a <a href="http://www.rackspace.com">Racker</a>.</p>
-<p><a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf">Here</a> is my current weechat.conf file</p>
-<p>Some of the ones I use often:</p>
-<ul>
-<li>ctrl+h - window left</li>
-<li>ctrl+j - window down</li>
-<li>ctrl+k - window up</li>
-<li>ctrl+l - window right</li>
-<li>ctrl+z - window zoom (make current small window full screen)</li>
-<li>ctrl+n - next buffer</li>
-<li>ctrl+p - previous buffer</li>
-<li>ctrl+y - clipboard paste</li>
-<li>ctrl+r - search</li>
-<li>ctrl+[j|m] - stop search</li>
-</ul>
-<p>normal commands not included with my weechat.conf that I use:</p>
-<ul>
-<li>/window resize <number> - resizes window to that percentage</number>
-</li>
-<li>/buffer clear - clears the buffer, i use this often with the <a href="http://weechat.org/scripts/source/highmon.pl.html/">highlight monitor plugin</a>
-</li>
-<li>/buffer merge <other buffer number> - merges two buffers into one (use ctrl+x to switch between them)</other>
-</li>
-<li>/buffer unmerge - unmerge the buffer you're currently on out to its own</li>
-</ul>
+            <p>Recently I had issues connecting to <a href="http://github.com/roaet">Github</a> because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker <a href="https://github.com">Justin Hammond</a> found a git config option that lets you force all git commands to use <code>https://</code> (port 443) instead of <code>git://</code> (port 22).</p>
+<pre class="code literal-block">git config --global url.<span class="s2">"https://"</span>.insteadOf git://
+</pre>
+
+
+<p>Worked like a charm.  Thanks Justin.  Hope this helps someone else.</p>
+<p>NB: Don't use <code>--global</code> if you don't want this applied to all repositories.  Without it only sets for the current repository you're in.</p>
         </div>
                 <ul class="pager">
             <li class="previous">
-                <a href="../where-i-go-to-choose-an-open-source-license/" rel="prev" title="Where I Go To Choose An Open Source License">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../when-git-or-ssh-protocols-blocked/" rel="next" title="When Git or SSH Protocols Blocked">Next post</a>
+                <a href="../weechat-keyboard-shortcuts/" rel="prev" title="Weechat keyboard shortcuts">Previous post</a>
             </li>
         </ul>
 
                             <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-            disqus_url="http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/",
-        disqus_title="Weechat keyboard shortcuts",
-        disqus_identifier="cache/posts/weechat-keyboard-shortcuts.html",
+            disqus_url="http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/",
+        disqus_title="When Git or SSH Protocols Blocked",
+        disqus_identifier="cache/posts/when-git-or-ssh-protocols-blocked.html",
         disqus_config = function () {
             this.language = "";
         };

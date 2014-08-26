@@ -43,6 +43,35 @@ article: http://ogp.me/ns/article#
     <section class="page-content">
         <div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/when-git-or-ssh-protocols-blocked/">When Git or SSH Protocols Blocked</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2014-08-26T08:47:42-05:00">Aug 26, 2014</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/when-git-or-ssh-protocols-blocked/#disqus_thread" data-disqus-identifier="cache/posts/when-git-or-ssh-protocols-blocked.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/git/" rel="tag">git</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <p>Recently I had issues connecting to <a href="http://github.com/roaet">Github</a> because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker <a href="https://github.com">Justin Hammond</a> found a git config option that lets you force all git commands to use <code>https://</code> (port 443) instead of <code>git://</code> (port 22).</p>
+<pre class="code literal-block">git config --global url.<span class="s2">"https://"</span>.insteadOf git://
+</pre>
+
+
+<p>Worked like a charm.  Thanks Justin.  Hope this helps someone else.</p>
+<p>NB: Don't use <code>--global</code> if you don't want this applied to all repositories.  Without it only sets for the current repository you're in.</p>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/weechat-keyboard-shortcuts/">Weechat keyboard shortcuts</a></h1>
             <div class="meta">
                 <div class="authordate">
@@ -414,42 +443,6 @@ Loading development environment <span class="o">(</span>Rails 3.2.12<span class=
 
 <p>Other <a href="http://haml.info/docs/yardoc/file.REFERENCE.html#doctype_">HAML Doctypes</a></p>
 <p>The above is the format for HTML 5. I don’t bother with the <a href="http://www.w3schools.com/tags/tag_doctype.asp">HTML 4.01 DOCTYPEs</a></p>
-            </div>
-        </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/run-a-specific-rspec-spec/">Run a Specific RSpec Spec</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2013-03-23T00:00:00-05:00">Mar 23, 2013</time>
-                </div>
-                <div class="stats">
-                                <a href="posts/run-a-specific-rspec-spec/#disqus_thread" data-disqus-identifier="cache/posts/run-a-specific-rspec-spec.html">Comments</a>
-
-
-                </div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/rspec/" rel="tag">rspec</a></li>
-           <li><a class="tag p-category" href="categories/testing/" rel="tag">testing</a></li>
-           <li><a class="tag p-category" href="categories/tools/" rel="tag">tools</a></li>
-        </ul>
-        </div>
-
-            </div>
-            <div class="body">
-                <p>Tired of looking this up and want to use my writing part of my brain to blog it:</p>
-<pre class="code literal-block">rake spec <span class="nv">SPEC</span><span class="o">=</span>spec/controllers/sessions_controller_spec.rb <span class="se">\</span>
-  <span class="nv">SPEC_OPTS</span><span class="o">=</span><span class="s2">"-e \"should log in with cookie\""</span>
-</pre>
-
-
-<p>This is importatnt to me while coding Rails because if I just run</p>
-<pre class="code literal-block">rspec specs/controllers/sessions_controller_spec.rb
-</pre>
-
-
-<p>the test database isn’t cleared out. By running <code>rake spec</code> I get that.  </p>
             </div>
         </div>
             <nav class="postindexpager">
