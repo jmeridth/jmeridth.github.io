@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (vim)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 22 Aug 2014 12:30:55 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Personal VIM Cheatsheet</title><link>http://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Will be adding to this post as I learn/remember shortcuts&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (vim)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Thu, 28 Aug 2014 08:46:55 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Personal VIM Cheatsheet</title><link>http://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Will be adding to this post as I learn/remember shortcuts&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;.&lt;/code&gt; - repeat last command in normal mode&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;@:&lt;/code&gt; then &lt;code&gt;@@&lt;/code&gt; - repeat last command entered with &lt;code&gt;:&lt;/code&gt; &lt;a href="http://vim.wikia.com/wiki/Repeat_last_colon_command"&gt;source&lt;/a&gt;&lt;/li&gt;
@@ -10,6 +10,12 @@
 &lt;li&gt;shift+m - go to middle of screen&lt;/li&gt;
 &lt;li&gt;shift+l - go to bottom of screen&lt;/li&gt;
 &lt;li&gt;ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)&lt;/li&gt;
+&lt;li&gt;gUiw - capitalize the current word&lt;/li&gt;
+&lt;li&gt;gUU - capitalize current line&lt;/li&gt;
+&lt;li&gt;vU - capitalize current character&lt;/li&gt;
+&lt;li&gt;guiw - lowercase the current word&lt;/li&gt;
+&lt;li&gt;guu - lowercase the current line&lt;/li&gt;
+&lt;li&gt;vu - lowercase current character&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;keybindings I use all the time via mappgings in my &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.vimrc"&gt;.vimrc&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;

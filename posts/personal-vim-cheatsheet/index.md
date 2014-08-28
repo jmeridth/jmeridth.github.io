@@ -19,6 +19,12 @@ Will be adding to this post as I learn/remember shortcuts
 - shift+m - go to middle of screen
 - shift+l - go to bottom of screen
 - ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)
+- gUiw - capitalize the current word
+- gUU - capitalize current line
+- vU - capitalize current character
+- guiw - lowercase the current word
+- guu - lowercase the current line
+- vu - lowercase current character
 
 keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/dotfiles/blob/master/.vimrc)
 

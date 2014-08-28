@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><language>en</language><lastBuildDate>Tue, 26 Aug 2014 09:07:58 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>When Git or SSH Protocols Blocked</title><link>http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Recently I had issues connecting to &lt;a href="http://github.com/roaet"&gt;Github&lt;/a&gt; because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker &lt;a href="https://github.com"&gt;Justin Hammond&lt;/a&gt; found a git config option that lets you force all git commands to use &lt;code&gt;https://&lt;/code&gt; (port 443) instead of &lt;code&gt;git://&lt;/code&gt; (port 22).&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><language>en</language><lastBuildDate>Thu, 28 Aug 2014 08:46:54 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>When Git or SSH Protocols Blocked</title><link>http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Recently I had issues connecting to &lt;a href="http://github.com/roaet"&gt;Github&lt;/a&gt; because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker &lt;a href="https://github.com"&gt;Justin Hammond&lt;/a&gt; found a git config option that lets you force all git commands to use &lt;code&gt;https://&lt;/code&gt; (port 443) instead of &lt;code&gt;git://&lt;/code&gt; (port 22).&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;git config --global url.&lt;span class="s2"&gt;"https://"&lt;/span&gt;.insteadOf git://
 &lt;/pre&gt;
 
@@ -49,6 +49,12 @@
 &lt;li&gt;shift+m - go to middle of screen&lt;/li&gt;
 &lt;li&gt;shift+l - go to bottom of screen&lt;/li&gt;
 &lt;li&gt;ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)&lt;/li&gt;
+&lt;li&gt;gUiw - capitalize the current word&lt;/li&gt;
+&lt;li&gt;gUU - capitalize current line&lt;/li&gt;
+&lt;li&gt;vU - capitalize current character&lt;/li&gt;
+&lt;li&gt;guiw - lowercase the current word&lt;/li&gt;
+&lt;li&gt;guu - lowercase the current line&lt;/li&gt;
+&lt;li&gt;vu - lowercase current character&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;keybindings I use all the time via mappgings in my &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.vimrc"&gt;.vimrc&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
