@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (cli)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Thu, 28 Aug 2014 08:46:55 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I've switched from using irssi to &lt;a href="http://weechat.org"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (cli)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Thu, 28 Aug 2014 09:04:36 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I've switched from using irssi to &lt;a href="http://weechat.org"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf"&gt;Here&lt;/a&gt; is my current weechat.conf file&lt;/p&gt;
 &lt;p&gt;Some of the ones I use often:&lt;/p&gt;
 &lt;ul&gt;
@@ -38,12 +38,12 @@
 &lt;li&gt;shift+m - go to middle of screen&lt;/li&gt;
 &lt;li&gt;shift+l - go to bottom of screen&lt;/li&gt;
 &lt;li&gt;ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)&lt;/li&gt;
-&lt;li&gt;gUiw - capitalize the current word&lt;/li&gt;
-&lt;li&gt;gUU - capitalize current line&lt;/li&gt;
-&lt;li&gt;vU - capitalize current character&lt;/li&gt;
-&lt;li&gt;guiw - lowercase the current word&lt;/li&gt;
-&lt;li&gt;guu - lowercase the current line&lt;/li&gt;
-&lt;li&gt;vu - lowercase current character&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gUiw&lt;/code&gt; - capitalize the current word&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gUU&lt;/code&gt; - capitalize current line&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vU&lt;/code&gt; - capitalize current character&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;guiw&lt;/code&gt; - lowercase the current word&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;guu&lt;/code&gt; - lowercase the current line&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vu&lt;/code&gt; - lowercase current character&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;keybindings I use all the time via mappgings in my &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.vimrc"&gt;.vimrc&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;

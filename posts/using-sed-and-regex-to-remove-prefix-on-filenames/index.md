@@ -41,7 +41,7 @@ done
 
 I am aware that [Nikola][3] has a [wordpress importer][5], but it imports the files to *.wp and *.meta.  I wanted [markdown][2] files (*.md)
 
-NB: I also use [Rubular.com][6] all the time to test out my regex expressions.  You should check it out.
+NB: I also use [Rubular.com][6] or [Pythex][7] all the time to test out my regex expressions.  You should check them out.
 
   [1]: https://github.com/dreikanter/wp2md
   [2]: http://daringfireball.net/projects/markdown/
@@ -49,4 +49,5 @@ NB: I also use [Rubular.com][6] all the time to test out my regex expressions.  
   [4]: http://www.gnu.org/software/sed/manual/sed.html
   [5]: http://getnikola.com/handbook.html#importing-your-wordpress-site-into-nikola
   [6]: http://rubular.com
+  [7]: https://pythex.org
 
