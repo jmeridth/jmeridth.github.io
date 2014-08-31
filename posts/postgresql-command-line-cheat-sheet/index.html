@@ -44,7 +44,7 @@ postgres=# \du
 
 
 create role
-postgres=#CREATE ROLE demorole1 WITH LOGIN ENCRY">
+postgres=# CREATE ROLE demorole1 WITH LOGIN ENCR">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -102,52 +102,58 @@ postgres=#CREATE ROLE demorole1 WITH LOGIN ENCRY">
 
 
 <p>create role</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c">#CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD 'password1' CREATEDB;</span>
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD 'password1' CREATEDB;</span>
+</pre>
+
+
+<p>create role with multiple privileges</p>
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD</span>
+<span class="nv">postgres</span><span class="o">=</span><span class="c"># 'password1' CREATEDB CREATEROLE REPLICATION SUPERUSER;</span>
 </pre>
 
 
 <p>alter role</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c">#ALTER ROLE demorole1 CREATEROLE CREATEDB REPLICATION SUPERUSER;</span>
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># ALTER ROLE demorole1 CREATEROLE CREATEDB REPLICATION SUPERUSER;</span>
 </pre>
 
 
 <p>drop role</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c">#DROP ROLE demorole1;</span>
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># DROP ROLE demorole1;</span>
 </pre>
 
 
 <p>create database</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c">#CREATE DATABASE demodb1 WITH OWNER demorole1 ENCODING 'UTF8';</span>
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># CREATE DATABASE demodb1 WITH OWNER demorole1 ENCODING 'UTF8';</span>
 </pre>
 
 
 <p>grant privileges to new user</p>
-<pre class="code literal-block">GRANT ALL PRIVILEGES ON DATABASE demodb1 TO demorole1;
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># GRANT ALL PRIVILEGES ON DATABASE demodb1 TO demorole1;</span>
 </pre>
 
 
 <p>drop database</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c">#DROP DATABASE demodb1;</span>
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># DROP DATABASE demodb1;</span>
 </pre>
 
 
 <p>connect to database</p>
-<pre class="code literal-block"><span class="se">\c</span> &lt;databasename&gt;
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \c &lt;databasename&gt;</span>
 </pre>
 
 
 <p>list tables in connected database</p>
-<pre class="code literal-block"><span class="se">\d</span>t
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \dt</span>
 </pre>
 
 
 <p>list columns on table</p>
-<pre class="code literal-block"><span class="se">\d</span> &lt;tablename&gt;
+<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \d &lt;tablename&gt;</span>
 </pre>
 
 
 <p>backup database</p>
-<pre class="code literal-block">pg_dump &lt;databasename&gt; &gt; &lt;outfile&gt; 
+<pre class="code literal-block"><span class="nv">$ </span>pg_dump &lt;databasename&gt; &gt; &lt;outfile&gt; 
 </pre>
         </div>
                 <ul class="pager">

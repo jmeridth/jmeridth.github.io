@@ -27,59 +27,66 @@ postgres=# \du
 create role
 
 ```bash
-postgres=#CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD 'password1' CREATEDB;
+postgres=# CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD 'password1' CREATEDB;
+```
+
+create role with multiple privileges
+
+```bash
+postgres=# CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD
+postgres=# 'password1' CREATEDB CREATEROLE REPLICATION SUPERUSER;
 ```
 
 alter role
 
 ```bash
-postgres=#ALTER ROLE demorole1 CREATEROLE CREATEDB REPLICATION SUPERUSER;
+postgres=# ALTER ROLE demorole1 CREATEROLE CREATEDB REPLICATION SUPERUSER;
 ```
 
 drop role
 
 ```bash
-postgres=#DROP ROLE demorole1;
+postgres=# DROP ROLE demorole1;
 ```
 
 create database
 
 ```bash
-postgres=#CREATE DATABASE demodb1 WITH OWNER demorole1 ENCODING 'UTF8';
+postgres=# CREATE DATABASE demodb1 WITH OWNER demorole1 ENCODING 'UTF8';
 ```
 
 grant privileges to new user
 
 ```bash
-GRANT ALL PRIVILEGES ON DATABASE demodb1 TO demorole1;
+postgres=# GRANT ALL PRIVILEGES ON DATABASE demodb1 TO demorole1;
 ```
 
 drop database
 
 ```bash
-postgres=#DROP DATABASE demodb1;
+postgres=# DROP DATABASE demodb1;
 ```
 
 connect to database
 
 ```bash
-\c <databasename>
+postgres=# \c <databasename>
 ```
 
 list tables in connected database
 
 ```bash
-\dt
+postgres=# \dt
 ```
 
 list columns on table
 
 ```bash
-\d <tablename>
+postgres=# \d <tablename>
 ```
 
 backup database
 
 ```bash
-pg_dump <databasename> > <outfile> 
+$ pg_dump <databasename> > <outfile> 
 ```
