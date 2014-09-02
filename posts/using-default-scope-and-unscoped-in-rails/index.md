@@ -1,4 +1,4 @@
-.. title: Using Deafult Scope and Unscoped in Rails
+.. title: Using Default Scope and Unscoped in Rails
 .. link: http://blog.jasonmeridth.com/2013/04/02/using-default-scope-and-unscoped-in-rails.html 
 .. description: 
 .. date: 2013/04/02 00:00:00
