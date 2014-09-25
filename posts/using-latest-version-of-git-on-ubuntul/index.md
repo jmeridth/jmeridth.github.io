@@ -17,7 +17,7 @@ on Ubuntu you will only get git version 1.7.5.x. I needed 1.7.6%2B.
 To do this you have to run the following commands:
 
 ```bash
-sudo apt-get install python-software-properties
+sudo apt-get install software-properties-common python-software-properties
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get update
 sudo apt-get install git-core
