@@ -43,6 +43,42 @@ article: http://ogp.me/ns/article#
     <section class="page-content">
         <div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/fix-rendering-with-presence-of-doctype/">Fix Rendering With Presence of Doctype</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2013-03-31T00:00:00-05:00">Mar 31, 2013</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/fix-rendering-with-presence-of-doctype/#disqus_thread" data-disqus-identifier="cache/posts/fix-rendering-with-presence-of-doctype.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/haml/" rel="tag">haml</a></li>
+           <li><a class="tag p-category" href="categories/html5/" rel="tag">html5</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <p>A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.</p>
+<p>In HTML or ERB:</p>
+<pre class="code literal-block"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</pre>
+
+
+<p>In <a href="http://haml.info">HAML</a>:</p>
+<pre class="code literal-block">!!! 5
+</pre>
+
+
+<p>Other <a href="http://haml.info/docs/yardoc/file.REFERENCE.html#doctype_">HAML Doctypes</a></p>
+<p>The above is the format for HTML 5. I don’t bother with the <a href="http://www.w3schools.com/tags/tag_doctype.asp">HTML 4.01 DOCTYPEs</a></p>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/run-a-specific-rspec-spec/">Run a Specific RSpec Spec</a></h1>
             <div class="meta">
                 <div class="authordate">

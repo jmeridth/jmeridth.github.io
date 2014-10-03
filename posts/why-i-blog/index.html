@@ -6,7 +6,7 @@ article: http://ogp.me/ns/article#
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>When Git or SSH Protocols Blocked | Jason Meridth's Blog</title>
+    <title>Why I Blog | Jason Meridth's Blog</title>
 
                 <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
         <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@ article: http://ogp.me/ns/article#
 
                 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 
-      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/">
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/why-i-blog/">
 
 
 
@@ -26,9 +26,11 @@ article: http://ogp.me/ns/article#
 
     
     <meta name="author" content="Jason Meridth">
-            <meta name="og:title" content="When Git or SSH Protocols Blocked">
-        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/">
-            <meta name="og:description" content="Recently I had issues connecting to Github because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker Justin Hammond found a git config o">
+            <meta name="og:title" content="Why I Blog">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/why-i-blog/">
+            <meta name="og:description" content="I've been asked recently why I blog.  My answer is the same since I started blogging back in 2006.  I blog for three reasons.
+
+I figured out a problem/issue I was having and want to share the knowledg">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -52,46 +54,43 @@ article: http://ogp.me/ns/article#
     <section class="page-content">
         <div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">When Git or SSH Protocols Blocked</h1>
+        <h1 class="p-name entry-title" itemprop="headline name">Why I Blog</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2014-08-26T08:47:42-05:00">Aug 26, 2014</time>
+                <time class="timeago" datetime="2014-10-03T09:43:14-05:00">Oct 03, 2014</time>
             
             
             </div>
                     <div itemprop="keywords" class="tags">
         <ul>
         Tags : 
-           <li><a class="tag p-category" href="../../categories/git/" rel="tag">git</a></li>
+           <li><a class="tag p-category" href="../../categories/information/" rel="tag">information</a></li>
         </ul>
         </div>
 
         </div>
         <div class="body">
-            <p>Recently I had issues connecting to <a href="http://github.com/roaet">Github</a> because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker <a href="https://github.com">Justin Hammond</a> found a git config option that lets you force all git commands to use <code>https://</code> (port 443) instead of <code>git://</code> (port 22).</p>
-<pre class="code literal-block">git config --global url.<span class="s2">"https://"</span>.insteadOf git://
-</pre>
-
-
-<p>Worked like a charm.  Thanks Justin.  Hope this helps someone else.</p>
-<p>NB: Don't use <code>--global</code> if you don't want this applied to all repositories.  Without it only sets for the current repository you're in.</p>
+            <p>I've been asked recently why I blog.  My answer is the same since I started blogging back in 2006.  I blog for three reasons.</p>
+<ol>
+<li>I figured out a problem/issue I was having and want to share the knowledge.  If I had the problem/issue, someone else will and hopefully google will link to my post and help them when they are searching. What I've also experienced is someone reads my post and comments with a better and/or more efficient solution.  I then can link to their comment/post or update my own.  I love that sense of community.</li>
+<li>I will use a different part of my brain to write the post and, therefore (hopefully), remember the solution better next time this particular problem/issue arises.</li>
+<li>I want to store the solution online, not only on my local computer (aka isolation), so that I, and others, can reference it in the future.</li>
+</ol>
+<p>I <strong>DO NOT</strong> blog because I think it will make me popular or because I want to seem smarter than anyone else.  I enjoy learning and sharing information.</p>
         </div>
                 <ul class="pager">
             <li class="previous">
-                <a href="../weechat-keyboard-shortcuts/" rel="prev" title="Weechat keyboard shortcuts">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../why-i-blog/" rel="next" title="Why I Blog">Next post</a>
+                <a href="../when-git-or-ssh-protocols-blocked/" rel="prev" title="When Git or SSH Protocols Blocked">Previous post</a>
             </li>
         </ul>
 
                             <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-            disqus_url="http://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/",
-        disqus_title="When Git or SSH Protocols Blocked",
-        disqus_identifier="cache/posts/when-git-or-ssh-protocols-blocked.html",
+            disqus_url="http://blog.jasonmeridth.com/posts/why-i-blog/",
+        disqus_title="Why I Blog",
+        disqus_identifier="cache/posts/why-i-blog.html",
         disqus_config = function () {
             this.language = "";
         };
