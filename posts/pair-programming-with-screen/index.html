@@ -63,34 +63,36 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using <a href="http://http//www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> (<a href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/">example</a>) and <a href="http://rails.vim.tpope.net/">vim.rails</a> (<a href="http://cheat.errtheblog.com/s/rails_vim/">cheat sheet</a>) by <a href="http://twitter.com/tpope">@tpope</a> has made my VIM experience much more pleasant..</p>
+            <div>
+<p>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using <a href="http://http//www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> (<a href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/">example</a>) and <a href="http://rails.vim.tpope.net/">vim.rails</a> (<a href="http://cheat.errtheblog.com/s/rails_vim/">cheat sheet</a>) by <a href="http://twitter.com/tpope">@tpope</a> has made my VIM experience much more pleasant..</p>
 <p>Checkout my vim files on <a href="http://github.com/armmer/vim_files">github</a></p>
 <p>This post is for me to remember how to use <a href="http://www.gnu.org/software/screen/">Gnu screen</a> to pair program. side note: <a href="http://cheat.errtheblog.com/s/screen/">here</a> is the best cheat sheet on Gnu Screen.</p>
 <p>startup screen:</p>
-<pre class="code literal-block"><span class="n">screen</span> <span class="o">-</span><span class="n">S</span> <span class="n">sessionname</span>
+<pre class="code literal-block">screen -S sessionname
 </pre>
 
 
 <p>turn on multi-user</p>
-<pre class="code literal-block"><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
-<span class="o">:</span><span class="n">multiuser</span> <span class="n">on</span>
+<pre class="code literal-block">ctrl+a
+:multiuser on
 </pre>
 
 
 <p>add permissions for the other user:</p>
-<pre class="code literal-block"><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
-<span class="o">:</span><span class="n">acladd</span> <span class="n">user</span>
+<pre class="code literal-block">ctrl+a
+:acladd user
 </pre>
 
 
 <p>instruct second user to connect with:</p>
-<pre class="code literal-block"><span class="n">screen</span> <span class="o">-</span><span class="n">x</span> <span class="n">yourusername</span><span class="o">/</span><span class="n">sessionname</span>
+<pre class="code literal-block">screen -x yourusername/sessionname
 </pre>
 
 
 <h3>Comments</h3>
 <p><strong><a href=".#453" title="2010-02-04 18:34:17">len smith</a>:</strong> This doesn't sound too fun. I have a distributed team and we pair with LogMeIn Pro ($15/mo) it works absurdly great, it's as responsive as being rdped into a box... much more responsive than sharedview, gotomeeting, vnc.</p>
 <p><strong><a href=".#454" title="2010-02-04 18:50:02">Jason Meridth</a>:</strong> @Ien Smith The team I code with uses Vim so we don't need a desktop/rdp/vnc type sharing. Thanks for mentioning the other product. I'm personally a cheapskate and like free items over paid items. ;)</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -124,7 +126,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

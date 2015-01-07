@@ -63,19 +63,21 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>I recently installed <a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary">gitosis</a>, a free way to host your own git repositories, and I am using a non-standard port (not 22). I tried to clone the gitosis-admin repository and it timed-out. Learned via <a href="http://mechanicalrobotfish.com/posts/119-installing-git-server-using-gitosis">this post</a> that I needed to create a config file under my .ssh folder in my home directory that listed the Host and Port. Example ~/.ssh/config: </p>
-<pre class="code literal-block"><span class="n">Host</span> <span class="n">git</span><span class="p">.</span><span class="n">mydomain</span><span class="p">.</span><span class="n">com</span>
-<span class="n">Port</span> <span class="mi">30000</span>
+            <div>
+<p>I recently installed <a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary">gitosis</a>, a free way to host your own git repositories, and I am using a non-standard port (not 22). I tried to clone the gitosis-admin repository and it timed-out. Learned via <a href="http://mechanicalrobotfish.com/posts/119-installing-git-server-using-gitosis">this post</a> that I needed to create a config file under my .ssh folder in my home directory that listed the Host and Port. Example ~/.ssh/config: </p>
+<pre class="code literal-block">Host git.mydomain.com
+Port 30000
 </pre>
 
 
 <p>When I do this: </p>
-<pre class="code literal-block"><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="o">-</span><span class="n">user</span><span class="err">@</span><span class="n">git</span><span class="p">.</span><span class="n">mydomain</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">gitosis</span><span class="o">-</span><span class="n">admin</span><span class="p">.</span><span class="n">git</span>
+<pre class="code literal-block">git clone git-user@git.mydomain.com:gitosis-admin.git
 </pre>
 
 
 <p>it will then use my non-standard port to clone the gitosis repository. I hadn't done this before. Good to know.</p>
 <p>This <a href="http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way">post</a> by scie.nti.st is the best HowTo on installing gitosis that I could find.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -109,7 +111,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

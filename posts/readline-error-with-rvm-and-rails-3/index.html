@@ -71,7 +71,8 @@ my_app/(">
 
         </div>
         <div class="body">
-            <p>So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:</p>
+            <div>
+<p>So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:</p>
 <pre class="code literal-block">my_app/<span class="o">(</span>master<span class="o">)</span><span class="nv">$ </span>rails console
 /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in <span class="sb">`</span>require<span class="s1">': no such file to load -- readline (LoadError)</span>
 <span class="s1">from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `'</span>
@@ -94,10 +95,10 @@ from script/rails:6:in <span class="sb">`</span>require<span class="s1">'</span>
 <p>I did this and it still didn’t work. The advice I received from googling was to compile the readline extension by hand and see if any dependencies were missing:</p>
 <pre class="code literal-block"><span class="nv">$ </span>sudo apt-get install libncurses5-dev libreadline5-dev
 <span class="nv">$ </span>ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
-checking <span class="k">for </span>tgetnum<span class="o">()</span> in -lncurses... no
-checking <span class="k">for </span>readline/readline.h... no
-checking <span class="k">for </span>readline/history.h... no
-checking <span class="k">for </span>readline<span class="o">()</span> in -lreadline... no
+checking <span class="k">for</span> tgetnum<span class="o">()</span> in -lncurses... no
+checking <span class="k">for</span> readline/readline.h... no
+checking <span class="k">for</span> readline/history.h... no
+checking <span class="k">for</span> readline<span class="o">()</span> in -lreadline... no
 ...
 </pre>
 
@@ -110,10 +111,10 @@ checking <span class="k">for </span>readline<span class="o">()</span> in -lreadl
 
 <p>Now when I run extconf.rb, everything is there:</p>
 <pre class="code literal-block"><span class="nv">$ </span>ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
-checking <span class="k">for </span>tgetnum<span class="o">()</span> in -lncurses... yes
-checking <span class="k">for </span>readline/readline.h.... yes
-checking <span class="k">for </span>readline/history.h... yes
-checking <span class="k">for </span>readline<span class="o">()</span> in -lreadline... yes
+checking <span class="k">for</span> tgetnum<span class="o">()</span> in -lncurses... yes
+checking <span class="k">for</span> readline/readline.h.... yes
+checking <span class="k">for</span> readline/history.h... yes
+checking <span class="k">for</span> readline<span class="o">()</span> in -lreadline... yes
 ...
 </pre>
 
@@ -130,8 +131,9 @@ checking <span class="k">for </span>readline<span class="o">()</span> in -lreadl
 <p>Now the rails console works:</p>
 <pre class="code literal-block">my_app<span class="nv">$ </span>rails console
 Loading development environment <span class="o">(</span>Rails 3.0.3<span class="o">)</span>
-ruby-1.9.2-p0 &amp;gt;
+ruby-1.9.2-p0 <span class="p">&amp;</span>gt<span class="p">;</span>
 </pre>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -165,7 +167,7 @@ ruby-1.9.2-p0 &amp;gt;
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

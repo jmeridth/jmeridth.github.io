@@ -68,7 +68,8 @@ opti">
             
         </div>
         <div class="body">
-            <p>The <a href="http://ubuntuforums.org/showthread.php?t=392350&amp;highlight=toshiba">post</a> here on the forums helped me solve my problems.</p>
+            <div>
+<p>The <a href="http://ubuntuforums.org/showthread.php?t=392350&amp;highlight=toshiba">post</a> here on the forums helped me solve my problems.</p>
 <p>How to do it:</p>
 <p>open a terminal and type: </p>
 <p>sudo vim /etc/modprobe.d/alsa-base</p>
@@ -103,6 +104,7 @@ opti">
 <p><strong><a href=".#38" title="2007-10-10 03:56:27">Izac Y</a>:</strong> i'm having the same problem that aristotle managed to solve above. i am able to get up to "sudo rmmod snd_hda_intel," and then it says that the module is in use. what could be causing this? i'm not using any programs that would require sound, and i've even tried shutting down all programs in general in order to ensure success. no such luck. please help!</p>
 <p><strong><a href=".#39" title="2007-10-10 10:34:27">Jason Meridth</a>:</strong> Izac, I will get a formal response to you ASAP.</p>
 <p><strong><a href=".#40" title="2007-11-03 19:48:46">Dallas V</a>:</strong> I had trouble getting sound working with the Intel 82801G HDA controller (rev 01) on my laptop (Compaq Presario C500). I tried adding the lines to /etc/modprobe.d/alsa-base but that did not work. I finally got it working by passing "pci=routeirq" to the kernel. Here is a link to the fix. Hope it helps: http://islandlinux.org/howto/ubuntu-7-10-sound-issue-compaq-presario-c500-laptop-resolved</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -136,7 +138,7 @@ opti">
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

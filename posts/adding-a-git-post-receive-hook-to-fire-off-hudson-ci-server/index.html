@@ -63,7 +63,8 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>UPDATE: guard clause throws LocalJumpError. Changed to simple if block Context: I needed our hudson CI builds to auto-fire when a developer pushes their code changes to our canonical/upstream git repositories. In your .git/hooks/post-receive file place the file code (FULL CODE):</p>
+            <div>
+<p>UPDATE: guard clause throws LocalJumpError. Changed to simple if block Context: I needed our hudson CI builds to auto-fire when a developer pushes their code changes to our canonical/upstream git repositories. In your .git/hooks/post-receive file place the file code (FULL CODE):</p>
 <table class="codehilitetable"><tr>
 <td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -104,47 +105,48 @@ article: http://ogp.me/ns/article#
 </tr></table>
 
 <p>The while loop checks to make sure there are values in STDIN (by default they are rev_old, rev_new, and ref).</p>
-<pre class="code literal-block"><span class="cp">#   </span>
-<span class="k">while</span> <span class="p">(</span><span class="n">input</span> <span class="o">=</span> <span class="n">STDIN</span><span class="p">.</span><span class="n">read</span><span class="p">)</span> <span class="o">!=</span> <span class="err">''</span>
-<span class="n">end</span>
+<pre class="code literal-block">#   
+while (input = STDIN.read) != ''
+end
 </pre>
 
 
 <p>I put an if statement block:</p>
-<pre class="code literal-block"><span class="k">if</span> <span class="n">ref</span> <span class="o">==</span> <span class="s">"refs/heads/master"</span>
-<span class="n">end</span>
+<pre class="code literal-block">if ref == "refs/heads/master"
+end
 </pre>
 
 
 <p>to make sure I only fire the build if it is the master branch. Set the URL for the app you want to build:</p>
-<pre class="code literal-block"><span class="n">url</span><span class="o">=</span><span class="s">"http://yourhudsondomain.com/job/job_name_here/build?delay=0sec"</span>
+<pre class="code literal-block">url="http://yourhudsondomain.com/job/job_name_here/build?delay=0sec"
 </pre>
 
 
 <p>Add a little text to notify the user what is going on (always a good idea):</p>
-<pre class="code literal-block"><span class="n">puts</span> <span class="s">"Run Hudson build for job_name_here application"</span>
+<pre class="code literal-block">puts "Run Hudson build for job_name_here application"
 </pre>
 
 
 <p>And finally all the url with wget and feeding any response to <a href="http://www.xaprb.com/blog/2006/06/06/what-does-devnull-21-mean/">the black hole that is /dev/null</a></p>
 <p>:</p>
-<pre class="code literal-block"><span class="err">`</span><span class="n">wget</span> <span class="err">#</span><span class="p">{</span><span class="n">url</span><span class="p">}</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="err">`</span>
+<pre class="code literal-block">`wget #{url} &gt; /dev/null 2&gt;&amp;1`
 </pre>
 
 
 <p>IMPORTANT: Don't forget to run:</p>
-<pre class="code literal-block"><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">.</span><span class="n">git</span><span class="o">/</span><span class="n">hooks</span><span class="o">/</span><span class="n">post</span><span class="o">-</span><span class="n">receive</span>
+<pre class="code literal-block">chmod a+x .git/hooks/post-receive
 </pre>
 
 
 <p>so that the file can be run Some Gotchas: 1. If you are going to a url that has http basic authentication like my actual script does, you can pass the username and password like you normally would in an HTTP call:</p>
-<pre class="code literal-block"><span class="n">url</span><span class="o">=</span><span class="s">"http://username:password@yourhudsondomain.com/job/job_name_here/build?delay=0sec"</span>
+<pre class="code literal-block">url="http://username:password@yourhudsondomain.com/job/job_name_here/build?delay=0sec"
 </pre>
 
 
 <p>2. If you are doing an https call with a self-signed certificate, wget will complain. You can add the <a href="http://www.gnu.org/software/wget/manual/html_node/HTTPS-_0028SSL_002fTLS_0029-Options.html">--no-check-certificate</a> argument to wget to bypass certificate validation against local certificate caches:</p>
-<pre class="code literal-block"><span class="err">`</span><span class="n">wget</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">check</span><span class="o">-</span><span class="n">certificate</span> <span class="err">#</span><span class="p">{</span><span class="n">url</span><span class="p">}</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="err">`</span>
+<pre class="code literal-block">`wget --no-check-certificate #{url} &gt; /dev/null 2&gt;&amp;1`
 </pre>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -178,7 +180,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

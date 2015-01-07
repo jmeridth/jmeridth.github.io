@@ -62,7 +62,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>Edit the sudoers file:</p>
+                <div>
+<p>Edit the sudoers file:</p>
 <pre class="code literal-block">sudo visudo
 </pre>
 
@@ -73,6 +74,7 @@ article: http://ogp.me/ns/article#
 
 
 <p>This will prevent password prompts for everyone in the sudo group (%sudo) when issuing all commands (NOPASSWD: ALL)</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -95,13 +97,15 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>TL;DR</p>
-<pre class="code literal-block">git grep -l <span class="s1">'original_text'</span> | xargs sed -i <span class="s1">'s/original_text/new_text/g'</span>
+                <div>
+<p>TL;DR</p>
+<pre class="code literal-block">git grep -l <span class="s1">'original_text'</span> <span class="p">|</span> xargs sed -i <span class="s1">'s/original_text/new_text/g'</span>
 </pre>
 
 
 <p>I needed to changed a string in a bunch of files and used the command above using git grep to do it. Worked like a charm.</p>
 <p>The <code>-l</code> argument to git grep only returns the file names and not the location in the file like it usually does.  </p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -126,8 +130,9 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>TL;DR</p>
-<pre class="code literal-block">sudo dhclient -r <span class="o">[</span>eth0<span class="o">]</span> &amp;amp;&amp;amp; sudo dhclient <span class="o">[</span>eth0<span class="o">]</span>
+                <div>
+<p>TL;DR</p>
+<pre class="code literal-block">sudo dhclient -r <span class="o">[</span>eth0<span class="o">]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> sudo dhclient <span class="o">[</span>eth0<span class="o">]</span>
 </pre>
 
 
@@ -137,7 +142,7 @@ article: http://ogp.me/ns/article#
 
 
 <p>then resourced it so I could use it in the bash session I was in</p>
-<pre class="code literal-block"><span class="n">source</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span>
+<pre class="code literal-block">source ~/.bashrc
 </pre>
 
 
@@ -146,6 +151,7 @@ article: http://ogp.me/ns/article#
 <p>I’m very happy about this.</p>
 <p><a href="http://linux.about.com/library/cmd/blcmdl8_dhclient.htm">dhclient man page</a></p>
 <p>When run by itself, your instance will seek out a new ip lease.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -168,7 +174,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>Today I hit this in a Ruby example online:</p>
+                <div>
+<p>Today I hit this in a Ruby example online:</p>
 <pre class="code literal-block"><span class="k">def</span> <span class="nf">role?</span><span class="p">(</span><span class="n">role</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">!!</span><span class="nb">self</span><span class="o">.</span><span class="n">roles</span><span class="o">.</span><span class="n">find_by_name</span><span class="p">(</span><span class="n">role</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">camelize</span><span class="p">)</span>
 <span class="k">end</span>
@@ -188,6 +195,7 @@ article: http://ogp.me/ns/article#
           <span class="c1">#   context (false), and then negated (true), and then</span>
           <span class="c1">#   negated again (false)</span>
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -210,7 +218,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>TL;DR </p>
+                <div>
+<p>TL;DR </p>
 <p><a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations">Read this from the Rails Guides</a></p>
 <p>Today I created an explicit join table between two models because each had has_and_belongs_to_many, as I’ve done many time before. Except, this time, when I tried to render one of my views, it said it couldn’t find a join table.</p>
 <p>Example:</p>
@@ -226,6 +235,7 @@ article: http://ogp.me/ns/article#
 
 
 <p>My first inclination was the fact that it was looking for it in alphabetical order. Sure enough, the <a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations">Rails Guide Documentation</a> states that Rails developers do need to explicitly create their join tables but they have to be in lexical order (alphabetical).</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -248,7 +258,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>Yes, I know the common way to create a Rails application is</p>
+                <div>
+<p>Yes, I know the common way to create a Rails application is</p>
 <pre class="code literal-block">rails new 
 </pre>
 
@@ -269,6 +280,7 @@ article: http://ogp.me/ns/article#
 <p>Example:</p>
 <pre class="code literal-block">rails new fileuploader /var/www/apps/files
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -293,7 +305,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>To get your Dell Service Tag from your workstation/laptop via command line:</p>
+                <div>
+<p>To get your Dell Service Tag from your workstation/laptop via command line:</p>
 <pre class="code literal-block">C:<span class="se">\&gt;</span>wmic csproduct get vendor,name,identifyingnumber
 IdentifyingNumber    Name                Vendor
 ABCDEF1              Latitude E6520      Dell Inc.
@@ -301,6 +314,7 @@ ABCDEF1              Latitude E6520      Dell Inc.
 
 
 <p>I looked for this and found it because my laptop was docked and I didn’t want to have to dock it to look on the bottom of the laptop  </p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -324,17 +338,19 @@ ABCDEF1              Latitude E6520      Dell Inc.
 
             </div>
             <div class="body">
-                <p>.bash_profile is sourced everytime you login to a bash shell either locally on the terminal or remotely via ssh</p>
+                <div>
+<p>.bash_profile is sourced everytime you login to a bash shell either locally on the terminal or remotely via ssh</p>
 <p>.bashrc is sourced everytime you open a new shell after logging in</p>
 <p>I like to have my aliases stored in .bashrc and just have .bash_profile source my .bashrc file if it exists.</p>
 <p>I put the following in my .bash_profile</p>
-<pre class="code literal-block"><span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span>; <span class="k">then</span>
-<span class="k">    </span><span class="nb">source</span> ~/.bashrc
+<pre class="code literal-block"><span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">source</span> ~/.bashrc
 <span class="k">fi</span>
 </pre>
 
 
 <p>This ensures my aliases and functions in my .bashrc are applied when I remotely ssh into my Linux boxes and it avoids duplication across multiple files.  </p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -358,7 +374,8 @@ ABCDEF1              Latitude E6520      Dell Inc.
 
             </div>
             <div class="body">
-                <p>change to postgres user and open psql prompt</p>
+                <div>
+<p>change to postgres user and open psql prompt</p>
 <pre class="code literal-block">sudo -u postgres psql postgres
 </pre>
 
@@ -427,6 +444,7 @@ ABCDEF1              Latitude E6520      Dell Inc.
 <p>backup database</p>
 <pre class="code literal-block"><span class="nv">$ </span>pg_dump &lt;databasename&gt; &gt; &lt;outfile&gt; 
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -450,17 +468,19 @@ ABCDEF1              Latitude E6520      Dell Inc.
 
             </div>
             <div class="body">
-                <p>Install mailutils</p>
+                <div>
+<p>Install mailutils</p>
 <pre class="code literal-block">sudo apt-get install mailutils
 </pre>
 
 
 <p>Send some test piped into the mail command</p>
-<pre class="code literal-block"><span class="nb">echo</span> <span class="s2">"testing"</span> | mail -s Test user@emailhost.com
+<pre class="code literal-block"><span class="nb">echo</span> <span class="s2">"testing"</span> <span class="p">|</span> mail -s Test user@emailhost.com
 </pre>
 
 
 <p>Check the email address listed above</p>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -479,7 +499,7 @@ ABCDEF1              Latitude E6520      Dell Inc.
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

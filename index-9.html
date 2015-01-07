@@ -56,10 +56,12 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>Check out <a href="http://one.revver.com/watch/202104">this video</a></p>
+                <div>
+<p>Check out <a href="http://one.revver.com/watch/202104">this video</a></p>
 <p><img alt="image" src="posts/another-reason-to-love-facebook/jasonmeridth/files/2011/03AnotherreasontoloveFaceBook_10582/image_3.png"></p>
 <h3>Comments</h3>
 <p><strong><a href="posts/another-reason-to-love-facebook/#101" title="2007-09-20 01:40:07">Joe Ocampo</a>:</strong> I can't believe you subjected me to that!!! ;-)</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -76,8 +78,10 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>Excellent <a href="http://feeds.feedburner.com/~r/GrabBagOfT/~3/158079288/agile-cheat-sheet.html">post</a> by Jimmy Bogard.</p>
+                <div>
+<p>Excellent <a href="http://feeds.feedburner.com/~r/GrabBagOfT/~3/158079288/agile-cheat-sheet.html">post</a> by Jimmy Bogard.</p>
 <p>Definitely add him to your feeds if you don't have him yet.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -94,11 +98,13 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>Brad Abrams, Group manager of the .NET Framework, <a href="http://blogs.msdn.com/brada/archive/2007/09/18/phil-haack-joins-the-ranks.aspx">posted today</a> announcing the Microsoft hiring of Phil Haack, core SubText blogging engine developer.  Brad mentions that Phil will head the team to bring about a <strong>MVC architecture for ASP.NET.</strong>  I've followed Phil's blog and am glad to hear people of his talent will be behind that movement.  He even mentions speaking with Scott Guthrie at Redmond and stating that he wants to work on the MVC Framework (<a href="http://haacked.com/archive/2007/09/17/why-is-microsoft-removing-my-mvp-status.aspx">here</a>), and voila!! I'm still on the MonoRail bandwagon, but we all know that if Microsoft comes out with a MVC Framework, it will most likely be accepted as the standard (whether or not it is the better of the MVC frameworks).  Hopefully, MS will listen to the industry on what is needed for that idea to succeed.</p>
+                <div>
+<p>Brad Abrams, Group manager of the .NET Framework, <a href="http://blogs.msdn.com/brada/archive/2007/09/18/phil-haack-joins-the-ranks.aspx">posted today</a> announcing the Microsoft hiring of Phil Haack, core SubText blogging engine developer.  Brad mentions that Phil will head the team to bring about a <strong>MVC architecture for ASP.NET.</strong>  I've followed Phil's blog and am glad to hear people of his talent will be behind that movement.  He even mentions speaking with Scott Guthrie at Redmond and stating that he wants to work on the MVC Framework (<a href="http://haacked.com/archive/2007/09/17/why-is-microsoft-removing-my-mvp-status.aspx">here</a>), and voila!! I'm still on the MonoRail bandwagon, but we all know that if Microsoft comes out with a MVC Framework, it will most likely be accepted as the standard (whether or not it is the better of the MVC frameworks).  Hopefully, MS will listen to the industry on what is needed for that idea to succeed.</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/brad-abrams-hints-again-on-microsoft-mvc-framework-for-asp-net-and-phil-haack-will-head-it-up/#98" title="2007-09-18 23:02:43">Scott Bellware</a>:</strong> Jason, Scott will be coming to the ALT.NET conference and from what I understand, he'll be bringing the ASP .NET MVC code. You should have an opportunity to get some insight into it, and to feedback.</p>
 <p><strong><a href="posts/brad-abrams-hints-again-on-microsoft-mvc-framework-for-asp-net-and-phil-haack-will-head-it-up/#99" title="2007-09-18 23:10:51">Jason Meridth</a>:</strong> AWESOME!!!! I look forward to it. Thanks Scott.</p>
 <p><strong><a href="posts/brad-abrams-hints-again-on-microsoft-mvc-framework-for-asp-net-and-phil-haack-will-head-it-up/#100" title="2007-09-18 23:19:08">Joe Ocampo</a>:</strong> So does this signal a return of the Alpha Geeks to MS?</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -115,44 +121,46 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <h5>UNIT TESTING</h5>
+                <div>
+<h5>UNIT TESTING</h5>
 <p>After the past 2 1/2 posts I've migrated my unit tests to use the <a href="http://schambers.wordpress.com/2007/09/04/testing-monorail-controllers-from-castles-trunk/">BaseControllerTest abstract class</a> that originated from the <a href="http://joeydotnet.com/blog/archive/2007/09/06/Quick-Tip-Asserting-response-redirects-in-a-MonoRail-controller-test.aspx">Eleutian guys, but is now a part of the Castle MonoRail trunk download</a>.<br>
 Here is my ExampleControllerTests class:</p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="o">:</span> <span class="n">using</span> <span class="n">Castle</span><span class="p">.</span><span class="n">MonoRail</span><span class="p">.</span><span class="n">TestSupport</span><span class="p">;</span>
+<pre class="code literal-block">   <span class="nt">1</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">Castle</span><span class="nc">.MonoRail.TestSupport</span><span class="o">;</span>
 
 
-   <span class="mi">2</span><span class="o">:</span> <span class="n">using</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Controllers</span><span class="p">;</span>
+   <span class="nt">2</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">JasonMeridth</span><span class="nc">.Controllers</span><span class="o">;</span>
 
 
-   <span class="mi">3</span><span class="o">:</span> <span class="n">using</span> <span class="n">NUnit</span><span class="p">.</span><span class="n">Framework</span><span class="p">;</span>
+   <span class="nt">3</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">NUnit</span><span class="nc">.Framework</span><span class="o">;</span>
 
 
-   <span class="mi">4</span><span class="o">:</span>
+   <span class="nt">4</span><span class="o">:</span>
 
 
-   <span class="mi">5</span><span class="o">:</span> <span class="n">namespace</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Tests</span><span class="p">.</span><span class="n">Controllers</span>
+   <span class="nt">5</span><span class="o">:</span> <span class="nt">namespace</span> <span class="nt">JasonMeridth</span><span class="nc">.Tests.Controllers</span>
 
 
-   <span class="mi">6</span><span class="o">:</span> <span class="p">{</span>
+   <span class="nt">6</span><span class="o">:</span> <span class="p">{</span>
 
 
-   <span class="mi">7</span><span class="o">:</span>     <span class="p">[</span><span class="n">TestFixture</span><span class="p">]</span>
+   <span class="m">7</span><span class="o">:</span>     <span class="cp">[</span><span class="nx">TestFixture</span><span class="cp">]</span>
 
 
-   <span class="mi">8</span><span class="o">:</span>     <span class="n">public</span> <span class="n">class</span> <span class="n">ExampleControllerTests</span> <span class="o">:</span> <span class="n">BaseControllerTest</span>
+   <span class="m">8</span><span class="o">:</span>     <span class="n">public</span> <span class="n">class</span> <span class="n">ExampleControllerTests</span> <span class="o">:</span> <span class="n">BaseControllerTest</span>
 
 
-   <span class="mi">9</span><span class="o">:</span>     <span class="p">{</span>
+   <span class="m">9</span><span class="o">:</span>     <span class="err">{</span>
 
 
-  <span class="mi">10</span><span class="o">:</span>         <span class="n">private</span> <span class="n">ExampleController</span> <span class="n">exampleController</span><span class="p">;</span>
+  <span class="m">10</span><span class="o">:</span>         <span class="n">private</span> <span class="n">ExampleController</span> <span class="n">exampleController</span><span class="p">;</span>
 
 
-  <span class="mi">11</span><span class="o">:</span>
+  <span class="m">11</span><span class="o">:</span>
 
 
-  <span class="mi">12</span><span class="o">:</span>         <span class="p">[</span><span class="n">SetUp</span>
+  <span class="m">12</span><span class="o">:</span>         <span class="cp">[</span><span class="nx">SetUp</span>
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -169,7 +177,8 @@ Here is my ExampleControllerTests class:</p>
                 
             </div>
             <div class="body">
-                <p>The videos can be found <a href="http://www.informit.com/podcasts/channel.aspx?c=dadf92ca-3bdc-484e-9cd8-cbfe0cfc0de6&amp;rl=1">here</a>.</p>
+                <div>
+<p>The videos can be found <a href="http://www.informit.com/podcasts/channel.aspx?c=dadf92ca-3bdc-484e-9cd8-cbfe0cfc0de6&amp;rl=1">here</a>.</p>
 <p><strong>Names in videos include:</strong><br>
 Michael Feathers<br>
 Bjarne Stroustrup<br>
@@ -179,6 +188,7 @@ Scott Meyers</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/good-find-software-development-videos/#96" title="2007-09-18 17:55:19">jlockwood</a>:</strong> That's a way cool link! I love Feathers and Meyers! Stroustrup gave some dry reading on the other hand...who's Joshua Bloch. Just kidding...word to all you Java types out there!</p>
 <p><strong><a href="posts/good-find-software-development-videos/#97" title="2007-09-18 19:48:08">Jason Meridth</a>:</strong> For all who don't know, Joshua Bloch practically wrote the collections libraries in Java and also the Effective Java book. He is working for Google now. Nice pic Josh.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -195,7 +205,8 @@ Scott Meyers</p>
                 
             </div>
             <div class="body">
-                <p>My co-worker, <a href="http://codemonkey.nmonta.com/">Nelson</a>, and I did some remote pair programming on a side project this weekend.  He had talked about <a href="http://www.skype.com/">Skype </a>and the <a href="http://www.yugma.com/yugmaskype/">YugmaSkype </a>plug-in for a couple days.  I finally went by Altex and purchased some <a href="http://www.logitech.com/index.cfm/webcam_communications/internet_headsets_phones/devices/230&amp;cl=us,en">Logitech Premium USB Headset 350</a> (mic included) = $45+. When I got home I IMed Nelson and brought up Skype. He initiated the call.  It's just like talking on the phone.  (Before you purchase headphones, check the <a href="http://us.accessories.skype.com/DRHM/servlet/ControllerServlet?Action=DisplayCategoryListPage&amp;SiteID=skype&amp;Locale=en_US&amp;Env=BASE&amp;categoryID=4141900&amp;cm_mmc=google/search-_-brand_hw-_-US/EN-_-america/WO-NA-US:EN:HW/skype%20headset/skype%20headset/Broad/916407746">skype certified list)</a>  </p>
+                <div>
+<p>My co-worker, <a href="http://codemonkey.nmonta.com/">Nelson</a>, and I did some remote pair programming on a side project this weekend.  He had talked about <a href="http://www.skype.com/">Skype </a>and the <a href="http://www.yugma.com/yugmaskype/">YugmaSkype </a>plug-in for a couple days.  I finally went by Altex and purchased some <a href="http://www.logitech.com/index.cfm/webcam_communications/internet_headsets_phones/devices/230&amp;cl=us,en">Logitech Premium USB Headset 350</a> (mic included) = $45+. When I got home I IMed Nelson and brought up Skype. He initiated the call.  It's just like talking on the phone.  (Before you purchase headphones, check the <a href="http://us.accessories.skype.com/DRHM/servlet/ControllerServlet?Action=DisplayCategoryListPage&amp;SiteID=skype&amp;Locale=en_US&amp;Env=BASE&amp;categoryID=4141900&amp;cm_mmc=google/search-_-brand_hw-_-US/EN-_-america/WO-NA-US:EN:HW/skype%20headset/skype%20headset/Broad/916407746">skype certified list)</a>  </p>
 <p>NOTICE: The logitech headphones have a volume control but beware that the center (black) logitech button is the mute button, not the volume control.  The surrounding grey circle is the volume control.<br>
 <img alt="Premium USB Headset 350" src="http://www.logitech.com/repository/295/jpg/2076.1.0.jpg"></p>
 <p>Once in there, you need to make sure you install YugmaSkype.  Once installed, you can initiate a session to share you desktop.  You can share your desktop, as the presenter or the other people can share their desktop.  Just like PCAnywhere or NetMeeting.  You can grant specific people control of your desktop.</p>
@@ -215,6 +226,7 @@ Scott Meyers</p>
 <p><strong><a href="posts/skype-yugma-logitech-premium-usb-headset-350-remote-pair-programming/#93" title="2007-09-18 15:00:56">Donn Felker</a>:</strong> Yeah, I think it would still be worth it. Even for those moments where the parents call up and say "How do I set up my email in outlook?"</p>
 <p><strong><a href="posts/skype-yugma-logitech-premium-usb-headset-350-remote-pair-programming/#94" title="2007-10-03 08:14:02">Nelson Montalvo</a>:</strong> One last note on this... Jason and I found Elluminate vRoom a while back: http://www.elluminate.com/vroom/ Free up to 3 people and works really well for the desktop sharing. The interface, overall, is clunky and we dropped the use of pretty much anything else from it. However, once we got into an interactive session, it was a pretty useful application for the price (free). Skype voice and your favorite IM client should supplement this application pretty well. Again, only to be used in those hopefully rare "remote pairing" situations.</p>
 <p><strong><a href="posts/skype-yugma-logitech-premium-usb-headset-350-remote-pair-programming/#95" title="2008-01-03 18:58:52">Connie @ Yugma</a>:</strong> Hi, This is Connie from Yugma. On behalf of Yugma with our One Year Anniversary, I would like to thank you for mentioning us on your site and helping us to spread the word about our product. The blogging community had had an integral part in making Yugma one of the fastest growing real-time web collaborations services in 2007 with over 100,000 users to date. To express our thanks, we’re donating/sponsoring Yearly Premium Yugma accounts (valued at $99.50) to bloggers who simply ask. To learn more about this program and how to get your sponsored Yugma account, check out the details on the Yugma blog – linked below. http://www.yugma.com/blog/index.php?option=com_content&amp;task;=view&amp;id;=261&amp;Itemid;=1 Please be sure to check this out soon! The window to request your account through the Yugma Blogger Program will be through the end of January, 2008. With Greatest Appreciation, Connie and the rest of the Yugma Team PS: Be sure to stay tuned! Yugma is set to release new features and improved performance in the next few weeks and months. To keep informed of all the happenings, check out www.yugma.com under the news and blog.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -231,7 +243,8 @@ Scott Meyers</p>
                 
             </div>
             <div class="body">
-                <p>Read the following <a href="http://davidhayden.com/blog/dave/archive/2005/11/05/2556.aspx">blog entry</a> from <a href="http://www.davidhayden.com/davidhayden/default.aspx">David Hayden</a>.  This teaches you how to update the class template that Visual Studio 2005 uses to create new classes.</p>
+                <div>
+<p>Read the following <a href="http://davidhayden.com/blog/dave/archive/2005/11/05/2556.aspx">blog entry</a> from <a href="http://www.davidhayden.com/davidhayden/default.aspx">David Hayden</a>.  This teaches you how to update the class template that Visual Studio 2005 uses to create new classes.</p>
 <p>I know this is old, but it seems to come up a lot as a pet-peeve of friends and colleagues.</p>
 <p>Hope this helps someone.</p>
 <h3>Comments</h3>
@@ -239,6 +252,7 @@ Scott Meyers</p>
 <p><strong><a href="posts/for-those-annoyed-with-having-to-add-the-public-keyword-to-your-new-classes/#86" title="2007-09-13 01:12:56">Jason Meridth</a>:</strong> I still communicate with newbies who won't purchase ReSharper and still code in VB.NET. This is for them. I completely agree with you though. When are you going to Simpsonize your photo? We will cordially do it for you. :)</p>
 <p><strong><a href="posts/for-those-annoyed-with-having-to-add-the-public-keyword-to-your-new-classes/#87" title="2007-09-13 01:48:19">joeyDotNet</a>:</strong> Oh my! No ReSharper AND VB?!? Those poor guys. :P (kidding, mostly)</p>
 <p><strong><a href="posts/for-those-annoyed-with-having-to-add-the-public-keyword-to-your-new-classes/#88" title="2007-09-15 11:12:48">john doe</a>:</strong> test</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -255,7 +269,8 @@ Scott Meyers</p>
                 
             </div>
             <div class="body">
-                <p>Currently I'm working on a team of 8 developers and have been practicing Agile for just under 2 years now.  I read about it and tried a couple time before this 2 year span, but didn't realize how wrong I was approaching it.  <a href="http://codebetter.com/blogs/scott.bellware/default.aspx">Scott Bellware</a> has been posting about how <a href="http://codebetter.com/blogs/scott.bellware/archive/2007/09/09/167738.aspx">Agile development does not have the answers</a> and this line:</p>
+                <div>
+<p>Currently I'm working on a team of 8 developers and have been practicing Agile for just under 2 years now.  I read about it and tried a couple time before this 2 year span, but didn't realize how wrong I was approaching it.  <a href="http://codebetter.com/blogs/scott.bellware/default.aspx">Scott Bellware</a> has been posting about how <a href="http://codebetter.com/blogs/scott.bellware/archive/2007/09/09/167738.aspx">Agile development does not have the answers</a> and this line:</p>
 <blockquote>
 <p><em>"The essence of TDD is a suspension of our belief that we know what we're doing, and a submission to a structured process of exploration and elaboration of ideas."</em></p>
 </blockquote>
@@ -276,6 +291,7 @@ Scott Meyers</p>
 <p><strong><a href="posts/agile-development/#82" title="2007-09-10 04:13:53">Joe Ocampo</a>:</strong> I prefer the term coach over Manager... :-) Managers manage -- A coach leads! Nice post.</p>
 <p><strong><a href="posts/agile-development/#83" title="2007-09-10 12:28:14">jlockwood</a>:</strong> Nice post... Just a couple of quick notes (and history): The addition of 'humility' to the team's core values was inspired by the earlier writings of Scott Ambler as he was developing the concept of Agile Modeling (see Agile Modeling: Effective Practices for Extreme Programming and the Unified Process - Ambler). We thought that humility was a key (and often missing) element in the typical approaches toward team development and threw it in once discovered. Bellware and I were first trying to help the World Savings team we worked with (and that you work with now) move from a disfuntional water fall-based process to an agile approach (namely XP). I think that we both lacked humility (and respect for that matter) at first when trying to sell the idea, largely due to our frustration with heavy resistance from team members on both development and business sides. Had humility and respect been among our watchwords during the process things may have (may have I stress) gone a bit smoother. At the time of the addition of 'humility' to our XP-base core values, the XP core values were (initiated circa 1999): 1. Communication 2. Simplicity 3. Feedback 4. Courage Over time, I think that the concept of humility has become integral to the team and part of its very culture. I was quite impressed when seeing you guys work recently; the business and developers where playing quite well together and productivity was such that Wachovia has been forced to take notice in the post-merger environment. As I saw on the link you provided, 'Respect' has now been added to the list of XP core values. 'Respect' and 'Humility' are not synonyms, but do seem to have a bit of mutual interdependence. Without either, it's quite difficult to develop a cohesive team. Agile development approaches, like many sports, rely heavily on team cohesion and good 'sportsmanship' among the team's players in order for teams to 'win'. Finally, we did have Feathers come and he was helpful and inspirational (I want to be like him when I grow up...if I grow up). He helped mainly with TDD in C# and introduced us to Fitnesse (this focused on the Simplicity and Feedback values). The team building part, unfortunately, we had to figure out on our own. We brought our own Courage, figured out (through much trial and error) how to improve Communication and Feedback in a way that worked for us, and along the way learned just how important Humility is along the way in helping assure the first four values. Keep up the good fight team Wachovia!</p>
 <p><strong><a href="posts/agile-development/#84" title="2007-09-10 12:36:24">Jason Meridth</a>:</strong> Excellent extension to this post Josh. I had heard all the history, but your summary does it justice. Hope you are doing well bro. Keeping the fight. :)</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -292,9 +308,11 @@ Scott Meyers</p>
                 
             </div>
             <div class="body">
-                <p>I found this <a href="http://www.mitchelsellers.com/Blogs/tabid/54/articleType/ArticleView/articleId/120/Upgrade-to-DotNetNuke-455-From-4x.aspx">post</a> and followed it to the "T" upgrading a DNN site to 4.5.5.  It worked perfectly.  Just trying to help get the word out if anyone else needs this information.</p>
+                <div>
+<p>I found this <a href="http://www.mitchelsellers.com/Blogs/tabid/54/articleType/ArticleView/articleId/120/Upgrade-to-DotNetNuke-455-From-4x.aspx">post</a> and followed it to the "T" upgrading a DNN site to 4.5.5.  It worked perfectly.  Just trying to help get the word out if anyone else needs this information.</p>
 <p>The site that I upgraded was <a href="http://www.alamocoders.net/">AlamoCoders</a> (the local San Antonio .NET Users Group website).</p>
 <p>If you are in the San Antonio area, our next meeting is Tuesday night.  Come check out my fellow LosTechies blogger, co-founder of Alamo Coders, and <a href="http://nbehave.org/">Behave# (now a part of NBehave)</a> co-author, <a href="http://www.lostechies.com/blogs/joe_ocampo">Joe Ocampo</a> (AgileJoe), speak about Test-Driven Development and <a href="http://dannorth.net/introducing-bdd">Behavior Driven Development</a>.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -311,7 +329,8 @@ Scott Meyers</p>
                 
             </div>
             <div class="body">
-                <p><strong><em>UPDATE: Problem solved.  Had to uninstall VSPaste plug-in first and uninstall the Code Snippet plug-in, restart, and then re-install.  Fun fun.  Newbie problem</em></strong></p>
+                <div>
+<p><strong><em>UPDATE: Problem solved.  Had to uninstall VSPaste plug-in first and uninstall the Code Snippet plug-in, restart, and then re-install.  Fun fun.  Newbie problem</em></strong></p>
 <p>To all bloggers out there that post code into their blog and also use Windows Live Writer, HELP!</p>
 <p>I was currently using <a href="http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-82eb-e1a006b083b9&amp;bt=9&amp;pl=8">VSPaste plug-in</a>.  It looks great when writing the entry in the Live Writer; even the web preview looks great:</p>
 <p><img alt="image" src="posts/code-snippets-in-blog-entries-help/jasonmeridth/files/2011/03CodesnippetsinblogentriesHELP_6F6A/image_thumb.png"></p>
@@ -323,6 +342,7 @@ Scott Meyers</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/code-snippets-in-blog-entries-help/#80" title="2007-09-09 18:04:06">joeyDotNet</a>:</strong> Hey Jason, I've tried out many of them and the best one I've found so far (if you're a WLW user as I am), is this code snippet plug-in for WLW: http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&amp;bt;=9&amp;pl;=8</p>
 <p><strong><a href="posts/code-snippets-in-blog-entries-help/#81" title="2007-09-09 19:21:24">Jason Meridth</a>:</strong> Sweet. I figured as much, but when I run the MSI it installs, but I can't find the plugin in my plugins window in WLW. Any suggestions? Am I having a newbie brain-fart? This is used in WLW and not VS 2005/2008, right?</p>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -341,7 +361,7 @@ Scott Meyers</p>
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

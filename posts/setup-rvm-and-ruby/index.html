@@ -77,14 +77,15 @@ Install RVM (forgot this, than">
 
         </div>
         <div class="body">
-            <p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….</p>
+            <div>
+<p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….</p>
 <p>Install curl</p>
 <pre class="code literal-block">sudo apt-get install curl
 </pre>
 
 
 <p>Install RVM (forgot this, thanks <a href="http://twitter.com/jssingh">Jasdeep</a>)</p>
-<pre class="code literal-block">curl -L get.rvm.io | bash -s stable --auto
+<pre class="code literal-block">curl -L get.rvm.io <span class="p">|</span> bash -s stable --auto
 </pre>
 
 
@@ -96,7 +97,7 @@ Install RVM (forgot this, than">
 <p>Run rvm requirements to see what needs to be installed</p>
 <pre class="code literal-block">rvm requirements
 ...
-Requirements <span class="k">for </span>ubuntu/12.10/x86_64
+Requirements <span class="k">for</span> ubuntu/12.10/x86_64
 
 NOTE: <span class="s1">'ruby'</span> represents Matz<span class="s1">'s Ruby Interpreter (MRI) (1.8.X, 1.9.X)</span>
 <span class="s1">             This is the *original* / standard Ruby Language Interpreter</span>
@@ -132,7 +133,7 @@ subversion pkg-config libffi-dev
 <p>Install Ruby</p>
 <pre class="code literal-block">rvm install 1.9.3
 ...
-Searching <span class="k">for </span>binary rubies, this might take some time.
+Searching <span class="k">for</span> binary rubies, this might take some time.
 ruby-1.9.3-p392 - <span class="c">#configure</span>
 ruby-1.9.3-p392 - <span class="c">#download</span>
 <span class="c">#############################################                             62.9%</span>
@@ -163,6 +164,7 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 <p>As [Jasdeep][2] says in the comments, it is worth knowing that you’ll need a javascript runtime to use Rails so you might as well install nodejs (because it is fun):</p>
 <pre class="code literal-block">sudo apt-get install nodejs
 </pre>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -196,7 +198,7 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

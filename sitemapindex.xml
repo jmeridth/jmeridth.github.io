@@ -6,170 +6,178 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/agile.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.jasonmeridth.com/categories/android.xml</loc>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/bash.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/books.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/cli.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/command-line.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/dell.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/funny.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/git.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/github.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/gitosis.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/haml.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/help.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/html5.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/information.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/irc.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.jasonmeridth.com/categories/linux.xml</loc>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/net.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/networking.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/notification.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/open-source.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/personal.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/postgresql.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/presentation.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/python.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/rails.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/resources.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/rspec.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/ruby.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/rvm.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/sinatra.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/source-control.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/svn.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/testing.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/tmux.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/tools.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/ubuntu.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/vagrant.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/vim.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/weechat.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/windows.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/wireless.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/rss.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/sitemap.xml</loc>
-  <lastmod>2014-08-29</lastmod>
+  <lastmod>2015-01-07</lastmod>
  </sitemap>
 </sitemapindex>

@@ -63,22 +63,24 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don't need the Hudson security. Every developer should be able to manage the CI server. I'm just trying to prevent external access to the dashboard.</p>
+            <div>
+<p>UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don't need the Hudson security. Every developer should be able to manage the CI server. I'm just trying to prevent external access to the dashboard.</p>
 <p>I've been having fun trying to figure out how to block a user's ability of going to http://mydomain:8080 and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication. I even went as far as removing Nginx and installing Apache. According to the Hudson site, we can use <a href="http://hudson.gotdns.com/wiki/display/HUDSON/Apache+frontend+for+security">Apache to do this</a>. Either I'm not smart enough or web pages like this reminded me why I hate the Java Enterprise stack as much as I do. Talk about installation obfuscation. My problem exists because the Tomcat instance running the hudson war file uses <a href="http://tomcat.apache.org/tomcat-5.5-doc/config/ajp.html#Standard%20Implementation">Apache JServe Protocol</a> (AJP) and will allow direct access on whatever port you used (default 8080). This is even if you proxy_pass to 8080 from 443 (SSL) or 80 (Web). Through testing and research it seems that <a href="http://www.ruby-forum.com/topic/157269#693042">Nginx does not have a solution for this</a>. I can't allow access to my Hudson instance from external users. I have a self-signed certificate and a .htpasswd file to protect the instance, but is all useless is someone could just type in http://mydomain.com:8080. I want that redirected to https://mydomain.com which will then proxy internally to http://127.0.0.1:8080. I didn't want to fight this, so I just used iptables (linux firewall) to block external requests on port 8080 but allow internal requests to 8080. Here is the entry in my iptables file: </p>
-<pre class="code literal-block"><span class="cp"># Deny HTTP requests to port 8080 externally but allow internally</span>
-<span class="o">-</span><span class="n">A</span> <span class="n">INPUT</span> <span class="o">-</span><span class="n">i</span> <span class="n">eth0</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="o">-</span><span class="n">m</span> <span class="n">tcp</span> <span class="o">--</span><span class="n">dport</span> <span class="mi">8080</span> <span class="o">-</span><span class="n">j</span> <span class="n">REJECT</span>
+<pre class="code literal-block"># Deny HTTP requests to port 8080 externally but allow internally
+-A INPUT -i eth0 -p tcp -m tcp --dport 8080 -j REJECT
 </pre>
 
 
 <p>I only allow access to my server via 80 (web), 443 (ssl) and my ssh port (I'm not telling). This works for now, but I'm experiencing another weird issue. I follow the Nginx way of using HTTP basic authentication: </p>
-<pre class="code literal-block"><span class="n">location</span>  <span class="o">/</span>  <span class="p">{</span>      
- <span class="n">auth_basic</span>            <span class="s">"Restricted"</span><span class="p">;</span>
- <span class="n">auth_basic_user_file</span>  <span class="n">conf</span><span class="o">/</span><span class="n">htpasswd</span><span class="p">;</span>
-<span class="p">}</span>
+<pre class="code literal-block">location  /  {      
+ auth_basic            "Restricted";
+ auth_basic_user_file  conf/htpasswd;
+}
 </pre>
 
 
 <p>If the user listed in the <a href="http://httpd.apache.org/docs/2.0/programs/htpasswd.html">htpasswd</a> file is also a registered user on the Hudson instance (through the Hudson UI) then the HTTP basic authentication will work. If they are in the htpasswd file but not registered with Hudson, it fails with a HTTP 401 (Unauthorized). Why would the HTTP basic authentication be "tunneled" through to Hudson? I'll update this post once I figure it out.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -112,7 +114,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

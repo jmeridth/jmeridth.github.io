@@ -69,7 +69,8 @@ article: http://ogp.me/ns/article#
 
         </div>
         <div class="body">
-            <p>DISCLAIMER: This is <em>only</em> relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.</p>
+            <div>
+<p>DISCLAIMER: This is <em>only</em> relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.</p>
 <h3>The Problem</h3>
 <p>While trying to commit changes to a file I have under source control with Git on a Windows box using cygwin, I received the following error:</p>
 <pre class="code literal-block">jmeridth@web1 /cygdrive/d/site
@@ -113,6 +114,7 @@ git confit core.safecrlf <span class="nb">true</span>
 <p>5) Change the permissions on the .git/hooks/pre-commit file. In this case, I’m clearing the executable bit for all users (owner, group and rest of the world)</p>
 <pre class="code literal-block">chmod a-x .git/hooks/pre-commit
 </pre>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -146,7 +148,7 @@ git confit core.safecrlf <span class="nb">true</span>
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

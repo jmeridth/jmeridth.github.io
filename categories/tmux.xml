@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (tmux)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 29 Aug 2014 14:08:04 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TMUX Cheat Sheet</title><link>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Install TMUX&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (tmux)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/tmux.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 07 Jan 2015 17:31:46 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>TMUX Cheat Sheet</title><link>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Install TMUX&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install tmux
 &lt;/pre&gt;
 
@@ -40,4 +40,4 @@
 &lt;li&gt;&lt;strong&gt;Ctrl-a, KeyRight&lt;/strong&gt; Switch to pane to the right  &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, space&lt;/strong&gt; Make each pane equal sizes&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Ctrl-a, s&lt;/strong&gt; Sync sessions - what you type shows in all &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.tmux.conf#L13"&gt;mapping&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>tmux</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>tmux</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/tmux-cheat-sheet/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item></channel></rss>

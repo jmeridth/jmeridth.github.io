@@ -62,7 +62,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <code>git rebase --interactive</code></p>
+                <div>
+<p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <code>git rebase --interactive</code></p>
 <p><strong>UPDATE</strong>: If you need to unstage a file prior to your first commit: </p>
 <pre class="code literal-block"><span class="nv">$ </span>git rm --cached filename
 </pre>
@@ -149,6 +150,7 @@ article: http://ogp.me/ns/article#
 <p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#464" title="2010-03-24 04:11:55">Jason Meridth</a>:</strong> @derick @qrush responded to your tweet and his solution is easier: Just create a new branch from the commit on master, prior to the merge, delete master and rename the new branch to master. this will work if you haven't deleted the topic you merged into master.</p>
 <p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#465" title="2010-03-25 01:53:30">derick.bailey</a>:</strong> @qrush got me squared away: git reset --hard HEAD^ I've used reset --hard to clean out my current working set and get back to last commit... just didn't think about it in this case. i was so fixated on "revert" (from my svn experience) that I couldn't see past the git revert command.</p>
 <p><strong><a href="posts/git-reset-checkout-bare-double-dash-revert/#466" title="2010-03-25 02:17:04">Jason Meridth</a>:</strong> @derick Excellent. I'm going to update the post to make sure people read your comments so that the knowledge is shared. Thank you for following up on this.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -165,7 +167,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>I was trying to push to a canonical repository this morning and got the following error:</p>
+                <div>
+<p>I was trying to push to a canonical repository this morning and got the following error:</p>
 <pre class="code literal-block"><span class="nv">$ </span>git push origin master
 error: src refspec master matches more than one.
 error: failed to push some refs to <span class="s1">'ssh://user@host/srv/git/repo'</span>
@@ -188,6 +191,7 @@ tag4
 
 
 <p>I was able to push again.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -204,7 +208,8 @@ tag4
                 
             </div>
             <div class="body">
-                <p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter:</p>
+                <div>
+<p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter:</p>
 <p><a href="http://twitter.com/bellware/status/6952706099">for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder</a></p>
 <p><a href="http://twitter.com/cory_foy">Cory Foy</a>, <a href="http://twitter.com/aaronjensen">Aaron Jensen</a>, and <a href="http://twitter.com/jmeridth">myself</a> all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it <a href="http://twitter.com/cory_foy/status/6954512284">first</a> and it was the post-merge/post-rebase hooks. I researched the <a href="http://www.kernel.org/pub/software/scm/git/docs/githooks.html">post-merge hook</a> (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the <a href="http://gist.github.com/262319">following</a></p>
 <pre class="code literal-block"><span class="c1">#!/usr/bin/env ruby</span>
@@ -218,6 +223,7 @@ tag4
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#515" title="2011-11-28 17:03:00">Marcelo Andrade</a>:</strong> Hi, Looks like this only works if the pull contains 1 commit, if it has many commits, if the latest commit doesn't have something on migrations, it doesn't do nothing.</p>
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#516" title="2011-11-28 17:09:00">Marcelo Andrade</a>:</strong> you can tweak it with git diff --name-only HEAD@{1} HEAD instead of  git diff HEAD^</p>
 <p><strong><a href="posts/git-post-merge-hook-to-auto-fire-rails-migrations/#517" title="2011-11-28 18:45:00">Jason Meridth</a>:</strong> Thank you Marcelo.  Post updated.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -240,7 +246,8 @@ tag4
 
             </div>
             <div class="body">
-                <p>DISCLAIMER: This is <em>only</em> relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.</p>
+                <div>
+<p>DISCLAIMER: This is <em>only</em> relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.</p>
 <h3>The Problem</h3>
 <p>While trying to commit changes to a file I have under source control with Git on a Windows box using cygwin, I received the following error:</p>
 <pre class="code literal-block">jmeridth@web1 /cygdrive/d/site
@@ -284,6 +291,7 @@ git confit core.safecrlf <span class="nb">true</span>
 <p>5) Change the permissions on the .git/hooks/pre-commit file. In this case, I’m clearing the executable bit for all users (owner, group and rest of the world)</p>
 <pre class="code literal-block">chmod a-x .git/hooks/pre-commit
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -300,34 +308,36 @@ git confit core.safecrlf <span class="nb">true</span>
                 
             </div>
             <div class="body">
-                <p>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using <a href="http://http//www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> (<a href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/">example</a>) and <a href="http://rails.vim.tpope.net/">vim.rails</a> (<a href="http://cheat.errtheblog.com/s/rails_vim/">cheat sheet</a>) by <a href="http://twitter.com/tpope">@tpope</a> has made my VIM experience much more pleasant..</p>
+                <div>
+<p>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using <a href="http://http//www.vim.org/scripts/script.php?script_id=1658">NERDTree</a> (<a href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/">example</a>) and <a href="http://rails.vim.tpope.net/">vim.rails</a> (<a href="http://cheat.errtheblog.com/s/rails_vim/">cheat sheet</a>) by <a href="http://twitter.com/tpope">@tpope</a> has made my VIM experience much more pleasant..</p>
 <p>Checkout my vim files on <a href="http://github.com/armmer/vim_files">github</a></p>
 <p>This post is for me to remember how to use <a href="http://www.gnu.org/software/screen/">Gnu screen</a> to pair program. side note: <a href="http://cheat.errtheblog.com/s/screen/">here</a> is the best cheat sheet on Gnu Screen.</p>
 <p>startup screen:</p>
-<pre class="code literal-block"><span class="n">screen</span> <span class="o">-</span><span class="n">S</span> <span class="n">sessionname</span>
+<pre class="code literal-block">screen -S sessionname
 </pre>
 
 
 <p>turn on multi-user</p>
-<pre class="code literal-block"><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
-<span class="o">:</span><span class="n">multiuser</span> <span class="n">on</span>
+<pre class="code literal-block">ctrl+a
+:multiuser on
 </pre>
 
 
 <p>add permissions for the other user:</p>
-<pre class="code literal-block"><span class="n">ctrl</span><span class="o">+</span><span class="n">a</span>
-<span class="o">:</span><span class="n">acladd</span> <span class="n">user</span>
+<pre class="code literal-block">ctrl+a
+:acladd user
 </pre>
 
 
 <p>instruct second user to connect with:</p>
-<pre class="code literal-block"><span class="n">screen</span> <span class="o">-</span><span class="n">x</span> <span class="n">yourusername</span><span class="o">/</span><span class="n">sessionname</span>
+<pre class="code literal-block">screen -x yourusername/sessionname
 </pre>
 
 
 <h3>Comments</h3>
 <p><strong><a href="posts/pair-programming-with-screen/#453" title="2010-02-04 18:34:17">len smith</a>:</strong> This doesn't sound too fun. I have a distributed team and we pair with LogMeIn Pro ($15/mo) it works absurdly great, it's as responsive as being rdped into a box... much more responsive than sharedview, gotomeeting, vnc.</p>
 <p><strong><a href="posts/pair-programming-with-screen/#454" title="2010-02-04 18:50:02">Jason Meridth</a>:</strong> @Ien Smith The team I code with uses Vim so we don't need a desktop/rdp/vnc type sharing. Thanks for mentioning the other product. I'm personally a cheapskate and like free items over paid items. ;)</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -344,7 +354,8 @@ git confit core.safecrlf <span class="nb">true</span>
                 
             </div>
             <div class="body">
-                <p>Cross-posted from <a href="http://blog.jasonmeridth.com">my github pages blog</a>.  Rachel Davies, one of the author's was kind enough to comment there.</p>
+                <div>
+<p>Cross-posted from <a href="http://blog.jasonmeridth.com">my github pages blog</a>.  Rachel Davies, one of the author's was kind enough to comment there.</p>
 <p><img alt="" src="http://pragprog.com/images/covers/original/sdcoach.jpg">My manager let me borrow his copy of <a href="http://pragprog.com/titles/sdcoach/agile-coaching">Pragmatic Programmer’s Agile Coaching</a>. I’ve read a good number of Agile process and management books. I’m partial to the Pragmatic Programmer publishers due to their consistently well-written books. I also started using stickies instead of pens/pencils when I read my books. Mainly because they stand out better and allow me to find my notes quicker. The other reason is because I can remove them when I give the book away (which I’ve done a good deal lately. Of course, not with this book since it was my boss’). The stickies I use are <a href="http://www.3m.com/us/office/postit/products/prod_ft_pgm.html">these</a> and can be found at most office stores.</p>
 <p>Anyways, back to the book. The authors, Rachel Davies and Liz Sedley, do a good job explaining the different ways to start/continue agile coaching. The format of the book, multiple sections relevant to the chapter, Hurdles, and Checklist, worked very well for me. They share their experience, pain points, and give you a list that you can contain in your short-term memory.</p>
 <p>I enjoyed reading this book because it made me, once again, focus more on the people aspect of software development and less on the coding. I haven’t focused much on that part because I’ve assumed the people I work with are all professionals. Unfortunately, I’ve forgotten that they are human, too and need to be approached as humans and not machines. I’m still convinced that all software developers are control freaks. Our computer does what we tell it to. If it doesn’t, it is usually our fault.</p>
@@ -482,6 +493,7 @@ git confit core.safecrlf <span class="nb">true</span>
 <li>…if the team already has a clear idea of the work, decomposing into tasks may be overkill.</li>
 </ul>
 <p>Arriving at an Estimate</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -498,14 +510,15 @@ git confit core.safecrlf <span class="nb">true</span>
                 
             </div>
             <div class="body">
-                <p>I opened my Windows VM last night for the first time in months to finally work on a .NET project from Github.  When I found out I needed the rspec gem installed (I'm normally a shoulda guy), I decided to see what gems I had installed first:</p>
-<pre class="code literal-block"><span class="n">gem</span> <span class="n">list</span>
+                <div>
+<p>I opened my Windows VM last night for the first time in months to finally work on a .NET project from Github.  When I found out I needed the rspec gem installed (I'm normally a shoulda guy), I decided to see what gems I had installed first:</p>
+<pre class="code literal-block">gem list
 </pre>
 
 
 <p>and got the following error:</p>
-<pre class="code literal-block"><span class="err">$</span> <span class="n">gem</span> <span class="n">list</span>  
-<span class="n">sh</span><span class="p">.</span><span class="n">exe</span><span class="s">": /c/Ruby/bin/gem: D:/Users/Luis/projects/oss/oci/installer2-trunk/ruby/bin/ruby.exe: bad interpreter: no medium</span>
+<pre class="code literal-block"><span class="nv">$ </span>gem list  
+sh.exe<span class="s2">": /c/Ruby/bin/gem: D:/Users/Luis/projects/oss/oci/installer2-trunk/ruby/bin/ruby.exe: bad interpreter: no medium</span>
 </pre>
 
 
@@ -513,6 +526,7 @@ git confit core.safecrlf <span class="nb">true</span>
 <h3>Comments</h3>
 <p><strong><a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/#451" title="2009-10-07 16:57:09">derick.bailey</a>:</strong> dude, i can't tell you how many times this error has frustrated the crap out of me! thanks for the post and providing a link to the solution. -derick</p>
 <p><strong><a href="posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/#452" title="2009-10-07 17:13:38">Jason Meridth</a>:</strong> @Derick Glad it helped. I was baffled that some random guys path was on my system. :)</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -529,9 +543,11 @@ git confit core.safecrlf <span class="nb">true</span>
                 
             </div>
             <div class="body">
-                <p>To our readers,</p>
+                <div>
+<p>To our readers,</p>
 <p>We wanted to give you all a heads-up that we will be moving servers tomorrow evening, October 3rd, 2009.  We plan to turn off all comments at 8 PM CST.  The migration will begin at 9 PM CST.  We do not have an estimate on the time that the move will take.  We ask for your patience and look forward to being back to normal standing some time Sunday, October 4, 2009.</p>
 <p>Again, we thank you for your patience.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -548,19 +564,20 @@ git confit core.safecrlf <span class="nb">true</span>
                 
             </div>
             <div class="body">
-                <p>I was reading <a href="http://progit.org/book/ch4-6.html">"Pro Git" by Scott Chacon</a> and was on the section about "git instaweb". This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view): </p>
-<pre class="code literal-block"><span class="n">cd</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="p">.</span><span class="n">git</span>
+                <div>
+<p>I was reading <a href="http://progit.org/book/ch4-6.html">"Pro Git" by Scott Chacon</a> and was on the section about "git instaweb". This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view): </p>
+<pre class="code literal-block">cd /code/app/.git
 </pre>
 
 
 <p>and run the instaweb command (note: I'm on a macbook pro that already has ruby installed, hence my choice of using webrick instead of the default lighttpd): </p>
-<pre class="code literal-block"><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">start</span>
+<pre class="code literal-block">git instaweb -d webrick --start
 </pre>
 
 
 <p>I tried the command without the "--start" command and it kept trying to seek a browser. I tried "-b firefox", "-b Firefox", "-b /Application/Firefox.app/MacOS/firefox-bin", etc and they all failed. I found the "--start" suggestion on <a href="http://stackoverflow.com/questions/1258353/running-git-instaweb-on-boot">StackOverflow.com</a> Once I ran this command, I could see the git log, commits, diffs, etc in gitweb for my local changes. What this will do is run the daemon on port 1234 of localhost. If you open your browser of choice and go to <a href="http://localhost:1234">http://localhost:1234</a> then you will see gitweb for the git repository you ran the command in. </p>
 <p>To stop the process, just exchange "--start" with "--stop" </p>
-<pre class="code literal-block"><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">stop</span>
+<pre class="code literal-block">git instaweb -d webrick --stop
 </pre>
 
 
@@ -569,6 +586,7 @@ git confit core.safecrlf <span class="nb">true</span>
 <p><strong><a href="posts/git-instaweb/#448" title="2009-10-09 13:07:11">Joe Ocampo</a>:</strong> You can simply add this to your .gitconfig [instaweb] httpd=webrick port=4000 browser=open The 'open' command is for safari. OH and to stop instaweb all you have to do is use the following command: git instaweb --stop</p>
 <p><strong><a href="posts/git-instaweb/#449" title="2009-10-09 13:16:37">Jason Meridth</a>:</strong> @Joe Thanks.</p>
 <p><strong><a href="posts/git-instaweb/#450" title="2009-10-30 12:53:48">duplicate mp3 finder</a>:</strong> This is very good and informative site.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -585,41 +603,43 @@ git confit core.safecrlf <span class="nb">true</span>
                 
             </div>
             <div class="body">
-                <p>Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak's <a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block">"gsub with a block"</a> post on <a href="http://robots.thoughtbot.com">the Thoughtbot blog</a>.</p>
+                <div>
+<p>Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak's <a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block">"gsub with a block"</a> post on <a href="http://robots.thoughtbot.com">the Thoughtbot blog</a>.</p>
 <p>I use the twitter gem and just display my last status on my personal homepage at <a href="http://jasonmeridth.com">JasonMeridth.com</a>. I didn't want to hand out my username and password so all I do is encapsulate the twitter piece in a module called TwitterHelper and put it into my app/helpers/ folder in my Rails application:</p>
-<pre class="code literal-block"><span class="k">require</span> <span class="err">'</span><span class="n">twitter</span><span class="s1">'</span>
-<span class="s1">require '</span><span class="nx">pp</span><span class="s1">'</span>
+<pre class="code literal-block">require 'twitter'
+require 'pp'
 
-<span class="s1">module TwitterHelper  </span>
-<span class="s1">  def latest_twitter_status(user_id='</span><span class="nx">armmer</span><span class="s1">')</span>
-<span class="s1">    begin</span>
-<span class="s1">      status = Twitter.user(user_id).status['</span><span class="nx">text</span><span class="s1">']</span>
-<span class="s1">      status ||= ''</span>
-<span class="s1">      status = status.gsub(/http://(.+?)s/) do |url|</span>
-<span class="s1">        " &lt;a href='</span><span class="err">#</span><span class="p">{</span><span class="nb">url</span><span class="p">}</span><span class="s1">' target='</span><span class="nx">_blank</span><span class="s1">'&gt;#{url}&lt;/a&gt; "</span>
-<span class="s1">      end</span>
-<span class="s1">    rescue Exception =&gt; e</span>
-<span class="s1">      logger.info("Twitter Helper Exception: " + e)</span>
-<span class="s1">      status = ""</span>
-<span class="s1">    end</span>
-<span class="s1">  end</span>
-<span class="s1">end</span>
+module TwitterHelper  
+  def latest_twitter_status(user_id='armmer')
+    begin
+      status = Twitter.user(user_id).status['text']
+      status ||= ''
+      status = status.gsub(/http://(.+?)s/) do |url|
+        " <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'#{url}'</span> <span class="na">target=</span><span class="s">'_blank'</span><span class="nt">&gt;</span>#{url}<span class="nt">&lt;/a&gt;</span> "
+      end
+    rescue Exception =&gt; e
+      logger.info("Twitter Helper Exception: " + e)
+      status = ""
+    end
+  end
+end
 </pre>
 
 
 <p>and then in my view I just call:</p>
-<pre class="code literal-block"><span class="n">latest_twitter_status</span>
+<pre class="code literal-block">latest_twitter_status
 </pre>
 
 
 <p>The important part of code to look at is:</p>
-<pre class="code literal-block"><span class="n">status</span> <span class="o">=</span> <span class="nx">status.gsub</span><span class="p">(</span><span class="o">/</span><span class="p">(</span><span class="nx">http</span><span class="p">:</span><span class="c1">//.*)/) do |url|</span>
-  <span class="s2">" &lt;a href='#{url}' target='_blank'&gt;#{url}&lt;/a&gt; "</span>
-<span class="nb">end</span>
+<pre class="code literal-block">status = status.gsub(/(http://.*)/) do |url|
+  " <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'#{url}'</span> <span class="na">target=</span><span class="s">'_blank'</span><span class="nt">&gt;</span>#{url}<span class="nt">&lt;/a&gt;</span> "
+end
 </pre>
 
 
 <p>This code will wrap any strings that start with http:// with an html href.</p>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -638,7 +658,7 @@ git confit core.safecrlf <span class="nb">true</span>
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

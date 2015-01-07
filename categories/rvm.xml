@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (rvm)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 29 Aug 2014 14:08:05 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Setup RVM and Ruby</title><link>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (rvm)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/rvm.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 07 Jan 2015 17:31:48 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Setup RVM and Ruby</title><link>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p&gt;
 &lt;p&gt;Install curl&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install curl
 &lt;/pre&gt;
 
 
 &lt;p&gt;Install RVM (forgot this, thanks &lt;a href="http://twitter.com/jssingh"&gt;Jasdeep&lt;/a&gt;)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;curl -L get.rvm.io | bash -s stable --auto
+&lt;pre class="code literal-block"&gt;curl -L get.rvm.io &lt;span class="p"&gt;|&lt;/span&gt; bash -s stable --auto
 &lt;/pre&gt;
 
 
@@ -18,7 +18,7 @@
 &lt;p&gt;Run rvm requirements to see what needs to be installed&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;rvm requirements
 ...
-Requirements &lt;span class="k"&gt;for &lt;/span&gt;ubuntu/12.10/x86_64
+Requirements &lt;span class="k"&gt;for&lt;/span&gt; ubuntu/12.10/x86_64
 
 NOTE: &lt;span class="s1"&gt;'ruby'&lt;/span&gt; represents Matz&lt;span class="s1"&gt;'s Ruby Interpreter (MRI) (1.8.X, 1.9.X)&lt;/span&gt;
 &lt;span class="s1"&gt;             This is the *original* / standard Ruby Language Interpreter&lt;/span&gt;
@@ -54,7 +54,7 @@ subversion pkg-config libffi-dev
 &lt;p&gt;Install Ruby&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;rvm install 1.9.3
 ...
-Searching &lt;span class="k"&gt;for &lt;/span&gt;binary rubies, this might take some time.
+Searching &lt;span class="k"&gt;for&lt;/span&gt; binary rubies, this might take some time.
 ruby-1.9.3-p392 - &lt;span class="c"&gt;#configure&lt;/span&gt;
 ruby-1.9.3-p392 - &lt;span class="c"&gt;#download&lt;/span&gt;
 &lt;span class="c"&gt;#############################################                             62.9%&lt;/span&gt;
@@ -84,7 +84,7 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 
 &lt;p&gt;As [Jasdeep][2] says in the comments, it is worth knowing that you’ll need a javascript runtime to use Rails so you might as well install nodejs (because it is fun):&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install nodejs
-&lt;/pre&gt;</description><category>ruby</category><category>rvm</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>ruby</category><category>rvm</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;my_app/&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rails console
 /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;': no such file to load -- readline (LoadError)&lt;/span&gt;
 &lt;span class="s1"&gt;from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `'&lt;/span&gt;
@@ -107,10 +107,10 @@ from script/rails:6:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span clas
 &lt;p&gt;I did this and it still didn’t work. The advice I received from googling was to compile the readline extension by hand and see if any dependencies were missing:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install libncurses5-dev libreadline5-dev
 &lt;span class="nv"&gt;$ &lt;/span&gt;ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
-checking &lt;span class="k"&gt;for &lt;/span&gt;tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... no
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/readline.h... no
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/history.h... no
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/readline.h... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/history.h... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... no
 ...
 &lt;/pre&gt;
 
@@ -123,10 +123,10 @@ checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()
 
 &lt;p&gt;Now when I run extconf.rb, everything is there:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
-checking &lt;span class="k"&gt;for &lt;/span&gt;tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... yes
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/readline.h.... yes
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/history.h... yes
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/readline.h.... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/history.h... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... yes
 ...
 &lt;/pre&gt;
 
@@ -143,5 +143,5 @@ checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()
 &lt;p&gt;Now the rails console works:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;my_app&lt;span class="nv"&gt;$ &lt;/span&gt;rails console
 Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.0.3&lt;span class="o"&gt;)&lt;/span&gt;
-ruby-1.9.2-p0 &amp;amp;gt;
-&lt;/pre&gt;</description><category>rails</category><category>rvm</category><guid>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</guid><pubDate>Thu, 25 Nov 2010 06:00:00 GMT</pubDate></item></channel></rss>
+ruby-1.9.2-p0 &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;gt&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>rails</category><category>rvm</category><guid>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</guid><pubDate>Thu, 25 Nov 2010 06:00:00 GMT</pubDate></item></channel></rss>

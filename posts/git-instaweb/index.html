@@ -63,19 +63,20 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>I was reading <a href="http://progit.org/book/ch4-6.html">"Pro Git" by Scott Chacon</a> and was on the section about "git instaweb". This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view): </p>
-<pre class="code literal-block"><span class="n">cd</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="p">.</span><span class="n">git</span>
+            <div>
+<p>I was reading <a href="http://progit.org/book/ch4-6.html">"Pro Git" by Scott Chacon</a> and was on the section about "git instaweb". This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view): </p>
+<pre class="code literal-block">cd /code/app/.git
 </pre>
 
 
 <p>and run the instaweb command (note: I'm on a macbook pro that already has ruby installed, hence my choice of using webrick instead of the default lighttpd): </p>
-<pre class="code literal-block"><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">start</span>
+<pre class="code literal-block">git instaweb -d webrick --start
 </pre>
 
 
 <p>I tried the command without the "--start" command and it kept trying to seek a browser. I tried "-b firefox", "-b Firefox", "-b /Application/Firefox.app/MacOS/firefox-bin", etc and they all failed. I found the "--start" suggestion on <a href="http://stackoverflow.com/questions/1258353/running-git-instaweb-on-boot">StackOverflow.com</a> Once I ran this command, I could see the git log, commits, diffs, etc in gitweb for my local changes. What this will do is run the daemon on port 1234 of localhost. If you open your browser of choice and go to <a href="http://localhost:1234">http://localhost:1234</a> then you will see gitweb for the git repository you ran the command in. </p>
 <p>To stop the process, just exchange "--start" with "--stop" </p>
-<pre class="code literal-block"><span class="n">git</span> <span class="n">instaweb</span> <span class="o">-</span><span class="n">d</span> <span class="n">webrick</span> <span class="o">--</span><span class="n">stop</span>
+<pre class="code literal-block">git instaweb -d webrick --stop
 </pre>
 
 
@@ -84,6 +85,7 @@ article: http://ogp.me/ns/article#
 <p><strong><a href=".#448" title="2009-10-09 13:07:11">Joe Ocampo</a>:</strong> You can simply add this to your .gitconfig [instaweb] httpd=webrick port=4000 browser=open The 'open' command is for safari. OH and to stop instaweb all you have to do is use the following command: git instaweb --stop</p>
 <p><strong><a href=".#449" title="2009-10-09 13:16:37">Jason Meridth</a>:</strong> @Joe Thanks.</p>
 <p><strong><a href=".#450" title="2009-10-30 12:53:48">duplicate mp3 finder</a>:</strong> This is very good and informative site.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -117,7 +119,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

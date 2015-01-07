@@ -56,37 +56,39 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>I've heard or read too many git blog posts/pod casts state that if you create a new file in your local Git repo and you want to shorten the steps on getting it added to the local repository, all you have to do is:</p>
-<pre class="code literal-block"><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s">"my commit message"</span>
+                <div>
+<p>I've heard or read too many git blog posts/pod casts state that if you create a new file in your local Git repo and you want to shorten the steps on getting it added to the local repository, all you have to do is:</p>
+<pre class="code literal-block">git commit -am "my commit message"
 </pre>
 
 
 <p>This is <em>not</em> true. If the file has never been added to the repo prior, then you still have to:</p>
-<pre class="code literal-block"><span class="nx">git</span> <span class="nb">add</span> <span class="o">&lt;</span><span class="nx">file_name</span><span class="o">&gt;</span>
+<pre class="code literal-block">git add &lt;file_name&gt;
 </pre>
 
 
 <p>Why?</p>
 <p>The "git commit -a" command is a shortcut to a two-step process. After you modify a file that is already known by the repo, you still have to tell the repo, "Hey! I want to add this to the staged files and eventually commit it to you." That is done by issuing the "git add" command. "git commit -a" is staging the file and committing it in one step.</p>
 <p>If you create a new file, edit it, and issue the "git commit -a" command, you will see something like:</p>
-<pre class="code literal-block"><span class="err">~</span> <span class="o">&gt;</span> <span class="nx">mkdir</span> <span class="nx">test</span>
-<span class="err">~</span> <span class="o">&gt;</span> <span class="nx">cd</span> <span class="nx">test</span>
-<span class="err">~</span><span class="p">/</span><span class="nx">test</span> <span class="o">&gt;</span> <span class="nx">git</span> <span class="nx">initInitialized</span> <span class="nx">empty</span> <span class="nx">Git</span> <span class="n">repository</span> <span class="k">in</span> <span class="p">/</span><span class="nx">Users</span><span class="p">/</span><span class="nx">jasonmeridth</span><span class="p">/</span><span class="nx">test</span><span class="p">/</span><span class="nx">.git</span><span class="o">/</span>
-<span class="err">~</span><span class="p">/</span><span class="nx">test</span><span class="p">(</span><span class="nx">master</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">touch</span> <span class="nx">test</span>
-<span class="err">~</span><span class="p">/</span><span class="nx">test</span><span class="p">(</span><span class="nx">master</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nx">git</span> <span class="nx">commit</span> <span class="na">-am</span> <span class="s2">"initial commit"</span>
-<span class="err">#</span> <span class="k">On</span> <span class="nx">branch</span> <span class="nx">master</span>
-<span class="err">#</span>
-<span class="err">#</span> <span class="nx">Initial</span> <span class="nx">commit</span>
-<span class="err">#</span>
-<span class="err">#</span> <span class="nx">Untracked</span> <span class="nx">files</span><span class="p">:</span>
-<span class="err">#</span>   <span class="p">(</span><span class="nx">use</span> <span class="s2">"git add &lt;file&gt;..."</span> <span class="k">to</span> <span class="n">include</span> <span class="k">in</span> <span class="nx">what</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">committed</span><span class="p">)</span>
-<span class="err">#</span>
-<span class="err">#</span>       <span class="nx">test</span>
-<span class="nx">nothing</span> <span class="nx">added</span> <span class="k">to</span> <span class="nx">commit</span> <span class="nx">but</span> <span class="nx">untracked</span> <span class="nx">files</span> <span class="nx">present</span> <span class="p">(</span><span class="nx">use</span> <span class="s2">"git add"</span> <span class="k">to</span> <span class="nx">track</span><span class="p">)</span>
+<pre class="code literal-block">~ &gt; mkdir test
+~ &gt; cd test
+~/test &gt; git initInitialized empty Git repository in /Users/jasonmeridth/test/.git/
+~/test(master) &gt; touch test
+~/test(master) &gt; git commit -am "initial commit"
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add &lt;file&gt;..." to include in what will be committed)
+#
+#       test
+nothing added to commit but untracked files present (use "git add" to track)
 </pre>
 
 
 <p>The "nothing added to commit but untracked files present" is the key comment. Git even suggests using "git add" to track the file. See, it's user friendly. Just be aware.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -103,7 +105,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>I've personally added a pre-commit hook to my local git repos. It's like a personal CI before I push back to origin/master. I run my tests locally anyway before committing and pushing, so I thought I would automate it.</p>
+                <div>
+<p>I've personally added a pre-commit hook to my local git repos. It's like a personal CI before I push back to origin/master. I run my tests locally anyway before committing and pushing, so I thought I would automate it.</p>
 <p>I open the .git/hooks/pre-commit file in my local repo (i.e, full path is something like /Users/jasonmeridth/code/rails/myapp/.git/hooks/pre-commit) and put the following:</p>
 <table class="codehilitetable"><tr>
 <td class="linenos"><div class="linenodiv"><pre>1
@@ -121,11 +124,12 @@ rake
 
 <p>For non-rails developers, this will run any database migrations on my _development database, then ensure the _test database has the same schema, and then runs the tests.</p>
 <p>Git hooks are not made executable by default, except on Windows because it doesn't understand the unix permissions. On my Mac, I have to issue the following command (from the app root):</p>
-<pre class="code literal-block"><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="p">.</span><span class="n">git</span><span class="o">/</span><span class="n">hooks</span><span class="o">/</span><span class="n">pre</span><span class="o">-</span><span class="n">commit</span>
+<pre class="code literal-block">chmod +x .git/hooks/pre-commit
 </pre>
 
 
 <p>This makes the pre-commit hook executable and Git will run it before every commit to this repo. If this process returns a non-zero value (failure), then the commit does <em>not</em> happen. I'll be shown the failing tests and I can fix them and try to re-commit.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -142,7 +146,8 @@ rake
                 
             </div>
             <div class="body">
-                <p>Using the following code:</p>
+                <div>
+<p>Using the following code:</p>
 <p>This git post-receive hook script queries the latest commit, gets the revision changes, and then passes that payload (via json) to a net/https POST call. I setup our <a href="http://www.integrityapp.com/">Integrity CI server</a> with a self-signed certificate and HTTP basic authentication.  </p>
 <p>The Net::HTTP::Post.new instantiation group handles populating the basic authentication information and putting the payload into the form data of the request. The Net::HTTP.new group handles telling the request that it will be via SSL (443) and to not verify the SSL certificate (since I'm using a self-signed certificate; otherwise, I'd get a warning and kill my automation process)  </p>
 <p>The other important part is the "if pid = fork". The ruby <a href="http://www.ruby-doc.org/core/classes/Process.html#M003179">fork</a> command allows code to happen in the background, in the case the POST call, and therefore make the call synchronous. Otherwise, when the developers commit their code to the repository, they will have to wait for the build to finish before their prompt will be returned to them. fork will return zero (0) if it fails to create the background process.  </p>
@@ -151,6 +156,7 @@ rake
 <h3>Comments</h3>
 <p><strong><a href="posts/git-post-receive-hook-with-integrity-post-call/#446" title="2009-07-22 05:25:21">not-impossible</a>:</strong> The code doesn't show up in the Google reader. Any idea why? do you use some funny code highlighting? Cheers</p>
 <p><strong><a href="posts/git-post-receive-hook-with-integrity-post-call/#447" title="2009-07-22 16:05:56">Jason Meridth</a>:</strong> @not-impossible Unfortunately RSS feeds won't allow nested code that lies in a script tag and that is what gist.github.com uses. I may have to go back to dp.syntaxhighlighter.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -173,7 +179,8 @@ rake
 
             </div>
             <div class="body">
-                <h3>ROUGH DRAFT - NOT READY FOR RELEASE OR REVIEW</h3>
+                <div>
+<h3>ROUGH DRAFT - NOT READY FOR RELEASE OR REVIEW</h3>
 <p>This post is on TortoiseGit.  For those that may be unaware, there is a very popular tool called TortoiseSVN that integrates with the Windows Explorer and allows a Windows User to graphically manage a Subversion repository.  Well, some developers decided to port that tool over to TortoiseGit.</p>
 <p><img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_63A7C954.png"></p>
 <p><strong>Note: </strong>I personally think that it’s funny that Google Code seems to be the place this code is hosted.  Why?  Google Code only supports Subversion and Mercurial, currently.  I would assume a tool that is used for Git repository management would be stored in a Git repository.  Maybe it’s just me.  That’s why when I go to the “Source” tab on the interface above, I see that the TortoiseGit code is actually hosted at <a href="http://repo.or.cz/w/TortoiseGit.git">http://repo.or.cz/w/TortoiseGit.git</a>.  When I click the link you will see a gitweb interface to the repository.  <a href="http://repo.or.cz">http://repo.or.cz</a> is a public Git hosting website, kind of like http://<a href="http://github.com">github.com</a>.</p>
@@ -212,6 +219,7 @@ rake
 <h2><strong>BACK TO THE WINDOWS EXPLORER SUB-MENU</strong></h2>
 <h3><strong>PULL</strong></h3>
 <p>When I choose the “Pull” option from the TortoiseGit sub-menu, I get the following:</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -228,7 +236,8 @@ rake
                 
             </div>
             <div class="body">
-                <p><a href="blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a></p>
+                <div>
+<p><a href="blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a></p>
 <p><a href="blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 <br>
 </a></p>
 <p><a href="blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx">Git For Windows Developers - Git Series - Part 3</a></p>
@@ -332,6 +341,7 @@ rake
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-3/#502" title="2011-05-27 09:31:00">Blakshmireddy</a>:</strong> Hi Jason, Your post is really helpful and easy to understand. I want to set-up remote repository in windows server rather than in github. I didn't find any tutorial. If you have one please share it..</p>
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-3/#503" title="2011-05-27 11:53:00">Jason Meridth</a>:</strong> Blackshmireddy: These are the 2 best posts out there: http://www.shannoncornish.com/blog/2009/04/git-server-windows-2008/ http://www.shannoncornish.com/blog/2009/04/gitosis-windows-server-2008/ They show you how to install cygwin, git, python setuptools and gitosis on a Windows 2008 Server box.</p>
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-3/#505" title="2011-06-25 23:08:00">Lewis bradbrook</a>:</strong> i think it is good but does not work</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -348,7 +358,8 @@ rake
                 
             </div>
             <div class="body">
-                <p><a href="blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a></p>
+                <div>
+<p><a href="blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a></p>
 <p><a href="blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 <br>
 </a></p>
 <p><a href="blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx">Git For Windows Developers - Git Series - Part 3</a></p>
@@ -399,6 +410,7 @@ rake
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-2/#491" title="2011-04-25 21:15:00">Terry Aney</a>:</strong> "UPDATE: I no longer use the “git pull –squash…” workflow. I have a Part 4 post pending. Please read the first part of this post for Github.com knowledge, but just skim the remainder. Thanks." a) Is Part 4 still pending? b) Does this mean that your workflow just a bit below this update statement is invalid? I'm thinking I want to make a pattern for our environment that you always squash your commits on your local repo before they are put into our 'master repo' so this seemed to be what I was interested in. Great 3 part series...I'm late to the game but enjoyed them nonetheless.</p>
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-2/#493" title="2011-04-26 15:21:00">Terry Aney</a>:</strong> For a git noob, mind expanding that a 'bit'. Just trying to get a policy in place of generally 'cleaning up local repo' before pushing. In my example I did... git checkout -b SquashTest edit... git commit -a -m "Squash Commit 1" edit.. git commit -a -m "Squash Commit 2" ...now what? I want to make these two commits one 'Squash Feature' commit. I tried git rebase -i, but it wants more options supplied...still getting over initial learning curve and if something on git-rebase man page was supposed to click, it didn't. Thanks in advance.</p>
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-2/#494" title="2011-04-27 01:54:00">Terry Aney</a>:</strong> Found a good noob tutorial here http://www.silverwareconsulting.com/index.cfm/2010/6/6/Using-Git-Rebase-to-Squash-Commits</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -415,7 +427,8 @@ rake
                 
             </div>
             <div class="body">
-                <p><em><strong>UPDATE:</strong> I’ve updated the msysgit installation screens so they are more current.  Git-1.7.7.1 is the latest one as of this update.  The subsequent screens show Git-1.6.3.  I assure you that all of the commands in the first three parts of this series will work on 1.6.3.</em> <a href="blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a> <a href="blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 </a> <a href="blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx">Git For Windows Developers - Git Series - Part 3</a> This post is going to be the first of a few. I plan to convey everything I've learned the past 8 months while using git on a development team. I'm currently working on a Macbook Pro, doing Ruby on Rails development with git as the source control.  These posts will be specific to using git on the Windows operating system. This post is going to talk about installing msysgit, creating ssh keys, and creating a local git repository. If you already have msysgit installed, have created your ssh keys, and have an existing application you just want to put in a git repository, go here</p>
+                <div>
+<p><em><strong>UPDATE:</strong> I’ve updated the msysgit installation screens so they are more current.  Git-1.7.7.1 is the latest one as of this update.  The subsequent screens show Git-1.6.3.  I assure you that all of the commands in the first three parts of this series will work on 1.6.3.</em> <a href="blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx">Git For Windows Developers - Git Series - Part 1</a> <a href="blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx">Git For Windows Developers - Git Series - Part 2 </a> <a href="blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx">Git For Windows Developers - Git Series - Part 3</a> This post is going to be the first of a few. I plan to convey everything I've learned the past 8 months while using git on a development team. I'm currently working on a Macbook Pro, doing Ruby on Rails development with git as the source control.  These posts will be specific to using git on the Windows operating system. This post is going to talk about installing msysgit, creating ssh keys, and creating a local git repository. If you already have msysgit installed, have created your ssh keys, and have an existing application you just want to put in a git repository, go here</p>
 <h4>Installing msysgit On Windows</h4>
 <p>For windows, install <a href="http://code.google.com/p/msysgit/downloads/list">msysgit</a> (both ssh key generation capabilities and git come with this tool): Download the latest version of msysgit: <img alt="" src="posts/git-for-windows-developers-git-series-part-1/jasonmeridth/files/2009/06/download11.png"> <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/download21.png"> Going through the setup.  Click next past the first window. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install11.png"> Agree to the GPL terms: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install21.png"> Set the installation location (default was fine for me: C:Program FilesGit): <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install31.png"> Choose installation options.  I don’t like to clutter my desktop, so that one is unchecked.  I also use Console2 so that is on my Quick Launch, not Git Bash  The context menu entries options give a user two new options on files when right-clicked in Windows Explorer.  We’ll talk about this later in the post. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install41.png"> The next screen asks what name the folder that the program will be available from when I click Start-&gt;Programs, etc: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install51.png"> I use the “Git Bash only” option because it’s the only reason I downloaded msysgit.  The other two options are tightly coupled to the operating system’s current setup. _ <strong>UPDATE</strong>:  Via <a href="http://joshuaflanagan.lostechies.com">Joshua Flanagan</a>, I was informed that tortoisegit, a UI tool, suggests that you choose the second option "Run Git from the Windows Command Prompt".  I've done both, I just prefer the first option because I don't use tortoisegit.  Just be aware._ <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install61.png"> Typical Windows developers won’t interact with other operating systems so choosing the 3rd option, in regards to non-handling of line-endings is usually best. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install71.png"> Click next and the installation starts. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install81.png"> Uncheck the readme (who reads those anyway?) and click Finish. <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/install91.png"> Once installed, when I click the Windows button and type git (since I’m using Windows 7) I’ll see “Git Bash”, “Git Gui'”, “Uninstall Git”.  Click “Git Bash”.  You will see the version at the top of the window.  We're good to go: <img alt="" src="http://lostechies.com/jasonmeridth/files/2009/06/done.png"> I also issue the following commands, “git config –global user.email <a href="mailto:my@email.com">my@email.com</a>” and “git config –global user.name ‘Jason Meridth’”: <img alt="image" src="//lostechies.com/jasonmeridth/files/2011/03/image_thumb_3E2DDA4E.png"> After I commit code in my new repository, later in the post, we will see why these are relevant. </p>
 <h4>Generating SSH Keys</h4>
@@ -454,6 +467,7 @@ rake
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-1/#525" title="2012-03-09 07:19:00">Jason Meridth</a>:</strong> I did not know that.  Nice trick.  Thank you for sharing.</p>
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-1/#526" title="2012-03-14 18:17:00">Cherif</a>:</strong> Great tuto! Thanks a lot!</p>
 <p><strong><a href="posts/git-for-windows-developers-git-series-part-1/#527" title="2012-03-29 20:33:00">Mark Webb</a>:</strong> Your the Man Jason! Been a bit confused jumping from local unix and MS machines. Your tutorial was excellent! By the way, "trying to not let best be the enemy of the better" is a refrain that soothes my OCD. Thanks again, looking forward to more of your work!</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -470,7 +484,8 @@ rake
                 
             </div>
             <div class="body">
-                <p>This is my first blog post from TextMate on my Mac. I'm using the HTML formatting. I will try the markdown and textile versions later. The key to getting this working with Community Server was when you click "Bundles-&gt;Blogging-&gt;Setup Blogs" and the following template shows up:</p>
+                <div>
+<p>This is my first blog post from TextMate on my Mac. I'm using the HTML formatting. I will try the markdown and textile versions later. The key to getting this working with Community Server was when you click "Bundles-&gt;Blogging-&gt;Setup Blogs" and the following template shows up:</p>
 <h2>List of Blogs</h2>
 <h2></h2>
 <h2>Enter a blog name followed by the endpoint URL</h2>
@@ -485,6 +500,7 @@ rake
 <p><strong><a href="posts/textmate-and-community-server-2008-5/#406" title="2009-05-21 13:49:31">Scott Watermasysk</a>:</strong> I have used TextMate to blog for a while. Might want to check out http://www.smileonmymac.com/TextExpander/ which can save you the hassle of writing some HTML. -Scott</p>
 <p><strong><a href="posts/textmate-and-community-server-2008-5/#407" title="2009-05-21 13:59:19">Jason Meridth</a>:</strong> @Scott C Reynolds I am merely a man who stumbled upon an answer and got lucky @Scott Watermasysk If you have any tips, please throw them my way. I will definitely check out TextExpander</p>
 <p><strong><a href="posts/textmate-and-community-server-2008-5/#408" title="2009-06-07 23:03:15">Ryan Svihla</a>:</strong> Awesome will start blogging in TextMate now</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -501,7 +517,8 @@ rake
                 
             </div>
             <div class="body">
-                <p>This list is for any developers in the San Antonio, TX area.  These are the communities that are growing/starting that I've been involved (member/leader).  If anyone knows of others please leave a comment and I'll update the post.  (Man we love our Tuesdays in San Antonio, every Tuesday is a group meeting)</p>
+                <div>
+<p>This list is for any developers in the San Antonio, TX area.  These are the communities that are growing/starting that I've been involved (member/leader).  If anyone knows of others please leave a comment and I'll update the post.  (Man we love our Tuesdays in San Antonio, every Tuesday is a group meeting)</p>
 <h4>Alamo Coders (organizer <a href="http://www.twitter.com/pjdennis">Phil Dennis</a>)</h4>
 <p><a href="http://www.alamocoders.net">http://www.alamocoders.net</a></p>
 <p>Welcome to <strong>Alamo Coders.  </strong>We are a FREE San Antonio area IT professionals Users Group that focus on the tools, technologies, and programming languages that help a software developer/architect/manager in today's industry. If would like to learn more about software development or the tools that are involved in that process, or if you just want to learn more about what <strong>Alamo Coders</strong> has to offer the San Antonio area IT community, then please join our group.</p>
@@ -525,6 +542,7 @@ and switching off between the books. Following meeting will be back to Lean, mee
 <p>There is now a SARuby group in San Antonio.  This month's meeting is Tuesday, April 28 @ 6:30 pm.  It is at Anderson Marketing Group (Thanks to <a href="http://pixelnate.com/">Nate</a> for providing the location).  Map: <a href="http://tinyurl.com/ckl43y">http://tinyurl.com/ckl43y</a></p>
 <h3>MEETINGS: LAST TUESDAY OF EVERY MONTH (@ Anderson Marketing)</h3>
 <p><a href="http://groups.google.com/group/saruby/browse_thread/thread/c68606112c00e79">More detailed meeting information</a></p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -541,7 +559,8 @@ and switching off between the books. Following meeting will be back to Lean, mee
                 
             </div>
             <div class="body">
-                <p>UPDATE: guard clause throws LocalJumpError. Changed to simple if block Context: I needed our hudson CI builds to auto-fire when a developer pushes their code changes to our canonical/upstream git repositories. In your .git/hooks/post-receive file place the file code (FULL CODE):</p>
+                <div>
+<p>UPDATE: guard clause throws LocalJumpError. Changed to simple if block Context: I needed our hudson CI builds to auto-fire when a developer pushes their code changes to our canonical/upstream git repositories. In your .git/hooks/post-receive file place the file code (FULL CODE):</p>
 <table class="codehilitetable"><tr>
 <td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -582,47 +601,48 @@ and switching off between the books. Following meeting will be back to Lean, mee
 </tr></table>
 
 <p>The while loop checks to make sure there are values in STDIN (by default they are rev_old, rev_new, and ref).</p>
-<pre class="code literal-block"><span class="cp">#   </span>
-<span class="k">while</span> <span class="p">(</span><span class="n">input</span> <span class="o">=</span> <span class="n">STDIN</span><span class="p">.</span><span class="n">read</span><span class="p">)</span> <span class="o">!=</span> <span class="err">''</span>
-<span class="n">end</span>
+<pre class="code literal-block">#   
+while (input = STDIN.read) != ''
+end
 </pre>
 
 
 <p>I put an if statement block:</p>
-<pre class="code literal-block"><span class="k">if</span> <span class="n">ref</span> <span class="o">==</span> <span class="s">"refs/heads/master"</span>
-<span class="n">end</span>
+<pre class="code literal-block">if ref == "refs/heads/master"
+end
 </pre>
 
 
 <p>to make sure I only fire the build if it is the master branch. Set the URL for the app you want to build:</p>
-<pre class="code literal-block"><span class="n">url</span><span class="o">=</span><span class="s">"http://yourhudsondomain.com/job/job_name_here/build?delay=0sec"</span>
+<pre class="code literal-block">url="http://yourhudsondomain.com/job/job_name_here/build?delay=0sec"
 </pre>
 
 
 <p>Add a little text to notify the user what is going on (always a good idea):</p>
-<pre class="code literal-block"><span class="n">puts</span> <span class="s">"Run Hudson build for job_name_here application"</span>
+<pre class="code literal-block">puts "Run Hudson build for job_name_here application"
 </pre>
 
 
 <p>And finally all the url with wget and feeding any response to <a href="http://www.xaprb.com/blog/2006/06/06/what-does-devnull-21-mean/">the black hole that is /dev/null</a></p>
 <p>:</p>
-<pre class="code literal-block"><span class="err">`</span><span class="n">wget</span> <span class="err">#</span><span class="p">{</span><span class="n">url</span><span class="p">}</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="err">`</span>
+<pre class="code literal-block">`wget #{url} &gt; /dev/null 2&gt;&amp;1`
 </pre>
 
 
 <p>IMPORTANT: Don't forget to run:</p>
-<pre class="code literal-block"><span class="n">chmod</span> <span class="n">a</span><span class="o">+</span><span class="n">x</span> <span class="p">.</span><span class="n">git</span><span class="o">/</span><span class="n">hooks</span><span class="o">/</span><span class="n">post</span><span class="o">-</span><span class="n">receive</span>
+<pre class="code literal-block">chmod a+x .git/hooks/post-receive
 </pre>
 
 
 <p>so that the file can be run Some Gotchas: 1. If you are going to a url that has http basic authentication like my actual script does, you can pass the username and password like you normally would in an HTTP call:</p>
-<pre class="code literal-block"><span class="n">url</span><span class="o">=</span><span class="s">"http://username:password@yourhudsondomain.com/job/job_name_here/build?delay=0sec"</span>
+<pre class="code literal-block">url="http://username:password@yourhudsondomain.com/job/job_name_here/build?delay=0sec"
 </pre>
 
 
 <p>2. If you are doing an https call with a self-signed certificate, wget will complain. You can add the <a href="http://www.gnu.org/software/wget/manual/html_node/HTTPS-_0028SSL_002fTLS_0029-Options.html">--no-check-certificate</a> argument to wget to bypass certificate validation against local certificate caches:</p>
-<pre class="code literal-block"><span class="err">`</span><span class="n">wget</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">check</span><span class="o">-</span><span class="n">certificate</span> <span class="err">#</span><span class="p">{</span><span class="n">url</span><span class="p">}</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="err">`</span>
+<pre class="code literal-block">`wget --no-check-certificate #{url} &gt; /dev/null 2&gt;&amp;1`
 </pre>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -641,7 +661,7 @@ and switching off between the books. Following meeting will be back to Lean, mee
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

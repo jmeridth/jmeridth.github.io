@@ -63,46 +63,48 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>For individuals who do not like command prompt, you can use a GUI tool to handle your NAnt build files.  This was mentioned on the <a href="http://tech.groups.yahoo.com/group/altnetconf/">Alt.NET yahoo group</a>. Check it out <a href="http://nantgui.berlios.de/">here</a>.  I just played with it briefly and it does it's job.  You are able to also run the build file while in the UI and see the output.  I'm a command-line guy so, I will probably be using for educating other developers on NAnt.  It's a good starting point.  It will get people up and running fast.</p>
+            <div>
+<p>For individuals who do not like command prompt, you can use a GUI tool to handle your NAnt build files.  This was mentioned on the <a href="http://tech.groups.yahoo.com/group/altnetconf/">Alt.NET yahoo group</a>. Check it out <a href="http://nantgui.berlios.de/">here</a>.  I just played with it briefly and it does it's job.  You are able to also run the build file while in the UI and see the output.  I'm a command-line guy so, I will probably be using for educating other developers on NAnt.  It's a good starting point.  It will get people up and running fast.</p>
 <p><strong><em>NOTE</em></strong>: If you are going to .NET 2.0 related items with your build file, you need to edit the config file (NAnt-Gui.exe.config) in the <location you downloaded the tool>bin folder.  Look at the very bottom of the file and un-comment the 2.0 runtime lines (just like the NAnt.config files too):  </location></p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="p">:</span> <span class="o">&lt;</span><span class="nb">startup</span><span class="o">&gt;</span>
+<pre class="code literal-block">   1: <span class="nt">&lt;startup&gt;</span>
 
 
-   <span class="mi">2</span><span class="p">:</span>         <span class="o">&lt;!--</span> <span class="bp">.</span><span class="nb">NET</span> <span class="nx">Framework</span> <span class="mf">2.0</span> <span class="o">--&gt;</span>
+   2:         <span class="c">&lt;!-- .NET Framework 2.0 --&gt;</span>
 
 
-   <span class="mi">3</span><span class="p">:</span>         <span class="o">&lt;</span><span class="nx">supportedRuntime</span> <span class="n">version</span><span class="o">=</span><span class="s2">"v2.0.50727"</span> <span class="o">/&gt;</span><span class="err"> </span> <span class="o">&lt;!--</span> <span class="nx">The</span> <span class="nb">line</span> <span class="nx">I</span> <span class="nx">needed</span> <span class="o">--&gt;</span>
+   3:         <span class="nt">&lt;supportedRuntime</span> <span class="na">version=</span><span class="s">"v2.0.50727"</span> <span class="nt">/&gt;</span>  <span class="c">&lt;!-- The line I needed --&gt;</span>
 
 
-   <span class="mi">4</span><span class="p">:</span>         <span class="o">&lt;!--</span> <span class="bp">.</span><span class="nb">NET</span> <span class="nx">Framework</span> <span class="mf">2.0</span> <span class="nx">Beta</span> <span class="mi">2</span> <span class="o">--&gt;</span>
+   4:         <span class="c">&lt;!-- .NET Framework 2.0 Beta 2 --&gt;</span>
 
 
-   <span class="mi">5</span><span class="p">:</span>         <span class="o">&lt;</span><span class="nx">supportedRuntime</span> <span class="n">version</span><span class="o">=</span><span class="s2">"v2.0.50215"</span> <span class="o">/&gt;</span>
+   5:         <span class="nt">&lt;supportedRuntime</span> <span class="na">version=</span><span class="s">"v2.0.50215"</span> <span class="nt">/&gt;</span>
 
 
-   <span class="mi">6</span><span class="p">:</span>         <span class="o">&lt;!--</span> <span class="bp">.</span><span class="nb">NET</span> <span class="nx">Framework</span> <span class="mf">2.0</span> <span class="nx">Beta</span> <span class="mi">1</span> <span class="o">--&gt;</span>
+   6:         <span class="c">&lt;!-- .NET Framework 2.0 Beta 1 --&gt;</span>
 
 
-   <span class="mi">7</span><span class="p">:</span>         <span class="o">&lt;</span><span class="nx">supportedRuntime</span> <span class="n">version</span><span class="o">=</span><span class="s2">"v2.0.40607"</span> <span class="o">/&gt;</span>
+   7:         <span class="nt">&lt;supportedRuntime</span> <span class="na">version=</span><span class="s">"v2.0.40607"</span> <span class="nt">/&gt;</span>
 
 
-   <span class="mi">8</span><span class="p">:</span>         <span class="o">&lt;!--</span> <span class="bp">.</span><span class="nb">NET</span> <span class="nx">Framework</span> <span class="mf">1.1</span> <span class="o">--&gt;</span>
+   8:         <span class="c">&lt;!-- .NET Framework 1.1 --&gt;</span>
 
 
-   <span class="mi">9</span><span class="p">:</span>         <span class="o">&lt;</span><span class="nx">supportedRuntime</span> <span class="n">version</span><span class="o">=</span><span class="s2">"v1.1.4322"</span> <span class="o">/&gt;</span>
+   9:         <span class="nt">&lt;supportedRuntime</span> <span class="na">version=</span><span class="s">"v1.1.4322"</span> <span class="nt">/&gt;</span>
 
 
-  <span class="mi">10</span><span class="p">:</span>         <span class="o">&lt;!--</span> <span class="bp">.</span><span class="nb">NET</span> <span class="nx">Framework</span> <span class="mf">1.0</span> <span class="o">--&gt;</span>
+  10:         <span class="c">&lt;!-- .NET Framework 1.0 --&gt;</span>
 
 
-  <span class="mi">11</span><span class="p">:</span>         <span class="o">&lt;</span><span class="nx">supportedRuntime</span> <span class="n">version</span><span class="o">=</span><span class="s2">"v1.0.3705"</span> <span class="o">/&gt;</span>
+  11:         <span class="nt">&lt;supportedRuntime</span> <span class="na">version=</span><span class="s">"v1.0.3705"</span> <span class="nt">/&gt;</span>
 
 
-  <span class="mi">12</span><span class="p">:</span>     <span class="o">&lt;/</span><span class="nb">startup</span><span class="o">&gt;</span>
+  12:     <span class="nt">&lt;/startup&gt;</span>
 </pre>
 
 
 <p><strong><em>(NAnt-Gui.exe.config file, startup section at bottom of file)</em></strong></p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -136,7 +138,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

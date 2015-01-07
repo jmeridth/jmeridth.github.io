@@ -64,44 +64,45 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>This post was decided upon after watching <a href="http://hammett.castleproject.org/">Hammet</a>'s <a href="http://hammett.castleproject.org/wp-content/uploads/2007/01/mr%20formvalidation.html">screencast</a> on using attribute-based validation in MonoRail.</p>
+            <div>
+<p>This post was decided upon after watching <a href="http://hammett.castleproject.org/">Hammet</a>'s <a href="http://hammett.castleproject.org/wp-content/uploads/2007/01/mr%20formvalidation.html">screencast</a> on using attribute-based validation in MonoRail.</p>
 <p><strong>*NOTE</strong>: I do not agree with embedding validation into the domain model.  I would prefer a service handle this, but I'm utilizing the validation that is in the framework.  I've been skimming some of Bill McCafferty's MonoRail posts and have seen him use items like fValidate, but haven't had an opportunity to use them.  Anyone have any preferences?</p>
 <p>Be aware that I'm using the latest trunk code: <a href="http://builds.castleproject.org/cruise/index.castle">Get it here from the Castle MonoRail build server</a>.</p>
 <p>First, you need a reference to Castle.Components.Validator in your project:<br>
 <img alt="image" src="jasonmeridth/files/2011/03MonoRail4Validation_11854/image_thumb.png"></p>
 <h3>THE MODEL:</h3>
 <p>Next, you need to add the necessary attributes to the domain entity's properties:  </p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="o">:</span> <span class="n">using</span> <span class="n">Castle</span><span class="p">.</span><span class="n">Components</span><span class="p">.</span><span class="n">Validator</span><span class="p">;</span>
+<pre class="code literal-block">   <span class="nt">1</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">Castle</span><span class="nc">.Components.Validator</span><span class="o">;</span>
 
 
-   <span class="mi">2</span><span class="o">:</span>
+   <span class="nt">2</span><span class="o">:</span>
 
 
-   <span class="mi">3</span><span class="o">:</span> <span class="n">namespace</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Models</span>
+   <span class="nt">3</span><span class="o">:</span> <span class="nt">namespace</span> <span class="nt">JasonMeridth</span><span class="nc">.Models</span>
 
 
-   <span class="mi">4</span><span class="o">:</span> <span class="p">{</span>
+   <span class="nt">4</span><span class="o">:</span> <span class="p">{</span>
 
 
-   <span class="mi">5</span><span class="o">:</span>     <span class="n">public</span> <span class="n">class</span> <span class="n">Contact</span>
+   <span class="m">5</span><span class="o">:</span>     <span class="n">public</span> <span class="n">class</span> <span class="n">Contact</span>
 
 
-   <span class="mi">6</span><span class="o">:</span>     <span class="p">{</span>
+   <span class="m">6</span><span class="o">:</span>     <span class="err">{</span>
 
 
-   <span class="mi">7</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+   <span class="m">7</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">name</span><span class="p">;</span>
 
 
-   <span class="mi">8</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">email</span><span class="p">;</span>
+   <span class="m">8</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">email</span><span class="p">;</span>
 
 
-   <span class="mi">9</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">message</span><span class="p">;</span>
+   <span class="m">9</span><span class="o">:</span>         <span class="n">private</span> <span class="n">string</span> <span class="n">message</span><span class="p">;</span>
 
 
-  <span class="mi">10</span><span class="o">:</span>
+  <span class="m">10</span><span class="o">:</span>
 
 
-  <span class="mi">11</span><span class="o">:</span>         <span class="p">[</span><span class="n">ValidateNonEmpty</span><span class="p">(</span><span class="s">"Name is a required field"</span><span class="p">)</span>
+  <span class="m">11</span><span class="o">:</span>         <span class="cp">[</span><span class="nx">ValidateNonEmpty</span><span class="p">(</span><span class="s2">"Name is a required field"</span><span class="p">)</span>
 </pre>
 
 
@@ -115,6 +116,7 @@ article: http://ogp.me/ns/article#
 <p><strong><a href=".#133" title="2008-03-05 12:04:29">deman</a>:</strong> Jason, I'm waiting for your authentication post. Or did I miss it somewhere? Thank you.</p>
 <p><strong><a href=".#134" title="2008-10-23 15:09:54">Isidro</a>:</strong> I'm having troubles with regex validations. If I put any kind of regexes in the validators the validation stops working! Is this a know issue?</p>
 <p><strong><a href=".#135" title="2008-10-28 12:11:28">Jason Meridth</a>:</strong> @ isidro Whenever that happens to me, it isn't the Monorail Validator, it's my regex. I use Roy Osherove's Regulator tool to test my regex queries and that usually straightens me out. Hope this helps.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -148,7 +150,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (gitosis)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 29 Aug 2014 14:08:04 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Gotcha with Gitosis and python-setuptools</title><link>http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Today I decided to upgrade my slicehost slice from Intrepid Ibex to Lucid Lynx (Intrepid → Jaunty → Karmic → Lucid). Yeah, yeah, I’m a little behind. Anyways, It upgraded just fine. However when I was trying to push code to my gitosis instance (which I installed over a year ago), I got the following stack trace:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (gitosis)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/gitosis.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 07 Jan 2015 17:31:46 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Gotcha with Gitosis and python-setuptools</title><link>http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Today I decided to upgrade my slicehost slice from Intrepid Ibex to Lucid Lynx (Intrepid → Jaunty → Karmic → Lucid). Yeah, yeah, I’m a little behind. Anyways, It upgraded just fine. However when I was trying to push code to my gitosis instance (which I installed over a year ago), I got the following stack trace:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-27-at-12.06.50-AM.png"&gt;&lt;/p&gt;
 &lt;p&gt;This told me that I had been using python-setuptools for python 2.5. A little googling and praying that I wouldn’t have to roll back to the snapshot I took before I started the upgrade (Thank God!), I found the solution. I went onto the gitosis slice, cloned the gitosis repository:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-27-at-12.07.06-AM.png"&gt;&lt;/p&gt;
@@ -7,7 +7,7 @@
 &lt;p&gt;&lt;img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-27-at-12.09.48-AM.png"&gt;&lt;/p&gt;
 &lt;p&gt;and it fixed the issue. Did I mention how much I love google. Hope this helps someone else.&lt;/p&gt;
 &lt;h3&gt;Comments&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/#484" title="2010-08-22 22:11:46"&gt;kathleen s.&lt;/a&gt;:&lt;/strong&gt; HI--This is about your blog on removing the Hard Drive of a Dell Dimension 3000. I think its closed for comments now, but I wanted to thank you for posting how to do it or I would've been lost. I am a technotard. Thanks again.&lt;/p&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</guid><pubDate>Wed, 26 May 2010 09:58:00 GMT</pubDate></item><item><title>Gitosis and Gitweb - Part 3</title><link>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-1-setup.aspx"&gt;Gitosis and Gitweb – Part 1&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/#484" title="2010-08-22 22:11:46"&gt;kathleen s.&lt;/a&gt;:&lt;/strong&gt; HI--This is about your blog on removing the Hard Drive of a Dell Dimension 3000. I think its closed for comments now, but I wanted to thank you for posting how to do it or I would've been lost. I am a technotard. Thanks again.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</guid><pubDate>Wed, 26 May 2010 09:58:00 GMT</pubDate></item><item><title>Gitosis and Gitweb - Part 3</title><link>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-1-setup.aspx"&gt;Gitosis and Gitweb – Part 1&lt;br&gt;
 &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-2-add-projects-and-contributors.aspx"&gt;Gitosis and Gitweb – Part 2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So we are setup, have a project, and have contributors via the first 2 parts.&lt;/p&gt;
@@ -49,7 +49,7 @@ Translation: Find all the directories in my gitosis repository path (/home/git/r
 &lt;p&gt;Next Part: Hiding the Gitweb site&lt;/p&gt;
 &lt;h3&gt;Comments&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/#483" title="2010-07-09 22:07:08"&gt;katy lavallee&lt;/a&gt;:&lt;/strong&gt; Anxiously awaiting the next part :)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/#513" title="2011-11-05 01:16:00"&gt;Thorpe&lt;/a&gt;:&lt;/strong&gt; You said you chose Bash so that you could take some time to learn it. Unfortunately however, your shebang points to sh not bash. There is some differences.&lt;/p&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/</guid><pubDate>Wed, 26 May 2010 09:45:00 GMT</pubDate></item><item><title>Gitosis and Gitweb - Part 2 - Add Projects and Contributors</title><link>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1"&gt;Gitosis and Gitweb – Part 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/#513" title="2011-11-05 01:16:00"&gt;Thorpe&lt;/a&gt;:&lt;/strong&gt; You said you chose Bash so that you could take some time to learn it. Unfortunately however, your shebang points to sh not bash. There is some differences.&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/</guid><pubDate>Wed, 26 May 2010 09:45:00 GMT</pubDate></item><item><title>Gitosis and Gitweb - Part 2 - Add Projects and Contributors</title><link>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1"&gt;Gitosis and Gitweb – Part 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So we are setup now thanks to Part 1.&lt;/p&gt;
 &lt;h3&gt;Gitosis repository contents&lt;/h3&gt;
 &lt;p&gt;If we issue the “find .” command locally inside the gitosis-admin directory we will see the following:&lt;/p&gt;
@@ -96,17 +96,17 @@ Translation: Find all the directories in my gitosis repository path (/home/git/r
 &lt;p&gt;It looks exactly like the gitosis-admin one. Now we commit it just like we would normally when using Git. We can add, then commit or commit with the -am argument. This is possible since the gitosis-admin.conf file is already tracked by the repository.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;~/gitosis-admin&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; git commit -am &lt;span class="s2"&gt;"add meridth project"&lt;/span&gt;
 &lt;span class="o"&gt;[&lt;/span&gt;master 6b7a5da&lt;span class="o"&gt;]&lt;/span&gt; add meridth project
-1 file changed, 3 insertions&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;, 0 deletions&lt;span class="o"&gt;(&lt;/span&gt;-&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="m"&gt;1&lt;/span&gt; file changed, &lt;span class="m"&gt;3&lt;/span&gt; insertions&lt;span class="o"&gt;(&lt;/span&gt;+&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="m"&gt;0&lt;/span&gt; deletions&lt;span class="o"&gt;(&lt;/span&gt;-&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;and push it to the remote gitosis-admin repository:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;~/gitosis-admin&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; git push
 Counting objects: 5, &lt;span class="k"&gt;done&lt;/span&gt;.
-Delta compression using up to 2 threads
+Delta compression using up to &lt;span class="m"&gt;2&lt;/span&gt; threads
 Compressing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;3/3&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-Writing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;3/3&lt;span class="o"&gt;)&lt;/span&gt;, 385 bytes, &lt;span class="k"&gt;done&lt;/span&gt;.
-Total 3 &lt;span class="o"&gt;(&lt;/span&gt;delta 0&lt;span class="o"&gt;)&lt;/span&gt;, reused 0 &lt;span class="o"&gt;(&lt;/span&gt;delta 0&lt;span class="o"&gt;)&lt;/span&gt;
+Writing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;3/3&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="m"&gt;385&lt;/span&gt; bytes, &lt;span class="k"&gt;done&lt;/span&gt;.
+Total &lt;span class="m"&gt;3&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 0&lt;span class="o"&gt;)&lt;/span&gt;, reused &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 0&lt;span class="o"&gt;)&lt;/span&gt;
 To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
    23842e9..6b7a5da master -&amp;gt; master
 &lt;/pre&gt;
@@ -148,7 +148,7 @@ To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
 &lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/#480" title="2010-07-24 22:06:47"&gt;salfordwil&lt;/a&gt;:&lt;/strong&gt; volunteer physical llc&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/#481" title="2010-08-21 08:53:11"&gt;ashlynnega&lt;/a&gt;:&lt;/strong&gt; increased link &lt;a href="http://www.unesco.org"&gt;rise sectors windows past&lt;/a&gt; [url=http://water.usgs.gov]videos comment president android[/url] http://www.newswire.ca&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/#482" title="2010-08-21 08:53:28"&gt;garrmankor&lt;/a&gt;:&lt;/strong&gt; economy regions hypothesis special&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/#496" title="2011-05-12 10:24:00"&gt;Mullins&lt;/a&gt;:&lt;/strong&gt; After creating the losttechies repository locally I needed to create the remote 'origin' by executing: $ git remote add origin git@MYSERVER.com:losttechies.git&lt;/p&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/</guid><pubDate>Tue, 25 May 2010 08:02:00 GMT</pubDate></item><item><title>Gitosis and Gitweb - Part 1 - Setup</title><link>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is &lt;a href="http://github.com"&gt;Github.com&lt;/a&gt;. If they say, “private” I still say Github.  If they don't &lt;a href="http://github.com/security"&gt;"trust" Github&lt;/a&gt;, which they should - click the link, then my response is &lt;a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary"&gt;Gitosis&lt;/a&gt; and &lt;a href="http://git.wiki.kernel.org/index.php/Gitweb"&gt;Gitweb&lt;/a&gt;. This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/#496" title="2011-05-12 10:24:00"&gt;Mullins&lt;/a&gt;:&lt;/strong&gt; After creating the losttechies repository locally I needed to create the remote 'origin' by executing: $ git remote add origin git@MYSERVER.com:losttechies.git&lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/</guid><pubDate>Tue, 25 May 2010 08:02:00 GMT</pubDate></item><item><title>Gitosis and Gitweb - Part 1 - Setup</title><link>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is &lt;a href="http://github.com"&gt;Github.com&lt;/a&gt;. If they say, “private” I still say Github.  If they don't &lt;a href="http://github.com/security"&gt;"trust" Github&lt;/a&gt;, which they should - click the link, then my response is &lt;a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary"&gt;Gitosis&lt;/a&gt; and &lt;a href="http://git.wiki.kernel.org/index.php/Gitweb"&gt;Gitweb&lt;/a&gt;. This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.&lt;/p&gt;
 &lt;p&gt;Back to Gitosis. My personal Gitosis server is a slice at &lt;a href="http://slicehost.com"&gt;Slicehost.com&lt;/a&gt;. You can use an Ubuntu server at home as long as you have remote access. I’ve personally only used Gitosis with an Ubuntu slice, so I don’t know if there are any quirks with other Linux distributions. After setting up a slice (after following the instructions &lt;a href="http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-1"&gt;here&lt;/a&gt; and &lt;a href="http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-2"&gt;here&lt;/a&gt;) I am ready to go.&lt;/p&gt;
 &lt;p&gt;Notice: This post is a combination of &lt;a href="http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way"&gt;scie.nti.st’s gitosis post&lt;/a&gt; and &lt;a href="http://progit.org/book/ch4-7.html"&gt;Scott Chacon’s Pro Git gitosis section&lt;/a&gt;. They are my de facto references. Maybe my own will be now. :)&lt;/p&gt;
 &lt;p&gt;“Enough talk. Let’s fight” ~Po, Kung Fu Panda&lt;/p&gt;
@@ -189,7 +189,7 @@ Do you want to &lt;span class="k"&gt;continue&lt;/span&gt; &lt;span class="o"&gt
 Initialized empty Git repository in /root/src/gitosis/.git/
 remote: Counting objects: 614, &lt;span class="k"&gt;done&lt;/span&gt;.
 remote: Compressing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;183/183&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-remote: Total 614 &lt;span class="o"&gt;(&lt;/span&gt;delta 434&lt;span class="o"&gt;)&lt;/span&gt;, reused 594 &lt;span class="o"&gt;(&lt;/span&gt;delta 422&lt;span class="o"&gt;)&lt;/span&gt;
+remote: Total &lt;span class="m"&gt;614&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 434&lt;span class="o"&gt;)&lt;/span&gt;, reused &lt;span class="m"&gt;594&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 422&lt;span class="o"&gt;)&lt;/span&gt;
 Receiving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;614/614&lt;span class="o"&gt;)&lt;/span&gt;, 93.82 KiB, &lt;span class="k"&gt;done&lt;/span&gt;.
 Resolving deltas: 100% &lt;span class="o"&gt;(&lt;/span&gt;434/434&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
 &lt;/pre&gt;
@@ -238,7 +238,7 @@ Creating home directory &lt;span class="s1"&gt;'/home/git'&lt;/span&gt; ...
 &lt;p&gt;This will upload the local id_rsa.pub file to the /tmp/ folder on the server. Why there? So that the git user can use it. How is that possible? The folder has permissions of 777 (drwxrwxrwt) meaning everyone has read and write access to it.&lt;/p&gt;
 &lt;h4&gt;Sidenote: SSH Port&lt;/h4&gt;
 &lt;p&gt;If you have your sshd daemon running on a different port other than 22 (which is the default, but I highly suggest changing), then you need to use scp like this:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;scp -P 12345 &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.ssh/id_rsa.pub user@123.123.123.123:/tmp/
+&lt;pre class="code literal-block"&gt;scp -P &lt;span class="m"&gt;12345&lt;/span&gt; &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.ssh/id_rsa.pub user@123.123.123.123:/tmp/
 &lt;/pre&gt;
 
 
@@ -260,7 +260,7 @@ Reinitialized existing Git repository in /home/git/repositories/gitosis-admin.gi
 &lt;p&gt;Take note: If you put your id_rsa.pub file in a different location you need to use that instead of /tmp/id_rsa.pub&lt;/p&gt;
 &lt;h3&gt;Change Permissions on post-update hook&lt;/h3&gt;
 &lt;p&gt;You have to set the permissions on the post-update git hook of the gitosis-admin repository so that gitosis-admin can add new repository structures when they are added/removed to/from the gitosis.conf file.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;sudo chmod 7555 /home/git/repositories/gitosis-admin.git/hooks/post-update
+&lt;pre class="code literal-block"&gt;sudo chmod &lt;span class="m"&gt;7555&lt;/span&gt; /home/git/repositories/gitosis-admin.git/hooks/post-update
 &lt;/pre&gt;
 
 
@@ -273,7 +273,7 @@ remote: Counting objects: 5, &lt;span class="k"&gt;done&lt;/span&gt;.
 remote: Compressing objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;4/4&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
 Receiving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;5/5&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
 Resolving deltas: 100% &lt;span class="o"&gt;(&lt;/span&gt;1/1&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-remote: Total 5 &lt;span class="o"&gt;(&lt;/span&gt;delta 1&lt;span class="o"&gt;)&lt;/span&gt;, reused 5 &lt;span class="o"&gt;(&lt;/span&gt;delta 1&lt;span class="o"&gt;)&lt;/span&gt;
+remote: Total &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 1&lt;span class="o"&gt;)&lt;/span&gt;, reused &lt;span class="m"&gt;5&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta 1&lt;span class="o"&gt;)&lt;/span&gt;
 ~ &amp;gt; &lt;span class="nb"&gt;cd &lt;/span&gt;gitosis-admin
 &lt;/pre&gt;
 
@@ -323,6 +323,6 @@ fatal: The remote end hung up unexpectedly
 &lt;p&gt;You now have a local clone of the gitosis-admin repository. The contents are only a conf file and key directory:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;~/gitosis-admin&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; ls
 total 8
--rw-r--r-- 1 user staff  1148 May 22 21:31 gitosis.conf
-drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
-&lt;/pre&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/</guid><pubDate>Tue, 25 May 2010 07:42:00 GMT</pubDate></item></channel></rss>
+-rw-r--r-- &lt;span class="m"&gt;1&lt;/span&gt; user staff  &lt;span class="m"&gt;1148&lt;/span&gt; May &lt;span class="m"&gt;22&lt;/span&gt; 21:31 gitosis.conf
+drwxr-xr-x &lt;span class="m"&gt;3&lt;/span&gt; user staff  &lt;span class="m"&gt;1028&lt;/span&gt; May &lt;span class="m"&gt;22&lt;/span&gt; 21:31 keydir
+&lt;/pre&gt;&lt;/div&gt;</description><category>git</category><category>gitosis</category><guid>http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/</guid><pubDate>Tue, 25 May 2010 07:42:00 GMT</pubDate></item></channel></rss>

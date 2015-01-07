@@ -56,7 +56,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>I recently started a personal .NET 3.5 project (finally learning the ASP.NET MVC architecture) and noticed when I tried to migrate an old NAnt build file over and run the automated build it died.  The main reason was because when I call out to msbuild to build my solution it uses the nant.exe.config file to call the msbuild.exe file in the current designated framework path (i.e., C:WINDOWSMicrosoft.NETFrameworkv2.0.50727msbuild.exe).  Well, that won't help because .NET 3.5 solutions can't be compiled by the .NET 2.0 msbuild.exe.</p>
+                <div>
+<p>I recently started a personal .NET 3.5 project (finally learning the ASP.NET MVC architecture) and noticed when I tried to migrate an old NAnt build file over and run the automated build it died.  The main reason was because when I call out to msbuild to build my solution it uses the nant.exe.config file to call the msbuild.exe file in the current designated framework path (i.e., C:WINDOWSMicrosoft.NETFrameworkv2.0.50727msbuild.exe).  Well, that won't help because .NET 3.5 solutions can't be compiled by the .NET 2.0 msbuild.exe.</p>
 <p><a href="http://nant.sourceforge.net/">NAnt 0.86 Beta1</a> supports .NET 3.5.  So for those of you, using NAnt for your automated builds, and compiling .NET 3.5 solutions, hope this information helps.  If you're concerned that it's a beta, then read the following from their site:</p>
 <blockquote>
 <p><em>"This release focuses on extending our already strong support for multiple target frameworks, bringing improved flexibility and performance."</em></p>
@@ -67,6 +68,7 @@ article: http://ogp.me/ns/article#
 <p><strong><a href="posts/nant-and-net-3-5/#221" title="2008-02-19 03:03:59">Kevin Miller</a>:</strong> Jason, For my .Net 2.0 and 3.5 projects I usually invoke msbuild via the  task. I started doing it like this before Nant had a msbuild target and just sorta stuck to it. It gives you pretty fine control over what happens and you don't get hung up when NAnt is not up-to-date.  ...</p>
 <p><strong><a href="posts/nant-and-net-3-5/#222" title="2008-02-19 05:25:35">Jason Meridth</a>:</strong> @Kevin Thank you sir. After reading some of the blogs on CodeBetter and going further today I realized that it wasn't as easy as having 0.86 Beta. I'll try out your idea tomorrow. Thanks.</p>
 <p><strong><a href="posts/nant-and-net-3-5/#223" title="2008-09-14 08:51:10">Shane Kenney</a>:</strong> Thanks for the heads up. I was wondering where this was set! Cheers</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -83,7 +85,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>As you saw from my <a href="http://www.lostechies.com/blogs/jason_meridth/archive/2008/01/24/jetbrains-teamcity.aspx">last TeamCity post</a>, I was a little frustrated about the fact that I had to create an environment variable to use the NAnt runner.  A colleague, <a href="http://geekswithblogs.net/dsellers/Default.aspx">Dru Sellers</a>, contacted me and mentioned the Command Line Build Runner.  He understood that I don't like my build process to be dependent on anything on the server, so I should be able to deploy my source to any server (minus the website being setup in IIS - automating that process is a post for another day).</p>
+                <div>
+<p>As you saw from my <a href="http://www.lostechies.com/blogs/jason_meridth/archive/2008/01/24/jetbrains-teamcity.aspx">last TeamCity post</a>, I was a little frustrated about the fact that I had to create an environment variable to use the NAnt runner.  A colleague, <a href="http://geekswithblogs.net/dsellers/Default.aspx">Dru Sellers</a>, contacted me and mentioned the Command Line Build Runner.  He understood that I don't like my build process to be dependent on anything on the server, so I should be able to deploy my source to any server (minus the website being setup in IIS - automating that process is a post for another day).</p>
 <p>So, from the screen shot below you can see that Command Line is an option in the Build Runner drop down, just as NAnt was.  The Command executable is the path to the NAnt exe that I have in my tools folder that I have in my repository.  The Command parameters is the name of the build file.  This is not necessary because NAnt will find the build file in the current directory, but I like to be explicit. (/f:<buildfilename> or -buildfile:<buildfilename> are the same, if you are using the latter).</buildfilename></buildfilename></p>
 <p><img alt="image" src="posts/update-teamcity/blogs/jason_meridth/WindowsLiveWriter/c84155d26dd2_9957/image_thumb.png"></p>
 <p>I had to bug Dru further when making this change because I couldn't get it to work.  He was patient and kind enough to help me realize that my setup in step 2 (Version control settings), were not correct.  I didn't have the correct path to my repository trunk folder. </p>
@@ -92,6 +95,7 @@ article: http://ogp.me/ns/article#
 <p>I thanked Dru and looked forward to being more productive this weekend.  Thank you for your patience Dru.  Hope this is able to help another build coordinator (aka all developers who have side jobs) out there.</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/update-teamcity/#220" title="2008-03-06 14:39:54">Alexander Groß</a>:</strong> I also used the Command Line runner for the last couple of months because I didn't want to rely on some NAnt version being deployed on the TeamCity build agent. I've upgraded to TC 3.1 today and found that switching to the NAnt runner with the "NAnt home" property set to %system.teamcity.build.workingDir%\tools\NAnt also works and uses the NAnt version under source control. (NAnt is checked into my SVN repository under trunk/tools/NAnt/nant.exe)</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -108,38 +112,39 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>Today I had an opportunity to go to the TDD Coding Dojo hosting by <a href="http://feeds.feedburner.com/ChadMyersBlog">Chad Myers</a> and <a href="http://www.rayhouston.com/blog">Ray Houston</a> and I had a blast.  Some of the attendees have been doing TDD for a while (some have even migrated to instituting BDD into their development process) and some of them were trying to see what TDD was all about.  I think those people left with a better understanding of what TDD truly is and can be in their own development environments.</p>
+                <div>
+<p>Today I had an opportunity to go to the TDD Coding Dojo hosting by <a href="http://feeds.feedburner.com/ChadMyersBlog">Chad Myers</a> and <a href="http://www.rayhouston.com/blog">Ray Houston</a> and I had a blast.  Some of the attendees have been doing TDD for a while (some have even migrated to instituting BDD into their development process) and some of them were trying to see what TDD was all about.  I think those people left with a better understanding of what TDD truly is and can be in their own development environments.</p>
 <p>Getting to the purpose of this post:  I was noticing that there was a lot of hang up on test method names during the dojo.  I know that you almost can't even write a test without knowing what you want to assert on your domain/service/etc..  I personally sometimes start with the following:</p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="o">:</span> <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+<pre class="code literal-block">   1: [Test]
 
 
-   <span class="mi">2</span><span class="o">:</span> <span class="n">public</span> <span class="kt">void</span> <span class="n">X</span><span class="p">()</span>
+   2: public void X()
 
 
-   <span class="mi">3</span><span class="o">:</span> <span class="p">{</span>
+   3: {
 
 
-   <span class="mi">4</span><span class="o">:</span>
+   4:
 
 
-   <span class="mi">5</span><span class="o">:</span> <span class="p">}</span>
+   5: }
 </pre>
 
 
 <p>After making the test fail, I rename it to this (say this test was in the context of a US citizen having a passport):</p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="o">:</span> <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+<pre class="code literal-block">   1: [Test]
 
 
-   <span class="mi">2</span><span class="o">:</span> <span class="n">public</span> <span class="kt">void</span> <span class="n">should_be_able_to_travel_abroad</span><span class="p">()</span>
+   2: public void should_be_able_to_travel_abroad()
 
 
-   <span class="mi">3</span><span class="o">:</span> <span class="p">{</span>
+   3: {
 
 
-   <span class="mi">4</span><span class="o">:</span>
+   4:
 
 
-   <span class="mi">5</span><span class="o">:</span> <span class="p">}</span>
+   5: }
 </pre>
 
 
@@ -149,6 +154,7 @@ article: http://ogp.me/ns/article#
 <p><strong><a href="posts/naming-your-test-methods/#214" title="2008-02-10 16:14:46">Chris Patterson</a>:</strong> A good way to break the log jam in naming your tests is to look at the acceptance criteria of the story you are developing. - When the passenger is traveling to another country, they must have a passport. public class When_the_passenger_is_traveling_to_another_country() { [Test] public void They_must_have_a_passport() { } } Just an example I know, but it makes sense if you start from a well defined story with solid acceptance criteria.</p>
 <p><strong><a href="posts/naming-your-test-methods/#215" title="2008-02-11 14:10:28">Christopher Bennage</a>:</strong> I pretty much do the same thing as you Jason. I care a lot about names, but I was wasting a lot of time naming things up front. Now, I either 'X' or best guess and take solace in the fact that I can easily F2 it as soon as I know more.</p>
 <p><strong><a href="posts/naming-your-test-methods/#216" title="2008-02-11 18:19:38">joeyDotNet</a>:</strong> The only thing you don't get with F2 is the ability to easily create a sentence like test name by actually writing a sentence. At least not as easily. One of my R# live templates (nt) is for creating a new test which looks like this: [Test] public void "TESTNAME"() { } With the TESTNAME part highlighted so I can just start typing a sentence including spaces. Then a short Alt-S + Alt-U later (spaces to underscores) I'm in business...using a tweaked version of the BDD macro that JP, Scott, Joe and others have showed. Might seem like a small thing, but I've found it speeds me up. And of course you can always F2 it later if you need to change it.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -165,7 +171,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>Being sick today has allowed me to catch up on my ASP.NET MVC knowledge and also move the remainder of my CC.NET projects to <a href="http://www.jetbrains.com/teamcity/">JetBrains TeamCity</a>.  Being sick is no fun though. <em>Cough Cough</em></p>
+                <div>
+<p>Being sick today has allowed me to catch up on my ASP.NET MVC knowledge and also move the remainder of my CC.NET projects to <a href="http://www.jetbrains.com/teamcity/">JetBrains TeamCity</a>.  Being sick is no fun though. <em>Cough Cough</em></p>
 <p>After reading Sean's <a href="http://www.lostechies.com/blogs/sean_chambers/archive/2008/01/06/evaluating-teamcity-as-a-cc-net-replacement.aspx">post</a> on <a href="http://www.jetbrains.com/teamcity/">TeamCity</a>, my eyes have been opened.  Don't get me wrong, I have attachments to CC.NET because it's free and it works.  Setup is a pain sometimes, but not too bad.  On the flip, <a href="http://www.jetbrains.com/teamcity/">TeamCity</a> has been amazing.  I migrated all of my CC.NET projects (8) to TeamCity in under 1 hour (of course, I'm using NAnt with my custom build files, so it was strictly web interface setup, but it worked.)</p>
 <p>Like Sean mentions, I like the following:</p>
 <ul>
@@ -178,6 +185,7 @@ article: http://ogp.me/ns/article#
 <p><em><strong>UPDATE: The administration section of the software suggests using MySQL for a production installation.  I followed the instructions online for installing MySQL and setting up the database and connectivity.  It worked without any problems.  I love good,detailed instructions.  Kudos to JetBrains.</strong></em></p>
 <p>Only "problem" I've had is that I like to have my builds use whatever version of NAnt they use -- in a lib folder in my trunk -- and that is the NAnt.exe file that is used and <a href="http://www.jetbrains.com/teamcity/">TeamCity</a> wants an environment variable NAntHome to point to the NAnt path on the server (i.e., C:Program FilesNAnt, NOT C:Program FilesNAntbin -- it will handle finding the exe file, lesson learned)</p>
 <p>I like what I see.  Thank you Sean.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -194,12 +202,14 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p><img alt="" src="http://www.dkimages.com/discover/previews/812/10089644.JPG"></p>
+                <div>
+<p><img alt="" src="http://www.dkimages.com/discover/previews/812/10089644.JPG"></p>
 <p>Cloverfield sucked.</p>
 <p>Don't waste your money.</p>
 <p>Plot was weak.  You do get to see the "monster".</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/quot-that-was-stupid-quot-marcus-quot-pwnage-pants-quot-bratton/#213" title="2008-01-18 20:15:04">Jimmy Bogard</a>:</strong> Was the "monster" something deep and thought-provoking like: - Our consumerist culture - Mainstream media - Global warming - Corporate influence in government - Racism - Evils of Halloween - you just THINK it's about candy - That big hairy beast hiding under my bed who wants to steal my kidneys - Al Gore Now THAT would be cool.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -222,7 +232,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>In response to being <a href="http://www.flux88.com/WhatIDo.aspx">tagged by Ben Scheirman</a>:</p>
+                <div>
+<p>In response to being <a href="http://www.flux88.com/WhatIDo.aspx">tagged by Ben Scheirman</a>:</p>
 <p>I'm a full-time software developer currently working for Wachovia (formerly World Savings) in San Antonio, TX.  I'm a lead developer on the team I'm on.  This doesn't mean I'm a master developer, it just means that upper management has deemed my coding quality sufficient and also that I have the tendencies to be a leader.</p>
 <p>Our current project is an ASP.NET 2.0 Domain.  We have multiple applications running from 1 code base (I'm not too fond of it, but it works). We have 40 projects in our 1 solution.  Definitely needs cleaning but it is a refactoring nightmare.  We've learned from our mistakes and all new items are correctly placed via inserted DDD knowledge from my <strike>manager</strike> agile coach, <a href="http://blog.agilejoe.com">Joe Ocampo</a>.</p>
 <p>I think the biggest thing we have is 6000+ unit tests.  Some are not great, but we have a good amount of our code base covered.  We're talking hundreds of thousands of lines of code.  Nice to know the barn door won't fall off when we milk the cow, so to say. </p>
@@ -267,6 +278,7 @@ article: http://ogp.me/ns/article#
 <h3>Comments</h3>
 <p><strong><a href="posts/what-i-do/#211" title="2008-06-26 15:11:53">Joseph Nielsen</a>:</strong> Hey Jason. I replaced you at Cheridan. I'm now working at SWBC. I got something you might be interested in.</p>
 <p><strong><a href="posts/what-i-do/#212" title="2008-06-26 15:13:15">Joseph Nielsen</a>:</strong> Give me a call</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -283,11 +295,13 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p><img alt="image" src="posts/net-3-5-install-anyone-using-a-modem/blogs/jason_meridth/WindowsLiveWriter/.net3.5installanyoneusingamodem_F1B9/image_thumb.png"></p>
+                <div>
+<p><img alt="image" src="posts/net-3-5-install-anyone-using-a-modem/blogs/jason_meridth/WindowsLiveWriter/.net3.5installanyoneusingamodem_F1B9/image_thumb.png"></p>
 <p>"You can now disconnect form the Internet."</p>
 <p>I don't know if you're using a modem, but I'm not.  Just thought this was funny.</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/net-3-5-install-anyone-using-a-modem/#210" title="2007-11-28 16:52:08">Tony</a>:</strong> It's a little silly ... just knowing the download is complete is good enough. But you don't have to be using a modem. This situation occurs frequently enough being wireless nowadays. I often need to make sure my downloads are complete before I go out of wireless range with my laptop.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -304,14 +318,15 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>My colleague, <a href="http://blog.agilejoe.com">Joe Ocampo</a>, created a ReSharper template:</p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="o">:</span> <span class="p">[</span><span class="n">Test</span><span class="p">]</span>
+                <div>
+<p>My colleague, <a href="http://blog.agilejoe.com">Joe Ocampo</a>, created a ReSharper template:</p>
+<pre class="code literal-block"><span class="x">   1: [Test]</span>
 
 
-   <span class="mi">2</span><span class="o">:</span> <span class="n">public</span> <span class="kt">void</span>
+<span class="x">   2: public void</span>
 
 
-   <span class="mi">3</span><span class="o">:</span>    <span class="s">"$Specification$"</span><span class="p">()</span>
+<span class="x">   3:    "</span><span class="p">$</span><span class="nv">Specification</span><span class="p">$</span><span class="x">"()</span>
 </pre>
 
 
@@ -329,6 +344,7 @@ article: http://ogp.me/ns/article#
 <p>Name the module TestMethodNameFormatterForBDD (or whatever you want to call it):</p>
 <p><img alt="new_macro_window" src="posts/bdd-macro-and-reshaper-template/blogs/jason_meridth/WindowsLiveWriter/BDDmacroandReSharper_11F81/new_macro_window_thumb.jpg"></p>
 <p>This will add it back to the Macros window.  Double-click the new macro or right-click and choose "Edit".  This will open the Microsoft Visual Studio Macros (MVSM) IDE.  Select all and replace the text with the following:</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -345,7 +361,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>I'm not a very theoretical guy.  I don't like to discuss things to no solution.  When presented with a new idea, I like to see the code, tool, or mechanism that helps put that theory/idea into action.  I'm fine tuning (still working very hard at) my people skills.  I know that in order for software to succeed it's the communication that matters.  I can usually make people think about what they want and they usually know they need to be prepared when they approach me, because I don't like to waste time.  I like the occasional "check my email" or "watch that YouTube video"; so don't get me wrong.</p>
+                <div>
+<p>I'm not a very theoretical guy.  I don't like to discuss things to no solution.  When presented with a new idea, I like to see the code, tool, or mechanism that helps put that theory/idea into action.  I'm fine tuning (still working very hard at) my people skills.  I know that in order for software to succeed it's the communication that matters.  I can usually make people think about what they want and they usually know they need to be prepared when they approach me, because I don't like to waste time.  I like the occasional "check my email" or "watch that YouTube video"; so don't get me wrong.</p>
 <p>One of the <strong>best</strong> lessons I got from my weekend in Austin during the ALT.net conference was the following line from the Agile Manifesto:</p>
 <blockquote>
 <p><em>"Individuals and interaction over processes and tools."</em></p>
@@ -355,6 +372,7 @@ article: http://ogp.me/ns/article#
 <p>It doesn't matter how many tools or processes you put in place, if you haven't helped the team to learn to communicate or commence in knowledge sharing, they will do no good. </p>
 <p>Another recent experience was with stories names at my current employer.  Unfortunately, some of our stories names have turned into 3-5 word phrases, therefore leading to some ambiguity about what the expected behavior is of the story.  I had been introduced to Dan North's "As a <x>, I want to <y>, So that I can <z>" a while ago.  After recently seeing some passion around stories I re-read about the format and decided to pitch to our Systems and Business Analysts.  I didn't take the time to access how big of a change/idea this really was going to be.  One of the suggested solutions I was given was to schedule time for training so that the Systems and Business teams have the ability to make inquiries and gain a better understanding of the change.  Common sense solution, but it again highlighted the idea of focusing on the people and not the process/tool.</z></y></x></p>
 <p>What experience do you guys/gals have with tools vs. people?  Did you have a team respond to a tool/process that did help in your software creation?</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -371,11 +389,13 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>You think it's getting hit a little hard?</p>
+                <div>
+<p>You think it's getting hit a little hard?</p>
 <p><img alt="YahooGroup" src="posts/alt-net-yahoo-group/blogs/jason_meridth/WindowsLiveWriter/ALT.netYahooGroup_71DC/YahooGroup_thumb_1.png"></p>
 <h3>Comments</h3>
 <p><strong><a href="posts/alt-net-yahoo-group/#208" title="2007-11-15 14:03:29">Chad Myers</a>:</strong> Oh good, it's not just me that was seeing that. Whelp, I guess that's another reason to move it off of Yahoo and onto Google. I'm guessing Google isn't as restrictive.</p>
 <p><strong><a href="posts/alt-net-yahoo-group/#209" title="2007-11-15 14:37:03">Chris Patterson</a>:</strong> Scott tried to set it up on Google first and they denied it. Then Palermo setup the Yahoo group and got it up and running before ALT.NET in Austin ended (tear). I wonder if Yahoo allows you to upgrade a group to something bigger -- although I would not miss having to deal with the Yahoo interface. I do think a lot of steam has built up in that group and it would be a shame to have to move it so suddenly.</p>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -394,7 +414,7 @@ article: http://ogp.me/ns/article#
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

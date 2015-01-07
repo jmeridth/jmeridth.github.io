@@ -56,8 +56,10 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>The newest version of Ubuntu 7.04 BETA is offering a new Windows migration tool.  According to the <a href="http://www.ubuntu.com/news/Ubuntu704Beta">website</a>, it will recognize and migrate "Internet Explorer favorites, Firefox favorites, desktop wallpaper, AOL IM contacts, and Yahoo IM contacts" during the install process.</p>
+                <div>
+<p>The newest version of Ubuntu 7.04 BETA is offering a new Windows migration tool.  According to the <a href="http://www.ubuntu.com/news/Ubuntu704Beta">website</a>, it will recognize and migrate "Internet Explorer favorites, Firefox favorites, desktop wallpaper, AOL IM contacts, and Yahoo IM contacts" during the install process.</p>
 <p>I believe this is a huge step up to possibly convine a normal home user to switch to Linux.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -74,45 +76,12 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>A good <a href="http://ayende.com/Blog/archive/2007/03/26/NHibernate-Nullable-DateTime-Issues.aspx">blog entry </a>by Oren (Ayende) about Nullable types and how NHibernate handles them.  I am starting to use NHibernate and will be sharing these jems as I find them. This is also a way for me to centralize them. =)</p>
+                <div>
+<p>A good <a href="http://ayende.com/Blog/archive/2007/03/26/NHibernate-Nullable-DateTime-Issues.aspx">blog entry </a>by Oren (Ayende) about Nullable types and how NHibernate handles them.  I am starting to use NHibernate and will be sharing these jems as I find them. This is also a way for me to centralize them. =)</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/for-anyone-starting-to-use-nhibernate/#5" title="2007-03-31 07:53:45">jlockwood</a>:</strong> You may want to look at the ILS code. I did a couple of custom nullables for PhoneNumber and Address value objects (if I rember right). I think I also boxed a couple of primitives. I've used the nullables library before, but you end up using nullable fields on your classes from the library. I didn't want to couple domain code with an exernternal library.</p>
 <p><strong><a href="posts/for-anyone-starting-to-use-nhibernate/#6" title="2007-03-31 17:08:18">jmeridth</a>:</strong> Thanks Josh, I'll check that out.</p>
-            </div>
-        </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/orcas-extension-methods/">Orcas - Extension Methods</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2007-03-23T21:33:00-05:00">Mar 23, 2007</time>
-                </div>
-                <div class="stats">
-                                <a href="posts/orcas-extension-methods/#disqus_thread" data-disqus-identifier="cache/posts/orcas-extension-methods.html">Comments</a>
-
-
-                </div>
-                
-            </div>
-            <div class="body">
-                <p>Again, I was reading Guthrie's blog and found his post on <a href="http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx">Extension Methods</a></p>
-<p>What this allows a developer to do is extend types without needing to create a static service class.<br>
-It is more like an extension class.</p>
-<p>Example:</p>
-<p>You want to add a method called IsValidEmailAddress to the base string class:  </p>
-<p>string email = Request.QueryString["email"];  </p>
-<p>if ( email.IsValidEmailAddress() ) {<br>
-}   </p>
-<p>You would create the following (the this keyword in the parameter list is the key)  </p>
-<p>public static class OrcasExtensions<br>
-{<br>
-   public static bool IsValidEmailAddress(this string s)<br>
-   {<br>
-      Regex regex = new Regex(@"^[w-.]+@([w-]+.)+[w-]{2,4}$");<br>
-      return regex.IsMatch(s);<br>
-   }<br>
-} </p>
-<p>Just add the following to your class:</p>
-<p>using OrcasExtensions;</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -129,7 +98,8 @@ It is more like an extension class.</p>
                 
             </div>
             <div class="body">
-                <p>After reading a post by Scott Guthrie on the <a href="http://weblogs.asp.net/scottgu/archive/2007/03/08/new-c-orcas-language-features-automatic-properties-object-initializers-and-collection-initializers.aspx">new C# Orcas language features</a> I decided to download Orcas and try them out.  (<strong>excited</strong>)  </p>
+                <div>
+<p>After reading a post by Scott Guthrie on the <a href="http://weblogs.asp.net/scottgu/archive/2007/03/08/new-c-orcas-language-features-automatic-properties-object-initializers-and-collection-initializers.aspx">new C# Orcas language features</a> I decided to download Orcas and try them out.  (<strong>excited</strong>)  </p>
 <p>The new features I practiced with and love are:  </p>
 <ol>
 <li>Object initializers<br>
@@ -194,6 +164,44 @@ public int Age { get; set; }<br>
 }</p>
 <p>Guthrie's post has links to Bart deSmart's blog where he shows what happens under the covers for each of these features.  </p>
 <p>More to come.</p>
+</div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="posts/orcas-extension-methods/">Orcas - Extension Methods</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2007-03-23T21:33:00-05:00">Mar 23, 2007</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/orcas-extension-methods/#disqus_thread" data-disqus-identifier="cache/posts/orcas-extension-methods.html">Comments</a>
+
+
+                </div>
+                
+            </div>
+            <div class="body">
+                <div>
+<p>Again, I was reading Guthrie's blog and found his post on <a href="http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx">Extension Methods</a></p>
+<p>What this allows a developer to do is extend types without needing to create a static service class.<br>
+It is more like an extension class.</p>
+<p>Example:</p>
+<p>You want to add a method called IsValidEmailAddress to the base string class:  </p>
+<p>string email = Request.QueryString["email"];  </p>
+<p>if ( email.IsValidEmailAddress() ) {<br>
+}   </p>
+<p>You would create the following (the this keyword in the parameter list is the key)  </p>
+<p>public static class OrcasExtensions<br>
+{<br>
+   public static bool IsValidEmailAddress(this string s)<br>
+   {<br>
+      Regex regex = new Regex(@"^[w-.]+@([w-]+.)+[w-]{2,4}$");<br>
+      return regex.IsMatch(s);<br>
+   }<br>
+} </p>
+<p>Just add the following to your class:</p>
+<p>using OrcasExtensions;</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -210,7 +218,8 @@ public int Age { get; set; }<br>
                 
             </div>
             <div class="body">
-                <ol>
+                <div>
+<ol>
 <li><a href="http://elegantcode.com/?p=539">An Open Letter to Scott Guthrie</a></li>
 <li><a href="http://www.asp.net/learn/videos/default.aspx?tabid=63">Free ASP.NET 2.0, LINQ, AJAX, etc. Videos</a></li>
 </ol>
@@ -219,6 +228,7 @@ public int Age { get; set; }<br>
 <li><a href="http://www.elilopian.com/">Eli Lopian</a></li>
 <li><a href="http://weblogs.asp.net/scottgu/">Scott Guthrie</a></li>
 </ol>
+</div>
             </div>
         </div>
         <div class="post">
@@ -235,8 +245,10 @@ public int Age { get; set; }<br>
                 
             </div>
             <div class="body">
-                <p>If you are using VS2005, you can also go to Tools-&gt;Options-&gt;Text Editor-&gt;File Extension and associate the file extension with the HTML Editor.</p>
+                <div>
+<p>If you are using VS2005, you can also go to Tools-&gt;Options-&gt;Text Editor-&gt;File Extension and associate the file extension with the HTML Editor.</p>
 <p>This is particularly useful for the Monorail View types [Boo (boo extension) and NVelocity (vm extension)]</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -253,7 +265,8 @@ public int Age { get; set; }<br>
                 
             </div>
             <div class="body">
-                <p>I was reading an blog entry by Ayende Rahien (aka Oren Eini) again, "<a href="http://ayende.com/Blog/archive/2007/02/27/Entities-Services-and-what-goes-between-them.aspx">Entities, Services and what goes between them...</a>" and one of his commenters asked the following question:  </p>
+                <div>
+<p>I was reading an blog entry by Ayende Rahien (aka Oren Eini) again, "<a href="http://ayende.com/Blog/archive/2007/02/27/Entities-Services-and-what-goes-between-them.aspx">Entities, Services and what goes between them...</a>" and one of his commenters asked the following question:  </p>
 <h5>re: Entities, Services and what goes between them... 2/27/2007 6:44 PM Gustavo Cores</h5>
 <p>@Ayende &amp; @Hammet<br>
 But doesn't all this entities not talking to repositories go against the Castle project philosophy (ActiveRecord) which you are part of?<br>
@@ -268,6 +281,7 @@ I keep the power of AR, but I can now operate at much greater flexibility, see m
 <p>Oren defends his stance further with the following blog entry: "<a href="http://www.ayende.com/Blog/archive/2006/11/02/7116.aspx">What should I use, NHiberante or Active Record?!</a>"  </p>
 <p>I plan on trying out both mechanisms and, like Oren, decide what's more important: speed or clean domain objects and testability.  </p>
 <p>I'll keep you posted.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -284,7 +298,8 @@ I keep the power of AR, but I can now operate at much greater flexibility, see m
                 
             </div>
             <div class="body">
-                <p>If you don't want to host your own sourcecode on your own Subversion server like I was doing, check <a href="http://code.google.com/hosting/">this</a> out.</p>
+                <div>
+<p>If you don't want to host your own sourcecode on your own Subversion server like I was doing, check <a href="http://code.google.com/hosting/">this</a> out.</p>
 <p>It is Google's code hosting for subversion.  You are given 100 MB of space and can apply a specific open source licensing rule to your source.</p>
 <p>Here are the currently allowed licenses.</p>
 <p>Apache License 2.0<br>
@@ -295,6 +310,7 @@ MIT License<br>
 Mozilla Public License 1.1<br>
 New BSD License</p>
 <p>I've already started a new project (more to come).</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -311,7 +327,8 @@ New BSD License</p>
                 
             </div>
             <div class="body">
-                <p><strong>VERY GOOD READS</strong></p>
+                <div>
+<p><strong>VERY GOOD READS</strong></p>
 <p>Scot Hanselmann Interview questions:</p>
 <p><a href="http://www.hanselman.com/blog/WhatGreatNETDevelopersOughtToKnowMoreNETInterviewQuestions.aspx">http://www.hanselman.com/blog/WhatGreatNETDevelopersOughtToKnowMoreNETInterviewQuestions.aspx</a></p>
 <p>Ayende Answers to Hanselmann questions:</p>
@@ -320,6 +337,7 @@ New BSD License</p>
 <p><strong><a href="posts/net-interview-questions-everyone-should-know/#3" title="2007-06-06 02:13:40">dotnetguts (DNG)</a>:</strong> Hi, Thanks for sharing your knowledge. you will also enjoy following blog for dot net interview questions. http://dng-ado.blogspot.com/ http://dng-dotnetframework.blogspot.com/ http://dng-oops.blogspot.com/ http://dng-config.blogspot.com/ http://dng-collections.blogspot.com/ Keep going good work DotNetGuts (DNG) http://dotnetguts.blogspot.com</p>
 <p><strong><a href="posts/net-interview-questions-everyone-should-know/#4" title="2007-07-01 02:12:18">Preet Maan</a>:</strong> Here is one more link having good interview questions &amp; answers <br>
 <a href="http://www.dotnetinterviewfaqs.com">http://www.dotnetinterviewfaqs.com</a></p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -336,13 +354,15 @@ New BSD License</p>
                 
             </div>
             <div class="body">
-                <p>Today I had a good conversation with a colleague about software structure and coding standards.  His beliefs are that a class should be a monolithic so the maintenance is centralized and everything a developer, mainly newbie or junior, needs is right there for him/her to maintain/expand the class.</p>
+                <div>
+<p>Today I had a good conversation with a colleague about software structure and coding standards.  His beliefs are that a class should be a monolithic so the maintenance is centralized and everything a developer, mainly newbie or junior, needs is right there for him/her to maintain/expand the class.</p>
 <p>I lean more toward the Single Responsibility and Design Pattern habits.</p>
 <p>This conversation was sparked due to us creating a mapper service for our application.  When the mapper is called it's responsibility is to move values from one domain object to another.  Utilized in the mapper is a factory that returns a strategy, when passed a specific enum value.  The strategy handles the move of 3-4 specific fields based on the enum value.  This makes it more extensible when another value is added to that enum.</p>
 <p>The conversation headed to what extensibility truly is.  He said he subscribed to the idea that he needs to code for the developer who follows him.  This includes using comments.  I believe that if you properly name your variables, classes, methods, etc. any developer, no matter their skill level, will be able to understand your code.  A developer can almost read it like a book.</p>
 <p>My current project manager states that "comments are apologies".  I happen to agree with him.  If you want to explain 1-n lines of code, encapsulate them in a method and name the method to tell the developer what the purpose is of those lines of code.</p>
 <p>The developer I was talk with stated he sees the benefits of pair programming and unit testing (phew, thought I was going to really have to get on my soap box).</p>
 <p>What do you guys believe?</p>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -361,7 +381,7 @@ New BSD License</p>
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

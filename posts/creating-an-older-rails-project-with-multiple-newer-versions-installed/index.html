@@ -63,31 +63,32 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>I have been studying rspec the last week or two and have been using Rail 2.1.2 to do my exploring.  I was finally ready to jump into some legacy code and couldn't even create a spec folder on the directory tree because the version of rails was older: </p>
-<pre class="code literal-block">  <span class="mi">1</span><span class="o">:</span> <span class="n">user</span><span class="err">$</span> <span class="n">ruby</span> <span class="n">script</span><span class="o">/</span><span class="n">generate</span> <span class="n">rspec</span>
+            <div>
+<p>I have been studying rspec the last week or two and have been using Rail 2.1.2 to do my exploring.  I was finally ready to jump into some legacy code and couldn't even create a spec folder on the directory tree because the version of rails was older: </p>
+<pre class="code literal-block">  1: user$ ruby script/generate rspec
 
 
 
-  <span class="mi">2</span><span class="o">:</span> <span class="n">Cannot</span> <span class="n">find</span> <span class="n">gem</span> <span class="k">for</span> <span class="n">Rails</span> <span class="o">~&gt;</span><span class="mf">1.2.3.0</span><span class="o">:</span>
+  2: Cannot find gem for Rails ~&gt;1.2.3.0:
 
 
 
-  <span class="mi">3</span><span class="o">:</span>     <span class="n">Install</span> <span class="n">the</span> <span class="n">missing</span> <span class="n">gem</span> <span class="n">with</span> <span class="err">'</span><span class="n">gem</span> <span class="n">install</span> <span class="o">-</span><span class="n">v</span><span class="o">=</span><span class="mf">1.2.3</span> <span class="n">rails</span><span class="err">'</span><span class="p">,</span> <span class="n">or</span>
+  3:     Install the missing gem with 'gem install -v=1.2.3 rails', or
 
 
 
-  <span class="mi">4</span><span class="o">:</span>     <span class="n">change</span> <span class="n">environment</span><span class="p">.</span><span class="n">rb</span> <span class="n">to</span> <span class="n">define</span> <span class="n">RAILS_GEM_VERSION</span> <span class="n">with</span> <span class="n">your</span> <span class="n">desired</span> <span class="n">version</span><span class="p">.</span>
+  4:     change environment.rb to define RAILS_GEM_VERSION with your desired version.
 </pre>
 
 
 <p>After looking at the rails file in /usr/bin, I noticed the regex was looking for something that matched the following regex string: </p>
-<pre class="code literal-block">  <span class="mi">1</span><span class="o">:</span> <span class="o">/^</span><span class="n">_</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="n">_</span><span class="err">$</span><span class="o">/</span>
+<pre class="code literal-block">  1: /^_(.*)_$/
 </pre>
 
 
 <p>If my recollection holds, that means I'm looking for any character set that begins and ends with underscores (i.e., _1.x.x). </p>
 <p>So I tried the following: </p>
-<pre class="code literal-block">  <span class="mi">1</span><span class="p">:</span> <span class="nx">rails</span> <span class="nx">_1.2.3_</span> <span class="o">&lt;</span><span class="nx">projectname</span><span class="o">&gt;</span>
+<pre class="code literal-block">  1: rails _1.2.3_ &lt;projectname&gt;
 </pre>
 
 
@@ -96,6 +97,7 @@ article: http://ogp.me/ns/article#
 <p>I'm also looking at Fluent NHibernate now, so it's going to be a few couple weeks.</p>
 <h3>Comments</h3>
 <p><strong><a href=".#306" title="2009-01-16 19:51:36">bubba</a>:</strong> hey, that helped me. thanks!</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -129,7 +131,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

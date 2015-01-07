@@ -64,7 +64,8 @@ For security reasons, m">
             
         </div>
         <div class="body">
-            <p>To all developers who haven't heard of this, there is an ability to have a project, say a test project, to have access to another project's Internal classes. (<a href="http://msdn2.microsoft.com/en-us/library/0tke9fxk(VS.80).aspx">MSDN definition</a>).</p>
+            <div>
+<p>To all developers who haven't heard of this, there is an ability to have a project, say a test project, to have access to another project's Internal classes. (<a href="http://msdn2.microsoft.com/en-us/library/0tke9fxk(VS.80).aspx">MSDN definition</a>).</p>
 <p>For security reasons, make sure that your test assembly is strongly named.  You can achieve this via the "Signing" tab on the project properties.</p>
 <p>Don't ask why I'm playing with COM projects with .NET (I'm messing with the <a href="http://www.gotdotnet.com/Community/UserSamples/Details.aspx?SampleGuid=2cb20e79-d706-4706-9ea0-26188257ee7d">MSBuild sdc tasks</a> and their automated COM components install tasks)</p>
 <p><img alt="image" src="jasonmeridth/files/2011/0342c.NETInternalsVisibleToattributeCFrien_E05B/image_thumb.png"></p>
@@ -82,13 +83,14 @@ For security reasons, m">
 </ul>
 <p>This gives us the public key blob that we need to embed into the InternalsVisibleTo attribute we are going to add to our AssemblyInfo.cs file.</p>
 <p>This is what you would need to add to your AssemblyInfo.cs file of your main assembly:</p>
-<pre class="code literal-block"><span class="cp">[</span><span class="nx">assembly</span><span class="p">:</span><span class="nx">InternalsVisibleToAttribute</span><span class="p">(</span><span class="s2">"&lt;TestAssemblyName&gt;, PublicKey=00240000048000...RestOfPublicKeyFromAbove"</span><span class="p">)</span><span class="cp">]</span>
+<pre class="code literal-block">[assembly:InternalsVisibleToAttribute("&lt;TestAssemblyName&gt;, PublicKey=00240000048000...RestOfPublicKeyFromAbove")]
 </pre>
 
 
 <p>David Kean has even created a tool to create your attribute for you with the public key and everything.  Check it out <a href="http://davidkean.net/downloads/publickey.zip">here</a>.  Blog post <a href="http://davidkean.net/archive/2005/10/06/1183.aspx">here</a>.</p>
 <h3>Comments</h3>
 <p><strong><a href=".#136" title="2007-10-03 11:33:54">Nelson Montalvo</a>:</strong> As an alternative, if you have the strongly named assembly, use a capital T, like so: sn -Tp &lt;&gt; This will extract the public key from the assembly's manifest.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -122,7 +124,7 @@ For security reasons, m">
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

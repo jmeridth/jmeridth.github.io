@@ -66,7 +66,8 @@ I've had a few friends ask me what is MonoRail and how do I set it up?  I decid
             
         </div>
         <div class="body">
-            <p><em><strong>UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2<br>
+            <div>
+<p><em><strong>UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2<br>
 </strong></em></p>
 <p><strong>REASONS:</strong></p>
 <p>I've had a few friends ask me what is MonoRail and how do I set it up?  I decided to go from the ground up here.  There is nothing here that you can't get from the <a href="http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html">Castle website documentation</a>.  I just want to grok this stuff and like Mr. Torvalds says, "<a href="http://lkml.org/lkml/2000/8/25/132">Talk is cheap, show me the code</a>".  I also want to learn how to unit test in this environment.  I've heard the great things about Ruby on Rails (RoR from now on), but want to make that migration slowly.</p>
@@ -102,28 +103,28 @@ I've had a few friends ask me what is MonoRail and how do I set it up?  I decid
 <p>If, sorry, <strong><em>when</em></strong> you setup your Test projects make sure to reference the correct assemblies needed for unit testing with MonoRail.  They are Castle.MonoRail.Framework, Castle.MonoRail.TestSupport, and my unit testing framework of choice is NUnit, so I reference nunit.Framework.  Also don't forget to reference the project you are unit testing.  In this case it is my JasonMeridth project.</p>
 <p>I'm still trying out the abstract base test class that the Castle group has created, AbstractMRTestCase. </p>
 <p><strong><em>TIP:</em></strong> Currently I've learned that if you do the following (This is only a serious rough draft, please no comments on test names or formatting):</p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="o">:</span> <span class="n">using</span> <span class="n">System</span><span class="p">;</span>
+<pre class="code literal-block">   <span class="nt">1</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">System</span><span class="o">;</span>
 
 
-   <span class="mi">2</span><span class="o">:</span> <span class="n">using</span> <span class="n">Castle</span><span class="p">.</span><span class="n">MonoRail</span><span class="p">.</span><span class="n">TestSupport</span><span class="p">;</span>
+   <span class="nt">2</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">Castle</span><span class="nc">.MonoRail.TestSupport</span><span class="o">;</span>
 
 
-   <span class="mi">3</span><span class="o">:</span> <span class="n">using</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Controllers</span><span class="p">;</span>
+   <span class="nt">3</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">JasonMeridth</span><span class="nc">.Controllers</span><span class="o">;</span>
 
 
-   <span class="mi">4</span><span class="o">:</span> <span class="n">using</span> <span class="n">NUnit</span><span class="p">.</span><span class="n">Framework</span><span class="p">;</span>
+   <span class="nt">4</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">NUnit</span><span class="nc">.Framework</span><span class="o">;</span>
 
 
-   <span class="mi">5</span><span class="o">:</span>
+   <span class="nt">5</span><span class="o">:</span>
 
 
-   <span class="mi">6</span><span class="o">:</span> <span class="n">namespace</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Tests</span><span class="p">.</span><span class="n">Controllers</span>
+   <span class="nt">6</span><span class="o">:</span> <span class="nt">namespace</span> <span class="nt">JasonMeridth</span><span class="nc">.Tests.Controllers</span>
 
 
-   <span class="mi">7</span><span class="o">:</span> <span class="p">{</span>
+   <span class="nt">7</span><span class="o">:</span> <span class="p">{</span>
 
 
-   <span class="mi">8</span><span class="o">:</span>     <span class="p">[</span><span class="n">TestFixture</span>
+   <span class="m">8</span><span class="o">:</span>     <span class="cp">[</span><span class="nx">TestFixture</span>
 </pre>
 
 
@@ -134,6 +135,7 @@ I've had a few friends ask me what is MonoRail and how do I set it up?  I decid
 <p><strong><a href=".#74" title="2007-08-30 21:46:21">Jason Meridth</a>:</strong> I'm starting to feel the same way with just the little I've done so far. I may be tapping into your knowledge later Sean. Thanks for the info.</p>
 <p><strong><a href=".#75" title="2007-09-01 12:57:47">Joe</a>:</strong> Hey man, looks like a good post. You beat me to the punch, I've been working on a Monorail introduction myself. As for unit testing, that is actually no longer the recommended way to test. Check out this page http://using.castleproject.org/display/MR/TDDingControllers that shows the new recommendations for TDD with MR. The old way (inheriting from AbstractMRTestCase) is meant to be used internally. Keep up the great posts! Joe</p>
 <p><strong><a href=".#76" title="2007-09-05 22:37:33">Jason Meridth</a>:</strong> @Joe Thank you for that link. I appreciate the support. Post about MonoRail anyway bro, another perspective is always good.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -167,7 +169,7 @@ I've had a few friends ask me what is MonoRail and how do I set it up?  I decid
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

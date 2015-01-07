@@ -70,7 +70,8 @@ article: http://ogp.me/ns/article#
 
         </div>
         <div class="body">
-            <p>These are my notes from reading Scott Chacon’s <a href="http://progit.org/book">Pro Git</a> I highly suggest <a href="http://tinyurl.com/amazonprogit">buying this book</a> if you are serious about using the Git version control tool. <a href="http://progit.org/book/ch3-1.html">pg 48</a> A branch in Git is simply a lightweight movable pointer <a href="http://progit.org/book/ch3-1.html">pg 50</a> a special pointer called HEAD…is a pointer to the local branch you’re currently on <a href="http://progit.org/book/ch3-1.html">pg 52</a> Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline). <a href="http://progit.org/book/ch3-2.html">pg 53</a> To create a branch and switch to it at the same time…git checkout command with the -b switch <a href="http://progit.org/book/ch3-3.html">pg 61</a> To see the last commit on each branch, you can run git branch -v <a href="http://progit.org/book/ch3-5.html">pg 69</a></p>
+            <div>
+<p>These are my notes from reading Scott Chacon’s <a href="http://progit.org/book">Pro Git</a> I highly suggest <a href="http://tinyurl.com/amazonprogit">buying this book</a> if you are serious about using the Git version control tool. <a href="http://progit.org/book/ch3-1.html">pg 48</a> A branch in Git is simply a lightweight movable pointer <a href="http://progit.org/book/ch3-1.html">pg 50</a> a special pointer called HEAD…is a pointer to the local branch you’re currently on <a href="http://progit.org/book/ch3-1.html">pg 52</a> Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline). <a href="http://progit.org/book/ch3-2.html">pg 53</a> To create a branch and switch to it at the same time…git checkout command with the -b switch <a href="http://progit.org/book/ch3-3.html">pg 61</a> To see the last commit on each branch, you can run git branch -v <a href="http://progit.org/book/ch3-5.html">pg 69</a></p>
 <pre class="code literal-block">git checkout -b <span class="o">[</span>branch<span class="o">]</span> <span class="o">[</span>remotename<span class="o">]</span>/<span class="o">[</span>branch<span class="o">]</span>
 </pre>
 
@@ -193,7 +194,7 @@ article: http://ogp.me/ns/article#
 
 
 <p>Get the commit message from each of these commits to test git cat-file commit [SHA-1] Incantation: </p>
-<pre class="code literal-block">git cat-file commit <span class="o">[</span>SHA-1<span class="o">]</span> | sed <span class="s1">'1,/^$/d'</span>
+<pre class="code literal-block">git cat-file commit <span class="o">[</span>SHA-1<span class="o">]</span> <span class="p">|</span> sed <span class="s1">'1,/^$/d'</span>
 </pre>
 
 
@@ -202,6 +203,7 @@ article: http://ogp.me/ns/article#
 <p><strong><a href=".#472" title="2010-04-14 01:25:01">Jason Meridth</a>:</strong> Ricardo: You're welcome</p>
 <p><strong><a href=".#473" title="2010-05-10 03:55:33">Simon</a>:</strong> You've convinced me to buy this book now.</p>
 <p><strong><a href=".#474" title="2010-05-12 12:59:43">Jason Meridth</a>:</strong> @Simon: Awesome. It's worth it's weight in gold.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -235,7 +237,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

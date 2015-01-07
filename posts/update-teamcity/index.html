@@ -63,7 +63,8 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>As you saw from my <a href="http://www.lostechies.com/blogs/jason_meridth/archive/2008/01/24/jetbrains-teamcity.aspx">last TeamCity post</a>, I was a little frustrated about the fact that I had to create an environment variable to use the NAnt runner.  A colleague, <a href="http://geekswithblogs.net/dsellers/Default.aspx">Dru Sellers</a>, contacted me and mentioned the Command Line Build Runner.  He understood that I don't like my build process to be dependent on anything on the server, so I should be able to deploy my source to any server (minus the website being setup in IIS - automating that process is a post for another day).</p>
+            <div>
+<p>As you saw from my <a href="http://www.lostechies.com/blogs/jason_meridth/archive/2008/01/24/jetbrains-teamcity.aspx">last TeamCity post</a>, I was a little frustrated about the fact that I had to create an environment variable to use the NAnt runner.  A colleague, <a href="http://geekswithblogs.net/dsellers/Default.aspx">Dru Sellers</a>, contacted me and mentioned the Command Line Build Runner.  He understood that I don't like my build process to be dependent on anything on the server, so I should be able to deploy my source to any server (minus the website being setup in IIS - automating that process is a post for another day).</p>
 <p>So, from the screen shot below you can see that Command Line is an option in the Build Runner drop down, just as NAnt was.  The Command executable is the path to the NAnt exe that I have in my tools folder that I have in my repository.  The Command parameters is the name of the build file.  This is not necessary because NAnt will find the build file in the current directory, but I like to be explicit. (/f:<buildfilename> or -buildfile:<buildfilename> are the same, if you are using the latter).</buildfilename></buildfilename></p>
 <p><img alt="image" src="blogs/jason_meridth/WindowsLiveWriter/c84155d26dd2_9957/image_thumb.png"></p>
 <p>I had to bug Dru further when making this change because I couldn't get it to work.  He was patient and kind enough to help me realize that my setup in step 2 (Version control settings), were not correct.  I didn't have the correct path to my repository trunk folder. </p>
@@ -72,6 +73,7 @@ article: http://ogp.me/ns/article#
 <p>I thanked Dru and looked forward to being more productive this weekend.  Thank you for your patience Dru.  Hope this is able to help another build coordinator (aka all developers who have side jobs) out there.</p>
 <h3>Comments</h3>
 <p><strong><a href=".#220" title="2008-03-06 14:39:54">Alexander Groß</a>:</strong> I also used the Command Line runner for the last couple of months because I didn't want to rely on some NAnt version being deployed on the TeamCity build agent. I've upgraded to TC 3.1 today and found that switching to the NAnt runner with the "NAnt home" property set to %system.teamcity.build.workingDir%\tools\NAnt also works and uses the NAnt version under source control. (NAnt is checked into my SVN repository under trunk/tools/NAnt/nant.exe)</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -105,7 +107,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

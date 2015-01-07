@@ -63,26 +63,27 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>So I've had the pleasure of working with <a href="http://github.com/ph7/selenium-client/tree/master">selenium-client</a>, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I'm going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions. </p>
+            <div>
+<p>So I've had the pleasure of working with <a href="http://github.com/ph7/selenium-client/tree/master">selenium-client</a>, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I'm going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions. </p>
 <p>1. </p>
-<pre class="code literal-block"><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">selenium</span><span class="o">-</span><span class="n">client</span>
+<pre class="code literal-block">sudo gem install selenium-client
 </pre>
 
 
 <p>2. download the <a href="http://release.seleniumhq.org/selenium-remote-control/1.0-beta-2/selenium-remote-control-1.0-beta-2-dist.zip">selenium remote control</a> (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it. </p>
 <p>3. update your .bashrc (usually on Ubuntu) or .bash_profile (what I have on my Mac) with a alias to start the selenium server (for me I have unzipped the download into a ~/code/seleniumrc folder: </p>
-<pre class="code literal-block"><span class="cp"># commands</span>
-<span class="n">alias</span> <span class="n">selsrvr</span><span class="o">=</span><span class="s">"java -jar ~/code/seleniumrc/selenium-server-1.0-beta-2/selenium-server.jar"</span>
+<pre class="code literal-block"># commands
+alias selsrvr="java -jar ~/code/seleniumrc/selenium-server-1.0-beta-2/selenium-server.jar"
 </pre>
 
 
 <p>after you add that, re-source your bash file. For me on my Mac </p>
-<pre class="code literal-block"><span class="p">.</span> <span class="o">~/</span><span class="p">.</span><span class="n">bash_profile</span>
+<pre class="code literal-block">. ~/.bash_profile
 </pre>
 
 
 <p>For me on my Ubuntu box: </p>
-<pre class="code literal-block"><span class="p">.</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span>
+<pre class="code literal-block">. ~/.bashrc
 </pre>
 
 
@@ -115,113 +116,114 @@ article: http://ogp.me/ns/article#
 </li>
 </ol>
 <p>6.</p>
-<pre class="code literal-block"><span class="n">require</span> <span class="s">"test/unit"</span>
-<span class="n">require</span> <span class="s">"rubygems"</span>
-<span class="n">gem</span> <span class="s">"selenium-client"</span><span class="p">,</span> <span class="s">"&gt;=1.2.9"</span>
-<span class="n">require</span> <span class="s">"selenium/client"</span>
-<span class="n">require</span> <span class="s">"net/ssh"</span>
+<pre class="code literal-block">require "test/unit"
+require "rubygems"
+gem "selenium-client", "&gt;=1.2.9"
+require "selenium/client"
+require "net/ssh"
 
-<span class="n">class</span> <span class="n">NewTest</span> <span class="o">&lt;</span> <span class="n">Test</span><span class="o">::</span><span class="n">Unit</span><span class="o">::</span><span class="n">TestCase</span>
-  <span class="n">attr_reader</span> <span class="o">:</span><span class="n">browser</span>
+class NewTest &lt; Test::Unit::TestCase
+  attr_reader :browser
 
-  <span class="n">def</span> <span class="n">setup</span>
-    <span class="err">@</span><span class="n">slice_name</span> <span class="o">=</span> <span class="s">"slice3"</span>
-    <span class="err">@</span><span class="n">browser</span> <span class="o">=</span> <span class="n">Selenium</span><span class="o">::</span><span class="n">Client</span><span class="o">::</span><span class="n">Driver</span><span class="p">.</span><span class="n">new</span> <span class="s">"localhost"</span><span class="p">,</span> <span class="mi">4444</span><span class="p">,</span> <span class="s">"*firefox"</span><span class="p">,</span> <span class="s">"https://manage.slicehost.com/"</span><span class="p">,</span> <span class="mi">10000</span>
-    <span class="n">browser</span><span class="p">.</span><span class="n">start_new_browser_session</span>
-  <span class="n">end</span>
+  def setup
+    @slice_name = "slice3"
+    @browser = Selenium::Client::Driver.new "localhost", 4444, "*firefox", "https://manage.slicehost.com/", 10000
+    browser.start_new_browser_session
+  end
 
-  <span class="n">def</span> <span class="n">teardown</span>
-    <span class="n">browser</span><span class="p">.</span><span class="n">close_current_browser_session</span>
-  <span class="n">end</span>
+  def teardown
+    browser.close_current_browser_session
+  end
 
-  <span class="n">def</span> <span class="n">test_should_be_able_to_ssh_onto_new_slice_and_add_new_file</span>
-    <span class="n">login</span>
-    <span class="n">begin</span>
-        <span class="n">create_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
-        <span class="n">root_password</span> <span class="o">=</span> <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">get_text</span><span class="p">(</span><span class="s">"id=flash"</span><span class="p">).</span><span class="n">sub</span><span class="p">(</span><span class="o">/</span><span class="n">You</span> <span class="n">will</span> <span class="n">receive</span> <span class="n">an</span> <span class="n">email</span> <span class="n">upon</span> <span class="n">completion</span><span class="p">.</span> <span class="n">The</span> <span class="n">new</span> <span class="n">root</span> <span class="n">password</span> <span class="n">will</span> <span class="n">be</span><span class="o">:</span> <span class="o">/</span><span class="p">,</span> <span class="err">''</span><span class="p">)</span>
-        <span class="n">ip_address</span> <span class="o">=</span> <span class="err">@</span><span class="n">browser</span> 
-          <span class="p">.</span><span class="n">get_text</span><span class="p">(</span><span class="s">"xpath=/html/body/div[@id='container']/div[@id='main']/div[1]/div[@id='slice_action']/div[@id='show_slice']/table/tbody/tr[4]/td[2]"</span><span class="p">)</span> 
-          <span class="p">.</span><span class="n">scan</span><span class="p">(</span><span class="o">/</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}.</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}.</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}.</span><span class="n">d</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span><span class="o">/</span><span class="p">)</span>
-        <span class="n">assert</span> <span class="o">!</span><span class="mf">180.</span><span class="n">times</span><span class="p">{</span> <span class="k">break</span> <span class="k">if</span> <span class="p">(</span><span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">is_text_present</span><span class="p">(</span><span class="s">"active"</span><span class="p">)</span> <span class="n">rescue</span> <span class="nb">false</span><span class="p">);</span> <span class="n">sleep</span> <span class="mi">1</span> <span class="p">}</span>
-        <span class="n">Net</span><span class="o">::</span><span class="n">SSH</span><span class="p">.</span><span class="n">start</span><span class="p">(</span><span class="n">ip_address</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">to_s</span><span class="p">,</span> <span class="err">'</span><span class="n">root</span><span class="err">'</span><span class="p">,</span> <span class="o">:</span><span class="n">password</span> <span class="o">=&gt;</span> <span class="n">root_password</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">ssh</span><span class="o">|</span>
-            <span class="n">ssh</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">"rm selenium_test_file.txt"</span><span class="p">)</span>
-            <span class="n">ssh</span><span class="p">.</span><span class="n">exec</span><span class="p">(</span><span class="s">"touch selenium_test_file.txt"</span><span class="p">)</span>
+  def test_should_be_able_to_ssh_onto_new_slice_and_add_new_file
+    login
+    begin
+        create_slice(@slice_name)
+        root_password = @browser.get_text("id=flash").sub(/You will receive an email upon completion. The new root password will be: /, '')
+        ip_address = @browser 
+          .get_text("xpath=/html/body/div[@id='container']/div[@id='main']/div[1]/div[@id='slice_action']/div[@id='show_slice']/table/tbody/tr[4]/td[2]") 
+          .scan(/d{0,3}.d{0,3}.d{0,3}.d{0,3}/)
+        assert !180.times{ break if (@browser.is_text_present("active") rescue false); sleep 1 }
+        Net::SSH.start(ip_address[0].to_s, 'root', :password =&gt; root_password) do |ssh|
+            ssh.exec("rm selenium_test_file.txt")
+            ssh.exec("touch selenium_test_file.txt")
 
-            <span class="n">stdout</span> <span class="o">=</span> <span class="s">""</span>
-            <span class="n">ssh</span><span class="p">.</span><span class="n">exec</span><span class="o">!</span><span class="p">(</span><span class="s">"ls -lah ~"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">channel</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">data</span><span class="o">|</span>
-              <span class="n">stdout</span> <span class="o">&lt;&lt;</span> <span class="n">data</span> <span class="k">if</span> <span class="n">stream</span> <span class="o">==</span> <span class="o">:</span><span class="n">stdout</span>
-            <span class="n">end</span>
-            <span class="n">puts</span> <span class="n">stdout</span>
-        <span class="n">end</span>
-        <span class="n">go_to_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
-    <span class="n">ensure</span>
-        <span class="n">assert</span> <span class="o">!</span><span class="mf">180.</span><span class="n">times</span><span class="p">{</span> <span class="k">break</span> <span class="k">if</span> <span class="p">(</span><span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">is_text_present</span><span class="p">(</span><span class="s">"active"</span><span class="p">)</span> <span class="n">rescue</span> <span class="nb">false</span><span class="p">);</span> <span class="n">sleep</span> <span class="mi">1</span> <span class="p">}</span>
-        <span class="n">delete_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span> 
-    <span class="n">end</span>
-    <span class="n">logout</span>
-  <span class="n">end</span>
+            stdout = ""
+            ssh.exec!("ls -lah ~") do |channel, stream, data|
+              stdout &lt;&lt; data if stream == :stdout
+            end
+            puts stdout
+        end
+        go_to_slice(@slice_name)
+    ensure
+        assert !180.times{ break if (@browser.is_text_present("active") rescue false); sleep 1 }
+        delete_slice(@slice_name) 
+    end
+    logout
+  end
 
-  <span class="n">def</span> <span class="n">test_should_be_able_to_delete_an_existing_slice</span>
-    <span class="n">login</span>
-    <span class="n">go_to_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
-    <span class="n">delete_slice</span><span class="p">(</span><span class="err">@</span><span class="n">slice_name</span><span class="p">)</span>
-    <span class="n">logout</span>
-  <span class="n">end</span>
+  def test_should_be_able_to_delete_an_existing_slice
+    login
+    go_to_slice(@slice_name)
+    delete_slice(@slice_name)
+    logout
+  end
 
 
-  <span class="n">def</span> <span class="n">login</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">open</span> <span class="s">"/login"</span>
-    <span class="n">assert_equal</span> <span class="s">"Slicehost Login"</span><span class="p">,</span> <span class="n">browser</span><span class="p">.</span><span class="n">title</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">type</span> <span class="s">"email"</span><span class="p">,</span> <span class="s">"youemail@domain.com"</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">type</span> <span class="s">"password"</span><span class="p">,</span> <span class="s">"yourpassword"</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"commit"</span>
-    <span class="n">browser_wait</span>
-  <span class="n">end</span>
+  def login
+    @browser.open "/login"
+    assert_equal "Slicehost Login", browser.title
+    @browser.type "email", "youemail@domain.com"
+    @browser.type "password", "yourpassword"
+    @browser.click "commit"
+    browser_wait
+  end
 
-  <span class="n">def</span> <span class="n">create_slice</span><span class="p">(</span><span class="n">slice_name</span><span class="p">)</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Add a Slice"</span>
-    <span class="n">browser_wait</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">type</span> <span class="s">"name"</span><span class="p">,</span> <span class="n">slice_name</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"commit"</span>
-    <span class="n">browser_wait</span>
-  <span class="n">end</span>
+  def create_slice(slice_name)
+    @browser.click "link=Add a Slice"
+    browser_wait
+    @browser.type "name", slice_name
+    @browser.click "commit"
+    browser_wait
+  end
 
-  <span class="n">def</span> <span class="n">go_to_slice</span><span class="p">(</span><span class="n">slice_name</span><span class="p">)</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=My Slices"</span>
-    <span class="n">browser_wait</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=#{slice_name}"</span>
-    <span class="n">browser_wait</span>
-  <span class="n">end</span>
+  def go_to_slice(slice_name)
+    @browser.click "link=My Slices"
+    browser_wait
+    @browser.click "link=#{slice_name}"
+    browser_wait
+  end
 
-  <span class="n">def</span> <span class="n">delete_slice</span><span class="p">(</span><span class="n">slice_name</span><span class="p">)</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Delete"</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Delete #{slice_name}"</span>
-    <span class="n">assert</span> <span class="o">/^</span><span class="n">Permanently</span> <span class="n">delete</span> <span class="n">this</span> <span class="n">Slice</span> <span class="n">and</span> <span class="n">all</span> <span class="n">of</span> <span class="n">its</span> <span class="n">data</span><span class="p">[</span><span class="n">sS</span><span class="p">]</span> <span class="n">There</span> <span class="n">is</span> <span class="n">no</span> <span class="n">turning</span> <span class="n">back</span><span class="o">!</span><span class="err">$</span><span class="o">/</span> <span class="o">=~</span> <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">get_confirmation</span>
-  <span class="n">end</span>
+  def delete_slice(slice_name)
+    @browser.click "link=Delete"
+    @browser.click "link=Delete #{slice_name}"
+    assert /^Permanently delete this Slice and all of its data[sS] There is no turning back!$/ =~ @browser.get_confirmation
+  end
 
-  <span class="n">def</span> <span class="n">logout</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">click</span> <span class="s">"link=Logout"</span>
-    <span class="n">browser_wait</span>
-  <span class="n">end</span>
+  def logout
+    @browser.click "link=Logout"
+    browser_wait
+  end
 
-  <span class="n">def</span> <span class="n">browser_wait</span>
-    <span class="err">@</span><span class="n">browser</span><span class="p">.</span><span class="n">wait_for_page_to_load</span> <span class="s">"30000"</span>
-  <span class="n">end</span>
-<span class="n">end</span>
+  def browser_wait
+    @browser.wait_for_page_to_load "30000"
+  end
+end
 </pre>
 
 
 <p>7. Start the selenium server: </p>
-<pre class="code literal-block"><span class="n">selsrvr</span>
+<pre class="code literal-block">selsrvr
 </pre>
 
 
 <p>8. run the test: </p>
-<pre class="code literal-block"><span class="n">ruby</span> <span class="o">~/</span><span class="n">code</span><span class="o">/</span><span class="n">seleniumrc</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">rb</span>
+<pre class="code literal-block">ruby ~/code/seleniumrc/test.rb
 </pre>
 
 
 <p>You should see the firefox browser open up in two windows and see the automation in process. Once the slice is created, I've setup a timer at 180 seconds (3 min) to wait for the slice to be created and set to a status of active. Like #5 above states, once complete the test captures the root password and ip address off the web UI and uses them to SSH into the new slice. This is my 3rd time using selenium and I like what I see. More to come.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -255,7 +257,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

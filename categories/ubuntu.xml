@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ubuntu)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Thu, 25 Sep 2014 11:50:33 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ubuntu)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/ubuntu.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 07 Jan 2015 17:31:47 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>I Finally Have Linux As My Native OS</title><link>http://blog.jasonmeridth.com/posts/i-finally-have-linux-as-my-native-os/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I finally replaced OSX on my Mac with Ubuntu 14.04 LTS.  Out of the box I've had no issues.  Wireless, VPN, Terminal, Dropbox, Google Drive, LastPass, etc all work.  I was spending more time in my &lt;a href="https://www.vagrantup.com/"&gt;Vagrant&lt;/a&gt; VMs with OSX anyway.  Loved &lt;a href="https://www.virtualbox.org/"&gt;VirtualBox&lt;/a&gt; + Vagrant.  Never had an issue.  I just wasn't using any portion of OSX.  It is nice to troubleshoot any issues and tweak my setup.  I'm getting used to Unity and may drop it for Gnome3 and Gnome-Do.  We'll see.  Any new things I troubleshoot or find, I'll post on.&lt;/p&gt;</description><category>linux</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/i-finally-have-linux-as-my-native-os/</guid><pubDate>Wed, 07 Jan 2015 23:27:13 GMT</pubDate></item><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install postgresql libpq-dev
 &lt;/pre&gt;
 
 
-&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Environment: Ubuntu&lt;/p&gt;
+&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;&lt;/div&gt;</description><category>postgresql</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Set VIM as Default Editor</title><link>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Environment: Ubuntu&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo update-alternatives --config editor
 
 OUTPUT:
-There are 4 choices &lt;span class="k"&gt;for &lt;/span&gt;the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
+There are &lt;span class="m"&gt;4&lt;/span&gt; choices &lt;span class="k"&gt;for&lt;/span&gt; the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
 
   Selection    Path                Priority   Status
 ------------------------------------------------------------
-* 0            /bin/nano            40        auto mode
-  1            /bin/ed             -100       manual mode
-  2            /bin/nano            40        manual mode
-  3            /usr/bin/vim.basic   30        manual mode
-  4            /usr/bin/vim.tiny    10        manual mode
+* &lt;span class="m"&gt;0&lt;/span&gt;            /bin/nano            &lt;span class="m"&gt;40&lt;/span&gt;        auto mode
+  &lt;span class="m"&gt;1&lt;/span&gt;            /bin/ed             -100       manual mode
+  &lt;span class="m"&gt;2&lt;/span&gt;            /bin/nano            &lt;span class="m"&gt;40&lt;/span&gt;        manual mode
+  &lt;span class="m"&gt;3&lt;/span&gt;            /usr/bin/vim.basic   &lt;span class="m"&gt;30&lt;/span&gt;        manual mode
+  &lt;span class="m"&gt;4&lt;/span&gt;            /usr/bin/vim.tiny    &lt;span class="m"&gt;10&lt;/span&gt;        manual mode
 
 Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type &lt;/span&gt;selection number: 3
 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
-&lt;/pre&gt;</description><category>tools</category><category>ubuntu</category><category>vim</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>tools</category><category>ubuntu</category><category>vim</category><guid>http://blog.jasonmeridth.com/posts/set-vim-as-default-editor/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo visudo
 &lt;/pre&gt;
 
@@ -30,8 +30,8 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;spa
 &lt;/pre&gt;
 
 
-&lt;p&gt;This will prevent password prompts for everyone in the sudo group (%sudo) when issuing all commands (NOPASSWD: ALL)&lt;/p&gt;</description><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</guid><pubDate>Thu, 21 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks</title><link>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;TL;DR&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;sudo dhclient -r &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt; &amp;amp;amp;&amp;amp;amp; sudo dhclient &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;p&gt;This will prevent password prompts for everyone in the sudo group (%sudo) when issuing all commands (NOPASSWD: ALL)&lt;/p&gt;&lt;/div&gt;</description><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</guid><pubDate>Thu, 21 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks</title><link>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;TL;DR&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;sudo dhclient -r &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&lt;/span&gt; sudo dhclient &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -41,7 +41,7 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;spa
 
 
 &lt;p&gt;then resourced it so I could use it in the bash session I was in&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bashrc&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;source ~/.bashrc
 &lt;/pre&gt;
 
 
@@ -49,17 +49,17 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;spa
 &lt;p&gt;This command releases and renews your DHCP IP Address.&lt;/p&gt;
 &lt;p&gt;I’m very happy about this.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://linux.about.com/library/cmd/blcmdl8_dhclient.htm"&gt;dhclient man page&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;When run by itself, your instance will seek out a new ip lease.&lt;/p&gt;</description><category>networking</category><category>ubuntu</category><category>wireless</category><guid>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</guid><pubDate>Tue, 05 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Testing Mail From the Command Line on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Install mailutils&lt;/p&gt;
+&lt;p&gt;When run by itself, your instance will seek out a new ip lease.&lt;/p&gt;&lt;/div&gt;</description><category>networking</category><category>ubuntu</category><category>wireless</category><guid>http://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</guid><pubDate>Tue, 05 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Testing Mail From the Command Line on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Install mailutils&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install mailutils
 &lt;/pre&gt;
 
 
 &lt;p&gt;Send some test piped into the mail command&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"testing"&lt;/span&gt; | mail -s Test user@emailhost.com
+&lt;pre class="code literal-block"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"testing"&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; mail -s Test user@emailhost.com
 &lt;/pre&gt;
 
 
-&lt;p&gt;Check the email address listed above&lt;/p&gt;</description><category>command line</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</guid><pubDate>Wed, 19 Sep 2012 05:00:00 GMT</pubDate></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Whenever you do&lt;/p&gt;
+&lt;p&gt;Check the email address listed above&lt;/p&gt;&lt;/div&gt;</description><category>command line</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</guid><pubDate>Wed, 19 Sep 2012 05:00:00 GMT</pubDate></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Whenever you do&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install git-core
 &lt;/pre&gt;
 
@@ -73,8 +73,8 @@ sudo apt-get install git-core
 &lt;/pre&gt;
 
 
-&lt;p&gt;This should give you git version 1.7.11 (as of today)  &lt;/p&gt;</description><category>git</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</guid><pubDate>Wed, 11 Jul 2012 05:00:00 GMT</pubDate></item><item><title>xkcd - ubuntu, python comics</title><link>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;If you don't currently read &lt;a href="http://www.xkcd.com"&gt;xkcd.com&lt;/a&gt;, you should be.  It has some mushy lovey dovey junk in it sometimes, but the python references and open source references are hilarious.&lt;/p&gt;
+&lt;p&gt;This should give you git version 1.7.11 (as of today)  &lt;/p&gt;&lt;/div&gt;</description><category>git</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntul/</guid><pubDate>Wed, 11 Jul 2012 05:00:00 GMT</pubDate></item><item><title>xkcd - ubuntu, python comics</title><link>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;If you don't currently read &lt;a href="http://www.xkcd.com"&gt;xkcd.com&lt;/a&gt;, you should be.  It has some mushy lovey dovey junk in it sometimes, but the python references and open source references are hilarious.&lt;/p&gt;
 &lt;p&gt;Today's comic: (mouse over for the Ubuntu reference)  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/zealous_autoconfig.png"&gt;&lt;/p&gt;
 &lt;p&gt;One of my other favs:  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/python.png"&gt;&lt;/p&gt;</description><category>funny</category><category>python</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</guid><pubDate>Mon, 28 Apr 2008 21:34:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="" src="http://imgs.xkcd.com/comics/python.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>funny</category><category>python</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/</guid><pubDate>Mon, 28 Apr 2008 21:34:00 GMT</pubDate></item></channel></rss>

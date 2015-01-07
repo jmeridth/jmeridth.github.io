@@ -75,7 +75,8 @@ Thanks to Sean Chambe">
 
         </div>
         <div class="body">
-            <p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <code>git rebase --interactive</code></p>
+            <div>
+<p><strong>UPDATE</strong>: Please make sure to read Alexander's comments on <code>git rebase --interactive</code></p>
 <p><strong>UPDATE</strong>: If you need to unstage a file prior to your first commit: </p>
 <pre class="code literal-block"><span class="nv">$ </span>git rm --cached filename
 </pre>
@@ -162,6 +163,7 @@ Thanks to Sean Chambe">
 <p><strong><a href=".#464" title="2010-03-24 04:11:55">Jason Meridth</a>:</strong> @derick @qrush responded to your tweet and his solution is easier: Just create a new branch from the commit on master, prior to the merge, delete master and rename the new branch to master. this will work if you haven't deleted the topic you merged into master.</p>
 <p><strong><a href=".#465" title="2010-03-25 01:53:30">derick.bailey</a>:</strong> @qrush got me squared away: git reset --hard HEAD^ I've used reset --hard to clean out my current working set and get back to last commit... just didn't think about it in this case. i was so fixated on "revert" (from my svn experience) that I couldn't see past the git revert command.</p>
 <p><strong><a href=".#466" title="2010-03-25 02:17:04">Jason Meridth</a>:</strong> @derick Excellent. I'm going to update the post to make sure people read your comments so that the knowledge is shared. Thank you for following up on this.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -195,7 +197,7 @@ Thanks to Sean Chambe">
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

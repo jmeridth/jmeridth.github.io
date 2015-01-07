@@ -64,7 +64,8 @@ I have gotten tired of twitterfeed not handling our RSS feed and tweeting our 
             
         </div>
         <div class="body">
-            <p>UPDATE: Fixed puts statements.  should have been x.token, not x.key.</p>
+            <div>
+<p>UPDATE: Fixed puts statements.  should have been x.token, not x.key.</p>
 <p>I have gotten tired of twitterfeed not handling our RSS feed and tweeting our new posts. So have the other LosTechies members. I decided to finally learn OAuth so that I can write a script/app to handle tweeting our new blog posts.</p>
 <p>This is the way I learned so bare with me.</p>
 <p>First things first, is you have to go to <a href="http://twitter.com">twitter</a> and login to your account. Once done, register your <a href="http://twitter.com/oauth_clients">OAuth application</a> and click the <a href="http://twitter.com/apps/new">Register a new application</a> link. This will set you up with an OAuth consumer key and secret; which we need to obtain the OAuth request token/secret and our ultimate goal of an OAuth access token/secret.</p>
@@ -82,60 +83,61 @@ I have gotten tired of twitterfeed not handling our RSS feed and tweeting our 
 <p><img alt="" src="http://c1261852.cdn.cloudfiles.rackspacecloud.com/oauth_consumer_key_and_secret.png"></p>
 <p>I’ve looked at a few ways to do this and the easiest that I found was by using the <a href="http://github.com/moomerman/twitter_oauth">twitter_oauth gem</a>. Following the README for this gem I was able to get an access token/secret pretty easily.</p>
 <p>I’m doing all of this through IRB because there is one part where you need to open a web page and allow your twitter client to post to Twitter.</p>
-<pre class="code literal-block"><span class="o">~</span> <span class="o">&gt;</span> <span class="n">irb</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">001</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">require</span> <span class="err">'</span><span class="n">rubygems</span><span class="err">'</span>
-<span class="o">=&gt;</span> <span class="nb">true</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">002</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">require</span> <span class="err">'</span><span class="n">twitter_oauth</span><span class="err">'</span>
-<span class="o">=&gt;</span> <span class="nb">true</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">003</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">client</span> <span class="o">=</span> <span class="n">TwitterOAuth</span><span class="o">::</span><span class="n">Client</span><span class="p">.</span><span class="n">new</span><span class="p">(</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">004</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span> <span class="o">:</span><span class="n">consumer_key</span> <span class="o">=&gt;</span> <span class="err">'</span><span class="n">YOUR_APP_CONSUMER_KEY</span><span class="err">'</span><span class="p">,</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">005</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span> <span class="o">:</span><span class="n">consumer_secret</span> <span class="o">=&gt;</span> <span class="err">'</span><span class="n">YOURA_APP_CONSUMER_SECRET</span><span class="err">'</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="o">=&gt;</span> <span class="p">...</span><span class="n">object</span> <span class="n">output</span><span class="p">...</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">005</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">request_token</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">request_token</span>
-<span class="o">=&gt;</span> <span class="p">...</span><span class="n">object</span> <span class="n">output</span><span class="p">...</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">006</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">puts</span> <span class="n">request_token</span><span class="p">.</span><span class="n">token</span><span class="p">,</span> <span class="n">request_token</span><span class="p">.</span><span class="n">secret</span>
-<span class="o">=&gt;</span> <span class="p">[</span><span class="n">REQUEST_TOKEN</span><span class="p">]</span>
-<span class="o">=&gt;</span> <span class="p">[</span><span class="n">REQUEST_SECRET</span><span class="p">]</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">007</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">request_token</span><span class="p">.</span><span class="n">authorize_url</span>
-<span class="o">=&gt;</span> <span class="n">http</span><span class="o">:</span><span class="c1">//twitter.com/oauth/authorize?oauth_token=TOKEN</span>
+<pre class="code literal-block">~ &gt; irb
+irb(main):001:0$ require 'rubygems'
+=&gt; true
+irb(main):002:0$ require 'twitter_oauth'
+=&gt; true
+irb(main):003:0$ client = TwitterOAuth::Client.new(
+irb(main):004:1* :consumer_key =&gt; 'YOUR_APP_CONSUMER_KEY',
+irb(main):005:1* :consumer_secret =&gt; 'YOURA_APP_CONSUMER_SECRET')
+)
+=&gt; ...object output...
+irb(main):005:0$ request_token = client.request_token
+=&gt; ...object output...
+irb(main):006:0$ puts request_token.token, request_token.secret
+=&gt; [REQUEST_TOKEN]
+=&gt; [REQUEST_SECRET]
+irb(main):007:0$ request_token.authorize_url
+=&gt; http://twitter.com/oauth/authorize?oauth_token=TOKEN
 </pre>
 
 
 <p>Copy that url and put it into your browser of choice. When the “Deny” and “Allow” buttons become visible, click the “Allow” button. You will be presented with a numeric PIN. Copy that number into your clipboard because we’re going to use it on this final step to obtain the OAuth Access Token and Secret.</p>
-<pre class="code literal-block"><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">007</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">access_token</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">00</span><span class="mi">8</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span>   <span class="n">request_token</span><span class="p">.</span><span class="n">token</span><span class="p">,</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">00</span><span class="mi">9</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span>   <span class="n">request_token</span><span class="p">.</span><span class="n">secret</span><span class="p">,</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0010</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span>  <span class="o">:</span><span class="n">oauth_verifier</span> <span class="o">=&gt;</span> <span class="err">'</span><span class="n">THE_NUMERIC_PIN_YOU_GOT_FROM_TWITTER</span><span class="err">'</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0011</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span> <span class="p">)</span>
-<span class="o">=&gt;</span> <span class="p">...</span><span class="n">object</span> <span class="n">output</span><span class="p">...</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0011</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">puts</span> <span class="n">access_token</span><span class="p">.</span><span class="n">token</span><span class="p">,</span> <span class="n">access_token</span><span class="p">.</span><span class="n">secret</span>
-<span class="o">=&gt;</span> <span class="p">[</span><span class="n">ACCESS_TOKEN</span><span class="p">]</span>
-<span class="o">=&gt;</span> <span class="p">[</span><span class="n">ACCESS_SECRET</span><span class="p">]</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0012</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">client</span><span class="p">.</span><span class="n">authorized</span><span class="o">?</span>
-<span class="o">=&gt;</span> <span class="nb">true</span>
+<pre class="code literal-block">irb(main):007:0$ access_token = client.authorize(
+irb(main):008:1*   request_token.token,
+irb(main):009:1*   request_token.secret,
+irb(main):0010:1*  :oauth_verifier =&gt; 'THE_NUMERIC_PIN_YOU_GOT_FROM_TWITTER'
+irb(main):0011:1* )
+=&gt; ...object output...
+irb(main):0011:0$ puts access_token.token, access_token.secret
+=&gt; [ACCESS_TOKEN]
+=&gt; [ACCESS_SECRET]
+irb(main):0012:0$ client.authorized?
+=&gt; true
 </pre>
 
 
 <p>You now have everything you need to use the TwitterOAuth gem without having to authenticate everytime.</p>
-<pre class="code literal-block"><span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0013</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">client</span> <span class="o">=</span> <span class="n">TwitterOAuth</span><span class="o">::</span><span class="n">Client</span><span class="p">.</span><span class="n">new</span><span class="p">(</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0014</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span>    <span class="o">:</span><span class="n">consumer_key</span> <span class="o">=&gt;</span> <span class="err">'</span><span class="n">YOUR_CONSUMER_KEY</span><span class="err">'</span><span class="p">,</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0015</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span>    <span class="o">:</span><span class="n">consumer_secret</span> <span class="o">=&gt;</span> <span class="err">'</span><span class="n">YOUR</span><span class="o">-</span><span class="n">CONSUMER</span><span class="o">-</span><span class="n">SECRET</span><span class="err">'</span><span class="p">,</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0016</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span>    <span class="o">:</span><span class="n">token</span> <span class="o">=&gt;</span> <span class="n">access_token</span><span class="p">.</span><span class="n">token</span><span class="p">,</span> 
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0017</span><span class="o">:</span><span class="mi">1</span><span class="o">*</span>    <span class="o">:</span><span class="n">secret</span> <span class="o">=&gt;</span> <span class="n">access_token</span><span class="p">.</span><span class="n">secret</span>
-<span class="p">)</span>
-<span class="o">=&gt;</span> <span class="p">...</span><span class="n">object</span> <span class="n">output</span><span class="p">...</span>
-<span class="n">irb</span><span class="p">(</span><span class="n">main</span><span class="p">)</span><span class="o">:</span><span class="mo">0017</span><span class="o">:</span><span class="mi">0</span><span class="err">$</span> <span class="n">client</span><span class="p">.</span><span class="n">authorized</span><span class="o">?</span>
-<span class="o">=&gt;</span> <span class="nb">true</span>
+<pre class="code literal-block">irb(main):0013:0$ client = TwitterOAuth::Client.new(
+irb(main):0014:1*    :consumer_key =&gt; 'YOUR_CONSUMER_KEY',
+irb(main):0015:1*    :consumer_secret =&gt; 'YOUR-CONSUMER-SECRET',
+irb(main):0016:1*    :token =&gt; access_token.token, 
+irb(main):0017:1*    :secret =&gt; access_token.secret
+)
+=&gt; ...object output...
+irb(main):0017:0$ client.authorized?
+=&gt; true
 </pre>
 
 
 <p>To tweet something after you have the client instance, just call the update method: </p>
-<pre class="code literal-block"><span class="n">client</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="err">'</span><span class="n">test</span> <span class="n">tweet</span> <span class="n">with</span> <span class="n">OAuth</span><span class="err">'</span><span class="p">)</span>
+<pre class="code literal-block">client.update('test tweet with OAuth')
 </pre>
 
 
 <p>That is how I figured out OAuth without a callback URL. Hacky, but it works.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -169,7 +171,7 @@ I have gotten tired of twitterfeed not handling our RSS feed and tweeting our 
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

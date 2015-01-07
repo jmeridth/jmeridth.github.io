@@ -69,7 +69,8 @@ article: http://ogp.me/ns/article#
 
         </div>
         <div class="body">
-            <p>A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff<code>but I've started telling them to look at</code>git cherry` (NOT git-cherry-pick).</p>
+            <div>
+<p>A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff<code>but I've started telling them to look at</code>git cherry` (NOT git-cherry-pick).</p>
 <p>From <a href="http://git-scm.com/docs/git-cherry">the new Git documentation</a>, git-cherry finds commits not merged upstream.</p>
 <p>I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:</p>
 <pre class="code literal-block"><span class="nv">$ </span>git cherry -v master feature-branch-name
@@ -82,16 +83,17 @@ article: http://ogp.me/ns/article#
 
 
 <p>The results typically looks something like:</p>
-<pre class="code literal-block">%2B a4d0f79fccbbc12a53e8f0e5c2a4ef960ad69ba2 commit 1 message
-%2B 7e71afd1faf36f17a0ff506e63cd2ca51496dad3 commit 2 message
-%2B 5e815ece05d8813354e60ca1affb8cdb8c5d78fc commit 3 message
-%2B 956f4cec5684544066a0d261ff8ac80aff7a57ea commit 4 message
-%2B 6c6cdb4342ed935f8fbd38f48f51dec469dd1823 commit 5 message
-%2B c3481fd0d6279f5bd45c455b915e0b4b1c0d8909 commit 6 message
+<pre class="code literal-block">%2B a4d0f79fccbbc12a53e8f0e5c2a4ef960ad69ba2 commit <span class="m">1</span> message
+%2B 7e71afd1faf36f17a0ff506e63cd2ca51496dad3 commit <span class="m">2</span> message
+%2B 5e815ece05d8813354e60ca1affb8cdb8c5d78fc commit <span class="m">3</span> message
+%2B 956f4cec5684544066a0d261ff8ac80aff7a57ea commit <span class="m">4</span> message
+%2B 6c6cdb4342ed935f8fbd38f48f51dec469dd1823 commit <span class="m">5</span> message
+%2B c3481fd0d6279f5bd45c455b915e0b4b1c0d8909 commit <span class="m">6</span> message
 </pre>
 
 
 <p>That means those commits are on feature-branch-name branch but not in master</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -125,7 +127,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

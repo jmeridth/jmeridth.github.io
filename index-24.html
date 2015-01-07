@@ -43,6 +43,106 @@ article: http://ogp.me/ns/article#
     <section class="page-content">
         <div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/consolidated-my-blogs/">Consolidated My Blogs</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2014-02-24T05:43:14-06:00">Feb 24, 2014</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/consolidated-my-blogs/#disqus_thread" data-disqus-identifier="cache/posts/consolidated-my-blogs.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/notification/" rel="tag">notification</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <div>
+<p>I finally consolidate my blogs that were located at:</p>
+<ul>
+<li>
+<a href="http://jason.lostechies.com">http://jason.lostechies.com</a> - old posts</li>
+<li>
+<a href="http://blog.jasonmeridth.com">http://blog.jasonmeridth.com</a> - current posts</li>
+</ul>
+<p>and unified them here.  I also decided to move to <a href="http://getnikola.com">Nikola</a> since I'm coding in Python full-time now and it is a nice Python Static Site Generator.  New posts and theme changes coming soon.</p>
+</div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="posts/using-default-scope-and-unscoped-in-rails/">Using Default Scope and Unscoped in Rails</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2013-04-02T00:00:00-05:00">Apr 02, 2013</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/using-default-scope-and-unscoped-in-rails/#disqus_thread" data-disqus-identifier="cache/posts/using-default-scope-and-unscoped-in-rails.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/rails/" rel="tag">rails</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <div>
+<p>I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:</p>
+<pre class="code literal-block"><span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="ss">deleted</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+</pre>
+
+
+<p>That does lean towards not having DRY (don’t repeat yourself) code. It’s a balancing act. I decided to give default_scope a chance this time. I quickly experienced the downside of that choice. I added the default_scope to my model:</p>
+<pre class="code literal-block"><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">default_scope</span> <span class="n">where</span><span class="p">(</span><span class="ss">deleted</span><span class="p">:</span> <span class="kp">false</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="k">end</span>
+</pre>
+
+
+<p>Well, I needed to write a migration to add the column and then update any existing records to have a default value of false. I generated my migration and added the following:</p>
+<pre class="code literal-block"><span class="k">class</span> <span class="nc">AddDeletedFlagToUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+  <span class="k">def</span> <span class="nf">change</span>
+    <span class="n">add_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:deleted</span><span class="p">,</span> <span class="ss">:boolean</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="kp">false</span>
+    <span class="no">User</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre>
+
+
+<p>However, when I looked at the database, none of the pre-existing records had false as their deleted flag. I went to the rails console and typed in the update_all command again:</p>
+<pre class="code literal-block"><span class="no">User</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+</pre>
+
+
+<p>and that’s when I saw how default_scope can bite you in the butt:</p>
+<pre class="code literal-block">~/code/project<span class="o">(</span>master<span class="o">)</span> <span class="p">&amp;</span>gt<span class="p">;</span> rails c
+Loading development environment <span class="o">(</span>Rails 3.2.12<span class="o">)</span>
+&gt;&gt; User.update_all <span class="o">[</span><span class="s2">"deleted = ?"</span>, <span class="nb">false</span><span class="o">]</span>
+  SQL <span class="o">(</span>35.9ms<span class="o">)</span>  UPDATE <span class="s2">"users"</span> SET <span class="nv">deleted</span> <span class="o">=</span> <span class="s1">'f'</span> WHERE <span class="s2">"users"</span>.<span class="s2">"deleted"</span> <span class="o">=</span> <span class="s1">'f'</span>
+<span class="o">=</span>&gt; 0
+</pre>
+
+
+<p>Notice the <code>WHERE</code> clause. That is what the default_scope adds automatically. Duh!! So in order to bypass the default_scope I had to use <code>unscoped</code>:</p>
+<pre class="code literal-block"><span class="no">User</span><span class="o">.</span><span class="n">unscoped</span><span class="o">.</span><span class="n">update_all</span> <span class="o">[</span><span class="s2">"deleted = ?"</span><span class="p">,</span> <span class="kp">false</span><span class="o">]</span>
+</pre>
+
+
+<p>in my migration. That then caused all existing records to be updated.</p>
+<p>Yes, I’m aware this violates “Explicit over implicit” but it does keep my code “DRY (do not repeat yourself)”. There are pros and cons to all tools. Use them wisely.  </p>
+</div>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/fix-rendering-with-presence-of-doctype/">Fix Rendering With Presence of Doctype</a></h1>
             <div class="meta">
                 <div class="authordate">
@@ -63,7 +163,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.</p>
+                <div>
+<p>A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.</p>
 <p>In HTML or ERB:</p>
 <pre class="code literal-block"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 </pre>
@@ -76,6 +177,7 @@ article: http://ogp.me/ns/article#
 
 <p>Other <a href="http://haml.info/docs/yardoc/file.REFERENCE.html#doctype_">HAML Doctypes</a></p>
 <p>The above is the format for HTML 5. I don’t bother with the <a href="http://www.w3schools.com/tags/tag_doctype.asp">HTML 4.01 DOCTYPEs</a></p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -100,7 +202,8 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>Tired of looking this up and want to use my writing part of my brain to blog it:</p>
+                <div>
+<p>Tired of looking this up and want to use my writing part of my brain to blog it:</p>
 <pre class="code literal-block">rake spec <span class="nv">SPEC</span><span class="o">=</span>spec/controllers/sessions_controller_spec.rb <span class="se">\</span>
   <span class="nv">SPEC_OPTS</span><span class="o">=</span><span class="s2">"-e \"should log in with cookie\""</span>
 </pre>
@@ -112,6 +215,7 @@ article: http://ogp.me/ns/article#
 
 
 <p>the test database isn’t cleared out. By running <code>rake spec</code> I get that.  </p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -136,23 +240,25 @@ article: http://ogp.me/ns/article#
 
             </div>
             <div class="body">
-                <p>Environment: Ubuntu</p>
+                <div>
+<p>Environment: Ubuntu</p>
 <pre class="code literal-block">sudo update-alternatives --config editor
 
 OUTPUT:
-There are 4 choices <span class="k">for </span>the alternative editor <span class="o">(</span>providing /usr/bin/editor<span class="o">)</span>.
+There are <span class="m">4</span> choices <span class="k">for</span> the alternative editor <span class="o">(</span>providing /usr/bin/editor<span class="o">)</span>.
 
   Selection    Path                Priority   Status
 ------------------------------------------------------------
-* 0            /bin/nano            40        auto mode
-  1            /bin/ed             -100       manual mode
-  2            /bin/nano            40        manual mode
-  3            /usr/bin/vim.basic   30        manual mode
-  4            /usr/bin/vim.tiny    10        manual mode
+* <span class="m">0</span>            /bin/nano            <span class="m">40</span>        auto mode
+  <span class="m">1</span>            /bin/ed             -100       manual mode
+  <span class="m">2</span>            /bin/nano            <span class="m">40</span>        manual mode
+  <span class="m">3</span>            /usr/bin/vim.basic   <span class="m">30</span>        manual mode
+  <span class="m">4</span>            /usr/bin/vim.tiny    <span class="m">10</span>        manual mode
 
 Press enter to keep the current choice<span class="o">[</span>*<span class="o">]</span>, or <span class="nb">type </span>selection number: 3
 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span class="o">(</span>editor<span class="o">)</span> in manual mode
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -176,7 +282,8 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span c
 
             </div>
             <div class="body">
-                <p>Install TMUX</p>
+                <div>
+<p>Install TMUX</p>
 <pre class="code literal-block">sudo apt-get install tmux
 </pre>
 
@@ -243,6 +350,7 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span c
 <strong>Ctrl-a, s</strong> Sync sessions - what you type shows in all <a href="https://github.com/jmeridth/dotfiles/blob/master/.tmux.conf#L13">mapping</a>
 </li>
 </ul>
+</div>
             </div>
         </div>
         <div class="post">
@@ -267,14 +375,15 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span c
 
             </div>
             <div class="body">
-                <p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….</p>
+                <div>
+<p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….</p>
 <p>Install curl</p>
 <pre class="code literal-block">sudo apt-get install curl
 </pre>
 
 
 <p>Install RVM (forgot this, thanks <a href="http://twitter.com/jssingh">Jasdeep</a>)</p>
-<pre class="code literal-block">curl -L get.rvm.io | bash -s stable --auto
+<pre class="code literal-block">curl -L get.rvm.io <span class="p">|</span> bash -s stable --auto
 </pre>
 
 
@@ -286,7 +395,7 @@ update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor <span c
 <p>Run rvm requirements to see what needs to be installed</p>
 <pre class="code literal-block">rvm requirements
 ...
-Requirements <span class="k">for </span>ubuntu/12.10/x86_64
+Requirements <span class="k">for</span> ubuntu/12.10/x86_64
 
 NOTE: <span class="s1">'ruby'</span> represents Matz<span class="s1">'s Ruby Interpreter (MRI) (1.8.X, 1.9.X)</span>
 <span class="s1">             This is the *original* / standard Ruby Language Interpreter</span>
@@ -322,7 +431,7 @@ subversion pkg-config libffi-dev
 <p>Install Ruby</p>
 <pre class="code literal-block">rvm install 1.9.3
 ...
-Searching <span class="k">for </span>binary rubies, this might take some time.
+Searching <span class="k">for</span> binary rubies, this might take some time.
 ruby-1.9.3-p392 - <span class="c">#configure</span>
 ruby-1.9.3-p392 - <span class="c">#download</span>
 <span class="c">#############################################                             62.9%</span>
@@ -353,6 +462,7 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 <p>As [Jasdeep][2] says in the comments, it is worth knowing that you’ll need a javascript runtime to use Rails so you might as well install nodejs (because it is fun):</p>
 <pre class="code literal-block">sudo apt-get install nodejs
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -376,13 +486,15 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 
             </div>
             <div class="body">
-                <p>TL;DR</p>
+                <div>
+<p>TL;DR</p>
 <pre class="code literal-block">shotgun -o 0.0.0.0 config.ru
 </pre>
 
 
 <p>You have to tell <a href="https://github.com/rtomayko/shotgun/blob/master/bin/shotgun#L46">shotgun</a> to use 0.0.0.0, the “all IP addresses on this box” IP address listen on. The default is 127.0.0.1, which is the loopback IP address on the vagrant instance.</p>
 <p>Hope this helps someone.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -406,12 +518,14 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 
             </div>
             <div class="body">
-                <p>Install PostgresSQL and the dev package:</p>
+                <div>
+<p>Install PostgresSQL and the dev package:</p>
 <pre class="code literal-block">sudo apt-get install postgresql libpq-dev
 </pre>
 
 
 <p>Reference <a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html">Cheat Sheet</a> after installation</p>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -430,7 +544,7 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

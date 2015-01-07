@@ -65,7 +65,8 @@ Cory Foy, Aaron Jensen, and myself all responded ">
             
         </div>
         <div class="body">
-            <p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter:</p>
+            <div>
+<p>I saw <a href="http://ampgt.com">Scott Bellware</a> recently write on twitter:</p>
 <p><a href="http://twitter.com/bellware/status/6952706099">for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder</a></p>
 <p><a href="http://twitter.com/cory_foy">Cory Foy</a>, <a href="http://twitter.com/aaronjensen">Aaron Jensen</a>, and <a href="http://twitter.com/jmeridth">myself</a> all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it <a href="http://twitter.com/cory_foy/status/6954512284">first</a> and it was the post-merge/post-rebase hooks. I researched the <a href="http://www.kernel.org/pub/software/scm/git/docs/githooks.html">post-merge hook</a> (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the <a href="http://gist.github.com/262319">following</a></p>
 <pre class="code literal-block"><span class="c1">#!/usr/bin/env ruby</span>
@@ -79,6 +80,7 @@ Cory Foy, Aaron Jensen, and myself all responded ">
 <p><strong><a href=".#515" title="2011-11-28 17:03:00">Marcelo Andrade</a>:</strong> Hi, Looks like this only works if the pull contains 1 commit, if it has many commits, if the latest commit doesn't have something on migrations, it doesn't do nothing.</p>
 <p><strong><a href=".#516" title="2011-11-28 17:09:00">Marcelo Andrade</a>:</strong> you can tweak it with git diff --name-only HEAD@{1} HEAD instead of  git diff HEAD^</p>
 <p><strong><a href=".#517" title="2011-11-28 18:45:00">Jason Meridth</a>:</strong> Thank you Marcelo.  Post updated.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -112,7 +114,7 @@ Cory Foy, Aaron Jensen, and myself all responded ">
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

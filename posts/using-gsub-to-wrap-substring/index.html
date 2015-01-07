@@ -64,41 +64,43 @@ I use the twitter gem and just display my las">
             
         </div>
         <div class="body">
-            <p>Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak's <a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block">"gsub with a block"</a> post on <a href="http://robots.thoughtbot.com">the Thoughtbot blog</a>.</p>
+            <div>
+<p>Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak's <a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block">"gsub with a block"</a> post on <a href="http://robots.thoughtbot.com">the Thoughtbot blog</a>.</p>
 <p>I use the twitter gem and just display my last status on my personal homepage at <a href="http://jasonmeridth.com">JasonMeridth.com</a>. I didn't want to hand out my username and password so all I do is encapsulate the twitter piece in a module called TwitterHelper and put it into my app/helpers/ folder in my Rails application:</p>
-<pre class="code literal-block"><span class="k">require</span> <span class="err">'</span><span class="n">twitter</span><span class="s1">'</span>
-<span class="s1">require '</span><span class="nx">pp</span><span class="s1">'</span>
+<pre class="code literal-block">require 'twitter'
+require 'pp'
 
-<span class="s1">module TwitterHelper  </span>
-<span class="s1">  def latest_twitter_status(user_id='</span><span class="nx">armmer</span><span class="s1">')</span>
-<span class="s1">    begin</span>
-<span class="s1">      status = Twitter.user(user_id).status['</span><span class="nx">text</span><span class="s1">']</span>
-<span class="s1">      status ||= ''</span>
-<span class="s1">      status = status.gsub(/http://(.+?)s/) do |url|</span>
-<span class="s1">        " &lt;a href='</span><span class="err">#</span><span class="p">{</span><span class="nb">url</span><span class="p">}</span><span class="s1">' target='</span><span class="nx">_blank</span><span class="s1">'&gt;#{url}&lt;/a&gt; "</span>
-<span class="s1">      end</span>
-<span class="s1">    rescue Exception =&gt; e</span>
-<span class="s1">      logger.info("Twitter Helper Exception: " + e)</span>
-<span class="s1">      status = ""</span>
-<span class="s1">    end</span>
-<span class="s1">  end</span>
-<span class="s1">end</span>
+module TwitterHelper  
+  def latest_twitter_status(user_id='armmer')
+    begin
+      status = Twitter.user(user_id).status['text']
+      status ||= ''
+      status = status.gsub(/http://(.+?)s/) do |url|
+        " <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'#{url}'</span> <span class="na">target=</span><span class="s">'_blank'</span><span class="nt">&gt;</span>#{url}<span class="nt">&lt;/a&gt;</span> "
+      end
+    rescue Exception =&gt; e
+      logger.info("Twitter Helper Exception: " + e)
+      status = ""
+    end
+  end
+end
 </pre>
 
 
 <p>and then in my view I just call:</p>
-<pre class="code literal-block"><span class="n">latest_twitter_status</span>
+<pre class="code literal-block">latest_twitter_status
 </pre>
 
 
 <p>The important part of code to look at is:</p>
-<pre class="code literal-block"><span class="n">status</span> <span class="o">=</span> <span class="nx">status.gsub</span><span class="p">(</span><span class="o">/</span><span class="p">(</span><span class="nx">http</span><span class="p">:</span><span class="c1">//.*)/) do |url|</span>
-  <span class="s2">" &lt;a href='#{url}' target='_blank'&gt;#{url}&lt;/a&gt; "</span>
-<span class="nb">end</span>
+<pre class="code literal-block">status = status.gsub(/(http://.*)/) do |url|
+  " <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">'#{url}'</span> <span class="na">target=</span><span class="s">'_blank'</span><span class="nt">&gt;</span>#{url}<span class="nt">&lt;/a&gt;</span> "
+end
 </pre>
 
 
 <p>This code will wrap any strings that start with http:// with an html href.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -132,7 +134,7 @@ I use the twitter gem and just display my las">
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

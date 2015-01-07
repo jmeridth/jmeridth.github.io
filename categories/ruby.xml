@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ruby)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 29 Aug 2014 14:08:03 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Setup RVM and Ruby</title><link>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (ruby)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/ruby.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 07 Jan 2015 17:31:47 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Setup RVM and Ruby</title><link>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p&gt;
 &lt;p&gt;Install curl&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install curl
 &lt;/pre&gt;
 
 
 &lt;p&gt;Install RVM (forgot this, thanks &lt;a href="http://twitter.com/jssingh"&gt;Jasdeep&lt;/a&gt;)&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;curl -L get.rvm.io | bash -s stable --auto
+&lt;pre class="code literal-block"&gt;curl -L get.rvm.io &lt;span class="p"&gt;|&lt;/span&gt; bash -s stable --auto
 &lt;/pre&gt;
 
 
@@ -18,7 +18,7 @@
 &lt;p&gt;Run rvm requirements to see what needs to be installed&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;rvm requirements
 ...
-Requirements &lt;span class="k"&gt;for &lt;/span&gt;ubuntu/12.10/x86_64
+Requirements &lt;span class="k"&gt;for&lt;/span&gt; ubuntu/12.10/x86_64
 
 NOTE: &lt;span class="s1"&gt;'ruby'&lt;/span&gt; represents Matz&lt;span class="s1"&gt;'s Ruby Interpreter (MRI) (1.8.X, 1.9.X)&lt;/span&gt;
 &lt;span class="s1"&gt;             This is the *original* / standard Ruby Language Interpreter&lt;/span&gt;
@@ -54,7 +54,7 @@ subversion pkg-config libffi-dev
 &lt;p&gt;Install Ruby&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;rvm install 1.9.3
 ...
-Searching &lt;span class="k"&gt;for &lt;/span&gt;binary rubies, this might take some time.
+Searching &lt;span class="k"&gt;for&lt;/span&gt; binary rubies, this might take some time.
 ruby-1.9.3-p392 - &lt;span class="c"&gt;#configure&lt;/span&gt;
 ruby-1.9.3-p392 - &lt;span class="c"&gt;#download&lt;/span&gt;
 &lt;span class="c"&gt;#############################################                             62.9%&lt;/span&gt;
@@ -84,7 +84,7 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 
 &lt;p&gt;As [Jasdeep][2] says in the comments, it is worth knowing that you’ll need a javascript runtime to use Rails so you might as well install nodejs (because it is fun):&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;sudo apt-get install nodejs
-&lt;/pre&gt;</description><category>ruby</category><category>rvm</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Double Exclmations !! In Ruby</title><link>http://blog.jasonmeridth.com/posts/double-exclamations-in-ruby/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Today I hit this in a Ruby example online:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>ruby</category><category>rvm</category><category>tools</category><guid>http://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/</guid><pubDate>Wed, 06 Mar 2013 06:00:00 GMT</pubDate></item><item><title>Double Exclmations !! In Ruby</title><link>http://blog.jasonmeridth.com/posts/double-exclamations-in-ruby/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Today I hit this in a Ruby example online:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;role?&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;!!&lt;/span&gt;&lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;roles&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find_by_name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;role&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;camelize&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
@@ -103,4 +103,4 @@ Using /home/vagrant/.rvm/gems/ruby-1.9.3-p392
 &lt;span class="o"&gt;!!&lt;/span&gt;&lt;span class="kp"&gt;nil&lt;/span&gt;     &lt;span class="c1"&gt;#-&amp;gt; this is a false-y value that is forced into a boolean&lt;/span&gt;
           &lt;span class="c1"&gt;#   context (false), and then negated (true), and then&lt;/span&gt;
           &lt;span class="c1"&gt;#   negated again (false)&lt;/span&gt;
-&lt;/pre&gt;</description><category>ruby</category><guid>http://blog.jasonmeridth.com/posts/double-exclamations-in-ruby/</guid><pubDate>Sun, 03 Feb 2013 06:00:00 GMT</pubDate></item></channel></rss>
+&lt;/pre&gt;&lt;/div&gt;</description><category>ruby</category><guid>http://blog.jasonmeridth.com/posts/double-exclamations-in-ruby/</guid><pubDate>Sun, 03 Feb 2013 06:00:00 GMT</pubDate></item></channel></rss>

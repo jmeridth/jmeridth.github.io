@@ -69,9 +69,10 @@ article: http://ogp.me/ns/article#
 
         </div>
         <div class="body">
-            <p>I used <a href="https://github.com/dreikanter/wp2md">wp2md</a> recently to generate <a href="http://daringfireball.net/projects/markdown/">markdown</a> files out of my wordpress posts so that I could migrate to a static blog generator (like <a href="http://getnikola.com">Nikola</a>, the one I chose to use on this blog).  However, this exported the files with a prefixing datetime stamp (e.g., 20140224-blog-title.md)</p>
+            <div>
+<p>I used <a href="https://github.com/dreikanter/wp2md">wp2md</a> recently to generate <a href="http://daringfireball.net/projects/markdown/">markdown</a> files out of my wordpress posts so that I could migrate to a static blog generator (like <a href="http://getnikola.com">Nikola</a>, the one I chose to use on this blog).  However, this exported the files with a prefixing datetime stamp (e.g., 20140224-blog-title.md)</p>
 <p>I have used <a href="http://www.gnu.org/software/sed/manual/sed.html">sed</a> many times from my command line toolbox to rename files or content inside of files.  Here is how I removed the prefixing datetime stamp from my filenames.</p>
-<pre class="code literal-block"><span class="k">for </span>f in *.md; <span class="k">do </span><span class="nb">echo</span> <span class="nv">$f</span> | sed -r <span class="s1">'s/.*(\d*)-(.*\.md)/\2/'</span>; <span class="k">done</span>
+<pre class="code literal-block"><span class="k">for</span> f in *.md<span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$f</span> <span class="p">|</span> sed -r <span class="s1">'s/.*(\d*)-(.*\.md)/\2/'</span><span class="p">;</span> <span class="k">done</span>
 </pre>
 
 
@@ -96,14 +97,15 @@ article: http://ogp.me/ns/article#
 <p>Example</p>
 <p><code>20140224-test-driven-development.md</code> becomes <code>test-driven-development.md</code></p>
 <p>NB: the ; do and ; done are just bash scripting loop notation when put onto one line.  This script could have also been written as</p>
-<pre class="code literal-block"><span class="k">for </span>f in *.md; <span class="k">do</span>
-<span class="k">    </span><span class="nb">echo</span> <span class="nv">$f</span> | sed -r <span class="s1">'s/.*(\d*)-(.*\.md)/\2/'</span>
+<pre class="code literal-block"><span class="k">for</span> f in *.md<span class="p">;</span> <span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$f</span> <span class="p">|</span> sed -r <span class="s1">'s/.*(\d*)-(.*\.md)/\2/'</span>
 <span class="k">done</span>
 </pre>
 
 
 <p>I am aware that <a href="http://getnikola.com">Nikola</a> has a <a href="http://getnikola.com/handbook.html#importing-your-wordpress-site-into-nikola">wordpress importer</a>, but it imports the files to <em>.wp and </em>.meta.  I wanted <a href="http://daringfireball.net/projects/markdown/">markdown</a> files (*.md)</p>
 <p>NB: I also use <a href="http://rubular.com">Rubular.com</a> or <a href="https://pythex.org">Pythex</a> all the time to test out my regex expressions.  You should check them out.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -137,7 +139,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

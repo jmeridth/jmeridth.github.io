@@ -64,52 +64,54 @@ I've been pretty busy as of late and even had some issues with the way I was try
             
         </div>
         <div class="body">
-            <h4>RECAP</h4>
+            <div>
+<h4>RECAP</h4>
 <p>I've been pretty busy as of late and even had some issues with the way I was trying to unit test validation.  As you can see <a href="http://www.lostechies.com/blogs/joeydotnet/archive/2007/10/25/monorail-controller-test-analysis-problem-and-resolution.aspx">here</a>, I was able to get some help from <a href="http://www.lostechies.com/blogs/joeydotnet">Joey</a> on this and it has made me realize that I need to re-write my MonoRail Validation post to use the "correct" manner of validation.  Even Oren agrees that the <a href="http://www.ayende.com/Blog/archive/2007/10/21/The-IoC-mind-set-Validation.aspx">validation</a> library in MonoRail works, it is just not the ideal way of doing it.</p>
 <h4>SENDING AN EMAIL</h4>
 <p>You have to do 3 things to send an email successfully:</p>
 <p>1. Write your unit test showing your expectations of the code:</p>
-<pre class="code literal-block">   <span class="mi">1</span><span class="o">:</span> <span class="n">using</span> <span class="n">Castle</span><span class="p">.</span><span class="n">MonoRail</span><span class="p">.</span><span class="n">TestSupport</span><span class="p">;</span>
+<pre class="code literal-block">   <span class="nt">1</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">Castle</span><span class="nc">.MonoRail.TestSupport</span><span class="o">;</span>
 
 
-   <span class="mi">2</span><span class="o">:</span> <span class="n">using</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Controllers</span><span class="p">;</span>
+   <span class="nt">2</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">JasonMeridth</span><span class="nc">.Controllers</span><span class="o">;</span>
 
 
-   <span class="mi">3</span><span class="o">:</span> <span class="n">using</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Models</span><span class="p">;</span>
+   <span class="nt">3</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">JasonMeridth</span><span class="nc">.Models</span><span class="o">;</span>
 
 
-   <span class="mi">4</span><span class="o">:</span> <span class="n">using</span> <span class="n">NUnit</span><span class="p">.</span><span class="n">Framework</span><span class="p">;</span>
+   <span class="nt">4</span><span class="o">:</span> <span class="nt">using</span> <span class="nt">NUnit</span><span class="nc">.Framework</span><span class="o">;</span>
 
 
-   <span class="mi">5</span><span class="o">:</span>
+   <span class="nt">5</span><span class="o">:</span>
 
 
-   <span class="mi">6</span><span class="o">:</span> <span class="n">namespace</span> <span class="n">JasonMeridth</span><span class="p">.</span><span class="n">Tests</span><span class="p">.</span><span class="n">Controllers</span>
+   <span class="nt">6</span><span class="o">:</span> <span class="nt">namespace</span> <span class="nt">JasonMeridth</span><span class="nc">.Tests.Controllers</span>
 
 
-   <span class="mi">7</span><span class="o">:</span> <span class="p">{</span>
+   <span class="nt">7</span><span class="o">:</span> <span class="p">{</span>
 
 
-   <span class="mi">8</span><span class="o">:</span>     <span class="p">[</span><span class="n">TestFixture</span><span class="p">]</span>
+   <span class="m">8</span><span class="o">:</span>     <span class="cp">[</span><span class="nx">TestFixture</span><span class="cp">]</span>
 
 
-   <span class="mi">9</span><span class="o">:</span>     <span class="n">public</span> <span class="n">class</span> <span class="n">ContactControllerTestCase</span> <span class="o">:</span> <span class="n">BaseControllerTest</span>
+   <span class="m">9</span><span class="o">:</span>     <span class="n">public</span> <span class="n">class</span> <span class="n">ContactControllerTestCase</span> <span class="o">:</span> <span class="n">BaseControllerTest</span>
 
 
-  <span class="mi">10</span><span class="o">:</span>     <span class="p">{</span>
+  <span class="m">10</span><span class="o">:</span>     <span class="err">{</span>
 
 
-  <span class="mi">11</span><span class="o">:</span>         <span class="n">private</span> <span class="n">Contact</span> <span class="n">contact</span><span class="p">;</span>
+  <span class="m">11</span><span class="o">:</span>         <span class="n">private</span> <span class="n">Contact</span> <span class="n">contact</span><span class="p">;</span>
 
 
-  <span class="mi">12</span><span class="o">:</span>         <span class="n">private</span> <span class="n">ContactController</span> <span class="n">contactController</span><span class="p">;</span>
+  <span class="m">12</span><span class="o">:</span>         <span class="n">private</span> <span class="n">ContactController</span> <span class="n">contactController</span><span class="p">;</span>
 
 
-  <span class="mi">13</span><span class="o">:</span>
+  <span class="m">13</span><span class="o">:</span>
 
 
-  <span class="mi">14</span><span class="o">:</span>         <span class="p">[</span><span class="n">SetUp</span>
+  <span class="m">14</span><span class="o">:</span>         <span class="cp">[</span><span class="nx">SetUp</span>
 </pre>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -143,7 +145,7 @@ I've been pretty busy as of late and even had some issues with the way I was try
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

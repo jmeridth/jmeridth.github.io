@@ -63,37 +63,39 @@ article: http://ogp.me/ns/article#
             
         </div>
         <div class="body">
-            <p>I've heard or read too many git blog posts/pod casts state that if you create a new file in your local Git repo and you want to shorten the steps on getting it added to the local repository, all you have to do is:</p>
-<pre class="code literal-block"><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s">"my commit message"</span>
+            <div>
+<p>I've heard or read too many git blog posts/pod casts state that if you create a new file in your local Git repo and you want to shorten the steps on getting it added to the local repository, all you have to do is:</p>
+<pre class="code literal-block">git commit -am "my commit message"
 </pre>
 
 
 <p>This is <em>not</em> true. If the file has never been added to the repo prior, then you still have to:</p>
-<pre class="code literal-block"><span class="nx">git</span> <span class="nb">add</span> <span class="o">&lt;</span><span class="nx">file_name</span><span class="o">&gt;</span>
+<pre class="code literal-block">git add &lt;file_name&gt;
 </pre>
 
 
 <p>Why?</p>
 <p>The "git commit -a" command is a shortcut to a two-step process. After you modify a file that is already known by the repo, you still have to tell the repo, "Hey! I want to add this to the staged files and eventually commit it to you." That is done by issuing the "git add" command. "git commit -a" is staging the file and committing it in one step.</p>
 <p>If you create a new file, edit it, and issue the "git commit -a" command, you will see something like:</p>
-<pre class="code literal-block"><span class="err">~</span> <span class="o">&gt;</span> <span class="nx">mkdir</span> <span class="nx">test</span>
-<span class="err">~</span> <span class="o">&gt;</span> <span class="nx">cd</span> <span class="nx">test</span>
-<span class="err">~</span><span class="p">/</span><span class="nx">test</span> <span class="o">&gt;</span> <span class="nx">git</span> <span class="nx">initInitialized</span> <span class="nx">empty</span> <span class="nx">Git</span> <span class="n">repository</span> <span class="k">in</span> <span class="p">/</span><span class="nx">Users</span><span class="p">/</span><span class="nx">jasonmeridth</span><span class="p">/</span><span class="nx">test</span><span class="p">/</span><span class="nx">.git</span><span class="o">/</span>
-<span class="err">~</span><span class="p">/</span><span class="nx">test</span><span class="p">(</span><span class="nx">master</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">touch</span> <span class="nx">test</span>
-<span class="err">~</span><span class="p">/</span><span class="nx">test</span><span class="p">(</span><span class="nx">master</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nx">git</span> <span class="nx">commit</span> <span class="na">-am</span> <span class="s2">"initial commit"</span>
-<span class="err">#</span> <span class="k">On</span> <span class="nx">branch</span> <span class="nx">master</span>
-<span class="err">#</span>
-<span class="err">#</span> <span class="nx">Initial</span> <span class="nx">commit</span>
-<span class="err">#</span>
-<span class="err">#</span> <span class="nx">Untracked</span> <span class="nx">files</span><span class="p">:</span>
-<span class="err">#</span>   <span class="p">(</span><span class="nx">use</span> <span class="s2">"git add &lt;file&gt;..."</span> <span class="k">to</span> <span class="n">include</span> <span class="k">in</span> <span class="nx">what</span> <span class="nx">will</span> <span class="nx">be</span> <span class="nx">committed</span><span class="p">)</span>
-<span class="err">#</span>
-<span class="err">#</span>       <span class="nx">test</span>
-<span class="nx">nothing</span> <span class="nx">added</span> <span class="k">to</span> <span class="nx">commit</span> <span class="nx">but</span> <span class="nx">untracked</span> <span class="nx">files</span> <span class="nx">present</span> <span class="p">(</span><span class="nx">use</span> <span class="s2">"git add"</span> <span class="k">to</span> <span class="nx">track</span><span class="p">)</span>
+<pre class="code literal-block">~ &gt; mkdir test
+~ &gt; cd test
+~/test &gt; git initInitialized empty Git repository in /Users/jasonmeridth/test/.git/
+~/test(master) &gt; touch test
+~/test(master) &gt; git commit -am "initial commit"
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add &lt;file&gt;..." to include in what will be committed)
+#
+#       test
+nothing added to commit but untracked files present (use "git add" to track)
 </pre>
 
 
 <p>The "nothing added to commit but untracked files present" is the key comment. Git even suggests using "git add" to track the file. See, it's user friendly. Just be aware.</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -127,7 +129,7 @@ article: http://ogp.me/ns/article#
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

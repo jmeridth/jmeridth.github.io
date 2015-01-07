@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (rails)</title><link>http://blog.jasonmeridth.com/</link><description></description><language>en</language><lastBuildDate>Fri, 29 Aug 2014 14:08:05 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using Deafult Scope and Unscoped in Rails</title><link>http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog (rails)</title><link>http://blog.jasonmeridth.com/</link><description></description><atom:link href="http://blog.jasonmeridth.com/categories/rails.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Wed, 07 Jan 2015 17:31:46 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Using Default Scope and Unscoped in Rails</title><link>http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;That does lean towards not having DRY (don’t repeat yourself) code. It’s a balancing act. I decided to give default_scope a chance this time. I quickly experienced the downside of that choice. I added the default_scope to my model:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="ss"&gt;ActiveRecord&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="ss"&gt;:Base&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="no"&gt;ActiveRecord&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Base&lt;/span&gt;
   &lt;span class="n"&gt;default_scope&lt;/span&gt; &lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Well, I needed to write a migration to add the column and then update any existing records to have a default value of false. I generated my migration and added the following:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AddDeletedFlagToUsers&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="ss"&gt;ActiveRecord&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="ss"&gt;:Migration&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;AddDeletedFlagToUsers&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="no"&gt;ActiveRecord&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Migration&lt;/span&gt;
   &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;change&lt;/span&gt;
     &lt;span class="n"&gt;add_column&lt;/span&gt; &lt;span class="ss"&gt;:users&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:deleted&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:boolean&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:default&lt;/span&gt; &lt;span class="o"&gt;=&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;gt&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;
     &lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;update_all&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"deleted = ?"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
@@ -28,7 +28,7 @@
 
 
 &lt;p&gt;and that’s when I saw how default_scope can bite you in the butt:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;~/code/project&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;amp;gt; rails c
+&lt;pre class="code literal-block"&gt;~/code/project&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;gt&lt;span class="p"&gt;;&lt;/span&gt; rails c
 Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.2.12&lt;span class="o"&gt;)&lt;/span&gt;
 &amp;gt;&amp;gt; User.update_all &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"deleted = ?"&lt;/span&gt;, &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
   SQL &lt;span class="o"&gt;(&lt;/span&gt;35.9ms&lt;span class="o"&gt;)&lt;/span&gt;  UPDATE &lt;span class="s2"&gt;"users"&lt;/span&gt; SET &lt;span class="nv"&gt;deleted&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'f'&lt;/span&gt; WHERE &lt;span class="s2"&gt;"users"&lt;/span&gt;.&lt;span class="s2"&gt;"deleted"&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'f'&lt;/span&gt;
@@ -42,7 +42,7 @@ Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.2.12
 
 
 &lt;p&gt;in my migration. That then caused all existing records to be updated.&lt;/p&gt;
-&lt;p&gt;Yes, I’m aware this violates “Explicit over implicit” but it does keep my code “DRY (do not repeat yourself)”. There are pros and cons to all tools. Use them wisely.  &lt;/p&gt;</description><category>rails</category><guid>http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</guid><pubDate>Tue, 02 Apr 2013 05:00:00 GMT</pubDate></item><item><title>has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order</title><link>http://blog.jasonmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;TL;DR &lt;/p&gt;
+&lt;p&gt;Yes, I’m aware this violates “Explicit over implicit” but it does keep my code “DRY (do not repeat yourself)”. There are pros and cons to all tools. Use them wisely.  &lt;/p&gt;&lt;/div&gt;</description><category>rails</category><guid>http://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</guid><pubDate>Tue, 02 Apr 2013 05:00:00 GMT</pubDate></item><item><title>has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order</title><link>http://blog.jasonmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;TL;DR &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations"&gt;Read this from the Rails Guides&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Today I created an explicit join table between two models because each had has_and_belongs_to_many, as I’ve done many time before. Except, this time, when I tried to render one of my views, it said it couldn’t find a join table.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
@@ -57,7 +57,7 @@ Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.2.12
 &lt;/pre&gt;
 
 
-&lt;p&gt;My first inclination was the fact that it was looking for it in alphabetical order. Sure enough, the &lt;a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations"&gt;Rails Guide Documentation&lt;/a&gt; states that Rails developers do need to explicitly create their join tables but they have to be in lexical order (alphabetical).&lt;/p&gt;</description><category>rails</category><guid>http://blog.jasonmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</guid><pubDate>Sun, 03 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Create Rails Application in Current Directory</title><link>http://blog.jasonmeridth.com/posts/create-rails-application-in-current-directory/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;Yes, I know the common way to create a Rails application is&lt;/p&gt;
+&lt;p&gt;My first inclination was the fact that it was looking for it in alphabetical order. Sure enough, the &lt;a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations"&gt;Rails Guide Documentation&lt;/a&gt; states that Rails developers do need to explicitly create their join tables but they have to be in lexical order (alphabetical).&lt;/p&gt;&lt;/div&gt;</description><category>rails</category><guid>http://blog.jasonmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</guid><pubDate>Sun, 03 Feb 2013 06:00:00 GMT</pubDate></item><item><title>Create Rails Application in Current Directory</title><link>http://blog.jasonmeridth.com/posts/create-rails-application-in-current-directory/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Yes, I know the common way to create a Rails application is&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;rails new 
 &lt;/pre&gt;
 
@@ -77,7 +77,7 @@ Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.2.12
 
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;rails new fileuploader /var/www/apps/files
-&lt;/pre&gt;</description><category>rails</category><guid>http://blog.jasonmeridth.com/posts/create-rails-application-in-current-directory/</guid><pubDate>Thu, 25 Oct 2012 05:00:00 GMT</pubDate></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;p&gt;So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>rails</category><guid>http://blog.jasonmeridth.com/posts/create-rails-application-in-current-directory/</guid><pubDate>Thu, 25 Oct 2012 05:00:00 GMT</pubDate></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;my_app/&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rails console
 /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;': no such file to load -- readline (LoadError)&lt;/span&gt;
 &lt;span class="s1"&gt;from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `'&lt;/span&gt;
@@ -100,10 +100,10 @@ from script/rails:6:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span clas
 &lt;p&gt;I did this and it still didn’t work. The advice I received from googling was to compile the readline extension by hand and see if any dependencies were missing:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install libncurses5-dev libreadline5-dev
 &lt;span class="nv"&gt;$ &lt;/span&gt;ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
-checking &lt;span class="k"&gt;for &lt;/span&gt;tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... no
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/readline.h... no
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/history.h... no
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/readline.h... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/history.h... no
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... no
 ...
 &lt;/pre&gt;
 
@@ -116,10 +116,10 @@ checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()
 
 &lt;p&gt;Now when I run extconf.rb, everything is there:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
-checking &lt;span class="k"&gt;for &lt;/span&gt;tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... yes
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/readline.h.... yes
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline/history.h... yes
-checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; tgetnum&lt;span class="o"&gt;()&lt;/span&gt; in -lncurses... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/readline.h.... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline/history.h... yes
+checking &lt;span class="k"&gt;for&lt;/span&gt; readline&lt;span class="o"&gt;()&lt;/span&gt; in -lreadline... yes
 ...
 &lt;/pre&gt;
 
@@ -136,5 +136,5 @@ checking &lt;span class="k"&gt;for &lt;/span&gt;readline&lt;span class="o"&gt;()
 &lt;p&gt;Now the rails console works:&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;my_app&lt;span class="nv"&gt;$ &lt;/span&gt;rails console
 Loading development environment &lt;span class="o"&gt;(&lt;/span&gt;Rails 3.0.3&lt;span class="o"&gt;)&lt;/span&gt;
-ruby-1.9.2-p0 &amp;amp;gt;
-&lt;/pre&gt;</description><category>rails</category><category>rvm</category><guid>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</guid><pubDate>Thu, 25 Nov 2010 06:00:00 GMT</pubDate></item></channel></rss>
+ruby-1.9.2-p0 &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;gt&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><category>rails</category><category>rvm</category><guid>http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3/</guid><pubDate>Thu, 25 Nov 2010 06:00:00 GMT</pubDate></item></channel></rss>

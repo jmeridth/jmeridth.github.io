@@ -74,7 +74,8 @@ If we issue the “find .” command locally inside the gitosis-admin directory 
 
         </div>
         <div class="body">
-            <p><a href="../gitosis-and-gitweb-part-1">Gitosis and Gitweb – Part 1</a></p>
+            <div>
+<p><a href="../gitosis-and-gitweb-part-1">Gitosis and Gitweb – Part 1</a></p>
 <p>So we are setup now thanks to Part 1.</p>
 <h3>Gitosis repository contents</h3>
 <p>If we issue the “find .” command locally inside the gitosis-admin directory we will see the following:</p>
@@ -121,17 +122,17 @@ If we issue the “find .” command locally inside the gitosis-admin directory 
 <p>It looks exactly like the gitosis-admin one. Now we commit it just like we would normally when using Git. We can add, then commit or commit with the -am argument. This is possible since the gitosis-admin.conf file is already tracked by the repository.</p>
 <pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git commit -am <span class="s2">"add meridth project"</span>
 <span class="o">[</span>master 6b7a5da<span class="o">]</span> add meridth project
-1 file changed, 3 insertions<span class="o">(</span>+<span class="o">)</span>, 0 deletions<span class="o">(</span>-<span class="o">)</span>
+<span class="m">1</span> file changed, <span class="m">3</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">0</span> deletions<span class="o">(</span>-<span class="o">)</span>
 </pre>
 
 
 <p>and push it to the remote gitosis-admin repository:</p>
 <pre class="code literal-block">~/gitosis-admin<span class="o">(</span>master<span class="o">)</span> &gt; git push
 Counting objects: 5, <span class="k">done</span>.
-Delta compression using up to 2 threads
+Delta compression using up to <span class="m">2</span> threads
 Compressing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="k">done</span>.
-Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, 385 bytes, <span class="k">done</span>.
-Total 3 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
+Writing objects: 100% <span class="o">(</span>3/3<span class="o">)</span>, <span class="m">385</span> bytes, <span class="k">done</span>.
+Total <span class="m">3</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
 To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
    23842e9..6b7a5da master -&gt; master
 </pre>
@@ -174,6 +175,7 @@ To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
 <p><strong><a href=".#481" title="2010-08-21 08:53:11">ashlynnega</a>:</strong> increased link <a href="http://www.unesco.org">rise sectors windows past</a> [url=http://water.usgs.gov]videos comment president android[/url] http://www.newswire.ca</p>
 <p><strong><a href=".#482" title="2010-08-21 08:53:28">garrmankor</a>:</strong> economy regions hypothesis special</p>
 <p><strong><a href=".#496" title="2011-05-12 10:24:00">Mullins</a>:</strong> After creating the losttechies repository locally I needed to create the remote 'origin' by executing: $ git remote add origin git@MYSERVER.com:losttechies.git</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -207,7 +209,7 @@ To git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

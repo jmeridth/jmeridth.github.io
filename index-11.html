@@ -56,222 +56,224 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <h5>
+                <div>
+<h5>
 <em>Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my 'release clock' all the time. But it's out there now, and hopefully better for the wait,</em>" Linus Torvalds said <a href="http://kerneltrap.org/mailarchive/linux-kernel/2007/10/9/333488">announcing the 2.6.23 kernel</a>. He noted few changes since the last release candidate, "<em>not a whole lot of changes since -rc9, although there's a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there's basically a number of mostly one-liners (mostly in drivers, but there's some networking fixes and soem VFS/VM fixes there too).</em>" Source level changes can be viewed via the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary">gitweb interface</a>. A nice overview of all changes can be found at <a href="http://kernelnewbies.org/Linux_2_6_23">Kernel Newbies</a>. Linus went on to describe his plan going forward:</h5>
 <blockquote>
 <p>"I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it's going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)"</p>
 </blockquote>
 <hr>
-<pre class="code literal-block"><span class="o">**</span><span class="n">From</span><span class="o">:</span> <span class="n">Linus</span> <span class="n">Torvalds</span> <span class="o">&lt;</span><span class="n">torvalds</span><span class="err">@</span><span class="p">...</span><span class="o">&gt;**</span>
-<span class="nl">Subject:</span> <span class="p">[</span><span class="n">Linux</span> <span class="mf">2.6.23</span>
-<span class="p">](</span><span class="n">http</span><span class="o">:</span><span class="c1">//kerneltrap.org/mailarchive/linux-kernel/2007/10/9/333488)Date: Oct 9, 11:54 am 2007</span>
+<pre class="code literal-block">**<span class="n">From:</span> <span class="n">Linus</span> <span class="n">Torvalds</span> <span class="s">&lt;torvalds@...&gt;</span>**
+<span class="n">Subject:</span> [<span class="n">Linux</span> <span class="mf">2.6.23</span>
+](<span class="n">http:</span>//<span class="n">kerneltrap</span>.<span class="n">org</span><span class="o">/</span><span class="n">mailarchive</span><span class="o">/</span><span class="n">linux-kernel</span><span class="o">/</span><span class="mi">2007</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">9</span><span class="o">/</span><span class="mi">333488</span>)<span class="n">Date:</span> <span class="n">Oct</span> <span class="mi">9</span>, <span class="mi">11</span>:<span class="mi">54</span> <span class="n">am</span> <span class="mi">2007</span>
 
-<span class="n">Finally</span><span class="p">.</span>
+<span class="n">Finally</span>.
 
-<span class="n">Yeah</span><span class="p">,</span> <span class="n">it</span> <span class="n">got</span> <span class="n">delayed</span><span class="p">,</span> <span class="n">not</span> <span class="n">because</span> <span class="n">of</span> <span class="n">any</span> <span class="n">huge</span> <span class="n">issues</span><span class="p">,</span> <span class="n">but</span> <span class="n">because</span> <span class="n">of</span> 
-<span class="n">various</span> <span class="n">bugfixes</span> <span class="n">trickling</span> <span class="n">in</span> <span class="n">and</span> <span class="n">causing</span> <span class="n">me</span> <span class="n">to</span> <span class="n">reset</span> <span class="n">my</span> <span class="s">"release clock"</span> 
-<span class="n">all</span> <span class="n">the</span> <span class="n">time</span><span class="p">.</span> <span class="n">But</span> <span class="n">it</span><span class="err">'</span><span class="n">s</span> <span class="n">out</span> <span class="n">there</span> <span class="n">now</span><span class="p">,</span> <span class="n">and</span> <span class="n">hopefully</span> <span class="n">better</span> <span class="k">for</span> <span class="n">the</span> <span class="n">wait</span><span class="p">.</span>
+<span class="n">Yeah</span>, <span class="n">it</span> <span class="n">got</span> <span class="n">delayed</span>, <span class="nb">not</span> <span class="n">because</span> <span class="k">of</span> <span class="nb">any</span> <span class="n">huge</span> <span class="n">issues</span>, <span class="k">but</span> <span class="n">because</span> <span class="k">of</span> 
+<span class="n">various</span> <span class="n">bugfixes</span> <span class="n">trickling</span> <span class="n">in</span> <span class="o">and</span> <span class="n">causing</span> <span class="n">me</span> <span class="nb">to</span> <span class="n">reset</span> <span class="k">my</span> <span class="s">"release clock"</span> 
+<span class="nb">all</span> <span class="n">the</span> <span class="nb">time</span>. <span class="n">But</span> <span class="n">it's</span> <span class="n">out</span> <span class="n">there</span> <span class="n">now</span>, <span class="o">and</span> <span class="n">hopefully</span> <span class="n">better</span> <span class="k">for</span> <span class="n">the</span> <span class="nb">wait</span>.
 
-<span class="n">Not</span> <span class="n">a</span> <span class="n">whole</span> <span class="n">lot</span> <span class="n">of</span> <span class="n">changes</span> <span class="n">since</span> <span class="o">-</span><span class="n">rc9</span><span class="p">,</span> <span class="n">although</span> <span class="n">there</span><span class="err">'</span><span class="n">s</span> <span class="n">a</span> <span class="n">few</span> <span class="n">updates</span> <span class="n">to</span> 
-<span class="n">mips</span><span class="p">,</span> <span class="n">sparc64</span> <span class="n">and</span> <span class="n">blackfin</span> <span class="n">in</span> <span class="n">there</span><span class="p">.</span>  <span class="n">Ignoring</span> <span class="n">those</span> <span class="n">arch</span> <span class="n">updates</span><span class="p">,</span> <span class="n">there</span><span class="err">'</span><span class="n">s</span> 
-<span class="n">basically</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span> <span class="n">mostly</span> <span class="n">one</span><span class="o">-</span><span class="n">liners</span> <span class="p">(</span><span class="n">mostly</span> <span class="n">in</span> <span class="n">drivers</span><span class="p">,</span> <span class="n">but</span> <span class="n">there</span><span class="err">'</span><span class="n">s</span> 
-<span class="n">some</span> <span class="n">networking</span> <span class="n">fixes</span> <span class="n">and</span> <span class="n">soem</span> <span class="n">VFS</span><span class="o">/</span><span class="n">VM</span> <span class="n">fixes</span> <span class="n">there</span> <span class="n">too</span><span class="p">).</span>
+<span class="n">Not</span> <span class="n">a</span> <span class="n">whole</span> <span class="n">lot</span> <span class="k">of</span> <span class="n">changes</span> <span class="n">since</span> -<span class="n">rc9</span>, <span class="n">although</span> <span class="n">there's</span> <span class="n">a</span> <span class="n">few</span> <span class="n">updates</span> <span class="nb">to</span> 
+<span class="n">mips</span>, <span class="n">sparc64</span> <span class="o">and</span> <span class="n">blackfin</span> <span class="n">in</span> <span class="n">there</span>.  <span class="n">Ignoring</span> <span class="n">those</span> <span class="n">arch</span> <span class="n">updates</span>, <span class="n">there's</span> 
+<span class="n">basically</span> <span class="n">a</span> <span class="n">number</span> <span class="k">of</span> <span class="n">mostly</span> <span class="n">one-liners</span> (<span class="n">mostly</span> <span class="n">in</span> <span class="n">drivers</span>, <span class="k">but</span> <span class="n">there's</span> 
+<span class="n">some</span> <span class="n">networking</span> <span class="n">fixes</span> <span class="o">and</span> <span class="n">soem</span> <span class="n">VFS</span><span class="o">/</span><span class="n">VM</span> <span class="n">fixes</span> <span class="n">there</span> <span class="n">too</span>).
 
-<span class="n">Shortlog</span> <span class="n">and</span> <span class="n">diffstat</span> <span class="n">appended</span> <span class="p">(</span><span class="n">both</span> <span class="n">relative</span> <span class="n">to</span> <span class="o">-</span><span class="n">rc9</span><span class="p">,</span> <span class="n">of</span> <span class="n">course</span> <span class="o">-</span> <span class="n">the</span> 
-<span class="n">full</span> <span class="n">log</span> <span class="n">from</span> <span class="mf">2.6.22</span> <span class="n">is</span> <span class="n">on</span> <span class="n">kernel</span><span class="p">.</span><span class="n">org</span> <span class="n">as</span> <span class="n">usual</span><span class="p">).</span>
+<span class="n">Shortlog</span> <span class="o">and</span> <span class="n">diffstat</span> <span class="n">appended</span> (<span class="n">both</span> <span class="n">relative</span> <span class="nb">to</span> -<span class="n">rc9</span>, <span class="k">of</span> <span class="n">course</span> - <span class="n">the</span> 
+<span class="n">full</span> <span class="nb">log</span> <span class="nb">from</span> <span class="mf">2.6.22</span> <span class="k">is</span> <span class="n">on</span> <span class="n">kernel</span>.<span class="n">org</span> <span class="k">as</span> <span class="n">usual</span>).
 
-<span class="n">I</span> <span class="n">want</span> <span class="n">this</span> <span class="n">to</span> <span class="n">be</span> <span class="n">what</span> <span class="n">people</span> <span class="n">look</span> <span class="n">at</span> <span class="k">for</span> <span class="n">a</span> <span class="n">few</span> <span class="n">days</span><span class="p">,</span> <span class="n">but</span> <span class="n">expect</span> <span class="n">the</span> <span class="n">x86</span> 
-<span class="n">merge</span> <span class="n">to</span> <span class="n">go</span> <span class="n">ahead</span> <span class="n">after</span> <span class="n">that</span><span class="p">.</span> <span class="n">So</span> <span class="n">far</span><span class="p">,</span> <span class="n">all</span> <span class="n">indications</span> <span class="n">are</span> <span class="n">still</span> <span class="n">that</span> <span class="n">it</span><span class="err">'</span><span class="n">s</span> 
-<span class="n">going</span> <span class="n">to</span> <span class="n">be</span> <span class="n">all</span> <span class="n">smooth</span> <span class="n">sailing</span><span class="p">,</span> <span class="n">but</span> <span class="n">hey</span><span class="p">,</span> <span class="n">those</span> <span class="n">indicators</span> <span class="n">seem</span> <span class="n">to</span> <span class="n">always</span> 
-<span class="n">say</span> <span class="n">that</span><span class="p">,</span> <span class="n">and</span> <span class="n">only</span> <span class="n">after</span> <span class="n">the</span> <span class="n">fact</span> <span class="k">do</span> <span class="n">people</span> <span class="n">notice</span> <span class="n">any</span> <span class="n">problems</span> <span class="p">;)</span>
+<span class="n">I</span> <span class="nb">want</span> <span class="n">this</span> <span class="nb">to</span> <span class="n">be</span> <span class="n">what</span> <span class="n">people</span> <span class="n">look</span> <span class="n">at</span> <span class="k">for</span> <span class="n">a</span> <span class="n">few</span> <span class="n">days</span>, <span class="k">but</span> <span class="n">expect</span> <span class="n">the</span> <span class="n">x86</span> 
+<span class="n">merge</span> <span class="nb">to</span> <span class="n">go</span> <span class="n">ahead</span> <span class="o">after</span> <span class="n">that</span>. <span class="n">So</span> <span class="n">far</span>, <span class="nb">all</span> <span class="n">indications</span> <span class="n">are</span> <span class="n">still</span> <span class="n">that</span> <span class="n">it's</span> 
+<span class="n">going</span> <span class="nb">to</span> <span class="n">be</span> <span class="nb">all</span> <span class="n">smooth</span> <span class="n">sailing</span>, <span class="k">but</span> <span class="n">hey</span>, <span class="n">those</span> <span class="n">indicators</span> <span class="n">seem</span> <span class="nb">to</span> <span class="n">always</span> 
+<span class="nb">say</span> <span class="n">that</span>, <span class="o">and</span> <span class="k">only</span> <span class="o">after</span> <span class="n">the</span> <span class="n">fact</span> <span class="k">do</span> <span class="n">people</span> <span class="n">notice</span> <span class="nb">any</span> <span class="n">problems</span> ;)
 
         <span class="n">Linus</span>
 
-<span class="o">---</span>
-<span class="n">Akinobu</span> <span class="n">Mita</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">check</span> <span class="n">fork_idle</span><span class="p">()</span> <span class="n">error</span>
+---
+<span class="n">Akinobu</span> <span class="n">Mita</span> (<span class="mi">1</span>):
+      [<span class="n">SPARC64</span>]: <span class="n">check</span> <span class="n">fork_idle</span>() <span class="n">error</span>
 
-<span class="n">Al</span> <span class="n">Viro</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">fix</span> <span class="n">bogus</span> <span class="n">reporting</span> <span class="n">of</span> <span class="n">signals</span> <span class="n">by</span> <span class="n">audit</span>
+<span class="n">Al</span> <span class="n">Viro</span> (<span class="mi">1</span>):
+      <span class="n">fix</span> <span class="n">bogus</span> <span class="n">reporting</span> <span class="k">of</span> <span class="n">signals</span> <span class="nb">by</span> <span class="n">audit</span>
 
-<span class="n">Alexey</span> <span class="n">Dobriyan</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Move</span> <span class="n">kasprintf</span><span class="p">.</span><span class="n">o</span> <span class="n">to</span> <span class="n">obj</span><span class="o">-</span><span class="n">y</span>
-      <span class="p">[</span><span class="n">ROSE</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">rose</span><span class="p">.</span><span class="n">ko</span> <span class="n">oops</span> <span class="n">on</span> <span class="n">unload</span>
+<span class="n">Alexey</span> <span class="n">Dobriyan</span> (<span class="mi">2</span>):
+      <span class="n">Move</span> <span class="n">kasprintf</span>.<span class="n">o</span> <span class="nb">to</span> <span class="n">obj-y</span>
+      [<span class="n">ROSE</span>]: <span class="n">Fix</span> <span class="n">rose</span>.<span class="n">ko</span> <span class="n">oops</span> <span class="n">on</span> <span class="n">unload</span>
 
-<span class="n">Alexey</span> <span class="n">Kuznetsov</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">SFQ</span><span class="p">]</span><span class="o">:</span> <span class="n">Remove</span> <span class="n">artificial</span> <span class="n">limitation</span> <span class="k">for</span> <span class="n">queue</span> <span class="n">limit</span><span class="p">.</span>
+<span class="n">Alexey</span> <span class="n">Kuznetsov</span> (<span class="mi">1</span>):
+      [<span class="n">SFQ</span>]: <span class="n">Remove</span> <span class="n">artificial</span> <span class="n">limitation</span> <span class="k">for</span> <span class="n">queue</span> <span class="n">limit</span>.
 
-<span class="n">Andrew</span> <span class="n">Morton</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">binfmt_flat:</span> <span class="n">checkpatch</span> <span class="n">fixing</span> <span class="n">minimum</span> <span class="n">support</span> <span class="k">for</span> <span class="n">the</span> <span class="n">blackfin</span> <span class="n">relocations</span>
+<span class="n">Andrew</span> <span class="n">Morton</span> (<span class="mi">1</span>):
+      <span class="n">binfmt_flat:</span> <span class="n">checkpatch</span> <span class="n">fixing</span> <span class="n">minimum</span> <span class="n">support</span> <span class="k">for</span> <span class="n">the</span> <span class="n">blackfin</span> <span class="n">relocations</span>
 
-<span class="n">Anton</span> <span class="n">Blanchard</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">POWERPC</span><span class="p">]</span> <span class="n">Fix</span> <span class="n">xics</span> <span class="n">set_affinity</span> <span class="n">code</span>
-      <span class="n">Fix</span> <span class="n">timer_stats</span> <span class="n">printout</span> <span class="n">of</span> <span class="n">events</span><span class="o">/</span><span class="n">sec</span>
+<span class="n">Anton</span> <span class="n">Blanchard</span> (<span class="mi">2</span>):
+      [<span class="n">POWERPC</span>] <span class="n">Fix</span> <span class="n">xics</span> <span class="n">set_affinity</span> <span class="n">code</span>
+      <span class="n">Fix</span> <span class="n">timer_stats</span> <span class="n">printout</span> <span class="k">of</span> <span class="n">events</span><span class="o">/</span><span class="nb">sec</span>
 
-<span class="n">Attila</span> <span class="n">Kinali</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Add</span> <span class="n">manufacturer</span> <span class="n">and</span> <span class="n">card</span> <span class="n">id</span> <span class="n">of</span> <span class="n">teltonica</span> <span class="n">pcmcia</span> <span class="n">modems</span>
+<span class="n">Attila</span> <span class="n">Kinali</span> (<span class="mi">1</span>):
+      <span class="n">Add</span> <span class="n">manufacturer</span> <span class="o">and</span> <span class="n">card</span> <span class="n">id</span> <span class="k">of</span> <span class="n">teltonica</span> <span class="n">pcmcia</span> <span class="n">modems</span>
 
-<span class="n">Ben</span> <span class="n">Dooks</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">ARM</span><span class="p">]</span> <span class="mi">4597</span><span class="o">/</span><span class="mi">2</span><span class="o">:</span> <span class="n">OSIRIS</span><span class="o">:</span> <span class="n">ensure</span> <span class="n">CPLD0</span> <span class="n">is</span> <span class="n">preserved</span> <span class="n">after</span> <span class="n">suspend</span>
-      <span class="p">[</span><span class="n">ARM</span><span class="p">]</span> <span class="mi">4598</span><span class="o">/</span><span class="mi">2</span><span class="o">:</span> <span class="n">OSIRIS</span><span class="o">:</span> <span class="n">Ensure</span> <span class="n">we</span> <span class="k">do</span> <span class="n">not</span> <span class="n">get</span> <span class="n">nRSTOUT</span> <span class="n">during</span> <span class="n">suspend</span>
+<span class="n">Ben</span> <span class="n">Dooks</span> (<span class="mi">2</span>):
+      [<span class="n">ARM</span>] <span class="mi">4597</span><span class="o">/</span><span class="mi">2</span>: <span class="n">OSIRIS:</span> <span class="n">ensure</span> <span class="n">CPLD0</span> <span class="k">is</span> <span class="n">preserved</span> <span class="o">after</span> <span class="n">suspend</span>
+      [<span class="n">ARM</span>] <span class="mi">4598</span><span class="o">/</span><span class="mi">2</span>: <span class="n">OSIRIS:</span> <span class="n">Ensure</span> <span class="n">we</span> <span class="k">do</span> <span class="nb">not</span> <span class="n">get</span> <span class="n">nRSTOUT</span> <span class="n">during</span> <span class="n">suspend</span>
 
-<span class="n">Benjamin</span> <span class="n">Herrenschmidt</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Fix</span> <span class="n">non</span><span class="o">-</span><span class="n">terminated</span> <span class="n">PCI</span> <span class="n">match</span> <span class="n">table</span> <span class="n">in</span> <span class="n">PowerMac</span> <span class="n">IDE</span>
+<span class="n">Benjamin</span> <span class="n">Herrenschmidt</span> (<span class="mi">1</span>):
+      <span class="n">Fix</span> <span class="n">non-terminated</span> <span class="n">PCI</span> <span class="n">match</span> <span class="n">table</span> <span class="n">in</span> <span class="n">PowerMac</span> <span class="n">IDE</span>
 
-<span class="n">Bernd</span> <span class="n">Schmidt</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">Binfmt_flat:</span> <span class="n">Add</span> <span class="n">minimum</span> <span class="n">support</span> <span class="k">for</span> <span class="n">the</span> <span class="n">Blackfin</span> <span class="n">relocations</span>
+<span class="n">Bernd</span> <span class="n">Schmidt</span> (<span class="mi">1</span>):
+      <span class="n">Binfmt_flat:</span> <span class="n">Add</span> <span class="n">minimum</span> <span class="n">support</span> <span class="k">for</span> <span class="n">the</span> <span class="n">Blackfin</span> <span class="n">relocations</span>
 
-<span class="n">Brian</span> <span class="n">Haley</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">IPv6</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">ICMPv6</span> <span class="n">redirect</span> <span class="n">handling</span> <span class="n">with</span> <span class="n">target</span> <span class="n">multicast</span> <span class="n">address</span>
+<span class="n">Brian</span> <span class="n">Haley</span> (<span class="mi">1</span>):
+      [<span class="n">IPv6</span>]: <span class="n">Fix</span> <span class="n">ICMPv6</span> <span class="n">redirect</span> <span class="n">handling</span> <span class="n">with</span> <span class="n">target</span> <span class="n">multicast</span> <span class="n">address</span>
 
-<span class="n">Bryan</span> <span class="n">Wu</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Blackfin</span> <span class="n">arch</span><span class="o">:</span> <span class="n">add</span> <span class="n">some</span> <span class="n">missing</span> <span class="n">syscall</span>
+<span class="n">Bryan</span> <span class="n">Wu</span> (<span class="mi">1</span>):
+      <span class="n">Blackfin</span> <span class="n">arch:</span> <span class="n">add</span> <span class="n">some</span> <span class="n">missing</span> <span class="n">syscall</span>
 
-<span class="n">Dale</span> <span class="n">Farnsworth</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">mv643xx_eth:</span> <span class="n">Do</span> <span class="n">not</span> <span class="n">modify</span> <span class="k">struct</span> <span class="n">netdev</span> <span class="n">tx_queue_len</span>
+<span class="n">Dale</span> <span class="n">Farnsworth</span> (<span class="mi">1</span>):
+      <span class="n">mv643xx_eth:</span> <span class="n">Do</span> <span class="nb">not</span> <span class="n">modify</span> <span class="n">struct</span> <span class="n">netdev</span> <span class="n">tx_queue_len</span>
 
-<span class="n">David</span> <span class="n">S</span><span class="p">.</span> <span class="n">Miller</span> <span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">SPARC</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">EBUS</span> <span class="n">use</span> <span class="n">of</span> <span class="n">uninitialized</span> <span class="n">variable</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">put_user</span><span class="p">()</span> <span class="n">calls</span> <span class="n">in</span> <span class="n">binfmt_aout32</span><span class="p">.</span><span class="n">c</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">missing</span> <span class="n">load</span><span class="o">-</span><span class="n">twin</span> <span class="n">usage</span> <span class="n">in</span> <span class="n">Niagara</span><span class="o">-</span><span class="mi">1</span> <span class="n">memcpy</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">Don</span><span class="err">'</span><span class="n">t</span> <span class="n">use</span> <span class="n">in</span><span class="o">/</span><span class="n">local</span> <span class="n">regs</span> <span class="k">for</span> <span class="n">ldx</span><span class="o">/</span><span class="n">stx</span> <span class="n">data</span> <span class="n">in</span> <span class="n">N1</span> <span class="n">memcpy</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">domain</span><span class="o">-</span><span class="n">services</span> <span class="n">port</span> <span class="n">probing</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">VIO</span> <span class="n">device</span> <span class="n">addition</span> <span class="n">log</span> <span class="n">message</span> <span class="n">level</span> <span class="n">is</span> <span class="n">too</span> <span class="n">high</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">Temporary</span> <span class="n">workaround</span> <span class="k">for</span> <span class="n">PCI</span><span class="o">-</span><span class="n">E</span> <span class="n">slot</span> <span class="n">on</span> <span class="n">T1000</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">SPARC64</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="err">'</span><span class="n">niu</span><span class="err">'</span> <span class="n">complex</span> <span class="n">IRQ</span> <span class="n">probing</span><span class="p">.</span>
+<span class="n">David</span> <span class="n">S</span>. <span class="n">Miller</span> (<span class="mi">8</span>):
+      [<span class="n">SPARC</span>]: <span class="n">Fix</span> <span class="n">EBUS</span> <span class="k">use</span> <span class="k">of</span> <span class="n">uninitialized</span> <span class="n">variable</span>.
+      [<span class="n">SPARC64</span>]: <span class="n">Fix</span> <span class="n">put_user</span>() <span class="n">calls</span> <span class="n">in</span> <span class="n">binfmt_aout32</span>.<span class="n">c</span>
+      [<span class="n">SPARC64</span>]: <span class="n">Fix</span> <span class="n">missing</span> <span class="n">load-twin</span> <span class="n">usage</span> <span class="n">in</span> <span class="n">Niagara-1</span> <span class="n">memcpy</span>.
+      [<span class="n">SPARC64</span>]: <span class="n">Don't</span> <span class="k">use</span> <span class="n">in</span><span class="o">/</span><span class="n">local</span> <span class="n">regs</span> <span class="k">for</span> <span class="n">ldx</span><span class="o">/</span><span class="n">stx</span> <span class="n">data</span> <span class="n">in</span> <span class="n">N1</span> <span class="n">memcpy</span>.
+      [<span class="n">SPARC64</span>]: <span class="n">Fix</span> <span class="n">domain-services</span> <span class="n">port</span> <span class="n">probing</span>.
+      [<span class="n">SPARC64</span>]: <span class="n">VIO</span> <span class="n">device</span> <span class="n">addition</span> <span class="nb">log</span> <span class="n">message</span> <span class="n">level</span> <span class="k">is</span> <span class="n">too</span> <span class="n">high</span>.
+      [<span class="n">SPARC64</span>]: <span class="n">Temporary</span> <span class="n">workaround</span> <span class="k">for</span> <span class="n">PCI-E</span> <span class="n">slot</span> <span class="n">on</span> <span class="n">T1000</span>.
+      [<span class="n">SPARC64</span>]: <span class="n">Fix</span> <span class="s">'niu'</span> <span class="nb">complex</span> <span class="n">IRQ</span> <span class="n">probing</span>.
 
-<span class="n">Dmitry</span> <span class="n">Torokhov</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Driver</span> <span class="n">core</span><span class="o">:</span> <span class="n">fix</span> <span class="n">SYSF_DEPRECATED</span> <span class="n">breakage</span> <span class="k">for</span> <span class="n">nested</span> <span class="n">classdevs</span>
+<span class="n">Dmitry</span> <span class="n">Torokhov</span> (<span class="mi">1</span>):
+      <span class="n">Driver</span> <span class="n">core:</span> <span class="n">fix</span> <span class="n">SYSF_DEPRECATED</span> <span class="n">breakage</span> <span class="k">for</span> <span class="n">nested</span> <span class="n">classdevs</span>
 
-<span class="n">Eric</span> <span class="n">Dumazet</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">TCP</span><span class="p">]</span><span class="o">:</span> <span class="n">secure_tcp_sequence_number</span><span class="p">()</span> <span class="n">should</span> <span class="n">not</span> <span class="n">use</span> <span class="n">a</span> <span class="n">too</span> <span class="n">fast</span> <span class="n">clock</span>
+<span class="n">Eric</span> <span class="n">Dumazet</span> (<span class="mi">1</span>):
+      [<span class="n">TCP</span>]: <span class="n">secure_tcp_sequence_number</span>() <span class="n">should</span> <span class="nb">not</span> <span class="k">use</span> <span class="n">a</span> <span class="n">too</span> <span class="n">fast</span> <span class="n">clock</span>
 
-<span class="n">FUJITA</span> <span class="n">Tomonori</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">SCSI</span><span class="p">]</span> <span class="n">megaraid_old</span><span class="o">:</span> <span class="n">fix</span> <span class="n">READ_CAPACITY</span>
+<span class="n">FUJITA</span> <span class="n">Tomonori</span> (<span class="mi">1</span>):
+      [<span class="n">SCSI</span>] <span class="n">megaraid_old:</span> <span class="n">fix</span> <span class="n">READ_CAPACITY</span>
 
-<span class="n">Florian</span> <span class="n">Fainelli</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">MIPS</span><span class="p">]</span> <span class="n">Alchemy</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">USB</span> <span class="n">initialization</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">MIPS</span><span class="p">]</span> <span class="n">Au1000</span><span class="o">:</span> <span class="n">set</span> <span class="n">the</span> <span class="n">PCI</span> <span class="n">controller</span> <span class="n">IO</span> <span class="n">base</span>
+<span class="n">Florian</span> <span class="n">Fainelli</span> (<span class="mi">2</span>):
+      [<span class="n">MIPS</span>] <span class="n">Alchemy:</span> <span class="n">Fix</span> <span class="n">USB</span> <span class="n">initialization</span>.
+      [<span class="n">MIPS</span>] <span class="n">Au1000:</span> <span class="n">set</span> <span class="n">the</span> <span class="n">PCI</span> <span class="n">controller</span> <span class="nb">IO</span> <span class="n">base</span>
 
-<span class="n">Francois</span> <span class="n">Romieu</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">r8169:</span> <span class="n">revert</span> <span class="n">part</span> <span class="n">of</span> <span class="mi">6</span><span class="n">dccd16b7c2703e8bbf8bca62b5cf248332afbe2</span>
+<span class="n">Francois</span> <span class="n">Romieu</span> (<span class="mi">1</span>):
+      <span class="n">r8169:</span> <span class="n">revert</span> <span class="n">part</span> <span class="k">of</span> <span class="mi">6</span><span class="n">dccd16b7c2703e8bbf8bca62b5cf248332afbe2</span>
 
-<span class="n">Giuseppe</span> <span class="n">Sacco</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">MIPS</span><span class="p">]</span> <span class="n">IP32</span><span class="o">:</span> <span class="n">Enable</span> <span class="n">PCI</span> <span class="n">bridges</span>
-      <span class="p">[</span><span class="n">MIPS</span><span class="p">]</span> <span class="n">IP32</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">fatal</span> <span class="n">typo</span> <span class="n">in</span> <span class="n">address</span> <span class="n">computation</span><span class="p">.</span>
+<span class="n">Giuseppe</span> <span class="n">Sacco</span> (<span class="mi">2</span>):
+      [<span class="n">MIPS</span>] <span class="n">IP32:</span> <span class="n">Enable</span> <span class="n">PCI</span> <span class="n">bridges</span>
+      [<span class="n">MIPS</span>] <span class="n">IP32:</span> <span class="n">Fix</span> <span class="k">fatal</span> <span class="n">typo</span> <span class="n">in</span> <span class="n">address</span> <span class="n">computation</span>.
 
-<span class="n">Hugh</span> <span class="n">Dickins</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Fix</span> <span class="n">sys_remap_file_pages</span> <span class="n">BUG</span> <span class="n">at</span> <span class="n">highmem</span><span class="p">.</span><span class="n">c</span><span class="o">:</span><span class="mi">15</span><span class="o">!</span>
+<span class="n">Hugh</span> <span class="n">Dickins</span> (<span class="mi">1</span>):
+      <span class="n">Fix</span> <span class="n">sys_remap_file_pages</span> <span class="n">BUG</span> <span class="n">at</span> <span class="n">highmem</span>.<span class="n">c:15</span>!
 
-<span class="n">Ilpo</span> <span class="n">J</span><span class="err">ä</span><span class="n">rvinen</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">TCP</span><span class="p">]</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">fastpath_cnt_hint</span> <span class="n">when</span> <span class="n">GSO</span> <span class="n">skb</span> <span class="n">is</span> <span class="n">partially</span> <span class="n">ACKed</span>
+<span class="n">Ilpo</span> <span class="n">Järvinen</span> (<span class="mi">1</span>):
+      [<span class="n">TCP</span>]: <span class="n">Fix</span> <span class="n">fastpath_cnt_hint</span> <span class="k">when</span> <span class="n">GSO</span> <span class="n">skb</span> <span class="k">is</span> <span class="n">partially</span> <span class="n">ACKed</span>
 
-<span class="n">Ingo</span> <span class="n">Molnar</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">sched:</span> <span class="n">fix</span> <span class="n">profile</span><span class="o">=</span><span class="n">sleep</span>
+<span class="n">Ingo</span> <span class="n">Molnar</span> (<span class="mi">1</span>):
+      <span class="n">sched:</span> <span class="n">fix</span> <span class="n">profile</span>=<span class="nb">sleep</span>
 
-<span class="n">Jeff</span> <span class="n">Garzik</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">aic94xx:</span> <span class="n">fix</span> <span class="n">DMA</span> <span class="n">data</span> <span class="n">direction</span> <span class="k">for</span> <span class="n">SMP</span> <span class="n">requests</span>
-      <span class="nl">sata_mv:</span> <span class="n">correct</span> <span class="n">S</span><span class="o">/</span><span class="n">G</span> <span class="n">table</span> <span class="n">limits</span>
+<span class="n">Jeff</span> <span class="n">Garzik</span> (<span class="mi">2</span>):
+      <span class="n">aic94xx:</span> <span class="n">fix</span> <span class="n">DMA</span> <span class="n">data</span> <span class="n">direction</span> <span class="k">for</span> <span class="n">SMP</span> <span class="n">requests</span>
+      <span class="n">sata_mv:</span> <span class="n">correct</span> <span class="n">S</span><span class="o">/</span><span class="n">G</span> <span class="n">table</span> <span class="n">limits</span>
 
-<span class="n">Jeremy</span> <span class="n">Fitzhardinge</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">xen:</span> <span class="n">disable</span> <span class="n">split</span> <span class="n">pte</span> <span class="n">locks</span> <span class="k">for</span> <span class="n">now</span>
+<span class="n">Jeremy</span> <span class="n">Fitzhardinge</span> (<span class="mi">1</span>):
+      <span class="n">xen:</span> <span class="n">disable</span> <span class="nb">split</span> <span class="n">pte</span> <span class="n">locks</span> <span class="k">for</span> <span class="n">now</span>
 
-<span class="n">Jiri</span> <span class="n">Slaby</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">Ata:</span> <span class="n">pata_marvell</span><span class="p">,</span> <span class="n">use</span> <span class="n">ioread</span><span class="o">*</span> <span class="k">for</span> <span class="n">iomap</span><span class="o">-</span><span class="n">ped</span> <span class="n">memory</span>
+<span class="n">Jiri</span> <span class="n">Slaby</span> (<span class="mi">1</span>):
+      <span class="n">Ata:</span> <span class="n">pata_marvell</span>, <span class="k">use</span> <span class="n">ioread</span>* <span class="k">for</span> <span class="n">iomap-ped</span> <span class="n">memory</span>
 
-<span class="n">Joe</span> <span class="n">Perches</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">bcm43xx:</span> <span class="n">Correct</span> <span class="n">printk</span> <span class="n">with</span> <span class="n">PFX</span> <span class="n">before</span> <span class="n">KERN_</span>
+<span class="n">Joe</span> <span class="n">Perches</span> (<span class="mi">1</span>):
+      <span class="n">bcm43xx:</span> <span class="n">Correct</span> <span class="n">printk</span> <span class="n">with</span> <span class="n">PFX</span> <span class="o">before</span> <span class="n">KERN_</span>
 
-<span class="n">John</span> <span class="n">W</span><span class="p">.</span> <span class="n">Linville</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">IEEE80211</span><span class="p">]</span><span class="o">:</span> <span class="n">avoid</span> <span class="n">integer</span> <span class="n">underflow</span> <span class="k">for</span> <span class="n">runt</span> <span class="n">rx</span> <span class="n">frames</span>
+<span class="n">John</span> <span class="n">W</span>. <span class="n">Linville</span> (<span class="mi">1</span>):
+      [<span class="n">IEEE80211</span>]: <span class="n">avoid</span> <span class="n">integer</span> <span class="n">underflow</span> <span class="k">for</span> <span class="n">runt</span> <span class="o">rx</span> <span class="n">frames</span>
 
-<span class="n">Karsten</span> <span class="n">Keil</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">ISDN:</span> <span class="n">Fix</span> <span class="n">data</span> <span class="n">access</span> <span class="n">out</span> <span class="n">of</span> <span class="n">array</span> <span class="n">bounds</span>
+<span class="n">Karsten</span> <span class="n">Keil</span> (<span class="mi">1</span>):
+      <span class="n">ISDN:</span> <span class="n">Fix</span> <span class="n">data</span> <span class="n">access</span> <span class="n">out</span> <span class="k">of</span> <span class="n">array</span> <span class="n">bounds</span>
 
-<span class="n">Kyle</span> <span class="n">McMartin</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
+<span class="n">Kyle</span> <span class="n">McMartin</span> (<span class="mi">1</span>):
       <span class="n">Revert</span> <span class="s">"intel_agp: fix stolen mem range on G33"</span>
 
-<span class="n">Linus</span> <span class="n">Torvalds</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">VT_WAITACTIVE:</span> <span class="n">Avoid</span> <span class="n">returning</span> <span class="n">EINTR</span> <span class="n">when</span> <span class="n">not</span> <span class="n">necessary</span>
-      <span class="n">Don</span><span class="err">'</span><span class="n">t</span> <span class="k">do</span> <span class="n">load</span><span class="o">-</span><span class="n">average</span> <span class="n">calculations</span> <span class="n">at</span> <span class="n">even</span> <span class="mi">5</span><span class="o">-</span><span class="n">second</span> <span class="n">intervals</span>
+<span class="n">Linus</span> <span class="n">Torvalds</span> (<span class="mi">3</span>):
+      <span class="n">VT_WAITACTIVE:</span> <span class="n">Avoid</span> <span class="n">returning</span> <span class="n">EINTR</span> <span class="k">when</span> <span class="nb">not</span> <span class="n">necessary</span>
+      <span class="n">Don't</span> <span class="k">do</span> <span class="n">load-average</span> <span class="n">calculations</span> <span class="n">at</span> <span class="n">even</span> <span class="mi">5</span><span class="o">-</span><span class="n">second</span> <span class="n">intervals</span>
       <span class="n">Linux</span> <span class="mf">2.6.23</span>
 
-<span class="n">Maarten</span> <span class="n">Bressers</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Correct</span> <span class="n">Makefile</span> <span class="n">rule</span> <span class="k">for</span> <span class="n">generating</span> <span class="n">custom</span> <span class="n">keymap</span>
+<span class="n">Maarten</span> <span class="n">Bressers</span> (<span class="mi">1</span>):
+      <span class="n">Correct</span> <span class="n">Makefile</span> <span class="k">rule</span><span class="n"> for</span> <span class="n">generating</span> <span class="n">custom</span> <span class="n">keymap</span>
 
-<span class="n">Maciej</span> <span class="n">W</span><span class="p">.</span> <span class="n">Rozycki</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">MIPS</span><span class="p">]</span> <span class="n">pg</span><span class="o">-</span><span class="n">r4k</span><span class="p">.</span><span class="n">c</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">a</span> <span class="n">typo</span> <span class="n">in</span> <span class="n">an</span> <span class="n">R4600</span> <span class="n">v2</span> <span class="n">erratum</span> <span class="n">workaround</span>
+<span class="n">Maciej</span> <span class="n">W</span>. <span class="n">Rozycki</span> (<span class="mi">1</span>):
+      [<span class="n">MIPS</span>] <span class="n">pg-r4k</span>.<span class="n">c:</span> <span class="n">Fix</span> <span class="n">a</span> <span class="n">typo</span> <span class="n">in</span> <span class="n">an</span> <span class="n">R4600</span> <span class="n">v2</span> <span class="n">erratum</span> <span class="n">workaround</span>
 
-<span class="n">Michael</span> <span class="n">Hennerich</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Blackfin</span> <span class="n">arch</span><span class="o">:</span> <span class="n">gpio</span> <span class="n">pinmux</span> <span class="n">and</span> <span class="n">resource</span> <span class="n">allocation</span> <span class="n">API</span> <span class="n">required</span> <span class="n">by</span> <span class="n">BF537</span> <span class="n">on</span> <span class="n">chip</span> <span class="n">ethernet</span> <span class="n">mac</span> <span class="n">driver</span>
-      <span class="n">Blackfin</span> <span class="n">arch</span><span class="o">:</span> <span class="n">fix</span> <span class="n">PORT_J</span> <span class="n">BUG</span> <span class="k">for</span> <span class="n">BF537</span><span class="o">/</span><span class="mi">6</span> <span class="n">EMAC</span> <span class="n">driver</span> <span class="n">reported</span> <span class="n">by</span> <span class="n">Kalle</span> <span class="n">Pokki</span> <span class="o">&lt;</span><span class="n">kalle</span><span class="p">.</span><span class="n">pokki</span><span class="err">@</span><span class="n">iki</span><span class="p">.</span><span class="n">fi</span><span class="o">&gt;</span>
+<span class="n">Michael</span> <span class="n">Hennerich</span> (<span class="mi">2</span>):
+      <span class="n">Blackfin</span> <span class="n">arch:</span> <span class="n">gpio</span> <span class="n">pinmux</span> <span class="o">and</span> <span class="n">resource</span> <span class="n">allocation</span> <span class="n">API</span> <span class="k">required</span> <span class="nb">by</span> <span class="n">BF537</span> <span class="n">on</span> <span class="n">chip</span> <span class="n">ethernet</span> <span class="n">mac</span> <span class="n">driver</span>
+      <span class="n">Blackfin</span> <span class="n">arch:</span> <span class="n">fix</span> <span class="n">PORT_J</span> <span class="n">BUG</span> <span class="k">for</span> <span class="n">BF537</span><span class="o">/</span><span class="mi">6</span> <span class="n">EMAC</span> <span class="n">driver</span> <span class="n">reported</span> <span class="nb">by</span> <span class="n">Kalle</span> <span class="n">Pokki</span> <span class="s">&lt;kalle.pokki@iki.fi&gt;</span>
 
-<span class="n">Olof</span> <span class="n">Johansson</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">libata:</span> <span class="n">fix</span> <span class="k">for</span> <span class="n">sata_mv</span> <span class="o">&gt;</span><span class="mi">64</span><span class="n">KB</span> <span class="n">DMA</span> <span class="n">segments</span>
+<span class="n">Olof</span> <span class="n">Johansson</span> (<span class="mi">1</span>):
+      <span class="n">libata:</span> <span class="n">fix</span> <span class="k">for</span> <span class="n">sata_mv</span> &gt;<span class="mi">64</span><span class="n">KB</span> <span class="n">DMA</span> <span class="n">segments</span>
 
-<span class="n">Pavel</span> <span class="n">Machek</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">sysrq</span> <span class="n">docs</span><span class="o">:</span> <span class="n">document</span> <span class="n">sequence</span> <span class="n">that</span> <span class="n">actually</span> <span class="n">works</span>
+<span class="n">Pavel</span> <span class="n">Machek</span> (<span class="mi">1</span>):
+      <span class="n">sysrq</span> <span class="n">docs:</span> <span class="n">document</span> <span class="n">sequence</span> <span class="n">that</span> <span class="n">actually</span> <span class="n">works</span>
 
-<span class="n">Peter</span> <span class="n">Korsgaard</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">dm9601:</span> <span class="n">Fix</span> <span class="n">receive</span> <span class="n">MTU</span>
+<span class="n">Peter</span> <span class="n">Korsgaard</span> (<span class="mi">1</span>):
+      <span class="n">dm9601:</span> <span class="n">Fix</span> <span class="n">receive</span> <span class="n">MTU</span>
 
-<span class="n">Peter</span> <span class="n">Zijlstra</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">lockstat:</span> <span class="n">documentation</span>
-      <span class="nl">mm:</span> <span class="n">set_page_dirty_balance</span><span class="p">()</span> <span class="n">vs</span> <span class="o">-&gt;</span><span class="n">page_mkwrite</span><span class="p">()</span>
+<span class="n">Peter</span> <span class="n">Zijlstra</span> (<span class="mi">2</span>):
+      <span class="n">lockstat:</span> <span class="n">documentation</span>
+      <span class="o">mm</span>: <span class="n">set_page_dirty_balance</span>() <span class="n">vs</span> -&gt;<span class="n">page_mkwrite</span>()
 
-<span class="n">Rafal</span> <span class="n">Bilski</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">Longhaul:</span> <span class="n">add</span> <span class="k">auto</span> <span class="n">enabled</span> <span class="s">"revid_errata"</span> <span class="n">option</span>
+<span class="n">Rafal</span> <span class="n">Bilski</span> (<span class="mi">1</span>):
+      <span class="n">Longhaul:</span> <span class="n">add</span> <span class="n">auto</span> <span class="n">enabled</span> <span class="s">"revid_errata"</span> <span class="n">option</span>
 
-<span class="n">Ralf</span> <span class="n">Baechle</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="p">[</span><span class="n">MIPS</span><span class="p">]</span> <span class="n">Type</span> <span class="n">proof</span> <span class="n">reimplementation</span> <span class="n">of</span> <span class="n">cmpxchg</span><span class="p">.</span>
-      <span class="p">[</span><span class="n">MIPS</span><span class="p">]</span> <span class="n">Terminally</span> <span class="n">fix</span> <span class="n">local_</span><span class="p">{</span><span class="n">dec</span><span class="p">,</span><span class="n">sub</span><span class="p">}</span><span class="n">_if_positive</span>
+<span class="n">Ralf</span> <span class="n">Baechle</span> (<span class="mi">2</span>):
+      [<span class="n">MIPS</span>] <span class="n">Type</span> <span class="n">proof</span> <span class="n">reimplementation</span> <span class="k">of</span> <span class="n">cmpxchg</span>.
+      [<span class="n">MIPS</span>] <span class="n">Terminally</span> <span class="n">fix</span> <span class="n">local_</span>{<span class="sr">dec,sub</span>}<span class="n">_if_positive</span>
 
-<span class="n">Richard</span> <span class="n">Knutsson</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">softmac:</span> <span class="n">Fix</span> <span class="n">compiler</span><span class="o">-</span><span class="n">warning</span>
+<span class="n">Richard</span> <span class="n">Knutsson</span> (<span class="mi">1</span>):
+      <span class="n">softmac:</span> <span class="n">Fix</span> <span class="n">compiler-warning</span>
 
-<span class="n">Ron</span> <span class="n">Mercer</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">qla3xxx:</span> <span class="n">bugfix</span><span class="o">:</span> <span class="n">Add</span> <span class="n">memory</span> <span class="n">barrier</span> <span class="n">before</span> <span class="n">accessing</span> <span class="n">rx</span> <span class="n">completion</span><span class="p">.</span>
-      <span class="nl">qla3xxx:</span> <span class="n">bugfix</span><span class="o">:</span> <span class="n">Fix</span> <span class="n">VLAN</span> <span class="n">rx</span> <span class="n">completion</span> <span class="n">handling</span><span class="p">.</span>
+<span class="n">Ron</span> <span class="n">Mercer</span> (<span class="mi">2</span>):
+      <span class="n">qla3xxx:</span> <span class="n">bugfix:</span> <span class="n">Add</span> <span class="n">memory</span> <span class="n">barrier</span> <span class="o">before</span> <span class="n">accessing</span> <span class="o">rx</span> <span class="n">completion</span>.
+      <span class="n">qla3xxx:</span> <span class="n">bugfix:</span> <span class="n">Fix</span> <span class="n">VLAN</span> <span class="o">rx</span> <span class="n">completion</span> <span class="n">handling</span>.
 
-<span class="n">Scott</span> <span class="n">Thompson</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">drivers</span><span class="o">/</span><span class="n">ata</span><span class="o">/</span><span class="n">pata_ixp4xx_cf</span><span class="p">.</span><span class="n">c</span><span class="o">:</span> <span class="n">ioremap</span> <span class="k">return</span> <span class="n">code</span> <span class="n">check</span>
+<span class="n">Scott</span> <span class="n">Thompson</span> (<span class="mi">1</span>):
+      <span class="n">drivers</span><span class="o">/</span><span class="n">ata</span><span class="o">/</span><span class="n">pata_ixp4xx_cf</span>.<span class="n">c:</span> <span class="n">ioremap</span> <span class="k">return</span> <span class="n">code</span> <span class="n">check</span>
 
-<span class="n">Serge</span> <span class="n">Belyshev</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="n">Remove</span> <span class="n">unnecessary</span> <span class="n">cast</span> <span class="n">in</span> <span class="n">prefetch</span><span class="p">()</span>
+<span class="n">Serge</span> <span class="n">Belyshev</span> (<span class="mi">1</span>):
+      <span class="n">Remove</span> <span class="n">unnecessary</span> <span class="n">cast</span> <span class="n">in</span> <span class="n">prefetch</span>()
 
-<span class="n">Stefan</span> <span class="n">Richter</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">firewire:</span> <span class="n">point</span> <span class="n">to</span> <span class="n">migration</span> <span class="n">document</span>
+<span class="n">Stefan</span> <span class="n">Richter</span> (<span class="mi">1</span>):
+      <span class="n">firewire:</span> <span class="n">point</span> <span class="nb">to</span> <span class="n">migration</span> <span class="n">document</span>
 
-<span class="n">Stephen</span> <span class="n">Hemminger</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">sky2:</span> <span class="n">jumbo</span> <span class="n">frame</span> <span class="n">regression</span> <span class="n">fix</span>
-      <span class="p">[</span><span class="n">PKT_SCHED</span><span class="p">]</span> <span class="n">cls_u32</span><span class="o">:</span> <span class="n">error</span> <span class="n">code</span> <span class="n">isn</span><span class="err">'</span><span class="n">t</span> <span class="n">been</span> <span class="n">propogated</span> <span class="n">properly</span>
+<span class="n">Stephen</span> <span class="n">Hemminger</span> (<span class="mi">2</span>):
+      <span class="n">sky2:</span> <span class="n">jumbo</span> <span class="n">frame</span> <span class="n">regression</span> <span class="n">fix</span>
+      [<span class="n">PKT_SCHED</span>] <span class="n">cls_u32:</span> <span class="n">error</span> <span class="n">code</span> <span class="n">isn't</span> <span class="n">been</span> <span class="n">propogated</span> <span class="n">properly</span>
 
-<span class="n">Sunil</span> <span class="n">Mushran</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">ocfs2:</span> <span class="n">Unlock</span> <span class="n">mutex</span> <span class="n">in</span> <span class="n">local</span> <span class="n">alloc</span> <span class="n">failure</span> <span class="k">case</span>
+<span class="n">Sunil</span> <span class="n">Mushran</span> (<span class="mi">1</span>):
+      <span class="n">ocfs2:</span> <span class="n">Unlock</span> <span class="n">mutex</span> <span class="n">in</span> <span class="n">local</span> <span class="n">alloc</span> <span class="n">failure</span> <span class="n">case</span>
 
-<span class="n">Tejun</span> <span class="n">Heo</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">ata_piix:</span> <span class="n">add</span> <span class="n">another</span> <span class="n">TECRA</span> <span class="n">M3</span> <span class="n">entry</span> <span class="n">to</span> <span class="n">broken</span> <span class="n">suspend</span> <span class="n">list</span>
+<span class="n">Tejun</span> <span class="n">Heo</span> (<span class="mi">1</span>):
+      <span class="n">ata_piix:</span> <span class="n">add</span> <span class="n">another</span> <span class="n">TECRA</span> <span class="n">M3</span> <span class="n">entry</span> <span class="nb">to</span> <span class="n">broken</span> <span class="n">suspend</span> <span class="n">list</span>
 
-<span class="n">Trond</span> <span class="n">Myklebust</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">:</span>
-      <span class="nl">NLM:</span> <span class="n">Fix</span> <span class="n">a</span> <span class="n">memory</span> <span class="n">leak</span> <span class="n">in</span> <span class="n">nlmsvc_testlock</span>
+<span class="n">Trond</span> <span class="n">Myklebust</span> (<span class="mi">1</span>):
+      <span class="n">NLM:</span> <span class="n">Fix</span> <span class="n">a</span> <span class="n">memory</span> <span class="n">leak</span> <span class="n">in</span> <span class="n">nlmsvc_testlock</span>
 
-<span class="n">Yan</span> <span class="n">Zheng</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">:</span>
+<span class="n">Yan</span> <span class="n">Zheng</span> (<span class="mi">3</span>):
       <span class="n">fix</span> <span class="n">VM_CAN_NONLINEAR</span> <span class="n">check</span> <span class="n">in</span> <span class="n">sys_remap_file_pages</span>
       <span class="n">fix</span> <span class="n">page</span> <span class="n">release</span> <span class="n">issue</span> <span class="n">in</span> <span class="n">filemap_fault</span>
-      <span class="nl">AIO:</span> <span class="n">fix</span> <span class="n">cleanup</span> <span class="n">in</span> <span class="n">io_submit_one</span><span class="p">(...)</span>
+      <span class="n">AIO:</span> <span class="n">fix</span> <span class="n">cleanup</span> <span class="n">in</span> <span class="n">io_submit_one</span>(...)
 
-<span class="o">---</span>
- <span class="n">Documentation</span><span class="o">/</span><span class="n">lockstat</span><span class="p">.</span><span class="n">txt</span>                        <span class="o">|</span>  <span class="mi">120</span> <span class="o">+++++++</span>
- <span class="n">Documentation</span><span class="o">/</span><span class="n">sysrq</span><span class="p">.</span><span class="n">txt</span>                           <span class="o">|</span>    <span class="mi">2</span> <span class="o">+-</span>
- <span class="n">Makefile</span>                                          <span class="o">|</span>    <span class="mi">2</span> <span class="o">+-</span>
- <span class="n">arch</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">mach</span><span class="o">-</span><span class="n">s3c2440</span><span class="o">/</span><span class="n">mach</span><span class="o">-</span><span class="n">osiris</span><span class="p">.</span><span class="n">c</span>               <span class="o">|</span>   <span class="mi">18</span> <span class="o">+</span>
- <span class="n">arch</span><span class="o">/</span><span class="n">blackfin</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">bfin_gpio</span><span class="p">.</span><span class="n">c</span>                  <span class="o">|</span>  <span class="mi">285</span> <span class="o">++++++++++++++--</span>
- <span class="n">arch</span><span class="o">/</span><span class="n">blackfin</span><span class="o">/</span><span class="n">mach</span><span class="o">-</span><span class="n">common</span><span class="o">/</span><span class="n">entry</span><span class="p">.</span><span class="n">S</span>                 <span class="o">|</span>   <span class="mi">23</span> <span class="o">+-</span>
- <span class="n">arch</span><span class="o">/</span><span class="n">i386</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">cpufreq</span><span class="o">/</span><span class="n">longhaul</span><span class="p">.</span><span class="n">c</span>           <span class="o">|</span>   <span class="mi">60</span> <span class="o">++++-</span>
- <span class="n">arch</span><span class="o">/</span><span class="n">mips</span><span class="o">/</span><span class="n">au1000</span><span class="o">/</span><span class="n">common</span><span class="o">/</span><span class="n">pci</span><span class="p">.</span><span class="n">c</span>                     <span class="o">|</span>    <span class="mi">1</span> <span class="o">+</span>
- <span class="n">arch</span><span class="o">/</span><span class="n">mips</span><span class="o">/</span><span class="n">au1000</span><span class="o">/</span><span class="n">mtx</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">board_setup</span><span class="p">.</span><span class="n">c</span>              <span class="o">|</span>    <span class="mi">4</span> <span class="o">+-</span>
- <span class="n">arch</span><span class="o">/</span><span class="n">mips</span><span class="o">/</span><span class="n">au1000</span><span class="o">/</span><span class="n">pb1000</span><span class="o">/</span><span class="n">board_setup</span><span class="p">.</span><span class="n">c</span>             <span class="o">|</span>    <span class="mi">6</span> <span class="o">+-</span>
+---
+ <span class="n">Documentation</span><span class="o">/</span><span class="n">lockstat</span>.<span class="n">txt</span>                        |  <span class="mi">120</span> +++++++
+ <span class="n">Documentation</span><span class="o">/</span><span class="n">sysrq</span>.<span class="n">txt</span>                           |    <span class="mi">2</span> +-
+ <span class="n">Makefile</span>                                          |    <span class="mi">2</span> +-
+ <span class="n">arch</span><span class="o">/</span><span class="n">arm</span><span class="o">/</span><span class="n">mach-s3c2440</span><span class="o">/</span><span class="n">mach-osiris</span>.<span class="n">c</span>               |   <span class="mi">18</span> +
+ <span class="n">arch</span><span class="o">/</span><span class="n">blackfin</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">bfin_gpio</span>.<span class="n">c</span>                  |  <span class="mi">285</span> ++++++++++++++--
+ <span class="n">arch</span><span class="o">/</span><span class="n">blackfin</span><span class="o">/</span><span class="n">mach-common</span><span class="o">/</span><span class="n">entry</span>.<span class="n">S</span>                 |   <span class="mi">23</span> +-
+ <span class="n">arch</span><span class="o">/</span><span class="n">i386</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">cpu</span><span class="o">/</span><span class="n">cpufreq</span><span class="o">/</span><span class="n">longhaul</span>.<span class="n">c</span>           |   <span class="mi">60</span> ++++-
+ <span class="n">arch</span><span class="o">/</span><span class="n">mips</span><span class="o">/</span><span class="n">au1000</span><span class="o">/</span><span class="n">common</span><span class="o">/</span><span class="n">pci</span>.<span class="n">c</span>                     |    <span class="mi">1</span> +
+ <span class="n">arch</span><span class="o">/</span><span class="n">mips</span><span class="o">/</span><span class="n">au1000</span><span class="o">/</span><span class="n">mtx-1</span><span class="o">/</span><span class="n">board_setup</span>.<span class="n">c</span>              |    <span class="mi">4</span> +-
+ <span class="n">arch</span><span class="o">/</span><span class="n">mips</span><span class="o">/</span><span class="n">au1000</span><span class="o">/</span><span class="n">pb1000</span><span class="o">/</span><span class="n">board_setup</span>.<span class="n">c</span>             |    <span class="mi">6</span> +-
 </pre>
+</div>
             </div>
         </div>
         <div class="post">
@@ -288,8 +290,10 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>It's online:</p>
+                <div>
+<p>It's online:</p>
 <p><a href="http://www.hanselman.com/blog/ScottGuMVCPresentationAndScottHaScreencastFromALTNETConference.aspx">http://www.hanselman.com/blog/ScottGuMVCPresentationAndScottHaScreencastFromALTNETConference.aspx</a></p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -306,8 +310,10 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>If you want a great into to MonoRail, check out <a href="http://colinramsay.co.uk/category/screencasts/">Colin's screencasts</a>.</p>
+                <div>
+<p>If you want a great into to MonoRail, check out <a href="http://colinramsay.co.uk/category/screencasts/">Colin's screencasts</a>.</p>
 <p>I will possibly be re-writing my validation post.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -324,7 +330,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>Please read Colin's <a href="http://colinramsay.co.uk/2007/10/07/abandon-altnet/">post</a> and then read my <a href="http://colinramsay.co.uk/2007/10/07/abandon-altnet/#comment-3603">comment</a> response to a blog entry I just read from Colin Ramsay (<a href="http://colinramsay.co.uk/2007/10/07/abandon-altnet/">post here</a>).</p>
+                <div>
+<p>Please read Colin's <a href="http://colinramsay.co.uk/2007/10/07/abandon-altnet/">post</a> and then read my <a href="http://colinramsay.co.uk/2007/10/07/abandon-altnet/#comment-3603">comment</a> response to a blog entry I just read from Colin Ramsay (<a href="http://colinramsay.co.uk/2007/10/07/abandon-altnet/">post here</a>).</p>
 <p>I apologize for posting my Hanselman <a href="http://www.lostechies.com/blogs/jason_meridth/archive/2007/10/05/alt-net.aspx">quote</a> out of context.  Scott said it in a joking manner without dergotory tone.  No one at the conference liked the term Mort and during the "How to invoke passion on your team" session we tried to define "Mort", so that if it was used (due to habit, not malice) we knew what the speaker was saying.</p>
 <p>Please do not bash anyone who went to the conference.</p>
 <p>There were 2 things I got out of it that were great FOR ME:</p>
@@ -336,6 +343,7 @@ article: http://ogp.me/ns/article#
 <h3>Comments</h3>
 <p><strong><a href="posts/quot-alt-net-quot-conference-was-not-for-fanboys/#157" title="2007-10-10 07:56:58">Brad Mead</a>:</strong> Hey J.D. ! So glad I found your blog. I was the one who came up to you after the "passion" session and said I wanted to work with you to get some collective "noob" learning stuff going. I'm busy deciding on DasBlog2 vs Subtext but will be up and running in a short time. Looking forward to some online discussion and collboration</p>
 <p><strong><a href="posts/quot-alt-net-quot-conference-was-not-for-fanboys/#158" title="2007-10-10 10:31:09">Jason Meridth</a>:</strong> Excellent Brad. I'm taking a little break before hitting it hard again. Each of those blogging engines are excellent. Check out Oren (Ayende.com/blog) blog about why he switched from dasblog to subtext, or check out Ben Scheirman's blog on why he loves dasblog (flux88.com). Look forward to the communication bro.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -352,7 +360,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>Wow!</p>
+                <div>
+<p>Wow!</p>
 <p>I just left a presentation by Scott Guthrie on the new ASP.NET MVC architecture and I'm impressed.</p>
 <p>His opening slide was:  </p>
 <p>Principles:<br>
@@ -367,6 +376,7 @@ article: http://ogp.me/ns/article#
 <p>Stay tuned.  I'm headed to the DDD session now.</p>
 <h3>Comments</h3>
 <p><strong><a href="posts/system-web-mvc/#156" title="2007-10-06 21:27:05">Sean Chambers</a>:</strong> This sounds very promising Jason! Keep up the information!!</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -383,7 +393,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p><em>Precursor: If you think I'm name dropping, I don't care.  I have an opportunity to interact with some of the most intelligent/influential people in our industry this weekend.  ALL QUOTES IN THIS ENTRY ARE PARAPHRASED AS I DO NOT HAVE TAPE RECORDING.</em></p>
+                <div>
+<p><em>Precursor: If you think I'm name dropping, I don't care.  I have an opportunity to interact with some of the most intelligent/influential people in our industry this weekend.  ALL QUOTES IN THIS ENTRY ARE PARAPHRASED AS I DO NOT HAVE TAPE RECORDING.</em></p>
 <p>This evening was amazing.  I had the opportunity to meet some of my idols and some of the biggest names in our industry.  If you want to see the list, check it <a href="http://www.altnetconf.com/participants">here</a>. </p>
 <p>We got to the hotel and checked into our rooms.  I headed down to the lobby to meet the other guys (<a href="http://blog.agilejoe.com">Joe Ocampo</a>, Phil Dennis, <a href="http://www.lostechies.com/blogs/jasdeep_singh">Jasdeep Singh</a>) in my group.  I was surprised to see <a href="http://www.martinfowler.com">Martin Fowler</a> checking in.  The only reason I recognized him was from the picture on his blog.  He shook hands with someone sitting on the couch in the lobby.  After he headed up the elevator, I decided to meet the other people and introduced myself.  In the group was <a href="http://blogs.msdn.com/jamesnewkirk/">Jim Newkirk</a>, <a href="http://weblogs.asp.net/nunitaddin/">Jamie Cansdale,</a> and <a href="http://www.agileprogrammer.com/dotnetguy">Brad Wilson</a>.  Very cool.</p>
 <p>We headed to the facilities.  Once again my "curse of Austin" kicked in and we got lost.  (Please keep in mind that the facility is less than a mile from the hotel).  We finally made it there but my curse still holds.</p>
@@ -413,6 +424,7 @@ article: http://ogp.me/ns/article#
 <p><strong><a href="posts/alt-net-day-1/#153" title="2007-10-06 13:49:49">Sean Chambers</a>:</strong> lucky =) It sounds like they have an excellent conference there. If my fiancee wasn't being labor induced on tuesday I would have gone. Definately next year though. I want full details!!!</p>
 <p><strong><a href="posts/alt-net-day-1/#154" title="2007-10-06 14:57:33">Jason Meridth</a>:</strong> Every night bro.</p>
 <p><strong><a href="posts/alt-net-day-1/#155" title="2007-10-10 16:06:16">Dave</a>:</strong> awesome meeting you Jason!</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -429,11 +441,13 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>UPDATE: Context: This was a joke!  No term was stated in a derogatory tone. <a href="http://blogs.msdn.com/howard_dierking/default.aspx">Howard Dierking</a> does a much better job at <a href="http://blogs.msdn.com/howard_dierking/archive/2007/10/05/alt-net-conference-opening-day-opening-thoughts.aspx">setting up the context and delivering the quote</a> than I did.  I apologize.</p>
+                <div>
+<p>UPDATE: Context: This was a joke!  No term was stated in a derogatory tone. <a href="http://blogs.msdn.com/howard_dierking/default.aspx">Howard Dierking</a> does a much better job at <a href="http://blogs.msdn.com/howard_dierking/archive/2007/10/05/alt-net-conference-opening-day-opening-thoughts.aspx">setting up the context and delivering the quote</a> than I did.  I apologize.</p>
 <p>Scott Hanselman, "Mort is crying because mommy and daddy are fighting."</p>
 <p>Hopefully we can find a solution.</p>
 <p>This came from a fish bowl session that started the conference.</p>
 <p>This is going to be an amazing weekend.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -450,7 +464,8 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>In my current environment We have the following:  </p>
+                <div>
+<p>In my current environment We have the following:  </p>
 <p>Developers<br>
 System Analysts : QA Testers<br>
 Business Analysts : Domain Experts  </p>
@@ -486,6 +501,7 @@ Business Analysts : Domain Experts  </p>
 <h3>Comments</h3>
 <p><strong><a href="posts/stand-ups/#151" title="2007-10-04 03:18:01">Joe Ocampo</a>:</strong> Coach!!!! LOL</p>
 <p><strong><a href="posts/stand-ups/#152" title="2007-10-05 01:12:31">Christopher Bennage</a>:</strong> I heard a spot on NPR a few years back that suggested we do away with the term Boss, because a boss is someone big baddy you have to fight at the end of a level. They recommended the label Strategy Guide. This really only applies to those of us who grew up on video games.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -502,7 +518,8 @@ Business Analysts : Domain Experts  </p>
                 
             </div>
             <div class="body">
-                <p>**Precursor: My MonoRail posts will continue soon, but I'm moving my office and have also had the "tech support" calls from friends and family lately, hence the OS, hardware posts.  We all have to do this stuff at sometime, right?  The services and CC.NET posts were because I'm managing our web server.</p>
+                <div>
+<p>**Precursor: My MonoRail posts will continue soon, but I'm moving my office and have also had the "tech support" calls from friends and family lately, hence the OS, hardware posts.  We all have to do this stuff at sometime, right?  The services and CC.NET posts were because I'm managing our web server.</p>
 <p>My next door neighbor's computer crashed.  As as we all know, if you are in the industry, you are a tech support person by default.</p>
 <p>This post is for anyone googling about how to remove a hard drive from the Dell Dimension 3000:</p>
 <p><img alt="image" src="posts/dell-dimension-3000-remove-hard-drive/jasonmeridth/files/2011/03DellDimension3000removeharddrive_5C7A/image_thumb_1.png"></p>
@@ -524,6 +541,7 @@ Business Analysts : Domain Experts  </p>
 <p><strong><a href="posts/dell-dimension-3000-remove-hard-drive/#149" title="2008-10-28 12:05:18">Jason Meridth</a>:</strong> @Mike Sorry bro. I don't have one to give.</p>
 <p><strong><a href="posts/dell-dimension-3000-remove-hard-drive/#150" title="2008-11-15 12:05:42">junaid</a>:</strong> you dont need a boot cd for this computer , when the computer starts on the first loading screen where it says press f12 for boot menu and f2 for something else , press left ctrl and f11 (both buttons at the same time) and it will let you format the computer and it has windows xp software built so you install that aswell you can upgrade to vista later if you wish. hope that helps</p>
 <p><strong><a href="posts/dell-dimension-3000-remove-hard-drive/#519" title="2011-12-01 17:57:00">Pratik21s</a>:</strong> I have a Dell Dimension 3000 Desktop.I want to know what HD should I upgrade to, since the one I have installed is full of space.The HD I that is in the PC is called WDC 400BB-00DEA0.And also how can I remove unwanted programs I don't want to have on PC.</p>
+</div>
             </div>
         </div>
         <div class="post">
@@ -540,7 +558,8 @@ Business Analysts : Domain Experts  </p>
                 
             </div>
             <div class="body">
-                <p>Why? I am currently hosting CruiseControl for an open-source project and I don't want my personal projects to show up on their web dashboard.  I also want a complete separation.  That means theirs is running on its own port number and they have their own Virtual Directory (ccnet) on the Default website. The given CruiseControl.msi file does an excellent job of setting up the first CruiseControl service and virtual directory for you.  I won't go into this much, but you will learn a little bit about what it does because I'm installing my instance manually. </p>
+                <div>
+<p>Why? I am currently hosting CruiseControl for an open-source project and I don't want my personal projects to show up on their web dashboard.  I also want a complete separation.  That means theirs is running on its own port number and they have their own Virtual Directory (ccnet) on the Default website. The given CruiseControl.msi file does an excellent job of setting up the first CruiseControl service and virtual directory for you.  I won't go into this much, but you will learn a little bit about what it does because I'm installing my instance manually. </p>
 <h3>FILE STRUCTURE</h3>
 <p>1. First (easiest way), copy the folder structure created by the msi install and copy it to another folder. <img alt="image" src="posts/installing-2-cruisecontrol-services-web-dashboards-on-1-server-pc/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb.png"> copies to <img alt="image" src="http://lostechies.com/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_1.png"></p>
 <h3>SERVICE</h3>
@@ -549,6 +568,7 @@ Business Analysts : Domain Experts  </p>
 <p>1. Edit the ...CruiseControl.NET2webdashboarddashboard.config file with the new port number: Change tcp://localhost:21234/CruiseManager.rem to tcp://localhost:<yourport>/CruiseManager.rem <img alt="image" src="posts/installing-2-cruisecontrol-services-web-dashboards-on-1-server-pc/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_7.png"> 2. Create a new virtual directory on your server/PC for your new dashboard: <img alt="image" src="http://lostechies.com/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_8.png"> Outside of the default settings created by creating a new Virtual Directory, be aware of the following: <img alt="image" src="http://lostechies.com/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_10.png"> Local path: C:Program FilesCruiseControl.NET2webdashboard Execure Permissions: Scripts only I also use a unique Application Pool for all my Virtual Directories and Sites. I created a CCNet App Pool for this and my other ccnet Virtual Directory. <img alt="image" src="http://lostechies.com/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_11.png"> Default Document: default.aspx <img alt="image" src="http://lostechies.com/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_12.png"> Make sure the site is using ASP.NET 2.0 This should be all you need. When you type: <a href="http://localhost/ccnet2">http://localhost/ccnet2</a> <img alt="image" src="http://lostechies.com/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_13.png"> Just be aware that when you want to use the latest CCTray, you will need to include the port number if you are going to connect via remoting: <img alt="image" src="http://lostechies.com/jasonmeridth/files/2011/03/Installing2CruiseControlserviceswebdashb_EB50/image_thumb_14.png"> Connection for dashboard: <a href="http://localhost/ccnet2">http://localhost/ccnet2</a> Connection for .NET remoting: localhost:43555 I haven't used the last one but for those out there that need to, you can connect to non-CruiseControl.NET build servers (CruiseControl for Java).   I know this is brute force and I'm open to all suggestions for a more elegant solution. I'm blogging this for memory and for anyone else who might need it.</yourport></p>
 <h3>Comments</h3>
 <p><strong><a href="posts/installing-2-cruisecontrol-services-web-dashboards-on-1-server-pc/#137" title="2007-10-03 12:32:07">Jimmy Bogard</a>:</strong> I recently had to do this also, as we have different service accounts for each environment we deploy to. I had to create a different CC.NET service for each service account, but I kept just the one dashboard to monitor all of them. In that case, I just copied the "server" folder inside the CruiseControl.NET folder. But by creating separate dashboards, you can also apply separate IIS authentication and NTFS permissions to each set of CCNET servers it monitors, to give some level of security over who can set off builds.</p>
+</div>
             </div>
         </div>
             <nav class="postindexpager">
@@ -567,7 +587,7 @@ Business Analysts : Domain Experts  </p>
 
     
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 

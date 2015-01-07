@@ -64,7 +64,8 @@ Note: If you want to read Fowler's article on AnemicDomainModel, check ">
             
         </div>
         <div class="body">
-            <p>David Laribee recently posted on <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx">Domain Model Overuse</a> and my colleague <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx#comments">Joe Ocampo (AgileJoe) responded</a>.  Check out the comments.</p>
+            <div>
+<p>David Laribee recently posted on <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx">Domain Model Overuse</a> and my colleague <a href="http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx#comments">Joe Ocampo (AgileJoe) responded</a>.  Check out the comments.</p>
 <p>Note: If you want to read Fowler's article on AnemicDomainModel, check out the <a href="http://64.233.169.104/search?q=cache:biq9rdhXyz4J:martinfowler.com/bliki/AnemicDomainModel.html+anemic+domain+model&amp;hl=en&amp;client=firefox-a&amp;gl=us&amp;strip=1">cached version on Google</a>, since the entry is down.</p>
 <p>I'm not worshipping Joe, but the conversation between him and David is worth reading.</p>
 <p>Enjoy.</p>
@@ -78,6 +79,7 @@ Note: If you want to read Fowler's article on AnemicDomainModel, check ">
 <p><strong><a href=".#124" title="2007-09-25 18:09:25">Joe Ocampo</a>:</strong> @Joey &gt;"For instance, the Specification pattern, while really nothing more than an implementation of a strategy pattern..." Well that depends ... :-) The model specification as it relates to DDD purpose is to make implicit engineering concepts explicit for the "Ubiquitous Language". The OOP strategy pattern is a form of the EPP specification pattern but within a Domain Model the "Specificaton" is a term reserved for predicate operations that allow for greater incite to be captured towards to model. For instance the method "isCool" evaluates height, dress and odor of a person. In this case the "CoolPersonSpecification" object can be talked towards in a model and everyone understands what it does. Does it use a strategy pattern maybe or is it simply a switch statement encapsulated to provide greater incite? Perhaps. The point is (drum role) it depends! Simplicity first, patterns second. If all you are doing is evaluating 3 criterion maybe a strategy pattern is overkill. The important question to ask is, "When I mention the Cool Person Specification does everyone understand what I am talking about?" If they don't then go back and see if it is even applicable in the domain or does it belong outside the domain layer? "Do you take the blue pill or the red pill?" :-)</p>
 <p><strong><a href=".#125" title="2007-09-25 18:23:15">Joe Ocampo</a>:</strong> Awesome Joey!</p>
 <p><strong><a href=".#126" title="2007-09-25 18:24:24">Joey Beninghove</a>:</strong> Ahh, ok. I see what you mean. BTW, I'm still working my way through the official Evans book, so forgive me if my application of DDD is not quite in-line. :) So I'm currently encapsulating certain calculations into little strategy classes because I already know that the details of <em>how</em> the calculations will work is going to change (as in next week). So in this case, my thoughts are that by encapsulating frequently changing logic like this into small isolated classes it will keep me from having to keep modifying my domain objects themselves if all I need to do is introduce a new <em>implementation</em> of a certain calculation. As to whether this is just a simple OOP strategy pattern or a DDD specification... well, guess it depends... :) Thanks for the correction Joe!</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
@@ -111,7 +113,7 @@ Note: If you want to read Fowler's article on AnemicDomainModel, check ">
         
     </div>
                     <footer id="footer" role="contentinfo">
-            <p>Contents © 2014         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
             
         </footer>
 
