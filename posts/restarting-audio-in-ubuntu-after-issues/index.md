@@ -12,4 +12,4 @@ The following command restarted audio for me in Ubuntu after my microphone on my
 
     pulseaudio -k && sudo alsa force-reload
 
-Credit to: http://askubuntu.com/a/230893
+Credit to: [http://askubuntu.com/a/230893](http://askubuntu.com/a/230893)
