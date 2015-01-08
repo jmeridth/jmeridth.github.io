@@ -70,7 +70,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/linux.xml</loc>
-  <lastmod>2015-01-07</lastmod>
+  <lastmod>2015-01-08</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/net.xml</loc>
@@ -150,7 +150,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/ubuntu.xml</loc>
-  <lastmod>2015-01-07</lastmod>
+  <lastmod>2015-01-08</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/vagrant.xml</loc>
@@ -174,10 +174,10 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/rss.xml</loc>
-  <lastmod>2015-01-07</lastmod>
+  <lastmod>2015-01-08</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/sitemap.xml</loc>
-  <lastmod>2015-01-07</lastmod>
+  <lastmod>2015-01-08</lastmod>
  </sitemap>
 </sitemapindex>

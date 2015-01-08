@@ -6,7 +6,7 @@ article: http://ogp.me/ns/article#
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>I Finally Have Linux As My Native OS | Jason Meridth's Blog</title>
+    <title>Restarting Audio in Ubuntu After Issues | Jason Meridth's Blog</title>
 
                 <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
         <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@ article: http://ogp.me/ns/article#
 
                 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 
-      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/i-finally-have-linux-as-my-native-os/">
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/">
 
 
 
@@ -26,9 +26,14 @@ article: http://ogp.me/ns/article#
 
     
     <meta name="author" content="Jason Meridth">
-            <meta name="og:title" content="I Finally Have Linux As My Native OS">
-        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/i-finally-have-linux-as-my-native-os/">
-            <meta name="og:description" content="I finally replaced OSX on my Mac with Ubuntu 14.04 LTS.  Out of the box I've had no issues.  Wireless, VPN, Terminal, Dropbox, Google Drive, LastPass, etc all work.  I was spending more time in my Vag">
+            <meta name="og:title" content="Restarting Audio in Ubuntu After Issues">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/">
+            <meta name="og:description" content="The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.
+pulseaudio -k &amp;&amp; sudo alsa force-reload
+
+
+
+Credit to: http://askubuntu.com/a/230893">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -52,11 +57,11 @@ article: http://ogp.me/ns/article#
     <section class="page-content">
         <div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">I Finally Have Linux As My Native OS</h1>
+        <h1 class="p-name entry-title" itemprop="headline name">Restarting Audio in Ubuntu After Issues</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2015-01-07T17:27:13-06:00">Jan 07, 2015</time>
+                <time class="timeago" datetime="2015-01-08T11:12:14-06:00">Jan 08, 2015</time>
             
             
             </div>
@@ -70,23 +75,27 @@ article: http://ogp.me/ns/article#
 
         </div>
         <div class="body">
-            <p>I finally replaced OSX on my Mac with Ubuntu 14.04 LTS.  Out of the box I've had no issues.  Wireless, VPN, Terminal, Dropbox, Google Drive, LastPass, etc all work.  I was spending more time in my <a href="https://www.vagrantup.com/">Vagrant</a> VMs with OSX anyway.  Loved <a href="https://www.virtualbox.org/">VirtualBox</a> + Vagrant.  Never had an issue.  I just wasn't using any portion of OSX.  It is nice to troubleshoot any issues and tweak my setup.  I'm getting used to Unity and may drop it for Gnome3 and Gnome-Do.  We'll see.  Any new things I troubleshoot or find, I'll post on.</p>
+            <div>
+<p>The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.</p>
+<pre class="code literal-block">pulseaudio -k &amp;&amp; sudo alsa force-reload
+</pre>
+
+
+<p>Credit to: http://askubuntu.com/a/230893</p>
+</div>
         </div>
                 <ul class="pager">
             <li class="previous">
-                <a href="../learning-android-development/" rel="prev" title="Learning Android Development">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../restarting-audio-in-ubuntu-after-issues/" rel="next" title="Restarting Audio in Ubuntu After Issues">Next post</a>
+                <a href="../i-finally-have-linux-as-my-native-os/" rel="prev" title="I Finally Have Linux As My Native OS">Previous post</a>
             </li>
         </ul>
 
                             <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-            disqus_url="http://blog.jasonmeridth.com/posts/i-finally-have-linux-as-my-native-os/",
-        disqus_title="I Finally Have Linux As My Native OS",
-        disqus_identifier="cache/posts/i-finally-have-linux-as-my-native-os.html",
+            disqus_url="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/",
+        disqus_title="Restarting Audio in Ubuntu After Issues",
+        disqus_identifier="cache/posts/restarting-audio-in-ubuntu-after-issues.html",
         disqus_config = function () {
             this.language = "";
         };
