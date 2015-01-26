@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn, Converse, Share">
+    <meta name="viewport" content="width=device-width">
+    <title>Jason Meridth's Blog (old posts, page 25) | Jason Meridth's Blog</title>
+
+                <link href="assets/css/bitter.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/code.css" rel="stylesheet" type="text/css">
+
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+
+      <link rel="canonical" href="http://blog.jasonmeridth.com/index-25.html">
+
+
+
+    
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
+
+    
+
+
+</head>
+<body>
+    <section class="social">
+        <ul>
+                    <li><a href="index.html" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="http://jasonmeridth.com" title="About Me"><i class="icon-user"></i></a></li>
+            <li><a href="archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="https://github.com/jmeridth" title="Github"><i class="icon-github"></i></a></li>
+            <li><a href="https://twitter.com/jmeridth" title="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+        <div class="post">
+            <h1 class="title"><a href="posts/how-to-run-a-single-test-with-tox/">How to Run a Single Test With Tox</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2014-03-07T04:49:53-06:00">Mar 07, 2014</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/how-to-run-a-single-test-with-tox/#disqus_thread" data-disqus-identifier="cache/posts/how-to-run-a-single-test-with-tox.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/cli/" rel="tag">cli</a></li>
+           <li><a class="tag p-category" href="categories/python/" rel="tag">python</a></li>
+           <li><a class="tag p-category" href="categories/testing/" rel="tag">testing</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <div>
+<p>I have to run a single python test once in a while and keep forgetting how to do it with Tox.</p>
+<p>Here it is:</p>
+<pre class="code literal-block">tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
+</pre>
+
+
+<p>Hope this helps someone else.</p>
+<p>Happy bit twiddling.</p>
+</div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="posts/personal-vim-cheatsheet/">Personal VIM Cheatsheet</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2014-03-03T16:21:02-06:00">Mar 03, 2014</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/personal-vim-cheatsheet/#disqus_thread" data-disqus-identifier="cache/posts/personal-vim-cheatsheet.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/cli/" rel="tag">cli</a></li>
+           <li><a class="tag p-category" href="categories/vim/" rel="tag">vim</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <div>
+<p>Will be adding to this post as I learn/remember shortcuts</p>
+<ul>
+<li>
+<code>.</code> - repeat last command in normal mode</li>
+<li>
+<code>@:</code> then <code>@@</code> - repeat last command entered with <code>:</code> <a href="http://vim.wikia.com/wiki/Repeat_last_colon_command">source</a>
+</li>
+<li>
+<code>#</code> - find all occurances of the word I'm currently on</li>
+<li>
+<code>dfc</code> - delete everything including the letter 'c'</li>
+<li>
+<code>dtc</code> - delete everything up to the letter 'c'</li>
+<li>shift+h - go to top of screen</li>
+<li>shift+m - go to middle of screen</li>
+<li>shift+l - go to bottom of screen</li>
+<li>ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)</li>
+<li>
+<code>gUiw</code> - capitalize the current word</li>
+<li>
+<code>gUU</code> - capitalize current line</li>
+<li>
+<code>vU</code> - capitalize current character</li>
+<li>
+<code>guiw</code> - lowercase the current word</li>
+<li>
+<code>guu</code> - lowercase the current line</li>
+<li>
+<code>vu</code> - lowercase current character</li>
+</ul>
+<p>keybindings I use all the time via mappgings in my <a href="https://github.com/jmeridth/dotfiles/blob/master/.vimrc">.vimrc</a></p>
+<ul>
+<li>
+<code>,v</code> - create vertical split</li>
+<li>
+<code>,h</code> - create horizontal split</li>
+<li>ctrl+j - go to split below/down</li>
+<li>ctrl+h - go to split on left</li>
+<li>ctrl+k - go to split above/up</li>
+<li>ctrl+l - go to split on right</li>
+</ul>
+</div>
+            </div>
+        </div>
+            <nav class="postindexpager">
+        <ul class="pager">
+            <li class="previous">
+                <a href="." rel="prev">Newer posts</a>
+            </li>
+            <li class="next">
+                <a href="index-24.html" rel="next">Older posts</a>
+            </li>
+        </ul>
+        </nav>
+
+                   <script>var disqus_shortname="jasonmeridth";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+
+
+    
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2015         <a href="mailto:jason@jasonmeridth.com">Jason Meridth</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> <br>↑ ↑ ↓ ↓ ← → ← → B A select start</p>
+            
+        </footer>
+
+        </div>
+    </section>
+    
+    
+                <script src="assets/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+            <script src="assets/js/jquery.timeago.js" type="text/javascript"></script>
+    
+<!-- Social buttons -->
+<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+<!-- End of social buttons -->
+
+
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>

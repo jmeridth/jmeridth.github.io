@@ -6,7 +6,7 @@ article: http://ogp.me/ns/article#
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Restarting Audio in Ubuntu After Issues | Jason Meridth's Blog</title>
+    <title>Copying Text With Mouse In TMUX | Jason Meridth's Blog</title>
 
                 <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
         <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@ article: http://ogp.me/ns/article#
 
                 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 
-      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/">
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/copying-text-with-mouse-in-tmux/">
 
 
 
@@ -26,14 +26,12 @@ article: http://ogp.me/ns/article#
 
     
     <meta name="author" content="Jason Meridth">
-            <meta name="og:title" content="Restarting Audio in Ubuntu After Issues">
-        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/">
-            <meta name="og:description" content="The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.
-pulseaudio -k &amp;&amp; sudo alsa force-reload
-
-
-
-Credit to: http://askubuntu.com/a/230893">
+            <meta name="og:title" content="Copying Text With Mouse In TMUX">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/copying-text-with-mouse-in-tmux/">
+            <meta name="og:description" content="TL;DR
+Hold down shift key and select text with left mouse button.  This will copy to clipboard.  Then hold down the shift key again and click the middle button on your mouse.  Voila!
+Long version:
+Aft">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -57,48 +55,43 @@ Credit to: http://askubuntu.com/a/230893">
     <section class="page-content">
         <div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">Restarting Audio in Ubuntu After Issues</h1>
+        <h1 class="p-name entry-title" itemprop="headline name">Copying Text With Mouse In TMUX</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2015-01-08T11:12:14-06:00">Jan 08, 2015</time>
+                <time class="timeago" datetime="2015-01-26T08:46:04-06:00">Jan 26, 2015</time>
             
             
             </div>
                     <div itemprop="keywords" class="tags">
         <ul>
         Tags : 
-           <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
-           <li><a class="tag p-category" href="../../categories/ubuntu/" rel="tag">ubuntu</a></li>
+           <li><a class="tag p-category" href="../../categories/tmux/" rel="tag">tmux</a></li>
         </ul>
         </div>
 
         </div>
         <div class="body">
             <div>
-<p>The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.</p>
-<pre class="code literal-block">pulseaudio -k &amp;&amp; sudo alsa force-reload
-</pre>
-
-
-<p>Credit to: <a href="http://askubuntu.com/a/230893">http://askubuntu.com/a/230893</a></p>
+<p>TL;DR
+Hold down shift key and select text with left mouse button.  This will copy to clipboard.  Then hold down the shift key again and click the middle button on your mouse.  Voila!</p>
+<p>Long version:
+After finally moving over to Ubuntu as my native operating system, I've been using the default Terminal application for development.  I run my weechat IRC session on a remote node in TMUX so I can detach/reattach at will and stay connected.  I'm using ZNC as my bounce also in case the tmux session or weechat crashes.  This means it stays connected and will replay anything I missed while disconnected.  Anyway, I have had issues with copy/paste in the Terminal app, especially when my development sessions are in TMUX.  I've been using Ctrl+Shift and selecting text and it has been working, but has been adding a newline on the end when I use Ctrl+Shift+V (paste).  Hodling down the shift key was the trick.  Hold down the shift key and select text with left mouse button.  This will copy to clipboard.  Then hold down the shift key again and click the middle button on your mouse.  This will paste the text WITHOUT a newline.</p>
+<p><a href="https://awhan.wordpress.com/2012/04/18/tmux-copy-paste-with-mouse/">Source</a></p>
 </div>
         </div>
                 <ul class="pager">
             <li class="previous">
-                <a href="../i-finally-have-linux-as-my-native-os/" rel="prev" title="I Finally Have Linux As My Native OS">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../getting-a-canon-mx450-series-working-with-ubuntu-1404/" rel="next" title="Getting a Canon MX450 Series Working With Ubuntu 14.04">Next post</a>
+                <a href="../getting-a-canon-mx450-series-working-with-ubuntu-1404/" rel="prev" title="Getting a Canon MX450 Series Working With Ubuntu 14.04">Previous post</a>
             </li>
         </ul>
 
                             <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-            disqus_url="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/",
-        disqus_title="Restarting Audio in Ubuntu After Issues",
-        disqus_identifier="cache/posts/restarting-audio-in-ubuntu-after-issues.html",
+            disqus_url="http://blog.jasonmeridth.com/posts/copying-text-with-mouse-in-tmux/",
+        disqus_title="Copying Text With Mouse In TMUX",
+        disqus_identifier="cache/posts/copying-text-with-mouse-in-tmux.html",
         disqus_config = function () {
             this.language = "";
         };

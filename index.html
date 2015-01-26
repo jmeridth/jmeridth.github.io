@@ -43,6 +43,79 @@ article: http://ogp.me/ns/article#
     <section class="page-content">
         <div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/copying-text-with-mouse-in-tmux/">Copying Text With Mouse In TMUX</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-01-26T08:46:04-06:00">Jan 26, 2015</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/copying-text-with-mouse-in-tmux/#disqus_thread" data-disqus-identifier="cache/posts/copying-text-with-mouse-in-tmux.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/tmux/" rel="tag">tmux</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <div>
+<p>TL;DR
+Hold down shift key and select text with left mouse button.  This will copy to clipboard.  Then hold down the shift key again and click the middle button on your mouse.  Voila!</p>
+<p>Long version:
+After finally moving over to Ubuntu as my native operating system, I've been using the default Terminal application for development.  I run my weechat IRC session on a remote node in TMUX so I can detach/reattach at will and stay connected.  I'm using ZNC as my bounce also in case the tmux session or weechat crashes.  This means it stays connected and will replay anything I missed while disconnected.  Anyway, I have had issues with copy/paste in the Terminal app, especially when my development sessions are in TMUX.  I've been using Ctrl+Shift and selecting text and it has been working, but has been adding a newline on the end when I use Ctrl+Shift+V (paste).  Hodling down the shift key was the trick.  Hold down the shift key and select text with left mouse button.  This will copy to clipboard.  Then hold down the shift key again and click the middle button on your mouse.  This will paste the text WITHOUT a newline.</p>
+<p><a href="https://awhan.wordpress.com/2012/04/18/tmux-copy-paste-with-mouse/">Source</a></p>
+</div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/">Getting a Canon MX450 Series Working With Ubuntu 14.04</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-01-08T21:03:55-06:00">Jan 08, 2015</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/#disqus_thread" data-disqus-identifier="cache/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404.html">Comments</a>
+
+
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/linux/" rel="tag">linux</a></li>
+           <li><a class="tag p-category" href="categories/troubleshooting/" rel="tag">troubleshooting</a></li>
+           <li><a class="tag p-category" href="categories/ubuntu/" rel="tag">ubuntu</a></li>
+        </ul>
+        </div>
+
+            </div>
+            <div class="body">
+                <div>
+<p>Today I needed to scan something on my Canon MX450 series printer from my laptop running Ubuntu 14.04 LTS.  I had already setup the printer portion successfully with the built in network printer detection, but hadn't done the scanning portion.  I found out I needed to download a deb file and install something called scangearmp to get this to work.  The download button can be found <a href="http://support-sg.canon-asia.com/contents/SG/EN/0100517701.html">here</a>.  As of this post I'm download version 2.10 which was last updated on 14-Feb-2013, Issue Number 0100517701.  Once downloaded issue the following commands:</p>
+<pre class="code literal-block">tar xzf scangearmp-mx450series-2.10-1-deb.tar.gz
+cd scangearmp-mx450series-2.10-1-deb/
+sudo ./install.sh
+</pre>
+
+
+<p>This will install the scangearmp binary to /usr/bin/scangearmp.</p>
+<p>Now all you need to do is run:</p>
+<pre class="code literal-block">scangearmp
+</pre>
+
+
+<p>If you see the following popup:</p>
+<p>[PUT IMAGE HERE]</p>
+<p>then you just need to push the "Update Scanner List" button and it should find your scanner.  After that you should see the same popup but now with your Canon MX450 scanner listed.</p>
+<p>[PUT IMAGE HERE]</p>
+<p>Hope this helps someone else.</p>
+</div>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/restarting-audio-in-ubuntu-after-issues/">Restarting Audio in Ubuntu After Issues</a></h1>
             <div class="meta">
                 <div class="authordate">
@@ -289,110 +362,10 @@ article: http://ogp.me/ns/article#
 </div>
             </div>
         </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/how-to-run-a-single-test-with-tox/">How to Run a Single Test With Tox</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2014-03-07T04:49:53-06:00">Mar 07, 2014</time>
-                </div>
-                <div class="stats">
-                                <a href="posts/how-to-run-a-single-test-with-tox/#disqus_thread" data-disqus-identifier="cache/posts/how-to-run-a-single-test-with-tox.html">Comments</a>
-
-
-                </div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/cli/" rel="tag">cli</a></li>
-           <li><a class="tag p-category" href="categories/python/" rel="tag">python</a></li>
-           <li><a class="tag p-category" href="categories/testing/" rel="tag">testing</a></li>
-        </ul>
-        </div>
-
-            </div>
-            <div class="body">
-                <div>
-<p>I have to run a single python test once in a while and keep forgetting how to do it with Tox.</p>
-<p>Here it is:</p>
-<pre class="code literal-block">tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
-</pre>
-
-
-<p>Hope this helps someone else.</p>
-<p>Happy bit twiddling.</p>
-</div>
-            </div>
-        </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/personal-vim-cheatsheet/">Personal VIM Cheatsheet</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2014-03-03T16:21:02-06:00">Mar 03, 2014</time>
-                </div>
-                <div class="stats">
-                                <a href="posts/personal-vim-cheatsheet/#disqus_thread" data-disqus-identifier="cache/posts/personal-vim-cheatsheet.html">Comments</a>
-
-
-                </div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/cli/" rel="tag">cli</a></li>
-           <li><a class="tag p-category" href="categories/vim/" rel="tag">vim</a></li>
-        </ul>
-        </div>
-
-            </div>
-            <div class="body">
-                <div>
-<p>Will be adding to this post as I learn/remember shortcuts</p>
-<ul>
-<li>
-<code>.</code> - repeat last command in normal mode</li>
-<li>
-<code>@:</code> then <code>@@</code> - repeat last command entered with <code>:</code> <a href="http://vim.wikia.com/wiki/Repeat_last_colon_command">source</a>
-</li>
-<li>
-<code>#</code> - find all occurances of the word I'm currently on</li>
-<li>
-<code>dfc</code> - delete everything including the letter 'c'</li>
-<li>
-<code>dtc</code> - delete everything up to the letter 'c'</li>
-<li>shift+h - go to top of screen</li>
-<li>shift+m - go to middle of screen</li>
-<li>shift+l - go to bottom of screen</li>
-<li>ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)</li>
-<li>
-<code>gUiw</code> - capitalize the current word</li>
-<li>
-<code>gUU</code> - capitalize current line</li>
-<li>
-<code>vU</code> - capitalize current character</li>
-<li>
-<code>guiw</code> - lowercase the current word</li>
-<li>
-<code>guu</code> - lowercase the current line</li>
-<li>
-<code>vu</code> - lowercase current character</li>
-</ul>
-<p>keybindings I use all the time via mappgings in my <a href="https://github.com/jmeridth/dotfiles/blob/master/.vimrc">.vimrc</a></p>
-<ul>
-<li>
-<code>,v</code> - create vertical split</li>
-<li>
-<code>,h</code> - create horizontal split</li>
-<li>ctrl+j - go to split below/down</li>
-<li>ctrl+h - go to split on left</li>
-<li>ctrl+k - go to split above/up</li>
-<li>ctrl+l - go to split on right</li>
-</ul>
-</div>
-            </div>
-        </div>
             <nav class="postindexpager">
         <ul class="pager">
             <li class="next">
-                <a href="index-24.html" rel="next">Older posts</a>
+                <a href="index-25.html" rel="next">Older posts</a>
             </li>
         </ul>
         </nav>

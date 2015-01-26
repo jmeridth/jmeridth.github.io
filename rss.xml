@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><atom:link href="http://blog.jasonmeridth.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Thu, 08 Jan 2015 11:44:35 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Restarting Audio in Ubuntu After Issues</title><link>http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Jason Meridth's Blog</title><link>http://blog.jasonmeridth.com/</link><description>Learn, Converse, Share</description><atom:link href="http://blog.jasonmeridth.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 26 Jan 2015 09:00:35 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Copying Text With Mouse In TMUX</title><link>http://blog.jasonmeridth.com/posts/copying-text-with-mouse-in-tmux/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;TL;DR
+Hold down shift key and select text with left mouse button.  This will copy to clipboard.  Then hold down the shift key again and click the middle button on your mouse.  Voila!&lt;/p&gt;
+&lt;p&gt;Long version:
+After finally moving over to Ubuntu as my native operating system, I've been using the default Terminal application for development.  I run my weechat IRC session on a remote node in TMUX so I can detach/reattach at will and stay connected.  I'm using ZNC as my bounce also in case the tmux session or weechat crashes.  This means it stays connected and will replay anything I missed while disconnected.  Anyway, I have had issues with copy/paste in the Terminal app, especially when my development sessions are in TMUX.  I've been using Ctrl+Shift and selecting text and it has been working, but has been adding a newline on the end when I use Ctrl+Shift+V (paste).  Hodling down the shift key was the trick.  Hold down the shift key and select text with left mouse button.  This will copy to clipboard.  Then hold down the shift key again and click the middle button on your mouse.  This will paste the text WITHOUT a newline.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://awhan.wordpress.com/2012/04/18/tmux-copy-paste-with-mouse/"&gt;Source&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>tmux</category><guid>http://blog.jasonmeridth.com/posts/copying-text-with-mouse-in-tmux/</guid><pubDate>Mon, 26 Jan 2015 14:46:04 GMT</pubDate></item><item><title>Getting a Canon MX450 Series Working With Ubuntu 14.04</title><link>http://blog.jasonmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Today I needed to scan something on my Canon MX450 series printer from my laptop running Ubuntu 14.04 LTS.  I had already setup the printer portion successfully with the built in network printer detection, but hadn't done the scanning portion.  I found out I needed to download a deb file and install something called scangearmp to get this to work.  The download button can be found &lt;a href="http://support-sg.canon-asia.com/contents/SG/EN/0100517701.html"&gt;here&lt;/a&gt;.  As of this post I'm download version 2.10 which was last updated on 14-Feb-2013, Issue Number 0100517701.  Once downloaded issue the following commands:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;tar xzf scangearmp-mx450series-2.10-1-deb.tar.gz
+cd scangearmp-mx450series-2.10-1-deb/
+sudo ./install.sh
+&lt;/pre&gt;
+
+
+&lt;p&gt;This will install the scangearmp binary to /usr/bin/scangearmp.&lt;/p&gt;
+&lt;p&gt;Now all you need to do is run:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;scangearmp
+&lt;/pre&gt;
+
+
+&lt;p&gt;If you see the following popup:&lt;/p&gt;
+&lt;p&gt;[PUT IMAGE HERE]&lt;/p&gt;
+&lt;p&gt;then you just need to push the "Update Scanner List" button and it should find your scanner.  After that you should see the same popup but now with your Canon MX450 scanner listed.&lt;/p&gt;
+&lt;p&gt;[PUT IMAGE HERE]&lt;/p&gt;
+&lt;p&gt;Hope this helps someone else.&lt;/p&gt;&lt;/div&gt;</description><category>linux</category><category>troubleshooting</category><category>ubuntu</category><guid>http://blog.jasonmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/</guid><pubDate>Fri, 09 Jan 2015 03:03:55 GMT</pubDate></item><item><title>Restarting Audio in Ubuntu After Issues</title><link>http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;pulseaudio -k &amp;amp;&amp;amp; sudo alsa force-reload
 &lt;/pre&gt;
 
@@ -42,37 +63,4 @@
 &lt;p&gt;To get the SHA of the last commit from a specific branch, use &lt;a href="http://git-scm.com/docs/git-rev-parse"&gt;&lt;code&gt;git rev-parse&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git rev-parse origin/master&lt;/code&gt; (remote branch)&lt;/p&gt;
 &lt;p&gt;or &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git rev-parse master&lt;/code&gt; (local branch)&lt;/p&gt;&lt;/div&gt;</description><category>git</category><guid>http://blog.jasonmeridth.com/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/</guid><pubDate>Tue, 11 Mar 2014 07:30:23 GMT</pubDate></item><item><title>How to Run a Single Test With Tox</title><link>http://blog.jasonmeridth.com/posts/how-to-run-a-single-test-with-tox/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;I have to run a single python test once in a while and keep forgetting how to do it with Tox.&lt;/p&gt;
-&lt;p&gt;Here it is:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
-&lt;/pre&gt;
-
-
-&lt;p&gt;Hope this helps someone else.&lt;/p&gt;
-&lt;p&gt;Happy bit twiddling.&lt;/p&gt;&lt;/div&gt;</description><category>cli</category><category>python</category><category>testing</category><guid>http://blog.jasonmeridth.com/posts/how-to-run-a-single-test-with-tox/</guid><pubDate>Fri, 07 Mar 2014 10:49:53 GMT</pubDate></item><item><title>Personal VIM Cheatsheet</title><link>http://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/</link><dc:creator>Jason Meridth</dc:creator><description>&lt;div&gt;&lt;p&gt;Will be adding to this post as I learn/remember shortcuts&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;.&lt;/code&gt; - repeat last command in normal mode&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;@:&lt;/code&gt; then &lt;code&gt;@@&lt;/code&gt; - repeat last command entered with &lt;code&gt;:&lt;/code&gt; &lt;a href="http://vim.wikia.com/wiki/Repeat_last_colon_command"&gt;source&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;#&lt;/code&gt; - find all occurances of the word I'm currently on&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dfc&lt;/code&gt; - delete everything including the letter 'c'&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dtc&lt;/code&gt; - delete everything up to the letter 'c'&lt;/li&gt;
-&lt;li&gt;shift+h - go to top of screen&lt;/li&gt;
-&lt;li&gt;shift+m - go to middle of screen&lt;/li&gt;
-&lt;li&gt;shift+l - go to bottom of screen&lt;/li&gt;
-&lt;li&gt;ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gUiw&lt;/code&gt; - capitalize the current word&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;gUU&lt;/code&gt; - capitalize current line&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;vU&lt;/code&gt; - capitalize current character&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;guiw&lt;/code&gt; - lowercase the current word&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;guu&lt;/code&gt; - lowercase the current line&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;vu&lt;/code&gt; - lowercase current character&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;keybindings I use all the time via mappgings in my &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.vimrc"&gt;.vimrc&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;,v&lt;/code&gt; - create vertical split&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;,h&lt;/code&gt; - create horizontal split&lt;/li&gt;
-&lt;li&gt;ctrl+j - go to split below/down&lt;/li&gt;
-&lt;li&gt;ctrl+h - go to split on left&lt;/li&gt;
-&lt;li&gt;ctrl+k - go to split above/up&lt;/li&gt;
-&lt;li&gt;ctrl+l - go to split on right&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>cli</category><category>vim</category><guid>http://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/</guid><pubDate>Mon, 03 Mar 2014 22:21:02 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;code&gt;git rev-parse master&lt;/code&gt; (local branch)&lt;/p&gt;&lt;/div&gt;</description><category>git</category><guid>http://blog.jasonmeridth.com/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/</guid><pubDate>Tue, 11 Mar 2014 07:30:23 GMT</pubDate></item></channel></rss>

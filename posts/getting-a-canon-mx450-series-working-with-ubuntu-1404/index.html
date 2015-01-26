@@ -6,7 +6,7 @@ article: http://ogp.me/ns/article#
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Restarting Audio in Ubuntu After Issues | Jason Meridth's Blog</title>
+    <title>Getting a Canon MX450 Series Working With Ubuntu 14.04 | Jason Meridth's Blog</title>
 
                 <link href="../../assets/css/bitter.css" rel="stylesheet" type="text/css">
         <link href="../../assets/css/main.css" rel="stylesheet" type="text/css">
@@ -15,7 +15,7 @@ article: http://ogp.me/ns/article#
 
                 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 
-      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/">
+      <link rel="canonical" href="http://blog.jasonmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/">
 
 
 
@@ -26,14 +26,9 @@ article: http://ogp.me/ns/article#
 
     
     <meta name="author" content="Jason Meridth">
-            <meta name="og:title" content="Restarting Audio in Ubuntu After Issues">
-        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/">
-            <meta name="og:description" content="The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.
-pulseaudio -k &amp;&amp; sudo alsa force-reload
-
-
-
-Credit to: http://askubuntu.com/a/230893">
+            <meta name="og:title" content="Getting a Canon MX450 Series Working With Ubuntu 14.04">
+        <meta name="og:url" content="http://blog.jasonmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/">
+            <meta name="og:description" content="Today I needed to scan something on my Canon MX450 series printer from my laptop running Ubuntu 14.04 LTS.  I had already setup the printer portion successfully with the built in network printer detec">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -57,11 +52,11 @@ Credit to: http://askubuntu.com/a/230893">
     <section class="page-content">
         <div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">Restarting Audio in Ubuntu After Issues</h1>
+        <h1 class="p-name entry-title" itemprop="headline name">Getting a Canon MX450 Series Working With Ubuntu 14.04</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2015-01-08T11:12:14-06:00">Jan 08, 2015</time>
+                <time class="timeago" datetime="2015-01-08T21:03:55-06:00">Jan 08, 2015</time>
             
             
             </div>
@@ -69,6 +64,7 @@ Credit to: http://askubuntu.com/a/230893">
         <ul>
         Tags : 
            <li><a class="tag p-category" href="../../categories/linux/" rel="tag">linux</a></li>
+           <li><a class="tag p-category" href="../../categories/troubleshooting/" rel="tag">troubleshooting</a></li>
            <li><a class="tag p-category" href="../../categories/ubuntu/" rel="tag">ubuntu</a></li>
         </ul>
         </div>
@@ -76,29 +72,41 @@ Credit to: http://askubuntu.com/a/230893">
         </div>
         <div class="body">
             <div>
-<p>The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.</p>
-<pre class="code literal-block">pulseaudio -k &amp;&amp; sudo alsa force-reload
+<p>Today I needed to scan something on my Canon MX450 series printer from my laptop running Ubuntu 14.04 LTS.  I had already setup the printer portion successfully with the built in network printer detection, but hadn't done the scanning portion.  I found out I needed to download a deb file and install something called scangearmp to get this to work.  The download button can be found <a href="http://support-sg.canon-asia.com/contents/SG/EN/0100517701.html">here</a>.  As of this post I'm download version 2.10 which was last updated on 14-Feb-2013, Issue Number 0100517701.  Once downloaded issue the following commands:</p>
+<pre class="code literal-block">tar xzf scangearmp-mx450series-2.10-1-deb.tar.gz
+cd scangearmp-mx450series-2.10-1-deb/
+sudo ./install.sh
 </pre>
 
 
-<p>Credit to: <a href="http://askubuntu.com/a/230893">http://askubuntu.com/a/230893</a></p>
+<p>This will install the scangearmp binary to /usr/bin/scangearmp.</p>
+<p>Now all you need to do is run:</p>
+<pre class="code literal-block">scangearmp
+</pre>
+
+
+<p>If you see the following popup:</p>
+<p>[PUT IMAGE HERE]</p>
+<p>then you just need to push the "Update Scanner List" button and it should find your scanner.  After that you should see the same popup but now with your Canon MX450 scanner listed.</p>
+<p>[PUT IMAGE HERE]</p>
+<p>Hope this helps someone else.</p>
 </div>
         </div>
                 <ul class="pager">
             <li class="previous">
-                <a href="../i-finally-have-linux-as-my-native-os/" rel="prev" title="I Finally Have Linux As My Native OS">Previous post</a>
+                <a href="../restarting-audio-in-ubuntu-after-issues/" rel="prev" title="Restarting Audio in Ubuntu After Issues">Previous post</a>
             </li>
             <li class="next">
-                <a href="../getting-a-canon-mx450-series-working-with-ubuntu-1404/" rel="next" title="Getting a Canon MX450 Series Working With Ubuntu 14.04">Next post</a>
+                <a href="../copying-text-with-mouse-in-tmux/" rel="next" title="Copying Text With Mouse In TMUX">Next post</a>
             </li>
         </ul>
 
                             <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="jasonmeridth",
-            disqus_url="http://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/",
-        disqus_title="Restarting Audio in Ubuntu After Issues",
-        disqus_identifier="cache/posts/restarting-audio-in-ubuntu-after-issues.html",
+            disqus_url="http://blog.jasonmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/",
+        disqus_title="Getting a Canon MX450 Series Working With Ubuntu 14.04",
+        disqus_identifier="cache/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404.html",
         disqus_config = function () {
             this.language = "";
         };
