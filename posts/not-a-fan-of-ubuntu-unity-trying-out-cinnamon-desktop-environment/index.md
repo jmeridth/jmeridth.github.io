@@ -20,4 +20,6 @@ Once installed you need to logout and choose Cinnamon from the login session scr
 
 After that you will see a much more responsive UI.  And for you Windows users, it will feel very familiar, as the taskbar and icons are in the usual locations.
 
+![desktop](http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/screenshot.png)
+
 NOTE: To those that actually read this, I did try [gnome session fallback](http://packages.ubuntu.com/trusty/gnome-session-fallback) and had many issues with it.  I am also aware that there is an official [Ubuntu Gnome](http://ubuntugnome.org/) variant of Ubuntu now also.  Hadn't tried it.
