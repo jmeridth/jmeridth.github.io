@@ -1,4 +1,4 @@
-.. title: PostgreSQL Commond Line Cheat Sheet
+.. title: PostgreSQL Command Line Cheat Sheet
 .. link: http://blog.jasonmeridth.com/2012/10/02/postgresql-command-line-cheat-sheet.html 
 .. description: 
 .. date: 2012/10/02 00:00:00

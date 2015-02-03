@@ -26,7 +26,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/command-line.xml</loc>
-  <lastmod>2015-01-26</lastmod>
+  <lastmod>2015-02-03</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/dell.xml</loc>
@@ -94,7 +94,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/postgresql.xml</loc>
-  <lastmod>2015-01-26</lastmod>
+  <lastmod>2015-02-03</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/presentation.xml</loc>
@@ -182,6 +182,6 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/sitemap.xml</loc>
-  <lastmod>2015-02-02</lastmod>
+  <lastmod>2015-02-03</lastmod>
  </sitemap>
 </sitemapindex>
