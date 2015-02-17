@@ -278,13 +278,14 @@ sudo ./install.sh
             </div>
             <div class="body">
                 <div>
-<p>Recently I had issues connecting to <a href="http://github.com/roaet">Github</a> because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker <a href="https://github.com">Justin Hammond</a> found a git config option that lets you force all git commands to use <code>https://</code> (port 443) instead of <code>git://</code> (port 22).</p>
+<p>Recently I had issues connecting to <a href="http://github.com/roaet">Github</a> because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker <a href="https://github.com">Justin Hammond</a> found a git config option that lets you force all git commands to use <code>https://</code> (port 443) instead of <code>ssh://</code> (port 22).</p>
 <pre class="code literal-block">git config --global url.<span class="s2">"https://"</span>.insteadOf git://
 </pre>
 
 
 <p>Worked like a charm.  Thanks Justin.  Hope this helps someone else.</p>
-<p>NB: Don't use <code>--global</code> if you don't want this applied to all repositories.  Without it only sets for the current repository you're in.</p>
+<p>NB: Don't use <code>--global</code> if you don't want this applied to all repositories.  Without it only sets for the current repository you're in.
+NB: All ports but 80 and 443 were blocked.  I couldn't use 9418 (Git protocol) either</p>
 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/git.xml</loc>
-  <lastmod>2015-01-26</lastmod>
+  <lastmod>2015-02-16</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/github.xml</loc>
@@ -178,10 +178,10 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/rss.xml</loc>
-  <lastmod>2015-02-02</lastmod>
+  <lastmod>2015-02-16</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/sitemap.xml</loc>
-  <lastmod>2015-02-03</lastmod>
+  <lastmod>2015-02-16</lastmod>
  </sitemap>
 </sitemapindex>
