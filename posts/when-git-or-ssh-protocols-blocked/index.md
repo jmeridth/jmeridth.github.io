@@ -17,6 +17,7 @@ git config --global url."https://".insteadOf git://
 Worked like a charm.  Thanks Justin.  Hope this helps someone else.
 
 NB: Don't use `--global` if you don't want this applied to all repositories.  Without it only sets for the current repository you're in.
+
 NB: All ports but 80 and 443 were blocked.  I couldn't use 9418 (Git protocol) either
 
   [1]: https://github.com
