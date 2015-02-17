@@ -93,21 +93,59 @@ The lostechies repository now exists remotely. Currently my account is the only 
 
 Say I want to allow my friend Joe to have commit (writable) access to my lostechies repository and I want my friend Ryan to only have readonly access. I tell them to send me their public ssh keys. I make sure the files are named joe.pub and ryan.pub. I then put them into my local gitosis-admin repository’s keydir directory and then I edit the gitosis.conf file to be:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.27-PM.png)
+```bash
+~/gitosis-admin(master) > cp ~/joe.pub keydir/ && cp ~/ryan.pub keydir/
+~/gitosis-admin(master) > vim gitosis.conf
+[gitosis]
+
+[group gitosis-admin]
+writable = gitosis-admin
+members = user@local
+
+[group lostechies]
+writable = lostechies
+members = user@local joe
+
+[group lostechies_ro]
+readonly = lostechies
+members = ryan
+```
 
 Notice that I had to create a whole new group (lostechies_ro) to setup Ryan’s readonly access. You can’t combine readonly and writable permissions in gitosis (wish we could – open source contribution there?).
 
 Now I need to “git add” the new keys, and commit the changes to the conf file. Finally I push the changes.
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.36-PM.png)
+```bash
+~/gitosis-admin(master) > git add keydir/joe.pub keydir/ryan.pub
+~/gitosis-admin(master) > git commit -am "add joe and ryan and give them access to lostechies repository"
+[master 3fb193c] add joe and ryan and give them access to lostechies repository
+ 3 files changed, 6 insertions(+), 1 deletions(-)
+ create mode 100644 keydir/joe.pub
+ create mode 100644 keydir/ryan.pub
+~/gitosis-admin(master) > git push
+Counting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 470 bytes, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To git@YOUR_SERVER_HOSTNAME: gitosis-admin.git
+   20148cf..efb193c master -> master
+```
 
 Now Joe or Ryan can clone this repository:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.43-PM.png)
+```bash
+git clone git@YOUR_SERVER_HOSTNAME:lostechies.git
+```
 
 _**NOTE:**_ Again, if they receive the following error:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.50-PM.png)
+```bash
+~ > git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
+Initialized empty Git repository in /Users/user/gitosis-admin/.git/
+ssh: connect to host YOUR_SERVER_HOSTNAME port 22: Connection refused
+fatal: The remote end hung up unexpectedly
+```
 
 The solution, involving the .ssh/config file is in the first post in this series.
 
@@ -117,7 +155,12 @@ That is how you create a repository and add users.
 
 If you are unable to connect you have the option of editing the gitosis.conf file with more message verbosity by adding “loglevel=DEBUG” at the top of the conf file:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.14.58-PM.png)
+```bash
+~/gitosis-admin(master) > vim gitosis.conf
+[gitosis]
+loglevel=DEBUG
+...
+```
 
 This will give you more information on the ouput when trying to push to the remote repository.
 
@@ -129,9 +172,11 @@ As Scott Chacon states in his gitosis section of [Pro Git](http://progit.org/bo
 
 The .gitosis.conf file in the git user’s home directory is a symlink to the actual conf file in the gitosis-admin repository:
 
-![](//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-24-at-10.15.03-PM.png)
+```bash
+lrwxrwxrwx 1 git  git  53 May 22 20:32 .gitosis.conf -> /home/git/repositories/gitosis-admin.git/gitosis.conf
+```
 
-Next Part: Gitweb
+Next Part: [Gitosis and Gitweb Part 3](/posts/gitosis-and-gitweb-part-3)
 
 ## Comments
 

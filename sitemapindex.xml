@@ -38,7 +38,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/git.xml</loc>
-  <lastmod>2015-02-16</lastmod>
+  <lastmod>2015-02-17</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/github.xml</loc>
@@ -46,7 +46,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/gitosis.xml</loc>
-  <lastmod>2015-01-26</lastmod>
+  <lastmod>2015-02-17</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/haml.xml</loc>
@@ -182,6 +182,6 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/sitemap.xml</loc>
-  <lastmod>2015-02-16</lastmod>
+  <lastmod>2015-02-17</lastmod>
  </sitemap>
 </sitemapindex>

@@ -234,3 +234,5 @@ total 8
 -rw-r--r-- 1 user staff  1148 May 22 21:31 gitosis.conf
 drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
 ```
+
+Next Park: [Gitosis and Gitweb Part 2](/posts/gitosis-and-gitweb-part-2)

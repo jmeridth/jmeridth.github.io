@@ -29,10 +29,9 @@ article: http://ogp.me/ns/article#
             <meta name="og:title" content="Gitosis and Gitweb - Part 3">
         <meta name="og:url" content="http://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/">
             <meta name="og:description" content="Gitosis and Gitweb – Part 1
-
 Gitosis and Gitweb – Part 2
 So we are setup, have a project, and have contributors via the first 2 parts.
-I know that we are all enamored by the UI of GitHub.com. I am. Un">
+I know that we are all enamored by the UI of GitHub.com. I am. Unf">
         <meta name="og:site_name" content="Jason Meridth's Blog">
         <meta name="og:type" content="article">
 
@@ -75,44 +74,101 @@ I know that we are all enamored by the UI of GitHub.com. I am. Un">
         </div>
         <div class="body">
             <div>
-<p><a href="../../blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-1-setup.aspx">Gitosis and Gitweb – Part 1<br>
-</a></p>
-<p><a href="../../blogs/jason_meridth/archive/2010/05/24/gitosis-and-gitweb-part-2-add-projects-and-contributors.aspx">Gitosis and Gitweb – Part 2</a></p>
+<p><a href="../gitosis-and-gitweb-part-1">Gitosis and Gitweb – Part 1</a></p>
+<p><a href="../gitosis-and-gitweb-part-2">Gitosis and Gitweb – Part 2</a></p>
 <p>So we are setup, have a project, and have contributors via the first 2 parts.</p>
 <p>I know that we are all enamored by the UI of <a href="http://github.com">GitHub.com</a>. I am. Unfortunately you can’t get private repositories for free (In all fairness it’s only $7/mo. – a <em>very</em> wise investment). I am aware of <a href="http://gitorious.com">Gitorious</a> like I mentioned in the first part, but I have no experience with that. I will after this series and update this series if I find it better. Again, I like to use the simplest thing that works. (Of course, “simplest” is in the eye of the beholder)</p>
 <p>In this section I’m going to show you how to install Gitweb, a UI tool that let’s you view your repositories. I’m also going to mention how to get it to auto-detect any new repositories and ensure they show up on the web UI. I learned how to do most of this from my co-worker <a href="http://twitter.com/ajmesserli">Antony Messerli</a>. He is a true Linux and problem-solving Jedi.</p>
 <h3>Install Apache</h3>
 <p>First, you need to ensure apache2 is installed. Check to see if you have an /etc/apache2 folder. If you do, you should be okay. If you don’t, you need to install it.</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.15-PM.png"></p>
+<pre class="code literal-block">sudo apt-get install apache2
+</pre>
+
+
 <p>For more in-depth advice, I always reference the <a href="http://articles.slicehost.com/2010/5/19/installing-apache-on-ubuntu">Slicehost Articles</a></p>
 <p>Once you have that installed the daemon restarted, go to your slices ip address in the browser of your choice (i.e,. http://123.123.123.123) and you should something like “It Works”</p>
 <p>Voila! You have apache running.</p>
 <h3>Install the Package</h3>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.22-PM.png"></p>
+<pre class="code literal-block">sudo apt-get install gitweb
+</pre>
+
+
 <p>This will install gitweb into /var/www/gitweb, create a conf file at /etc/gitweb.conf, and add three files to /usr/share/gitweb (git-favicon.png, git-logo.png, gitweb.css).</p>
 <p>Note: If for some reason, the /var/www/gitweb folder <em>is not</em> created, you can clone the git source (git clone git://git.kernel.org/pub/scm/git/git.git) and then just copy the git/gitweb folder to /var/www/gitweb</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.28-PM.png"></p>
+<pre class="code literal-block">cp -R git/gitweb /var/www/
+</pre>
+
+
 <p>You only need to edit the $projectroot variable in the /etc/gitweb.conf to point to your gitosis repositories folder:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.34-PM.png"></p>
+<pre class="code literal-block"><span class="c"># path to git projects (&lt;project&gt;.git)</span>
+<span class="nv">$projectroot</span> <span class="o">=</span> <span class="s2">"/home/git/repositories"</span><span class="p">;</span>
+...
+</pre>
+
+
 <p>Since this isn’t a post about Apache, I just add the gitweb directory setup to the base Apache config. Since Ubuntu includes the entire /etc/apache2/conf.d directory, I just added the following information into /etc/apach2/conf.d/gitweb:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.44-PM.png"></p>
+<pre class="code literal-block">RewriteEngine on
+RewriteRule ^/gitweb/<span class="o">([</span>a-zA-Z0-9_<span class="se">\-</span><span class="o">]</span>+<span class="se">\.</span>git<span class="o">)</span>/?<span class="o">(</span><span class="se">\?</span>.*<span class="o">)</span>?<span class="nv">$ </span>/cgi-bin/gitweb.cgi/<span class="nv">$1</span> <span class="o">[</span>L,PT<span class="o">]</span>
+
+Alias /gitweb /home/git/repositories
+&lt;Directory /home/git/repositories&gt;
+Options Indexes FollowSymlinks ExecCGI
+DirectoryIndex /cgi-bin/gitweb.cgi
+AllowOverride None
+&lt;/Directory&gt;
+</pre>
+
+
 <p>Restart Apache to make sure everything works</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.52-PM.png"></p>
+<pre class="code literal-block">sudo /etc/init.d/apache2 restart
+</pre>
+
+
 <p>The first time you go to your website again, you’ll see Gitweb, but it’ll say no projects are available. Fix mentioned below.</p>
 <h4>Two Hacks (open to suggestions)</h4>
 <p>1. I had to copy the git-favicon.png, git-logo.png, gitweb.css files from /usr/share/gitweb to /var/www/gitweb/. (if you had to do what is mentioned in the Note above, you don’t have to do this, since the gitweb folder from the git source clone includes these files already)</p>
 <p>2. I had to make the repositories that I wanted visible in gitweb have permissions of 755 (aka owner has read, write, execute. group and others have read, execute.)</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.47.58-PM.png"></p>
+<pre class="code literal-block">sudo chmod -R <span class="m">755</span> /git/repositories/lostechies.git
+</pre>
+
+
 <p>Once that was done I can see the repository and it’s information on Gitweb.</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.48.07-PM.png"></p>
+<p><img alt="" src="http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/Screen-shot-2010-05-26-at-11.48.07-PM.png"></p>
 <p>If you want to edit the project description from "Unnamed repository; edit this file 'description' to name the repository." go to the repositories description file (/home/git/repositories/          lostechies.git/description for this repo) and edit the file and save.</p>
 <h4>Cron job</h4>
 <p>I, again with the leadership of Ant, utilized a cron job he wrote to automatically make the repositories have permissions of 755. I do have some repositories, like gitosis-admin, that I do not ever want visible on Gitweb. The cron job excludes them. Here is the cron job code, showing that I don’t want to show my personal.git and gitosis-admin.git repositories. This could be easily written in Ruby or any other “scripting language” of your choice:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.48.19-PM.png"></p>
+<pre class="code literal-block"><span class="c">#!/bin/sh</span>
+
+<span class="nv">GITOSIS_REPO_PATH</span><span class="o">=</span><span class="s2">"/home/git/repositories"</span>
+<span class="nv">GITOSIS_ADMIN_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GITOSIS_REPO_PATH</span><span class="s2">/gitosis-admin.git"</span>
+<span class="nv">PERSON_REPO_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$GITOSIS_REPO_PATH</span><span class="s2">/personal.git"</span>
+
+debug <span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">"[D]: </span><span class="nv">$1</span><span class="s2">"</span> &gt; /dev/null
+<span class="o">}</span>
+
+<span class="k">for</span> dir in <span class="sb">`</span>find <span class="nv">$GITOSIS_REPO_PATH</span> -maxdepth <span class="m">1</span> -mindepth <span class="m">1</span> -type d<span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$dir</span><span class="s2">"</span> !<span class="o">=</span> <span class="s2">"</span><span class="nv">$GITOSIS_ADMIN_PATH</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="nv">$dir</span><span class="s2">"</span> !<span class="o">=</span> <span class="s2">"</span><span class="nv">$PERSON_REPO_PATH</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+             <span class="sb">`</span>chmod -R <span class="m">0755</span> <span class="nv">$dir</span><span class="sb">`</span>
+        <span class="k">fi</span>
+    <span class="k">fi</span>
+    debug <span class="s2">"All repositories have permissions set to 0755"</span>
+<span class="k">done</span>
+</pre>
+
+
 <p>I chose bash, so that I could take that time to learn it.<br>
 Translation: Find all the directories in my gitosis repository path (/home/git/repositories) and if they are not gitosis-admin or personal, change their permissions, recursively, to 0755.</p>
 <p>I put this in a file called set_gitosis_permissions_to_view_on_gitweb.sh and put it in root’s home folder, /root. I then called the file from root’s crontab:</p>
-<p><img alt="" src="//lostechies.com/jasonmeridth/files/2011/03/Screen-shot-2010-05-26-at-11.48.26-PM.png"></p>
+<pre class="code literal-block">~ /&gt; sudo su -
+<span class="c"># /root &gt; crontab -e</span>
+<span class="c"># m h dom mon dow  command</span>
+*/5 * * * * /root/set_gitosis_permissions_to_view_on_gitweb.sh
+</pre>
+
+
 <p>This means that every 5 minutes, my bash file will set any new repositories to 0755. This is how to get Gitweb stood up. The next post will show how to hide it behind HTTP basic auth and a self-signed certificate.</p>
 <p>Next Part: Hiding the Gitweb site</p>
 <h3>Comments</h3>
