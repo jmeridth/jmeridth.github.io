@@ -11,7 +11,7 @@
 
 I have decided to finally get the RHCSA and RHCE certifications.  RHCSA stands for Redhat Certified System Adminitrator and RHCE stands for Redhat Certified Engineer.  The reason I decided on these exams is for 2 reasons:
 
-    1. It is not multiple choice.  You sit at a kiosk with VNC and are given a live RHEL (Redhat Enterprise Linux) instance and are given issues to fix.
-    2. It will help fine tune my Linux basics knowledge.
+1. It is not multiple choice.  You sit at a kiosk with VNC and are given a live RHEL (Redhat Enterprise Linux) instance and are given issues to fix.
+1. It will help fine tune my Linux basics knowledge.
 
 Please note, I've been using linux for 17 years.  I've managed multiple systems to hundreds of VMs.  I'll keep you posted on how it goes.
