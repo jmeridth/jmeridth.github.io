@@ -10,7 +10,7 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/android.xml</loc>
-  <lastmod>2015-01-26</lastmod>
+  <lastmod>2015-02-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/bash.xml</loc>
@@ -87,6 +87,10 @@
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/notification.xml</loc>
   <lastmod>2015-02-17</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://blog.jasonmeridth.com/categories/notifications.xml</loc>
+  <lastmod>2015-02-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/categories/open-source.xml</loc>
@@ -182,10 +186,10 @@
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/rss.xml</loc>
-  <lastmod>2015-02-17</lastmod>
+  <lastmod>2015-02-19</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://blog.jasonmeridth.com/sitemap.xml</loc>
-  <lastmod>2015-02-17</lastmod>
+  <lastmod>2015-02-19</lastmod>
  </sitemap>
 </sitemapindex>
