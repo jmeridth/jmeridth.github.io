@@ -374,77 +374,7 @@ ABCDEF1              Latitude E6520      Dell Inc.
 
             </div>
             <div class="body">
-                <div>
-<p>change to postgres user and open psql prompt</p>
-<pre class="code literal-block">sudo -u postgres psql postgres
-</pre>
-
-
-<p>list databases</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \l</span>
-</pre>
-
-
-<p>list roles</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \du</span>
-</pre>
-
-
-<p>create role</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD 'password1' CREATEDB;</span>
-</pre>
-
-
-<p>create role with multiple privileges</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># CREATE ROLE demorole1 WITH LOGIN ENCRYPTED PASSWORD</span>
-<span class="nv">postgres</span><span class="o">=</span><span class="c"># 'password1' CREATEDB CREATEROLE REPLICATION SUPERUSER;</span>
-</pre>
-
-
-<p>alter role</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># ALTER ROLE demorole1 CREATEROLE CREATEDB REPLICATION SUPERUSER;</span>
-</pre>
-
-
-<p>drop role</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># DROP ROLE demorole1;</span>
-</pre>
-
-
-<p>create database</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># CREATE DATABASE demodb1 WITH OWNER demorole1 ENCODING 'UTF8';</span>
-</pre>
-
-
-<p>grant privileges to new user</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># GRANT ALL PRIVILEGES ON DATABASE demodb1 TO demorole1;</span>
-</pre>
-
-
-<p>drop database</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># DROP DATABASE demodb1;</span>
-</pre>
-
-
-<p>connect to database</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \c &lt;databasename&gt;</span>
-</pre>
-
-
-<p>list tables in connected database</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \dt</span>
-</pre>
-
-
-<p>list columns on table</p>
-<pre class="code literal-block"><span class="nv">postgres</span><span class="o">=</span><span class="c"># \d &lt;tablename&gt;</span>
-</pre>
-
-
-<p>backup database</p>
-<pre class="code literal-block"><span class="nv">$ </span>pg_dump &lt;databasename&gt; &gt; &lt;outfile&gt; 
-</pre>
-</div>
+                <script src="https://gist.github.com/jmeridth/f2ad6b580ae18501c538.js"></script>
             </div>
         </div>
         <div class="post">
