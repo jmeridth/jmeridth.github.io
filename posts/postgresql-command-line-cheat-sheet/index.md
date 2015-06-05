@@ -1,9 +1,0 @@
-.. title: PostgreSQL Command Line Cheat Sheet
-.. link: http://blog.jasonmeridth.com/2012/10/02/postgresql-command-line-cheat-sheet.html 
-.. description: 
-.. date: 2012/10/02 00:00:00
-.. slug: postgresql-command-line-cheat-sheet 
-.. type: text
-.. tags: postgresql, command line
-
-<script src="https://gist.github.com/jmeridth/f2ad6b580ae18501c538.js"></script>

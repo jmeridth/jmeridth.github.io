@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Jason Meridth's Blog
+tagline:             'Learn, Converse, Share'
+description:         'Learn, Converse, Share'
+url:                 http://blog.jasonmeridth.com
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              Jason Meridth
+  url:               http://jasonmeridth.com
+  email:             jmeridth@gmail.com
+
+# Custom vars
+version:             1.0.0
+about:               http://jasonmeridth.com
+github:              https://github.com/jmeridth
+twitter:             https://twitter.com/jmeridth
+linkedin:            https://linkedin.com/in/jasonmeridth
