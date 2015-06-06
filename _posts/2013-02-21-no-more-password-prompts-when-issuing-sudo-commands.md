@@ -2,7 +2,7 @@
 layout: post
 title: No More Password Prompts When Issuing Sudo Commands
 date: 2013/02/21 00:00:00
-category: ubuntu
+tags: ubuntu
 ---
 
 Edit the sudoers file:

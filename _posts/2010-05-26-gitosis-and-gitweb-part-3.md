@@ -2,7 +2,7 @@
 layout: post
 title: Gitosis and Gitweb - Part 3
 date: 2010/05/26 04:45:00
-category: git gitosis
+tags: git gitosis
 ---
 
 

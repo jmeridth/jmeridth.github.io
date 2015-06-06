@@ -2,7 +2,7 @@
 layout: post
 title: Using sed and regex to Remove Prefix on Filenames
 date: 2014/02/24 21:39:00
-category: command line
+tags: command line
 ---
 
 I used [wp2md][1] recently to generate [markdown][2] files out of my wordpress posts so that I could migrate to a static blog generator (like [Nikola][3], the one I chose to use on this blog).  However, this exported the files with a prefixidatetime stamp (e.g., 20140224-blog-title.md)

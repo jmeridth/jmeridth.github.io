@@ -2,7 +2,7 @@
 layout: post
 title: Gitosis and Gitweb - Part 1 - Setup
 date: 2010/05/25 02:42:00
-category: git gitosis
+tags: git gitosis
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: Readline Error With RVM and Rails 3 on Ubuntu
 date: 2010/11/25 00:00:00
-category: rails rvm 
+tags: rails rvm 
 ---
 
 So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:

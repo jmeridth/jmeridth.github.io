@@ -2,7 +2,7 @@
 layout: post
 title: Personal VIM Cheatsheet
 date: 2014/03/03 16:21:02
-category: vim cli
+tags: vim cli
 ---
 
 Will be adding to this post as I learn/remember shortcuts

@@ -2,7 +2,7 @@
 layout: post
 title: Suspicious Patch Lines
 date: 2010/02/27 19:21:00
-category: git
+tags: git
 ---
 
 

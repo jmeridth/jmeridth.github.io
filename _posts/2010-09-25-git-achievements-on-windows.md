@@ -2,7 +2,7 @@
 layout: post
 title: Git-Achievements on Windows
 date: 2010/09/25 02:30:00
-category: git windows
+tags: git windows
 ---
 
 

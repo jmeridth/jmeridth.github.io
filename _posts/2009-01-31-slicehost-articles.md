@@ -2,7 +2,7 @@
 layout: post
 title: Slicehost Articles
 date: 2009/01/31 04:49:00
-category: information help
+tags: information help
 ---
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: Gotcha with Gitosis and python-setuptools
 date: 2010/05/26 04:58:00
-category: git gitosis
+tags: git gitosis
 ---
 
 

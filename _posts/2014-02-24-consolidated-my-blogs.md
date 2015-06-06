@@ -2,7 +2,7 @@
 layout: post
 title: Consolidated My Blogs
 date: 2014/02/24 05:43:14
-category: notification
+tags: notification
 ---
 
 I finally consolidate my blogs that were located at:

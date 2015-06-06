@@ -2,7 +2,7 @@
 layout: post
 title: Git Achievements on Windows (Part 3)
 date: 2012/03/21 00:00:00
-category: git windows 
+tags: git windows 
 ---
 
 [Part 1][1]

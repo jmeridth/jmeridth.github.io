@@ -2,7 +2,7 @@
 layout: post
 title: Visual SVN Server
 date: 2008/11/13 20:54:54
-category: source control svn
+tags: source control svn
 ---
 
 Due to the new policies by [Assembla.com](http://www.assembla.com) (not allowing free private source repositories), I've had to finally grab another server and stand-up [Visual SVN Server](http://www.visualsvn.com/server/).  It's free, VERY easy to manage and worked like a charm once installed.  Kudos to the [Visual SVN](http://www.visualsvn.com/) team.

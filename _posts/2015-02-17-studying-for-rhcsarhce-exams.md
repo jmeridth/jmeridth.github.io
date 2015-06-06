@@ -2,7 +2,7 @@
 layout: post
 title: Studying for RHCSA/RHCE Exams
 date: 2015-02-17 16:19:57 UTC-06:00
-category: linux certifications
+tags: linux certifications
 ---
 
 I have decided to finally get the RHCSA and RHCE certifications.  RHCSA stands for Redhat Certified System Adminitrator and RHCE stands for Redhat Certified Engineer.  The reason I decided on these exams is for 2 reasons:

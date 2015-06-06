@@ -2,7 +2,7 @@
 layout: post
 title: Get Sinatra and Shotgun gem working on Vagrant
 date: 2013/03/06 00:00:00
-category: sinatra vagrant
+tags: sinatra vagrant
 ---
 
 TL;DR

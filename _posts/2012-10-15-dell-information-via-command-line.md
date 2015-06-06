@@ -2,7 +2,7 @@
 layout: post
 title: Dell Information Via Command Line
 date: 2012/10/15 00:00:00
-category: dell command line windows
+tags: dell command line windows
 ---
 
 To get your Dell Service Tag from your workstation/laptop via command line:

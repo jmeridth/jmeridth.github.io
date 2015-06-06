@@ -2,7 +2,7 @@
 layout: post
 title: My "Git Branching and Workflows" presentation at Austin Code Camp 2010
 date: 2010/05/24 13:40:00
-category: git presentation
+tags: git presentation
 ---
 
 

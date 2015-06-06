@@ -2,7 +2,7 @@
 layout: post
 title: Setup RVM and Ruby
 date: 2013/03/06 00:00:00
-category: tools rvm ruby 
+tags: tools rvm ruby 
 ---
 
 I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….

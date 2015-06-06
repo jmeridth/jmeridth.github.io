@@ -2,7 +2,7 @@
 layout: post
 title: How to Capture the Exception Message From Assert.Throws in NUnit
 date: 2012/03/23 00:00:00
-category: .net testing 
+tags: .net testing 
 ---
 
 In the past I’ve used:

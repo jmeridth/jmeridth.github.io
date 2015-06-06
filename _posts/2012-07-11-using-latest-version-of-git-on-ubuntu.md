@@ -2,7 +2,7 @@
 layout: post
 title: Using Latest Version of Git on Ubuntu
 date: 2012/07/11 00:00:00
-category: git ubuntu 
+tags: git ubuntu 
 ---
 
 Whenever you do

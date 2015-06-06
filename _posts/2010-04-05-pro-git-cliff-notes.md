@@ -2,7 +2,7 @@
 layout: post
 title: Pro Git Cliff Notes
 date: 2010/04/05 04:17:00
-category: git books
+tags: git books
 ---
 
 These are my notes from reading Scott Chacon’s [Pro Git](http://progit.org/book) I highly suggest [buying this book](http://tinyurl.com/amazonprogit) if you are serious about using the Git version control tool. [pg 48](http://progit.org/book/ch3-1.html) A branch in Git is simply a lightweight movable pointer [pg 50](http://progit.org/book/ch3-1.html) a special pointer called HEAD…is a pointer to the local branch you’re currently on [pg 52](http://progit.org/book/ch3-1.html) Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline). [pg 53](http://progit.org/book/ch3-2.html) To create a branch and switch to it at the same time…git checkout command with the -b switch [pg 61](http://progit.org/book/ch3-3.html) To see the last commit on each branch, you can run git branch -v [pg 69](http://progit.org/book/ch3-5.html)

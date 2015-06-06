@@ -2,7 +2,7 @@
 layout: post
 title: Weechat keyboard shortcuts
 date: 2014/03/14 23:52:39
-category: weechat irc cli
+tags: weechat irc cli
 ---
 
 I've switched from using irssi to [Weechat](http://weechat.org) since I rejoined the ranks as a [Racker](http://www.rackspace.com).

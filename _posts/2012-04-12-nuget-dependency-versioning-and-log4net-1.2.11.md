@@ -2,7 +2,7 @@
 layout: post
 title: NuGet Dependency Versioning and Log4net 1.2.11
 date: 2012/04/12 00:00:00
-category: .net 
+tags: .net 
 ---
 
 Yesterday I got bit in the butt with the now infamous new key for strong naming of log4net 1.2.11 situation. We wrote our nuspec file to have a depdency on log4net, like so:

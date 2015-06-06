@@ -2,7 +2,7 @@
 layout: post
 title: Create Rails Application in Current Directory
 date: 2012/10/25 00:00:00
-category: rails 
+tags: rails 
 ---
 
 Yes, I know the common way to create a Rails application is

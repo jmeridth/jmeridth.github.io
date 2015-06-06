@@ -2,7 +2,7 @@
 layout: post
 title: Double Exclmations !! In Ruby
 date: 2013/02/03 00:00:00
-category: ruby 
+tags: ruby 
 ---
 
 Today I hit this in a Ruby example online:

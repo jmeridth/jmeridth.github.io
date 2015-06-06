@@ -2,7 +2,7 @@
 layout: post
 title: How to Run a Single Test With Tox
 date: 2014/03/07 04:49:53
-category: python testing cli
+tags: python testing cli
 ---
 
 I have to run a single python test once in a while and keep forgetting how to do it with Tox.

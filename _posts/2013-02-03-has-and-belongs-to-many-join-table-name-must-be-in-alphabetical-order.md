@@ -2,7 +2,7 @@
 layout: post
 title: 
 date: 2013/02/03 00:00:00
-category: rails 
+tags: rails 
 ---
 
 TL;DR 

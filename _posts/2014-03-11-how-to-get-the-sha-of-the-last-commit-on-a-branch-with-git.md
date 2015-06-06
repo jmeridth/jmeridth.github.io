@@ -2,7 +2,7 @@
 layout: post
 title: How to Get The SHA of The Last Commit on a Branch With Git
 date: 2014/03/11 02:30:23
-category: git
+tags: git
 ---
 
 I've been asked this a few times and have had to do it lately a few times.

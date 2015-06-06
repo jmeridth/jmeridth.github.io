@@ -2,7 +2,7 @@
 layout: post
 title: Use Git Grep to Replace Strings in Files in Your Git Repository
 date: 2013/02/11 00:00:00
-category: git 
+tags: git 
 ---
 
 TL;DR

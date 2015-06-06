@@ -2,7 +2,7 @@
 layout: post
 title: Gitosis and Gitweb - Part 2 - Add Projects and Contributors
 date: 2010/05/25 03:02:00
-category: git gitosis
+tags: git gitosis
 ---
 
 [Gitosis and Gitweb – Part 1](/posts/gitosis-and-gitweb-part-1)

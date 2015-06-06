@@ -2,7 +2,7 @@
 layout: post
 title: Install and Setup PostgreSQL on New Ubuntu VM
 date: 2013/03/06 00:00:00
-category: postgresql ubuntu
+tags: postgresql ubuntu
 ---
 
 Install PostgresSQL and the dev package:

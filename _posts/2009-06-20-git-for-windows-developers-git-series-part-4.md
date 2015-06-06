@@ -2,7 +2,7 @@
 layout: post
 title: Git For Windows Developers – Git Series – Part 4
 date: 2009/06/20 04:15:00
-category: git
+tags: git
 .. post_type: text
 ---
 

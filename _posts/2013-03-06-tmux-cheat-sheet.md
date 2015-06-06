@@ -2,7 +2,7 @@
 layout: post
 title: TMUX Cheat Sheet
 date: 2013/03/06 00:00:00
-category: tools tmux 
+tags: tools tmux 
 ---
 
 Install TMUX

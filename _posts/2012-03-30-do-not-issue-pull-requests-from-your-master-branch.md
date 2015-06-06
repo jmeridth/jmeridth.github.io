@@ -2,7 +2,7 @@
 layout: post
 title: Do Not Issue Pull Requests From Your Master Branch
 date: 2012/03/30 00:00:00
-category: git github
+tags: git github
 ---
 
 **PROBLEM:** You do not want to issue pull requests from your fork’s master branch on [Github.com][1] to the parent repisitory because any new changes you add to the master branch will **_automatically_** show up in the pull request. That means changes you did not intend to be there, would now be there.
