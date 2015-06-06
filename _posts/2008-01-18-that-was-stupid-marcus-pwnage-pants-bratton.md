@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "That was stupid!" ~ Marcus "Pwnage Pants" Bratton
+title: That was stupid! ~ Marcus Pwnage Pants Bratton
 date: 2008/01/18 19:09:00
 ---
 

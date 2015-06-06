@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "git commit -a" and "git add"
+title: "'git commit -a' and 'git add'"
 date: 2009/09/10 17:07:00
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Alt.NET" conference was not for fanboys
+title: Alt.NET conference was not for fanboys
 date: 2007/10/07 23:26:41
 ---
 

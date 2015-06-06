@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PTOM: Single Responsibility Principle
+title: PTOM - Single Responsibility Principle
 date: 2008/03/30 00:21:00
 ---
 

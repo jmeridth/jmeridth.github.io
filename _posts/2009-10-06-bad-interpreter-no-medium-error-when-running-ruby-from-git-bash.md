@@ -1,6 +1,6 @@
 ---
 layout: post
-title: “Bad Interpreter: No Medium” error when running Ruby from Git Bash
+title: "'Bad Interpreter: No Medium' error when running Ruby from Git Bash"
 date: 2009/10/06 14:50:00
 ---
 

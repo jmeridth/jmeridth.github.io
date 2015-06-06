@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Update: TeamCity
+title: Update - TeamCity
 date: 2008/02/18 16:09:56
 ---
 

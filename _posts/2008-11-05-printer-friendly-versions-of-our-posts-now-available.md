@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Printer Friendly Versions" of our posts now available
+title: "'Printer Friendly Versions' of our posts now available"
 date: 2008/11/05 06:53:11
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pro Git" Cliff Notes
+title: Pro Git Cliff Notes
 date: 2010/04/05 04:17:00
 category: git books
 ---

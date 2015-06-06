@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [OT] Child's Play Charity
+title: Child's Play Charity
 date: 2008/11/27 02:30:38
 ---
 
