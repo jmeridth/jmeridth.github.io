@@ -10,7 +10,7 @@ title:               Jason Meridth's Blog
 tagline:             'Learn, Converse, Share'
 description:         'Learn, Converse, Share'
 url:                 http://blog.jasonmeridth.com
-baseurl:             '/'
+baseurl:             ''
 paginate:            5
 
 # About/contact
