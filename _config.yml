@@ -3,7 +3,7 @@ markdown:         redcarpet
 highlighter:      pygments
 
 # Permalinks
-permalink:           /posts/:title/
+permalink:           posts/:title/
 
 # Setup
 title:               Jason Meridth's Blog
