@@ -12,6 +12,7 @@ description:         'Learn, Converse, Share'
 url:                 http://blog.jasonmeridth.com
 baseurl:             ''
 paginate:            5
+comments:            true
 
 # About/contact
 author:
