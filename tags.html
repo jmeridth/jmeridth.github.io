@@ -22,7 +22,7 @@ description: "An archive of posts sorted by tag."
     <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}
       {% if this_word == ".net" %}<i class="icon-csharp"></i> {% endif %}
       {% if this_word == "android" %}<i class="fa fa-android"></i> {% endif %}
-      {% assign shell_array = ["cli","bash","vim","weechat","irc"] %}
+      {% assign shell_array = "cli bash vim weechat irc" | split: ' ' %}
       {% if shell_array contains this_word %}<i class="icon-shell"></i> {% endif %}
       {% if this_word == "ubuntu" %}<i class="icon-ubuntu"></i> {% endif %}
       {% if this_word == "git" %}<i class="fa fa-git"></i> {% endif %}
