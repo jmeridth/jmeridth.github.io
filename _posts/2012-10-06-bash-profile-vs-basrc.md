@@ -2,7 +2,9 @@
 layout: post
 title: Bash_profile vs Bashrc
 date: 2012/10/06 00:00:00
-tags: bash command line 
+tags:
+- bash
+- command line 
 ---
 
 .bash_profile is sourced everytime you login to a bash shell either locally on the terminal or remotely via ssh
