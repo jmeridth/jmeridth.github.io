@@ -14,10 +14,18 @@
     {% endif %}
   </title>
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@jmeridth">
+  <meta name="twitter:domain" content="blog.jasonmeridth.com">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.name }}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.og.image %}<meta name="twitter:image" content="{% if page.og.image contains 'http' %}{{ page.og.image }}{% else %}{{ site.url }}/images/{{ page.og.image }}{% endif %}">
+  <meta name="twitter:image:width" content="{{ page.og.width }}">
+  <meta name="twitter:image:height" content="{{ page.og.height }}">{% endif %}
+
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/lanyon.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->
