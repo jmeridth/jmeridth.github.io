@@ -13,6 +13,7 @@ url:                 http://blog.jasonmeridth.com
 baseurl:             ''
 paginate:            5
 comments:            true
+disqus_shortname:    jasonmeridth
 
 # About/contact
 author:
