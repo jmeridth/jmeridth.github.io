@@ -13,4 +13,4 @@ From a former colleague at [Rackspace][1], whom I asked for his top leadership a
 * understanding how you are communicating is just as important as what you are communicating
 * treat everyone the same
 
-[1]: https://rackspace.com
+[1]: http://www.rackspace.com
