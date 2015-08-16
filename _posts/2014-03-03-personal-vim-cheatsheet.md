@@ -15,7 +15,7 @@ Will be adding to this post as I learn/remember shortcuts
 - shift+h - go to top of screen
 - shift+m - go to middle of screen
 - shift+l - go to bottom of screen
-- ctrl+v [h|j|k|l]` - highlight indeividual items (great for highlighting column(s)
+- ctrl+v [h|j|k|l]` - highlight individual items (great for highlighting column(s)
 - `gUiw` - capitalize the current word
 - `gUU` - capitalize current line
 - `vU` - capitalize current character
@@ -23,10 +23,11 @@ Will be adding to this post as I learn/remember shortcuts
 - `guu` - lowercase the current line
 - `vu` - lowercase current character
 
-keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/dotfiles/blob/master/.vimrc)
+keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/myansible/blob/master/roles/common/files/.vimrc)
 
 - `,v` - create vertical split
 - `,h` - create horizontal split
+- `,=` - reset split to equal sizes after parent window resizes
 - ctrl+j - go to split below/down
 - ctrl+h - go to split on left
 - ctrl+k - go to split above/up
