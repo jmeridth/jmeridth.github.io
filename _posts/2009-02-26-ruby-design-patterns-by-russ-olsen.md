@@ -2,11 +2,23 @@
 layout: post
 title: Ruby Design Patterns by Russ Olsen
 date: 2009/02/26 04:29:00
+tags:
+  - ruby 
+  - design patterns
 ---
 
 ![](http://www.informit.com/ShowCover.aspx?isbn=0321539265&type=f) 
 
-After nudging by [Joe Ocampo](http://agilejoe.lostechies.com/) and [Scott Bellware](http://www.ampgt.com/), I finally sat down at finished "Design Patterns in Ruby" by Russ Olsen. The format of most of the chapters made the book an interesting read: 1\. A introduction to why you might need the pattern 2\. A static language developer's approach with the Ruby language 3\. A seasoned Ruby developer's approach to the design pattern 4\. Using and Abusing 5\. in the wild 6\. Wrapping up Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: GO BUY THE BOOK. You won't regret it. Even if you are trying to understand patterns in another language. Russ Olsen does an excellent job explaining the INTENT of the patterns. FUN When teaching the reader about "Truth, Lies, and nil", the author even pokes fun at himself: 
+After nudging by [Joe Ocampo](http://agilejoe.lostechies.com/) and [Scott Bellware](https://twitter.com/sbellware), I finally sat down at finished "Design Patterns in Ruby" by Russ Olsen. The format of most of the chapters made the book an interesting read:
+
+1. A introduction to why you might need the pattern
+1. A static language developer's approach with the Ruby language
+1. A seasoned Ruby developer's approach to the design pattern
+1. Using and Abusing
+1. In the wild
+1. Wrapping up
+
+Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: **GO BUY THE BOOK**. You won't regret it. Even if you are trying to understand patterns in another language. Russ Olsen does an excellent job explaining the INTENT of the patterns. FUN When teaching the reader about "Truth, Lies, and nil", the author even pokes fun at himself: 
     
 ```ruby
 'russ' == 'smart'    # sadly, false
