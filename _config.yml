@@ -29,5 +29,8 @@ twitter:             https://twitter.com/jmeridth
 linkedin:            https://linkedin.com/in/jmeridth
 
 sass:
-    sass_dir: _sass
-    style: :compressed
+  sass_dir: _sass
+  style: :compressed
+
+gems:
+  - jekyll-feed
