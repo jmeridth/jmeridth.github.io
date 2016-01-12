@@ -34,3 +34,4 @@ sass:
 
 gems:
   - jekyll-feed
+  - jekyll-paginate

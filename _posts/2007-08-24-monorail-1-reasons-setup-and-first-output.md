@@ -5,8 +5,7 @@ date: 2007/08/24 08:01:00
 ---
 
 
-_**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2  
-**_
+_**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2  **_
 
 **REASONS:**
 
@@ -65,28 +64,13 @@ I'm still trying out the abstract base test class that the Castle group has crea
 
 **_TIP:_** Currently I've learned that if you do the following (This is only a serious rough draft, please no comments on test names or formatting):
     
-    
        1: using System;
-    
-    
        2: using Castle.MonoRail.TestSupport;
-    
-    
        3: using JasonMeridth.Controllers;
-    
-    
        4: using NUnit.Framework;
-    
-    
        5:  
-    
-    
        6: namespace JasonMeridth.Tests.Controllers
-    
-    
        7: {
-    
-    
        8:     [TestFixture
 
 ## Comments
