@@ -19,6 +19,6 @@ Now all you need to do is run:
 
 If you you don't see a scanner listed in the dropdown then you just need to push the "Update Scanner List" button and it should find your scanner.  After that you should see the same popup but now with your Canon MX450 scanner listed.
 
-![SelectScanner](http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/selectscanner.png)
+![SelectScanner]({{ site.baseurl }}/assets/images/selectscanner.png)
 
 Hope this helps someone else.
