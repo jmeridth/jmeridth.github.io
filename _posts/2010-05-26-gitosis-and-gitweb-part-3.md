@@ -86,7 +86,7 @@ sudo chmod -R 755 /git/repositories/lostechies.git
 
 Once that was done I can see the repository and it’s information on Gitweb.
 
-![](http://b038a8f209e36fc36fba-a9b634eed6b534d774260bd8467c190d.r61.cf1.rackcdn.com/Screen-shot-2010-05-26-at-11.48.07-PM.png)
+![]({{ site.baseurl }}/assets/images/gitweb-part3.png)
 
 If you want to edit the project description from "Unnamed repository; edit this file 'description' to name the repository." go to the repositories description file (/home/git/repositories/          lostechies.git/description for this repo) and edit the file and save.
 
