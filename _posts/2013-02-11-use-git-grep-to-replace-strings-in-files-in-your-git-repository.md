@@ -19,7 +19,7 @@ On Mac:
 git grep -l 'original_text' | xargs sed -i '' -e 's/original_text/new_text/g'
 ```
 
-I needed to changed a string in a bunch of files and used the command above using git grep to do it. Worked like a charm.
+I needed to change a string in a bunch of files and I used the command above using git grep to do it. Worked like a charm.
 
 The `-l` argument to git grep only returns the file names and not the location in the file like it usually does.
 

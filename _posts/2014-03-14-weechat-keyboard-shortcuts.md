@@ -20,7 +20,7 @@ Some of the ones I use often:
 - ctrl+p - previous buffer
 - ctrl+y - clipboard paste
 - ctrl+r - search
-- ctrl+[j|m] - stop search
+- ctrl+j - stop search
 
 
 normal commands not included with my weechat.conf that I use:
