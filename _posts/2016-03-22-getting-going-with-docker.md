@@ -5,6 +5,8 @@ date: 2016/03/22 00:00:00
 tags: docker
 ---
 
+Looks like this post is moot as of today 3/24/2016 due to [Docker for Mac and Docker for Windows](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) betas coming out
+
 While interviewing for a new gig I was asked to use memcached and they had suggested standing up a docker instance.  I have been using docker pretty regularly now after learning much from my previous co-workers and practical usage. 
 
 So, on OSX you can install the `docker-machine` and `docker` brew formulas with [homebrew][2]. (If you are not using [homebrew][2] and [cask][3] to manage your installations on OSX you are missing out).  I use VirtualBox as my VM hosting tool.
