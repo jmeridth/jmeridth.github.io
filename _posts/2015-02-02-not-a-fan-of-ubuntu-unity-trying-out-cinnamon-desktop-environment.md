@@ -12,10 +12,10 @@ Since I _finally_ switched to Linux as my native OS (Ubuntu 14.04 LTS specifical
 
 Once installed you need to logout and choose Cinnamon from the login session screen, like so:
 
-![Cinnamon]({{ site.baseurl }}/assets/images/Cinnamon-login.jpg)
+![Cinnamon]({{ site.url }}/assets/images/Cinnamon-login.jpg)
 
 After that you will see a much more responsive UI.  And for you Windows users, it will feel very familiar, as the taskbar and icons are in the usual locations.
 
-![desktop]({{ site.baseurl }}/assets/images/screenshot.png)
+![desktop]({{ site.url }}/assets/images/screenshot.png)
 
 NOTE: To those that actually read this, I did try [gnome session fallback](http://packages.ubuntu.com/trusty/gnome-session-fallback) and had many issues with it.  I am also aware that there is an official [Ubuntu Gnome](http://ubuntugnome.org/) variant of Ubuntu now also.  Hadn't tried it.

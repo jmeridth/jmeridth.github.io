@@ -14,7 +14,7 @@ I have decided to finally get the RHCSA and RHCE certifications.  RHCSA stands f
 
 My current study guide:
 
-![RHCSA/RHCE Study guide by Michael Jang]({{ site.baseurl }}/assets/images/rhcsa_rhce_exam_study_book.jpg)
+![RHCSA/RHCE Study guide by Michael Jang]({{ site.url }}/assets/images/rhcsa_rhce_exam_study_book.jpg)
 
 Also my friend, [Major Hayden](https://major.io) suggested I look at the objectives list for each exame ([RHCSA objectives](http://www.redhat.com/en/files/resources/en-rhtr-ex200-rhel-6-exam-objectives-12244737.pdf) and [RHCE objectives](http://www.redhat.com/en/files/resources/en-rhtr-ex300-rhel-6-exam-objectives-0000000.pdf)) and ensure I study those items.
 
