@@ -1,9 +1,12 @@
 ---
 layout: post
 title: Personal VIM Cheatsheet
-date: 2014/03/03 16:21:02
+original: 2014/03/03 16:21:02
+date: 2016/04/19 15:36:00
 tags: vim cli
 ---
+
+_Originally posted on 03-03-2014 and continually updated_
 
 Will be adding to this post as I learn/remember shortcuts
 
@@ -15,7 +18,7 @@ Will be adding to this post as I learn/remember shortcuts
 - shift+h - go to top of screen
 - shift+m - go to middle of screen
 - shift+l - go to bottom of screen
-- ctrl+v [h|j|k|l]` - highlight individual items (great for highlighting column(s)
+- ctrl+v `[h|j|k|l]` - highlight individual items (great for highlighting column(s)
 - `gUiw` - capitalize the current word
 - `gUU` - capitalize current line
 - `vU` - capitalize current character
@@ -23,7 +26,7 @@ Will be adding to this post as I learn/remember shortcuts
 - `guu` - lowercase the current line
 - `vu` - lowercase current character
 
-keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/myansible/blob/master/roles/common/files/.vimrc)
+keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/myansible/blob/master/roles/vim/files/.vimrc)
 
 - `,v` - create vertical split
 - `,h` - create horizontal split
@@ -32,3 +35,8 @@ keybindings I use all the time via mappgings in my [.vimrc](https://github.com/j
 - ctrl+h - go to split on left
 - ctrl+k - go to split above/up
 - ctrl+l - go to split on right
+
+With the [jedi-vim plugin](https://github.com/davidhalter/jedi-vim) installed:
+
+- `,d` - go to source
+- `:b#` - go back to previous buffer (only if you have it set to buffer and don't [overwrite to split](https://github.com/davidhalter/jedi-vim#settings)
