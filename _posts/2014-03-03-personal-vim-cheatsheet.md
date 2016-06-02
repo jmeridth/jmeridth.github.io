@@ -25,8 +25,10 @@ Will be adding to this post as I learn/remember shortcuts
 - `guiw` - lowercase the current word
 - `guu` - lowercase the current line
 - `vu` - lowercase current character
+- `[num]j` - go down num lines from current line
+- `[num]k` - go up num lines from current line
 
-keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/myansible/blob/master/roles/vim/files/.vimrc)
+keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/dotfiles/blob/master/vimrc)
 
 - `,v` - create vertical split
 - `,h` - create horizontal split
