@@ -15,6 +15,8 @@ Will be adding to this post as I learn/remember shortcuts
 - `#` - find all occurances of the word I'm currently on
 - `dfc` - delete everything including the letter 'c'
 - `dtc` - delete everything up to the letter 'c'
+- `:e!` - reload current file (typically after doing a git pull)
+- `:b#` - go back to previous buffer 
 - shift+h - go to top of screen
 - shift+m - go to middle of screen
 - shift+l - go to bottom of screen
@@ -38,7 +40,8 @@ keybindings I use all the time via mappgings in my [.vimrc](https://github.com/j
 - ctrl+k - go to split above/up
 - ctrl+l - go to split on right
 
-With the [jedi-vim plugin](https://github.com/davidhalter/jedi-vim) installed:
+With the [jedi-vim plugin](https://github.com/davidhalter/jedi-vim) installed for Python:
 
-- `,d` - go to source
-- `:b#` - go back to previous buffer (only if you have it set to buffer and don't [overwrite to split](https://github.com/davidhalter/jedi-vim#settings)
+- `,g` - go to source - [you can designate how source file opens (vertical or horizontal)](https://github.com/davidhalter/jedi-vim#settings)
+- `,n` - list usages
+- `K` - show documentation
