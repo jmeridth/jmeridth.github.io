@@ -29,6 +29,8 @@ Will be adding to this post as I learn/remember shortcuts
 - `vu` - lowercase current character
 - `[num]j` - go down num lines from current line
 - `[num]k` - go up num lines from current line
+- ctrl+O - jump back to previous (older) location in file [info](http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations)
+- ctrl+I - jump forward to next (newer) location in file [info](http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations)
 
 keybindings I use all the time via mappgings in my [.vimrc](https://github.com/jmeridth/dotfiles/blob/master/vimrc)
 
