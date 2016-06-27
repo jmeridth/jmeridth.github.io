@@ -31,8 +31,10 @@ feed:
 github:
   url: https://github.com/jmeridth
 twitter:
+  domain: blog.jasonmeridth.com
   url: https://twitter.com/jmeridth
   username: jmeridth
+  image: /assets/images/meridth_llc_cog.png
 linkedin:
   url: https://linkedin.com/in/jmeridth
 bitbucket:

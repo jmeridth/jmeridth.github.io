@@ -17,13 +17,11 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:creator" content="@jmeridth">
-  <meta name="twitter:domain" content="blog.jasonmeridth.com">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.name }}">
+  <meta name="twitter:creator" content="@{{ site.twitter.username }}">
+  <meta name="twitter:domain" content="{{ site.twitter.domain }}">
+  <meta name="twitter:title" content="{{ site.title }}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og.image %}<meta name="twitter:image" content="{% if page.og.image contains 'http' %}{{ page.og.image }}{% else %}{{ site.url }}/images/{{ page.og.image }}{% endif %}">
-  <meta name="twitter:image:width" content="{{ page.og.width }}">
-  <meta name="twitter:image:height" content="{{ page.og.height }}">{% endif %}
+  <meta name="twitter:image" content="{{ site.url }}{{ site.twitter.image }}"
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.url }}/css/main.min.css">
