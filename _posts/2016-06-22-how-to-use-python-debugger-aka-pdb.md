@@ -9,7 +9,7 @@ I have been using the Python Debugger aka pdb [docs for 2.7](https://docs.python
 
 The cheatsheet:
 
-![pdb cheatsheet](assets/images/pdb_cheatsheet.png)
+![pdb cheatsheet]({{site.url}}/assets/images/pdb_cheatsheet.png)
 
 The easiest thing to do is put the following in your code somewhere:
 
