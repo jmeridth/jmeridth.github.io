@@ -7,7 +7,8 @@ title: About
   Learn, Converse, Share
 </p>
 
-Hi.  My name is Jason Meridth.  You can usually assume my username in social media or other sites is `jmeridth`.  I am a husband, father, and software developer.  I currently reside in San Antonio, TX.
+My name is Jason Meridth. I am a software developer trying to not let best be the enemy of better. I am jmeridth on twitter/irc/skype/etc.<br/><br/>
+4096R / 0899 7B9D F1CB AA21 A785 64CB B0DA B474 BBA3 0F4F <a href="keybase.io/jmeridth" target="_blank">keybase.io/jmeridth</a>
 
 You can find me on the following sites:
 
@@ -23,5 +24,3 @@ You can find me on the following sites:
   <a href="https://instagram.com/jdmeridth/"><i class="fa fa-instagram fa-2x"></i></a>
   <a href="https://www.youtube.com/user/jmeridth"><i class="fa fa-youtube fa-2x"></i></a>
 </p>
-
-Thanks for reading!
