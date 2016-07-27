@@ -8,7 +8,8 @@ title: About
 </p>
 
 <p>My name is Jason Meridth. I am a software developer trying to not let best be the enemy of better.</p>
-</p>4096R / 0899 7B9D F1CB AA21 A785 64CB B0DA B474 BBA3 0F4F <a href="keybase.io/jmeridth" target="_blank">keybase.io/jmeridth</a></p>
+
+<p>4096R / 0899 7B9D F1CB AA21 A785 64CB B0DA B474 BBA3 0F4F <a href="keybase.io/jmeridth" target="_blank">keybase.io/jmeridth</a></p>
 
 <p>You can find me on the following sites:</p>
 
