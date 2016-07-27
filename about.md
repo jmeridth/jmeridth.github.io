@@ -7,10 +7,10 @@ title: About
   Learn, Converse, Share
 </p>
 
-My name is Jason Meridth. I am a software developer trying to not let best be the enemy of better. I am jmeridth on twitter/irc/skype/etc.<br/><br/>
-4096R / 0899 7B9D F1CB AA21 A785 64CB B0DA B474 BBA3 0F4F <a href="keybase.io/jmeridth" target="_blank">keybase.io/jmeridth</a>
+<p>My name is Jason Meridth. I am a software developer trying to not let best be the enemy of better.</p>
+</p>4096R / 0899 7B9D F1CB AA21 A785 64CB B0DA B474 BBA3 0F4F <a href="keybase.io/jmeridth" target="_blank">keybase.io/jmeridth</a></p>
 
-You can find me on the following sites:
+<p>You can find me on the following sites:</p>
 
 <p class="social-icons">
   <a href="https://twitter.com/jmeridth"><i class="fa fa-twitter fa-2x"></i></a>
