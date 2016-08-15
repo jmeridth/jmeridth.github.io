@@ -7,7 +7,7 @@ title: About
   Learn, Converse, Share
 </p>
 
-<p>My name is Jason Meridth. I am a software developer trying to not let best be the enemy of better.</p>
+<p>My name is Jason Meridth. I am a software developer trying to not let best be the enemy of better.  I reserve the right to change my mind upon obtaining more knowledge</p>
 
 <p>4096R / 0899 7B9D F1CB AA21 A785 64CB B0DA B474 BBA3 0F4F <a href="keybase.io/jmeridth" target="_blank">keybase.io/jmeridth</a></p>
 
