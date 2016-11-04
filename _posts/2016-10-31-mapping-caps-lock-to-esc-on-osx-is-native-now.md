@@ -11,16 +11,16 @@ Thank you to my co-worker [Dedi](https://twitter.com/kweerious) for letting me k
 
 Go to System Preferences from the Apple menu:
 
-![system preferences]({{ site_url }}assets/images/system_preferences.png)
+![system preferences]({{ site.url }}assets/images/system_preferences.png)
 
 Go to keyboard:
-![Keyboard]({{ site_url }}assets/images/keyboard.png)
+![Keyboard]({{ site.url }}assets/images/keyboard.png)
 
 
 Go to "Modifier Keys" button on bottom right:
-![Modifier Keys Button]({{ site_url }}assets/images/modifier_keys.png)
+![Modifier Keys Button]({{ site.url }}assets/images/modifier_keys.png)
 
 
 Change Caps Lock Key to Escape:
-![Change Caps Lock Key to Esc]({{ site_url }}assets/images/caps_lock_to_esc.png)
+![Change Caps Lock Key to Esc]({{ site.url }}assets/images/caps_lock_to_esc.png)
 
