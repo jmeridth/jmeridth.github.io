@@ -9,7 +9,7 @@ title: About
 
 <p>My name is Jason Meridth. I am a continuously learning senior software developer/team lead/development manager trying to not let best be the enemy of better.  I reserve the right to change my mind upon obtaining more information.</p>
 
-<p><a href="https://keybase.io/jmeridth" target="_blank">PGP KEY</a></p>
+<p><a href="https://keybase.io/jmeridth/key.asc" target="_blank">PGP KEY</a></p>
 
 <p>You can find me on the following sites:</p>
 
