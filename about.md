@@ -30,6 +30,10 @@ title: About
 
 <p class="social-icons">
   <a href="https://lastpass.com/f?3421036"><i class="fa fa-lock fa-2x"></i>Lastpass - for passwords</a>
+</p>
+<p class="social-icons">
   <a href="https://www.privateinternetaccess.com"><i class="fa fa-shield fa-2x"></i>Private Internet Access - for VPN</a>
+</p>
+<p class="social-icons">
   <a href="https://authy.com"><i class="fa fa-mobile fa-2x"></i>Authy - for 2FA</a>
 </p>
