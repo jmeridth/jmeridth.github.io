@@ -26,6 +26,8 @@ author:
 # Custom vars
 version: 1.0.0
 about: http://jasonmeridth.com
+resume:
+  url: http://tinyurl.com/meridthresume
 feed:
   url: /feed.xml
 github:
