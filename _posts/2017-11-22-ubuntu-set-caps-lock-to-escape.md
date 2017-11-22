@@ -23,10 +23,12 @@ Type `Dconf` in Unity or Gnome app opener and go to the following location:
 
 
 ```
-`org` →- `gnome` → `desktop` →  `input-sources`
+`org` →- `gnome` → `desktop` →  `input-sources` →  `xkb-options`
 ```
 
-In the `xkb-options` key add the value `['caps:escape']`
+Add `['caps:escape']` to `Custom Value` textbox.
+
+![dconf caps lock to escape]({{ site.url }}/assets/images/dconf-caps-lock-to-escape.png)
 
 Cheers.
 
