@@ -7,6 +7,8 @@ title: About
   Learn, Converse, Share
 </p>
 
+<p class="center">{% avatar {{ site.github.username }} size=200 %}</p>
+
 <p>My name is Jason Meridth. I am a continuously learning senior software developer/team lead/development manager trying to not let best be the enemy of better.  I reserve the right to change my mind upon obtaining more information.</p>
 
 <p><a href="http://tinyurl.com/meridthresume" target="_blank">Resume</a></p>

@@ -27,6 +27,7 @@ feed:
   url: /feed.xml
 github:
   url: https://github.com/jmeridth
+  username: jmeridth
 twitter:
   domain: blog.jasonmeridth.com
   url: https://twitter.com/jmeridth
@@ -46,7 +47,8 @@ sass:
   sass_dir: _sass
   style: :compressed
 
-gems:
+plugins:
+  - jekyll-avatar
   - jekyll-feed
   - jekyll-paginate
   - jekyll-seo-tag

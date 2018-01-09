@@ -22,13 +22,11 @@ description: "An archive of posts sorted by tag."
     <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}
       {% if this_word == ".net" %}<i class="icon-csharp"></i> {% endif %}
       {% if this_word == "android" %}<i class="fa fa-android"></i> {% endif %}
-      {% assign shell_array = "cli bash vim weechat irc" | split: ' ' %}
-      {% if shell_array contains this_word %}<i class="icon-shell"></i> {% endif %}
-      {% if this_word == "ubuntu" %}<i class="icon-ubuntu"></i> {% endif %}
+      {% if this_word == "book" %}<i class="fa fa-book"></i> {% endif %}
       {% if this_word == "git" %}<i class="fa fa-git"></i> {% endif %}
       {% if this_word == "gitosis" %}<i class="fa fa-git"></i> {% endif %}
       {% if this_word == "github" %}<i class="fa fa-github"></i> {% endif %}
-      {% if this_word == "html5" %}<i class="icon-html"></i> {% endif %}
+      {% if this_word == "html5" %}<i class="icon-html5"></i> {% endif %}
       {% if this_word == "linux" %}<i class="fa fa-linux"></i> {% endif %}
       {% if this_word == "networking" %}<i class="fa fa-wifi"></i> {% endif %}
       {% if this_word == "notification" %}<i class="fa fa-bell"></i> {% endif %}
@@ -38,8 +36,11 @@ description: "An archive of posts sorted by tag."
       {% if this_word == "python" %}<i class="icon-python"></i> {% endif %}
       {% if this_word == "rails" %}<i class="icon-ruby-on-rails"></i> {% endif %}
       {% if this_word == "ruby" %}<i class="icon-ruby"></i> {% endif %}
+      {% if this_word == "ubuntu" %}<i class="icon-ubuntu"></i> {% endif %}
       {% if this_word == "windows" %}<i class="fa fa-windows"></i> {% endif %}
-      {% if this_word == "wireless" %}<i class="icon-wireless"></i> {% endif %}
+      {% if this_word == "wireless" %}<i class="icon-wifi"></i> {% endif %}
+      {% assign shell_array = "cli bash vim weechat irc" | split: ' ' %}
+      {% if shell_array contains this_word %}<i class="icon-shell"></i> {% endif %}
     </h2>
   <ul class="posts">
     {% for post in site.tags[this_word] %}{% if post.title != null %}
