@@ -1,7 +1,3 @@
-# Dependencies
-markdown: kramdown
-highlighter: rouge
-
 # Permalinks
 permalink: posts/:title/
 
@@ -9,7 +5,6 @@ permalink: posts/:title/
 title: Jason Meridth's Blog
 tagline: 'Learn, Converse, Share'
 description: 'Learn, Converse, Share'
-url: http://blog.jasonmeridth.com
 baseurl: ''
 paginate: 5
 comments: true
