@@ -1,5 +1,5 @@
 ---
-tags: mysql, ubuntu
+tags: mysql ubuntu
 layout: post
 title: Unable To Access Mysql With Root and No Password After New Install On Ubuntu
 date: '2018/01/30 18:13:00'
