@@ -2,6 +2,9 @@
 _gh_pages
 _site
 
+# Jekyll related
+.jekyll-metadata
+
 # Numerous always-ignore extensions
 *.diff
 *.err

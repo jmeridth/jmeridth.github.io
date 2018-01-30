@@ -9,4 +9,4 @@ COPY . /jekyll
 WORKDIR /jekyll
 
 EXPOSE 4000
-ENTRYPOINT ["jekyll", "serve", "--livereload"]
+ENTRYPOINT ["jekyll", "serve", "--watch", "--incremental"]
