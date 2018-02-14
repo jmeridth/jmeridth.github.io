@@ -4,7 +4,6 @@ layout: post
 title: Cleanup Docker
 date: '2017/11/12 21:15:00'
 ---
-## Cleanup Docker
 
 I keep having friends who have experienced the `no space left on device` when trying to build images.
 
