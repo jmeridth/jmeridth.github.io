@@ -7,7 +7,7 @@ words_per_minute: 200
 logo:             images/logo.jpg # logo visible in the topbar
 excerpt_separator: <!--more-->
 
-url: https://blog.jasonermdtih.com
+url: https://blog.jasonmeridth.com
 
 menu:
   - title: 'Home'
