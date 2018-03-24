@@ -1,11 +1,11 @@
 ---
-tags: ubuntu, vim
+tags: ubuntu vim
 layout: post
 title: Docker Daemon Error When Running Docker Compose
 date: '2018/01/02 12:11:00'
 ---
 
-![docker why]({{ site.url }}/assets/images/why-docker-why-i-just-want-to-deploy.jpg)
+![docker why]({{ site.url }}/images/why-docker-why-i-just-want-to-deploy.jpg)
 
 TL;DR Make sure you don't have any old mounted volumes around if you see the error below.
 

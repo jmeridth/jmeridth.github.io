@@ -1,5 +1,5 @@
 ---
-tags: ubuntu, vim
+tags: ubuntu vim
 layout: post
 title: Ubuntu - set caps lock to escape
 date: '2017/11/22 10:05:00'
@@ -28,7 +28,7 @@ Type `Dconf` in Unity or Gnome app opener and go to the following location:
 
 Add `['caps:escape']` to `Custom Value` textbox.
 
-![dconf caps lock to escape]({{ site.url }}/assets/images/dconf-caps-lock-to-escape.png)
+![dconf caps lock to escape]({{ site.url }}/images/dconf-caps-lock-to-escape.png)
 
 Cheers.
 

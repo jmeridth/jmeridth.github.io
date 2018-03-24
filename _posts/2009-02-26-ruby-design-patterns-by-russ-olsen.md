@@ -3,11 +3,11 @@ layout: post
 title: Ruby Design Patterns by Russ Olsen
 date: 2009/02/26 04:29:00
 tags:
-  - ruby 
+  - ruby
   - design patterns
 ---
 
-![](http://www.informit.com/ShowCover.aspx?isbn=0321539265&type=f) 
+![](http://www.informit.com/ShowCover.aspx?isbn=0321539265&type=f)
 
 After nudging by [Joe Ocampo](http://agilejoe.lostechies.com/) and [Scott Bellware](https://twitter.com/sbellware), I finally sat down at finished "Design Patterns in Ruby" by Russ Olsen. The format of most of the chapters made the book an interesting read:
 
@@ -18,17 +18,17 @@ After nudging by [Joe Ocampo](http://agilejoe.lostechies.com/) and [Scott Bellwa
 1. In the wild
 1. Wrapping up
 
-Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: **GO BUY THE BOOK**. You won't regret it. Even if you are trying to understand patterns in another language. Russ Olsen does an excellent job explaining the INTENT of the patterns. FUN When teaching the reader about "Truth, Lies, and nil", the author even pokes fun at himself: 
-    
+Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: **GO BUY THE BOOK**. You won't regret it. Even if you are trying to understand patterns in another language. Russ Olsen does an excellent job explaining the INTENT of the patterns. FUN When teaching the reader about "Truth, Lies, and nil", the author even pokes fun at himself:
+
 ```ruby
 'russ' == 'smart'    # sadly, false
 ```
 
 * * *
 
-BOOLEAN In Ruby, zero, being neither false nor nil, evaluates to true in Boolean expression. 
-    
-```ruby    
+BOOLEAN In Ruby, zero, being neither false nor nil, evaluates to true in Boolean expression.
+
+```ruby
 if 0
  puts('Zero is true!')
 end
@@ -38,9 +38,9 @@ will print out: Zero is true!
 
 * * *
 
-ARRAYS Points for matrix reference in array examples 
-    
-```ruby    
+ARRAYS Points for matrix reference in array examples
+
+```ruby
 x = []
 y = Array.new
 a = ['neo', 'trinity', 'tank']
@@ -48,9 +48,9 @@ a = ['neo', 'trinity', 'tank']
 
 * * *
 
-REGULAR EXPRESSIONS The flow of the language when creating regular expressions: 
-    
-```ruby    
+REGULAR EXPRESSIONS The flow of the language when creating regular expressions:
+
+```ruby
 /old/ =~ 'this old house'     # 5 - the index of 'old'
 /Russ|Russell/ =~ 'Fred'      # nil - Fred is not Russ nor Russell
 /.*/ =~ 'any old string'      # 0 - the RE will match anything
@@ -58,9 +58,9 @@ REGULAR EXPRESSIONS The flow of the language when creating regular expressions:
 
 * * *
 
-ARBITRARY PARAMETERS Any author that uses DC comic character to explain arbitrary numbers of arguments, is a winner in my mind: 
-    
-```ruby    
+ARBITRARY PARAMETERS Any author that uses DC comic character to explain arbitrary numbers of arguments, is a winner in my mind:
+
+```ruby
 def describe_hero(name, *super_powers>
  puts("Name: #{name}")
  for power in super_powers
@@ -74,13 +74,13 @@ describe_hero("Superman", "can fly", "x-ray vision", "invulnerable")   # w00t!
 
 * * *
 
-DUCK TYPING AND UNIT TESTS He mentions duck typing and the fact that "Unit Tests Are Not Optional" is a section heading when teaching the Template Method Pattern. 
+DUCK TYPING AND UNIT TESTS He mentions duck typing and the fact that "Unit Tests Are Not Optional" is a section heading when teaching the Template Method Pattern.
 
 * * *
 
-PROCS AND BLOCKS 
-    
-```ruby    
+PROCS AND BLOCKS
+
+```ruby
 # using the do/end notation
 hello = lambda do
  puts('Hello')
@@ -96,9 +96,9 @@ hello = lambda {puts('Hello, I am a follower of Pablo')}
 
 * * *
 
-STRATEGY PATTERN using proc-based formatters to create a ruby-based strategy pattern 
-    
-```ruby    
+STRATEGY PATTERN using proc-based formatters to create a ruby-based strategy pattern
+
+```ruby
 class Report
  attr_reader :title, :text
  attr_accessor :formatter
@@ -118,13 +118,13 @@ report = Report.new &HTML_FORMATTER
 report.output_report
 ```
 
-You could create any type of formatter you want in a proc instead creating new classes. 
+You could create any type of formatter you want in a proc instead creating new classes.
 
 * * *
 
-OBSERVER PATTERN Modules exist that encapsulate things that some of us static developers might already be used to: 
-    
-```ruby    
+OBSERVER PATTERN Modules exist that encapsulate things that some of us static developers might already be used to:
+
+```ruby
 require 'observer'
 class Employee
 include Observable
@@ -145,13 +145,13 @@ end
 
 * * *
 
-ITERATOR PATTERN Internal Iterators versus External Iterators: (had never heard it put this way) External iterator - client drives the iteration...you won't call next until you are good and ready for the next element Internal iterator - the aggregate relentlessly pushes the code block to accept item after item. 
+ITERATOR PATTERN Internal Iterators versus External Iterators: (had never heard it put this way) External iterator - client drives the iteration...you won't call next until you are good and ready for the next element Internal iterator - the aggregate relentlessly pushes the code block to accept item after item.
 
 * * *
 
-COMMAND PATTERN The Command pattern translates very smoothly into code blocks. Here is a PabloForPresidentButton class reworked to use code blocks: 
-    
-```ruby    
+COMMAND PATTERN The Command pattern translates very smoothly into code blocks. Here is a PabloForPresidentButton class reworked to use code blocks:
+
+```ruby
 class PabloForPresidentButton
 attr_accessor :command
 def initialize(&block)
@@ -174,13 +174,13 @@ new_button = PabloForPresidentButton.new do
 end
 ```
 
-The author does not diminish the needs for classes. For straightforward actions, use a Proc object. For complex object or objects that will carry around a lot of state, create a command class. 
+The author does not diminish the needs for classes. For straightforward actions, use a Proc object. For complex object or objects that will carry around a lot of state, create a command class.
 
 * * *
 
-ADAPTER PATTERN Instead of adhering to some interface and trying to create your adapter, why not just extend the original class. 
-    
-```ruby    
+ADAPTER PATTERN Instead of adhering to some interface and trying to create your adapter, why not just extend the original class.
+
+```ruby
 # load original class
 require 'lostechies_text_object'
 # now add some methods to original class
@@ -194,13 +194,13 @@ end
 end
 ```
 
-Before any of you Open-Closed people attack, please re-read the definition of OCP - Open for extension, closed for modification. Doesn't this adhere to that? :) 
+Before any of you Open-Closed people attack, please re-read the definition of OCP - Open for extension, closed for modification. Doesn't this adhere to that? :)
 
 * * *
 
-PROXY PATTERN There are three tyes of Proxies: The Protection Proxy, Remote Proxy, Virtual Proxy These are mentioned in the Gang of Four book. He introduces a Ruby-esqe way to approach proxies: the method_missing Method 
-    
-```ruby    
+PROXY PATTERN There are three tyes of Proxies: The Protection Proxy, Remote Proxy, Virtual Proxy These are mentioned in the Gang of Four book. He introduces a Ruby-esqe way to approach proxies: the method_missing Method
+
+```ruby
 class AccountProxy
 def initialize(real_account)
  @subject = real_account
@@ -216,13 +216,13 @@ ap.withdraw(50)
 puts("account balance is now: #{ap.balance}")
 ```
 
-Will output: delegating deposit method to subject. delegating withdraw method to subject. delegating balance method to subject. account balance is now: 75 
+Will output: delegating deposit method to subject. delegating withdraw method to subject. delegating balance method to subject. account balance is now: 75
 
 * * *
 
-DECORATOR PATTERN 
-    
-```ruby    
+DECORATOR PATTERN
+
+```ruby
 module Decorator1
 def do_something(common_item_to_decorate)
  #code
@@ -241,9 +241,9 @@ e.do_something('howdy')
 
 * * *
 
-SINGLETON PATTERN The author admits the career of the singleton has been checkered, but still shows that you can use it in the Ruby world. An example he gives us to allow testing of singleton implementation code is to put the implementation code in a base class and have the child be the singleton: 
-    
-```ruby    
+SINGLETON PATTERN The author admits the career of the singleton has been checkered, but still shows that you can use it in the Ruby world. An example he gives us to allow testing of singleton implementation code is to put the implementation code in a base class and have the child be the singleton:
+
+```ruby
 require 'singleton'
 class SimpleLogger
 #  All of the logging functionality in this class...
@@ -254,9 +254,9 @@ class SingletonLogger < SimpleLogger
 
 * * *
 
-FACTORY/ABSTRACT FACTORY PATTERN I never had it straight, exactly, what the difference between these patterns were (yes, besides name). I never bothered to look. According to the author, Factory returns back a single object while Abstract Factory is "an object dedicated to creating a compatible set of objects". According to GoF book (which I have open in front of me), Abstract Factory "provides an interface for creating families of related or dependent objects without specifying their concreate classes". Which one do you think would have turned the light bulb off in your head? :) The other item was using "Convention Over Configuration" to generate abstract factories: 
-    
-```ruby    
+FACTORY/ABSTRACT FACTORY PATTERN I never had it straight, exactly, what the difference between these patterns were (yes, besides name). I never bothered to look. According to the author, Factory returns back a single object while Abstract Factory is "an object dedicated to creating a compatible set of objects". According to GoF book (which I have open in front of me), Abstract Factory "provides an interface for creating families of related or dependent objects without specifying their concreate classes". Which one do you think would have turned the light bulb off in your head? :) The other item was using "Convention Over Configuration" to generate abstract factories:
+
+```ruby
 class IOFactory
 def initialize(format)
  @reader_class = self.class.const_get("#{format}Reader")

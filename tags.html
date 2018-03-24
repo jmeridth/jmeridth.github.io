@@ -1,54 +1,29 @@
 ---
-layout: page
-title: Tags
+layout: home
+title: Tag Archive
 description: "An archive of posts sorted by tag."
+comments: false
 ---
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-<!-- site_tags: {{ site_tags }} -->
-{% assign tag_words = site_tags | split:',' | sort %}
-<!-- tag_words: {{ tag_words }} -->
+{% assign tags_list = site_tags | split:',' | sort %}
 
-<div id="tags">
-  <ul class="tag-box inline">
+<ul class="entry-meta inline-list">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <li><a href="#{{ this_word | cgi_escape }}">{{ this_word }} <span>{{ site.tags[this_word].size }}</span></a></li>
+    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+  	<li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span> <span class="count">{{ site.tags[this_word].size }}</span></a></li>
   {% endunless %}{% endfor %}
-  </ul>
+</ul>
 
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}
-      {% if this_word == ".net" %}<i class="icon-csharp"></i> {% endif %}
-      {% if this_word == "android" %}<i class="fa fa-android"></i> {% endif %}
-      {% if this_word == "book" %}<i class="fa fa-book"></i> {% endif %}
-      {% if this_word == "git" %}<i class="fa fa-git"></i> {% endif %}
-      {% if this_word == "gitosis" %}<i class="fa fa-git"></i> {% endif %}
-      {% if this_word == "github" %}<i class="fa fa-github"></i> {% endif %}
-      {% if this_word == "html5" %}<i class="icon-html5"></i> {% endif %}
-      {% if this_word == "linux" %}<i class="fa fa-linux"></i> {% endif %}
-      {% if this_word == "networking" %}<i class="fa fa-wifi"></i> {% endif %}
-      {% if this_word == "notification" %}<i class="fa fa-bell"></i> {% endif %}
-      {% if this_word == "notifications" %}<i class="fa fa-bell"></i> {% endif %}
-      {% if this_word == "open" %}<i class="fa fa-github"></i> {% endif %}
-      {% if this_word == "postgresql" %}<i class="icon-postgres"></i> {% endif %}
-      {% if this_word == "python" %}<i class="icon-python"></i> {% endif %}
-      {% if this_word == "rails" %}<i class="icon-ruby-on-rails"></i> {% endif %}
-      {% if this_word == "ruby" %}<i class="icon-ruby"></i> {% endif %}
-      {% if this_word == "ubuntu" %}<i class="icon-ubuntu"></i> {% endif %}
-      {% if this_word == "windows" %}<i class="fa fa-windows"></i> {% endif %}
-      {% if this_word == "wireless" %}<i class="icon-wifi"></i> {% endif %}
-      {% assign shell_array = "cli bash vim weechat irc" | split: ' ' %}
-      {% if shell_array contains this_word %}<i class="icon-shell"></i> {% endif %}
-    </h2>
-  <ul class="posts">
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+  <span class="anchor-bookmark" id="{{ this_word }}"></span>
+	<article>
+	<h2 class="tag-heading">{{ this_word }}</h2>
+		<ul>
     {% for post in site.tags[this_word] %}{% if post.title != null %}
-    <li itemscope><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span> &raquo;
-       {% if post.category == "speaking" %}<i class="fa fa-microphone"></i> {% endif %}
-       <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+      <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
     {% endif %}{% endfor %}
-  </ul>
-  {% endunless %}{% endfor %}
-</div>
+		</ul>
+	</article><!-- /.hentry -->
+{% endunless %}{% endfor %}

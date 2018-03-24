@@ -14,17 +14,17 @@ USB-C power
 
 I'm in love.
 
-![lenovo thinkpad box]({{ site.url }}/assets/images/lenovo-thinkpad-box.jpg)
+![lenovo thinkpad box]({{ site.url }}/images/lenovo-thinkpad-box.jpg)
 
-![lenovo thinkpad]({{ site.url }}/assets/images/lenovo-thinkpad.jpg)
+![lenovo thinkpad]({{ site.url }}/images/lenovo-thinkpad.jpg)
 
-![lenovo thinkpad fn ctrl keys]({{ site.url }}/assets/images/lenovo-thinkpad-fn-ctrl-keys.jpg)
+![lenovo thinkpad fn ctrl keys]({{ site.url }}/images/lenovo-thinkpad-fn-ctrl-keys.jpg)
 
 My only gripe is that the `Fn` key is on the far left bottom of the keyboard. I prefer that to be the `Ctrl` key due to copy/paste and other keyboard commands I use often.  I also have very big hands and my pinky isn't made to "find" the `Ctrl` key to the right of the `Fn` key.
 
 I currently use `Dconf` for mapping of keys in Ubuntu (currently using 17.10).  I learned today that the `fn` key on keyboards is not managed by the operating system, which makes sense.  Lenovo in all of its glorious-ness has a BIOS option to swap the `Fn` and `Ctrl` keys.
 
-![lenovo bios fn ctrl swap]({{ site.url }}/assets/images/lenovo-bios-fn-ctrl-swap.jpg)
+![lenovo bios fn ctrl swap]({{ site.url }}/images/lenovo-bios-fn-ctrl-swap.jpg)
 
 Thank you Lenovo.
 

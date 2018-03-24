@@ -10,7 +10,7 @@ I've been interviewing a lot lately since I was let go from my last gig.  During
 - I wrote my first program in the Basic programming language when I was eight years old (1988) and loved that I could control a computer and build software.
 - In 1991 when QBasic came out I learned about the [easter egg][1] that you can do when starting QBasic from a DOC prompt.  The easter egg showed "The Team of Programmers" that created QBasic.  Once I saw that, I told myself I wanted to be one of them.
 
-![QBasic Team of Programmers Easter Egg]({{ site.url }}/assets/images/qbasic_easter_egg.jpg)
+![QBasic Team of Programmers Easter Egg]({{ site.url }}/images/qbasic_easter_egg.jpg)
 
 - The idea of learning another business industry so I could create software for them excited me.  Here are some of the industries I've learned through my career:
   - Banking

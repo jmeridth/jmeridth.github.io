@@ -62,7 +62,7 @@ Consists of all your objects (duh!).  What are the objects?  That’s a little
 
 A blob is generally a file.   
 ![image](//lostechies.com/jasonmeridth/files/2011/03/image_thumb_77341C2B.png)   
-(<http://book.git-scm.com/assets/images/figure/object-blob.png>)
+(<http://book.git-scm.com/images/figure/object-blob.png>)
 
 Consists of the binary content that is stored in the blob.  No filename.  Really?  Yep.  Git does not track files, it tracks content.  So if you have two files with the same content but different names (shame on you for violating “[Don’t Repeat Yourself (DRY)](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)”) they will most likely point at the same blob object.  “The object is totally independent of its location in the directory tree…”.  This is usually handled by tree objects.  “…and renaming a file does not change the object that the file is associated with” (<http://book.git-scm.com/1_the_git_object_model.html>)
 
@@ -77,7 +77,7 @@ where 0e0fdc6 is the SHA1 of the solution file on my initial commit, I see the f
 A tree usually represents a directory or sub-directory, containing a list of other trees and blobs. 
 
 ![image](//lostechies.com/jasonmeridth/files/2011/03/image_thumb_7A018331.png)   
-(<http://book.git-scm.com/assets/images/figure/object-tree.png>)
+(<http://book.git-scm.com/images/figure/object-tree.png>)
 
 Consists of the type, SHA1 and filename of blobs and sub-trees.  When I run the “**git ls-tree 97107ec**“ command:
 
@@ -94,7 +94,7 @@ I see the names of the contents, but not the types or SHA1s.
 A commit is a pointer to the SHA1 of a tree. 
 
 ![image](//lostechies.com/jasonmeridth/files/2011/03/image_thumb_155E8788.png)   
-(<http://book.git-scm.com/assets/images/figure/object-commit.png>)
+(<http://book.git-scm.com/images/figure/object-commit.png>)
 
 Consists of the SHA1 of the tree it’s pointing at, the SHA1 of the parent commit, if not the initial commit, and the names of the author and committer.  Huh?  There’s a difference between the author and the committer.  Imagine you write a patch for an open source project.  When you tell the owner of the project to pull from your repository, you are the author, but they would the person committing it to the primary repository, the committer.  If I issue the “**git show –s --pretty=raw 1731c38**“ command, where 1731c38 is the SHA1 of my “initial commit” commit:
 
@@ -111,7 +111,7 @@ I actually see the diffs for all changes in the commit.  Since this was the ini
 A tag is a pointer to the SHA1 of a Git object.
 
 ![image](//lostechies.com/jasonmeridth/files/2011/03/image_thumb_370783CE.png)   
-(<http://book.git-scm.com/assets/images/figure/object-tag.png>) 
+(<http://book.git-scm.com/images/figure/object-tag.png>) 
 
 Consists of an object SHA1, the type of object the SHA1 represents and the name of the person who issued the tag, the tagger.  I issue the “**git tag v0.1 –m ‘v0.1’**” command:
 
