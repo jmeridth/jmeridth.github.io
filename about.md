@@ -35,7 +35,7 @@ title: About
 <p>Products I use, trust and even pay for:</p>
 
 <p class="social-icons">
-  <a href="https://lastpass.com/f?3421036"><i class="fa fa-lock fa-2x"></i><br/>Lastpass - for passwords</a>
+  <a href="https://bitwarden.com"><i class="fa fa-lock fa-2x"></i><br/>Bitwarden - for passwords</a>
 </p>
 <p class="social-icons">
   <a href="https://www.privateinternetaccess.com"><i class="fa fa-shield fa-2x"></i><br/>Private Internet Access - for VPN</a>
