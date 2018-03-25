@@ -50,23 +50,6 @@
   <div class="header-title">
     <div class="header-title-wrap">
       <h1>{{ page.title }}</h1>
-      {% if page.date %}
-        <h2><span class="entry-date date published updated"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></span></h2>
-      {% else %}
-        <h2><span class="entry-date"><time>&nbsp;</time></span></h2>
-      {% endif %}
-
-      {% if site.reading_time and page.layout == 'post' %}
-        <p class="entry-reading-time">
-          <i class="fa fa-clock-o"></i>
-          {% assign readtime = content | strip_html | number_of_words | divided_by:site.words_per_minute %}
-          Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-        </p><!-- /.entry-reading-time -->
-      {% else %}
-          <p class="entry-reading-time">
-            &nbsp;
-          </p><!-- /.entry-reading-time -->
-      {% endif %}
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->

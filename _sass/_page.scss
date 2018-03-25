@@ -125,7 +125,6 @@ body {
 	}
 }
 header .entry-meta {
-	display: none; // hide header meta on small screens
 	@media #{$medium} {
 		display: block;
 	}
@@ -171,10 +170,6 @@ header .entry-meta {
 			padding: 50px 80px;
 			margin: 0 auto 30px auto;
 		}
-	}
-	.entry-meta {
-		margin: 50px 30px 30px;
-		text-align: center;
 	}
 }
 .entry-tags {
