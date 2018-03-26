@@ -11,6 +11,11 @@ To diagnose a container that has errored out, I, obviously, look at the logs via
 
 ![diagnose]({{ site.url }}/images/diagnose.jpg)
 
+Pre-requisites to being able to build a diagnosis container:
+
+* You need to use `CMD`, *not* `ENTRYPOINT` in the Dockerfile
+** with `CMD` you'll be able to start a shell, with `ENTRYPOINT` your diagnosis container will just keep trying to run that
+
 To create a diagnosis container, do the following:
 
 * Check your failed container ID by `docker ps -a`
