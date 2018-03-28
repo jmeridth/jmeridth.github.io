@@ -1,7 +1,7 @@
 ---
 tags: dns chrome
 layout: post
-title: Clearn DNS Cache In Chrome
+title: Clear DNS Cache In Chrome
 date: '2018/03/27 15:42:00'
 ---
 
