@@ -9,7 +9,7 @@ collections:
     title: Uploads
     output: true
 description: Learn, Converse, Share
-disqus_shortname: 
+disqus_shortname:
 reading_time: true
 words_per_minute: 200
 logo: images/logo.jpg
@@ -40,9 +40,9 @@ social:
   url: https://github.com/jmeridth
 - title: linkedin
   url: https://br.linkedin.com/in/jmeridth
-background: 
+background:
 google_analytics: UA-38456568-3
-google_verify: 
+google_verify:
 locale: en_US
 future: true
 highlighter: rouge
@@ -87,3 +87,4 @@ plugins:
 - jekyll-feed
 - jekyll-paginate
 - jekyll-seo-tag
+- jekyll-gist

@@ -7,4 +7,4 @@ tags:
 layout: post
 ---
 
-<script src="https://gist.github.com/jmeridth/f2ad6b580ae18501c538.js"></script>
+{% gist f2ad6b580ae18501c538 %}
