@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Double Exclmations !! In Ruby
-date: 2013/02/03 00:00:00
-tags: ruby 
+date: 2013-02-03 00:00:00 -06:00
+tags:
+- ruby
+layout: post
 ---
 
 Today I hit this in a Ruby example online:

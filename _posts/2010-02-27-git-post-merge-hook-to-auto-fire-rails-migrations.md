@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Git post-merge hook to auto-fire rails migrations
-date: 2010/02/27 19:28:00
+date: 2010-02-27 19:28:00 -06:00
+layout: post
 ---
-
 
 I saw [Scott Bellware](http://ampgt.com) recently write on twitter:
 

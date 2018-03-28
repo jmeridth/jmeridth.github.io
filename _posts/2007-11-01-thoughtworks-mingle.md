@@ -1,9 +1,8 @@
 ---
-layout: post
 title: ThoughtWorks Mingle
-date: 2007/11/01 18:40:00
+date: 2007-11-01 18:40:00 -05:00
+layout: post
 ---
-
 
 I got excited about ThoughtWorks releasing [Mingle 1.1](http://www.lostechies.com/controlpanel/blogs/Saifuddin%20Goderya).  The software license states that it is free for the first 5 users.
 

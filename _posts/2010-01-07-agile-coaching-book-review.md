@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Agile Coaching Book Review
-date: 2010/01/07 05:28:00
+date: 2010-01-07 05:28:00 -06:00
+layout: post
 ---
 
 Cross-posted from [my github pages blog](http://blog.jasonmeridth.com).  Rachel Davies, one of the author's was kind enough to comment there.

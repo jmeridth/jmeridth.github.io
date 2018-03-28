@@ -1,11 +1,11 @@
 ---
-layout: post
 title: Git For Windows Developers – Git Series – Part 4
-date: 2009/06/20 04:15:00
-tags: git
-.. post_type: text
+date: 2009-06-20 04:15:00 -05:00
+tags:
+- git
+layout: post
+".. post_type": text
 ---
-
 
 ## ROUGH DRAFT - NOT READY FOR RELEASE OR REVIEW  
 

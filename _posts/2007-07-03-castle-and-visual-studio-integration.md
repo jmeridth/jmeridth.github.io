@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Castle and Visual Studio integration
-date: 2007/07/03 10:17:00
+date: 2007-07-03 10:17:00 -05:00
+layout: post
 ---
-
 
 Hammet (Hamilton Verissimo), founder of the Castle Project (MonoRail, Windsor, ActiveRecord, etc.) just posted about a Castle Contrib project to help with highlighting of NVelocity language syntax in Visual Studio 2005.
 

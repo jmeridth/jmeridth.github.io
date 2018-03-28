@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Scott Guthrie uses FireFox in his posts.....Where's IE?
-date: 2007/05/30 08:49:00
+date: 2007-05-30 08:49:00 -05:00
+layout: post
 ---
-
 
 Here is his [post](http://weblogs.asp.net/scottgu/archive/2007/05/17/tip-trick-supporting-full-screen-mode-with-silverlight.aspx) about making Silverlight full-screen.
 

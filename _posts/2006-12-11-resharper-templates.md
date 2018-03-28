@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Resharper Templates
-date: 2006/12/11 00:26:00
+date: 2006-12-11 00:26:00 -06:00
+layout: post
 ---
-
 
 I recently read a good post by [Joey.NET](http://www.jetbrains.com/resharper/)Templates.  
   

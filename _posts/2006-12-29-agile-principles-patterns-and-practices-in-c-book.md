@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Agile Principles, Patterns and Practices in C# book
-date: 2006/12/29 00:37:00
+date: 2006-12-29 00:37:00 -06:00
+layout: post
 ---
-
 
 I had purchased the "[Agile Principles, Patterns, and Practices in C#](http://www.amazon.com/Principles-Patterns-Practices-Robert-Martin/dp/0131857258)" (PPP) book by [Robert C. Martin](http://www.butunclebob.com/ArticleS.UncleBob) (aka Uncle Bob) at the beginning of August 2006 and began reading it, but soon began to think that a lot of it's content was from the articles you can find on [Object Mentor's website](http://www.objectmentor.com/) (Uncle Bob's company).  I stopped reading it.  I have read most if not all those articles already.  I had intended to go back to the book and articles and compare the differences and have not.  
   

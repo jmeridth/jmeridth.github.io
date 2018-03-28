@@ -1,8 +1,11 @@
 ---
-layout: post
 title: How to Run a Single Test With Tox
-date: 2014/03/07 04:49:53
-tags: python testing cli
+date: 2014-03-07 04:49:53 -06:00
+tags:
+- python
+- testing
+- cli
+layout: post
 ---
 
 I have to run a single python test once in a while and keep forgetting how to do it with Tox.

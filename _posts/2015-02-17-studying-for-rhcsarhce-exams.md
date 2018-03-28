@@ -1,8 +1,10 @@
 ---
-layout: post
 title: Studying for RHCSA/RHCE Exams
-date: 2015-02-17 16:19:57 UTC-06:00
-tags: linux certifications
+date: 2015-02-17 16:19:57 -06:00
+tags:
+- linux
+- certifications
+layout: post
 ---
 
 Update: I had to put this on hold due to a job switch and haven't studied any further or signed up for an exam again - 1/6/2015

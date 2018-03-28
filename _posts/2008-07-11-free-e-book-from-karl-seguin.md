@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Free e-Book from Karl Seguin
-date: 2008/07/11 18:19:45
+date: 2008-07-11 18:19:45 -05:00
+layout: post
 ---
-
 
 I may be late on the band wagon on this one, but I just had the privilege of reading Karl Seguin's free e-book, ["Foundations of Programming"](http://www.openmymind.net/FoundationsOfProgramming.pdf).  This is what Alt.NET is all about.
 

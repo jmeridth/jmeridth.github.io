@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "'git commit -a' and 'git add'"
-date: 2009/09/10 17:07:00
+date: 2009-09-10 17:07:00 -05:00
+layout: post
 ---
-
 
 I've heard or read too many git blog posts/pod casts state that if you create a new file in your local Git repo and you want to shorten the steps on getting it added to the local repository, all you have to do is:
     

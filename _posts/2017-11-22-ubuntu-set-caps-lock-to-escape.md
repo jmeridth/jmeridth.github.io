@@ -1,9 +1,12 @@
 ---
-tags: ubuntu vim
-layout: post
 title: Ubuntu - set caps lock to escape
-date: '2017/11/22 10:05:00'
+date: 2017-11-22 10:05:00 -06:00
+tags:
+- ubuntu
+- vim
+layout: post
 ---
+
 I just got a new laptop and had to google again on how to set caps lock key to escape (I'm a Vim user).
 
 ```

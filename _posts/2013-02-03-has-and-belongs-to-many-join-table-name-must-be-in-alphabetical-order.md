@@ -1,8 +1,9 @@
 ---
+title: Has And Belongs To Many Join Table Name Must Be In Alphabetical Order
+date: 2013-02-03 00:00:00 -06:00
+tags:
+- rails
 layout: post
-title: 
-date: 2013/02/03 00:00:00
-tags: rails 
 ---
 
 TL;DR 

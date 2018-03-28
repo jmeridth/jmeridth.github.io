@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Trinity football wins game with 15 laterals on last play
-date: 2007/10/29 12:30:00
+date: 2007-10-29 12:30:00 -05:00
+layout: post
 ---
-
 
 I was very hesitant to post this on LosTechies (non-technical content), but after some thought I think this is worth it. 
 

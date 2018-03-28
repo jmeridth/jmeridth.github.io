@@ -1,9 +1,8 @@
 ---
+title: Monorail
+date: 2007-09-08 21:20:59 -05:00
 layout: post
-title: Monorail #0: Controllers
-date: 2007/09/08 21:20:59
 ---
-
 
 One of the first things I should have posted:  [How It Works](http://www.castleproject.org/monorail/documentation/trunk/manual/howitworks.html)
 

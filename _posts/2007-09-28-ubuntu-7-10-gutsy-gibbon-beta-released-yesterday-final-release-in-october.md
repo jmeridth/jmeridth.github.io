@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Ubuntu 7.10 (Gutsy Gibbon) BETA released yesterday - final release in October
-date: 2007/09/28 13:54:51
+date: 2007-09-28 13:54:51 -05:00
+layout: post
 ---
-
 
 Ubuntu 7.10 released yesterday.  Go here to download and help Canonical with beta testing.  I am downloading it at home and will load one of my "mutt" PCs tonight and start using it.  Instructions on how to insert bugs into the tracking system is at the bottom of [this](http://www.ubuntu.com/testing/gutsybeta) page.
 

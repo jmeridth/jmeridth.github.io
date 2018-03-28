@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Vim Tagbar Plugin
-date: 2016/07/03 09:16:00
-tags: vim
+date: 2016-07-03 09:16:00 -05:00
+tags:
+- vim
+layout: post
 ---
 
 I found the [tagbar](https://github.com/majutsushi/tagbar) Vim plugin last night and finally tried it out this morning.  I like it.  I mapped `,tb` to showing it [in my .vimrc](https://github.com/jmeridth/dotfiles/blob/master/vimrc).

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: South Central US Events Coming up
-date: 2007/07/19 22:06:43
+date: 2007-07-19 22:06:43 -05:00
+layout: post
 ---
-
 
 Via input from [Chris Koenig](http://blogs.msdn.com/chkoenig/default.aspx), one of the Microsoft Developer Evangelists in my area, we got some great events coming up soon in South Central US. 
 

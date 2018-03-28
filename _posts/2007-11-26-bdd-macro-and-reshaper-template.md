@@ -1,9 +1,8 @@
 ---
-layout: post
 title: BDD macro and Reshaper Template
-date: 2007/11/26 01:58:35
+date: 2007-11-26 01:58:35 -06:00
+layout: post
 ---
-
 
 My colleague, [Joe Ocampo](http://blog.agilejoe.com), created a ReSharper template:
     

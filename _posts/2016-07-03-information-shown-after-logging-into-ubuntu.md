@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Information Shown After Logging Into Ubuntu
-date: 2016/07/03 08:58:00
-tags: ubuntu
+date: 2016-07-03 08:58:00 -05:00
+tags:
+- ubuntu
+layout: post
 ---
 
 Afer you log into an ubuntu instance you'll usually see something like this:

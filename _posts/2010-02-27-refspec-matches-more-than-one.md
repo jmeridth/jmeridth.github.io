@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Refspec matches more than one
-date: 2010/02/27 19:31:00
+date: 2010-02-27 19:31:00 -06:00
+layout: post
 ---
 
 I was trying to push to a canonical repository this morning and got the following error:

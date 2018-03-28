@@ -1,8 +1,9 @@
 ---
-tags: docker
-layout: post
 title: Cleanup Docker
-date: '2017/11/12 21:15:00'
+date: 2017-11-12 21:15:00 -06:00
+tags:
+- docker
+layout: post
 ---
 
 I keep having friends who have experienced the `no space left on device` when trying to build images.

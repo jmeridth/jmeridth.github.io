@@ -1,8 +1,9 @@
 ---
-tags: docker
-layout: post
 title: Create Docker Container from Errored Container
-date: '2018/03/25 22:31:00'
+date: 2018-03-25 22:31:00 -05:00
+tags:
+- docker
+layout: post
 ---
 
 When I'm trying to "dockerize" an applciation I usually have to work through some wonkiness.

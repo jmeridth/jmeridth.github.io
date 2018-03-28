@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Details HTML Section In Github Issues and Gists
-date: 2016/07/28 11:01:00
-tags: github
+date: 2016-07-28 11:01:00 -05:00
+tags:
+- github
+layout: post
 ---
 
 I recently became aware of using the `<details></details>` and `<summary>...</summary>` tags in Github issues and Gists.

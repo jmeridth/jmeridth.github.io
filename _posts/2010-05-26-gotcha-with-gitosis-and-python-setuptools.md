@@ -1,10 +1,11 @@
 ---
-layout: post
 title: Gotcha with Gitosis and python-setuptools
-date: 2010/05/26 04:58:00
-tags: git gitosis
+date: 2010-05-26 04:58:00 -05:00
+tags:
+- git
+- gitosis
+layout: post
 ---
-
 
 Today I decided to upgrade my slicehost slice from Intrepid Ibex to Lucid Lynx (Intrepid → Jaunty → Karmic → Lucid). Yeah, yeah, I’m a little behind. Anyways, It upgraded just fine. However when I was trying to push code to my gitosis instance (which I installed over a year ago), I got the following stack trace:
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Knoppix ntfsfix fixes Windows XP corrupted NTFS
-date: 2007/05/29 20:33:00
+date: 2007-05-29 20:33:00 -05:00
+layout: post
 ---
-
 
 Interested information from another Linux board:
 

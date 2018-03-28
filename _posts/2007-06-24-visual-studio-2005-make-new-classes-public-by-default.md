@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Visual Studio 2005 - Make new classes public by default
-date: 2007/06/24 14:36:40
+date: 2007-06-24 14:36:40 -05:00
+layout: post
 ---
-
 
 Thanks to a co-worker, Chris Dereadt (thanks Chris), I have finally squashed one of my pet peeves with Visual Studio 2005.
 

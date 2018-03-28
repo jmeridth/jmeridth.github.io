@@ -1,9 +1,8 @@
 ---
-layout: post
 title: git instaweb
-date: 2009/09/27 00:53:00
+date: 2009-09-27 00:53:00 -05:00
+layout: post
 ---
-
 
 I was reading ["Pro Git" by Scott Chacon](http://progit.org/book/ch4-6.html) and was on the section about "git instaweb". This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view): 
     

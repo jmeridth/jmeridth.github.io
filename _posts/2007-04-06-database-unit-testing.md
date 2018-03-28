@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Database unit testing
-date: 2007/04/06 14:31:00
+date: 2007-04-06 14:31:00 -05:00
+layout: post
 ---
-
 
 **Question**:  _How do you handle database unit testing?_
 

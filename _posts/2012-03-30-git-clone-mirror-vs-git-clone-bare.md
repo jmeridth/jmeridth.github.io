@@ -1,8 +1,9 @@
 ---
-layout: post
 title: git clone --mirror vs git clone --bare
-date: 2012/03/30 00:00:00
-tags: git 
+date: 2012-03-30 00:00:00 -05:00
+tags:
+- git
+layout: post
 ---
 
 I setup [GitWeb][1] at work recently. It is very fast and extremely useful. I noticed that the repositories the web view was looking at didn’t show acategory or other branches. Only the master branch. I had used

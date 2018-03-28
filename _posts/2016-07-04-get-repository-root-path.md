@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Get Repository Root Path
-date: 2016/07/04 20:52:00
-tags: git
+date: 2016-07-04 20:52:00 -05:00
+tags:
+- git
+layout: post
 ---
 
 I needed to find a way to get the path to the root of my Git repository.  I found the answer in the following command:

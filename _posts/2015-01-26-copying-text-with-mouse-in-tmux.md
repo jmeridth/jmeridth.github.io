@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Copying Text With Mouse In TMUX
-date: 2015-01-26 08:46:04 UTC-06:00
-tags: tmux
+date: 2015-01-26 08:46:04 -06:00
+tags:
+- tmux
+layout: post
 ---
 
 TL;DR

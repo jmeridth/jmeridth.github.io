@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Coding Structure and Standards
-date: 2007/02/17 01:02:00
+date: 2007-02-17 01:02:00 -06:00
+layout: post
 ---
-
 
 Today I had a good conversation with a colleague about software structure and coding standards.  His beliefs are that a class should be a monolithic so the maintenance is centralized and everything a developer, mainly newbie or junior, needs is right there for him/her to maintain/expand the class.
 

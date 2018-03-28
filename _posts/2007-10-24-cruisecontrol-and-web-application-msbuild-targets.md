@@ -1,9 +1,8 @@
 ---
-layout: post
 title: CruiseControl and Web Application MSBuild Targets
-date: 2007/10/24 14:59:01
+date: 2007-10-24 14:59:01 -05:00
+layout: post
 ---
-
 
 I was one of the developers that installed the [Web Application Projects MSI](http://msdn2.microsoft.com/en-us/asp.net/Aa336618.aspx) before Visual Studio Service Pack 1 was available.  After the service pack came out, I didn't uninstall the MSI and just installed the SP.  We all know and heard the horror stories on how long it took to install SP 1.
 

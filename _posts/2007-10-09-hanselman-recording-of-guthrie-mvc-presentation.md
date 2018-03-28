@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Hanselman recording of Guthrie MVC presentation
-date: 2007/10/09 18:47:07
+date: 2007-10-09 18:47:07 -05:00
+layout: post
 ---
-
 
 It's online:
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Microsoft Web Application Stress (WAS)
-date: 2007/01/23 00:54:00
+date: 2007-01-23 00:54:00 -06:00
+layout: post
 ---
-
 
 Microsoft's [Web Application Stress](http://www.microsoft.com/downloads/details.aspx%3fFamilyID%3dE2C0585A-062A-439E-A67D-75A89AA36495%26displaylang%3den) Tool provides an easy way to simulate large numbers of users against your Web application.  
   

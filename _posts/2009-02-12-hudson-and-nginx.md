@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Hudson and Nginx
-date: 2009/02/12 04:46:00
+date: 2009-02-12 04:46:00 -06:00
+layout: post
 ---
-
 
 UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don't need the Hudson security. Every developer should be able to manage the CI server. I'm just trying to prevent external access to the dashboard.
 

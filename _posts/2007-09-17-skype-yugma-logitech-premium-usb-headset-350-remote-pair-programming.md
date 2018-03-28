@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Skype + Yugma + Logitech Premium USB Headset 350 = Remote Pair Programming
-date: 2007/09/17 13:19:00
+date: 2007-09-17 13:19:00 -05:00
+layout: post
 ---
-
 
 My co-worker, [Nelson](http://codemonkey.nmonta.com/), and I did some remote pair programming on a side project this weekend.  He had talked about [Skype ](http://www.skype.com/)and the [YugmaSkype ](http://www.yugma.com/yugmaskype/)plug-in for a couple days.  I finally went by Altex and purchased some [Logitech Premium USB Headset 350](http://www.logitech.com/index.cfm/webcam_communications/internet_headsets_phones/devices/230&cl=us,en) (mic included) = $45+. When I got home I IMed Nelson and brought up Skype. He initiated the call.  It's just like talking on the phone.  (Before you purchase headphones, check the [skype certified list)](http://us.accessories.skype.com/DRHM/servlet/ControllerServlet?Action=DisplayCategoryListPage&SiteID=skype&Locale=en_US&Env=BASE&categoryID=4141900&cm_mmc=google/search-_-brand_hw-_-US/EN-_-america/WO-NA-US:EN:HW/skype%20headset/skype%20headset/Broad/916407746)  
   

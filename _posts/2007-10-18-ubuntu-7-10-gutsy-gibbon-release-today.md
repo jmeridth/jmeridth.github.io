@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Ubuntu 7.10 (Gutsy Gibbon) release today!
-date: 2007/10/18 12:17:41
+date: 2007-10-18 12:17:41 -05:00
+layout: post
 ---
-
 
 If you are a Linux fan (or you already know of Ubuntu), the [downloads](http://www.ubuntu.com/getubuntu/download) for 7.10 became available today.
 

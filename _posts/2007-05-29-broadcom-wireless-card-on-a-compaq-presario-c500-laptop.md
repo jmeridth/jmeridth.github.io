@@ -1,9 +1,9 @@
 ---
+title: Ubuntu Feisty Fawn and the Broadcom wireless card on a Compaq Presario C500
+  Laptop
+date: 2007-05-29 21:06:00 -05:00
 layout: post
-title: Ubuntu Feisty Fawn and the Broadcom wireless card on a Compaq Presario C500 Laptop
-date: 2007/05/29 21:06:00
 ---
-
 
 You'd start to think that I'm no longer a developer, and more of a architecture IT person now with all of the latest Linux installation posts I've had lately.  These are do to the new tricks/fixes I'm having to learn to get Ubuntu Feisty Fawn to not be so feisty.  It's still better than Vista (for AgileJoe, knowing his comments are coming)
 

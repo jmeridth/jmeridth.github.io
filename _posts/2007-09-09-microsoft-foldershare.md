@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Microsoft FolderShare
-date: 2007/09/09 02:13:34
+date: 2007-09-09 02:13:34 -05:00
+layout: post
 ---
-
 
 Today I was working with a co-worker, [Nelson Montalvo](http://codemonkey.nmonta.com/), and talking to him about my file transfer woes with moving this site and other sites to a new server.  Lots of files.  He mentioned a software package, [FolderShare](https://www.foldershare.com/), that I tried tonight and now believe I owe Nelson a steak dinner.  It is AWESOME!!
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Austin .NET Users Group (ADNUG) Code Camp
-date: 2007/01/07 00:43:00
+date: 2007-01-07 00:43:00 -06:00
+layout: post
 ---
-
 
 The [Austin .NET Users Group (ADNUG)](http://www.adnug.org/), which consists of a good number of the CodeBetter.com developers, is hosting thier FREE Code Camp again this year.  
 An email was sent out to the ADNUG forum stating tdates and times would be posted sometime next week.  

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Don't poke the penguin
-date: 2007/05/13 19:49:00
+date: 2007-05-13 19:49:00 -05:00
+layout: post
 ---
-
 
 Microsoft must really be hurting.....they just made the claim that Linux violates 235 of it's patents.  SCO tried this recently and got it's butt humiliated.  The linux community didn't have to do anything.
 

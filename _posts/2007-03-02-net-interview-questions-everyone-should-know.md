@@ -1,9 +1,8 @@
 ---
+title: ".NET interview questions everyone should know"
+date: 2007-03-02 01:03:00 -06:00
 layout: post
-title: .NET interview questions everyone should know
-date: 2007/03/02 01:03:00
 ---
-
 
 **VERY GOOD READS**
 

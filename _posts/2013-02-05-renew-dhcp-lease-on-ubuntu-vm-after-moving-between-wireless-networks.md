@@ -1,8 +1,11 @@
 ---
-layout: post
 title: Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks
-date: 2013/02/05 00:00:00
-tags: ubuntu networking wireless
+date: 2013-02-05 00:00:00 -06:00
+tags:
+- ubuntu
+- networking
+- wireless
+layout: post
 ---
 
 TL;DR

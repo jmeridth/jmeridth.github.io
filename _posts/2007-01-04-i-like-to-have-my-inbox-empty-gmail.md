@@ -1,9 +1,8 @@
 ---
-layout: post
 title: I like to have my inbox empty - Gmail
-date: 2007/01/04 00:41:00
+date: 2007-01-04 00:41:00 -06:00
+layout: post
 ---
-
 
 1. Create a label (i.e., Saved) 
   2. Apply that label to your email. 

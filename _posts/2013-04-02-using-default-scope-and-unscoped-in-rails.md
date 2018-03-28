@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Using Default Scope and Unscoped in Rails
-date: 2013/04/02 00:00:00
-tags: rails
+date: 2013-04-02 00:00:00 -05:00
+tags:
+- rails
+layout: post
 ---
 
 I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Castle Project
-date: 2006/12/14 00:30:00
+date: 2006-12-14 00:30:00 -06:00
+layout: post
 ---
-
 
 I'm currently studying up on the [Castle Project](http://www.castleproject.org/).  It is currently scheduled for release in January of 2007, but the public API code is pretty much complete; it won't change.
 

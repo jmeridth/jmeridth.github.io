@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Create Rails Application in Current Directory
-date: 2012/10/25 00:00:00
-tags: rails 
+date: 2012-10-25 00:00:00 -05:00
+tags:
+- rails
+layout: post
 ---
 
 Yes, I know the common way to create a Rails application is

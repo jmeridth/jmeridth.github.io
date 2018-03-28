@@ -1,9 +1,8 @@
 ---
-layout: post
 title: San Antonio community
-date: 2009/04/21 14:53:00
+date: 2009-04-21 14:53:00 -05:00
+layout: post
 ---
-
 
 This list is for any developers in the San Antonio, TX area.  These are the communities that are growing/starting that I've been involved (member/leader).  If anyone knows of others please leave a comment and I'll update the post.  (Man we love our Tuesdays in San Antonio, every Tuesday is a group meeting)
 

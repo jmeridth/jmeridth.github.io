@@ -1,9 +1,8 @@
 ---
+title: Ubuntu's
+date: 2007-06-26 00:42:51 -05:00
 layout: post
-title: Ubuntu's #1 Bug Report
-date: 2007/06/26 00:42:51
 ---
-
 
 LOL!!  Just please go read it:
 

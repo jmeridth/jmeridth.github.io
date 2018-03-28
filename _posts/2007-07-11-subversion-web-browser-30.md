@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Subversion web browser ($30)
-date: 2007/07/11 11:50:00
+date: 2007-07-11 11:50:00 -05:00
+layout: post
 ---
-
 
 Check it out at [WarehouseApp](http://warehouseapp.com/)
 

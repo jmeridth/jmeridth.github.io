@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Update - TeamCity
-date: 2008/02/18 16:09:56
+date: 2008-02-18 16:09:56 -06:00
+layout: post
 ---
-
 
 As you saw from my [last TeamCity post](http://www.lostechies.com/blogs/jason_meridth/archive/2008/01/24/jetbrains-teamcity.aspx), I was a little frustrated about the fact that I had to create an environment variable to use the NAnt runner.  A colleague, [Dru Sellers](http://geekswithblogs.net/dsellers/Default.aspx), contacted me and mentioned the Command Line Build Runner.  He understood that I don't like my build process to be dependent on anything on the server, so I should be able to deploy my source to any server (minus the website being setup in IIS - automating that process is a post for another day).
 

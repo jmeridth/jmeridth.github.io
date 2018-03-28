@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Pragmatic Programmer by Hunt/Thomas
-date: 2007/01/10 00:50:00
+date: 2007-01-10 00:50:00 -06:00
+layout: post
 ---
-
 
 A good introduction to Agile methodologies and basic OO best practices.
 

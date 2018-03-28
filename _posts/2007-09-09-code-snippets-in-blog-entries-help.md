@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Code snippets in blog entries, HELP!
-date: 2007/09/09 11:34:45
+date: 2007-09-09 11:34:45 -05:00
+layout: post
 ---
-
 
 **_UPDATE: Problem solved.  Had to uninstall VSPaste plug-in first and uninstall the Code Snippet plug-in, restart, and then re-install.  Fun fun.  Newbie problem_**
 

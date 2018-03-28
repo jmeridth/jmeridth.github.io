@@ -1,10 +1,10 @@
 ---
-layout: post
 title: Suspicious Patch Lines
-date: 2010/02/27 19:21:00
-tags: git
+date: 2010-02-27 19:21:00 -06:00
+tags:
+- git
+layout: post
 ---
-
 
 DISCLAIMER: This is _only_ relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.
 

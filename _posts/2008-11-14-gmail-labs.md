@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Gmail Labs
-date: 2008/11/14 13:51:08
+date: 2008-11-14 13:51:08 -06:00
+layout: post
 ---
-
 
 Maybe I'm a little late noticing this, but the Labs option once you're in your gmail settings:
 

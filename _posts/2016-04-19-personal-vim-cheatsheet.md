@@ -1,9 +1,11 @@
 ---
-layout: post
 title: Personal VIM Cheatsheet
+date: 2016-04-19 15:36:00 -05:00
+tags:
+- vim
+- cli
+layout: post
 original: 2014/03/03 16:21:02
-date: 2016/04/19 15:36:00
-tags: vim cli
 ---
 
 _Originally posted on 03-03-2014 and continually updated_

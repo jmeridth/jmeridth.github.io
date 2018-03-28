@@ -1,9 +1,8 @@
 ---
-layout: post
 title: In Memory of Nelson Montalvo
-date: 2008/12/11 04:12:00
+date: 2008-12-11 04:12:00 -06:00
+layout: post
 ---
-
 
 Moved to <http://www.nelsonmontalvo.com/blog>
 

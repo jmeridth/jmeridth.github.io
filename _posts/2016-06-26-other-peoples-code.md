@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Other People's Code
-date: 2016/06/26 14:51:00
-tags: coding
+date: 2016-06-26 14:51:00 -05:00
+tags:
+- coding
+layout: post
 ---
 
 TL;DR We are all continually improving.  Don't forget that.

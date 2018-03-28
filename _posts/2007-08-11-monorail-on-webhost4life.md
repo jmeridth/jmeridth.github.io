@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Monorail on WebHost4Life
-date: 2007/08/11 04:38:40
+date: 2007-08-11 04:38:40 -05:00
+layout: post
 ---
-
 
 If anyone else is using hosting with [WebHost4Life](http://www.webhost4life.com), I've gotten a Monorail site up there pretty quick using the MonoRailHttpHandlerFactory in my web.config, as suggested by the [Castle Monorail installation documentation](http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html#DeployingToSharedHost). _ Please note that the documentation has .ashx, it should be .aspx_. 
 

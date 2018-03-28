@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Gnome-Do (aka Quick Silver for Ubuntu)
-date: 2008/09/18 16:21:00
+date: 2008-09-18 16:21:00 -05:00
+layout: post
 ---
-
 
 I've been using a MacBook Pro for about three months now.  Absolutely amazing.  No issues.
 

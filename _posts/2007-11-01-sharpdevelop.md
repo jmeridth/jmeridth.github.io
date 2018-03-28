@@ -1,9 +1,8 @@
 ---
-layout: post
 title: SharpDevelop
-date: 2007/11/01 23:02:03
+date: 2007-11-01 23:02:03 -05:00
+layout: post
 ---
-
 
 **_UPDATE: Be aware that SharpDevelop doesn't seem to support the Web Application Project support.  It will handle ASP.NET Web Site Creation (Normal 2.0 web site project) but is doesn't have the ability to handle the legacy (1.1-) way of site project layout._**
 

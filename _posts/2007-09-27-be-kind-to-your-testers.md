@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Be kind to your testers
-date: 2007/09/27 00:31:44
+date: 2007-09-27 00:31:44 -05:00
+layout: post
 ---
-
 
 Jeremy Miller posted about [Testers being pigs](http://codebetter.com/blogs/jeremy.miller/archive/2007/09/18/testers-are-pigs.aspx).  I have learned through my current position that he is completely correct.
 

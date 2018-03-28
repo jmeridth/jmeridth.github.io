@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Using gsub to wrap substring
-date: 2009/09/10 19:56:47
+date: 2009-09-10 19:56:47 -05:00
+layout: post
 ---
-
 
 Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak's ["gsub with a block"](http://robots.thoughtbot.com/post/183070874/gsub-with-a-block) post on [the Thoughtbot blog](http://robots.thoughtbot.com).
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Library Thing
-date: 2008/11/27 17:11:00
+date: 2008-11-27 17:11:00 -06:00
+layout: post
 ---
-
 
 **_UPDATE: Shelfari.com has a much better UI and is just as awesome.  I've made the switch_**
 

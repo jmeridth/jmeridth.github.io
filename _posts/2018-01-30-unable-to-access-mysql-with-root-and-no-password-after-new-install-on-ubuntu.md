@@ -1,8 +1,10 @@
 ---
-tags: mysql ubuntu
-layout: post
 title: Unable To Access Mysql With Root and No Password After New Install On Ubuntu
-date: '2018/01/30 18:13:00'
+date: 2018-01-30 18:13:00 -06:00
+tags:
+- mysql
+- ubuntu
+layout: post
 ---
 
 This bit me in the rear end again today.  Had to reinstall mysql-server-5.7 for other reasons.

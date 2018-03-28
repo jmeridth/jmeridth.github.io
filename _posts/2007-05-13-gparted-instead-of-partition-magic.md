@@ -1,9 +1,8 @@
 ---
-layout: post
 title: GParted instead of Partition Magic
-date: 2007/05/13 19:50:49
+date: 2007-05-13 19:50:49 -05:00
+layout: post
 ---
-
 
 I've used Partition Magic for years.  I unfortunately lost my bootable CD and have hesitated purchasing the software again.  I went to CompUSA this weekend to look into purchasing it again and was asking the rep where I could find it.  As I was asking, I just muttered, "I wish there was a free open source alternative to this."  The rep said, "Have you heard of GParted?"  I started a little smirk.  I asked him, "Is that an open source alternative to Partition Magic?"   He said, "Yep."  I left CompUSA, went straight home and downloaded GParted.
 

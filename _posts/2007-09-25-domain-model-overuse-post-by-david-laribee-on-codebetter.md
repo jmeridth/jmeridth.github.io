@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Domain Model Overuse post by David Laribee on CodeBetter
-date: 2007/09/25 12:21:44
+date: 2007-09-25 12:21:44 -05:00
+layout: post
 ---
-
 
 David Laribee recently posted on [Domain Model Overuse](http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx) and my colleague [Joe Ocampo (AgileJoe) responded](http://codebetter.com/blogs/david_laribee/archive/2007/09/24/domain-model-overuse.aspx#comments).  Check out the comments.
 

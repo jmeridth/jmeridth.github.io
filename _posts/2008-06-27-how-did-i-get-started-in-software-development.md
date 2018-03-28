@@ -1,9 +1,8 @@
 ---
-layout: post
 title: How did I get started in software development?
-date: 2008/06/27 22:41:00
+date: 2008-06-27 22:41:00 -05:00
+layout: post
 ---
-
 
 Thanks for tagging me [Joey.](http://joeybeninghove.lostechies.com)
 

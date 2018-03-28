@@ -1,9 +1,8 @@
 ---
+title: MonoRail
+date: 2007-09-26 15:08:25 -05:00
 layout: post
-title: MonoRail #4: Validation
-date: 2007/09/26 15:08:25
 ---
-
 
 This post was decided upon after watching [Hammet](http://hammett.castleproject.org/)'s [screencast](http://hammett.castleproject.org/wp-content/uploads/2007/01/mr%20formvalidation.html) on using attribute-based validation in MonoRail.
 

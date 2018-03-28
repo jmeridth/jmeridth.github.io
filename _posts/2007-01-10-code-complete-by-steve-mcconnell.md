@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Code Complete by Steve McConnell
-date: 2007/01/10 00:48:00
+date: 2007-01-10 00:48:00 -06:00
+layout: post
 ---
-
 
 One of the BEST centralized points of programming knowledge.
 

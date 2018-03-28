@@ -1,8 +1,9 @@
 ---
-layout: post
 title: How I Setup My Local Python Environment
-date: 2016/06/26 11:04:10
-tags: python
+date: 2016-06-26 11:04:10 -05:00
+tags:
+- python
+layout: post
 ---
 
 I've had a few people ask me lately how I setup my local python environment.

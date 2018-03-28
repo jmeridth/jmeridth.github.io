@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Rhino Mocks 3.3 is out!!
-date: 2007/10/26 16:35:00
+date: 2007-10-26 16:35:00 -05:00
+layout: post
 ---
-
 
 Check out Oren's (Ayende Rahien) post [here](http://ayende.com/Blog/archive/2007/10/26/Rhino-Mocks-3.3.aspx).
 

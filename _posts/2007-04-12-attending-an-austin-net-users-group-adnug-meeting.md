@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Attending an Austin .NET Users Group (ADNUG) meeting
-date: 2007/04/12 20:43:21
+date: 2007-04-12 20:43:21 -05:00
+layout: post
 ---
-
 
 This past Monday I attended the ADNUG meeting in the Microsoft Technology center building in Austin, TX.  I went with 4 team members from LosTechies.com.
 

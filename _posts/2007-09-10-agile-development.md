@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Agile Development
-date: 2007/09/10 01:27:00
+date: 2007-09-10 01:27:00 -05:00
+layout: post
 ---
-
 
 Currently I'm working on a team of 8 developers and have been practicing Agile for just under 2 years now.  I read about it and tried a couple time before this 2 year span, but didn't realize how wrong I was approaching it.  [Scott Bellware](http://codebetter.com/blogs/scott.bellware/default.aspx) has been posting about how [Agile development does not have the answers](http://codebetter.com/blogs/scott.bellware/archive/2007/09/09/167738.aspx) and this line:
 

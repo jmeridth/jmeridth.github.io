@@ -1,8 +1,11 @@
 ---
-layout: post
 title: Meta keys with iTerm and Weechat
-date: 2015/07/14 10:12:00
-tags: weechat irc cli
+date: 2015-07-14 10:12:00 -05:00
+tags:
+- weechat
+- irc
+- cli
+layout: post
 ---
 
 Found [this][1] tip today about how to ensure your iTerm console sends `+Esc` to weechat for the meta keys to work properly.

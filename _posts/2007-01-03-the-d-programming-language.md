@@ -1,9 +1,8 @@
 ---
-layout: post
 title: The D Programming Language
-date: 2007/01/03 00:40:00
+date: 2007-01-03 00:40:00 -06:00
+layout: post
 ---
-
 
 Slashdot has posted a new [article](http://developers.slashdot.org/article.pl%3fsid%3d07/01/01/2041256%26from%3drss) about the D programming language.
 

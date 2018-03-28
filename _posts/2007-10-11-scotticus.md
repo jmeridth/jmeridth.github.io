@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Scotticus
-date: 2007/10/11 01:55:34
+date: 2007-10-11 01:55:34 -05:00
+layout: post
 ---
-
 
 "Even A**holes do great things" ~ (stated by Scott at the end of the ALT.net conference)
 

@@ -1,9 +1,8 @@
 ---
+title: Monorail
+date: 2007-09-08 21:20:00 -05:00
 layout: post
-title: Monorail #2 : Layouts & Rescues
-date: 2007/09/08 21:20:00
 ---
-
 
 ## **_LAYOUTS_**
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Agile Cheat Sheet
-date: 2007/09/18 23:08:58
+date: 2007-09-18 23:08:58 -05:00
+layout: post
 ---
-
 
 Excellent [post](http://feeds.feedburner.com/~r/GrabBagOfT/~3/158079288/agile-cheat-sheet.html) by Jimmy Bogard.
 

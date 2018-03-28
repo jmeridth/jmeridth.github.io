@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Automatically Execute Mistyped Git Commands
-date: 2012/05/22 00:00:00
-tags: git 
+date: 2012-05-22 00:00:00 -05:00
+tags:
+- git
+layout: post
 ---
 
 I use the command line with Git. I do this because I type faster than I use my mouse. It is a personal preference. Due to this, I sometimes fat finger Git commands. Yeah, it does happen. For example, I can type:

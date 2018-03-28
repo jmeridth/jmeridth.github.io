@@ -1,8 +1,10 @@
 ---
-layout: post
 title: Get Sinatra and Shotgun gem working on Vagrant
-date: 2013/03/06 00:00:00
-tags: sinatra vagrant
+date: 2013-03-06 00:00:00 -06:00
+tags:
+- sinatra
+- vagrant
+layout: post
 ---
 
 TL;DR

@@ -1,8 +1,9 @@
 ---
+title: Git and Seeting What Commits Are Not In Another Branch
+date: 2012-05-22 00:00:00 -05:00
+tags:
+- git
 layout: post
-title:  Git and Seeting What Commits Are Not In Another Branch
-date: 2012/05/22 00:00:00
-tags: git 
 ---
 
 A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff`but I've started telling them to look at`git cherry` (NOT git-cherry-pick).

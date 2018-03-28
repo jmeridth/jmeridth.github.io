@@ -1,9 +1,8 @@
 ---
-layout: post
 title: I didn't think websites still required a certain platform...
-date: 2007/09/03 03:43:54
+date: 2007-09-03 03:43:54 -05:00
+layout: post
 ---
-
 
 <rant>
 

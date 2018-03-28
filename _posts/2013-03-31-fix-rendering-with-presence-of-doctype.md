@@ -1,8 +1,10 @@
 ---
-layout: post
 title: Fix Rendering With Presence of Doctype
-date: 2013/03/31 00:00:00
-tags: html5 haml
+date: 2013-03-31 00:00:00 -05:00
+tags:
+- html5
+- haml
+layout: post
 ---
 
 A couple times now I’ve forgotten to render the DOCTYPE in my layouts on my web apps. The DOCTYPE element tells the browser what type of file to expect. It needs to be the first line in your document, so it usually goes in your application layout file.

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: People vs. tools
-date: 2007/11/26 00:38:00
+date: 2007-11-26 00:38:00 -06:00
+layout: post
 ---
-
 
 I'm not a very theoretical guy.  I don't like to discuss things to no solution.  When presented with a new idea, I like to see the code, tool, or mechanism that helps put that theory/idea into action.  I'm fine tuning (still working very hard at) my people skills.  I know that in order for software to succeed it's the communication that matters.  I can usually make people think about what they want and they usually know they need to be prepared when they approach me, because I don't like to waste time.  I like the occasional "check my email" or "watch that YouTube video"; so don't get me wrong.
 

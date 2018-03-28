@@ -1,10 +1,10 @@
 ---
-layout: post
 title: Seeing which Git branch I'm on via my console prompt (__git_ps1)
-date: 2010/05/23 02:55:00
-tags: git
+date: 2010-05-23 02:55:00 -05:00
+tags:
+- git
+layout: post
 ---
-
 
 I like knowing which Git branch I’m currently in. I use the git-ps1 function feature that comes with git-core. If you clone or download the git source:
     

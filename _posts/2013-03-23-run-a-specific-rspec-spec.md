@@ -1,8 +1,11 @@
 ---
-layout: post
 title: Run a Specific RSpec Spec
-date: 2013/03/23 00:00:00
-tags: testing tools rspec
+date: 2013-03-23 00:00:00 -05:00
+tags:
+- testing
+- tools
+- rspec
+layout: post
 ---
 
 Tired of looking this up and want to use my writing part of my brain to blog it:

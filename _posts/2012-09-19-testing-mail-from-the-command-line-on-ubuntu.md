@@ -1,10 +1,10 @@
 ---
-layout: post
 title: Testing Mail From the Command Line on Ubuntu
-date: 2012/09/19 00:00:00
+date: 2012-09-19 00:00:00 -05:00
 tags:
 - command line
-- ubuntu 
+- ubuntu
+layout: post
 ---
 
 Install mailutils

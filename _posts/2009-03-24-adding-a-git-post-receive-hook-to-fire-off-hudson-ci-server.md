@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Adding a git post-receive hook to fire off Hudson CI server
-date: 2009/03/24 18:07:00
+date: 2009-03-24 18:07:00 -05:00
+layout: post
 ---
-
 
 UPDATE: guard clause throws LocalJumpError. Changed to simple if block Context: I needed our hudson CI builds to auto-fire when a developer pushes their code changes to our canonical/upstream git repositories. In your .git/hooks/post-receive file place the file code (FULL CODE):
     

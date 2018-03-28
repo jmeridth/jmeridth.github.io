@@ -1,9 +1,8 @@
 ---
-layout: post
 title: ReSharper 4.0 Nightly builds
-date: 2008/03/12 01:41:11
+date: 2008-03-12 01:41:11 -05:00
+layout: post
 ---
-
 
 I just recently found out about this, and may be late on the band wagon, but you can download the ReSharper 4.0 nightly builds for free.  They last ~15 days, so you will have to uninstall the build you have and then install a more recent nightly build.
 

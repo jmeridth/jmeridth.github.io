@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Git Post-receive hook with integrity post call
-date: 2009/07/17 05:01:00
+date: 2009-07-17 05:01:00 -05:00
+layout: post
 ---
-
 
 Using the following code:
 

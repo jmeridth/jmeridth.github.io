@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Free design templates
-date: 2007/01/04 00:42:00
+date: 2007-01-04 00:42:00 -06:00
+layout: post
 ---
-
 
 For those developers who can't design very well (like myself), here is a link to a free design site:
 

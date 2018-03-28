@@ -1,9 +1,8 @@
 ---
+title: ".NET InternalsVisibleTo attribute == C++ Friend Assemblies"
+date: 2007-10-02 19:57:02 -05:00
 layout: post
-title: .NET InternalsVisibleTo attribute == C++ Friend Assemblies
-date: 2007/10/02 19:57:02
 ---
-
 
 To all developers who haven't heard of this, there is an ability to have a project, say a test project, to have access to another project's Internal classes. ([MSDN definition](http://msdn2.microsoft.com/en-us/library/0tke9fxk\(VS.80\).aspx)).
 

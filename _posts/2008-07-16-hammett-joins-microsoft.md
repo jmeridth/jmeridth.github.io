@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Hammett joins Microsoft
-date: 2008/07/16 02:50:53
+date: 2008-07-16 02:50:53 -05:00
+layout: post
 ---
-
 
 _Update: MEF == Managed Extensibility Framework_
 

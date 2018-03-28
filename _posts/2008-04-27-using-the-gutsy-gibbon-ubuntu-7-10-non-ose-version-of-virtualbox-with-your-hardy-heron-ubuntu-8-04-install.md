@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Ubuntu 8.04, VirtualBox, and USB support
-date: 2008/04/27 15:42:00
+date: 2008-04-27 15:42:00 -05:00
+layout: post
 ---
-
 
 _**UPDATE**: Make sure your user account is a member of the vboxusers account.  VirtualBox will not start and the error will tell you this, but just want to be explicit.  You will have to logout and log back in. _  
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: That was stupid! ~ Marcus Pwnage Pants Bratton
-date: 2008/01/18 19:09:00
+date: 2008-01-18 19:09:00 -06:00
+layout: post
 ---
-
 
 ![](http://www.dkimages.com/discover/previews/812/10089644.JPG)
 

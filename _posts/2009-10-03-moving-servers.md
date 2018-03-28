@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Moving servers
-date: 2009/10/03 03:32:00
+date: 2009-10-03 03:32:00 -05:00
+layout: post
 ---
-
 
 To our readers,
 

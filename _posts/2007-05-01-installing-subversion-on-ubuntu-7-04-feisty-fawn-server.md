@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server
-date: 2007/05/01 23:53:00
+date: 2007-05-01 23:53:00 -05:00
+layout: post
 ---
-
 
 This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network.  The next post will show how to set this up with svn+ssh, which is considered more secure.  
 To install subversion, open a terminal and run the following command:

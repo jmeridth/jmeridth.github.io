@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Child's Play Charity
-date: 2008/11/27 02:30:38
+date: 2008-11-27 02:30:38 -06:00
+layout: post
 ---
-
 
 ![image](jasonmeridth/files/2011/03/image_5.png)
 

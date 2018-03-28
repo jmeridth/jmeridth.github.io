@@ -1,9 +1,8 @@
 ---
-layout: post
 title: TextMate and Community Server 2008.5
-date: 2009/05/21 08:32:38
+date: 2009-05-21 08:32:38 -05:00
+layout: post
 ---
-
 
 This is my first blog post from TextMate on my Mac. I'm using the HTML formatting. I will try the markdown and textile versions later. The key to getting this working with Community Server was when you click "Bundles->Blogging->Setup Blogs" and the following template shows up:
 

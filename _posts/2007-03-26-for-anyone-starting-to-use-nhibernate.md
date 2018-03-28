@@ -1,9 +1,8 @@
 ---
-layout: post
 title: For anyone starting to use NHibernate
-date: 2007/03/26 21:32:00
+date: 2007-03-26 21:32:00 -05:00
+layout: post
 ---
-
 
 A good [blog entry ](http://ayende.com/Blog/archive/2007/03/26/NHibernate-Nullable-DateTime-Issues.aspx)by Oren (Ayende) about Nullable types and how NHibernate handles them.  I am starting to use NHibernate and will be sharing these jems as I find them. This is also a way for me to centralize them. =)
 

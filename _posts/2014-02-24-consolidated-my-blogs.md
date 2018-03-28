@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Consolidated My Blogs
-date: 2014/02/24 05:43:14
-tags: notification
+date: 2014-02-24 05:43:14 -06:00
+tags:
+- notification
+layout: post
 ---
 
 I finally consolidate my blogs that were located at:

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: EXCELLENT Post by Jeremy Miller of CodeBetter.com
-date: 2007/01/10 00:51:00
+date: 2007-01-10 00:51:00 -06:00
+layout: post
 ---
-
 
 [READ!!](http://codebetter.com/blogs/jeremy.miller/archive/2007/01/08/Orthogonal-Code.aspx)
 

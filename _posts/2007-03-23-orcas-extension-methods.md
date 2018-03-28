@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Orcas - Extension Methods
-date: 2007/03/23 21:33:00
+date: 2007-03-23 21:33:00 -05:00
+layout: post
 ---
-
 
 Again, I was reading Guthrie's blog and found his post on [Extension Methods](http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx)
 

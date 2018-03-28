@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Bill McCafferty is moving to Monorail
-date: 2007/05/29 15:33:00
+date: 2007-05-29 15:33:00 -05:00
+layout: post
 ---
-
 
 Bill McCafferty, the author of [NHibernate Best Practices on CodeProject](http://www.codeproject.com/aspnet/NHibernateBestPractices.asp), after researching many Separation of Concern Alternatives has decided to have his development team move to [Monorail](http://www.castleproject.org/monorail/index.html). ([read the post](http://devlicio.us/blogs/billy_mccafferty/archive/2007/05/29/concise-introduction-to-castle-monorail.aspx))
 

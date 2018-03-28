@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Bil Simser's elevator question
-date: 2008/04/17 11:30:00
+date: 2008-04-17 11:30:00 -05:00
+layout: post
 ---
-
 
 Bill [recently posted a question to the nerd community](http://weblogs.asp.net/bsimser/archive/2008/04/16/3-geeks-in-an-elevator.aspx) about, "...if you were stuck in an elevator with 2 other nerds, with no technology at all, who would you like the 2 other nerds to be?"
 

@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Installing Nexus 6 Factory Image
-date: 2016/10/31 15:37:00
-tags: android
+date: 2016-10-31 15:37:00 -05:00
+tags:
+- android
+layout: post
 ---
 
 I have a Google Nexus 6 that we purchased from AT&T.  It was damaged and I got it fixed.  It had Android 6.0.1 on it and I was waiting for AT&T to send the Nougat update (Android 7.0) but alas, nothing.  I then decided to just download the factory image from Google and load it onto the device myself.  Here is how I did that:

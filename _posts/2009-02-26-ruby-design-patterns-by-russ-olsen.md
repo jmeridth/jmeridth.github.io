@@ -1,10 +1,10 @@
 ---
-layout: post
 title: Ruby Design Patterns by Russ Olsen
-date: 2009/02/26 04:29:00
+date: 2009-02-26 04:29:00 -06:00
 tags:
-  - ruby
-  - design patterns
+- ruby
+- design patterns
+layout: post
 ---
 
 ![](http://www.informit.com/ShowCover.aspx?isbn=0321539265&type=f)

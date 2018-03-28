@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Selenium-client and fun
-date: 2009/02/12 04:35:00
+date: 2009-02-12 04:35:00 -06:00
+layout: post
 ---
-
 
 So I've had the pleasure of working with [selenium-client](http://github.com/ph7/selenium-client/tree/master), the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1\. You have Ruby 1.8+ installed 2\. You have rubygems installed I'm going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions. 
 

@@ -1,9 +1,8 @@
 ---
+title: Monorail
+date: 2007-09-18 15:27:10 -05:00
 layout: post
-title: Monorail #3 : Unit Testing and ViewComponents
-date: 2007/09/18 15:27:10
 ---
-
 
 #### UNIT TESTING
 

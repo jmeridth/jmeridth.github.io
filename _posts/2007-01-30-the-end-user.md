@@ -1,9 +1,8 @@
 ---
-layout: post
 title: The end user
-date: 2007/01/30 01:01:00
+date: 2007-01-30 01:01:00 -06:00
+layout: post
 ---
-
 
 I was recently speaking with a co-worker about how some projects get into a Death March because the development team never had the opportunity to speak with/see the end user.  On another project, I requested that I be able to sit with the end user for a full business day.  From that experience I was able to determine more about the software needs of the user than my entire business staff combined.  We realized that we didn't need certain sections of the application, but needed to beef up the main portion (the part the user utilized 99% of the time).
 

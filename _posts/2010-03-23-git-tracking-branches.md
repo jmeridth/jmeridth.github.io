@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Git tracking branches
-date: 2010/03/23 21:36:00
+date: 2010-03-23 21:36:00 -05:00
+layout: post
 ---
-
 
 I have encountered this message multiple times when dealing with Git:
     

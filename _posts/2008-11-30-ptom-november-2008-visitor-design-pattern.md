@@ -1,9 +1,8 @@
 ---
-layout: post
 title: PTOM - November 2008 - Visitor Design Pattern
-date: 2008/11/30 21:15:00
+date: 2008-11-30 21:15:00 -06:00
+layout: post
 ---
-
 
 ## Definition
 

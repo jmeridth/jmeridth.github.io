@@ -1,8 +1,10 @@
 ---
-tags: ubuntu vim
-layout: post
 title: Docker Daemon Error When Running Docker Compose
-date: '2018/01/02 12:11:00'
+date: 2018-01-02 12:11:00 -06:00
+tags:
+- ubuntu
+- vim
+layout: post
 ---
 
 ![docker why]({{ site.url }}/images/why-docker-why-i-just-want-to-deploy.jpg)

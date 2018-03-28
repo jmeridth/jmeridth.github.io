@@ -1,9 +1,8 @@
 ---
-layout: post
 title: MSDN - can't download with firefox
-date: 2008/04/27 03:26:00
+date: 2008-04-27 03:26:00 -05:00
+layout: post
 ---
-
 
 _**UPDATE**: I'm on Linux.  Getting this to work on Windows is simple enough, just like James mentions in the comments. Thanks. _
 

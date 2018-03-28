@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Git For Windows Developers – Git Series – Part 2
-date: 2009/06/04 05:49:00
+date: 2009-06-04 05:49:00 -05:00
+layout: post
 ---
-
 
 [Git For Windows Developers - Git Series - Part 1](/blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx)
 

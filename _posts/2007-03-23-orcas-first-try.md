@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Orcas - First try
-date: 2007/03/23 21:33:00
+date: 2007-03-23 21:33:00 -05:00
+layout: post
 ---
-
 
 After reading a post by Scott Guthrie on the [new C# Orcas language features](http://weblogs.asp.net/scottgu/archive/2007/03/08/new-c-orcas-language-features-automatic-properties-object-initializers-and-collection-initializers.aspx) I decided to download Orcas and try them out.  (**excited**)  
   

@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Use Git Grep to Replace Strings in Files in Your Git Repository
-date: 2013/02/11 00:00:00
-tags: git 
+date: 2013-02-11 00:00:00 -06:00
+tags:
+- git
+layout: post
 ---
 
 TL;DR

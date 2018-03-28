@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Creating an older rails project with multiple (newer) versions installed
-date: 2008/11/25 20:27:55
+date: 2008-11-25 20:27:55 -06:00
+layout: post
 ---
-
 
 I have been studying rspec the last week or two and have been using Rail 2.1.2 to do my exploring.  I was finally ready to jump into some legacy code and couldn't even create a spec folder on the directory tree because the version of rails was older: 
     

@@ -1,9 +1,8 @@
 ---
+title: Monorail
+date: 2007-08-24 08:01:00 -05:00
 layout: post
-title: Monorail #1 : Reasons, Setup and First Output
-date: 2007/08/24 08:01:00
 ---
-
 
 _**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2  **_
 

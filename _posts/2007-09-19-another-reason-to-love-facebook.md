@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Another reason to love FaceBook
-date: 2007/09/19 22:35:08
+date: 2007-09-19 22:35:08 -05:00
+layout: post
 ---
-
 
 Check out [this video](http://one.revver.com/watch/202104)
 

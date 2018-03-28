@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Windows Mobile 6
-date: 2007/02/09 01:02:00
+date: 2007-02-09 01:02:00 -06:00
+layout: post
 ---
 
 Microsoft announced the release of Windows Mobile 6 will during the second quarter of 2007.

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "'Printer Friendly Versions' of our posts now available"
-date: 2008/11/05 06:53:11
+date: 2008-11-05 06:53:11 -06:00
+layout: post
 ---
-
 
 ![Printer Friendly Version Example](jasonmeridth/files/2011/03/Picture-1_thumb.png)
 

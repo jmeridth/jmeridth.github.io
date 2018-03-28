@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Git For Windows Developers – Git Series - Part 1
-date: 2009/06/01 06:04:00
+date: 2009-06-01 06:04:00 -05:00
+layout: post
 ---
-
 
 _**UPDATE:** I’ve updated the msysgit installation screens so they are more current.  Git-1.7.7.1 is the latest one as of this update.  The subsequent screens show Git-1.6.3.  I assure you that all of the commands in the first three parts of this series will work on 1.6.3._ [Git For Windows Developers - Git Series - Part 1](/blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx) [Git For Windows Developers - Git Series - Part 2 ](/blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx) [Git For Windows Developers - Git Series - Part 3](/blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx) This post is going to be the first of a few. I plan to convey everything I've learned the past 8 months while using git on a development team. I'm currently working on a Macbook Pro, doing Ruby on Rails development with git as the source control.  These posts will be specific to using git on the Windows operating system. This post is going to talk about installing msysgit, creating ssh keys, and creating a local git repository. If you already have msysgit installed, have created your ssh keys, and have an existing application you just want to put in a git repository, go here
 

@@ -1,10 +1,11 @@
 ---
-layout: post
 title: Gitosis and Gitweb - Part 3
-date: 2010/05/26 04:45:00
-tags: git gitosis
+date: 2010-05-26 04:45:00 -05:00
+tags:
+- git
+- gitosis
+layout: post
 ---
-
 
 [Gitosis and Gitweb – Part 1](/posts/gitosis-and-gitweb-part-1)
 

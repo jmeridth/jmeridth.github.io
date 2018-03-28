@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Twitterfeed.com killed my Google Reader
-date: 2008/11/30 23:37:00
+date: 2008-11-30 23:37:00 -06:00
+layout: post
 ---
-
 
 ![image](//lostechies.com/jasonmeridth/files/2011/03/image_3.png)
 

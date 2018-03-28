@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Getting Going With Docker
-date: 2016/03/22 00:00:00
-tags: docker
+date: 2016-03-22 00:00:00 -05:00
+tags:
+- docker
+layout: post
 ---
 
 UPDATE: Looks like this post is moot as of today 3/24/2016 due to [Docker for Mac and Docker for Windows](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) betas coming out

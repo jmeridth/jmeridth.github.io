@@ -1,9 +1,8 @@
 ---
-layout: post
 title: ALT.net Yahoo Group
-date: 2007/11/15 13:06:21
+date: 2007-11-15 13:06:21 -06:00
+layout: post
 ---
-
 
 You think it's getting hit a little hard?
 

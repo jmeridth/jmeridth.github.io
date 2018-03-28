@@ -1,9 +1,8 @@
 ---
+title: ".net 3.5 install, anyone using a modem?"
+date: 2007-11-26 22:11:56 -06:00
 layout: post
-title: .net 3.5 install, anyone using a modem?
-date: 2007/11/26 22:11:56
 ---
-
 
 ![image](blogs/jason_meridth/WindowsLiveWriter/.net3.5installanyoneusingamodem_F1B9/image_thumb.png)
 

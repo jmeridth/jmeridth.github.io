@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Firefox Hudson Build Monitor add-on
-date: 2009/03/05 02:19:00
+date: 2009-03-05 02:19:00 -06:00
+layout: post
 ---
-
 
 MOZILLA: READ THIS!  
   

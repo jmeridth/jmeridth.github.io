@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Thoughts about reading computer books
-date: 2007/01/26 00:59:00
+date: 2007-01-26 00:59:00 -06:00
+layout: post
 ---
-
 
 I have been coding ASP.NET for about 4 years now.  I had a co-worker bring a book to wotitle "Essential ASP.NET" by Fritz Onion.  I skimmed it and it looked very interesting do to it's text on application pools and low level information that I've always taken for granted.  I finished reading a few of the other books lounging around my house and decided that I wanted to read it.  I inquired with my co-worker on that very thing and he told me he had given it to another co-worker.  To make a long story short, I'm currently borrowing that copy of the text.  
   

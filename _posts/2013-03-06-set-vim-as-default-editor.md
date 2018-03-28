@@ -1,8 +1,11 @@
 ---
-layout: post
 title: Set VIM as Default Editor
-date: 2013/03/06 00:00:00
-tags: tools vim ubuntu
+date: 2013-03-06 00:00:00 -06:00
+tags:
+- tools
+- vim
+- ubuntu
+layout: post
 ---
 
 Environment: Ubuntu

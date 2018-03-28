@@ -1,8 +1,10 @@
 ---
-layout: post
 title: Git Achievements on Windows (Part 3)
-date: 2012/03/21 00:00:00
-tags: git windows 
+date: 2012-03-21 00:00:00 -05:00
+tags:
+- git
+- windows
+layout: post
 ---
 
 [Part 1][1]

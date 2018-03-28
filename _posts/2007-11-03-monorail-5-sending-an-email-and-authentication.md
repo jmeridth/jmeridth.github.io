@@ -1,9 +1,8 @@
 ---
+title: MonoRail
+date: 2007-11-03 01:59:40 -05:00
 layout: post
-title: MonoRail #5: Sending an Email and Authentication
-date: 2007/11/03 01:59:40
 ---
-
 
 ### RECAP
 

@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Some good finds lately
-date: 2007/03/22 21:33:00
+date: 2007-03-22 21:33:00 -05:00
+layout: post
 ---
-
 
 1. [An Open Letter to Scott Guthrie](http://elegantcode.com/?p=539)
   2. [Free ASP.NET 2.0, LINQ, AJAX, etc. Videos](http://www.asp.net/learn/videos/default.aspx?tabid=63)

@@ -1,10 +1,11 @@
 ---
-layout: post
 title: Gitosis and Gitweb - Part 1 - Setup
-date: 2010/05/25 02:42:00
-tags: git gitosis
+date: 2010-05-25 02:42:00 -05:00
+tags:
+- git
+- gitosis
+layout: post
 ---
-
 
 I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is [Github.com](http://github.com). If they say, “private” I still say Github.  If they don't ["trust" Github](http://github.com/security), which they should - click the link, then my response is [Gitosis](http://eagain.net/gitweb/?p=gitosis.git;a=summary) and [Gitweb](http://git.wiki.kernel.org/index.php/Gitweb). This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.
 

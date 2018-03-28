@@ -1,9 +1,8 @@
 ---
-layout: post
 title: MonoRail HotSwap
-date: 2007/09/23 19:27:16
+date: 2007-09-23 19:27:16 -05:00
+layout: post
 ---
-
 
 Ayende (pronounced A-yend  (no eh at the end) - verified in this [post](http://ayende.com/Blog/archive/2007/09/23/MonoRail.HotSwap-in-Action.aspx) after hearing Colin pronounce it) posted on an idea he has - [MonoRail HotSwap](http://ayende.com/Blog/archive/2007/09/22/Introducing-MonoRail.HotSwap.aspx) and [Colin Ramsay](http://colinramsay.co.uk/) did a [screencast of MonoRail HotSwap](http://colinramsay.co.uk/2007/09/23/hotswap-for-monorail-in-action/).  I know that the AppDomain having to reset because a code change occurred can be annoying sometimes, but it hasn't bothered me to the point where I would need this feature.  However, it is still very cool how the Windsor container is swapping out the old code for the new but doesn't change the dll in the bin directory, therefore the AppDomain doesn't need to refresh.  Check out the screencast.
 

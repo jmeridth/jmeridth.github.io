@@ -1,9 +1,8 @@
 ---
-layout: post
 title: The Anti-team
-date: 2007/01/23 00:53:00
+date: 2007-01-23 00:53:00 -06:00
+layout: post
 ---
-
 
 Jeremy Miller of [CodeBetter](http://www.ayende.com) have two good posts about the the anti team.
 

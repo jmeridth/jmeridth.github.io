@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "'Bad Interpreter: No Medium' error when running Ruby from Git Bash"
-date: 2009/10/06 14:50:00
+date: 2009-10-06 14:50:00 -05:00
+layout: post
 ---
-
 
 I opened my Windows VM last night for the first time in months to finally work on a .NET project from Github.  When I found out I needed the rspec gem installed (I'm normally a shoulda guy), I decided to see what gems I had installed first:
     

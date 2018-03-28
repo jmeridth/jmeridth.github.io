@@ -1,8 +1,9 @@
 ---
-layout: post
 title: How To Use the Python Debugger aka pdb
-date: 2016/06/22 15:10:10
-tags: python
+date: 2016-06-22 15:10:10 -05:00
+tags:
+- python
+layout: post
 ---
 
 I have been using the Python Debugger aka pdb [docs for 2.7](https://docs.python.org/2/library/pdb.html)/[docs for 3.5](https://docs.python.org/3.5/library/pdb.html) a lot recently and wanted to share a cheat sheet I found and also the common commands I use.

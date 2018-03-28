@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Very cool javascript trick with websites
-date: 2007/01/09 00:44:00
+date: 2007-01-09 00:44:00 -06:00
+layout: post
 ---
-
 
 Found this blog entry showing you how to take all images on a site and put them into a tornado.
 

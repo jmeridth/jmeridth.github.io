@@ -1,8 +1,11 @@
 ---
-layout: post
 title: Weechat keyboard shortcuts
-date: 2014/03/14 23:52:39
-tags: weechat irc cli
+date: 2014-03-14 23:52:39 -05:00
+tags:
+- weechat
+- irc
+- cli
+layout: post
 ---
 
 I've switched from using irssi to [Weechat](http://weechat.org) since I rejoined the ranks as a [Racker](http://www.rackspace.com).

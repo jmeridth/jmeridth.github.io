@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Law of Demeter (Principle of Least Knowledge)
-date: 2007/01/10 00:46:00
+date: 2007-01-10 00:46:00 -06:00
+layout: post
 ---
-
 
 I was reading up on the Law of Demeter again after reading [Jeremy Miller's post about orthogonality](http://codebetter.com/blogs/jeremy.miller/archive/2007/01/08/Orthogonal-Code.aspx) (good post by the way).
 

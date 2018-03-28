@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Git local pre-commit hook
-date: 2009/09/10 16:47:21
+date: 2009-09-10 16:47:21 -05:00
+layout: post
 ---
-
 
 I've personally added a pre-commit hook to my local git repos. It's like a personal CI before I push back to origin/master. I run my tests locally anyway before committing and pushing, so I thought I would automate it.
 

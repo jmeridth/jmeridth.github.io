@@ -1,9 +1,11 @@
 ---
-tags: lenovo
-layout: post
 title: Lenovo Thinkpad - Swap ctrl and fn keys
-date: '2017/11/22 10:18:00'
+date: 2017-11-22 10:18:00 -06:00
+tags:
+- lenovo
+layout: post
 ---
+
 I just got a new laptop.  It is a Lenovo Thinkpad X1 Carbon 5th Gen.
 
 Ubuntu 17.10

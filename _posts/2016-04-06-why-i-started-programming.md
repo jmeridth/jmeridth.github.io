@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Why I started programming
-date: 2016/04/06 15:23:00
-tags: personal
+date: 2016-04-06 15:23:00 -05:00
+tags:
+- personal
+layout: post
 ---
 
 I've been interviewing a lot lately since I was let go from my last gig.  During the interviews I've been asked a few times when and why I started programming.  My answer is the following:

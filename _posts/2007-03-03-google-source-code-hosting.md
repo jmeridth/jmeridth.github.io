@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Google source code hosting
-date: 2007/03/03 01:04:00
+date: 2007-03-03 01:04:00 -06:00
+layout: post
 ---
-
 
 If you don't want to host your own sourcecode on your own Subversion server like I was doing, check [this](http://code.google.com/hosting/) out.
 

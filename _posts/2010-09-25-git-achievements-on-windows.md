@@ -1,10 +1,11 @@
 ---
-layout: post
 title: Git-Achievements on Windows
-date: 2010/09/25 02:30:00
-tags: git windows
+date: 2010-09-25 02:30:00 -05:00
+tags:
+- git
+- windows
+layout: post
 ---
-
 
 **UPDATE**: _Needed to add newly clone git-achievements to your PATH env variable.  Otherwise it will push an index.html file to your current repo and not the git-achievements repo.  Thank you __[Adam_](http://twitter.com/adymitruk)_ for finding that._
 

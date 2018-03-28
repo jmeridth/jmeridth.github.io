@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Jeremy Miller goes into Java land
-date: 2006/12/31 00:39:00
+date: 2006-12-31 00:39:00 -06:00
+layout: post
 ---
-
 
 Jeremy Miller of CodeBetter.com recently [posted about his experiences with Java.](http://codebetter.com/blogs/jeremy.miller/archive/2006/12/30/Jeremy-in-Java-Land.aspx)  
   

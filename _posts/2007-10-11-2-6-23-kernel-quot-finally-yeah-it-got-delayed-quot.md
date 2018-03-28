@@ -1,9 +1,8 @@
 ---
-layout: post
 title: 2.6.23 Kernel, "Finally. Yeah, it got delayed"
-date: 2007/10/11 01:15:38
+date: 2007-10-11 01:15:38 -05:00
+layout: post
 ---
-
 
 #### _Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my 'release clock' all the time. But it's out there now, and hopefully better for the wait,_" Linus Torvalds said [announcing the 2.6.23 kernel](http://kerneltrap.org/mailarchive/linux-kernel/2007/10/9/333488). He noted few changes since the last release candidate, "_not a whole lot of changes since -rc9, although there's a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there's basically a number of mostly one-liners (mostly in drivers, but there's some networking fixes and soem VFS/VM fixes there too)._" Source level changes can be viewed via the [gitweb interface](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary). A nice overview of all changes can be found at [Kernel Newbies](http://kernelnewbies.org/Linux_2_6_23). Linus went on to describe his plan going forward:
 

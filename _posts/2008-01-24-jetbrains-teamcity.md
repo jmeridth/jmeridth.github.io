@@ -1,9 +1,8 @@
 ---
-layout: post
 title: JetBrains TeamCity
-date: 2008/01/24 20:14:36
+date: 2008-01-24 20:14:36 -06:00
+layout: post
 ---
-
 
 Being sick today has allowed me to catch up on my ASP.NET MVC knowledge and also move the remainder of my CC.NET projects to [JetBrains TeamCity](http://www.jetbrains.com/teamcity/).  Being sick is no fun though. *Cough Cough*
 

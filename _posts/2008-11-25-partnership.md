@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Partnership
-date: 2008/11/25 16:51:00
+date: 2008-11-25 16:51:00 -06:00
+layout: post
 ---
-
 
 Since LosTechies was started we've tried to make sure we have created a community that educates.  By doing that we've had to stand on the shoulders of a few giants/masters/leaders.  One of those leaders for us was Brendan Tompkins of [CodeBetter.com](http://www.codebetter.com) and [Devlico.us](http://www.devlicio.us).  His [blog is on Devlicio.us](http://devlicio.us/blogs/brendantompkins/default.aspx).  I'm currently one of the maintainers for LosTechies and have queried Brendan's mind/help many times.  He has been an invaluable resource.
 

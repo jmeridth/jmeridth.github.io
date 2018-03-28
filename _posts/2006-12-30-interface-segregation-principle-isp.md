@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Interface Segregation Principle (ISP)
-date: 2006/12/30 00:38:00
+date: 2006-12-30 00:38:00 -06:00
+layout: post
 ---
-
 
 **The Interface Segregation Principle (ISP) - CLIENTS SHOULD NOT BE FORCED TO DEPEND UPON INTERFACES THAT THEY DO NOT USE**
 

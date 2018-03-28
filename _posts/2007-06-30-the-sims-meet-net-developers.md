@@ -1,9 +1,8 @@
 ---
-layout: post
 title: The Sims meet .NET developers
-date: 2007/06/30 02:27:00
+date: 2007-06-30 02:27:00 -05:00
+layout: post
 ---
-
 
 I was reading Brad Abrams blog [entry](http://blogs.msdn.com/brada/archive/2007/06/28/visual-studio-in-second-life.aspx) today about [Visual Studio Island](https://www.visualstudioisland.com/) and decided to check it out.
 

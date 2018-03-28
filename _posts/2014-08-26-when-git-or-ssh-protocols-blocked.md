@@ -1,8 +1,9 @@
 ---
-layout: post
 title: When Git or SSH Protocols Blocked
-date: 2014-08-26 08:47:42 UTC-05:00
-tags: git
+date: 2014-08-26 08:47:42 -05:00
+tags:
+- git
+layout: post
 ---
 
 Recently I had issues connecting to [Github][2] because of some firewall restrictions outside my control.  The firewall had outbound SSH (port 22) blocked.  My co-worker [Justin Hammond][1] found a git config option that lets you force all git commands to use `https://` (port 443) instead of `ssh://` (port 22).

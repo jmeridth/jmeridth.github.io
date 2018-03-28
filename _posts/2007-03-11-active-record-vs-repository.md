@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Active Record vs. Repository
-date: 2007/03/11 21:34:00
+date: 2007-03-11 21:34:00 -05:00
+layout: post
 ---
-
 
 I was reading an blog entry by Ayende Rahien (aka Oren Eini) again, "[Entities, Services and what goes between them...](http://ayende.com/Blog/archive/2007/02/27/Entities-Services-and-what-goes-between-them.aspx)" and one of his commenters asked the following question:  
   

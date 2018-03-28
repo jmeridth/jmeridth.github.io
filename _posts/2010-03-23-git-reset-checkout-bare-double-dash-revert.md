@@ -1,10 +1,10 @@
 ---
-layout: post
 title: Git reset, checkout & "bare double dash", and revert
-date: 2010/03/23 21:29:00
-tags: git
+date: 2010-03-23 21:29:00 -05:00
+tags:
+- git
+layout: post
 ---
-
 
 **UPDATE**: Please make sure to read Alexander's comments on `git rebase --interactive`
 

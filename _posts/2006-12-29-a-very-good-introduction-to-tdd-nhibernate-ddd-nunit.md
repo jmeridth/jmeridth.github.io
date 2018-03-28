@@ -1,9 +1,8 @@
 ---
-layout: post
 title: A very good introduction to TDD, NHibernate, DDD, NUnit
-date: 2006/12/29 00:36:00
+date: 2006-12-29 00:36:00 -06:00
+layout: post
 ---
-
 
 I just recently finished reading the "A Journey with Domain Driven Design (and NHibernate)" series on [Ben Scheirman's blog](http://benscheirman.com/).
 

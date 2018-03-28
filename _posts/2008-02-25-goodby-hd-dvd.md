@@ -1,9 +1,8 @@
 ---
-layout: post
 title: Goodbye HD-DVD
-date: 2008/02/25 02:21:00
+date: 2008-02-25 02:21:00 -06:00
+layout: post
 ---
-
 
 As a "computer guy" I am always asked about everything technical.  One of the latest most popular questions has been, "Should I get an XBOX 360 or Playstation 3?".  My answer as of late has been, "Which one do you like more: Halo or Blu-ray?".  I personally purchased a 360 because I love to play Halo.  If someone is purchasing it for the ability to play HD DVDs then they should get a Playstation 3.
 

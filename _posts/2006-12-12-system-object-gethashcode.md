@@ -1,9 +1,8 @@
 ---
-layout: post
 title: System.Object.GetHashCode()
-date: 2006/12/12 00:28:00
+date: 2006-12-12 00:28:00 -06:00
+layout: post
 ---
-
 
 After reading [Ayende's blog about GetHashCode](http://www.awprofessional.com/content/images/0321245660/items/wagner_item10.pdf) file about the pitfalls of GetHashCode. 
 

@@ -1,9 +1,9 @@
 ---
+title: Formatting the RSS Module in DotNetNuke to handle HTML and other formatting
+  tips
+date: 2007-08-15 14:58:40 -05:00
 layout: post
-title: Formatting the RSS Module in DotNetNuke to handle HTML and other formatting tips
-date: 2007/08/15 14:58:40
 ---
-
 
 I'm currently in the process of moving the [Alamo Coders](http://www.alamocoders.net) website to [DotNetNuke](http://www.dotnetnuke.com) and I'm being introduced to the details of DNN.
 
