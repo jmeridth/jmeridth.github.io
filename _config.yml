@@ -8,8 +8,8 @@ collections:
   uploads:
     title: Uploads
     output: true
-description: Learn, Converse, Share
-disqus_shortname: 
+description: Blog of Jason Meridth - Learn, Converse, Share
+disqus_shortname:
 reading_time: true
 words_per_minute: 200
 logo: images/logo.jpg
@@ -30,19 +30,26 @@ owner:
   avatar: images/avatar.jpg
   bio: My name is Jason Meridth. I am a continuously learning senior software developer/team
     lead/development manager trying to not let best be the enemy of better. I reserve
-    the right to change my mind upon obtaining more information.
-  email: jmeridth@gmail.com
+    the right to change my mind upon obtaining more information.  I am also the owner and
+    principal software consultant at Meridth, LLC.  If you have any software, hardward, networking,
+    process, etc needs please don't hesitate to reach out to me.
+  email: jason@meridth.io
+  phone: 210-383-9375
   twitter: jmeridth
   github: jmeridth
-twitter: jmeridth
+twitter:
+  username: jmeridth
+  image: /images/meridth_llc_cog.png
 social:
 - title: github
   url: https://github.com/jmeridth
 - title: linkedin
   url: https://br.linkedin.com/in/jmeridth
-background: 
+- title: twitter
+  url: https://twitter.com/jmeridth
+background:
 google_analytics: UA-38456568-3
-google_verify: 
+google_verify:
 locale: en_US
 future: true
 highlighter: rouge
