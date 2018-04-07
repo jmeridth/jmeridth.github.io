@@ -20,10 +20,6 @@ The items I bought were:
 - One [GeauxRobot Raspberry Pi 3 Model B 6-layer Dog Bone Stack Clear Case Box Enclosure also for Pi 2B B+ A+ B A](https://smile.amazon.com/gp/product/B01D9130QC/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
 - One [Black Box 8-Port Switch](http://amzn.to/2gNzLzi)
 
-Here is the tweet when it all arrived:
-
-{% twitter https://twitter.com/jmeridth/status/980075584725422080 %}
-
 I spent this morning finally putting it together.
 
 Here is me getting started on the "dogbone case" to hold all of the Raspberry Pis:
