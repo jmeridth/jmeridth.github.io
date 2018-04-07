@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://blog.jasonmeridth.com/feed.xml" />
 <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com" />
-<updated>2018-04-07T09:34:54-05:00</updated>
+<updated>2018-04-07T09:36:48-05:00</updated>
 <id>https://blog.jasonmeridth.com/</id>
 <author>
   <name>Jason Meridth</name>
@@ -44,31 +44,31 @@
 
 &lt;p&gt;Here is me getting started on the “dogbone case” to hold all of the Raspberry Pis:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_2.jpg&quot; alt=&quot;The layout&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_2.jpg&quot; alt=&quot;The layout&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The bottom and one layer above:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_3.jpg&quot; alt=&quot;The bottom and one layer above&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_3.jpg&quot; alt=&quot;The bottom and one layer above&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And the rest:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_4.jpg&quot; alt=&quot;3 Layers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_4.jpg&quot; alt=&quot;3 Layers&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_11.jpg&quot; alt=&quot;4 Layers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_11.jpg&quot; alt=&quot;4 Layers&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_12.jpg&quot; alt=&quot;5 Layers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_12.jpg&quot; alt=&quot;5 Layers&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_13.jpg&quot; alt=&quot;6 Layers and Finished&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_13.jpg&quot; alt=&quot;6 Layers and Finished&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Different angles completed:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_14.jpg&quot; alt=&quot;Finished Angle 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_14.jpg&quot; alt=&quot;Finished Angle 2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_15.jpg&quot; alt=&quot;Finished Angle 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_15.jpg&quot; alt=&quot;Finished Angle 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And connect the power:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_16.jpg&quot; alt=&quot;Power&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kubernetes_cluster/case_16.jpg&quot; alt=&quot;Power&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next post will be on getting the 6 sandisk cards ready and putting them in and watching the Raspberry Pis boot up and get a green light.  Stay tuned.&lt;/p&gt;
 
