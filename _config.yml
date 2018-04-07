@@ -95,4 +95,3 @@ plugins:
 - jekyll-paginate
 - jekyll-seo-tag
 - jekyll-gist
-- jekyll-twitter-plugin

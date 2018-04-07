@@ -20,35 +20,41 @@ The items I bought were:
 - One [GeauxRobot Raspberry Pi 3 Model B 6-layer Dog Bone Stack Clear Case Box Enclosure also for Pi 2B B+ A+ B A](https://smile.amazon.com/gp/product/B01D9130QC/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
 - One [Black Box 8-Port Switch](http://amzn.to/2gNzLzi)
 
+Here is the tweet when it all arrived:
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I blame <a href="https://twitter.com/hhoover?ref_src=twsrc%5Etfw">@hhoover</a> ;). I will be building my <a href="https://twitter.com/kubernetesio?ref_src=twsrc%5Etfw">@kubernetesio</a> cluster once the 6pi case shows up next Wednesday. The extra pi is to upgrade my <a href="https://twitter.com/RetroPieProject?ref_src=twsrc%5Etfw">@RetroPieProject</a>. Touch screen is an addition I want to try. Side project here I come. <a href="https://t.co/EebIKbsCeH">pic.twitter.com/EebIKbsCeH</a></p>&mdash; Jason Meridth (@jmeridth) <a href="https://twitter.com/jmeridth/status/980075584725422080?ref_src=twsrc%5Etfw">March 31, 2018</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 I spent this morning finally putting it together.
 
 Here is me getting started on the "dogbone case" to hold all of the Raspberry Pis:
 
-![The layout]({{ site.url }}/images/kubernetes_cluster/case_2.jpg)
+![The layout]({{ site.url }}/images/kuberenetes_cluster/case_2.jpg)
 
 The bottom and one layer above:
 
-![The bottom and one layer above]({{ site.url }}/images/kubernetes_cluster/case_3.jpg)
+![The bottom and one layer above]({{ site.url }}/images/kuberenetes_cluster/case_3.jpg)
 
 And the rest:
 
-![3 Layers]({{ site.url }}/images/kubernetes_cluster/case_4.jpg)
+![3 Layers]({{ site.url }}/images/kuberenetes_cluster/case_4.jpg)
 
-![4 Layers]({{ site.url }}/images/kubernetes_cluster/case_11.jpg)
+![4 Layers]({{ site.url }}/images/kuberenetes_cluster/case_11.jpg)
 
-![5 Layers]({{ site.url }}/images/kubernetes_cluster/case_12.jpg)
+![5 Layers]({{ site.url }}/images/kuberenetes_cluster/case_12.jpg)
 
-![6 Layers and Finished]({{ site.url }}/images/kubernetes_cluster/case_13.jpg)
+![6 Layers and Finished]({{ site.url }}/images/kuberenetes_cluster/case_13.jpg)
 
 Different angles completed:
 
-![Finished Angle 2]({{ site.url }}/images/kubernetes_cluster/case_14.jpg)
+![Finished Angle 2]({{ site.url }}/images/kuberenetes_cluster/case_14.jpg)
 
-![Finished Angle 3]({{ site.url }}/images/kubernetes_cluster/case_15.jpg)
+![Finished Angle 3]({{ site.url }}/images/kuberenetes_cluster/case_15.jpg)
 
 And connect the power:
 
-![Power]({{ site.url }}/images/kubernetes_cluster/case_16.jpg)
+![Power]({{ site.url }}/images/kuberenetes_cluster/case_16.jpg)
 
 Next post will be on getting the 6 sandisk cards ready and putting them in and watching the Raspberry Pis boot up and get a green light.  Stay tuned.
 
