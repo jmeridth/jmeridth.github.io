@@ -1,6 +1,9 @@
 ---
 title: SSH - Too Many Authentication Failures
-date: 2018-03-28 00:00:00 -05:00
+date: '2018-03-28 00:00:00 -0500'
+tags:
+- ssh
+layout: post
 ---
 
 # Problem
