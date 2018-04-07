@@ -1,0 +1,2219 @@
+[
+  
+    {
+      "title"    : "Raspberry Pi Kubernetes Cluster - Part 1",
+      "category" : "",
+      "tags"     : "kubernetes, raspberry pi",
+      "url"      : "https://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1/",
+      "date"     : "2018-04-07 09:01:00 -0500"
+    } ,
+  
+    {
+      "title"    : "SSH - Too Many Authentication Failures",
+      "category" : "",
+      "tags"     : "ssh",
+      "url"      : "https://blog.jasonmeridth.com/posts/ssh-too-many-authentication-failures/",
+      "date"     : "2018-03-28 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Clear DNS Cache In Chrome",
+      "category" : "",
+      "tags"     : "dns, chrome",
+      "url"      : "https://blog.jasonmeridth.com/posts/clear-dns-cache-in-chrome/",
+      "date"     : "2018-03-27 15:42:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Create Docker Container from Errored Container",
+      "category" : "",
+      "tags"     : "docker",
+      "url"      : "https://blog.jasonmeridth.com/posts/create-docker-container-from-errored-container/",
+      "date"     : "2018-03-25 22:31:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Unable To Access Mysql With Root and No Password After New Install On Ubuntu",
+      "category" : "",
+      "tags"     : "mysql, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/unable-to-access-mysql-with-root-and-no-password-after-new-install-on-ubuntu/",
+      "date"     : "2018-01-30 18:13:00 -0600"
+    } ,
+  
+    {
+      "title"    : "New Job",
+      "category" : "",
+      "tags"     : "job",
+      "url"      : "https://blog.jasonmeridth.com/posts/new-job/",
+      "date"     : "2018-01-08 12:13:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Docker Daemon Error When Running Docker Compose",
+      "category" : "",
+      "tags"     : "ubuntu, vim",
+      "url"      : "https://blog.jasonmeridth.com/posts/docker-daemon-error-when-running-docker-compose/",
+      "date"     : "2018-01-02 12:11:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Lenovo Thinkpad - Swap ctrl and fn keys",
+      "category" : "",
+      "tags"     : "lenovo",
+      "url"      : "https://blog.jasonmeridth.com/posts/lenovo-thinkpad-swap-ctrl-and-fn-keys/",
+      "date"     : "2017-11-22 10:18:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Ubuntu - set caps lock to escape",
+      "category" : "",
+      "tags"     : "ubuntu, vim",
+      "url"      : "https://blog.jasonmeridth.com/posts/ubuntu-set-caps-lock-to-escape/",
+      "date"     : "2017-11-22 10:05:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Cleanup Docker",
+      "category" : "",
+      "tags"     : "docker",
+      "url"      : "https://blog.jasonmeridth.com/posts/cleanup-docker/",
+      "date"     : "2017-11-12 21:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "OnePlus 5",
+      "category" : "",
+      "tags"     : "phone",
+      "url"      : "https://blog.jasonmeridth.com/posts/one-plus-5/",
+      "date"     : "2017-07-03 12:02:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Mapping Caps Lock to Esc Is Native to OSX Now",
+      "category" : "",
+      "tags"     : "osx",
+      "url"      : "https://blog.jasonmeridth.com/posts/mapping-caps-lock-to-esc-on-osx-is-native-now/",
+      "date"     : "2016-10-31 15:12:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Details HTML Section In Github Issues and Gists",
+      "category" : "",
+      "tags"     : "github",
+      "url"      : "https://blog.jasonmeridth.com/posts/details-html-section-in-github-issues-and-gists/",
+      "date"     : "2016-07-28 11:01:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Stop and Remove All Docker Containers",
+      "category" : "",
+      "tags"     : "docker",
+      "url"      : "https://blog.jasonmeridth.com/posts/stop-remove-all-docker-containers/",
+      "date"     : "2016-07-06 16:44:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Get Repository Root Path",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/get-repository-root-path/",
+      "date"     : "2016-07-04 20:52:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Vim Tagbar Plugin",
+      "category" : "",
+      "tags"     : "vim",
+      "url"      : "https://blog.jasonmeridth.com/posts/vim-tagbar-plugin/",
+      "date"     : "2016-07-03 09:16:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Information Shown After Logging Into Ubuntu",
+      "category" : "",
+      "tags"     : "ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/information-shown-after-logging-into-ubuntu/",
+      "date"     : "2016-07-03 08:58:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Other People&#39;s Code",
+      "category" : "",
+      "tags"     : "coding",
+      "url"      : "https://blog.jasonmeridth.com/posts/other-peoples-code/",
+      "date"     : "2016-06-26 14:51:00 -0500"
+    } ,
+  
+    {
+      "title"    : "How I Setup My Local Python Environment",
+      "category" : "",
+      "tags"     : "python",
+      "url"      : "https://blog.jasonmeridth.com/posts/how-i-setup-my-local-python-environment/",
+      "date"     : "2016-06-26 11:04:10 -0500"
+    } ,
+  
+    {
+      "title"    : "How To Use the Python Debugger aka pdb",
+      "category" : "",
+      "tags"     : "python",
+      "url"      : "https://blog.jasonmeridth.com/posts/how-to-use-python-debugger-aka-pdb/",
+      "date"     : "2016-06-22 15:10:10 -0500"
+    } ,
+  
+    {
+      "title"    : "Personal VIM Cheatsheet",
+      "category" : "",
+      "tags"     : "vim, cli",
+      "url"      : "https://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/",
+      "date"     : "2016-04-19 15:36:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Why I started programming",
+      "category" : "",
+      "tags"     : "personal",
+      "url"      : "https://blog.jasonmeridth.com/posts/why-i-started-programming/",
+      "date"     : "2016-04-06 15:23:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Getting Going With Docker",
+      "category" : "",
+      "tags"     : "docker",
+      "url"      : "https://blog.jasonmeridth.com/posts/getting-going-with-docker/",
+      "date"     : "2016-03-22 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Good Leadership Advice",
+      "category" : "",
+      "tags"     : "leadership",
+      "url"      : "https://blog.jasonmeridth.com/posts/good-leadership-advice/",
+      "date"     : "2015-07-16 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Meta keys with iTerm and Weechat",
+      "category" : "",
+      "tags"     : "weechat, irc, cli",
+      "url"      : "https://blog.jasonmeridth.com/posts/meta-keys-with-iterm-and-weechat/",
+      "date"     : "2015-07-14 10:12:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Using PushBullet for Notifications in Android/Chrome",
+      "category" : "",
+      "tags"     : "android, notifications",
+      "url"      : "https://blog.jasonmeridth.com/posts/using-pushbullet-for-notifications-in-androidchrome/",
+      "date"     : "2015-02-19 09:31:22 -0600"
+    } ,
+  
+    {
+      "title"    : "Studying for RHCSA/RHCE Exams",
+      "category" : "",
+      "tags"     : "linux, certifications",
+      "url"      : "https://blog.jasonmeridth.com/posts/studying-for-rhcsarhce-exams/",
+      "date"     : "2015-02-17 16:19:57 -0600"
+    } ,
+  
+    {
+      "title"    : "Not a fan of Ubuntu Unity, trying out Cinnamon desktop environment",
+      "category" : "",
+      "tags"     : "linux",
+      "url"      : "https://blog.jasonmeridth.com/posts/not-a-fan-of-ubuntu-unity-trying-out-cinnamon-desktop-environment/",
+      "date"     : "2015-02-02 22:11:16 -0600"
+    } ,
+  
+    {
+      "title"    : "Copying Text With Mouse In TMUX",
+      "category" : "",
+      "tags"     : "tmux",
+      "url"      : "https://blog.jasonmeridth.com/posts/copying-text-with-mouse-in-tmux/",
+      "date"     : "2015-01-26 08:46:04 -0600"
+    } ,
+  
+    {
+      "title"    : "Getting a Canon MX450 Series Working With Ubuntu 14.04",
+      "category" : "",
+      "tags"     : "linux, ubuntu, troubleshooting",
+      "url"      : "https://blog.jasonmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/",
+      "date"     : "2015-01-08 21:03:55 -0600"
+    } ,
+  
+    {
+      "title"    : "Restarting Audio in Ubuntu After Issues",
+      "category" : "",
+      "tags"     : "linux, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/",
+      "date"     : "2015-01-08 11:12:14 -0600"
+    } ,
+  
+    {
+      "title"    : "I Finally Have Linux As My Native OS",
+      "category" : "",
+      "tags"     : "linux, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/i-finally-have-linux-as-my-native-os/",
+      "date"     : "2015-01-07 17:27:13 -0600"
+    } ,
+  
+    {
+      "title"    : "Why I Blog",
+      "category" : "",
+      "tags"     : "information",
+      "url"      : "https://blog.jasonmeridth.com/posts/why-i-blog/",
+      "date"     : "2014-10-03 09:43:14 -0500"
+    } ,
+  
+    {
+      "title"    : "When Git or SSH Protocols Blocked",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/when-git-or-ssh-protocols-blocked/",
+      "date"     : "2014-08-26 08:47:42 -0500"
+    } ,
+  
+    {
+      "title"    : "Weechat keyboard shortcuts",
+      "category" : "",
+      "tags"     : "weechat, irc, cli",
+      "url"      : "https://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/",
+      "date"     : "2014-03-14 23:52:39 -0500"
+    } ,
+  
+    {
+      "title"    : "Where I Go To Choose An Open Source License",
+      "category" : "",
+      "tags"     : "resources, open, source",
+      "url"      : "https://blog.jasonmeridth.com/posts/where-i-go-to-choose-an-open-source-license/",
+      "date"     : "2014-03-14 23:50:13 -0500"
+    } ,
+  
+    {
+      "title"    : "How to Get The SHA of The Last Commit on a Branch With Git",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/",
+      "date"     : "2014-03-11 02:30:23 -0500"
+    } ,
+  
+    {
+      "title"    : "How to Run a Single Test With Tox",
+      "category" : "",
+      "tags"     : "python, testing, cli",
+      "url"      : "https://blog.jasonmeridth.com/posts/how-to-run-a-single-test-with-tox/",
+      "date"     : "2014-03-07 04:49:53 -0600"
+    } ,
+  
+    {
+      "title"    : "Using sed and regex to Remove Prefix on Filenames",
+      "category" : "",
+      "tags"     : "command line",
+      "url"      : "https://blog.jasonmeridth.com/posts/using-sed-and-regex-to-remove-prefix-on-filenames/",
+      "date"     : "2014-02-24 21:39:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Consolidated My Blogs",
+      "category" : "",
+      "tags"     : "notification",
+      "url"      : "https://blog.jasonmeridth.com/posts/consolidated-my-blogs/",
+      "date"     : "2014-02-24 05:43:14 -0600"
+    } ,
+  
+    {
+      "title"    : "Using Default Scope and Unscoped in Rails",
+      "category" : "",
+      "tags"     : "rails",
+      "url"      : "https://blog.jasonmeridth.com/posts/using-default-scope-and-unscoped-in-rails/",
+      "date"     : "2013-04-02 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Fix Rendering With Presence of Doctype",
+      "category" : "",
+      "tags"     : "html5, haml",
+      "url"      : "https://blog.jasonmeridth.com/posts/fix-rendering-with-presence-of-doctype/",
+      "date"     : "2013-03-31 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Run a Specific RSpec Spec",
+      "category" : "",
+      "tags"     : "testing, tools, rspec",
+      "url"      : "https://blog.jasonmeridth.com/posts/run-a-specific-rspec-spec/",
+      "date"     : "2013-03-23 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "TMUX Cheat Sheet",
+      "category" : "",
+      "tags"     : "tools, tmux",
+      "url"      : "https://blog.jasonmeridth.com/posts/tmux-cheat-sheet/",
+      "date"     : "2013-03-06 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Setup RVM and Ruby",
+      "category" : "",
+      "tags"     : "tools, rvm, ruby",
+      "url"      : "https://blog.jasonmeridth.com/posts/setup-rvm-and-ruby/",
+      "date"     : "2013-03-06 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Set VIM as Default Editor",
+      "category" : "",
+      "tags"     : "tools, vim, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/set-vim-as-default-editor/",
+      "date"     : "2013-03-06 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Install and Setup PostgreSQL on New Ubuntu VM",
+      "category" : "",
+      "tags"     : "postgresql, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/",
+      "date"     : "2013-03-06 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Get Sinatra and Shotgun gem working on Vagrant",
+      "category" : "",
+      "tags"     : "sinatra, vagrant",
+      "url"      : "https://blog.jasonmeridth.com/posts/get-sinatra-and-shotgun-gem-working-on-vagrant/",
+      "date"     : "2013-03-06 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "No More Password Prompts When Issuing Sudo Commands",
+      "category" : "",
+      "tags"     : "ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/",
+      "date"     : "2013-02-21 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Use Git Grep to Replace Strings in Files in Your Git Repository",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/use-git-grep-to-replace-strings-in-files-in-your-git-repository/",
+      "date"     : "2013-02-11 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks",
+      "category" : "",
+      "tags"     : "ubuntu, networking, wireless",
+      "url"      : "https://blog.jasonmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/",
+      "date"     : "2013-02-05 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Has And Belongs To Many Join Table Name Must Be In Alphabetical Order",
+      "category" : "",
+      "tags"     : "rails",
+      "url"      : "https://blog.jasonmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/",
+      "date"     : "2013-02-03 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Double Exclmations !! In Ruby",
+      "category" : "",
+      "tags"     : "ruby",
+      "url"      : "https://blog.jasonmeridth.com/posts/double-exclamations-in-ruby/",
+      "date"     : "2013-02-03 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Create Rails Application in Current Directory",
+      "category" : "",
+      "tags"     : "rails",
+      "url"      : "https://blog.jasonmeridth.com/posts/create-rails-application-in-current-directory/",
+      "date"     : "2012-10-25 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Dell Information Via Command Line",
+      "category" : "",
+      "tags"     : "dell, command line, windows",
+      "url"      : "https://blog.jasonmeridth.com/posts/dell-information-via-command-line/",
+      "date"     : "2012-10-15 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Bash_profile vs Bashrc",
+      "category" : "",
+      "tags"     : "bash, command line",
+      "url"      : "https://blog.jasonmeridth.com/posts/bash-profile-vs-basrc/",
+      "date"     : "2012-10-06 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "PostgreSQL Command Line Cheat Sheet",
+      "category" : "",
+      "tags"     : "postgresql, command line",
+      "url"      : "https://blog.jasonmeridth.com/posts/postgresql-command-line-cheat-sheet/",
+      "date"     : "2012-10-02 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Testing Mail From the Command Line on Ubuntu",
+      "category" : "",
+      "tags"     : "command line, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/",
+      "date"     : "2012-09-19 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Using Latest Version of Git on Ubuntu",
+      "category" : "",
+      "tags"     : "git, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/using-latest-version-of-git-on-ubuntu/",
+      "date"     : "2012-07-11 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git and Seeting What Commits Are Not In Another Branch",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/",
+      "date"     : "2012-05-22 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Automatically Execute Mistyped Git Commands",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/automatically-execute-mistyped-git-commands/",
+      "date"     : "2012-05-22 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "NuGet Dependency Versioning and Log4net 1.2.11",
+      "category" : "",
+      "tags"     : ".net",
+      "url"      : "https://blog.jasonmeridth.com/posts/nuget-dependency-versioning-and-log4net-1.2.11/",
+      "date"     : "2012-04-12 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "git clone --mirror vs git clone --bare",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-clone-mirror-vs-git-clone-bare/",
+      "date"     : "2012-03-30 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Do Not Issue Pull Requests From Your Master Branch",
+      "category" : "",
+      "tags"     : "git, github",
+      "url"      : "https://blog.jasonmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/",
+      "date"     : "2012-03-30 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "How to Capture the Exception Message From Assert.Throws in NUnit",
+      "category" : "",
+      "tags"     : ".net, testing",
+      "url"      : "https://blog.jasonmeridth.com/posts/how-to-capture-exception-message-from-assert-throws-in-nunit/",
+      "date"     : "2012-03-23 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git Achievements on Windows (Part 3)",
+      "category" : "",
+      "tags"     : "git, windows",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-achievements-on-windows-part-2/",
+      "date"     : "2012-03-21 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Opportunity",
+      "category" : "",
+      "tags"     : ".net, agile",
+      "url"      : "https://blog.jasonmeridth.com/posts/opportunity/",
+      "date"     : "2011-06-04 06:06:10 -0500"
+    } ,
+  
+    {
+      "title"    : "Readline Error With RVM and Rails 3 on Ubuntu",
+      "category" : "",
+      "tags"     : "rails, rvm",
+      "url"      : "https://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/",
+      "date"     : "2010-11-25 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Git-Achievements on Windows",
+      "category" : "",
+      "tags"     : "git, windows",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-achievements-on-windows/",
+      "date"     : "2010-09-25 02:30:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Gotcha with Gitosis and python-setuptools",
+      "category" : "",
+      "tags"     : "git, gitosis",
+      "url"      : "https://blog.jasonmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/",
+      "date"     : "2010-05-26 04:58:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Gitosis and Gitweb - Part 3",
+      "category" : "",
+      "tags"     : "git, gitosis",
+      "url"      : "https://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-3/",
+      "date"     : "2010-05-26 04:45:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Gitosis and Gitweb - Part 2 - Add Projects and Contributors",
+      "category" : "",
+      "tags"     : "git, gitosis",
+      "url"      : "https://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-2/",
+      "date"     : "2010-05-25 03:02:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Gitosis and Gitweb - Part 1 - Setup",
+      "category" : "",
+      "tags"     : "git, gitosis",
+      "url"      : "https://blog.jasonmeridth.com/posts/gitosis-and-gitweb-part-1/",
+      "date"     : "2010-05-25 02:42:00 -0500"
+    } ,
+  
+    {
+      "title"    : "My &quot;Git Branching and Workflows&quot; presentation at Austin Code Camp 2010",
+      "category" : "",
+      "tags"     : "git, presentation",
+      "url"      : "https://blog.jasonmeridth.com/posts/my-git-branching-and-workflows-presentation-at-austin-code-camp-2010/",
+      "date"     : "2010-05-24 13:40:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Seeing which Git branch I&#39;m on via my console prompt (__git_ps1)",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/seeing-which-git-branch-i-m-on-via-my-console-prompt-git-ps1/",
+      "date"     : "2010-05-23 02:55:00 -0500"
+    } ,
+  
+    {
+      "title"    : "OAuth",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/oauth/",
+      "date"     : "2010-04-05 04:25:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Pro Git Cliff Notes",
+      "category" : "",
+      "tags"     : "git, books",
+      "url"      : "https://blog.jasonmeridth.com/posts/pro-git-cliff-notes/",
+      "date"     : "2010-04-05 04:17:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git tracking branches",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-tracking-branches/",
+      "date"     : "2010-03-23 21:36:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git reset, checkout &amp; &quot;bare double dash&quot;, and revert",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-reset-checkout-bare-double-dash-revert/",
+      "date"     : "2010-03-23 21:29:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Refspec matches more than one",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/refspec-matches-more-than-one/",
+      "date"     : "2010-02-27 19:31:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Git post-merge hook to auto-fire rails migrations",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-post-merge-hook-to-auto-fire-rails-migrations/",
+      "date"     : "2010-02-27 19:28:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Suspicious Patch Lines",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/suspicious-patch-lines/",
+      "date"     : "2010-02-27 19:21:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Pair Programming with Screen",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/pair-programming-with-screen/",
+      "date"     : "2010-02-04 16:44:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Agile Coaching Book Review",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/agile-coaching-book-review/",
+      "date"     : "2010-01-07 05:28:00 -0600"
+    } ,
+  
+    {
+      "title"    : "&#39;Bad Interpreter: No Medium&#39; error when running Ruby from Git Bash",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash/",
+      "date"     : "2009-10-06 14:50:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Moving servers",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/moving-servers/",
+      "date"     : "2009-10-03 03:32:00 -0500"
+    } ,
+  
+    {
+      "title"    : "git instaweb",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-instaweb/",
+      "date"     : "2009-09-27 00:53:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Using gsub to wrap substring",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/using-gsub-to-wrap-substring/",
+      "date"     : "2009-09-10 19:56:47 -0500"
+    } ,
+  
+    {
+      "title"    : "&#39;git commit -a&#39; and &#39;git add&#39;",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-commit-a-and-git-add/",
+      "date"     : "2009-09-10 17:07:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git local pre-commit hook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-local-pre-commit-hook/",
+      "date"     : "2009-09-10 16:47:21 -0500"
+    } ,
+  
+    {
+      "title"    : "Git Post-receive hook with integrity post call",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-post-receive-hook-with-integrity-post-call/",
+      "date"     : "2009-07-17 05:01:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git For Windows Developers – Git Series – Part 4",
+      "category" : "",
+      "tags"     : "git",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-4/",
+      "date"     : "2009-06-20 04:15:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git For Windows Developers – Git Series – Part 3",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-3/",
+      "date"     : "2009-06-08 02:45:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git For Windows Developers – Git Series – Part 2",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-2/",
+      "date"     : "2009-06-04 05:49:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Git For Windows Developers – Git Series - Part 1",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/git-for-windows-developers-git-series-part-1/",
+      "date"     : "2009-06-01 06:04:00 -0500"
+    } ,
+  
+    {
+      "title"    : "TextMate and Community Server 2008.5",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/textmate-and-community-server-2008-5/",
+      "date"     : "2009-05-21 08:32:38 -0500"
+    } ,
+  
+    {
+      "title"    : "San Antonio community",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/san-antonio-community/",
+      "date"     : "2009-04-21 14:53:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Adding a git post-receive hook to fire off Hudson CI server",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/adding-a-git-post-receive-hook-to-fire-off-hudson-ci-server/",
+      "date"     : "2009-03-24 18:07:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Firefox Hudson Build Monitor add-on",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/firefox-hudson-build-monitor-add-on/",
+      "date"     : "2009-03-05 02:19:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Ruby Design Patterns by Russ Olsen",
+      "category" : "",
+      "tags"     : "ruby, design patterns",
+      "url"      : "https://blog.jasonmeridth.com/posts/ruby-design-patterns-by-russ-olsen/",
+      "date"     : "2009-02-26 04:29:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Gitosis and a non-standard SSH port",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/gitosis-and-a-non-standard-ssh-port/",
+      "date"     : "2009-02-13 19:44:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Current Status",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/current-status/",
+      "date"     : "2009-02-12 04:53:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Hudson and Nginx",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/hudson-and-nginx/",
+      "date"     : "2009-02-12 04:46:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Selenium-client and fun",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/selenium-client-and-fun/",
+      "date"     : "2009-02-12 04:35:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Houston ALT.NET Open Space (April 3rd - April 5th, 2009)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/houston-alt-net-open-space-april-3rd-april-5th-2009/",
+      "date"     : "2009-02-04 14:50:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Slicehost Articles",
+      "category" : "",
+      "tags"     : "information, help",
+      "url"      : "https://blog.jasonmeridth.com/posts/slicehost-articles/",
+      "date"     : "2009-01-31 04:49:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Personal CI history and Hudson CI as service on Ubuntu/Debian",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/",
+      "date"     : "2009-01-16 04:08:00 -0600"
+    } ,
+  
+    {
+      "title"    : "In Memory of Nelson Montalvo",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/in-memory-of-nelson-montalvo/",
+      "date"     : "2008-12-11 04:12:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Twitterfeed.com killed my Google Reader",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/twitterfeed-com-killed-the-my-google-reader/",
+      "date"     : "2008-11-30 23:37:00 -0600"
+    } ,
+  
+    {
+      "title"    : "PTOM - November 2008 - Visitor Design Pattern",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ptom-november-2008-visitor-design-pattern/",
+      "date"     : "2008-11-30 21:15:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Library Thing",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/library-thing/",
+      "date"     : "2008-11-27 17:11:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Child&#39;s Play Charity",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/child-s-play-charity/",
+      "date"     : "2008-11-27 02:30:38 -0600"
+    } ,
+  
+    {
+      "title"    : "Creating an older rails project with multiple (newer) versions installed",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/",
+      "date"     : "2008-11-25 20:27:55 -0600"
+    } ,
+  
+    {
+      "title"    : "Partnership",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/partnership/",
+      "date"     : "2008-11-25 16:51:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Gmail Labs",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/gmail-labs/",
+      "date"     : "2008-11-14 13:51:08 -0600"
+    } ,
+  
+    {
+      "title"    : "Visual SVN Server",
+      "category" : "",
+      "tags"     : "source control, svn",
+      "url"      : "https://blog.jasonmeridth.com/posts/visual-svn-server/",
+      "date"     : "2008-11-13 20:54:54 -0600"
+    } ,
+  
+    {
+      "title"    : "Trying to restore my Twitter account",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/trying-to-restore-my-twitter-account/",
+      "date"     : "2008-11-13 13:51:00 -0600"
+    } ,
+  
+    {
+      "title"    : "&#39;Printer Friendly Versions&#39; of our posts now available",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/printer-friendly-versions-of-our-posts-now-available/",
+      "date"     : "2008-11-05 06:53:11 -0600"
+    } ,
+  
+    {
+      "title"    : "LosTechies - upgraded and thank you to readers",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/lostechies-upgraded-and-thank-you-to-readers/",
+      "date"     : "2008-10-26 22:48:26 -0500"
+    } ,
+  
+    {
+      "title"    : "RegOpenKeyEx Function and LOL",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/regopenkeyex-function-and-lol/",
+      "date"     : "2008-10-13 14:43:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Gnome-Do (aka Quick Silver for Ubuntu)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/gnome-do-aka-quick-silver-for-ubuntu/",
+      "date"     : "2008-09-18 16:21:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Parents, talk to your kids about Linux...",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/parents-talk-to-your-kids-about-linux/",
+      "date"     : "2008-08-01 02:58:02 -0500"
+    } ,
+  
+    {
+      "title"    : "Hammett joins Microsoft",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/hammett-joins-microsoft/",
+      "date"     : "2008-07-16 02:50:53 -0500"
+    } ,
+  
+    {
+      "title"    : "Free e-Book from Karl Seguin",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/free-e-book-from-karl-seguin/",
+      "date"     : "2008-07-11 18:19:45 -0500"
+    } ,
+  
+    {
+      "title"    : "How did I get started in software development?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/how-did-i-get-started-in-software-development/",
+      "date"     : "2008-06-27 22:41:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Getting VMWare server working on Ubuntu 8.04 (Hardy Heron)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/getting-vmware-server-working-on-ubuntu-8-04-hardy-heron/",
+      "date"     : "2008-06-04 01:08:00 -0500"
+    } ,
+  
+    {
+      "title"    : "xkcd2 - someone is wrong",
+      "category" : "",
+      "tags"     : "funny",
+      "url"      : "https://blog.jasonmeridth.com/posts/xkcd2-someone-is-wrong/",
+      "date"     : "2008-04-28 16:40:00 -0500"
+    } ,
+  
+    {
+      "title"    : "xkcd - ubuntu, python comics",
+      "category" : "",
+      "tags"     : "funny, python, ubuntu",
+      "url"      : "https://blog.jasonmeridth.com/posts/xkcd-ubuntu-python-comics/",
+      "date"     : "2008-04-28 16:34:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubuntu 8.04, VirtualBox, and USB support",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/using-the-gutsy-gibbon-ubuntu-7-10-non-ose-version-of-virtualbox-with-your-hardy-heron-ubuntu-8-04-install/",
+      "date"     : "2008-04-27 15:42:00 -0500"
+    } ,
+  
+    {
+      "title"    : "MSDN - can&#39;t download with firefox",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/msdn-can-t-download-with-firefox/",
+      "date"     : "2008-04-27 03:26:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubutnu 8.04 (Hardy Heron) after upgrade - I have complete sound!!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ubutnu-8-04-hardy-heron-after-upgrade-i-have-complete-sound/",
+      "date"     : "2008-04-26 16:46:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubuntu 8.04 came out today (Hardy Heron)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ubuntu-8-04-came-out-today-hardy-heron/",
+      "date"     : "2008-04-25 02:48:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Multi-processor builds with MsBuild",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/multi-processor-builds-with-msbuild/",
+      "date"     : "2008-04-25 02:38:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Bil Simser&#39;s elevator question",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/bil-simser-s-elevator-question/",
+      "date"     : "2008-04-17 11:30:00 -0500"
+    } ,
+  
+    {
+      "title"    : "How to install Twhirl on Ubuntu (7.10 Gutsy Gibbon)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/how-to-install-twhirl-on-ubuntu-7-10-gutsy-gibbon/",
+      "date"     : "2008-04-17 03:24:00 -0500"
+    } ,
+  
+    {
+      "title"    : "PTOM - Single Responsibility Principle",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ptom-single-responsibility-principle/",
+      "date"     : "2008-03-30 00:21:00 -0500"
+    } ,
+  
+    {
+      "title"    : "ReSharper 4.0 Nightly builds",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/resharper-4-0-nightly-builds/",
+      "date"     : "2008-03-12 01:41:11 -0500"
+    } ,
+  
+    {
+      "title"    : "Goodbye HD-DVD",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/goodby-hd-dvd/",
+      "date"     : "2008-02-25 02:21:00 -0600"
+    } ,
+  
+    {
+      "title"    : "NAnt and .NET 3.5",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/nant-and-net-3-5/",
+      "date"     : "2008-02-18 16:52:46 -0600"
+    } ,
+  
+    {
+      "title"    : "Update - TeamCity",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/update-teamcity/",
+      "date"     : "2008-02-18 16:09:56 -0600"
+    } ,
+  
+    {
+      "title"    : "Naming your test methods",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/naming-your-test-methods/",
+      "date"     : "2008-02-10 04:23:43 -0600"
+    } ,
+  
+    {
+      "title"    : "JetBrains TeamCity",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/jetbrains-teamcity/",
+      "date"     : "2008-01-24 20:14:36 -0600"
+    } ,
+  
+    {
+      "title"    : "That was stupid! ~ Marcus Pwnage Pants Bratton",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/that-was-stupid-marcus-pwnage-pants-bratton/",
+      "date"     : "2008-01-18 19:09:00 -0600"
+    } ,
+  
+    {
+      "title"    : "What I do",
+      "category" : "",
+      "tags"     : "personal",
+      "url"      : "https://blog.jasonmeridth.com/posts/what-i-do/",
+      "date"     : "2007-12-20 20:28:00 -0600"
+    } ,
+  
+    {
+      "title"    : ".net 3.5 install, anyone using a modem?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/net-3-5-install-anyone-using-a-modem/",
+      "date"     : "2007-11-26 22:11:56 -0600"
+    } ,
+  
+    {
+      "title"    : "BDD macro and Reshaper Template",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/bdd-macro-and-reshaper-template/",
+      "date"     : "2007-11-26 01:58:35 -0600"
+    } ,
+  
+    {
+      "title"    : "People vs. tools",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/people-vs-tools/",
+      "date"     : "2007-11-26 00:38:00 -0600"
+    } ,
+  
+    {
+      "title"    : "ALT.net Yahoo Group",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/alt-net-yahoo-group/",
+      "date"     : "2007-11-15 13:06:21 -0600"
+    } ,
+  
+    {
+      "title"    : "Knowledge",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/knowledge/",
+      "date"     : "2007-11-14 05:37:19 -0600"
+    } ,
+  
+    {
+      "title"    : "Port 80 and smiles",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/port-80-and-smiles/",
+      "date"     : "2007-11-14 05:11:34 -0600"
+    } ,
+  
+    {
+      "title"    : "NAnt - list all targets in build file",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/nant-list-all-targets-in-build-file/",
+      "date"     : "2007-11-07 15:06:56 -0600"
+    } ,
+  
+    {
+      "title"    : "MonoRail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-5-sending-an-email-and-authentication/",
+      "date"     : "2007-11-03 01:59:40 -0500"
+    } ,
+  
+    {
+      "title"    : "SharpDevelop",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/sharpdevelop/",
+      "date"     : "2007-11-01 23:02:03 -0500"
+    } ,
+  
+    {
+      "title"    : "ThoughtWorks Mingle",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/thoughtworks-mingle/",
+      "date"     : "2007-11-01 18:40:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Trinity football wins game with 15 laterals on last play",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/trinity-football-wins-game-with-15-laterals-on-last-play/",
+      "date"     : "2007-10-29 12:30:00 -0500"
+    } ,
+  
+    {
+      "title"    : "ASP.NET MVC article in Code Magazine",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/asp-net-mvc-article-in-code-magazine/",
+      "date"     : "2007-10-29 10:50:05 -0500"
+    } ,
+  
+    {
+      "title"    : "Google Reader keyboard shortcuts",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/google-reader-keyboard-shortcuts/",
+      "date"     : "2007-10-28 11:31:04 -0500"
+    } ,
+  
+    {
+      "title"    : "NAnt-GUI",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/nant-gui/",
+      "date"     : "2007-10-27 22:49:40 -0500"
+    } ,
+  
+    {
+      "title"    : "Rhino Mocks 3.3 is out!!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/rhino-mocks-3-3-is-out/",
+      "date"     : "2007-10-26 16:35:00 -0500"
+    } ,
+  
+    {
+      "title"    : "CruiseControl and Web Application MSBuild Targets",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/cruisecontrol-and-web-application-msbuild-targets/",
+      "date"     : "2007-10-24 14:59:01 -0500"
+    } ,
+  
+    {
+      "title"    : "Pidgin - Instant Messaging",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/pidgin-instant-messaging/",
+      "date"     : "2007-10-24 13:35:33 -0500"
+    } ,
+  
+    {
+      "title"    : "My Typical Day",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/my-typical-day/",
+      "date"     : "2007-10-21 02:26:58 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubuntu 7.10 (Gutsy Gibbon) release today!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ubuntu-7-10-gutsy-gibbon-release-today/",
+      "date"     : "2007-10-18 12:17:41 -0500"
+    } ,
+  
+    {
+      "title"    : "Routing from ASP.NET MVC inspires MonoRail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/routing-from-asp-net-mvc-inspires-monorail/",
+      "date"     : "2007-10-17 02:46:29 -0500"
+    } ,
+  
+    {
+      "title"    : "Nerdy afternoon",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/nerdy-afternoon/",
+      "date"     : "2007-10-15 01:06:57 -0500"
+    } ,
+  
+    {
+      "title"    : "CodeBetter.CommunityServerExtensions",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/codebetter-communityserverextensions/",
+      "date"     : "2007-10-13 02:31:48 -0500"
+    } ,
+  
+    {
+      "title"    : "Alt.NET Day 2",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/alt-net-day-2-old/",
+      "date"     : "2007-10-11 03:20:48 -0500"
+    } ,
+  
+    {
+      "title"    : "Scotticus",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/scotticus/",
+      "date"     : "2007-10-11 01:55:34 -0500"
+    } ,
+  
+    {
+      "title"    : "2.6.23 Kernel, &quot;Finally. Yeah, it got delayed&quot;",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/",
+      "date"     : "2007-10-11 01:15:38 -0500"
+    } ,
+  
+    {
+      "title"    : "Hanselman recording of Guthrie MVC presentation",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/hanselman-recording-of-guthrie-mvc-presentation/",
+      "date"     : "2007-10-09 18:47:07 -0500"
+    } ,
+  
+    {
+      "title"    : "MonoRail screencasts",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-screencasts/",
+      "date"     : "2007-10-08 23:27:11 -0500"
+    } ,
+  
+    {
+      "title"    : "Alt.NET conference was not for fanboys",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/alt-net-conference-was-not-for-fanboys/",
+      "date"     : "2007-10-07 23:26:41 -0500"
+    } ,
+  
+    {
+      "title"    : "System.Web.MVC",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/system-web-mvc/",
+      "date"     : "2007-10-06 19:14:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Alt.NET Day 1",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/alt-net-day-1/",
+      "date"     : "2007-10-06 05:01:27 -0500"
+    } ,
+  
+    {
+      "title"    : "Alt.NET",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/alt-net/",
+      "date"     : "2007-10-05 22:12:32 -0500"
+    } ,
+  
+    {
+      "title"    : "Stand-ups",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/stand-ups/",
+      "date"     : "2007-10-03 23:21:43 -0500"
+    } ,
+  
+    {
+      "title"    : "Dell Dimension 3000 - remove hard drive",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/dell-dimension-3000-remove-hard-drive/",
+      "date"     : "2007-10-03 10:38:41 -0500"
+    } ,
+  
+    {
+      "title"    : "Installing 2 CruiseControl services/web dashboards on 1 server/PC",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/installing-2-cruisecontrol-services-web-dashboards-on-1-server-pc/",
+      "date"     : "2007-10-02 21:45:03 -0500"
+    } ,
+  
+    {
+      "title"    : ".NET InternalsVisibleTo attribute == C++ Friend Assemblies",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/net-internalsvisibleto-attribute-c-friend-assemblies/",
+      "date"     : "2007-10-02 19:57:02 -0500"
+    } ,
+  
+    {
+      "title"    : "Apple&#39;s new product - iBrick",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/apple-s-new-product-ibrick/",
+      "date"     : "2007-09-28 19:46:04 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubuntu 7.10 (Gutsy Gibbon) BETA released yesterday - final release in October",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ubuntu-7-10-gutsy-gibbon-beta-released-yesterday-final-release-in-october/",
+      "date"     : "2007-09-28 13:54:51 -0500"
+    } ,
+  
+    {
+      "title"    : "Be kind to your testers",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/be-kind-to-your-testers/",
+      "date"     : "2007-09-27 00:31:44 -0500"
+    } ,
+  
+    {
+      "title"    : "MonoRail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-4-validation/",
+      "date"     : "2007-09-26 15:08:25 -0500"
+    } ,
+  
+    {
+      "title"    : "Domain Model Overuse post by David Laribee on CodeBetter",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/domain-model-overuse-post-by-david-laribee-on-codebetter/",
+      "date"     : "2007-09-25 12:21:44 -0500"
+    } ,
+  
+    {
+      "title"    : "Ruby on Rails - WOW!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ruby-on-rails-wow/",
+      "date"     : "2007-09-23 19:45:04 -0500"
+    } ,
+  
+    {
+      "title"    : "MonoRail HotSwap",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-hotswap/",
+      "date"     : "2007-09-23 19:27:16 -0500"
+    } ,
+  
+    {
+      "title"    : "Forget Subversion&#39;s blame, we need the Microsoft&#39;s WSYP program (joke)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/forget-subversion-s-blame-we-need-the-microsoft-s-wsyp-program-joke/",
+      "date"     : "2007-09-23 02:18:40 -0500"
+    } ,
+  
+    {
+      "title"    : "Castle 1.0 Release Candidate 3 is out",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/castle-1-0-release-candidate-3-is-out/",
+      "date"     : "2007-09-22 01:10:41 -0500"
+    } ,
+  
+    {
+      "title"    : "Another reason to love FaceBook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/another-reason-to-love-facebook/",
+      "date"     : "2007-09-19 22:35:08 -0500"
+    } ,
+  
+    {
+      "title"    : "Agile Cheat Sheet",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/agile-cheat-sheet/",
+      "date"     : "2007-09-18 23:08:58 -0500"
+    } ,
+  
+    {
+      "title"    : "Brad Abrams hints (again) on Microsoft MVC framework for ASP.NET and Phil Haack will head it up",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/brad-abrams-hints-again-on-microsoft-mvc-framework-for-asp-net-and-phil-haack-will-head-it-up/",
+      "date"     : "2007-09-18 21:41:15 -0500"
+    } ,
+  
+    {
+      "title"    : "Monorail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-3-viewcomponents/",
+      "date"     : "2007-09-18 15:27:10 -0500"
+    } ,
+  
+    {
+      "title"    : "Good find - software development videos",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/good-find-software-development-videos/",
+      "date"     : "2007-09-18 15:17:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Skype + Yugma + Logitech Premium USB Headset 350 = Remote Pair Programming",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/skype-yugma-logitech-premium-usb-headset-350-remote-pair-programming/",
+      "date"     : "2007-09-17 13:19:00 -0500"
+    } ,
+  
+    {
+      "title"    : "For those annoyed with having to add the public keyword to your new classes....",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/for-those-annoyed-with-having-to-add-the-public-keyword-to-your-new-classes/",
+      "date"     : "2007-09-13 00:28:27 -0500"
+    } ,
+  
+    {
+      "title"    : "Agile Development",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/agile-development/",
+      "date"     : "2007-09-10 01:27:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Upgrade DotNetNuke from 4.03.03 to 4.05.05 and AlamoCoders",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/upgrade-dotnetnuke-from-4-03-03-to-4-05-05-and-alamocoders/",
+      "date"     : "2007-09-09 23:06:26 -0500"
+    } ,
+  
+    {
+      "title"    : "Code snippets in blog entries, HELP!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/code-snippets-in-blog-entries-help/",
+      "date"     : "2007-09-09 11:34:45 -0500"
+    } ,
+  
+    {
+      "title"    : "Microsoft FolderShare",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/microsoft-foldershare/",
+      "date"     : "2007-09-09 02:13:34 -0500"
+    } ,
+  
+    {
+      "title"    : "Monorail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-0-controllers/",
+      "date"     : "2007-09-08 21:20:59 -0500"
+    } ,
+  
+    {
+      "title"    : "Monorail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-2-layouts-amp-rescues/",
+      "date"     : "2007-09-08 21:20:00 -0500"
+    } ,
+  
+    {
+      "title"    : "I didn&#39;t think websites still required a certain platform...",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/i-didn-t-think-websites-still-required-a-certain-platform/",
+      "date"     : "2007-09-03 03:43:54 -0500"
+    } ,
+  
+    {
+      "title"    : "Castle API available now",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/castle-api-available-now/",
+      "date"     : "2007-08-30 21:53:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Monorail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-1-reasons-setup-and-first-output/",
+      "date"     : "2007-08-24 08:01:00 -0500"
+    } ,
+  
+    {
+      "title"    : "SVNRepository.com ROCKS!!",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/svnrepository-com-rocks/",
+      "date"     : "2007-08-20 00:50:55 -0500"
+    } ,
+  
+    {
+      "title"    : "Formatting the RSS Module in DotNetNuke to handle HTML and other formatting tips",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/formatting-the-rss-module-in-dotnetnuke-to-handle-html-and-other-formatting-tips/",
+      "date"     : "2007-08-15 14:58:40 -0500"
+    } ,
+  
+    {
+      "title"    : "Monorail on WebHost4Life",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/monorail-on-webhost4life/",
+      "date"     : "2007-08-11 04:38:40 -0500"
+    } ,
+  
+    {
+      "title"    : "Current things on my plate",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/current-things-on-my-plate/",
+      "date"     : "2007-08-10 00:18:31 -0500"
+    } ,
+  
+    {
+      "title"    : "Facebook in trouble",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/facebook-in-trouble/",
+      "date"     : "2007-07-25 03:01:18 -0500"
+    } ,
+  
+    {
+      "title"    : "South Central US Events Coming up",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/south-central-us-events-coming-up/",
+      "date"     : "2007-07-19 22:06:43 -0500"
+    } ,
+  
+    {
+      "title"    : "Subversion web browser ($30)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/subversion-web-browser-30/",
+      "date"     : "2007-07-11 11:50:00 -0500"
+    } ,
+  
+    {
+      "title"    : "ReSharper now supports VB.NET",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/resharper-now-supports-vb-net/",
+      "date"     : "2007-07-10 14:58:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Oklahoma City Developers Group Code Camp",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/oklahoma-city-developers-group-code-camp/",
+      "date"     : "2007-07-08 21:48:11 -0500"
+    } ,
+  
+    {
+      "title"    : "Castle and Visual Studio integration",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/castle-and-visual-studio-integration/",
+      "date"     : "2007-07-03 10:17:00 -0500"
+    } ,
+  
+    {
+      "title"    : "The Sims meet .NET developers",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/the-sims-meet-net-developers/",
+      "date"     : "2007-06-30 02:27:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Family IT Guy Award",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/family-it-guy-award/",
+      "date"     : "2007-06-29 13:33:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubuntu&#39;s",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ubuntu-s-1-bug-report/",
+      "date"     : "2007-06-26 00:42:51 -0500"
+    } ,
+  
+    {
+      "title"    : "Visual Studio 2005 - Make new classes public by default",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/visual-studio-2005-make-new-classes-public-by-default/",
+      "date"     : "2007-06-24 14:36:40 -0500"
+    } ,
+  
+    {
+      "title"    : "IronPython Cookbook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ironpython-cookbook/",
+      "date"     : "2007-06-01 09:11:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Gates and Jobs interview together - a good watch",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/gates-and-jobs-interview-together-a-good-watch/",
+      "date"     : "2007-05-31 20:53:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Scott Guthrie uses FireFox in his posts.....Where&#39;s IE?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/scott-guthrie-uses-firefox-in-his-posts-where-s-ie/",
+      "date"     : "2007-05-30 08:49:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubuntu Feisty Fawn and the Broadcom wireless card on a Compaq Presario C500 Laptop",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/broadcom-wireless-card-on-a-compaq-presario-c500-laptop/",
+      "date"     : "2007-05-29 21:06:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Knoppix ntfsfix fixes Windows XP corrupted NTFS",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/knoppix-ntfsfix-fixes-windows-xp-corrupted-ntfs/",
+      "date"     : "2007-05-29 20:33:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Bill McCafferty is moving to Monorail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/bill-mccafferty-is-moving-to-monorail/",
+      "date"     : "2007-05-29 15:33:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Technical Debt",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/technical-debt/",
+      "date"     : "2007-05-16 01:18:00 -0500"
+    } ,
+  
+    {
+      "title"    : "GParted instead of Partition Magic",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/gparted-instead-of-partition-magic/",
+      "date"     : "2007-05-13 19:50:49 -0500"
+    } ,
+  
+    {
+      "title"    : "Don&#39;t poke the penguin",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/don-t-poke-the-penguin/",
+      "date"     : "2007-05-13 19:49:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Getting sound working on my Toshiba laptop with Ubuntu 7.04 (Feisty Fawn)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/getting-sound-working-on-my-toshiba-laptop-with-ubuntu-7-04-feisty-fawn/",
+      "date"     : "2007-05-12 23:53:00 -0500"
+    } ,
+  
+    {
+      "title"    : "NHibernate Best Practices 1.2 updated again by McCafferty",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/nhibernate-best-practices-1-2-updated-again-by-mccafferty/",
+      "date"     : "2007-05-02 23:32:38 -0500"
+    } ,
+  
+    {
+      "title"    : "Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/installing-subversion-on-ubuntu-7-04-feisty-fawn-server/",
+      "date"     : "2007-05-01 23:53:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Humble developers",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/humble-developers/",
+      "date"     : "2007-04-28 16:21:00 -0500"
+    } ,
+  
+    {
+      "title"    : "joeyDotNet - Creating reusable components in Monorail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/joeydotnet-creating-reusable-components-in-monorail/",
+      "date"     : "2007-04-13 23:03:05 -0500"
+    } ,
+  
+    {
+      "title"    : "Attending an Austin .NET Users Group (ADNUG) meeting",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/attending-an-austin-net-users-group-adnug-meeting/",
+      "date"     : "2007-04-12 20:43:21 -0500"
+    } ,
+  
+    {
+      "title"    : "Visual Studio 2005 Web Application Projects download",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/visual-studio-2005-web-application-projects-download/",
+      "date"     : "2007-04-10 10:22:00 -0500"
+    } ,
+  
+    {
+      "title"    : "For anyone beginning NHibernate",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/for-anyone-beginning-nhibernate/",
+      "date"     : "2007-04-07 16:26:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Database unit testing",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/database-unit-testing/",
+      "date"     : "2007-04-06 14:31:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Legacy Code",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/legacy-code/",
+      "date"     : "2007-04-01 12:13:00 -0500"
+    } ,
+  
+    {
+      "title"    : "And we&#39;re off",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/and-we-re-off/",
+      "date"     : "2007-03-30 17:09:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Ubuntu Linux offers Windows migration tool.",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ubuntu-linux-offers-windows-migration-tool/",
+      "date"     : "2007-03-29 21:32:00 -0500"
+    } ,
+  
+    {
+      "title"    : "For anyone starting to use NHibernate",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/for-anyone-starting-to-use-nhibernate/",
+      "date"     : "2007-03-26 21:32:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Orcas - First try",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/orcas-first-try/",
+      "date"     : "2007-03-23 21:33:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Orcas - Extension Methods",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/orcas-extension-methods/",
+      "date"     : "2007-03-23 21:33:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Some good finds lately",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/some-good-finds-lately/",
+      "date"     : "2007-03-22 21:33:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Reminder - How to enable syntax highlighting for HTML files with non-standard extensions",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/reminder-how-to-enable-syntax-highlighting-for-html-files-with-non-standard-extensions/",
+      "date"     : "2007-03-21 21:34:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Active Record vs. Repository",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/active-record-vs-repository/",
+      "date"     : "2007-03-11 21:34:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Google source code hosting",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/google-source-code-hosting/",
+      "date"     : "2007-03-03 01:04:00 -0600"
+    } ,
+  
+    {
+      "title"    : ".NET interview questions everyone should know",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/net-interview-questions-everyone-should-know/",
+      "date"     : "2007-03-02 01:03:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Coding Structure and Standards",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/coding-structure-and-standards/",
+      "date"     : "2007-02-17 01:02:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Windows Mobile 6",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/windows-mobile-6/",
+      "date"     : "2007-02-09 01:02:00 -0600"
+    } ,
+  
+    {
+      "title"    : "The end user",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/the-end-user/",
+      "date"     : "2007-01-30 01:01:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Thoughts about reading computer books",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/thoughts-about-reading-computer-books/",
+      "date"     : "2007-01-26 00:59:00 -0600"
+    } ,
+  
+    {
+      "title"    : "2007 Jolt Award Finalists",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/2007-jolt-award-finalists/",
+      "date"     : "2007-01-25 00:57:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Free Agile Project Management Tools",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/free-agile-project-management-tools/",
+      "date"     : "2007-01-24 00:57:00 -0600"
+    } ,
+  
+    {
+      "title"    : "A good read about perception and old vs. new methodologies",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/a-good-read-about-perception-and-old-vs-new-methodologies/",
+      "date"     : "2007-01-24 00:56:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Microsoft Web Application Stress (WAS)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/microsoft-web-application-stress-was/",
+      "date"     : "2007-01-23 00:54:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Austin .NET Users Group (ADNUG) 2007 Code Camp",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/austin-net-users-group-adnug-2007-code-camp/",
+      "date"     : "2007-01-23 00:54:00 -0600"
+    } ,
+  
+    {
+      "title"    : "The Anti-team",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/the-anti-team/",
+      "date"     : "2007-01-23 00:53:00 -0600"
+    } ,
+  
+    {
+      "title"    : "EXCELLENT Post by Jeremy Miller of CodeBetter.com",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/excellent-post-by-jeremy-miller-of-codebetter-com/",
+      "date"     : "2007-01-10 00:51:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Pragmatic Programmer by Hunt/Thomas",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/pragmatic-programmer-by-hunt-thomas/",
+      "date"     : "2007-01-10 00:50:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Code Complete by Steve McConnell",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/code-complete-by-steve-mcconnell/",
+      "date"     : "2007-01-10 00:48:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Law of Demeter (Principle of Least Knowledge)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/law-of-demeter-principle-of-least-knowledge/",
+      "date"     : "2007-01-10 00:46:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Agile Programming Comics",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/agile-programming-comics/",
+      "date"     : "2007-01-09 00:45:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Very cool javascript trick with websites",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/very-cool-javascript-trick-with-websites/",
+      "date"     : "2007-01-09 00:44:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Austin .NET Users Group (ADNUG) Code Camp",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/austin-net-users-group-adnug-code-camp/",
+      "date"     : "2007-01-07 00:43:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Free design templates",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/free-design-templates/",
+      "date"     : "2007-01-04 00:42:00 -0600"
+    } ,
+  
+    {
+      "title"    : "I like to have my inbox empty - Gmail",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/i-like-to-have-my-inbox-empty-gmail/",
+      "date"     : "2007-01-04 00:41:00 -0600"
+    } ,
+  
+    {
+      "title"    : "The D Programming Language",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/the-d-programming-language/",
+      "date"     : "2007-01-03 00:40:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Ruby development in Visual Studio 2005",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/ruby-development-in-visual-studio-2005/",
+      "date"     : "2007-01-03 00:40:00 -0600"
+    } ,
+  
+    {
+      "title"    : "WinSnap",
+      "category" : "",
+      "tags"     : "tools, windows",
+      "url"      : "https://blog.jasonmeridth.com/posts/winsnap/",
+      "date"     : "2007-01-02 00:52:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Jeremy Miller goes into Java land",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/jeremy-miller-goes-into-java-land/",
+      "date"     : "2006-12-31 00:39:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Interface Segregation Principle (ISP)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/interface-segregation-principle-isp/",
+      "date"     : "2006-12-30 00:38:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Agile Principles, Patterns and Practices in C# book",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/agile-principles-patterns-and-practices-in-c-book/",
+      "date"     : "2006-12-29 00:37:00 -0600"
+    } ,
+  
+    {
+      "title"    : "A very good introduction to TDD, NHibernate, DDD, NUnit",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/a-very-good-introduction-to-tdd-nhibernate-ddd-nunit/",
+      "date"     : "2006-12-29 00:36:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Castle Project",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/castle-project/",
+      "date"     : "2006-12-14 00:30:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Programming Fonts",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/programming-fonts/",
+      "date"     : "2006-12-13 00:29:00 -0600"
+    } ,
+  
+    {
+      "title"    : "System.Object.GetHashCode()",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/system-object-gethashcode/",
+      "date"     : "2006-12-12 00:28:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Resharper Templates",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "https://blog.jasonmeridth.com/posts/resharper-templates/",
+      "date"     : "2006-12-11 00:26:00 -0600"
+    } 
+  
+]

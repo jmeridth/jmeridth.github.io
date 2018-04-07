@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Jason Meridth</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="https://blog.jasonmeridth.com/feed.xml" />
+<link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com" />
+<updated>2018-04-07T09:34:54-05:00</updated>
+<id>https://blog.jasonmeridth.com/</id>
+<author>
+  <name>Jason Meridth</name>
+  <uri>https://blog.jasonmeridth.com/</uri>
+  <email>jason@meridth.io</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Raspberry Pi Kubernetes Cluster - Part 1]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1/" />
+  <id>https://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1</id>
+  <published>2018-04-07T09:01:00-05:00</published>
+  <updated>2018-04-07T09:01:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Howdy&lt;/p&gt;
+
+&lt;p&gt;This is going to be the first post about my setup of a Raspberry Pi Kubernetes Cluster.  I saw a post by &lt;a href=&quot;https://harthoover.com/kubernetes-1.9-on-a-raspberry-pi-cluster/&quot;&gt;Hart Hoover&lt;/a&gt; and it finally motivated me to purchase his “grocery list” and do this finally.  I’ve been using &lt;a href=&quot;https://kubernetes.io/docs/getting-started-guides/minikube/&quot;&gt;Minikube&lt;/a&gt; for local Kubernetes testing but it doesn’t give you multi-host testing abilities.  I’ve also been wanting to get deeper into my Raspberry Pi knowledge.  Lots of learning and winning.&lt;/p&gt;
+
+&lt;p&gt;The items I bought were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Six &lt;a href=&quot;https://smile.amazon.com/dp/B07BFH96M3&quot;&gt;Raspberry Pi 3 Model B+ Motherboards&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Six &lt;a href=&quot;https://smile.amazon.com/gp/product/B010Q57T02/&quot;&gt;SanDisk Ultra 32GB microSDHC UHS-I Card with Adapter, Grey/Red, Standard Packaging (SDSQUNC-032G-GN6MA)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;One &lt;a href=&quot;https://smile.amazon.com/gp/product/B011KLFERG/ref=oh_aui_detailpage_o02_s01?ie=UTF8&amp;amp;psc=1&quot;&gt;Sabrent 6-Pack 22AWG Premium 3ft Micro USB Cables High Speed USB 2.0 A Male to Micro B Sync and Charge Cables Black CB-UM63&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;One &lt;a href=&quot;https://smile.amazon.com/gp/product/B01L0KN8OS/ref=oh_aui_detailpage_o02_s01?ie=UTF8&amp;amp;psc=1&quot;&gt;AmazonBasics 6-Port USB Wall Charger (60-Watt) - Black&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;One &lt;a href=&quot;https://smile.amazon.com/gp/product/B01D9130QC/ref=oh_aui_detailpage_o02_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;GeauxRobot Raspberry Pi 3 Model B 6-layer Dog Bone Stack Clear Case Box Enclosure also for Pi 2B B+ A+ B A&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;One &lt;a href=&quot;http://amzn.to/2gNzLzi&quot;&gt;Black Box 8-Port Switch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I spent this morning finally putting it together.&lt;/p&gt;
+
+&lt;p&gt;Here is me getting started on the “dogbone case” to hold all of the Raspberry Pis:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_2.jpg&quot; alt=&quot;The layout&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The bottom and one layer above:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_3.jpg&quot; alt=&quot;The bottom and one layer above&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And the rest:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_4.jpg&quot; alt=&quot;3 Layers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_11.jpg&quot; alt=&quot;4 Layers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_12.jpg&quot; alt=&quot;5 Layers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_13.jpg&quot; alt=&quot;6 Layers and Finished&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Different angles completed:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_14.jpg&quot; alt=&quot;Finished Angle 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_15.jpg&quot; alt=&quot;Finished Angle 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And connect the power:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/kuberenetes_cluster/case_16.jpg&quot; alt=&quot;Power&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next post will be on getting the 6 sandisk cards ready and putting them in and watching the Raspberry Pis boot up and get a green light.  Stay tuned.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1/&quot;&gt;Raspberry Pi Kubernetes Cluster - Part 1&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on April 07, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[SSH - Too Many Authentication Failures]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/ssh-too-many-authentication-failures/" />
+  <id>https://blog.jasonmeridth.com/posts/ssh-too-many-authentication-failures</id>
+  <published>2018-03-28T00:00:00-05:00</published>
+  <updated>2018-03-28T00:00:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;h1 id=&quot;problem&quot;&gt;Problem&lt;/h1&gt;
+&lt;p&gt;I started seeing this error recently and had brain farted on why.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Received disconnect from 123.123.132.132: Too many authentication failures &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;hostname&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;After a bit of googling it came back to me.  This is because I’ve loaded too many keys into my ssh-agent locally (&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh-add&lt;/code&gt;).  Why did you do that?  Well, because it is easier than specifying the &lt;code class=&quot;highlighter-rouge&quot;&gt;IdentityFile&lt;/code&gt; on the cli when trying to connect.  But there is a threshhold.  This is set by the ssh host by the &lt;code class=&quot;highlighter-rouge&quot;&gt;MaxAuthTries&lt;/code&gt; setting in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/ssh/sshd_config&lt;/code&gt;.  The default is 6.&lt;/p&gt;
+
+&lt;h1 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h1&gt;
+&lt;p&gt;Clean up the keys in your ssh-agent.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh-add -l&lt;/code&gt; lists all the keys you have in your ssh-agent
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh-add -d key&lt;/code&gt; deletes the key from your ssh-agent&lt;/p&gt;
+
+&lt;h1 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h1&gt;
+&lt;p&gt;You can solve this on the command line like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ssh -o IdentitiesOnly=yes -i ~/.ssh/example_rsa foo.example.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;What is IdentitiesOnly?  Explained in Solution 3 below.&lt;/p&gt;
+
+&lt;h1 id=&quot;solution-3-best&quot;&gt;Solution 3 (best)&lt;/h1&gt;
+&lt;p&gt;Specifiy, explicitly, which key goes to which host(s) in your &lt;code class=&quot;highlighter-rouge&quot;&gt;.ssh/config&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;You need to configure which key (“IdentityFile”) goes with which domain (or host). You also want to handle the case when the specified key doesn’t work, which would usually be because the public key isn’t in ~/.ssh/authorized_keys on the server. The default is for SSH to then try any other keys it has access to, which takes us back to too many attempts. Setting “IdentitiesOnly” to “yes” tells SSH to only try the specified key and, if that fails, fall through to password authentication (presuming the server allows it).&lt;/p&gt;
+
+&lt;p&gt;Your ~/.ssh/config would look like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host *.myhost.com
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/myhost
+Host secure.myhost.com
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/mysecurehost_rsa
+Host *.myotherhost.domain
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/myotherhost_rsa
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Host&lt;/code&gt; is the host the key can connect to
+&lt;code class=&quot;highlighter-rouge&quot;&gt;IdentitiesOnly&lt;/code&gt; means only to try &lt;em&gt;this&lt;/em&gt; specific key to connect, no others
+&lt;code class=&quot;highlighter-rouge&quot;&gt;IdentityFile&lt;/code&gt; is the path to the key&lt;/p&gt;
+
+&lt;p&gt;You can try multiple keys if needed&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host *.myhost.com
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/myhost_rsa
+  IdentityFile ~/.ssh/myhost_dsa
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hope this helps someone else.&lt;/p&gt;
+
+&lt;p&gt;Cheers!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/ssh-too-many-authentication-failures/&quot;&gt;SSH - Too Many Authentication Failures&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on March 28, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Clear DNS Cache In Chrome]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/clear-dns-cache-in-chrome/" />
+  <id>https://blog.jasonmeridth.com/posts/clear-dns-cache-in-chrome</id>
+  <published>2018-03-27T15:42:00-05:00</published>
+  <updated>2018-03-27T15:42:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I’m blogging this because I keep forgetting how to do it.  Yeah, yeah, I can google it.  I run this blog so I know it is always available…..anywho.&lt;/p&gt;
+
+&lt;p&gt;Go To:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chrome://net-internals/#dns
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Click “Clear host cache” button&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/clear_dns_cache_in_chrome.png&quot; alt=&quot;clear_dns_cache_in_chrome&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope this helps someone else.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/clear-dns-cache-in-chrome/&quot;&gt;Clear DNS Cache In Chrome&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on March 27, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Create Docker Container from Errored Container]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/create-docker-container-from-errored-container/" />
+  <id>https://blog.jasonmeridth.com/posts/create-docker-container-from-errored-container</id>
+  <published>2018-03-25T22:31:00-05:00</published>
+  <updated>2018-03-25T22:31:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;When I’m trying to “dockerize” an applciation I usually have to work through some wonkiness.&lt;/p&gt;
+
+&lt;p&gt;To diagnose a container that has errored out, I, obviously, look at the logs via &lt;code class=&quot;highlighter-rouge&quot;&gt;docker logs -f [container_name]&lt;/code&gt;.  That is sometimes helpful.  It will, at minimum tell me where I need to focus on the new container I’m going to create.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/diagnose.jpg&quot; alt=&quot;diagnose&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pre-requisites to being able to build a diagnosis container:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You need to use &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD&lt;/code&gt;, &lt;em&gt;not&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT&lt;/code&gt; in the Dockerfile
+    &lt;ul&gt;
+      &lt;li&gt;with &lt;code class=&quot;highlighter-rouge&quot;&gt;CMD&lt;/code&gt; you’ll be able to start a shell, with &lt;code class=&quot;highlighter-rouge&quot;&gt;ENTRYPOINT&lt;/code&gt; your diagnosis container will just keep trying to run that&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To create a diagnosis container, do the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check your failed container ID by &lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps -a&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Create docker image form the container with &lt;code class=&quot;highlighter-rouge&quot;&gt;docker commit&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;example: &lt;code class=&quot;highlighter-rouge&quot;&gt;docker commit -m &quot;diagnosis&quot; [failed container id]&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Check the newly create docker image ID by &lt;code class=&quot;highlighter-rouge&quot;&gt;docker images&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker run -it [new container image id] sh&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;this takes you into a container immediately after the error occurred.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope this helps someone else.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/create-docker-container-from-errored-container/&quot;&gt;Create Docker Container from Errored Container&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on March 25, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Unable To Access Mysql With Root and No Password After New Install On Ubuntu]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/unable-to-access-mysql-with-root-and-no-password-after-new-install-on-ubuntu/" />
+  <id>https://blog.jasonmeridth.com/posts/unable-to-access-mysql-with-root-and-no-password-after-new-install-on-ubuntu</id>
+  <published>2018-01-30T18:13:00-06:00</published>
+  <updated>2018-01-30T18:13:00-06:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;This bit me in the rear end again today.  Had to reinstall mysql-server-5.7 for other reasons.&lt;/p&gt;
+
+&lt;p&gt;You just installed &lt;code class=&quot;highlighter-rouge&quot;&gt;mysql-server&lt;/code&gt; locally for your development environment on a recent version of Ubuntu (I have 17.10 artful installed).  You did it with a blank password for &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt; user.  You type &lt;code class=&quot;highlighter-rouge&quot;&gt;mysql -u root&lt;/code&gt; and you see &lt;code class=&quot;highlighter-rouge&quot;&gt;Access denied for user 'root'@'localhost'&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/wat.png&quot; alt=&quot;wat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Issue:
+Because you chose to not have a password for the &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt; user, the &lt;code class=&quot;highlighter-rouge&quot;&gt;auth_plugin&lt;/code&gt; for my MySQL defaulted to &lt;code class=&quot;highlighter-rouge&quot;&gt;auth_socket&lt;/code&gt;.  That means if you type &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo mysql -u root&lt;/code&gt; you will get in.  If you don’t, then this is NOT the fix for you.&lt;/p&gt;
+
+&lt;p&gt;Solution:
+Change the &lt;code class=&quot;highlighter-rouge&quot;&gt;auth_plugin&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;mysql_native_password&lt;/code&gt; so that you can use the root user in the database.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo mysql -u root
+
+mysql&amp;gt; USE mysql;
+mysql&amp;gt; UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+mysql&amp;gt; FLUSH PRIVILEGES;
+mysql&amp;gt; exit;
+
+$ sudo systemctl restart mysql
+$ sudo systemctl status mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;NB&lt;/strong&gt;
+ALWAYS set a password for mysql-server in staging/production.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/unable-to-access-mysql-with-root-and-no-password-after-new-install-on-ubuntu/&quot;&gt;Unable To Access Mysql With Root and No Password After New Install On Ubuntu&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on January 30, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[New Job]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/new-job/" />
+  <id>https://blog.jasonmeridth.com/posts/new-job</id>
+  <published>2018-01-08T12:13:00-06:00</published>
+  <updated>2018-01-08T12:13:00-06:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Well, it is a new year and I’ve started a new job.  I am now a Senior Software Engineer at &lt;a href=&quot;https://truelinkfinancial.com&quot;&gt;True Link Financial&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/tllogo.png&quot; alt=&quot;true link financial logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After interviewing with the co-founders Kai and Claire and their team, I knew I wanted to work here.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: True Link:  We give elderly and disable (really, anyone) back their financial freedom where they may not usually have it.&lt;/p&gt;
+
+&lt;p&gt;Longer Version:  Imagine you have an elderly family member who may start showing signs of dimensia.  You can give them a True Link card and administer their card.  You link it to their bank account or another source of funding and you can set limitations on when, where and how the card can be used.  The family member feels freedom by not having to continually ask for money but is also protected by scammers and non-friendly people (yep, they exist).&lt;/p&gt;
+
+&lt;p&gt;The customer service team, the marketing team, the product team, the engineering team and everyone else at True Link are amazing.&lt;/p&gt;
+
+&lt;p&gt;For any nerd readers, the tech stack is currently Rails, React, AWS, Ansible.  We’ll be introducing Docker and Kubernetes soon hopefully, but always ensuring the right tools for the right job.&lt;/p&gt;
+
+&lt;p&gt;Looking forward to 2018.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/new-job/&quot;&gt;New Job&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on January 08, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Docker Daemon Error When Running Docker Compose]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/docker-daemon-error-when-running-docker-compose/" />
+  <id>https://blog.jasonmeridth.com/posts/docker-daemon-error-when-running-docker-compose</id>
+  <published>2018-01-02T12:11:00-06:00</published>
+  <updated>2018-01-02T12:11:00-06:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/why-docker-why-i-just-want-to-deploy.jpg&quot; alt=&quot;docker why&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;TL;DR Make sure you don’t have any old mounted volumes around if you see the error below.&lt;/p&gt;
+
+&lt;p&gt;I just got the following error when trying to run &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose up -d&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ERROR: Couldn't connect to Docker daemon at http+docker://localunixsocket - is it running?
+
+If it's at a non-standard location, specify the URL with the DOCKER_HOST environment variable.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Please note I have a database using a mounted volume.  The issue was that the previous mount was still present.  Once I deleted that, &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose up -d&lt;/code&gt; would work jut fine.&lt;/p&gt;
+
+&lt;p&gt;If anyone knows a more elegant way to handle this, I’m open to it.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/docker-daemon-error-when-running-docker-compose/&quot;&gt;Docker Daemon Error When Running Docker Compose&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on January 02, 2018.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Lenovo Thinkpad - Swap ctrl and fn keys]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/lenovo-thinkpad-swap-ctrl-and-fn-keys/" />
+  <id>https://blog.jasonmeridth.com/posts/lenovo-thinkpad-swap-ctrl-and-fn-keys</id>
+  <published>2017-11-22T10:18:00-06:00</published>
+  <updated>2017-11-22T10:18:00-06:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I just got a new laptop.  It is a Lenovo Thinkpad X1 Carbon 5th Gen.&lt;/p&gt;
+
+&lt;p&gt;Ubuntu 17.10
+16 GB RAM
+1 TB SSD
+64-bit i7 Pentium
+USB-C power&lt;/p&gt;
+
+&lt;p&gt;I’m in love.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/lenovo-thinkpad-box.jpg&quot; alt=&quot;lenovo thinkpad box&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/lenovo-thinkpad.jpg&quot; alt=&quot;lenovo thinkpad&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/lenovo-thinkpad-fn-ctrl-keys.jpg&quot; alt=&quot;lenovo thinkpad fn ctrl keys&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;My only gripe is that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Fn&lt;/code&gt; key is on the far left bottom of the keyboard. I prefer that to be the &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; key due to copy/paste and other keyboard commands I use often.  I also have very big hands and my pinky isn’t made to “find” the &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; key to the right of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Fn&lt;/code&gt; key.&lt;/p&gt;
+
+&lt;p&gt;I currently use &lt;code class=&quot;highlighter-rouge&quot;&gt;Dconf&lt;/code&gt; for mapping of keys in Ubuntu (currently using 17.10).  I learned today that the &lt;code class=&quot;highlighter-rouge&quot;&gt;fn&lt;/code&gt; key on keyboards is not managed by the operating system, which makes sense.  Lenovo in all of its glorious-ness has a BIOS option to swap the &lt;code class=&quot;highlighter-rouge&quot;&gt;Fn&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl&lt;/code&gt; keys.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/lenovo-bios-fn-ctrl-swap.jpg&quot; alt=&quot;lenovo bios fn ctrl swap&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you Lenovo.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/lenovo-thinkpad-swap-ctrl-and-fn-keys/&quot;&gt;Lenovo Thinkpad - Swap ctrl and fn keys&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on November 22, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Ubuntu - set caps lock to escape]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/ubuntu-set-caps-lock-to-escape/" />
+  <id>https://blog.jasonmeridth.com/posts/ubuntu-set-caps-lock-to-escape</id>
+  <published>2017-11-22T10:05:00-06:00</published>
+  <updated>2017-11-22T10:05:00-06:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I just got a new laptop and had to google again on how to set caps lock key to escape (I’m a Vim user).&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install dconf-tools
+dconf write /org/gnome/desktop/input-sources/xkb-options &quot;['caps:escape']&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To know your options, use the following command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;man xkeyboard-config&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(MAN pages are your friend; man is short for manual)&lt;/p&gt;
+
+&lt;p&gt;You can also now use the &lt;code class=&quot;highlighter-rouge&quot;&gt;Dconf&lt;/code&gt; GUI editor if you must (SHAME! ;) )&lt;/p&gt;
+
+&lt;p&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;Dconf&lt;/code&gt; in Unity or Gnome app opener and go to the following location:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;`org` →- `gnome` → `desktop` →  `input-sources` →  `xkb-options`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;['caps:escape']&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;Custom Value&lt;/code&gt; textbox.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/dconf-caps-lock-to-escape.png&quot; alt=&quot;dconf caps lock to escape&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/ubuntu-set-caps-lock-to-escape/&quot;&gt;Ubuntu - set caps lock to escape&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on November 22, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Cleanup Docker]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/cleanup-docker/" />
+  <id>https://blog.jasonmeridth.com/posts/cleanup-docker</id>
+  <published>2017-11-12T21:15:00-06:00</published>
+  <updated>2017-11-12T21:15:00-06:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I keep having friends who have experienced the &lt;code class=&quot;highlighter-rouge&quot;&gt;no space left on device&lt;/code&gt; when trying to build images.&lt;/p&gt;
+
+&lt;p&gt;I have aliases for most of my container/image/volume cleanup:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lias dka='dkc;dki;dkv'
+alias dkc='docker ps -aq | xargs docker rm -f'
+alias dki='docker images -aq | xargs docker rmi -f'
+alias dkv='docker volume ls -qf dangling=true | xargs docker volume rm'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I use &lt;code class=&quot;highlighter-rouge&quot;&gt;dka&lt;/code&gt; all the time.&lt;/p&gt;
+
+&lt;p&gt;There is also the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker system prune -a&lt;/code&gt; command that works.&lt;/p&gt;
+
+&lt;p&gt;I’ve also had to unmount my local aufs volume on my ubuntu laptop via:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo umount -l /var/lib/docker/aufs &amp;amp;&amp;amp; sudo rm -rf /var/lib/docker/aufs&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;and all things are cleaned up.  Hope this helps someone else.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/cleanup-docker/&quot;&gt;Cleanup Docker&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on November 12, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[OnePlus 5]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/one-plus-5/" />
+  <id>https://blog.jasonmeridth.com/posts/one-plus-5</id>
+  <published>2017-07-03T12:02:00-05:00</published>
+  <updated>2017-07-03T12:02:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I’ve had a Nexus 6 for the last 2 years and was finally due for a phone upgrade.  I went through a pretty good fiasco with Google store trying to purchase a Google Pixel XL earlier this year so I decided to wait for the One Plus 5 (release late June).  I ordered it the first hour it was announced.&lt;/p&gt;
+
+&lt;p&gt;Features that I’m loving:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;8 GB RAM&lt;/li&gt;
+  &lt;li&gt;128 GB hard drive&lt;/li&gt;
+  &lt;li&gt;dash charge&lt;/li&gt;
+  &lt;li&gt;USB C&lt;/li&gt;
+  &lt;li&gt;OxygenOS (Android fork)&lt;/li&gt;
+  &lt;li&gt;headphone jack&lt;/li&gt;
+  &lt;li&gt;fingerprint authentication&lt;/li&gt;
+  &lt;li&gt;dual camera (allows for portrait mode) 16 MP&lt;/li&gt;
+  &lt;li&gt;front camera 16 MP&lt;/li&gt;
+  &lt;li&gt;Dual SIM support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More detailed specs can be found &lt;a href=&quot;https://oneplus.net/5/specs&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Features I’m adjusting to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;no Google Phone app install allowed&lt;/li&gt;
+  &lt;li&gt;no Google Contacts app install allowed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’ll adjust to those over time.&lt;/p&gt;
+
+&lt;p&gt;I did entertain the iPhone 7 for a bit also but am not a fan of iTunes.  The iPhone integration with Google apps has gotten much better since the last time I looked though.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/one-plus-5/&quot;&gt;OnePlus 5&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on July 03, 2017.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Mapping Caps Lock to Esc Is Native to OSX Now]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/mapping-caps-lock-to-esc-on-osx-is-native-now/" />
+  <id>https://blog.jasonmeridth.com/posts/mapping-caps-lock-to-esc-on-osx-is-native-now</id>
+  <published>2016-10-31T15:12:00-05:00</published>
+  <updated>2016-10-31T15:12:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I have been using &lt;a href=&quot;https://pqrs.org/osx/karabiner/seil.html.en&quot;&gt;Seil&lt;/a&gt; for a few years now on OSX to map Caps Lock to Esc.  I use Vim for my development and letting my left pinky tap the Caps Lock key instead of Esc allows me to keep my hands on the home row and move much quicker.  I also can’t remember the last time I actually needed the Caps Lock key.  Well as of 10.12.1 (macOS Sierra Update) you can do this mapping in System Preferences.&lt;/p&gt;
+
+&lt;p&gt;Thank you to my co-worker &lt;a href=&quot;https://twitter.com/kweerious&quot;&gt;Dedi&lt;/a&gt; for letting me know about this.&lt;/p&gt;
+
+&lt;p&gt;Go to System Preferences from the Apple menu:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/system_preferences.png&quot; alt=&quot;system preferences&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Go to keyboard:
+&lt;img src=&quot;https://blog.jasonmeridth.com/images/keyboard.png&quot; alt=&quot;Keyboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Go to “Modifier Keys” button on bottom right:
+&lt;img src=&quot;https://blog.jasonmeridth.com/images/modifier_keys.png&quot; alt=&quot;Modifier Keys Button&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Change Caps Lock Key to Escape:
+&lt;img src=&quot;https://blog.jasonmeridth.com/images/caps_lock_to_esc.png&quot; alt=&quot;Change Caps Lock Key to Esc&quot; /&gt;&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/mapping-caps-lock-to-esc-on-osx-is-native-now/&quot;&gt;Mapping Caps Lock to Esc Is Native to OSX Now&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on October 31, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Details HTML Section In Github Issues and Gists]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/details-html-section-in-github-issues-and-gists/" />
+  <id>https://blog.jasonmeridth.com/posts/details-html-section-in-github-issues-and-gists</id>
+  <published>2016-07-28T11:01:00-05:00</published>
+  <updated>2016-07-28T11:01:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I recently became aware of using the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;details&amp;gt;&amp;lt;/details&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;summary&amp;gt;...&amp;lt;/summary&amp;gt;&lt;/code&gt; tags in Github issues and Gists.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jmeridth/jmeridth.github.io/issues/3&quot;&gt;Here&lt;/a&gt; is an example.&lt;/p&gt;
+
+&lt;p&gt;I will definitely be using this more when posting big logs or stack traces.&lt;/p&gt;
+
+&lt;p&gt;Kudos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/rhein_wein&quot;&gt;Laura Frank&lt;/a&gt; for showing me this feature&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/dahlbyk&quot;&gt;Keith Dahlby&lt;/a&gt; for letting me know it doesn’t currently work in Firefox&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/mhinze&quot;&gt;Matt Hinze&lt;/a&gt; for showing me &lt;a href=&quot;https://gist.github.com/ericclemmons/b146fe5da72ca1f706b2ef72a20ac39d&quot;&gt;this&lt;/a&gt; gist where I learned of &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;summary&amp;gt;...&amp;lt;/summary&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/ericclemmons&quot;&gt;Eric Clemmons&lt;/a&gt; for the awesome &lt;a href=&quot;https://gist.github.com/ericclemmons/b146fe5da72ca1f706b2ef72a20ac39d&quot;&gt;gist&lt;/a&gt; that does a great job explaining the feature&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/details-html-section-in-github-issues-and-gists/&quot;&gt;Details HTML Section In Github Issues and Gists&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on July 28, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Stop and Remove All Docker Containers]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/stop-remove-all-docker-containers/" />
+  <id>https://blog.jasonmeridth.com/posts/stop-remove-all-docker-containers</id>
+  <published>2016-07-06T16:44:00-05:00</published>
+  <updated>2016-07-06T16:44:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Command remove all docker containers:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker stop '$(docker ps -a -q)' &amp;amp;&amp;amp; docker rm '$(docker ps -a -q)'&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;docker ps -a -q&lt;/code&gt; lists all container IDs&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/stop-remove-all-docker-containers/&quot;&gt;Stop and Remove All Docker Containers&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on July 06, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Get Repository Root Path]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/get-repository-root-path/" />
+  <id>https://blog.jasonmeridth.com/posts/get-repository-root-path</id>
+  <published>2016-07-04T20:52:00-05:00</published>
+  <updated>2016-07-04T20:52:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I needed to find a way to get the path to the root of my Git repository.  I found the answer in the following command:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git rev-parse --show-toplevel&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;-&amp;gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git rev-parse &lt;span class=&quot;nt&quot;&gt;--show-toplevel&lt;/span&gt;
+/Users/jmeridth/dev/jmeridth.github.io&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/get-repository-root-path/&quot;&gt;Get Repository Root Path&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on July 04, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Vim Tagbar Plugin]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/vim-tagbar-plugin/" />
+  <id>https://blog.jasonmeridth.com/posts/vim-tagbar-plugin</id>
+  <published>2016-07-03T09:16:00-05:00</published>
+  <updated>2016-07-03T09:16:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I found the &lt;a href=&quot;https://github.com/majutsushi/tagbar&quot;&gt;tagbar&lt;/a&gt; Vim plugin last night and finally tried it out this morning.  I like it.  I mapped &lt;code class=&quot;highlighter-rouge&quot;&gt;,tb&lt;/code&gt; to showing it &lt;a href=&quot;https://github.com/jmeridth/dotfiles/blob/master/vimrc&quot;&gt;in my .vimrc&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;One of the requirements is &lt;a href=&quot;http://ctags.sourceforge.net/&quot;&gt;Exuberant Ctags&lt;/a&gt;.  Since I’m on OSX I installed it with &lt;a href=&quot;https://brew.sh&quot;&gt;Homebrew&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew install ctags&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;In a Python file it will group/fold all of your imports, classes, methods, etc in one view.  It is very nice and when you press enter on one of them it takes you to that item in the current buffer.&lt;/p&gt;
+
+&lt;p&gt;Here are the screenshots from the github repo screenshots (C++ files):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/fc85311154723793776aed28488befdfaab36c42/68747470733a2f2f692e696d6775722e636f6d2f5366394c7332722e706e67&quot; alt=&quot;screenshot 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/f5065c1dda4cbd6df6eed89c4086e31fc1774b2e/68747470733a2f2f692e696d6775722e636f6d2f6e3462705076332e706e67&quot; alt=&quot;screenshot 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m really liking it so far.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/vim-tagbar-plugin/&quot;&gt;Vim Tagbar Plugin&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on July 03, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Information Shown After Logging Into Ubuntu]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/information-shown-after-logging-into-ubuntu/" />
+  <id>https://blog.jasonmeridth.com/posts/information-shown-after-logging-into-ubuntu</id>
+  <published>2016-07-03T08:58:00-05:00</published>
+  <updated>2016-07-03T08:58:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Afer you log into an ubuntu instance you’ll usually see something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;Welcome to Ubuntu 14.04.4 LTS &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;GNU/Linux 3.13.0-88-generic x86_64&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+ &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; Documentation:  https://help.ubuntu.com/
+
+  System information as of Fri Jul  1 21:17:15 UTC 2016
+
+  System load:  0.0               Processes:           100
+  Usage of /:   20.1% of 7.74GB   Users logged &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;:     0
+  Memory usage: 28%               IP address &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;eth0: 172.30.0.115
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+7 packages can be updated.
+7 updates are security updates.
+
+
+Last login: Fri Jul  1 21:17:15 2016 from 1.2.3.4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I have logged into many ubuntu servers in my time and today I finally looked up how the information that displays gets generated and displayed.  I’ve used &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/motd&lt;/code&gt; aka &lt;code class=&quot;highlighter-rouge&quot;&gt;message of the day&lt;/code&gt; many times before but I noticed tha file doesn’t exist in a vanilla Ubuntu install.  There are two main commands that are populating the information shown at login.&lt;/p&gt;
+
+&lt;p&gt;For system information:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;landscape-sysinfo&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;example output:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;-&amp;gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;landscape-sysinfo
+  System load:  0.0               Processes:           99
+  Usage of /:   20.1% of 7.74GB   Users logged &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;:     1
+  Memory usage: 28%               IP address &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;eth0: 10.10.10.10
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;For packages status:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/usr/lib/update-notifier/update-motd-updates-available&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;example output:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;-&amp;gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;/usr/lib/update-notifier/update-motd-updates-available
+
+7 packages can be updated.
+7 updates are security updates.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/information-shown-after-logging-into-ubuntu/&quot;&gt;Information Shown After Logging Into Ubuntu&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on July 03, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Other People's Code]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/other-peoples-code/" />
+  <id>https://blog.jasonmeridth.com/posts/other-peoples-code</id>
+  <published>2016-06-26T14:51:00-05:00</published>
+  <updated>2016-06-26T14:51:00-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;TL;DR We are all continually improving.  Don’t forget that.&lt;/p&gt;
+
+&lt;p&gt;Recently I’ve been hearing more and more developers say stuff like “Wow, what was this person thinking when they wrote this?” or “Really?  Sigh…..”.  Don’t get me wrong.  I’ve been guilty of this also.  I am writing this post to remind myself and other developers that if you could, you would say those things to yourself of six months ago or even yesterday.  We are all continually improving and we started writing bad, inexperienced code just like some of the code your reading now.  I also saw someone say “Bad code doesn’t immediately become bad; it happens over time, gradually.” (thanks &lt;a href=&quot;https://github.com/scichelli&quot;&gt;Sharon&lt;/a&gt;)  That is true.&lt;/p&gt;
+
+&lt;p&gt;I like the quote:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    Write code as if the person who will maintain
+    it is a psychopath and he/she knows where you live
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’ve also told developers recently that I read more code than I write.  Yeah, maybe some of you just churn it out like you exhale but that isn’t me.  That doesn’t mean I don’t produce, but I actually read code for fun.  I am always reviewing code for work and side jobs, but I’m also reading open source library code for projects that I use or plan to use so that I can understand how they work and also to learn.  Some people read books or newspaper articles.  I read source code.&lt;/p&gt;
+
+&lt;p&gt;I am absolutely not passing judgment on anyone.  There is a fine line between ignorance and lack of intelligence.  Ignorance means the person is unaware/hasn’t been taught/etc.  Lack of intelligence means that no matter how many times that person is taught they will never grasp the subject.  This includes multiple ways of teaching the same subject matter.  When you read those developer’s code, you will sigh.  But…you should still add comments to their code and end it with something like “wdyt?” (wdyt == what do you think?).  You present them with your perspective but aren’t forcing it on them.  Maybe someday it will click.  Maybe not. That’s not up to you.  If they are destructive to the code, then that is a subject for another post. :)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/other-peoples-code/&quot;&gt;Other People's Code&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on June 26, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[How I Setup My Local Python Environment]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/how-i-setup-my-local-python-environment/" />
+  <id>https://blog.jasonmeridth.com/posts/how-i-setup-my-local-python-environment</id>
+  <published>2016-06-26T11:04:10-05:00</published>
+  <updated>2016-06-26T11:04:10-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I’ve had a few people ask me lately how I setup my local python environment.&lt;/p&gt;
+
+&lt;p&gt;I am using iterm2 (v3.0.0) on OSX.  That means I am using &lt;a href=&quot;https://brew.sh&quot;&gt;homebrew&lt;/a&gt; and I installed &lt;code class=&quot;highlighter-rouge&quot;&gt;wget&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; via brew.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;/usr/bin/ruby &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;wget
+brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;curl&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install the python package manager &lt;a href=&quot;https://pip.pypa.io/en/stable://pip.pypa.io/en/stable/&quot;&gt;pip&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Install the &lt;a href=&quot;https://virtualenvwrapper.readthedocs.io/en/latest/&quot;&gt;virtualenvwrapper&lt;/a&gt; package.  It lets you manage python virtual environments easier than just using &lt;a href=&quot;https://virtualenv.pypa.io/en/stable/&quot;&gt;virtualenv&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo pip install virtualenvwrapper&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Create working directory and project directory&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;WORKSPACE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/dev
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PROJ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$WORKSPACE&lt;/span&gt;/testproj1
+mkdir-p &lt;span class=&quot;nv&quot;&gt;$PROJ&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PROJ&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Make virtual environment (aka isolated dependencies)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;-&amp;gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkvirtualenv testproj1
+
+-&amp;gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;requests
+Collecting requests
+  Using cached requests-2.10.0-py2.py3-none-any.whl
+  Installing collected packages: requests
+  Successfully installed requests-2.10.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Create file to test with:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;vim test.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;inside &lt;code class=&quot;highlighter-rouge&quot;&gt;test.py&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;import requests
+
+r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.get&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'https://jasonmeridth.com'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+print r.status_code&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;get out of the file by pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;Esc&lt;/code&gt; on your keyboard then typing &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;continuing:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;python test.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;output should be:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;200&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Voila!!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/how-i-setup-my-local-python-environment/&quot;&gt;How I Setup My Local Python Environment&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on June 26, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[How To Use the Python Debugger aka pdb]]></title>
+ <link rel="alternate" type="text/html" href="https://blog.jasonmeridth.com/posts/how-to-use-python-debugger-aka-pdb/" />
+  <id>https://blog.jasonmeridth.com/posts/how-to-use-python-debugger-aka-pdb</id>
+  <published>2016-06-22T15:10:10-05:00</published>
+  <updated>2016-06-22T15:10:10-05:00</updated>
+  <author>
+    <name>Jason Meridth</name>
+    <uri>https://blog.jasonmeridth.com</uri>
+    <email>jason@meridth.io</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I have been using the Python Debugger aka pdb &lt;a href=&quot;https://docs.python.org/2/library/pdb.html&quot;&gt;docs for 2.7&lt;/a&gt;/&lt;a href=&quot;https://docs.python.org/3.5/library/pdb.html&quot;&gt;docs for 3.5&lt;/a&gt; a lot recently and wanted to share a cheat sheet I found and also the common commands I use.&lt;/p&gt;
+
+&lt;p&gt;The cheatsheet:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://blog.jasonmeridth.com/images/pdb_cheatsheet.png&quot; alt=&quot;pdb cheatsheet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The easiest thing to do is put the following in your code somewhere:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    import pdb; pdb.set_trace()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then when you run it, it will stop there and you can step through the code a line at a time.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;l(ist)&lt;/code&gt; command will show you 11 lines of code around the current line is the one I use the most.  &lt;code class=&quot;highlighter-rouge&quot;&gt;s(tep)&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;n(ext)&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;r(eturn)&lt;/code&gt; are some other I use regularly.&lt;/p&gt;
+
+&lt;p&gt;Once the debugger is up, you can check the stacktrace &lt;code class=&quot;highlighter-rouge&quot;&gt;w(where)&lt;/code&gt;, variable values &lt;code class=&quot;highlighter-rouge&quot;&gt;a(rgs)&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;[variable_name]&lt;/code&gt; or many other things.  Please check the documentation or the cheatsheet image above.&lt;/p&gt;
+
+&lt;p&gt;A much more in-depth usage of pdb can be found &lt;a href=&quot;https://pymotw.com/2/pdb/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://raw.githubusercontent.com/nblock/pdb-cheatsheet/master/pdb-cheatsheet.png&quot;&gt;Cheatsheet image credit&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://blog.jasonmeridth.com/posts/how-to-use-python-debugger-aka-pdb/&quot;&gt;How To Use the Python Debugger aka pdb&lt;/a&gt; was originally published by Jason Meridth at &lt;a href=&quot;https://blog.jasonmeridth.com&quot;&gt;Jason Meridth&lt;/a&gt; on June 22, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+</feed>

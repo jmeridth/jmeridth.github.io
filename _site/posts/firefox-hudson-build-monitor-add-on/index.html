@@ -1,0 +1,351 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Firefox Hudson Build Monitor add-on &#8211; Jason Meridth</title>
+<meta name="description" content="Blog of Jason Meridth - Learn, Converse, Share">
+<meta name="keywords" content="">
+
+<!-- Twitter Cards -->
+  
+    <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@jmeridth">
+  <meta name="twitter:creator" content="@jmeridth">
+  <meta name="twitter:image" content="/images/meridth_llc_cog.png">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Firefox Hudson Build Monitor add-on">
+<meta property="og:description" content="Blog of Jason Meridth - Learn, Converse, Share">
+<meta property="og:url" content="https://blog.jasonmeridth.com/posts/firefox-hudson-build-monitor-add-on/">
+<meta property="og:site_name" content="Jason Meridth">
+<meta property="og:image" content="https://blog.jasonmeridth.com/images/images/logo.jpg">
+
+<meta name="google-site-verification" content="2LRsgnHFM86Lph9HmYJGK6Uoa-Fn75nSU9YdAGbZAo4">
+
+
+
+<link rel="canonical" href="https://blog.jasonmeridth.com/posts/firefox-hudson-build-monitor-add-on/">
+<link href="https://blog.jasonmeridth.com/feed.xml" type="application/atom+xml" rel="alternate" title="Jason Meridth Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://blog.jasonmeridth.com/assets/css/main.css">
+<link rel="stylesheet" href="https://blog.jasonmeridth.com/assets/css/jquery.mmenu.all.css">
+<link rel="stylesheet" href="https://blog.jasonmeridth.com/assets/css/jquery.floating-social-share.min.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script type="text/javascript" src="https://blog.jasonmeridth.com/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://blog.jasonmeridth.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://blog.jasonmeridth.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://blog.jasonmeridth.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://blog.jasonmeridth.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://blog.jasonmeridth.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.jasonmeridth.com/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+
+
+<div class="header-menu header-menu-top">
+    <ul class="header-item-container">
+      <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
+      <li class="header-item-title">
+        <a href="https://blog.jasonmeridth.com/">
+          
+            <img class="logo" src="https://blog.jasonmeridth.com/images/logo.jpg" alt="Jason Meridth">
+          
+          <a href="https://blog.jasonmeridth.com/" class="title"> Jason Meridth</a>
+        </a>
+      </li>
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="https://blog.jasonmeridth.com/feed.xml"><h3>RSS</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="https://blog.jasonmeridth.com/about"><h3>About</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="https://blog.jasonmeridth.com/tags"><h3>Tags</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="https://blog.jasonmeridth.com/"><h3>Home</h3></a></li>
+            
+        
+      
+      <li class="header-item"><a href="https://blog.jasonmeridth.com/search"><h3><i class="fa fa-search"></i></h3></a></li>
+    </ul>
+  </div>
+<div class="entry-header">
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>Firefox Hudson Build Monitor add-on</h1>
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
+
+
+<nav id="menu" style="display: none">
+  <ul>
+    
+      
+        <li><a href="https://blog.jasonmeridth.com/"><h3>Home</h3></a></li>
+      
+    
+      
+        <li><a href="https://blog.jasonmeridth.com/tags"><h3>Tags</h3></a></li>
+      
+    
+      
+        <li><a href="https://blog.jasonmeridth.com/about"><h3>About</h3></a></li>
+      
+    
+      
+        <li><a href="https://blog.jasonmeridth.com/feed.xml"><h3>RSS</h3></a></li>
+      
+    
+  </ul>
+</nav>
+
+
+  <a href="https://twitter.com/jmeridth" class="btn btn-info button-twitter" data-show-count="false" data-size="large"><i class="fa fa-twitter"></i> <span> | Follow @jmeridth</span></a>
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <div class="entry-content">
+        
+
+      <div class="entry-meta">
+        <span class="entry-date date published updated">
+          <time datetime="2009-03-05T02:19:00-06:00"><a href="https://blog.jasonmeridth.com/posts/firefox-hudson-build-monitor-add-on/">March 05, 2009</a></time>
+        </span>
+        
+        <span class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~1 minute
+        </span><!-- /.entry-reading-time -->
+        
+      </div><!-- /.entry-meta -->
+      <h1 class="post-title entry-title">Firefox Hudson Build Monitor add-on</h1>
+      <div class="entry-meta">
+        <span class="entry-tags"></span>
+      </div>
+
+      <p>MOZILLA: READ THIS!</p>
+
+<p>To Mozilla,<br />
+You should upgrad ethe Hudson Build Monitor Plugin so that users don’t have to create add-on accounts just to download. Cliffano’s customer support and product are top of the line.</p>
+
+<p>Explanation:<br />
+I have started using Hudson as my Continous Integraton server at work and still setting it up for custom interaction with Git. I have used CruiseControl.NET and TeamCity extensively in the past and both have tray tools. Well, I found <a href="http://hudsontracker.sourceforge.net/index.html">HudsonTracker</a>, but it wouldn’t work for me because I’m using Basic HTTP Auth with my Hudson instance.</p>
+
+<p>I then found the <a href="https://addons.mozilla.org/en-US/firefox/addon/7522">Firefox Hudson Build Monitor plugin</a>, written by Cliffano Subagio (<a href="https://addons.mozilla.org/en-US/firefox/user/1635724">firefox developer account</a> and <a href="http://blog.qoqoa.com/">blog</a>), but again, same problem. I decided to issue a ticket with the Firefox plugin.</p>
+
+<p>Within a short time (couple of days), Cliffano responded with a new version to test the HTTP Authentication against.</p>
+
+<p>I uninstalled the old version just to make sure of no conflict and then I right-clicked the xpi file and said to open with Firefox. It installed without issue and showed the butler in the firefox status bar:<br />
+<img src="http://3.bp.blogspot.com/_JmjHpHPB6hg/Sa8xHmBvNiI/AAAAAAAAAVo/QFVU2GlXFQY/s400/Picture+1.png" alt="" /></p>
+
+<p>You can right-click him and get the preferences menu:<br />
+<img src="http://1.bp.blogspot.com/_JmjHpHPB6hg/Sa8xYNYfkLI/AAAAAAAAAVw/gGM5FF9cVc4/s400/Picture+2.png" alt="" /></p>
+
+<p>There are 5 tabs:<br />
+1.Feeds - where you put your RSS feed URL to your hudson dashboard<br />
+<img src="http://3.bp.blogspot.com/_JmjHpHPB6hg/Sa80ldoctAI/AAAAAAAAAWo/fQcS3zyux5c/s400/Picture+3a.png" alt="" /></p>
+
+<p>2. Display - designate some UI elements (# of builds, what to show on status bar when collapsed, color indicators [Hudson uses blue for successful builds for some reason. Can choose green here for us Red/Green guys/gals], etc)<br />
+<img src="http://4.bp.blogspot.com/_JmjHpHPB6hg/Sa8yfDnGlTI/AAAAAAAAAWA/xEVhtl_-Hx8/s400/Picture+4.png" alt="" /></p>
+
+<p>3. Notification - designate how you will be notified of certain events<br />
+<img src="http://2.bp.blogspot.com/_JmjHpHPB6hg/Sa8y12XpL5I/AAAAAAAAAWI/j8_JAQcRsAc/s400/Picture+5.png" alt="" /></p>
+
+<p>4. Network - username and password for HTTP Authentication<br />
+<img src="http://2.bp.blogspot.com/_JmjHpHPB6hg/Sa8y8ZCnBVI/AAAAAAAAAWQ/LelGDXM1YL4/s400/Picture+6.png" alt="" /></p>
+
+<p>5. Misc - designate how to open page (new tab, new firefox window) and enable debugging<br />
+<img src="http://4.bp.blogspot.com/_JmjHpHPB6hg/Sa8y_Z_xVbI/AAAAAAAAAWY/rDWngSl9y5U/s400/Picture+7.png" alt="" /></p>
+
+<p>NOTE: Whenever I added my RSS feed from my Hudson dashboard to the tool (I’m using Firefox on a Mac) the URL would not stay. Cliffano had a solution for this:<br />
+1. Go to your Hudson dashboard</p>
+
+<p>2. Right click your RSS feed of choice (I prefer “for all” which is https://hudson.mydomain.com/rssAll):<br />
+<img src="http://2.bp.blogspot.com/_JmjHpHPB6hg/Sa8zrDEwJKI/AAAAAAAAAWg/O7a_KGnm0Hk/s400/Picture+8.png" alt="" /></p>
+
+<p>3. Choose “Add Link To Hudson Build Monitor”<br />
+<img src="http://3.bp.blogspot.com/_JmjHpHPB6hg/Sa805kAncpI/AAAAAAAAAWw/QTkVBsYGdJM/s400/Picture+10.png" alt="" /></p>
+
+<p>4. Name the URL:<br />
+<img src="http://2.bp.blogspot.com/_JmjHpHPB6hg/Sa8141ClQGI/AAAAAAAAAW4/1EfpczqZQ5g/s400/Picture+11a.png" alt="" /></p>
+
+<p>And VOILA! it stayed in my preferences. Most users won’t have to go this route, but instead of typing out the url and just a name, it is easier.</p>
+
+<p>Thank you Cliffano. Hopefully Mozilla will upgrade the plugin and stop requiring people to create accounts to download it.</p>
+
+<p>Cliffano has stated that a 1.0 version will be coming soon. Enjoy!</p>
+
+      <footer class="entry-meta">
+        
+        <span class="author vcard"><span class="fn">Jason Meridth</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://blog.jasonmeridth.com/posts/firefox-hudson-build-monitor-add-on/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://blog.jasonmeridth.com/posts/firefox-hudson-build-monitor-add-on/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=https://blog.jasonmeridth.com/posts/firefox-hudson-build-monitor-add-on/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+
+      </footer>
+    </div><!-- /.entry-content -->
+    <div class="read-more">
+  <div class="read-more-header">
+    <a href="https://blog.jasonmeridth.com" class="read-more-btn">About the Author</a>
+  </div><!-- /.read-more-header -->
+  <div class="read-more-content author-info">
+    <h3>Jason Meridth</h3>
+    <div class="author-container">
+      <p class="center"><img class="avatar" src="https://avatars3.githubusercontent.com/jmeridth?v=3&s=400" alt="jmeridth" srcset="https://avatars3.githubusercontent.com/jmeridth?v=3&s=400 1x, https://avatars3.githubusercontent.com/jmeridth?v=3&s=800 2x, https://avatars3.githubusercontent.com/jmeridth?v=3&s=1200 3x, https://avatars3.githubusercontent.com/jmeridth?v=3&s=1600 4x" width="400" height="400" data-proofer-ignore="true" /></p>
+      <div class="author-bio">My name is Jason Meridth. I am a continuously learning senior software developer/team lead/development manager trying to not let best be the enemy of better. I reserve the right to change my mind upon obtaining more information.  I am also the owner and principal software consultant at Meridth, LLC.  If you have any software, hardward, networking, process, etc needs please don't hesitate to reach out to me.</div>
+    </div>
+    <div class="author-share">
+      <ul class="list-inline social-buttons">
+        
+          <li><a href="https://github.com/jmeridth" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
+        
+          <li><a href="https://br.linkedin.com/in/jmeridth" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+        
+          <li><a href="https://twitter.com/jmeridth" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
+        
+      </ul>
+      
+        <a aria-label="Follow @jmeridth on GitHub" data-size="large" href="https://github.com/jmeridth" class="github-button">Follow @jmeridth</a>
+      
+      <br>
+      
+        <a href="https://twitter.com/jmeridth" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @jmeridth</a>
+      
+    </div>
+  </div>
+</div>
+
+    
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="https://blog.jasonmeridth.com/posts/ruby-design-patterns-by-russ-olsen/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="https://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1/" title="Raspberry Pi Kubernetes Cluster - Part 1">Raspberry Pi Kubernetes Cluster - Part 1</a></h3>
+      <p>HowdyThis is going to be the first post about my setup of a Raspberry Pi Kubernetes Cluster.  I saw a post by [Hart Hoover](https://harth...&hellip; <a href="https://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="https://blog.jasonmeridth.com/posts/ssh-too-many-authentication-failures/" title="SSH - Too Many Authentication Failures">SSH - Too Many Authentication Failures</a></h4>
+        <span>Published on March 28, 2018</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="https://blog.jasonmeridth.com/posts/clear-dns-cache-in-chrome/" title="Clear DNS Cache In Chrome">Clear DNS Cache In Chrome</a></h4>
+        <span>Published on March 27, 2018</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="https://blog.jasonmeridth.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="https://blog.jasonmeridth.com/assets/js/scripts.min.js"></script>
+<script type="text/javascript" async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38456568-3', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    sharing();
+</script>
+
+
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2018 Jason Meridth. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://github.com/aron-bordin/neo-hpstr-jekyll-theme" rel="nofollow">Neo-HPSTR Theme</a>.</span>
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+</body>
+</html>
