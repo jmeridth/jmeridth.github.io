@@ -9,6 +9,7 @@ layout: post
 
 I'm blogging this because I keep forgetting how to do it.  Yeah, yeah, I can google it.  I run this blog so I know it is always available.....anywho.
 
+<!--more-->
 Go To:
 
     chrome://net-internals/#dns

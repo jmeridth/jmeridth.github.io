@@ -15,6 +15,7 @@ Received disconnect from 123.123.132.132: Too many authentication failures for h
 
 After a bit of googling it came back to me.  This is because I've loaded too many keys into my ssh-agent locally (`ssh-add`).  Why did you do that?  Well, because it is easier than specifying the `IdentityFile` on the cli when trying to connect.  But there is a threshhold.  This is set by the ssh host by the `MaxAuthTries` setting in `/etc/ssh/sshd_config`.  The default is 6.
 
+<!--more-->
 # Solution 1
 Clean up the keys in your ssh-agent.
 

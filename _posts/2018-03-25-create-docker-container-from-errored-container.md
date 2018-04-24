@@ -10,6 +10,7 @@ When I'm trying to "dockerize" an applciation I usually have to work through som
 
 To diagnose a container that has errored out, I, obviously, look at the logs via `docker logs -f [container_name]`.  That is sometimes helpful.  It will, at minimum tell me where I need to focus on the new container I'm going to create.
 
+<!--more-->
 ![diagnose]({{ site.url }}/images/diagnose.jpg)
 
 Pre-requisites to being able to build a diagnosis container:

@@ -40,7 +40,7 @@ comments: false
   </header>
   <div class="entry-content">
       {{ post.excerpt }}
-      {% if post.content contains "<!-- more -->" %}
+      {% if post.content contains "<!--more-->" %}
           <div align="center">
               <div markdown="0"><a href="{{ site.url }}{{ post.url }}" class="btn btn-info">Continue Reading ...</a></div>
           </div>
