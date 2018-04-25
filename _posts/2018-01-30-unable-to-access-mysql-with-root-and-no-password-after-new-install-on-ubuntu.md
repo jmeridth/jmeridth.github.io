@@ -13,6 +13,7 @@ You just installed `mysql-server` locally for your development environment on a 
 
 ![wat]({{ site.url }}/images/wat.png)
 
+<!--more-->
 Issue:
 Because you chose to not have a password for the `root` user, the `auth_plugin` for my MySQL defaulted to `auth_socket`.  That means if you type `sudo mysql -u root` you will get in.  If you don't, then this is NOT the fix for you.
 
