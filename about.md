@@ -35,11 +35,18 @@ layout: page
 <p>Products I use, trust and even pay for:</p>
 
 <p class="social-icons">
-  <a href="https://bitwarden.com"><i class="fa fa-lock fa-2x"></i><br/>Bitwarden - for passwords</a>
+  <i class="fa fa-server fa-2x"></i>Web Hosting<br/>
+  <a href="https://aws.amazon.com">AWS</a>
 </p>
 <p class="social-icons">
-  <a href="https://www.privateinternetaccess.com"><i class="fa fa-shield fa-2x"></i><br/>Private Internet Access - for VPN</a>
+  <i class="fa fa-lock fa-2x"></i>Password Management<br/>
+  <a href="https://lastpass.com">Lastpass</a>
 </p>
 <p class="social-icons">
-  <a href="https://authy.com"><i class="fa fa-mobile fa-2x"></i><br/>Authy - for 2FA</a>
+  <i class="fa fa-shield fa-2x"></i>Virtual Private Network (VPN)<br/>
+  <a href="https://www.nordvpn.com">NordVPN</a>
+</p>
+<p class="social-icons">
+  <i class="fa fa-mobile fa-2x"></i>Two Factor Authentication (2FA)<br/>
+  <a href="https://authy.com">Authy - for 2FA</a>
 </p>
