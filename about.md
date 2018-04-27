@@ -11,15 +11,15 @@ layout: page
 
 <p>My name is Jason Meridth. I am a continuously learning senior software developer/team lead/development manager trying to not let best be the enemy of better.  I reserve the right to change my mind upon obtaining more information.</p>
 
-<p>If you want to chat check my availability <a href="https://calendly.com/jmeridth"><i class="fa fa-calendar fa-2x"></i></a>
+<p class="center">If you want to chat check my availability <a href="https://calendly.com/jmeridth"><i class="fa fa-calendar fa-2x"></i></a>
 
-<p><a href="http://tinyurl.com/meridthresume" target="_blank">Resume</a></p>
+<p class="center"><a href="http://tinyurl.com/meridthresume" target="_blank">Resume</a></p>
 
-<p><a href="https://keybase.io/jmeridth/key.asc" target="_blank">PGP KEY</a></p>
+<p class="center"><a href="https://keybase.io/jmeridth/key.asc" target="_blank">PGP KEY</a></p>
 
-<p>You can find me on the following sites:</p>
+<p class="center">You can find me on the following sites:</p>
 
-<p class="social-icons">
+<p class="social-icons center">
   <a href="https://twitter.com/jmeridth"><i class="fa fa-twitter fa-2x"></i></a>
   <a href="https://github.com/jmeridth"><i class="fa fa-github fa-2x"></i></a>
   <a href="https://bitbucket.org/jmeridth"><i class="fa fa-bitbucket fa-2x"></i></a>
@@ -32,21 +32,17 @@ layout: page
   <a href="https://www.youtube.com/user/jmeridth"><i class="fa fa-youtube fa-2x"></i></a>
 </p>
 
-<p>Products I use, trust and even pay for:</p>
+<p class="center">Products I use, trust and even pay for:</p>
 
-<p class="social-icons">
-  <i class="fa fa-server fa-2x"></i>Web Hosting<br/>
-  <a href="https://aws.amazon.com">AWS</a>
+<p class="social-icons center">
+  <i class="fa fa-server fa-2x"></i><a href="https://aws.amazon.com"> AWS</a>
 </p>
-<p class="social-icons">
-  <i class="fa fa-lock fa-2x"></i>Password Management<br/>
-  <a href="https://lastpass.com">Lastpass</a>
+<p class="social-icons center">
+  <i class="fa fa-lock fa-2x"></i><a href="https://lastpass.com"> Lastpass</a>
 </p>
-<p class="social-icons">
-  <i class="fa fa-shield fa-2x"></i>Virtual Private Network (VPN)<br/>
-  <a href="https://www.nordvpn.com">NordVPN</a>
+<p class="social-icons center">
+  <i class="fa fa-shield fa-2x"></i><a href="https://www.nordvpn.com"> NordVPN</a>
 </p>
-<p class="social-icons">
-  <i class="fa fa-mobile fa-2x"></i>Two Factor Authentication (2FA)<br/>
-  <a href="https://authy.com">Authy - for 2FA</a>
+<p class="social-icons center">
+  <i class="fa fa-mobile fa-2x"></i><a href="https://authy.com"> Authy</a>
 </p>
