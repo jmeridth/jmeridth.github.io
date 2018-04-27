@@ -38,12 +38,12 @@ layout: page
 
   <p>Products I use, trust and even pay for:</p>
 
-  <p class="social-icons"><i class="fa fa-server fa-2x"></i></p>
-  <p><a href="https://aws.amazon.com"> AWS</a></p>
-  <p class="social-icons"><i class="fa fa-lock fa-2x"></i></p>
-  <p><a href="https://lastpass.com"> Lastpass</a></p>
-  <p class="social-icons"><i class="fa fa-shield fa-2x"></i></p>
-  <p><a href="https://www.nordvpn.com"> NordVPN</a></p>
-  <p class="social-icons"><i class="fa fa-mobile fa-2x"></i></p>
-  <p><a href="https://authy.com"> Authy</a> </p>
+  <p><a href="https://aws.amazon.com"><i class="fa fa-server fa-2x"></i></a></p>
+  <p>AWS</p>
+  <p><a href="https://lastpass.com"><i class="fa fa-lock fa-2x"></i></a></p>
+  <p>Lastpass</p>
+  <p><a href="https://www.nordvpn.com"><i class="fa fa-shield fa-2x"></i></a></p>
+  <p>NordVPN</p>
+  <p><a href="https://authy.com"><i class="fa fa-mobile fa-2x"></i></a></p>
+  <p>Authy</p>
 </center>
