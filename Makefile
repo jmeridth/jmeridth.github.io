@@ -10,7 +10,7 @@ all : stop run ## all the things
 
 .PHONY : run
 run : ## run containers
-	@docker-compose up -d
+	@/usr/local/bin/docker-compose up -d
 
 .PHONY : stop
 stop : ## stop containers
