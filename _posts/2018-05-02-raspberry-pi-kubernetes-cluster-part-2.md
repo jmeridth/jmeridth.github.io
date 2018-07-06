@@ -31,7 +31,7 @@ Then use the [Etcher](https://etcher.io/) tool to install it to each of the 6 SD
 
 #### IMPORTANT
 
-Before putting the cards into the Raspberry Pis you need to add a `ssh` folder to the root of the SD cards.  This will allow you to ssh to each Raspberry Pi with default credentials (username: `pi` and password `raspberry`).  Example: `ssh pi@raspberry_pi_ip` where `raspberry_ip` is obtained from the nmap command above.
+Before putting the cards into the Raspberry Pis you need to add a `ssh` folder to the root of the SD cards.  This will allow you to ssh to each Raspberry Pi with default credentials (username: `pi` and password `raspberry`).  Example: `ssh pi@raspberry_pi_ip` where `raspberry_pi_ip` is obtained from the nmap command above.
 
 Next post will be setting up kubernetes.  Thank you for reading.
 
