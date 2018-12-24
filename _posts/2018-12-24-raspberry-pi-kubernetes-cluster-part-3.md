@@ -17,6 +17,8 @@ The first two reasons are the usual reasons a person doesn't blog. :)
 
 The last one is what prevented me from blogging sooner.  I had mutliple issues when trying to use [rak8s](https://rak8s.io) to setup my cluster.  I'm a big fan of [Ansible](https://ansible.com) and I do not like running scripts over and over.  I did read [K8S on Raspbian Lite](https://gist.github.com/alexellis/fdbc90de7691a1b9edb545c17da2d975) from top to bottom and realized automation would make this much better.
 
+<!--more-->
+
 ### The issues I experienced:
 
 #### apt-get update would not work
