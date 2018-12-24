@@ -7,6 +7,8 @@ tags:
 layout: post
 ---
 
+**Edit**:  After fighting with Raspbian Lite, I decided to use HypriotOS as the base image on my Raspberry Pis.  Here are the [downloads](https://blog.hypriot.com/downloads/).  I used version 1.9.0 that included Docker 18.04.0-ce, kernel 4.14.34.  You can still use Etcher below to put the image on the SD Cards
+
 Howdy again.
 
 Alright, my 8 port switch showed up so I was able to connect my raspberry 3B+ boards to my home network.  I plugged it in with 6 1ft CAT5 cables I had in my catch-all box that all of us nerds have.  I'd highly suggest flexible CAT 6 cables instead if you can get them, like [here](https://www.amazon.com/Cat-Ethernet-Cable-Black-Connectors/dp/B01IQWGKQ6).   I ordered them and they showed up before I finished this post, so I am using the CAT6 cables.
@@ -19,7 +21,7 @@ Once I got them on the network I did the following:
 
 {% gist 64e7b08729ffe779f77a7bda0221c6e9 %}
 
-### Install Raspberrian OS On SD Cards
+### Install Raspbian OS On SD Cards
 
 You can get the Raspberry Pi Stretch Lite OS from [here](https://www.raspberrypi.org/downloads/raspbian/).
 
