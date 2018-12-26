@@ -10,7 +10,7 @@ layout: page
 
   <p>{% avatar {{ site.owner.github }} size=200 %}</p>
 
-  <p>My name is Jason Meridth. I am a continuously learning senior full stack software developer/SRE trying to not let best be the enemy of better.</p>
+  <p>My name is Jason Meridth. I am a continuously learning senior full stack SDE/SRE trying to not let best be the enemy of better.</p>
   <p>I reserve the right to change my mind upon obtaining more information.</p>
   <p>I am also the owner and principal software consultant at Meridth, LLC.  If you have any software, hardware, networking, process, etc needs please don't hesitate to <a href="mailto:jason@meridth.io">reach out to me.</a></p>
 
