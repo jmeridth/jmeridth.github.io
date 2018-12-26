@@ -12,7 +12,7 @@ description: Blog of Jason Meridth - Learn, Converse, Share
 disqus_shortname:
 reading_time: true
 words_per_minute: 200
-logo: images/logo.jpg
+logo: images/logo.png
 excerpt_separator: "<!--more-->"
 url: https://blog.jasonmeridth.com
 menu:
