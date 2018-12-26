@@ -2,11 +2,13 @@
 title: Git For Windows Developers – Git Series – Part 2
 date: 2009-06-04 05:49:00 -05:00
 layout: post
+tags:
+- git
 ---
 
 [Git For Windows Developers - Git Series - Part 1](/blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx)
 
-[Git For Windows Developers - Git Series - Part 2   
+[Git For Windows Developers - Git Series - Part 2
 ](/blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx)
 
 [Git For Windows Developers - Git Series - Part 3](/blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx)
@@ -17,17 +19,17 @@ Please make sure you’ve read the [first post](/blogs/jason_meridth/archive/200
 
 This post is going to go over my typical workflow for work.  I’ll get as detailed as I can for this process:
 
-  1. git pull origin master 
-  2. git checkout –b user_prompt 
+  1. git pull origin master
+  2. git checkout –b user_prompt
   3. <code>
-  4. git add <filename> (as necessary) 
-  5. git commit –a –m “commit message” 
-  6. repeat step 3-5 as many times as necessary 
-  7. git checkout master 
-  8. git pull –-squash . user_prompt 
-  9. git commit –a –m “add name validation and tests” 
-  10. git pull origin master 
-  11. git push origin master 
+  4. git add <filename> (as necessary)
+  5. git commit –a –m “commit message”
+  6. repeat step 3-5 as many times as necessary
+  7. git checkout master
+  8. git pull –-squash . user_prompt
+  9. git commit –a –m “add name validation and tests”
+  10. git pull origin master
+  11. git push origin master
 
 For this example, we’re going to create a **remote** public git repository on [Github.com](http://www.github.com).  What is [Github.com](http://github.com)?  [Github.com](http://github.com) is the most popular Git repository hosting website on the Internets (misspelled on purpose) today, in my opinion.
 
