@@ -11,33 +11,27 @@ Checkout my vim files on [github](http://github.com/armmer/vim_files)
 This post is for me to remember how to use [Gnu screen](http://www.gnu.org/software/screen/) to pair program. side note: [here](http://cheat.errtheblog.com/s/screen/) is the best cheat sheet on Gnu Screen.
 
 startup screen:
-    
-    
-    screen -S sessionname
-    
+
+```bash
+screen -S sessionname
+```
 
 turn on multi-user
-    
-    
-    ctrl+a
-    :multiuser on
-    
+
+```bash
+ctrl+a
+:multiuser on
+```
 
 add permissions for the other user:
-    
-    
-    ctrl+a
-    :acladd user
-    
+
+```bash
+ctrl+a
+:acladd user
+```
 
 instruct second user to connect with:
-    
-    
-    screen -x yourusername/sessionname
 
-## Comments
-
-**[len smith](#453 "2010-02-04 18:34:17"):** This doesn't sound too fun. I have a distributed team and we pair with LogMeIn Pro ($15/mo) it works absurdly great, it's as responsive as being rdped into a box... much more responsive than sharedview, gotomeeting, vnc.
-
-**[Jason Meridth](#454 "2010-02-04 18:50:02"):** @Ien Smith The team I code with uses Vim so we don't need a desktop/rdp/vnc type sharing. Thanks for mentioning the other product. I'm personally a cheapskate and like free items over paid items. ;)
-
+```bash
+screen -x yourusername/sessionname
+```
