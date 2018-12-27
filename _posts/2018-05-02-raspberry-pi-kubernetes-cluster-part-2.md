@@ -9,6 +9,12 @@ layout: post
 
 **Edit**:  After fighting with Raspbian Lite, I decided to use HypriotOS as the base image on my Raspberry Pis.  Here are the [downloads](https://blog.hypriot.com/downloads/).  I used version 1.9.0 that included Docker 18.04.0-ce, kernel 4.14.34.  You can still use Etcher below to put the image on the SD Cards
 
+[Raspberry Pi Kubenetes Cluster - Part 1]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-1)
+
+[Raspberry Pi Kubenetes Cluster - Part 2]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-2)
+
+[Raspberry Pi Kubenetes Cluster - Part 3]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-3)
+
 Howdy again.
 
 Alright, my 8 port switch showed up so I was able to connect my raspberry 3B+ boards to my home network.  I plugged it in with 6 1ft CAT5 cables I had in my catch-all box that all of us nerds have.  I'd highly suggest flexible CAT 6 cables instead if you can get them, like [here](https://www.amazon.com/Cat-Ethernet-Cable-Black-Connectors/dp/B01IQWGKQ6).   I ordered them and they showed up before I finished this post, so I am using the CAT6 cables.
