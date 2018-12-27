@@ -6,11 +6,11 @@ tags:
 - git
 ---
 
-[Git For Windows Developers - Git Series - Part 1](/blogs/jason_meridth/archive/2009/06/01/git-for-windows-developers-git-series-part-1.aspx)
+[Git For Windows Developers - Git Series - Part 1]({{ site.url }}/posts/git-for-windows-developers-git-series-part-1)
 
-[Git For Windows Developers - Git Series - Part 2](/blogs/jason_meridth/archive/2009/06/04/git-for-windows-developers-git-series-part-2.aspx)
+[Git For Windows Developers - Git Series - Part 2]({{ site.url }}/posts/git-for-windows-developers-git-series-part-2)
 
-[Git For Windows Developers - Git Series - Part 3](/blogs/jason_meridth/archive/2009/06/07/git-for-windows-developers-git-series-part-3.aspx)
+[Git For Windows Developers - Git Series - Part 3]({{ site.url }}/posts/git-for-windows-developers-git-series-part-3)
 
 _**_UPDATE_**: I no longer use the “git pull –squash…” workflow.  I use `git rebase -i` aka interactive rebase.  There are plenty of docs out there on this so please look into it before reading this post.
 
