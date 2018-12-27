@@ -2,6 +2,8 @@
 title: Git post-merge hook to auto-fire rails migrations
 date: 2010-02-27 19:28:00 -06:00
 layout: post
+tags:
+- ruby
 ---
 
 I saw [Scott Bellware](http://ampgt.com) recently write on twitter:
@@ -12,7 +14,7 @@ I saw [Scott Bellware](http://ampgt.com) recently write on twitter:
 
 ```bash
 #!/usr/bin/env ruby
-`rake db:migrate && rake db:test:prepare` if `git diff --name-only HEAD@{1} HEAD`.index("db/migrations)
+`rake db:migrate && rake db:test:prepare` if `git diff --name-only HEAD@{1} HEAD`.index("db/migrations")
 ```
 
 This will grab the previous diff and look for “db/migrations” in the text. If it’s present, it would auto-run `rake db:migrate && rake db:test:migrate`. In other words, it will migrate the development database schema, then the test database schema.

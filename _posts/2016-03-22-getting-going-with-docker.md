@@ -8,32 +8,32 @@ layout: post
 
 UPDATE: Looks like this post is moot as of today 3/24/2016 due to [Docker for Mac and Docker for Windows](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/) betas coming out
 
-While interviewing for a new gig I was asked to use memcached and they had suggested standing up a docker instance.  I have been using docker pretty regularly now after learning much from my previous co-workers and practical usage. 
+While interviewing for a new gig I was asked to use memcached and they had suggested standing up a docker instance.  I have been using docker pretty regularly now after learning much from my previous co-workers and practical usage.
 
 So, on OSX you can install the `docker-machine` and `docker` brew formulas with [homebrew][2]. (If you are not using [homebrew][2] and [cask][3] to manage your installations on OSX you are missing out).  I use VirtualBox as my VM hosting tool.
 
 If you haven't installed (tapped) cask for application (non-CLI, GUI apps) installations, you should do it now:
 
-```
+```bash
 brew tap caskroom/cask
 ```
 
 Now install the items:
 
-```
+```bash
 brew cask install virtualbox
 brew install docker-machine docker
 ```
 
 On Linux you don't need docker-machine as you can just use docker directly, but on OSX you need the set up a Linux host through a VM tool like Virtualbox.  You need to setup your docker-machine with the following command:
 
-```
+```bash
 docker-machine create --driver virtualbox default
 ```
 
 This creates the docker host on virtualbox and names it default.  So when you run `docker-machine ls` you will see something like the following:
 
-```
+```bash
 › docker-machine ls
 NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER    ERRORS
 default   *        virtualbox   Running   tcp://192.168.99.100:2376           v1.10.3
@@ -41,7 +41,7 @@ default   *        virtualbox   Running   tcp://192.168.99.100:2376           v1
 
 I created a Dockerfile to create the docker image with the following content:
 
-```
+```bash
 FROM ubuntu:latest
 MAINTAINER Jason Meridth <jmeridth@gmail.com>
 
@@ -69,7 +69,7 @@ This Dockerfile will do the following:
 
 After the docker host is create I then built the image with the following command:
 
-```
+```bash
 docker build -t memcached_img .
 ```
 
@@ -77,13 +77,13 @@ docker build -t memcached_img .
 
 To see the new image you run the following:
 
-```
+```bash
 docker images
 ```
 
 and you'll see something like:
 
-```
+```bash
 › docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 memcached_img       latest              ad3d86685ca8        57 minutes ago      211.4 MB
@@ -94,13 +94,13 @@ Note: To delete the image you would use the `docker rmi memcached_img` command.
 
 I then created the docker instace based on the new docker image with the following command:
 
-```
+```bash
 docker run -name memcached_ins -d -p 45001:11211 memcached_img
 ```
 
 You should receive the sha of your new container instance.  To see the instance information run `docker ps`.  The result is
 
-```
+```bash
 › docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                      NAMES
 18c82cd27a2d        memcached_img       "/bin/sh -c memcached"   5 seconds ago       Up 5 seconds        0.0.0.0:45001->11211/tcp   memcached_ins
