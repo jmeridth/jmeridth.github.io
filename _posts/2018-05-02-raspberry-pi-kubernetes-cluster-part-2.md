@@ -15,6 +15,8 @@ layout: post
 
 [Raspberry Pi Kubenetes Cluster - Part 3]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-3)
 
+[Raspberry Pi Kubenetes Cluster - Part 4]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-4)
+
 Howdy again.
 
 Alright, my 8 port switch showed up so I was able to connect my raspberry 3B+ boards to my home network.  I plugged it in with 6 1ft CAT5 cables I had in my catch-all box that all of us nerds have.  I'd highly suggest flexible CAT 6 cables instead if you can get them, like [here](https://www.amazon.com/Cat-Ethernet-Cable-Black-Connectors/dp/B01IQWGKQ6).   I ordered them and they showed up before I finished this post, so I am using the CAT6 cables.

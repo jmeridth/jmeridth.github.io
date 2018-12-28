@@ -13,6 +13,8 @@ date: '2018-12-24 15:59:23'
 
 [Raspberry Pi Kubenetes Cluster - Part 3]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-3)
 
+[Raspberry Pi Kubenetes Cluster - Part 4]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-4)
+
 Well, it took me long enough to follow up on my previous posts.  There are reasons.
 
 1. The day job has been fun and busy

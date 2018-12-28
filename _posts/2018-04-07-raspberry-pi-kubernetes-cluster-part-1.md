@@ -13,6 +13,8 @@ layout: post
 
 [Raspberry Pi Kubenetes Cluster - Part 3]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-3)
 
+[Raspberry Pi Kubenetes Cluster - Part 4]({{ site.url }}/posts/raspberry-pi-kubernetes-cluster-part-4)
+
 Howdy
 
 This is going to be the first post about my setup of a Raspberry Pi Kubernetes Cluster.  I saw a post by [Hart Hoover](https://harthoover.com/kubernetes-1.9-on-a-raspberry-pi-cluster/) and it finally motivated me to purchase his "grocery list" and do this finally.  I've been using [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/) for local Kubernetes testing but it doesn't give you multi-host testing abilities.  I've also been wanting to get deeper into my Raspberry Pi knowledge.  Lots of learning and winning.
