@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi Kubernetes Cluster Part 3
+title: Raspberry Pi Kubernetes Cluster - Part 3
 layout: post
 tags:
 - kubernetes
