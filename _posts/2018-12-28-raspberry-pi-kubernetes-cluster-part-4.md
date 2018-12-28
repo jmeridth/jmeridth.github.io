@@ -34,6 +34,8 @@ First we need to learn about QEMU
 
 QEMU (Quick EMUlator) is an Open-Source hosted hypervisor, i.e. an hypervisor running on a OS just as other computer programs, which performs hardware virtualization. QEMU emulates CPUs of several architectures, e.g. x86, PPC, ARM and SPARC. It allows the execution of non-native target executables emulating the native execution and, as we require in this case, the cross-building process.
 
+<!--more-->
+
 ### Base Docker image that includes QEMU
 
 Please open the `Dockerfile.arm` and notice the first line: `FROM hypriot/rpi-alpine`.  This is a base image that includes the target qemu statically linked executable, *qemu-arm-static* in this case.  I chose `hypriot/rpi-alpine` because the alpine base images are much smaller than other base images.
