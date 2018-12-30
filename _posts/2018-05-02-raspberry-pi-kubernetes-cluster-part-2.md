@@ -21,13 +21,19 @@ Howdy again.
 
 Alright, my 8 port switch showed up so I was able to connect my raspberry 3B+ boards to my home network.  I plugged it in with 6 1ft CAT5 cables I had in my catch-all box that all of us nerds have.  I'd highly suggest flexible CAT 6 cables instead if you can get them, like [here](https://www.amazon.com/Cat-Ethernet-Cable-Black-Connectors/dp/B01IQWGKQ6).   I ordered them and they showed up before I finished this post, so I am using the CAT6 cables.
 
-<!--more-->
-
 The IP addresses they will receive initialy from my home router via DHCP can be determined with nmap.  Lets imagine my subnet is 192.168.1.0/24.
 
 Once I got them on the network I did the following:
 
-{% gist 64e7b08729ffe779f77a7bda0221c6e9 %}
+```bash
+[master]->$ nmap -sn 192.168.1.0/24 | grep raspberrypi
+Nmap scan report for raspberrypi (192.168.1.95)
+Nmap scan report for raspberrypi (192.168.1.100)
+Nmap scan report for raspberrypi (192.168.1.102)
+Nmap scan report for raspberrypi (192.168.1.114)
+Nmap scan report for raspberrypi (192.168.1.115)
+Nmap scan report for raspberrypi (192.168.1.117)
+```
 
 ### Install Raspbian OS On SD Cards
 
