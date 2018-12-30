@@ -1,70 +1,73 @@
----
-title: Jason Meridth
+title: Learn, Converse, Share
 timezone: America/Chicago
 collections:
   posts:
     title: Posts
+    permalink: /posts/:title/
     output: true
   uploads:
     title: Uploads
     output: true
-description: Blog of Jason Meridth - Learn, Converse, Share
-disqus_shortname:
-reading_time: true
-words_per_minute: 200
-logo: images/logo.png
-excerpt_separator: "<!--more-->"
-url: https://blog.jasonmeridth.com
-menu:
-- title: Home
-  url: "/"
-- title: Archive
-  url: "/archive"
-- title: Tags
-  url: "/tags"
-- title: About
-  url: "/about"
-- title: RSS
-  url: "/feed.xml"
-owner:
-  name: Jason Meridth
-  site: https://blog.jasonmeridth.com
-  avatar: images/avatar.jpg
-  bio: My name is Jason Meridth. I am a continuously learning senior full stack SDE/SRE trying to not let best be the enemy of better. I reserve the right to change my mind upon obtaining more information.  I am also the owner and principal software consultant at Meridth, LLC.  If you have any software, hardware, networking, process, etc needs please don't hesitate to <a href="mailto:jason@meridth.io">reach out to me</a>.
-  email: jason@meridth.io
-  phone: 210-383-9375
-  twitter: jmeridth
-  github: jmeridth
-twitter:
-  username: jmeridth
-  image: /images/meridth_llc_cog.png
-social:
-- title: github
-  url: https://github.com/jmeridth
-- title: linkedin
-  url: https://br.linkedin.com/in/jmeridth
-- title: twitter
-  url: https://twitter.com/jmeridth
-background:
+description: My Personal Blog
+author: Jason Meridth
+github: https://github.com/jmeridth
+about: I am a continuously learning senior full stack SDE/SRE trying to not let best be the enemy of better.
 google_analytics: UA-38456568-3
 google_verify: 2LRsgnHFM86Lph9HmYJGK6Uoa-Fn75nSU9YdAGbZAo4
 locale: en_US
-future: true
-highlighter: rouge
+avatar_url: /static/img/avatar.png
+
+enableTags: true
+tagarray: []
+
+social:
+    - icon: fa-twitter
+      link: "https://twitter.com/jmeridth"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/jmeridth"
+    - icon: fa-stack-exchange
+      link: "https://stackoverflow.com/users/963931/jmeridth"
+    - icon: fa-github
+      link: "https://github.com/jmeridth"
+    - icon: fa-key
+      link: "https://keybase.io/jmeridth/key.asc"
+    - icon: fa-file
+      link: "http://tinyurl.com/meridthresume"
+    - icon: fa-calendar
+      link: "https://calendly.com/jmeridth"
+
+share:
+  twitter_username: jmeridth
+  twitter_image: /images/meridth_llc_cog.png
+
+urls:
+  - text: About Me
+    url: /about/
+  - text: Tags
+    url: /tags/
+  - text: Feed
+    url: /feed.xml
+
+url: "https://blog.jasonmeridth.com"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
 markdown: kramdown
-sass:
-  sass_dir: _sass
-  style: compressed
-permalink: "/posts/:title/"
-paginate: 5
-float_share: true
-post_ext: md
-page_ext: md
-post_layout: post
-page_layout: page
-titlecase: true
-include:
-- ".htaccess"
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-seo-tag
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
+
 exclude:
 - demo/*
 - lib
@@ -89,9 +92,3 @@ exclude:
 - node_modules
 - Dockerfile
 - docker-compose.yml
-plugins:
-- jekyll-avatar
-- jekyll-feed
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-gist

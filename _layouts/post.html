@@ -1,74 +1,78 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
-{% include head.html %}
-</head>
+---
+layout: default
+---
+<header class="post-header">
+  <h1 class="post-title">{{ page.title }}</h1>
+</header>
 
-<body id="post" {% if page.image.feature %}class="feature"{% endif %}>
+<span class="time">{{ page.date | date_to_string }}</span>
+{% if page.categories %}
+  <span class="categories">
+    &raquo; {% for category in page.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+  </span>
+{% endif %}
+{% if page.tags %}
+  <span class="categories">
+    &raquo; {% for tag in page.tags %}<a href="/tags#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+  </span>
+{% endif %}
 
-{% include browser-upgrade.html %}
-{% include header.html %}
+<div class="content">
+  <div class="post">{{ content }}</div>
+  {% include share-page.html %}
+</div>
 
-<div id="main" role="main">
-  <article class="hentry">
-    <div class="entry-content">
-        {% if page.image.feature %}
-            <div class="entry-image-index">
-              <img src="{{ site.url }}/images/{{ page.image.feature }}" alt="{{ page.title }}">
-              {% if page.image.credit %}<div class="image-credit">Image source: <a target="_blank" href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
-            </div>
+{% assign hasSimilar = '' %}
+  {% for post in site.posts  %}
+    {% assign postHasSimilar = false %}
+      {% for tag in post.categories %}
+        {% for thisTag in page.categories %}
+          {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
+            {% if hasSimilar.size == 0 %}
+            <div class="panel-body">
+              <h4>Related Posts</h4>
+              <ul>
+            {% endif %}
+                <li class="relatedPost">
+                  <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                  {% if post.categories %}
+                    (Categories: {% for category in post.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %})
+                  {% endif %}
+                </li>
+          {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
+          {% assign postHasSimilar = true %}
         {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+  {% if hasSimilar.size > 0 %}
+  </ul>
+</div>
+{% endif %}
 
-      <div class="entry-meta">
-        <span class="entry-date date published updated">
-          <time datetime="{{ page.date | date_to_xmlschema }}"><a href="{{ site.url }}{{ page.url }}">{{ page.date | date: "%B %d, %Y" }}</a></time>
-        </span>
-        {% if site.reading_time %}
-        <span class="entry-reading-time">
-          <i class="fa fa-clock-o"></i>
-          {% assign readtime = post.content | strip_html | number_of_words | divided_by:site.words_per_minute %}
-          Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
-        </span><!-- /.entry-reading-time -->
-        {% endif %}
-      </div><!-- /.entry-meta -->
-      <h1 class="post-title entry-title">{{ page.title }}</h1>
-      <div class="entry-meta">
-        <span class="entry-tags">{% for tag in page.tags %}<a href="{{ site.url }}/tags#{{ tag }}" title="Pages tagged {{ tag }}" class="tag"><span class="term">{{ tag }}</span></a>{% unless forloop.last %}{% endunless %}{% endfor %}</span>
-      </div>
+<div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+  {% endif %}
+</div>
 
-      {{ content }}
-      <footer class="entry-meta">
-        {% if page.modified %}<span>Updated on <span class="entry-date date updated"><time datetime="{{ page.modified }}">{{ page.modified | date: "%B %d, %Y" }}</time></span></span>
-        {% endif %}
-        <span class="author vcard"><span class="fn">{{ site.owner.name }}</span></span>
-        {% if page.share != false %}{% include social-share.html %}{% endif %}
-      </footer>
-      <div class="PageNavigation">
-        {% if page.previous.url %}
-          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-        {% endif %}
-        {% if page.next.url %}
-          <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-        {% endif %}
-      </div>
-    </div><!-- /.entry-content -->
-    {% include author.html %}
-    {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
-    {% if site.related_posts.size > 0 %}{% include read-more.html %}{% endif %}
-  </article>
-</div><!-- /#main -->
+<div class="disqus-comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var disqus_shortname = "{{ site.disqus_shortname }}";
+    var disqus_identifier = "{{ site.url }}_{{ page.title }}";
+    var disqus_title = "{{ page.title }}";
 
-
-{% include scripts.html %}
-
-<div class="footer-wrapper">
-  <footer role="contentinfo">
-    {% include footer.html %}
-  </footer>
-</div><!-- /.footer-wrapper -->
-
-</body>
-</html>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    /* ]]> */
+  </script>
+</div>
