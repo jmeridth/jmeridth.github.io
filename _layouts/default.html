@@ -66,8 +66,9 @@ layout: compress
     {% endif %}
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{{ site.share.twitter_username }}">
-    <meta name="twitter:creator" content="@{{ site.share.twitter_username }}">
+    <meta name="twitter:site" content="@{{ site.share.twitter.username }}">
+    <meta name="twitter:creator" content="@{{ site.share.twitter.username }}">
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.share.twitter.image }}">
 
     {% if page.title %}
       <meta name="twitter:title" content="{{ page.title }}">
@@ -85,9 +86,6 @@ layout: compress
       <meta name="twitter:description" content="{{ site.description }}">
     {% endif %}
 
-    {% if page.header-img %}
-      <meta name="twitter:image:src" content="{{ site.url }}/{{ site.share.twitter.image }}">
-    {% endif %}
 
     <!-- Font awesome icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">

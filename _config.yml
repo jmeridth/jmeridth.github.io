@@ -37,8 +37,9 @@ social:
       link: "https://calendly.com/jmeridth"
 
 share:
-  twitter_username: jmeridth
-  twitter_image: /images/meridth_llc_cog.png
+  twitter:
+    username: jmeridth
+    image: /images/meridth_llc_cog.png
 
 urls:
   - text: About Me
@@ -48,13 +49,17 @@ urls:
   - text: Feed
     url: /feed.xml
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 url: "https://blog.jasonmeridth.com"
 baseurl: ""
 paginate: 20
 per_page: 20
 paginate_path: "/page/:num/"
 markdown: kramdown
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-gist
   - jekyll-avatar
