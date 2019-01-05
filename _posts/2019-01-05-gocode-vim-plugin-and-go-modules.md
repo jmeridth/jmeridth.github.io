@@ -7,6 +7,10 @@ tags:
 - vim
 ---
 
+**Update**: My friend [Eli Uriegas](https://twitter.com/_seemethere) let me know that you don't need gocode anymore since `vim-go` has autocompletion.  I tested it out and he is correct.
+
+{% twitter https://twitter.com/_seemethere/status/1081625731938029568 %}
+
 I recently purchased [Let's Go](https://lets-go.alexedwards.net/) from Alex Edwards.  I wanted an end-to-end Golang website tutorial.  It has been great.  Lots learned.
 
 Unfortunately, he is using Go's modules and the version of the gocode Vim plugin I was using did not support Go modules.

@@ -65,6 +65,7 @@ plugins:
   - jekyll-avatar
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-twitter-plugin
 
 compress_html:
   clippings: all
