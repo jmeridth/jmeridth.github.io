@@ -46,7 +46,6 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
-    jekyll-twitter-plugin (2.0.0)
     jekyll-watch (2.1.2)
       listen (~> 3.0)
     kramdown (1.17.0)
@@ -106,7 +105,6 @@ DEPENDENCIES
   jekyll-gist
   jekyll-paginate
   jekyll-seo-tag
-  jekyll-twitter-plugin
 
 BUNDLED WITH
    1.17.3
