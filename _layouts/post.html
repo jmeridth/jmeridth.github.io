@@ -59,6 +59,7 @@ layout: default
   {% endif %}
 </div>
 
+{% if site.disqus_shortname %}
 <div class="disqus-comments">
   <div id="disqus_thread"></div>
   <script type="text/javascript">
@@ -76,3 +77,4 @@ layout: default
     /* ]]> */
   </script>
 </div>
+{% endif %}
