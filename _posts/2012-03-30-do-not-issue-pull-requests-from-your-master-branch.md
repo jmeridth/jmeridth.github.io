@@ -30,7 +30,7 @@ The issue here is if you continue to work on your local master branch and push t
   * Fork repo ABC
   * Clone it locally (`git clone git@github.com:jmeridth/jekyll.git`)
   * Add upstream repo (`git remote add upstream git@github.com:mojombo/jekyll.git`)
-  * Create a feature/topic branch (`git checkout -b awesome_feature)
+  * Create a feature/topic branch (`git checkout -b awesome_feature`)
   * Code fix/feature
     * don’t forget to add tests/specs and make sure they pass
   * Commit code on feature/topic branch (`git add . && git commit -m “awesome”`)
