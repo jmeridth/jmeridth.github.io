@@ -1,4 +1,4 @@
-FROM jekyll/jekyll:latest
+FROM jekyll/jekyll:4.0.0
 
 WORKDIR /tmp
 ADD Gemfile /tmp/

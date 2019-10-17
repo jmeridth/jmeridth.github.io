@@ -21,7 +21,7 @@ Because you chose to not have a password for the `root` user, the `auth_plugin` 
 Solution:
 Change the `auth_plugin` to `mysql_native_password` so that you can use the root user in the database.
 
-```
+```bash
 $ sudo mysql -u root
 
 mysql> USE mysql;
