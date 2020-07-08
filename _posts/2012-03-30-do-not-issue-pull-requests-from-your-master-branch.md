@@ -7,7 +7,7 @@ tags:
 layout: post
 ---
 
-**PROBLEM:** You do not want to issue pull requests from your fork’s master branch on [Github.com][1] to the parent repisitory because any new changes you add to the master branch will **_automatically_** show up in the pull request. That means changes you did not intend to be there, would now be there.
+**PROBLEM:** You do not want to issue pull requests from your fork’s master branch on [Github.com][1] to the parent repository because any new changes you add to the master branch will **_automatically_** show up in the pull request. That means changes you did not intend to be there, would now be there.
 
 **SOLUTION:** Issue your pull requests from a feature/topic branch
 
@@ -30,7 +30,7 @@ The issue here is if you continue to work on your local master branch and push t
   * Fork repo ABC
   * Clone it locally (`git clone git@github.com:jmeridth/jekyll.git`)
   * Add upstream repo (`git remote add upstream git@github.com:mojombo/jekyll.git`)
-  * Create a feature/topic branch (`git checkout -b awesome_feature)
+  * Create a feature/topic branch (`git checkout -b awesome_feature`)
   * Code fix/feature
     * don’t forget to add tests/specs and make sure they pass
   * Commit code on feature/topic branch (`git add . && git commit -m “awesome”`)
