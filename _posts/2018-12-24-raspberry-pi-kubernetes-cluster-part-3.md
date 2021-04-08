@@ -58,7 +58,10 @@ After I get all of the nodes up I noticed the master node was marked ast `NotRea
 
 This error is known in kubernetes > 1.12 and flannel v0.10.0.  It is mentioned in [this issue](https://github.com/coreos/flannel/issues/1044).  The fix is specifically mentioned [here](https://github.com/coreos/flannel/issues/1044#issuecomment-427247749).  It is to run the following command
 
-`kubectl -n kube-system apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml`
+```bash
+kubectl -n kube-system apply -f
+https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
+```
 
 After readin the issue it seems the fix will be in the next version of flannel and will be backported to v0.10.0.
 
