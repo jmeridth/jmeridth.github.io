@@ -1,0 +1,66 @@
+---
+title: Raspberry Pi Kubernetes Cluster - Part 1
+date: 2018-04-07 09:01:00 -05:00
+tags:
+- kubernetes
+- raspberry pi
+---
+
+[Raspberry Pi Kubenetes Cluster - Part 1](/posts/raspberry-pi-kubernetes-cluster-part-1)
+
+[Raspberry Pi Kubenetes Cluster - Part 2](/posts/raspberry-pi-kubernetes-cluster-part-2)
+
+[Raspberry Pi Kubenetes Cluster - Part 3](/posts/raspberry-pi-kubernetes-cluster-part-3)
+
+[Raspberry Pi Kubenetes Cluster - Part 4](/posts/raspberry-pi-kubernetes-cluster-part-4)
+
+Howdy
+
+This is going to be the first post about my setup of a Raspberry Pi Kubernetes Cluster.  I saw a post by [Hart Hoover](https://harthoover.com/kubernetes-1.9-on-a-raspberry-pi-cluster/) and it finally motivated me to purchase his "grocery list" and do this finally.  I've been using [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/) for local Kubernetes testing but it doesn't give you multi-host testing abilities.  I've also been wanting to get deeper into my Raspberry Pi knowledge.  Lots of learning and winning.
+
+The items I bought were:
+
+- Six [Raspberry Pi 3 Model B+ Motherboards](https://smile.amazon.com/dp/B07BFH96M3)
+- Six [SanDisk Ultra 32GB microSDHC UHS-I Card with Adapter, Grey/Red, Standard Packaging (SDSQUNC-032G-GN6MA)](https://smile.amazon.com/gp/product/B010Q57T02/)
+- One [Sabrent 6-Pack 22AWG Premium 3ft Micro USB Cables High Speed USB 2.0 A Male to Micro B Sync and Charge Cables Black CB-UM63](https://smile.amazon.com/gp/product/B011KLFERG/ref=oh_aui_detailpage_o02_s01?ie=UTF8&psc=1)
+- One [AmazonBasics 6-Port USB Wall Charger (60-Watt) - Black](https://smile.amazon.com/gp/product/B01L0KN8OS/ref=oh_aui_detailpage_o02_s01?ie=UTF8&psc=1)
+- One [GeauxRobot Raspberry Pi 3 Model B 6-layer Dog Bone Stack Clear Case Box Enclosure also for Pi 2B B+ A+ B A](https://smile.amazon.com/gp/product/B01D9130QC/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
+- One [Black Box 8-Port Switch](http://amzn.to/2gNzLzi)
+
+Here is the tweet when it all arrived:
+
+I blame [@hhoover](https://twitter.com/hhoover) ;). I will be building my [@kubernetesio](https://twitter.com/kubernetesio) cluster once the 6pi case shows up next Wednesday. The extra pi is to upgrade my [@RetroPieProject](https://twitter.com/RetroPieProject). Touch screen is an addition I want to try. Side project here I come. ![image](https://pic.twitter.com/EebIKbsCeH) [Jason Meridth](https://twitter.com/jmeridth) March 31, 2018
+
+I spent this morning finally putting it together.
+
+Here is me getting started on the "dogbone case" to hold all of the Raspberry Pis:
+
+![The layout](/images/kubernetes_cluster/case_2.jpg)
+
+The bottom and one layer above:
+
+![The bottom and one layer above](/images/kubernetes_cluster/case_3.jpg)
+
+And the rest:
+
+![3 Layers](/images/kubernetes_cluster/case_4.jpg)
+
+![4 Layers](/images/kubernetes_cluster/case_11.jpg)
+
+![5 Layers](/images/kubernetes_cluster/case_12.jpg)
+
+![6 Layers and Finished](/images/kubernetes_cluster/case_13.jpg)
+
+Different angles completed:
+
+![Finished Angle 2](/images/kubernetes_cluster/case_14.jpg)
+
+![Finished Angle 3](/images/kubernetes_cluster/case_15.jpg)
+
+And connect the power:
+
+![Power](/images/kubernetes_cluster/case_16.jpg)
+
+Next post will be on getting the 6 sandisk cards ready and putting them in and watching the Raspberry Pis boot up and get a green light.  Stay tuned.
+
+Cheers.

@@ -1,0 +1,58 @@
+{{ define "main" }}
+    <div class="post {{ with .Site.Params.doNotLoadAnimations }} . {{ else }} animated fadeInDown {{ end }}">
+        <div class="post-content">
+            {{ if .Params.thumbnail }}
+            <img class="post-thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image">
+            {{ end }}
+            <div class="post-title">
+                <h3>{{ .Title }}</h3>
+                {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
+                    <div class="info">
+                        <em class="fas fa-calendar-day"></em>
+                        <span class="date">{{ if isset .Site.Params "singledateformat" }} 
+                                                {{ .Date.Format .Site.Params.singleDateFormat }}
+                                           {{ else }} {{.Date.Format "Mon, Jan 2, 2006"}} 
+                                           {{ end }}</span>
+                        <em class="fas fa-stopwatch"></em>
+                        <span class="reading-time">{{ i18n "reading_time" .ReadingTime }}</span>
+                    </div>
+                {{ end }}
+            </div>
+
+            {{ .Content }}
+
+            {{- if (eq .Params.contact true) -}}
+              {{- partial "contact.html" . -}}
+            {{- end -}}
+
+        </div>
+        <div class="post-footer">
+            <div class="info">
+                {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+                {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
+            </div>
+        </div>
+
+        {{ if and (or (eq .Type "post") (eq .Type .Site.Params.postSectionName)) (ne .Page.Params.disableComments true) }}
+            {{- if .Site.DisqusShortname -}}
+                <div id="fb_comments_container">
+                    <h2>{{ i18n "comments" }}</h2>
+                    {{ template "_internal/disqus.html" . }}
+                </div>
+            {{- end -}}
+            {{- if .Site.Params.utterances.repo -}}
+            <div id="fb_comments_container">
+                <h2>{{ i18n "comments" }}</h2>
+                {{ partial "comments/utterances.html" . }}
+            </div>
+            {{- end -}}
+            {{- if .Site.Params.CommentoURL -}}
+            <div id="fb_comments_container">
+                <h2>{{ i18n "comments" }}</h2>
+                {{ partial "comments/commento.html" . }}
+            </div>
+            {{- end -}}
+        {{ end }}
+    </div>
+
+{{ end }}

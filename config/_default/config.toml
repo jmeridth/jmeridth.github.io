@@ -1,0 +1,12 @@
+baseURL = "https://blog.jasonmeridth.com"
+title = "Blog of Jason Meridth"
+theme = "anatole"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+googleAnalytics = "UA-38456568-3"
+googleSiteVerify = "2LRsgnHFM86Lph9HmYJGK6Uoa-Fn75nSU9YdAGbZAo4"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+

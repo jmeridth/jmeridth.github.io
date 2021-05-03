@@ -1,9 +1,0 @@
-version: '3'
-services:
-  jekyll:
-    container_name: jekyll_blog
-    build: .
-    ports:
-      - 4000:4000
-    volumes:
-      - .:/jekyll

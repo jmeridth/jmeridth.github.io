@@ -1,0 +1,115 @@
+<head>
+    <title> {{.Site.Params.author}}{{ with .Title }} | {{ . }}{{ end }} </title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    {{- hugo.Generator -}}
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{- if .Site.Params.googleSiteVerify }}
+    <meta name="google-site-verification" content="{{ .Site.Params.googleSiteVerify }}">
+    {{- end -}}
+
+    <!-- CSS -->
+    
+    {{ if eq .Site.Language.LanguageDirection "rtl"}}
+    {{ $style := resources.Get "css/style.rtl.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet"
+          href="{{ $style.RelPermalink }}"
+          integrity="{{ $style.Data.Integrity }}"
+          crossorigin="anonymous"
+          type="text/css">
+    {{else}}
+    {{ $style := resources.Get "css/style.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet"
+        href="{{ $style.RelPermalink }}"
+        integrity="{{ $style.Data.Integrity }}"
+        crossorigin="anonymous"
+        type="text/css">
+    {{end}}
+    {{ $markupHighlightStyle := resources.Get "css/markupHighlight.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet"
+        href="{{ $markupHighlightStyle.RelPermalink }}"
+        integrity="{{ $markupHighlightStyle.Data.Integrity }}"
+        crossorigin="anonymous"
+        type="text/css">
+    {{ range .Site.Params.customCss }}
+        {{ $minstyles := resources.Get . }}
+        {{ $styles := $minstyles | resources.Minify | resources.Fingerprint }}
+        <link rel="stylesheet"
+        href="{{ $styles.RelPermalink }}"
+        integrity="{{ $styles.Data.Integrity }}"
+        crossorigin="anonymous"
+        media="screen" />
+    {{ end }}
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{{ .Site.Params.favicon | relURL }}favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.favicon | relURL }}apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.favicon | relURL }}favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.Params.favicon | relURL }}favicon-16x16.png">
+
+    <link rel="canonical" href="{{ .RelPermalink }}">
+
+    <!-- RSS -->
+    {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    <!-- JavaScript -->
+    {{ $anatoleHeader := resources.Get "js/anatole-header.js" }}
+    {{ $secureHeaderJS := $anatoleHeader |  resources.Minify | resources.Fingerprint }}
+    <script type="text/javascript"
+            src="{{ $secureHeaderJS.RelPermalink }}"
+            integrity="{{ $secureHeaderJS.Data.Integrity }}"
+            crossorigin="anonymous"></script>
+
+
+    {{ if not .Site.Params.disableThemeSwitcher }}
+        {{ $anatoleThemeSwitcher := resources.Get "js/anatole-theme-switcher.js" }}
+        {{ $secureThemeSwitcherJS := $anatoleThemeSwitcher |  resources.Minify | resources.Fingerprint }}
+        <script type="text/javascript"
+                src="{{ $secureThemeSwitcherJS.RelPermalink }}"
+                integrity="{{ $secureThemeSwitcherJS.Data.Integrity }}"
+                crossorigin="anonymous"></script>
+    {{ end }}
+
+    {{- $js := "" -}}
+    {{- range .Site.Params.customJs -}}
+        {{- if or (in . "http://") (in . "https://") -}}
+            <script src="{{ . | relURL }}"></script>
+        {{- else -}}
+            {{- $customJS := resources.Get . -}}
+            {{- if $customJS -}}
+                {{- if eq $js "" -}}
+                    {{- $js = $customJS -}}
+                {{- else -}}
+                    {{- $js = slice $js $customJS | resources.Concat "js/custom.js" -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+
+    {{- if ne $js "" -}}
+    {{- $secureJS := $js |  resources.Minify | resources.Fingerprint -}}
+    <script type="text/javascript"
+            src="{{ $secureJS.RelPermalink }}"
+            integrity="{{ $secureJS.Data.Integrity }}"
+            crossorigin="anonymous"></script>
+    {{- end -}}
+
+    <!-- Twitter Cards -->
+    {{ template "_internal/twitter_cards.html" . }}
+
+    <!-- Open Graph -->
+    {{- if isset .Site.Taxonomies "series" }}
+    {{- if not (eq (len .Site.Taxonomies.series) 0) -}}
+    {{ template "_internal/opengraph.html" . }}
+    {{- end -}}
+    {{- end }}
+
+</head>
