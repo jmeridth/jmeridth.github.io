@@ -34,11 +34,6 @@ title = "GitHub"
 url = "https://github.com/jmeridth"
 
 [[socialIcons]]
-icon = "fab fa-twitter"
-title = "twitter"
-url = "https://twitter.com/jmeridth"
-
-[[socialIcons]]
 icon = "fas fa-envelope"
 title = "email"
 url = "mailto:jmeridth@gmail.com"
