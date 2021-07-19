@@ -21,8 +21,6 @@ enableTags: true
 tagarray: []
 
 social:
-    - icon: fa-twitter
-      link: "https://twitter.com/jmeridth"
     - icon: fa-linkedin
       link: "https://www.linkedin.com/in/jmeridth"
     - icon: fa-stack-exchange
@@ -35,11 +33,6 @@ social:
       link: "http://tinyurl.com/meridthresume"
     - icon: fa-calendar
       link: "https://calendly.com/jmeridth"
-
-share:
-  twitter:
-    username: jmeridth
-    image: /images/meridth_llc_cog.png
 
 urls:
   - text: About Me
