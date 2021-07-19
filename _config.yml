@@ -21,16 +21,12 @@ enableTags: true
 tagarray: []
 
 social:
-    - icon: fa-linkedin
-      link: "https://www.linkedin.com/in/jmeridth"
-    - icon: fa-stack-exchange
-      link: "https://stackoverflow.com/users/963931/jmeridth"
     - icon: fa-github
       link: "https://github.com/jmeridth"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/jmeridth"
     - icon: fa-key
       link: "https://keybase.io/jmeridth/key.asc"
-    - icon: fa-file
-      link: "http://tinyurl.com/meridthresume"
     - icon: fa-calendar
       link: "https://calendly.com/jmeridth"
 
