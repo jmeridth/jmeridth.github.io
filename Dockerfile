@@ -1,8 +1,7 @@
-FROM jekyll/jekyll:4.0.0
+FROM jekyll/jekyll:4.0
 
 WORKDIR /tmp
 ADD Gemfile /tmp/
-ADD Gemfile.lock /tmp/
 RUN bundle install
 
 COPY . /jekyll
