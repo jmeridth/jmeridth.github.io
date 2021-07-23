@@ -21,14 +21,12 @@ enableTags: true
 tagarray: []
 
 social:
-    - icon: fa-github
-      link: "https://github.com/jmeridth"
-    - icon: fa-linkedin
-      link: "https://www.linkedin.com/in/jmeridth"
-    - icon: fa-key
-      link: "https://keybase.io/jmeridth/key.asc"
-    - icon: fa-calendar
-      link: "https://calendly.com/jmeridth"
+  - icon: fa-github
+    link: "https://github.com/jmeridth"
+  - icon: fa-linkedin
+    link: "https://www.linkedin.com/in/jmeridth"
+  - icon: fa-key
+    link: "https://keybase.io/jmeridth/key.asc"
 
 urls:
   - text: About Me
@@ -60,29 +58,29 @@ compress_html:
   comments: ["<!-- ", " -->"]
   endings: all
   ignore:
-    envs: ['development']
+    envs: ["development"]
 
 exclude:
-- demo/*
-- lib
-- config.rb
-- Capfile
-- config
-- Gemfile
-- Gemfile.lock
-- README.md
-- LICENSE
-- log
-- Rakefile
-- Rakefile.rb
-- tmp
-- less
-- "*.sublime-project"
-- "*.sublime-workspace"
-- test
-- spec
-- Gruntfile.js
-- package.json
-- node_modules
-- Dockerfile
-- docker-compose.yml
+  - demo/*
+  - lib
+  - config.rb
+  - Capfile
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - log
+  - Rakefile
+  - Rakefile.rb
+  - tmp
+  - less
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - test
+  - spec
+  - Gruntfile.js
+  - package.json
+  - node_modules
+  - Dockerfile
+  - docker-compose.yml
