@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Cart
+permalink: /cart/
 ---
 
 <div id="cart">
