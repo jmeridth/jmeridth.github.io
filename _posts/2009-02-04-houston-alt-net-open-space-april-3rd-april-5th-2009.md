@@ -4,7 +4,7 @@ date: 2009-02-04 14:50:00 -06:00
 layout: post
 ---
 
-I've just become aware of an ALT.NET Open Space conference happening in Houston during the first week of April  Registration isn't open yet but will be soon.  I'm not involved with the event but wanted to make the announcement (thanks to [Ben Scheirman](http://flux88.com/), one of the conference administrators, for letting me know about the event[)](http://flux88.com/).  If you are in the Houston area or can make the trip down there it will be well worth it.  They are currently looking for sponsors, so any individuals or companies that can help support the event, please [contact the administrators](http://houston.altnetconf.com/home/contact).
+I've just become aware of an ALT.NET Open Space conference happening in Houston during the first week of April Registration isn't open yet but will be soon. I'm not involved with the event but wanted to make the announcement (thanks to [Ben Scheirman](http://flux88.com/), one of the conference administrators, for letting me know about the event[)](http://flux88.com/). If you are in the Houston area or can make the trip down there it will be well worth it. They are currently looking for sponsors, so any individuals or companies that can help support the event, please [contact the administrators](http://houston.altnetconf.com/home/contact).
 
 [The website](http://houston.altnetconf.com/home)
 

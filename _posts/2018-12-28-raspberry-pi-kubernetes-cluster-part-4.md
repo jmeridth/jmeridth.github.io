@@ -27,7 +27,8 @@ If you'd like to clone and use it:
 git clone git@github.com:meridth/fl8.git && cd fl8
 ```
 
-# ARM docker image
+## ARM docker image
+
 First we need to learn about QEMU
 
 ### What is QEMU and QEMU installation
@@ -56,13 +57,13 @@ docker build -f ./Dockerfile.arm -t meridth/rpi-fl8 .
 
 And voila!  You now have an image that will run on Raspberry Pis.
 
-# Deployment and Service
+## Deployment and Service
 
 `/.run-rpi.sh` is my script where I run a Kubernetes deployment with 3 replicas and a Kubernetes service.  Please read `fl8-rpi-deployment.yml` and `fl8-rpi-service.yml`.  They are only different from the other deployment and service files by labels.  Labels are key/vaule pairs that can be used by selectors later.
 
 The deployment will pull my image from `meridth/rpi-fl8` on dockerhub.  If you have uploaded your docker image somewhere you can change the deployment file to pull that image instead.
 
-# Viewing application
+## Viewing application
 
 ```bash
 kubectl get pods

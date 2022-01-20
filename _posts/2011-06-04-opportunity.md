@@ -11,12 +11,11 @@ I’ve been in major transition the last couple months. I decided to leave San A
 
 You won’t regret it. I’ve worked with both guys twice now and it has truly been a pleasure.
 
-[Here is the link to the gist ][4]that Joe posted a while back with the job description.
+{% gist id=eac742b1c77bf291335d %}
 
-Did I mention you get to work with [Github][5]? :)
+Did I mention you get to work with [Github][4]? :)
 
    [1]: https://twitter.com/agilejoe
    [2]: https://twitter.com/marcusthebold
    [3]: https://onetechnologies.net
-   [4]: https://gist.github.com/eac742b1c77bf291335d
-   [5]: https://github.com
+   [4]: https://github.com

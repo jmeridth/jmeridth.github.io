@@ -7,11 +7,11 @@ tags:
 layout: post
 ---
 
-I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is [Github.com](http://github.com). If they say, “private” I still say Github.  If they don't ["trust" Github](http://github.com/security), which they should - click the link, then my response is [Gitosis](http://eagain.net/gitweb/?p=gitosis.git;a=summary) and [Gitweb](http://git.wiki.kernel.org/index.php/Gitweb). This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.
+I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is [Github.com](http://github.com). If they say, “private” I still say Github. If they don't ["trust" Github](http://github.com/security), which they should - click the link, then my response is [Gitosis](http://eagain.net/gitweb/?p=gitosis.git;a=summary) and [Gitweb](http://git.wiki.kernel.org/index.php/Gitweb). This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.
 
-Back to Gitosis. My personal Gitosis server is a slice at [Slicehost.com](http://slicehost.com). You can use an Ubuntu server at home as long as you have remote access. I’ve personally only used Gitosis with an Ubuntu slice, so I don’t know if there are any quirks with other Linux distributions. After setting up a slice (after following the instructions [here](http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-1) and [here](http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-2)) I am ready to go.
+Back to Gitosis. My personal Gitosis server is a slice at [Slicehost.com](http://slicehost.com). You can use an Ubuntu server at home as long as you have remote access. I’ve personally only used Gitosis with an Ubuntu slice, so I don’t know if there are any quirks with other Linux distributions. After setting up a slice (after following the instructions [here](http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-1) and [here](http://articles.slicehost.com/2008/11/28/ubuntu-intrepid-setup-page-2)) I am ready to go.
 
-Notice: This post is a combination of [scie.nti.st’s gitosis post](http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way) and [Scott Chacon’s Pro Git gitosis section](http://progit.org/book/ch4-7.html). They are my de facto references. Maybe my own will be now. :)
+Notice: This post is a combination of [scie.nti.st’s gitosis post](http://scie.nti.st/2007/11/14/hosting-git-repositories-the-easy-and-secure-way) and [Scott Chacon’s Pro Git gitosis section](http://progit.org/book/ch4-7.html). They are my de facto references. Maybe my own will be now. :)
 
 “Enough talk. Let’s fight” ~Po, Kung Fu Panda
 
@@ -76,7 +76,7 @@ Now let’s install it:
 ~/src/gitosis $ python setup.py install
 ```
 
-[Result of Installation](https://gist.github.com/jmeridth/352769)
+{% gist id=352769 %}
 
 Gitosis is now installed. Next steps are to create git user and handle a file permission on a git hook.
 
@@ -84,13 +84,13 @@ Gitosis is now installed. Next steps are to create git user and handle a file pe
 
 ```bash
 sudo adduser \
-    --system \
-    --shell /bin/bash \
-    --gecos 'git version control' \
-    --group \
-    --disabled-password \
-    --home /home/git \
-    git
+  --system \
+  --shell /bin/bash \
+  --gecos 'git version control' \
+  --group \
+  --disabled-password \
+  --home /home/git \
+  git
 ```
 
 You’ll see something like the following if it is successful
@@ -118,7 +118,7 @@ scp $HOME/.ssh/id_rsa.pub user@123.123.123.123:/tmp/
 
 This will upload the local id_rsa.pub file to the /tmp/ folder on the server. Why there? So that the git user can use it. How is that possible? The folder has permissions of 777 (drwxrwxrwt) meaning everyone has read and write access to it.
 
-### Sidenote: SSH Port
+### Sidenote: SSH Port
 
 If you have your sshd daemon running on a different port other than 22 (which is the default, but I highly suggest changing), then you need to use scp like this:
 
@@ -156,7 +156,7 @@ You have to set the permissions on the post-update git hook of the gitosis-admin
 sudo chmod 7555 /home/git/repositories/gitosis-admin.git/hooks/post-update
 ```
 
-Note: _First round of this post, I didn’t make this change. When I added a new project, it failed because this hook didn’t have the right permissions._
+Note: _First round of this post, I didn’t make this change. When I added a new project, it failed because this hook didn’t have the right permissions._
 
 ## Clone gitosis-admin repository
 
@@ -177,7 +177,7 @@ We are now in the gitosis-admin repository folder locally
 
 ### Two most common errors
 
-**FIRST ONE:**
+**FIRST ONE:**
 
 ```bash
 ~ > git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
@@ -186,7 +186,7 @@ ssh: connect to host YOUR_SERVER_HOSTNAME port 22: Connection refused
 fatal: The remote end hung up unexpectedly
 ```
 
-it is because you have used a port for SSH other than port 22 (the default). To fix this, you need to edit your .ssh/config file and add the following:
+it is because you have used a port for SSH other than port 22 (the default). To fix this, you need to edit your .ssh/config file and add the following:
 
 ```bash
 Host YOUR_SERVER_HOSTNAME
@@ -195,7 +195,7 @@ Port YOUR_PORT
 
 Of course, you need to put in your server hostname and port number (i.e., mydomain.com and 12345)
 
-**SECOND ONE:**
+**SECOND ONE:**
 
 ```bash
 ~ > git clone git@YOUR_SERVER_HOSTNAME:gitosis-admin.git
@@ -231,8 +231,8 @@ You now have a local clone of the gitosis-admin repository. The contents are onl
 ```bash
 ~/gitosis-admin(master) > ls
 total 8
--rw-r--r-- 1 user staff  1148 May 22 21:31 gitosis.conf
-drwxr-xr-x 3 user staff  1028 May 22 21:31 keydir
+-rw-r--r-- 1 user staff 1148 May 22 21:31 gitosis.conf
+drwxr-xr-x 3 user staff 1028 May 22 21:31 keydir
 ```
 
 Next Park: [Gitosis and Gitweb Part 2](/posts/gitosis-and-gitweb-part-2)
