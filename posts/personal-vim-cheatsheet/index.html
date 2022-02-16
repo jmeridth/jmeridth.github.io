@@ -1,0 +1,160 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Personal VIM Cheatsheet | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="vim,cli">
+<meta name=description content="Originally posted on 03-03-2014 and continually updated
+Will be adding to this post as I learn/remember shortcuts
+ . - repeat last command in normal mode …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Personal VIM Cheatsheet">
+<meta property="og:description" content="Originally posted on 03-03-2014 and continually updated
+Will be adding to this post as I learn/remember shortcuts
+ . - repeat last command in normal mode @: then @@ - repeat last command entered with : source # - find all occurances of the word I&rsquo;m currently on dfc - delete everything including the letter &lsquo;c&rsquo; dtc - delete everything up to the letter &lsquo;c&rsquo; :e! - reload current file (typically after doing a git pull) :b# - go back to previous buffer shift+h - go to top of screen shift+m - go to middle of screen shift+l - go to bottom of screen ctrl+v [h|j|k|l] - highlight individual items (great for highlighting column(s) gUiw - capitalize the current word gUU - capitalize current line vU - capitalize current character guiw - lowercase the current word guu - lowercase the current line vu - lowercase current character [num]j - go down num lines from current line [num]k - go up num lines from current line ctrl+O - jump back to previous (older) location in file info ctrl+I - jump forward to next (newer) location in file info ctrl+w + [H,J,K,L] - move current window to the far left, bottom, top or right  keybindings I use all the time via mappgings in my .">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2016-04-19T15:36:00-05:00">
+<meta property="article:modified_time" content="2016-04-19T15:36:00-05:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Personal VIM Cheatsheet">
+<meta name=twitter:description content="Originally posted on 03-03-2014 and continually updated
+Will be adding to this post as I learn/remember shortcuts
+ . - repeat last command in normal mode @: then @@ - repeat last command entered with : source # - find all occurances of the word I&rsquo;m currently on dfc - delete everything including the letter &lsquo;c&rsquo; dtc - delete everything up to the letter &lsquo;c&rsquo; :e! - reload current file (typically after doing a git pull) :b# - go back to previous buffer shift+h - go to top of screen shift+m - go to middle of screen shift+l - go to bottom of screen ctrl+v [h|j|k|l] - highlight individual items (great for highlighting column(s) gUiw - capitalize the current word gUU - capitalize current line vU - capitalize current character guiw - lowercase the current word guu - lowercase the current line vu - lowercase current character [num]j - go down num lines from current line [num]k - go up num lines from current line ctrl+O - jump back to previous (older) location in file info ctrl+I - jump forward to next (newer) location in file info ctrl+w + [H,J,K,L] - move current window to the far left, bottom, top or right  keybindings I use all the time via mappgings in my .">
+<meta itemprop=name content="Personal VIM Cheatsheet">
+<meta itemprop=description content="Originally posted on 03-03-2014 and continually updated
+Will be adding to this post as I learn/remember shortcuts
+ . - repeat last command in normal mode @: then @@ - repeat last command entered with : source # - find all occurances of the word I&rsquo;m currently on dfc - delete everything including the letter &lsquo;c&rsquo; dtc - delete everything up to the letter &lsquo;c&rsquo; :e! - reload current file (typically after doing a git pull) :b# - go back to previous buffer shift+h - go to top of screen shift+m - go to middle of screen shift+l - go to bottom of screen ctrl+v [h|j|k|l] - highlight individual items (great for highlighting column(s) gUiw - capitalize the current word gUU - capitalize current line vU - capitalize current character guiw - lowercase the current word guu - lowercase the current line vu - lowercase current character [num]j - go down num lines from current line [num]k - go up num lines from current line ctrl+O - jump back to previous (older) location in file info ctrl+I - jump forward to next (newer) location in file info ctrl+w + [H,J,K,L] - move current window to the far left, bottom, top or right  keybindings I use all the time via mappgings in my ."><meta itemprop=datePublished content="2016-04-19T15:36:00-05:00">
+<meta itemprop=dateModified content="2016-04-19T15:36:00-05:00">
+<meta itemprop=wordCount content="290">
+<meta itemprop=keywords content="vim,cli,">
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>19</span>
+<span class=rest>Apr 2016</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Personal VIM Cheatsheet</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;290&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p><em>Originally posted on 03-03-2014 and continually updated</em></p>
+<p>Will be adding to this post as I learn/remember shortcuts</p>
+<ul>
+<li><code>.</code> - repeat last command in normal mode</li>
+<li><code>@:</code> then <code>@@</code> - repeat last command entered with <code>:</code> <a href=http://vim.wikia.com/wiki/Repeat_last_colon_command target=_blank>source</a></li>
+<li><code>#</code> - find all occurances of the word I&rsquo;m currently on</li>
+<li><code>dfc</code> - delete everything including the letter &lsquo;c&rsquo;</li>
+<li><code>dtc</code> - delete everything up to the letter &lsquo;c&rsquo;</li>
+<li><code>:e!</code> - reload current file (typically after doing a git pull)</li>
+<li><code>:b#</code> - go back to previous buffer</li>
+<li>shift+h - go to top of screen</li>
+<li>shift+m - go to middle of screen</li>
+<li>shift+l - go to bottom of screen</li>
+<li>ctrl+v <code>[h|j|k|l]</code> - highlight individual items (great for highlighting column(s)</li>
+<li><code>gUiw</code> - capitalize the current word</li>
+<li><code>gUU</code> - capitalize current line</li>
+<li><code>vU</code> - capitalize current character</li>
+<li><code>guiw</code> - lowercase the current word</li>
+<li><code>guu</code> - lowercase the current line</li>
+<li><code>vu</code> - lowercase current character</li>
+<li><code>[num]j</code> - go down num lines from current line</li>
+<li><code>[num]k</code> - go up num lines from current line</li>
+<li>ctrl+O - jump back to previous (older) location in file <a href=http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations target=_blank>info</a></li>
+<li>ctrl+I - jump forward to next (newer) location in file <a href=http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations target=_blank>info</a></li>
+<li>ctrl+w + [H,J,K,L] - move current window to the far left, bottom, top or right</li>
+</ul>
+<p>keybindings I use all the time via mappgings in my <a href=https://github.com/jmeridth/dotfiles/blob/master/vimrc target=_blank>.vimrc</a></p>
+<ul>
+<li><code>,v</code> - create vertical split</li>
+<li><code>,h</code> - create horizontal split</li>
+<li><code>,=</code> - reset split to equal sizes after parent window resizes</li>
+<li>ctrl+j - go to split below/down</li>
+<li>ctrl+h - go to split on left</li>
+<li>ctrl+k - go to split above/up</li>
+<li>ctrl+l - go to split on right</li>
+</ul>
+<p>With the <a href=https://github.com/davidhalter/jedi-vim target=_blank>jedi-vim plugin</a> installed for Python:</p>
+<ul>
+<li><code>,g</code> - go to source - <a href=https://github.com/davidhalter/jedi-vim#settings target=_blank>you can designate how source file opens (vertical or horizontal)</a></li>
+<li><code>,n</code> - list usages</li>
+<li><code>K</code> - show documentation</li>
+</ul>
+</div>
+<div class=tags>
+<div class=taxosfloating_left>
+<p>Tags</p>
+</div>
+<div class=termsfloating_right>
+<p>
+<a href=/tags/cli/>cli</a>
+<a href=/tags/vim/>vim</a>
+</p>
+</div>
+<div class=clearit></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

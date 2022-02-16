@@ -1,0 +1,140 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Gocode Vim Plugin and Go Modules | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="go,vim">
+<meta name=description content="Update: My friend Eli Uriegas let me know that you don’t need gocode anymore since vim-go has autocompletion. I tested it out and he is correct. Here is …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Gocode Vim Plugin and Go Modules">
+<meta property="og:description" content="Update: My friend Eli Uriegas let me know that you don&rsquo;t need gocode anymore since vim-go has autocompletion. I tested it out and he is correct. Here is his tweet with a link to his dotfiles on how he sets up his .vimrc to use vim-go
+Original Post:
+I recently purchased Let’s Go from Alex Edwards. I wanted an end-to-end Golang website tutorial. It has been great. Lots learned.
+Unfortunately, he is using Go&rsquo;s modules and the version of the gocode Vim plugin I was using did not support Go modules.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/gocode-vim-plugin-and-go-modules/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-01-05T11:09:26+00:00">
+<meta property="article:modified_time" content="2019-01-05T11:09:26+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Gocode Vim Plugin and Go Modules">
+<meta name=twitter:description content="Update: My friend Eli Uriegas let me know that you don&rsquo;t need gocode anymore since vim-go has autocompletion. I tested it out and he is correct. Here is his tweet with a link to his dotfiles on how he sets up his .vimrc to use vim-go
+Original Post:
+I recently purchased Let’s Go from Alex Edwards. I wanted an end-to-end Golang website tutorial. It has been great. Lots learned.
+Unfortunately, he is using Go&rsquo;s modules and the version of the gocode Vim plugin I was using did not support Go modules.">
+<meta itemprop=name content="Gocode Vim Plugin and Go Modules">
+<meta itemprop=description content="Update: My friend Eli Uriegas let me know that you don&rsquo;t need gocode anymore since vim-go has autocompletion. I tested it out and he is correct. Here is his tweet with a link to his dotfiles on how he sets up his .vimrc to use vim-go
+Original Post:
+I recently purchased Let’s Go from Alex Edwards. I wanted an end-to-end Golang website tutorial. It has been great. Lots learned.
+Unfortunately, he is using Go&rsquo;s modules and the version of the gocode Vim plugin I was using did not support Go modules."><meta itemprop=datePublished content="2019-01-05T11:09:26+00:00">
+<meta itemprop=dateModified content="2019-01-05T11:09:26+00:00">
+<meta itemprop=wordCount content="227">
+<meta itemprop=keywords content="go,vim,">
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>05</span>
+<span class=rest>Jan 2019</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Gocode Vim Plugin and Go Modules</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;227&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p><strong>Update</strong>: My friend <a href=https://twitter.com/_seemethere target=_blank>Eli Uriegas</a> let me know that you don&rsquo;t need <code>gocode</code> anymore since <code>vim-go</code> has autocompletion. I tested it out and he is correct. <a href=https://twitter.com/_seemethere/status/1081626050717728770 target=_blank>Here</a> is his tweet with a link to his dotfiles on how he sets up his <code>.vimrc</code> to use <code>vim-go</code></p>
+<p><em>Original Post:</em></p>
+<p>I recently purchased <a href=https://lets-go.alexedwards.net/ target=_blank>Let’s Go</a> from Alex Edwards. I wanted an end-to-end Golang website tutorial. It has been great. Lots learned.</p>
+<p>Unfortunately, he is using Go&rsquo;s modules and the version of the gocode Vim plugin I was using did not support Go modules.</p>
+<h3 id=solution>Solution</h3>
+<p>Use <a href=https://github.com/stamblerre/gocode target=_blank>this fork</a> of the gocode Vim plugin and you&rsquo;ll get support for Go modules.</p>
+<p>I use <a href=https://github.com/junegunn/vim-plug target=_blank>Vim Plug</a> for my Vim plugins. Huge fan of Vundle but I like the post-actions feature of Plug. I just had to change one line of my vimrc and re-run updates.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-diff data-lang=diff>diff --git a/vimrc b/vimrc
+index 3e8edf1..8395705 100644
+<span style=color:#f92672>--- a/vimrc
+</span><span style=color:#f92672></span><span style=color:#a6e22e>+++ b/vimrc
+</span><span style=color:#a6e22e></span><span style=color:#75715e>@@ -73,7 +73,7 @@ endif
+</span><span style=color:#75715e></span>           let editor_name=&#39;nvim&#39;
+           Plug &#39;zchee/deoplete-go&#39;, { &#39;do&#39;: &#39;make&#39;}
+         endif
+<span style=color:#f92672>-        Plug &#39;nsf/gocode&#39;, { &#39;rtp&#39;: &#39;vim&#39;, &#39;do&#39;: &#39;~/.config/nvim/plugged/gocode/vim/symlink.sh&#39; }
+</span><span style=color:#f92672></span><span style=color:#a6e22e>+        Plug &#39;stamblerre/gocode&#39;, { &#39;rtp&#39;: &#39;vim&#39;, &#39;do&#39;: &#39;~/.vim/plugged/gocode/vim/symlink.sh&#39; }
+</span><span style=color:#a6e22e></span>         Plug &#39;godoctor/godoctor.vim&#39;, {&#39;for&#39;: &#39;go&#39;} &#34; Gocode refactoring tool
+     &#34; }
+</code></pre></div><p>That is the line I had to change then run <code>:PlugUpdate!</code> and the new plugin was installed.</p>
+<p>I figured all of this out due to <a href=https://github.com/zchee/deoplete-go/issues/134#issuecomment-435436305 target=_blank>this comment</a> by <a href=https://github.com/cippaciong target=_blank>Tommaso Sardelli</a> on Github. Thank you Tommaso.</p>
+</div>
+<div class=tags>
+<div class=taxosfloating_left>
+<p>Tags</p>
+</div>
+<div class=termsfloating_right>
+<p>
+<a href=/tags/go/>go</a>
+<a href=/tags/vim/>vim</a>
+</p>
+</div>
+<div class=clearit></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

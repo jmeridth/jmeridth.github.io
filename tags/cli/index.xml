@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>cli on JM (Jason Meridth)</title><link>http://blog.jasonmeridth.com/tags/cli/</link><description>Recent content in cli on blog.jasonmeridth.com</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© Copyright notice | Vitae theme for Hugo</copyright><lastBuildDate>Tue, 19 Apr 2016 15:36:00 -0500</lastBuildDate><atom:link href="http://blog.jasonmeridth.com/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Personal VIM Cheatsheet</title><link>http://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/</link><pubDate>Tue, 19 Apr 2016 15:36:00 -0500</pubDate><guid>http://blog.jasonmeridth.com/posts/personal-vim-cheatsheet/</guid><description>
+Originally posted on 03-03-2014 and continually updated
+Will be adding to this post as I learn/remember shortcuts
+. - repeat last command …</description></item><item><title>Meta keys with iTerm and Weechat</title><link>http://blog.jasonmeridth.com/posts/meta-keys-with-iterm-and-weechat/</link><pubDate>Tue, 14 Jul 2015 10:12:00 -0500</pubDate><guid>http://blog.jasonmeridth.com/posts/meta-keys-with-iterm-and-weechat/</guid><description>
+Found this tip today about how to ensure your iTerm console sends +Esc to weechat for the meta keys to work properly.
+To make alt key …</description></item><item><title>Weechat keyboard shortcuts</title><link>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</link><pubDate>Fri, 14 Mar 2014 23:52:39 -0500</pubDate><guid>http://blog.jasonmeridth.com/posts/weechat-keyboard-shortcuts/</guid><description>
+I’ve switched from using irssi to Weechat since I rejoined the ranks as a Racker.
+Here is my current weechat.conf file
+Some of the ones I …</description></item><item><title>How to Run a Single Test With Tox</title><link>http://blog.jasonmeridth.com/posts/how-to-run-a-single-test-with-tox/</link><pubDate>Fri, 07 Mar 2014 04:49:53 -0600</pubDate><guid>http://blog.jasonmeridth.com/posts/how-to-run-a-single-test-with-tox/</guid><description>
+I have to run a single python test once in a while and keep forgetting how to do it with Tox.
+Here it is:
+tox -e py27 -- …</description></item></channel></rss>

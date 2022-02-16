@@ -1,0 +1,164 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Monorail | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="jason meridth,meridth,jm,software developer">
+<meta name=description content="**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2 **
+REASONS:
+I’ve had a few friends ask me what is MonoRail and how do I set it up? I …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Monorail">
+<meta property="og:description" content="**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2 **
+REASONS:
+I&rsquo;ve had a few friends ask me what is MonoRail and how do I set it up? I decided to go from the ground up here. There is nothing here that you can&rsquo;t get from the Castle website documentation. I just want to grok this stuff and like Mr. Torvalds says, &ldquo;Talk is cheap, show me the code&#34;.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/monorail-1-reasons-setup-and-first-output/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2007-08-24T08:01:00-05:00">
+<meta property="article:modified_time" content="2007-08-24T08:01:00-05:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Monorail">
+<meta name=twitter:description content="**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2 **
+REASONS:
+I&rsquo;ve had a few friends ask me what is MonoRail and how do I set it up? I decided to go from the ground up here. There is nothing here that you can&rsquo;t get from the Castle website documentation. I just want to grok this stuff and like Mr. Torvalds says, &ldquo;Talk is cheap, show me the code&#34;.">
+<meta itemprop=name content="Monorail">
+<meta itemprop=description content="**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2 **
+REASONS:
+I&rsquo;ve had a few friends ask me what is MonoRail and how do I set it up? I decided to go from the ground up here. There is nothing here that you can&rsquo;t get from the Castle website documentation. I just want to grok this stuff and like Mr. Torvalds says, &ldquo;Talk is cheap, show me the code&#34;."><meta itemprop=datePublished content="2007-08-24T08:01:00-05:00">
+<meta itemprop=dateModified content="2007-08-24T08:01:00-05:00">
+<meta itemprop=wordCount content="988">
+<meta itemprop=keywords content>
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>24</span>
+<span class=rest>Aug 2007</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Monorail</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;988&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p><em>**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2 **</em></p>
+<p><strong>REASONS:</strong></p>
+<p>I&rsquo;ve had a few friends ask me what is MonoRail and how do I set it up?  I decided to go from the ground up here.  There is nothing here that you can&rsquo;t get from the <a href=http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html target=_blank>Castle website documentation</a>.  I just want to grok this stuff and like Mr. Torvalds says, &ldquo;<a href=http://lkml.org/lkml/2000/8/25/132 target=_blank>Talk is cheap, show me the code</a>".  I also want to learn how to unit test in this environment.  I&rsquo;ve heard the great things about Ruby on Rails (RoR from now on), but want to make that migration slowly.</p>
+<p>Please don&rsquo;t laugh if this is too beginning for you.  I will eventually get to some advanced topics like:</p>
+<p><figure>
+<img src=jasonmeridth/files/2011/03Monorail1_C9C5/image_thumb_6.png alt=image>
+</figure></p>
+<p>and much more after the scar tissue starts to gather (one mentioned below).Please be patient with me and if you are using MonoRail in production, please make sure I stay on the correct path (<a href=http://www.lostechies.com/blogs/joeydotnet/default.aspx target=_blank>JoeyDotNet</a>, <a href=http://codebetter.com/blogs/scott.bellware/default.aspx target=_blank>Scott Bellware</a> and the <a href="http://blogs.dovetailsoftware.com/blogs/default.aspx?GroupID=3" target=_blank>Dovetail team</a>, and <a href=http://devlicious.com/blogs/billy_mccafferty/default.aspx target=_blank>Billy McCafferty</a> are a few that I know of).</p>
+<p>Now we begin.</p>
+<p><strong>SETUP:</strong></p>
+<p>My current main folder structure in my source control (<a href=http://subversion.tigris.org/ target=_blank>Subversion</a>) is like so:</p>
+<p><figure>
+<img src=jasonmeridth/files/2011/03Monorail1_C9C5/image_thumb_2.png alt=image>
+</figure></p>
+<p>I also use <a href=http://ankhsvn.tigris.org/ target=_blank>Ankh</a> for my Subversion plug-in in Visual Studio 2005 (hence the green checkmarks in the image above and future images.)</p>
+<p>I keep all my dependent libraries in the lib folder (yes, Jason, we&rsquo;re not morons&mldr;I know)</p>
+<p>Once the default structure is setup, you need to setup your folders so that MonoRail will work properly:</p>
+<p><figure>
+<img src=jasonmeridth/files/2011/03Monorail1_C9C5/image_thumb_4.png alt=image>
+</figure></p>
+<p>Notice the folder structure:</p>
+<p>Project Root
++Content
+-&mdash;-css
+-&mdash;-images
++Controllers
++Models
++ViewComponents (future post)
++Views
+-&mdash;-components
+-&mdash;-(matching controller named folders containing vm files)
+-&mdash;-layouts (next post)
+-&mdash;-rescues (next post)</p>
+<p>This is all provided on the <a href=http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html target=_blank>Castle website documentation</a>.</p>
+<p>I am currently using shared hosting (<a href=http://www.webhost4life.com target=_blank>WebHost4Life</a>) and it has served it&rsquo;s purpose.  I recently <a href=http://www.lostechies.com/blogs/jason_meridth/archive/2007/08/11/monorail-on-webhost4life.aspx target=_blank>posted</a> about how they added the .rails extension to the server so that I can feel more legitimate about using rails than having to use a different extension, explained <a href=http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html#DeployingToSharedHost target=_blank>here</a> and in <a href=http://www.lostechies.com/blogs/jason_meridth/archive/2007/08/11/monorail-on-webhost4life.aspx target=_blank>my previous post</a>.  The installation instructions on the <a href=http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html target=_blank>Castle website documentation</a> are very user friendly.  I personally took the **<a href=http://www.castleproject.org/download/monorail/v1rc2/MonoRail.GettingStartedSampleVS2005.zip target=_blank>sample solution**</a> and started from there.  It worked great.  Just build it locally and upload your web project to your web host.  I personally check into a subversion repository and use <a href=http://confluence.public.thoughtworks.org/display/CCNET/Welcome+to+CruiseControl.NET target=_blank>CruiseControl.NET</a> for my automated continuous integration and during that process my <a href=http://nant.sourceforge.net/ target=_blank>NAnt</a> script handles deployment.</p>
+<p><strong>I&rsquo;M NOT A DESIGNER:</strong></p>
+<p>No matter how hard I try to design sites, I can&rsquo;t make them appealing to the human eye.  I LOVE <a href=http://www.oswd.org target=_blank>Open Source Web Designs</a>.  It has over 2000 designs and gives me a place to start.  The site I&rsquo;m using, <a href=http://www.jasonmeridth.com target=_blank>JasonMeridth.com</a>, for this example is create by <a href=http://www.nodethirtythree.com/ target=_blank>Node Thirty Three</a> (I firmly believe in giving the designers their dues) and know it will do it&rsquo;s job.</p>
+<p><strong>NOTES TO PAY ATTENTION TO:</strong></p>
+<p>If, sorry, <strong><em>when</em></strong> you setup your Test projects make sure to reference the correct assemblies needed for unit testing with MonoRail.  They are Castle.MonoRail.Framework, Castle.MonoRail.TestSupport, and my unit testing framework of choice is NUnit, so I reference nunit.Framework.  Also don&rsquo;t forget to reference the project you are unit testing.  In this case it is my JasonMeridth project.</p>
+<p>I&rsquo;m still trying out the abstract base test class that the Castle group has created, AbstractMRTestCase.</p>
+<p><strong><em>TIP:</em></strong> Currently I&rsquo;ve learned that if you do the following (This is only a serious rough draft, please no comments on test names or formatting):</p>
+<pre><code>   1: using System;
+   2: using Castle.MonoRail.TestSupport;
+   3: using JasonMeridth.Controllers;
+   4: using NUnit.Framework;
+   5:
+   6: namespace JasonMeridth.Tests.Controllers
+   7: {
+   8:     [TestFixture
+</code></pre>
+<h2 id=comments>Comments</h2>
+<p><strong><a href=#71 title="2007-08-29 10:14:44">Joey Beninghove</a>:</strong> Good stuff. This should definitely help more folks to start using MonoRail. I&rsquo;m currently on my 3rd &ldquo;professional&rdquo; MonoRail project and I can&rsquo;t ever imagine having to go back to &ldquo;classic&rdquo; Web Forms. Also, regarding unit testing, you&rsquo;ll definitely want to check out the BaseControllerTest class (assuming you&rsquo;re working from the trunk, which I <em>do</em> recommend). BaseControllerTest is a much better way to drive out your controllers via TDD and I&rsquo;ve used it successfully on my last 2 projects. Funny you mention RoR, because I&rsquo;m actually in the process of learning Ruby (and Rails) on the side and I&rsquo;ve just been blown away by it. I love the simplicity of MonoRail, but it truly is held down by being tied to the static languages of .NET. From what I&rsquo;ve seen so far, that beauty in simplicity in RoR is 10-fold of what we can get with MonoRail on .NET. Anyways, btw, thx for the tip/link to Open Source Web Design. Hadn&rsquo;t seen them before. Looks like a great place for us creatively-challenged folks to get the design ideas bumping around in our heads.</p>
+<p><strong><a href=#72 title="2007-08-29 14:54:27">Jason Meridth</a>:</strong> Awesome!! Thanks Joey, I will check that BaseControllerTest class. I&rsquo;m using the trunk. :) I will head down the RoR path soon, but baby steps for me. I look forward to any RoR posts from you in the future (hint, hint) :) OSWD is awesome. Glad I could get that out there.</p>
+<p><strong><a href=#73 title="2007-08-30 09:00:22">Sean Chambers</a>:</strong> I have to agree with Joey here. I have done about three projects with Windosor/MonoRail as well and I couldn&rsquo;t imagine going back to WebForms. Someone would have to drag me kicking and screaming =)</p>
+<p><strong><a href=#74 title="2007-08-30 21:46:21">Jason Meridth</a>:</strong> I&rsquo;m starting to feel the same way with just the little I&rsquo;ve done so far. I may be tapping into your knowledge later Sean. Thanks for the info.</p>
+<p><strong><a href=#75 title="2007-09-01 12:57:47">Joe</a>:</strong> Hey man, looks like a good post. You beat me to the punch, I&rsquo;ve been working on a Monorail introduction myself. As for unit testing, that is actually no longer the recommended way to test. Check out this page <a href=http://using.castleproject.org/display/MR/TDDingControllers target=_blank>http://using.castleproject.org/display/MR/TDDingControllers</a> that shows the new recommendations for TDD with MR. The old way (inheriting from AbstractMRTestCase) is meant to be used internally. Keep up the great posts! Joe</p>
+<p><strong><a href=#76 title="2007-09-05 22:37:33">Jason Meridth</a>:</strong> @Joe Thank you for that link. I appreciate the support. Post about MonoRail anyway bro, another perspective is always good.</p>
+</div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

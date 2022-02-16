@@ -1,0 +1,156 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Readline Error With RVM and Rails 3 on Ubuntu | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="rails,rvm">
+<meta name=description content="So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Readline Error With RVM and Rails 3 on Ubuntu">
+<meta property="og:description" content="So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:
+my_app/(master)$ rails console /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `require': no such file to load -- readline (LoadError) from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `require' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `require' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `' from script/rails:6:in `require' from script/rails:6:in `' I looked at the RVM site and saw how to install the readline package:">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2010-11-25T00:00:00-06:00">
+<meta property="article:modified_time" content="2010-11-25T00:00:00-06:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Readline Error With RVM and Rails 3 on Ubuntu">
+<meta name=twitter:description content="So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:
+my_app/(master)$ rails console /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `require': no such file to load -- readline (LoadError) from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `require' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `require' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `' from script/rails:6:in `require' from script/rails:6:in `' I looked at the RVM site and saw how to install the readline package:">
+<meta itemprop=name content="Readline Error With RVM and Rails 3 on Ubuntu">
+<meta itemprop=description content="So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:
+my_app/(master)$ rails console /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `require': no such file to load -- readline (LoadError) from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `require' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `require' from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `' from script/rails:6:in `require' from script/rails:6:in `' I looked at the RVM site and saw how to install the readline package:"><meta itemprop=datePublished content="2010-11-25T00:00:00-06:00">
+<meta itemprop=dateModified content="2010-11-25T00:00:00-06:00">
+<meta itemprop=wordCount content="247">
+<meta itemprop=keywords content="rails,rvm,">
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>25</span>
+<span class=rest>Nov 2010</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Readline Error With RVM and Rails 3 on Ubuntu</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;247&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p>So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>my_app/<span style=color:#f92672>(</span>master<span style=color:#f92672>)</span>$ rails console
+/home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in <span style=color:#e6db74>`</span>require<span style=color:#e6db74>&#39;: no such file to load -- readline (LoadError)
+</span><span style=color:#e6db74>from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `&#39;</span>
+from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in <span style=color:#e6db74>`</span>require<span style=color:#e6db74>&#39;
+</span><span style=color:#e6db74>from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `&#39;</span>
+from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in <span style=color:#e6db74>`</span>require<span style=color:#e6db74>&#39;
+</span><span style=color:#e6db74>from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `&#39;</span>
+from script/rails:6:in <span style=color:#e6db74>`</span>require<span style=color:#e6db74>&#39;
+</span><span style=color:#e6db74>from script/rails:6:in `&#39;</span>
+</code></pre></div><p>I looked at the RVM site and saw how to install the readline package:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>rvm package install readline
+rvm remove 1.9.2
+rvm install 1.9.2 --with-readline-dir<span style=color:#f92672>=</span>$rvm_path/usr
+</code></pre></div><p>I did this and it still didn’t work. The advice I received from googling was to compile the readline extension by hand and see if any dependencies were missing:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo apt-get install libncurses5-dev libreadline5-dev
+$ ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
+checking <span style=color:#66d9ef>for</span> tgetnum<span style=color:#f92672>()</span> in -lncurses... no
+checking <span style=color:#66d9ef>for</span> readline/readline.h... no
+checking <span style=color:#66d9ef>for</span> readline/history.h... no
+checking <span style=color:#66d9ef>for</span> readline<span style=color:#f92672>()</span> in -lreadline... no
+...
+</code></pre></div><p>This meant that I was missing the lncurses and libreadline libraries from apt-get.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ sudo apt-get install libncurses5-dev libreadline5-dev
+...they install...
+</code></pre></div><p>Now when I run extconf.rb, everything is there:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ ruby ~/.rvm/src/ruby-1.9.2-p0/readline/ext/extconf.rb
+checking <span style=color:#66d9ef>for</span> tgetnum<span style=color:#f92672>()</span> in -lncurses... yes
+checking <span style=color:#66d9ef>for</span> readline/readline.h.... yes
+checking <span style=color:#66d9ef>for</span> readline/history.h... yes
+checking <span style=color:#66d9ef>for</span> readline<span style=color:#f92672>()</span> in -lreadline... yes
+...
+</code></pre></div><p>A make file was generated, I run it, and then install:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ cd ~/.rvm/src/ruby-1.9.2-p0/readline/ext/
+$ make
+...
+$ sudo make install
+...
+</code></pre></div><p>Now the rails console works:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>my_app$ rails console
+Loading development environment <span style=color:#f92672>(</span>Rails 3.0.3<span style=color:#f92672>)</span>
+ruby-1.9.2-p0 &amp;gt;
+</code></pre></div>
+</div>
+<div class=tags>
+<div class=taxosfloating_left>
+<p>Tags</p>
+</div>
+<div class=termsfloating_right>
+<p>
+<a href=/tags/rails/>rails</a>
+<a href=/tags/rvm/>rvm</a>
+</p>
+</div>
+<div class=clearit></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

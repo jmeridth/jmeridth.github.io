@@ -1,0 +1,177 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Getting sound working on my Toshiba laptop with Ubuntu 7.04 (Feisty Fawn) | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="jason meridth,meridth,jm,software developer">
+<meta name=description content="The post here on the forums helped me solve my problems.
+How to do it:
+open a terminal and type:
+sudo vim /etc/modprobe.d/alsa-base
+Go to the bottom of the …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Getting sound working on my Toshiba laptop with Ubuntu 7.04 (Feisty Fawn)">
+<meta property="og:description" content="The post here on the forums helped me solve my problems.
+How to do it:
+open a terminal and type:
+sudo vim /etc/modprobe.d/alsa-base
+Go to the bottom of the file and paste in the following line:
+options snd-hda-intel model=auto
+or
+options snd-hda-intel model=3stack
+Exit anything that might be playing sound or has to do with sound.
+Back in the terminal, type
+sudo rmmod snd_hda_intel
+Then
+sudo modprobe snd_hda_intel
+Now test sound again.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/getting-sound-working-on-my-toshiba-laptop-with-ubuntu-7-04-feisty-fawn/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2007-05-12T23:53:00-05:00">
+<meta property="article:modified_time" content="2007-05-12T23:53:00-05:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Getting sound working on my Toshiba laptop with Ubuntu 7.04 (Feisty Fawn)">
+<meta name=twitter:description content="The post here on the forums helped me solve my problems.
+How to do it:
+open a terminal and type:
+sudo vim /etc/modprobe.d/alsa-base
+Go to the bottom of the file and paste in the following line:
+options snd-hda-intel model=auto
+or
+options snd-hda-intel model=3stack
+Exit anything that might be playing sound or has to do with sound.
+Back in the terminal, type
+sudo rmmod snd_hda_intel
+Then
+sudo modprobe snd_hda_intel
+Now test sound again.">
+<meta itemprop=name content="Getting sound working on my Toshiba laptop with Ubuntu 7.04 (Feisty Fawn)">
+<meta itemprop=description content="The post here on the forums helped me solve my problems.
+How to do it:
+open a terminal and type:
+sudo vim /etc/modprobe.d/alsa-base
+Go to the bottom of the file and paste in the following line:
+options snd-hda-intel model=auto
+or
+options snd-hda-intel model=3stack
+Exit anything that might be playing sound or has to do with sound.
+Back in the terminal, type
+sudo rmmod snd_hda_intel
+Then
+sudo modprobe snd_hda_intel
+Now test sound again."><meta itemprop=datePublished content="2007-05-12T23:53:00-05:00">
+<meta itemprop=dateModified content="2007-05-12T23:53:00-05:00">
+<meta itemprop=wordCount content="879">
+<meta itemprop=keywords content>
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>12</span>
+<span class=rest>May 2007</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Getting sound working on my Toshiba laptop with Ubuntu 7.04 (Feisty Fawn)</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;879&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p>The <a href="http://ubuntuforums.org/showthread.php?t=392350&highlight=toshiba" target=_blank>post</a> here on the forums helped me solve my problems.</p>
+<p>How to do it:</p>
+<p>open a terminal and type:</p>
+<p>sudo vim /etc/modprobe.d/alsa-base</p>
+<p>Go to the bottom of the file and paste in the following line:</p>
+<p>options snd-hda-intel model=auto</p>
+<p>or</p>
+<p>options snd-hda-intel model=3stack</p>
+<p>Exit anything that might be playing sound or has to do with sound.</p>
+<p>Back in the terminal, type</p>
+<p>sudo rmmod snd_hda_intel</p>
+<p>Then</p>
+<p>sudo modprobe snd_hda_intel</p>
+<p>Now test sound again.</p>
+<p>This post is more of a reminder for me when I decide to finally remove my Windows partition on my laptop and reinstall Feisty on the entire hard drive.  Don&rsquo;t want to have to hunt this down again.</p>
+<p>Note: To all you Linux haters who want to use this as an example of why you won&rsquo;t switch to Linux&mldr;.one word: Vista.  How many of your peripherals didn&rsquo;t work after you upgraded?  Nuff said.</p>
+<p>Don&rsquo;t get me wrong&mldr;Microsoft programming pays my bills, but Linux programming and usage keeps my bank account happy :)</p>
+<h2 id=comments>Comments</h2>
+<p><strong><a href=#25 title="2007-05-14 21:35:00">agilejoe</a>:</strong> How about explaining what the command line is doing for the newbie’s out there? That is one of the problems that Linux users have. They assume everyone that uses Linux is a command line junkie and know what every command is. Documentation is a wonderful thing when it comes to usability of an OS. My two cents.</p>
+<p><strong><a href=#26 title="2007-05-15 00:32:09">jmeridth</a>:</strong> Understandable: Comand explanation: Sudo = allows a permitted user to run a command as the superuser or another user specified in the sudoers file (located at /etc/sudoers on ubuntu) Rmmod – unloads the loadable module (snd_hda_intel) from the kernel (with restriction that they are not in use and not referred to by other modules) Modprobe – attempts to load the specified module into the kernel for usage. In this case my sound module (snd_hda_intel) What the changes above is tell the kernel specifically what type of sound card I have and unload, then reload the module. Hope this answers your questions.</p>
+<p><strong><a href=#27 title="2007-05-15 01:08:15">agilejoe</a>:</strong> I would rather right click on my sound card in device manager and click on update driver. Granted I have to pray it works but visually I remember what I am doing. LOL</p>
+<p><strong><a href=#28 title="2007-05-15 09:06:47">jmeridth</a>:</strong> Is this before or after your asked &ldquo;Allow or Deny&rdquo; 50 times? LOL</p>
+<p><strong><a href=#29 title="2007-05-15 15:25:32">agilejoe</a>:</strong> LOL&mldr;If I am running Vista I have to sacrifice a small child and give Ballmer my 401K. After I do that I notice the annoying affirmation messages seem to subside.</p>
+<p><strong><a href=#30 title="2007-05-20 05:55:34">Aristotel</a>:</strong> Hi, I am trying to get the sound to work on Ubuntu on my Toshiba laptop also. I am following your steps but it won&rsquo;t let me rmmod as it says snd_hda_intel is in use. How do I make it not be in use so that I can continue with the rest of the steps? Thanks</p>
+<p><strong><a href=#31 title="2007-05-20 06:43:30">Aristotel</a>:</strong> Never mind, I got over that part :) Unfortunately the sound still doesn&rsquo;t work :(</p>
+<p><strong><a href=#32 title="2007-05-20 08:59:15">Jason Meridth</a>:</strong> A friend of mine had to upgrade his <a href="http://www.csd.toshiba.com/cgi-bin/tais/su/su_sc_modItemList.jsp?moid=1484716&rpn=PSPA0U&ct=DL&BV_SessionID=@@@@1392189391.1179664651@@@@&BV_EngineID=cccfaddkmjgmmdicgfkceghdgngdgmn.0" target=_blank>BIOS</a> and install the new alsa drivers like mentioned in this post (<a href="http://ubuntuforums.org/showthread.php?t=349491" target=_blank>ubuntuforums.org/showthread.php</a>)</p>
+<p>Hope this helps.</p>
+<p><strong><a href=#33 title="2007-06-10 06:33:50">Fallen_Demon</a>:</strong> Thanks for this tip, I wasn&rsquo;t exactly sure how to reload ALSA without rebooting, but after I did the sound works fine</p>
+<p><strong><a href=#34 title="2007-06-11 21:29:59">Snowhog</a>:</strong> Hmm. It would be nice if those of you who say they got this resolved - got their Intel HDA drive to work - would post HOW they did it.</p>
+<p><strong><a href=#35 title="2007-06-12 08:16:06">Jason Meridth</a>:</strong> &ldquo;&mldr;would post HOW they got did it&rdquo; What is the post above? I&rsquo;ve been on the forums and this post doesn&rsquo;t work for everyone. I thought the command-line commands above in the post qualified as HOW.</p>
+<p><strong><a href=#36 title="2007-10-04 20:50:41">Dalus</a>:</strong> yea hello..i myself have a toshiba laptop&mldr;&mldr;..linux works fine , currently using ubuntu fiesty just a few pet peeves i have nothing reallly big , but , just conveniencies i have gotten sed to with windows. yes so onto the question&mldr;..my media buttons (play pause etc) wont work with the media players. any ideas? and also the scrolling on the corner of my touchpad is disabled or something, any help would be great thanks</p>
+<p><strong><a href=#37 title="2007-10-04 20:59:01">Jason Meridth</a>:</strong> @Dalus Linux works except for sound. It is specific to certain Intel sound cards in certain Toshiba laptops. Glad yours is not one of them. :) the media player buttons and touchpad stuff is specific to your laptop. It depends on which one you have: example ubuntuforum post: <a href="http://ubuntuforums.org/showthread.php?p=3470007" target=_blank>http://ubuntuforums.org/showthread.php?p=3470007</a> I&rsquo;ll email you this information also and work with you to solve the issue. I&rsquo;m just posting here to help anyone else. Thanks.</p>
+<p><strong><a href=#38 title="2007-10-10 03:56:27">Izac Y</a>:</strong> i&rsquo;m having the same problem that aristotle managed to solve above. i am able to get up to &ldquo;sudo rmmod snd_hda_intel,&rdquo; and then it says that the module is in use. what could be causing this? i&rsquo;m not using any programs that would require sound, and i&rsquo;ve even tried shutting down all programs in general in order to ensure success. no such luck. please help!</p>
+<p><strong><a href=#39 title="2007-10-10 10:34:27">Jason Meridth</a>:</strong> Izac, I will get a formal response to you ASAP.</p>
+<p><strong><a href=#40 title="2007-11-03 19:48:46">Dallas V</a>:</strong> I had trouble getting sound working with the Intel 82801G HDA controller (rev 01) on my laptop (Compaq Presario C500). I tried adding the lines to /etc/modprobe.d/alsa-base but that did not work. I finally got it working by passing &ldquo;pci=routeirq&rdquo; to the kernel. Here is a link to the fix. Hope it helps: <a href=http://islandlinux.org/howto/ubuntu-7-10-sound-issue-compaq-presario-c500-laptop-resolved target=_blank>http://islandlinux.org/howto/ubuntu-7-10-sound-issue-compaq-presario-c500-laptop-resolved</a></p>
+</div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

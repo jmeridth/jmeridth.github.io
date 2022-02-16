@@ -1,0 +1,127 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Personal CI history and Hudson CI as service on Ubuntu/Debian | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="jason meridth,meridth,jm,software developer">
+<meta name=description content="UPDATE: CruiseControl.rb does have Git support fromgit://github.com/benburkert/cruisecontrolrb.git. Thank you Jeremy for the heads' up (comment below)
+CI …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Personal CI history and Hudson CI as service on Ubuntu/Debian">
+<meta property="og:description" content="UPDATE: CruiseControl.rb does have Git support fromgit://github.com/benburkert/cruisecontrolrb.git. Thank you Jeremy for the heads' up (comment below)
+CI == Continous Integration
+I personally enjoy watching a team hear the Mortal Kombat voice yell &ldquo;Fatality&rdquo; when a build fails and see them all go to the web dashboard, be it CruiseControl.NET or TeamCity, and watch one of them say out loud what the problem was and claim the task of fixing it or checking with the developer who did the last check-in and give them a chance to fix it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2009-01-16T04:08:00-06:00">
+<meta property="article:modified_time" content="2009-01-16T04:08:00-06:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Personal CI history and Hudson CI as service on Ubuntu/Debian">
+<meta name=twitter:description content="UPDATE: CruiseControl.rb does have Git support fromgit://github.com/benburkert/cruisecontrolrb.git. Thank you Jeremy for the heads' up (comment below)
+CI == Continous Integration
+I personally enjoy watching a team hear the Mortal Kombat voice yell &ldquo;Fatality&rdquo; when a build fails and see them all go to the web dashboard, be it CruiseControl.NET or TeamCity, and watch one of them say out loud what the problem was and claim the task of fixing it or checking with the developer who did the last check-in and give them a chance to fix it.">
+<meta itemprop=name content="Personal CI history and Hudson CI as service on Ubuntu/Debian">
+<meta itemprop=description content="UPDATE: CruiseControl.rb does have Git support fromgit://github.com/benburkert/cruisecontrolrb.git. Thank you Jeremy for the heads' up (comment below)
+CI == Continous Integration
+I personally enjoy watching a team hear the Mortal Kombat voice yell &ldquo;Fatality&rdquo; when a build fails and see them all go to the web dashboard, be it CruiseControl.NET or TeamCity, and watch one of them say out loud what the problem was and claim the task of fixing it or checking with the developer who did the last check-in and give them a chance to fix it."><meta itemprop=datePublished content="2009-01-16T04:08:00-06:00">
+<meta itemprop=dateModified content="2009-01-16T04:08:00-06:00">
+<meta itemprop=wordCount content="729">
+<meta itemprop=keywords content>
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>16</span>
+<span class=rest>Jan 2009</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Personal CI history and Hudson CI as service on Ubuntu/Debian</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;729&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p><em>UPDATE: CruiseControl.rb does have Git support from<a href=//github.com/benburkert/cruisecontrolrb.git>git://github.com/benburkert/cruisecontrolrb.git.</a> Thank you Jeremy for the heads' up (comment below)</em></p>
+<p>CI == <a href=http://martinfowler.com/articles/continuousIntegration.html target=_blank>Continous Integration</a></p>
+<p>I personally enjoy watching a team hear the Mortal Kombat voice yell &ldquo;Fatality&rdquo; when a build fails and see them all go to the web dashboard, be it CruiseControl.NET or TeamCity, and watch one of them say out loud what the problem was and claim the task of fixing it or checking with the developer who did the last check-in and give them a chance to fix it.  Sorry, I&rsquo;m reminiscing about my development team at Wachovia (formerly World Savings).</p>
+<p>Today I&rsquo;m working on a Ruby on Rails team and learning some new stuff.  I was on a Python project before that for 3 months.  I didn&rsquo;t contribute much but I learned a great deal.  The two other developers I worked with wrote version one of an application that represented the same ideas that the application(s) a company my employer ending up purchasing had developed.  Their language of choice was Ruby on the Rails stack, hence my move to that forray.</p>
+<p>One of my colleagues, Joe Ocampo, drank the Ruby &ldquo;koolaid&rdquo; almost a year ago and has suggsting it for a while.  Joe is also the person who suggested <a href=https://hudson.dev.java.net/ target=_blank>Hudson</a> as a continous integration tool.  I&rsquo;ve been satisfied with CruiseControl.NET and TeamCity for the tasks I had at the time (mainly .NET applications).</p>
+<p>I moved from CruiseControl.NET to TeamCity almost a year ago because I got tired of all the XML config files.  Once installed, TeamCity management was all web UI and, yes being lazy, I enjoyed that user experience much better.  The new team made the decision to move to Git from Subversion.  Jetbrains has stated that a Git SCM plugin for TeamCity is coming in a future version (soon).  Unfortunately, I need a good CI tool now.  I looked at CruiseControl.rb (which looks very cool for Subversion project), but it did not have Git support yet either.</p>
+<p>After Steve Harmen also <a href=http://twitter.com/stevenharman/status/1116787833 target=_blank>mentioned Hudson again</a>, I decided to try it out.  Via my tweets (<a href=http://twitter.com/armmer/status/1118561229 target=_blank>1</a>, <a href=http://twitter.com/armmer/status/1118568558 target=_blank>2</a>, <a href=http://twitter.com/armmer/status/1118595541 target=_blank>3</a>, <a href=http://twitter.com/armmer/status/1118596087 target=_blank>4</a>), you can see that I had Hudson downloaded with plug-ins and running in under 30 minutes.  Wow.  I installed it on my existing Windows TeamCity CI box for convienance.  Learned lesson via gotcha (next).</p>
+<p>The gotcha I experienced after my initial &ldquo;new toy&rdquo; phase:
+1. Using the Git plugin on windows right now, doesn&rsquo;t work.  The 0.5 version adds a forward slash in from of the C:PATH_TO_CLONE_REPO path when trying to clone a repository.  The 0.6 development branch has the fix for this but I could not find a nightly build or downloadable area.  I then moved to a Linux slice on my slicehost account and installed Hudson.  Again, in under 30 minutes.</p>
+<p>On the new Linux slice I was able to add the Git, Rake, Ruby, Ruby Metrics plugins and have no issues.  Of course the catch with Linux there is no link on the Web UI to setup a service you could start and stop like &ldquo;sudo /etc/init.d/hudson stop|start&rdquo;.  <a href=http://weblogs.java.net/blog/johnsmart/archive/2008/10/installing_huds.html target=_blank>This link</a> does an excellent job on how to setup that service (ON UBUNTU/DEBIAN KEEP READING BEFORE CLICKING LINK).  On a debian/ubuntu install the only difference is that you&rsquo;ll want to remove the following lines from the /etc/init.d/hudson file:</p>
+<h1 id=source-function-library--etcrcdinitdfunctions--get-config--etcsysconfignetwork>Source function library . /etc/rc.d/init.d/functions # Get config. . /etc/sysconfig/network</h1>
+<p>I&rsquo;m still researching how to do this on a Debian/Ubuntu install (probably really easy, I just haven&rsquo;t looked). Once I find it, I&rsquo;ll update this post.</p>
+<p>Instead of running the last command:</p>
+<p>chkconfig &ndash;add hudson</p>
+<p>which is Redhat specific, you need to run the following to ensure that your script is put into the default runlevels and you know that the script will start on bootup:</p>
+<p>update-rc.d hudson default</p>
+<p>Hope this helps someone out there.  This is also for me in case I need to setup another Hudson service on a Linux box.</p>
+<p>Thanks to <a href=http://weblogs.java.net/blog/johnsmart/ target=_blank>John Ferguson</a> for doing most of the hard work and writing the blog entry for RedHat.</p>
+<p>I&rsquo;ll keep you guys posted on how I get my projects running and going.  So far I have one running great, but it&rsquo;s only running a few specs.</p>
+<h2 id=comments>Comments</h2>
+<p><strong><a href=#385 title="2009-01-16 07:51:09">Jeremy Lightsmith</a>:</strong> Cruise Control.rb DOES have support for git. It&rsquo;s not been released yet, but if you use the development head from github, it&rsquo;s quite stable and close to release.</p>
+</div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>raspberry pi on JM (Jason Meridth)</title><link>http://blog.jasonmeridth.com/tags/raspberry-pi/</link><description>Recent content in raspberry pi on blog.jasonmeridth.com</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>© Copyright notice | Vitae theme for Hugo</copyright><lastBuildDate>Mon, 24 Dec 2018 15:59:23 +0000</lastBuildDate><atom:link href="http://blog.jasonmeridth.com/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>Raspberry Pi Kubernetes Cluster - Part 3</title><link>http://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-3/</link><pubDate>Mon, 24 Dec 2018 15:59:23 +0000</pubDate><guid>http://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-3/</guid><description>
+Raspberry Pi Kubenetes Cluster - Part 1
+Raspberry Pi Kubenetes Cluster - Part 2
+Raspberry Pi Kubenetes Cluster - Part 3
+Raspberry Pi …</description></item><item><title>Raspberry Pi Kubernetes Cluster - Part 2</title><link>http://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-2/</link><pubDate>Wed, 02 May 2018 21:13:07 +0000</pubDate><guid>http://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-2/</guid><description>
+Edit: After fighting with Raspbian Lite, I decided to use HypriotOS as the base image on my Raspberry Pis. Here are the downloads. I used …</description></item><item><title>Raspberry Pi Kubernetes Cluster - Part 1</title><link>http://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1/</link><pubDate>Sat, 07 Apr 2018 09:01:00 -0500</pubDate><guid>http://blog.jasonmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1/</guid><description>
+Raspberry Pi Kubenetes Cluster - Part 1
+Raspberry Pi Kubenetes Cluster - Part 2
+Raspberry Pi Kubenetes Cluster - Part 3
+Raspberry Pi …</description></item></channel></rss>

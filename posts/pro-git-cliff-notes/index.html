@@ -1,0 +1,167 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Pro Git Cliff Notes | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="git,books">
+<meta name=description content="These are my notes from reading Scott Chacon’s Pro Git I highly suggest buying this book if you are serious about using the Git version control tool. pg 48 …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Pro Git Cliff Notes">
+<meta property="og:description" content="These are my notes from reading Scott Chacon’s Pro Git I highly suggest buying this book if you are serious about using the Git version control tool. pg 48 A branch in Git is simply a lightweight movable pointer pg 50 a special pointer called HEAD…is a pointer to the local branch you’re currently on pg 52 Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline).">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/pro-git-cliff-notes/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2010-04-05T04:17:00-05:00">
+<meta property="article:modified_time" content="2010-04-05T04:17:00-05:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Pro Git Cliff Notes">
+<meta name=twitter:description content="These are my notes from reading Scott Chacon’s Pro Git I highly suggest buying this book if you are serious about using the Git version control tool. pg 48 A branch in Git is simply a lightweight movable pointer pg 50 a special pointer called HEAD…is a pointer to the local branch you’re currently on pg 52 Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline).">
+<meta itemprop=name content="Pro Git Cliff Notes">
+<meta itemprop=description content="These are my notes from reading Scott Chacon’s Pro Git I highly suggest buying this book if you are serious about using the Git version control tool. pg 48 A branch in Git is simply a lightweight movable pointer pg 50 a special pointer called HEAD…is a pointer to the local branch you’re currently on pg 52 Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline)."><meta itemprop=datePublished content="2010-04-05T04:17:00-05:00">
+<meta itemprop=dateModified content="2010-04-05T04:17:00-05:00">
+<meta itemprop=wordCount content="924">
+<meta itemprop=keywords content="git,books,">
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>05</span>
+<span class=rest>Apr 2010</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Pro Git Cliff Notes</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;5&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;924&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p>These are my notes from reading Scott Chacon’s <a href=http://progit.org/book target=_blank>Pro Git</a> I highly suggest <a href=http://tinyurl.com/amazonprogit target=_blank>buying this book</a> if you are serious about using the Git version control tool. <a href=http://progit.org/book/ch3-1.html target=_blank>pg 48</a> A branch in Git is simply a lightweight movable pointer <a href=http://progit.org/book/ch3-1.html target=_blank>pg 50</a> a special pointer called HEAD…is a pointer to the local branch you’re currently on <a href=http://progit.org/book/ch3-1.html target=_blank>pg 52</a> Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline). <a href=http://progit.org/book/ch3-2.html target=_blank>pg 53</a> To create a branch and switch to it at the same time…git checkout command with the -b switch <a href=http://progit.org/book/ch3-3.html target=_blank>pg 61</a> To see the last commit on each branch, you can run git branch -v <a href=http://progit.org/book/ch3-5.html target=_blank>pg 69</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git checkout -b <span style=color:#f92672>[</span>branch<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>remotename<span style=color:#f92672>]</span>/<span style=color:#f92672>[</span>branch<span style=color:#f92672>]</span>
+</code></pre></div><p>is the same as</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git checkout --track <span style=color:#f92672>[</span>remotename<span style=color:#f92672>]</span>/<span style=color:#f92672>[</span>branch<span style=color:#f92672>]</span>
+</code></pre></div><p><a href=http://progit.org/book/ch4-1.html target=_blank>pg 81</a> Git protocol…listens on a dedicated port (9418)</p>
+<p><a href=http://progit.org/book/ch4-1.html target=_blank>pg 82</a> The Git protocol is the fastst transfer protocol available.</p>
+<p><a href=http://progit.org/book/ch5-2.html target=_blank>pg 111</a> The Git project provides a document that lays out a number of good tips for creating commits from which to submit patches—you can read it in the Git source code in the Documentation/SubmittingPatches file.</p>
+<p><a href=http://progit.org/book/ch5-2.html target=_blank>pg 116</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git log --no-merges origin/master ^issue54
+</code></pre></div><p><a href=http://progit.org/book/ch5-2.html target=_blank>pg 121</a> Compare origin changes with local changes before merging:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git log origin/featureA ^feature
+</code></pre></div><p><a href=http://progit.org/book/ch5-2.html target=_blank>pg 126</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git merge --no-commit --squash featureB
+</code></pre></div><p><a href=http://progit.org/book/ch5-3.html target=_blank>pg 130</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git apply
+</code></pre></div><p>It’s almost identical to running a patch -p1 command to apply the patch, although it’s more paranoid and accepts fewer fuzzy matches then patch. <a href=http://progit.org/book/ch5-3.html target=_blank>pg 131</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git apply --check
+</code></pre></div><p>check to see if a patch applies cleanly before you try actually applying it <a href=http://progit.org/book/ch5-3.html target=_blank>pg 134</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git log contrib --not master
+</code></pre></div><p>To find common ancestor of both branches</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git merge-base contrib master
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git diff <span style=color:#f92672>[</span>sha1 from previous command<span style=color:#f92672>]</span>
+</code></pre></div><p><a href=http://progit.org/book/ch5-3.html target=_blank>pg 135</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git diff master...topic
+</code></pre></div><p>shows you only the work your topic branch has introduced since its common ancestor with master. <a href=http://progit.org/book/ch5-3.html target=_blank>pg 140</a> tagging releases with signed keys <a href=http://progit.org/book/ch5-3.html target=_blank>pg 141</a> generating a build number with yocategory preparing a release as a tarball <a href=http://progit.org/book/ch5-3.html target=_blank>pg 142</a> Show work by author since a specific time</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git shortlog --no-merges master --not v1.0.1
+</code></pre></div><p><a href=http://progit.org/book/ch6-1.html target=_blank>pg 144</a> Git can figure out a short, unique abbreviation for your SHA-1 values</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git log --abbrev-commit --pretty<span style=color:#f92672>=</span>oneline
+</code></pre></div><p>wolves paragraph <a href=http://progit.org/book/ch6-1.html target=_blank>pg 145</a> Find out the SHA1 of a branch</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git rev-parse <span style=color:#f92672>[</span>branch<span style=color:#f92672>]</span>
+</code></pre></div><p><a href=http://progit.org/book/ch6-1.html target=_blank>pg 146</a> To see reflog information inline with your normal log information</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git log -g master
+</code></pre></div><p>Because reflog is a log, it will show you where the HEAD pointer was 2 months ago – if the repo is older than that</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git show HEAD@<span style=color:#f92672>{</span>2.months.ago<span style=color:#f92672>}</span>
+</code></pre></div><p><a href=http://progit.org/book/ch6-1.html target=_blank>pg 147</a> ^ is the first parent of the current commit ^2 is the second parent of the current commit (only works if the current commit is a merge commit, where first parent is the branch you on when you merged, second was the other) ~ is the first parent ~2 (or any number) is the grandparent(s) of the current commit only on the current branch or branch you were on when you merged <a href=http://progit.org/book/ch6-1.html target=_blank>pg 148</a> Shows you any commits in your current branch that aren’t in the master branch on your origin remote</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git log origin/master..HEAD
+</code></pre></div><p>Git substitutes HEAD if one side is missing (git log origin/master..) Just like above command and example shown on pg134</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git log refB --not refA
+</code></pre></div><p><a href=http://progit.org/book/ch6-3.html target=_blank>pg 155</a> Tells the stash command to try to reapply the staged changes</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git stash apply --index
+</code></pre></div><p><a href=http://progit.org/book/ch6-3.html target=_blank>pg 156</a> Create a branch from a stash, testchanges</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git stash branch testchanges
+</code></pre></div><p><a href=http://progit.org/book/ch6-4.html target=_blank>pg 157</a> …don’t amend your last commit if you’ve already pushed it (git commit —amend command)</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git rebase -i HEAD~3
+</code></pre></div><p>Don’t include any commit you’ve already pushed to a central server—doing so will confuse other developers by providing an alternate version of the same change <a href=http://progit.org/book/ch6-4.html target=_blank>pg 158</a> It’s important to note that these commits (interactive rebase) are listed in the opposite order (oldest first, newest last) than you normally see then using the log command (newest first). <a href=http://progit.org/book/ch6-4.html target=_blank>pg 160</a> …make sure no commit shows up in that list (git log -4 —pretty=format:“%h %s”) that you’ve already pushed to a shared repository <a href=http://progit.org/book/ch6-5.html target=_blank>pg 164</a> was wondering how to automate the good/bad declaration <a href=http://progit.org/book/ch6-6.html target=_blank>pg 168</a> git submodule update You have to do this every time you pull down a submodule change in the main projects. It’s strange, but it works. <a href=http://progit.org/book/ch6-7.html target=_blank>pg 172 (subtree merging)</a> You want to pull the Rack project into your master project as a subdirectory</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git read-tree --prefix<span style=color:#f92672>=</span>rack/ -u rack_branch
+</code></pre></div><p><a href=http://progit.org/book/ch7-1.html target=_blank>pg 175</a> global git config /etc/gitconfig user global git config ~/.gitconfig local repository git config .git/config <a href=http://progit.org/book/ch7-1.html target=_blank>pg 182</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git config --global core.autocrlf input
+</code></pre></div><p>This setup should leave you with CRLF endings in Windows checkouts but LF endings on Mac and Linux systems and in the repository <a href=http://progit.org/book/ch7-2.html target=_blank>pg 184</a> To tell Git to treat a specific file as binary data, add the following line to your .gitattributes file: *.extension -crlf -diff <a href=http://progit.org/book/ch7-2.html target=_blank>pg 185</a> …one of the most annoying problems known to humanity: version-controlling Word documents (LOL) <a href=http://progit.org/book/ch7-3.html target=_blank>pg 192</a> post-receive hook…This scripts can’t stop the push process, but the client doesn’t disconnect until it has completed; so, be careful when you try to do anything that may take a long time <a href=http://progit.org/book/ch7-4.html target=_blank>pg 194</a> Is practically the git log command…it prints out only the SHA-1 values and no other information</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git rev-list <span style=color:#f92672>[</span>SHA-1<span style=color:#f92672>]</span>..<span style=color:#f92672>[</span>SHA-1<span style=color:#f92672>]</span>
+</code></pre></div><p>Get the commit message from each of these commits to test git cat-file commit [SHA-1] Incantation:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git cat-file commit <span style=color:#f92672>[</span>SHA-1<span style=color:#f92672>]</span> | sed <span style=color:#e6db74>&#39;1,/^$/d&#39;</span>
+</code></pre></div><h2 id=comments>Comments</h2>
+<p><strong><a href=#471 title="2010-04-14 01:04:47">Ricardo</a>:</strong> Thanks for the compilation!</p>
+<p><strong><a href=#472 title="2010-04-14 01:25:01">Jason Meridth</a>:</strong> Ricardo: You&rsquo;re welcome</p>
+<p><strong><a href=#473 title="2010-05-10 03:55:33">Simon</a>:</strong> You&rsquo;ve convinced me to buy this book now.</p>
+<p><strong><a href=#474 title="2010-05-12 12:59:43">Jason Meridth</a>:</strong> @Simon: Awesome. It&rsquo;s worth it&rsquo;s weight in gold.</p>
+</div>
+<div class=tags>
+<div class=taxosfloating_left>
+<p>Tags</p>
+</div>
+<div class=termsfloating_right>
+<p>
+<a href=/tags/books/>books</a>
+<a href=/tags/git/>git</a>
+</p>
+</div>
+<div class=clearit></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

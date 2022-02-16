@@ -1,0 +1,180 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Orcas - First try | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="jason meridth,meridth,jm,software developer">
+<meta name=description content="After reading a post by Scott Guthrie on the new C# Orcas language features I decided to download Orcas and try them out. (excited)
+The new features I …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Orcas - First try">
+<meta property="og:description" content="After reading a post by Scott Guthrie on the new C# Orcas language features I decided to download Orcas and try them out. (excited)
+The new features I practiced with and love are:
+ Object initializers Example: Prior to Orcas:  Person person = new Person(); person.FirstName = &ldquo;Scott&rdquo;; person.LastName = &ldquo;Guthrie&rdquo;; person.Age = 32;
+Orcas:
+Person person = new Person { FirstName=&ldquo;Scott&rdquo;, LastName=&ldquo;Guthrie&rdquo;, Age=32 };
+I personally like this because I like to have a constructor initializer for all my objects.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/orcas-first-try/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2007-03-23T21:33:00-05:00">
+<meta property="article:modified_time" content="2007-03-23T21:33:00-05:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Orcas - First try">
+<meta name=twitter:description content="After reading a post by Scott Guthrie on the new C# Orcas language features I decided to download Orcas and try them out. (excited)
+The new features I practiced with and love are:
+ Object initializers Example: Prior to Orcas:  Person person = new Person(); person.FirstName = &ldquo;Scott&rdquo;; person.LastName = &ldquo;Guthrie&rdquo;; person.Age = 32;
+Orcas:
+Person person = new Person { FirstName=&ldquo;Scott&rdquo;, LastName=&ldquo;Guthrie&rdquo;, Age=32 };
+I personally like this because I like to have a constructor initializer for all my objects.">
+<meta itemprop=name content="Orcas - First try">
+<meta itemprop=description content="After reading a post by Scott Guthrie on the new C# Orcas language features I decided to download Orcas and try them out. (excited)
+The new features I practiced with and love are:
+ Object initializers Example: Prior to Orcas:  Person person = new Person(); person.FirstName = &ldquo;Scott&rdquo;; person.LastName = &ldquo;Guthrie&rdquo;; person.Age = 32;
+Orcas:
+Person person = new Person { FirstName=&ldquo;Scott&rdquo;, LastName=&ldquo;Guthrie&rdquo;, Age=32 };
+I personally like this because I like to have a constructor initializer for all my objects."><meta itemprop=datePublished content="2007-03-23T21:33:00-05:00">
+<meta itemprop=dateModified content="2007-03-23T21:33:00-05:00">
+<meta itemprop=wordCount content="270">
+<meta itemprop=keywords content>
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>23</span>
+<span class=rest>Mar 2007</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Orcas - First try</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;270&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p>After reading a post by Scott Guthrie on the <a href=http://weblogs.asp.net/scottgu/archive/2007/03/08/new-c-orcas-language-features-automatic-properties-object-initializers-and-collection-initializers.aspx target=_blank>new C# Orcas language features</a> I decided to download Orcas and try them out.  (<strong>excited</strong>)</p>
+<p>The new features I practiced with and love are:</p>
+<ol>
+<li>Object initializers
+Example:
+Prior to Orcas:</li>
+</ol>
+<p>Person person = new Person();
+person.FirstName = &ldquo;Scott&rdquo;;
+person.LastName = &ldquo;Guthrie&rdquo;;
+person.Age = 32;</p>
+<p>Orcas:</p>
+<p>Person person = new Person { FirstName=&ldquo;Scott&rdquo;, LastName=&ldquo;Guthrie&rdquo;, Age=32 };</p>
+<p>I personally like this because I like to have a constructor initializer for all my objects.  That is no longer necessary. =)</p>
+<ol start=2>
+<li>Collection initilizers
+Orcas:</li>
+</ol>
+<p>List people = new List();</p>
+<p>people.Add( new Person { FirstName = &ldquo;Scott&rdquo;, LastName = &ldquo;Guthrie&rdquo;, Age = 32 } );
+people.Add( new Person { FirstName = &ldquo;Bill&rdquo;, LastName = &ldquo;Gates&rdquo;, Age = 50 } );
+people.Add( new Person { FirstName = &ldquo;Susanne&rdquo;, LastName = &ldquo;Guthrie&rdquo;, Age = 32 } );</p>
+<p>The new feature I played with that I&rsquo;m still not to sure about is:</p>
+<ol start=3>
+<li>Automatic Properties
+Example:
+Prior to Orcas:</li>
+</ol>
+<p>public class Person {</p>
+<p>private string _firstName;
+private string_lastName;
+private int _age;</p>
+<p>public string FirstName {</p>
+<p>get {
+return _firstName;
+}
+set {
+_firstName = value;
+}
+}</p>
+<p>public string LastName {</p>
+<p>get {
+return _lastName;
+}
+set {
+_lastName = value;
+}
+}</p>
+<p>public int Age {</p>
+<p>get {
+return _age;
+}
+set {
+_age = value;
+}
+}
+}</p>
+<p>Orcas:</p>
+<p>public class Person {
+public string FirstName { get; set; }
+public string LastName { get; set; }
+public int Age { get; set; }
+}</p>
+<p>Guthrie&rsquo;s post has links to Bart deSmart&rsquo;s blog where he shows what happens under the covers for each of these features.</p>
+<p>More to come.</p>
+</div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Git post-merge hook to auto-fire rails migrations | JM (Jason Meridth)</title>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.92.2">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=keywords content="ruby">
+<meta name=description content="I saw Scott Bellware recently write on twitter:
+for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder
+Cory …">
+<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
+<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
+<link rel=stylesheet type=text/css media=screen href=/css/main.css>
+<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
+<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
+<script>localStorage.setItem('theme','dark')</script>
+<meta property="og:title" content="Git post-merge hook to auto-fire rails migrations">
+<meta property="og:description" content="I saw Scott Bellware recently write on twitter:
+for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder
+Cory Foy, Aaron Jensen, and [myself]({{ site.twitter.url }}) all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it first and it was the post-merge/post-rebase hooks. I researched the post-merge hook (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the following">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://blog.jasonmeridth.com/posts/git-post-merge-hook-to-auto-fire-rails-migrations/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2010-02-27T19:28:00-06:00">
+<meta property="article:modified_time" content="2010-02-27T19:28:00-06:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Git post-merge hook to auto-fire rails migrations">
+<meta name=twitter:description content="I saw Scott Bellware recently write on twitter:
+for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder
+Cory Foy, Aaron Jensen, and [myself]({{ site.twitter.url }}) all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it first and it was the post-merge/post-rebase hooks. I researched the post-merge hook (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the following">
+<meta itemprop=name content="Git post-merge hook to auto-fire rails migrations">
+<meta itemprop=description content="I saw Scott Bellware recently write on twitter:
+for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder
+Cory Foy, Aaron Jensen, and [myself]({{ site.twitter.url }}) all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it first and it was the post-merge/post-rebase hooks. I researched the post-merge hook (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the following"><meta itemprop=datePublished content="2010-02-27T19:28:00-06:00">
+<meta itemprop=dateModified content="2010-02-27T19:28:00-06:00">
+<meta itemprop=wordCount content="163">
+<meta itemprop=keywords content="ruby,">
+</head>
+<body>
+<header>
+<div id=avatar>
+<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
+</div>
+<div id=titletext>
+<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
+</div>
+<div id=title-description>
+<p id=subtitle>Learn, Converse, Share</p>
+<div id=social>
+<nav><ul>
+<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
+<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
+<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
+<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id=mainmenu>
+<nav>
+<ul>
+<li><a href=/>Home</a></li>
+<li><a href=/posts>All Posts</a></li>
+<li><a href=/about>About</a></li>
+<li><a href=/tags>Tags</a></li>
+<li><a href=/categories>Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class=post>
+<article>
+<div class=post-header>
+<div class=meta>
+<div class=date>
+<span class=day>27</span>
+<span class=rest>Feb 2010</span>
+</div>
+</div>
+<div class=matter>
+<h1 class=title>Git post-merge hook to auto-fire rails migrations</h1>
+<p class=post-meta>
+<span class=post-meta>
+&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+&nbsp;| &nbsp;
+<i class="fas fa-book"></i>&nbsp;163&nbsp;words
+</span>
+</p>
+</div>
+</div>
+<div class=markdown>
+<p>I saw <a href=http://ampgt.com target=_blank>Scott Bellware</a> recently write on twitter:</p>
+<p><a href=http://twitter.com/bellware/status/6952706099 target=_blank>for christmas, i really want a git hook to detect if an update has changes in the db/migrations folder</a></p>
+<p><a href=http://twitter.com/cory_foy target=_blank>Cory Foy</a>, <a href=http://twitter.com/aaronjensen target=_blank>Aaron Jensen</a>, and [myself]({{ site.twitter.url }}) all responded in turn. I think Cory and I were quickly searching for which git hook could be used for this idea. Cory found it <a href=http://twitter.com/cory_foy/status/6954512284 target=_blank>first</a> and it was the post-merge/post-rebase hooks. I researched the <a href=http://www.kernel.org/pub/software/scm/git/docs/githooks.html target=_blank>post-merge hook</a> (scroll down to post-merge) and noticed it has no params that we could work with to find out if the last commit had migrations (aka changes/additions to db/migrations folder in a rails project) I came up with the <a href=http://gist.github.com/262319 target=_blank>following</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/usr/bin/env ruby
+</span><span style=color:#75715e></span><span style=color:#e6db74>`</span>rake db:migrate <span style=color:#f92672>&amp;&amp;</span> rake db:test:prepare<span style=color:#e6db74>`</span> <span style=color:#66d9ef>if</span> <span style=color:#e6db74>`</span>git diff --name-only HEAD@<span style=color:#f92672>{</span>1<span style=color:#f92672>}</span> HEAD<span style=color:#e6db74>`</span>.index<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;db/migrations&#34;</span><span style=color:#f92672>)</span>
+</code></pre></div><p>This will grab the previous diff and look for “db/migrations” in the text. If it’s present, it would auto-run <code>rake db:migrate && rake db:test:migrate</code>. In other words, it will migrate the development database schema, then the test database schema.</p>
+</div>
+<div class=tags>
+<div class=taxosfloating_left>
+<p>Tags</p>
+</div>
+<div class=termsfloating_right>
+<p>
+<a href=/tags/ruby/>ruby</a>
+</p>
+</div>
+<div class=clearit></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</footer><script src=/js/dark-mode.js></script>
+</body>
+</html>
