@@ -8,13 +8,13 @@ tags:
 date: '2018-12-24 15:59:23'
 ---
 
-[Raspberry Pi Kubenetes Cluster - Part 1](/post/raspberry-pi-kubernetes-cluster-part-1)
+[Raspberry Pi Kubenetes Cluster - Part 1](/posts/raspberry-pi-kubernetes-cluster-part-1)
 
-[Raspberry Pi Kubenetes Cluster - Part 2](/post/raspberry-pi-kubernetes-cluster-part-2)
+[Raspberry Pi Kubenetes Cluster - Part 2](/posts/raspberry-pi-kubernetes-cluster-part-2)
 
-[Raspberry Pi Kubenetes Cluster - Part 3](/post/raspberry-pi-kubernetes-cluster-part-3)
+[Raspberry Pi Kubenetes Cluster - Part 3](/posts/raspberry-pi-kubernetes-cluster-part-3)
 
-[Raspberry Pi Kubenetes Cluster - Part 4](/post/raspberry-pi-kubernetes-cluster-part-4)
+[Raspberry Pi Kubenetes Cluster - Part 4](/posts/raspberry-pi-kubernetes-cluster-part-4)
 
 Well, it took me long enough to follow up on my previous posts.  There are reasons.
 

@@ -8,13 +8,13 @@ tags:
 layout: post
 ---
 
-[Raspberry Pi Kubenetes Cluster - Part 1](/post/raspberry-pi-kubernetes-cluster-part-1)
+[Raspberry Pi Kubenetes Cluster - Part 1](/posts/raspberry-pi-kubernetes-cluster-part-1)
 
-[Raspberry Pi Kubenetes Cluster - Part 2](/post/raspberry-pi-kubernetes-cluster-part-2)
+[Raspberry Pi Kubenetes Cluster - Part 2](/posts/raspberry-pi-kubernetes-cluster-part-2)
 
-[Raspberry Pi Kubenetes Cluster - Part 3](/post/raspberry-pi-kubernetes-cluster-part-3)
+[Raspberry Pi Kubenetes Cluster - Part 3](/posts/raspberry-pi-kubernetes-cluster-part-3)
 
-[Raspberry Pi Kubenetes Cluster - Part 4](/post/raspberry-pi-kubernetes-cluster-part-4)
+[Raspberry Pi Kubenetes Cluster - Part 4](/posts/raspberry-pi-kubernetes-cluster-part-4)
 
 Howdy again.
 

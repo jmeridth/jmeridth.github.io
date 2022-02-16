@@ -10,13 +10,13 @@ layout: post
 
 **Edit**:  After fighting with Raspbian Lite, I decided to use HypriotOS as the base image on my Raspberry Pis.  Here are the [downloads](https://blog.hypriot.com/downloads/).  I used version 1.9.0 that included Docker 18.04.0-ce, kernel 4.14.34.  You can still use Etcher below to put the image on the SD Cards
 
-[Raspberry Pi Kubenetes Cluster - Part 1](/post/raspberry-pi-kubernetes-cluster-part-1)
+[Raspberry Pi Kubenetes Cluster - Part 1](/posts/raspberry-pi-kubernetes-cluster-part-1)
 
-[Raspberry Pi Kubenetes Cluster - Part 2](/post/raspberry-pi-kubernetes-cluster-part-2)
+[Raspberry Pi Kubenetes Cluster - Part 2](/posts/raspberry-pi-kubernetes-cluster-part-2)
 
-[Raspberry Pi Kubenetes Cluster - Part 3](/post/raspberry-pi-kubernetes-cluster-part-3)
+[Raspberry Pi Kubenetes Cluster - Part 3](/posts/raspberry-pi-kubernetes-cluster-part-3)
 
-[Raspberry Pi Kubenetes Cluster - Part 4](/post/raspberry-pi-kubernetes-cluster-part-4)
+[Raspberry Pi Kubenetes Cluster - Part 4](/posts/raspberry-pi-kubernetes-cluster-part-4)
 
 Howdy again.
 

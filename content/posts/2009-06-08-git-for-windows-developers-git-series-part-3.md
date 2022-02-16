@@ -7,11 +7,11 @@ tags:
 - git
 ---
 
-[Git For Windows Developers - Git Series - Part 1](/post/git-for-windows-developers-git-series-part-1)
+[Git For Windows Developers - Git Series - Part 1](/posts/git-for-windows-developers-git-series-part-1)
 
-[Git For Windows Developers - Git Series - Part 2](/post/git-for-windows-developers-git-series-part-2)
+[Git For Windows Developers - Git Series - Part 2](/posts/git-for-windows-developers-git-series-part-2)
 
-[Git For Windows Developers - Git Series - Part 3](/post/git-for-windows-developers-git-series-part-3)
+[Git For Windows Developers - Git Series - Part 3](/posts/git-for-windows-developers-git-series-part-3)
 
 # **THE .GIT FOLDER**
 
