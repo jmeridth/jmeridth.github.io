@@ -1,9 +1,9 @@
 version: '3'
 services:
-  jekyll:
-    container_name: jekyll_blog
+  hugo:
+    container_name: blog
     build: .
     ports:
-      - 4000:4000
+      - 1313:1313
     volumes:
-      - .:/jekyll
+      - .:/src

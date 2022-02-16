@@ -1,11 +1,7 @@
-FROM jekyll/jekyll:4.0
+FROM klakegg/hugo:ext-ubuntu
 
-WORKDIR /tmp
-ADD Gemfile /tmp/
-RUN bundle install
+COPY . /src
+WORKDIR /src
 
-COPY . /jekyll
-WORKDIR /jekyll
-
-EXPOSE 4000
-ENTRYPOINT ["jekyll", "serve", "--incremental"]
+EXPOSE 1313
+CMD ["server"]

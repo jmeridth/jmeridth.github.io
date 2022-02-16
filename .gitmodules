@@ -1,0 +1,3 @@
+[submodule "themes/vitae"]
+	path = themes/vitae
+	url = git@github.com:dataCobra/hugo-vitae.git
