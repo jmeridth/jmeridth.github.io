@@ -1,114 +1,16 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<title>Hudson and Nginx | JM (Jason Meridth)</title>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.2">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=keywords content="jason meridth,meridth,jm,software developer">
-<meta name=description content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don’t need the Hudson security. Every …">
-<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
-<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
-<link rel=stylesheet type=text/css media=screen href=/css/main.css>
-<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
-<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Hudson and Nginx | JM (Jason Meridth)</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.96.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=description content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don’t need the Hudson security. Every …"><link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16><link rel=stylesheet type=text/css media=screen href=/css/normalize.css><link rel=stylesheet type=text/css media=screen href=/css/main.css><link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous><script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
 <script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
-<script>localStorage.setItem('theme','dark')</script>
-<meta property="og:title" content="Hudson and Nginx">
-<meta property="og:description" content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.
-I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to http://mydomain:8080 and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://blog.jasonmeridth.com/posts/hudson-and-nginx/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2009-02-12T04:46:00-06:00">
-<meta property="article:modified_time" content="2009-02-12T04:46:00-06:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Hudson and Nginx">
-<meta name=twitter:description content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.
-I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to http://mydomain:8080 and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication.">
-<meta itemprop=name content="Hudson and Nginx">
-<meta itemprop=description content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.
-I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to http://mydomain:8080 and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication."><meta itemprop=datePublished content="2009-02-12T04:46:00-06:00">
-<meta itemprop=dateModified content="2009-02-12T04:46:00-06:00">
-<meta itemprop=wordCount content="405">
-<meta itemprop=keywords content>
-</head>
-<body>
-<header>
-<div id=avatar>
-<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
-</div>
-<div id=titletext>
-<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
-</div>
-<div id=title-description>
-<p id=subtitle>Learn, Converse, Share</p>
-<div id=social>
-<nav><ul>
-<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
-<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
-<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
-<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
-<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
-</ul></nav>
-</div>
-</div>
-<div id=mainmenu>
-<nav>
-<ul>
-<li><a href=/>Home</a></li>
-<li><a href=/posts>All Posts</a></li>
-<li><a href=/about>About</a></li>
-<li><a href=/tags>Tags</a></li>
-<li><a href=/categories>Categories</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<main>
-<div class=post>
-<article>
-<div class=post-header>
-<div class=meta>
-<div class=date>
-<span class=day>12</span>
-<span class=rest>Feb 2009</span>
-</div>
-</div>
-<div class=matter>
-<h1 class=title>Hudson and Nginx</h1>
-<p class=post-meta>
-<span class=post-meta>
-&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><script>localStorage.setItem("theme","dark")</script><meta property="og:title" content="Hudson and Nginx"><meta property="og:description" content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.
+I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to http://mydomain:8080 and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication."><meta property="og:type" content="article"><meta property="og:url" content="http://blog.jasonmeridth.com/posts/hudson-and-nginx/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2009-02-12T04:46:00-06:00"><meta property="article:modified_time" content="2009-02-12T04:46:00-06:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Hudson and Nginx"><meta name=twitter:description content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.
+I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to http://mydomain:8080 and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication."><meta itemprop=name content="Hudson and Nginx"><meta itemprop=description content="UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.
+I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to http://mydomain:8080 and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication."><meta itemprop=datePublished content="2009-02-12T04:46:00-06:00"><meta itemprop=dateModified content="2009-02-12T04:46:00-06:00"><meta itemprop=wordCount content="405"><meta itemprop=keywords content></head><body><header><div id=avatar><a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a></div><div id=titletext><h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2></div><div id=title-description><p id=subtitle>Learn, Converse, Share</p><div id=social><nav><ul><li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li><li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li><li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li><li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li><li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li></ul></nav></div></div><div id=mainmenu><nav><ul><li><a href=/>Home</a></li><li><a href=/posts>All Posts</a></li><li><a href=/about>About</a></li><li><a href=/tags>Tags</a></li><li><a href=/categories>Categories</a></li></ul></nav></div></header><main><div class=post><article><div class=post-header><div class=meta><div class=date><span class=day>12</span>
+<span class=rest>Feb 2009</span></div></div><div class=matter><h1 class=title>Hudson and Nginx</h1><p class=post-meta><span class=post-meta>&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
 &nbsp;| &nbsp;
-<i class="fas fa-book"></i>&nbsp;405&nbsp;words
-</span>
-</p>
-</div>
-</div>
-<div class=markdown>
-<p>UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.</p>
-<p>I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to <a href=http://mydomain:8080 target=_blank>http://mydomain:8080</a> and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication. I even went as far as removing Nginx and installing Apache. According to the Hudson site, we can use <a href=http://hudson.gotdns.com/wiki/display/HUDSON/Apache+frontend+for+security target=_blank>Apache to do this</a>. Either I&rsquo;m not smart enough or web pages like this reminded me why I hate the Java Enterprise stack as much as I do. Talk about installation obfuscation. My problem exists because the Tomcat instance running the hudson war file uses <a href=http://tomcat.apache.org/tomcat-5.5-doc/config/ajp.html#Standard%20Implementation target=_blank>Apache JServe Protocol</a> (AJP) and will allow direct access on whatever port you used (default 8080). This is even if you proxy_pass to 8080 from 443 (SSL) or 80 (Web). Through testing and research it seems that <a href=http://www.ruby-forum.com/topic/157269#693042 target=_blank>Nginx does not have a solution for this</a>. I can&rsquo;t allow access to my Hudson instance from external users. I have a self-signed certificate and a .htpasswd file to protect the instance, but is all useless is someone could just type in <a href=http://mydomain.com:8080 target=_blank>http://mydomain.com:8080</a>. I want that redirected to <a href=https://mydomain.com target=_blank>https://mydomain.com</a> which will then proxy internally to <a href=http://127.0.0.1:8080 target=_blank>http://127.0.0.1:8080</a>. I didn&rsquo;t want to fight this, so I just used iptables (linux firewall) to block external requests on port 8080 but allow internal requests to 8080. Here is the entry in my iptables file:</p>
-<pre><code># Deny HTTP requests to port 8080 externally but allow internally
+<i class="fas fa-book"></i>&nbsp;405&nbsp;words</span></p></div></div><div class=markdown><p>UPDATE: I left HTTP Auth in place via Nginx and removed security from my Hudson instance. This works for me because I don&rsquo;t need the Hudson security. Every developer should be able to manage the CI server. I&rsquo;m just trying to prevent external access to the dashboard.</p><p>I&rsquo;ve been having fun trying to figure out how to block a user&rsquo;s ability of going to <a href=http://mydomain:8080 target=_blank>http://mydomain:8080</a> and bypassing my 80 to 443 redirect and htpasswd HTTP basic authentication. I even went as far as removing Nginx and installing Apache. According to the Hudson site, we can use <a href=http://hudson.gotdns.com/wiki/display/HUDSON/Apache+frontend+for+security target=_blank>Apache to do this</a>. Either I&rsquo;m not smart enough or web pages like this reminded me why I hate the Java Enterprise stack as much as I do. Talk about installation obfuscation. My problem exists because the Tomcat instance running the hudson war file uses <a href=http://tomcat.apache.org/tomcat-5.5-doc/config/ajp.html#Standard%20Implementation target=_blank>Apache JServe Protocol</a> (AJP) and will allow direct access on whatever port you used (default 8080). This is even if you proxy_pass to 8080 from 443 (SSL) or 80 (Web). Through testing and research it seems that <a href=http://www.ruby-forum.com/topic/157269#693042 target=_blank>Nginx does not have a solution for this</a>. I can&rsquo;t allow access to my Hudson instance from external users. I have a self-signed certificate and a .htpasswd file to protect the instance, but is all useless is someone could just type in <a href=http://mydomain.com:8080 target=_blank>http://mydomain.com:8080</a>. I want that redirected to <a href=https://mydomain.com target=_blank>https://mydomain.com</a> which will then proxy internally to <a href=http://127.0.0.1:8080 target=_blank>http://127.0.0.1:8080</a>. I didn&rsquo;t want to fight this, so I just used iptables (linux firewall) to block external requests on port 8080 but allow internal requests to 8080. Here is the entry in my iptables file:</p><pre><code># Deny HTTP requests to port 8080 externally but allow internally
 -A INPUT -i eth0 -p tcp -m tcp --dport 8080 -j REJECT
-</code></pre>
-<p>I only allow access to my server via 80 (web), 443 (ssl) and my ssh port (I&rsquo;m not telling). This works for now, but I&rsquo;m experiencing another weird issue. I follow the Nginx way of using HTTP basic authentication:</p>
-<pre><code>location  /  {
+</code></pre><p>I only allow access to my server via 80 (web), 443 (ssl) and my ssh port (I&rsquo;m not telling). This works for now, but I&rsquo;m experiencing another weird issue. I follow the Nginx way of using HTTP basic authentication:</p><pre><code>location  /  {
  auth_basic            &quot;Restricted&quot;;
  auth_basic_user_file  conf/htpasswd;
 }
-</code></pre>
-<p>If the user listed in the <a href=http://httpd.apache.org/docs/2.0/programs/htpasswd.html target=_blank>htpasswd</a> file is also a registered user on the Hudson instance (through the Hudson UI) then the HTTP basic authentication will work. If they are in the htpasswd file but not registered with Hudson, it fails with a HTTP 401 (Unauthorized). Why would the HTTP basic authentication be &ldquo;tunneled&rdquo; through to Hudson? I&rsquo;ll update this post once I figure it out.</p>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer>
-© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</footer><script src=/js/dark-mode.js></script>
-</body>
-</html>
+</code></pre><p>If the user listed in the <a href=http://httpd.apache.org/docs/2.0/programs/htpasswd.html target=_blank>htpasswd</a> file is also a registered user on the Hudson instance (through the Hudson UI) then the HTTP basic authentication will work. If they are in the htpasswd file but not registered with Hudson, it fails with a HTTP 401 (Unauthorized). Why would the HTTP basic authentication be &ldquo;tunneled&rdquo; through to Hudson? I&rsquo;ll update this post once I figure it out.</p></div></div></article></div></main><footer>© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae target=_blank>Vitae</a> theme for <a href=https://gohugo.io target=_blank>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-38456568-3","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></footer><script src=/js/dark-mode.js></script></body></html>

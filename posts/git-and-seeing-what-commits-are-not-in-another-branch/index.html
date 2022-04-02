@@ -1,129 +1,21 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<title>Git and Seeting What Commits Are Not In Another Branch | JM (Jason Meridth)</title>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.2">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=keywords content="git">
-<meta name=description content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git …">
-<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
-<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
-<link rel=stylesheet type=text/css media=screen href=/css/main.css>
-<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
-<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Git and Seeting What Commits Are Not In Another Branch | JM (Jason Meridth)</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.96.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content="git"><meta name=description content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git …"><link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16><link rel=stylesheet type=text/css media=screen href=/css/normalize.css><link rel=stylesheet type=text/css media=screen href=/css/main.css><link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous><script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
 <script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
-<script>localStorage.setItem('theme','dark')</script>
-<meta property="og:title" content="Git and Seeting What Commits Are Not In Another Branch">
-<meta property="og:description" content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diffbut I've started telling them to look atgit cherry` (NOT git-cherry-pick).
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><script>localStorage.setItem("theme","dark")</script><meta property="og:title" content="Git and Seeting What Commits Are Not In Another Branch"><meta property="og:description" content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diffbut I've started telling them to look atgit cherry` (NOT git-cherry-pick).
 From the new Git documentation, git-cherry finds commits not merged upstream.
-I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://blog.jasonmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2012-05-22T00:00:00-05:00">
-<meta property="article:modified_time" content="2012-05-22T00:00:00-05:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Git and Seeting What Commits Are Not In Another Branch">
-<meta name=twitter:description content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diffbut I've started telling them to look atgit cherry` (NOT git-cherry-pick).
+I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:"><meta property="og:type" content="article"><meta property="og:url" content="http://blog.jasonmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2012-05-22T00:00:00-05:00"><meta property="article:modified_time" content="2012-05-22T00:00:00-05:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Git and Seeting What Commits Are Not In Another Branch"><meta name=twitter:description content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diffbut I've started telling them to look atgit cherry` (NOT git-cherry-pick).
 From the new Git documentation, git-cherry finds commits not merged upstream.
-I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:">
-<meta itemprop=name content="Git and Seeting What Commits Are Not In Another Branch">
-<meta itemprop=description content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diffbut I've started telling them to look atgit cherry` (NOT git-cherry-pick).
+I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:"><meta itemprop=name content="Git and Seeting What Commits Are Not In Another Branch"><meta itemprop=description content="A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diffbut I've started telling them to look atgit cherry` (NOT git-cherry-pick).
 From the new Git documentation, git-cherry finds commits not merged upstream.
-I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:"><meta itemprop=datePublished content="2012-05-22T00:00:00-05:00">
-<meta itemprop=dateModified content="2012-05-22T00:00:00-05:00">
-<meta itemprop=wordCount content="160">
-<meta itemprop=keywords content="git,">
-</head>
-<body>
-<header>
-<div id=avatar>
-<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
-</div>
-<div id=titletext>
-<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
-</div>
-<div id=title-description>
-<p id=subtitle>Learn, Converse, Share</p>
-<div id=social>
-<nav><ul>
-<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
-<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
-<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
-<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
-<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
-</ul></nav>
-</div>
-</div>
-<div id=mainmenu>
-<nav>
-<ul>
-<li><a href=/>Home</a></li>
-<li><a href=/posts>All Posts</a></li>
-<li><a href=/about>About</a></li>
-<li><a href=/tags>Tags</a></li>
-<li><a href=/categories>Categories</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<main>
-<div class=post>
-<article>
-<div class=post-header>
-<div class=meta>
-<div class=date>
-<span class=day>22</span>
-<span class=rest>May 2012</span>
-</div>
-</div>
-<div class=matter>
-<h1 class=title>Git and Seeting What Commits Are Not In Another Branch</h1>
-<p class=post-meta>
-<span class=post-meta>
-&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
+I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:"><meta itemprop=datePublished content="2012-05-22T00:00:00-05:00"><meta itemprop=dateModified content="2012-05-22T00:00:00-05:00"><meta itemprop=wordCount content="160"><meta itemprop=keywords content="git,"></head><body><header><div id=avatar><a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a></div><div id=titletext><h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2></div><div id=title-description><p id=subtitle>Learn, Converse, Share</p><div id=social><nav><ul><li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li><li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li><li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li><li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li><li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li></ul></nav></div></div><div id=mainmenu><nav><ul><li><a href=/>Home</a></li><li><a href=/posts>All Posts</a></li><li><a href=/about>About</a></li><li><a href=/tags>Tags</a></li><li><a href=/categories>Categories</a></li></ul></nav></div></header><main><div class=post><article><div class=post-header><div class=meta><div class=date><span class=day>22</span>
+<span class=rest>May 2012</span></div></div><div class=matter><h1 class=title>Git and Seeting What Commits Are Not In Another Branch</h1><p class=post-meta><span class=post-meta>&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
 &nbsp;| &nbsp;
-<i class="fas fa-book"></i>&nbsp;160&nbsp;words
-</span>
-</p>
-</div>
-</div>
-<div class=markdown>
-<p>A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff<code>but I've started telling them to look at</code>git cherry` (NOT git-cherry-pick).</p>
-<p>From <a href=http://git-scm.com/docs/git-cherry target=_blank>the new Git documentation</a>, git-cherry finds commits not merged upstream.</p>
-<p>I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git cherry -v master feature-branch-name
-</code></pre></div><p>The -v option prints out the commit SHAs and messages. If I am already on the feature-branch-name branch, I can type the following to get the same effect:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git cherry -v master
-</code></pre></div><p>The results typically looks something like:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>%2B a4d0f79fccbbc12a53e8f0e5c2a4ef960ad69ba2 commit <span style=color:#ae81ff>1</span> message
-%2B 7e71afd1faf36f17a0ff506e63cd2ca51496dad3 commit <span style=color:#ae81ff>2</span> message
-%2B 5e815ece05d8813354e60ca1affb8cdb8c5d78fc commit <span style=color:#ae81ff>3</span> message
-%2B 956f4cec5684544066a0d261ff8ac80aff7a57ea commit <span style=color:#ae81ff>4</span> message
-%2B 6c6cdb4342ed935f8fbd38f48f51dec469dd1823 commit <span style=color:#ae81ff>5</span> message
-%2B c3481fd0d6279f5bd45c455b915e0b4b1c0d8909 commit <span style=color:#ae81ff>6</span> message
-</code></pre></div><p>That means those commits are on feature-branch-name branch but not in master</p>
-</div>
-<div class=tags>
-<div class=taxosfloating_left>
-<p>Tags</p>
-</div>
-<div class=termsfloating_right>
-<p>
-<a href=/tags/git/>git</a>
-</p>
-</div>
-<div class=clearit></div>
-</div>
-</article>
-</div>
-</main>
-<footer>
-© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</footer><script src=/js/dark-mode.js></script>
-</body>
-</html>
+<i class="fas fa-book"></i>&nbsp;160&nbsp;words</span></p></div></div><div class=markdown><p>A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff<code>but I've started telling them to look at</code>git cherry` (NOT git-cherry-pick).</p><p>From <a href=http://git-scm.com/docs/git-cherry target=_blank>the new Git documentation</a>, git-cherry finds commits not merged upstream.</p><p>I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git cherry -v master feature-branch-name
+</span></span></code></pre></div><p>The -v option prints out the commit SHAs and messages. If I am already on the feature-branch-name branch, I can type the following to get the same effect:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git cherry -v master
+</span></span></code></pre></div><p>The results typically looks something like:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>%2B a4d0f79fccbbc12a53e8f0e5c2a4ef960ad69ba2 commit <span style=color:#ae81ff>1</span> message
+</span></span><span style=display:flex><span>%2B 7e71afd1faf36f17a0ff506e63cd2ca51496dad3 commit <span style=color:#ae81ff>2</span> message
+</span></span><span style=display:flex><span>%2B 5e815ece05d8813354e60ca1affb8cdb8c5d78fc commit <span style=color:#ae81ff>3</span> message
+</span></span><span style=display:flex><span>%2B 956f4cec5684544066a0d261ff8ac80aff7a57ea commit <span style=color:#ae81ff>4</span> message
+</span></span><span style=display:flex><span>%2B 6c6cdb4342ed935f8fbd38f48f51dec469dd1823 commit <span style=color:#ae81ff>5</span> message
+</span></span><span style=display:flex><span>%2B c3481fd0d6279f5bd45c455b915e0b4b1c0d8909 commit <span style=color:#ae81ff>6</span> message
+</span></span></code></pre></div><p>That means those commits are on feature-branch-name branch but not in master</p></div><div class=tags><div class=taxosfloating_left><p>Tags</p></div><div class=termsfloating_right><p><a href=/tags/git/>git</a></p></div><div class=clearit></div></div></article></div></main><footer>© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae target=_blank>Vitae</a> theme for <a href=https://gohugo.io target=_blank>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-38456568-3","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></footer><script src=/js/dark-mode.js></script></body></html>

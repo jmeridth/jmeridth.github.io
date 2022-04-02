@@ -1,141 +1,20 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<title>Selenium-client and fun | JM (Jason Meridth)</title>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.2">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=keywords content="jason meridth,meridth,jm,software developer">
-<meta name=description content="So I’ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: …">
-<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
-<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
-<link rel=stylesheet type=text/css media=screen href=/css/main.css>
-<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
-<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Selenium-client and fun | JM (Jason Meridth)</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.96.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=description content="So I’ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: …"><link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16><link rel=stylesheet type=text/css media=screen href=/css/normalize.css><link rel=stylesheet type=text/css media=screen href=/css/main.css><link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous><script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
 <script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
-<script>localStorage.setItem('theme','dark')</script>
-<meta property="og:title" content="Selenium-client and fun">
-<meta property="og:description" content="So I&rsquo;ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><script>localStorage.setItem("theme","dark")</script><meta property="og:title" content="Selenium-client and fun"><meta property="og:description" content="So I&rsquo;ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
 1.
-sudo gem install selenium-client  2. download the selenium remote control (version 1.0 beta at the time of this entry).">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://blog.jasonmeridth.com/posts/selenium-client-and-fun/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2009-02-12T04:35:00-06:00">
-<meta property="article:modified_time" content="2009-02-12T04:35:00-06:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Selenium-client and fun">
-<meta name=twitter:description content="So I&rsquo;ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
+sudo gem install selenium-client  2. download the selenium remote control (version 1.0 beta at the time of this entry)."><meta property="og:type" content="article"><meta property="og:url" content="http://blog.jasonmeridth.com/posts/selenium-client-and-fun/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2009-02-12T04:35:00-06:00"><meta property="article:modified_time" content="2009-02-12T04:35:00-06:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Selenium-client and fun"><meta name=twitter:description content="So I&rsquo;ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
 1.
-sudo gem install selenium-client  2. download the selenium remote control (version 1.0 beta at the time of this entry).">
-<meta itemprop=name content="Selenium-client and fun">
-<meta itemprop=description content="So I&rsquo;ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
+sudo gem install selenium-client  2. download the selenium remote control (version 1.0 beta at the time of this entry)."><meta itemprop=name content="Selenium-client and fun"><meta itemprop=description content="So I&rsquo;ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
 1.
-sudo gem install selenium-client  2. download the selenium remote control (version 1.0 beta at the time of this entry)."><meta itemprop=datePublished content="2009-02-12T04:35:00-06:00">
-<meta itemprop=dateModified content="2009-02-12T04:35:00-06:00">
-<meta itemprop=wordCount content="510">
-<meta itemprop=keywords content>
-</head>
-<body>
-<header>
-<div id=avatar>
-<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
-</div>
-<div id=titletext>
-<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
-</div>
-<div id=title-description>
-<p id=subtitle>Learn, Converse, Share</p>
-<div id=social>
-<nav><ul>
-<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
-<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
-<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
-<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
-<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
-</ul></nav>
-</div>
-</div>
-<div id=mainmenu>
-<nav>
-<ul>
-<li><a href=/>Home</a></li>
-<li><a href=/posts>All Posts</a></li>
-<li><a href=/about>About</a></li>
-<li><a href=/tags>Tags</a></li>
-<li><a href=/categories>Categories</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<main>
-<div class=post>
-<article>
-<div class=post-header>
-<div class=meta>
-<div class=date>
-<span class=day>12</span>
-<span class=rest>Feb 2009</span>
-</div>
-</div>
-<div class=matter>
-<h1 class=title>Selenium-client and fun</h1>
-<p class=post-meta>
-<span class=post-meta>
-&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+sudo gem install selenium-client  2. download the selenium remote control (version 1.0 beta at the time of this entry)."><meta itemprop=datePublished content="2009-02-12T04:35:00-06:00"><meta itemprop=dateModified content="2009-02-12T04:35:00-06:00"><meta itemprop=wordCount content="510"><meta itemprop=keywords content></head><body><header><div id=avatar><a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a></div><div id=titletext><h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2></div><div id=title-description><p id=subtitle>Learn, Converse, Share</p><div id=social><nav><ul><li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li><li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li><li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li><li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li><li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li></ul></nav></div></div><div id=mainmenu><nav><ul><li><a href=/>Home</a></li><li><a href=/posts>All Posts</a></li><li><a href=/about>About</a></li><li><a href=/tags>Tags</a></li><li><a href=/categories>Categories</a></li></ul></nav></div></header><main><div class=post><article><div class=post-header><div class=meta><div class=date><span class=day>12</span>
+<span class=rest>Feb 2009</span></div></div><div class=matter><h1 class=title>Selenium-client and fun</h1><p class=post-meta><span class=post-meta>&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
 &nbsp;| &nbsp;
-<i class="fas fa-book"></i>&nbsp;510&nbsp;words
-</span>
-</p>
-</div>
-</div>
-<div class=markdown>
-<p>So I&rsquo;ve had the pleasure of working with <a href=http://github.com/ph7/selenium-client/tree/master target=_blank>selenium-client</a>, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.</p>
-<p>1.</p>
-<pre><code>sudo gem install selenium-client
-</code></pre>
-<p>2. download the <a href=http://release.seleniumhq.org/selenium-remote-control/1.0-beta-2/selenium-remote-control-1.0-beta-2-dist.zip target=_blank>selenium remote control</a> (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it.</p>
-<p>3. update your .bashrc (usually on Ubuntu) or .bash_profile (what I have on my Mac) with a alias to start the selenium server (for me I have unzipped the download into a ~/code/seleniumrc folder:</p>
-<pre><code># commands
+<i class="fas fa-book"></i>&nbsp;510&nbsp;words</span></p></div></div><div class=markdown><p>So I&rsquo;ve had the pleasure of working with <a href=http://github.com/ph7/selenium-client/tree/master target=_blank>selenium-client</a>, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.</p><p>1.</p><pre><code>sudo gem install selenium-client
+</code></pre><p>2. download the <a href=http://release.seleniumhq.org/selenium-remote-control/1.0-beta-2/selenium-remote-control-1.0-beta-2-dist.zip target=_blank>selenium remote control</a> (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it.</p><p>3. update your .bashrc (usually on Ubuntu) or .bash_profile (what I have on my Mac) with a alias to start the selenium server (for me I have unzipped the download into a ~/code/seleniumrc folder:</p><pre><code># commands
 alias selsrvr=&quot;java -jar ~/code/seleniumrc/selenium-server-1.0-beta-2/selenium-server.jar&quot;
-</code></pre>
-<p>after you add that, re-source your bash file. For me on my Mac</p>
-<pre><code>. ~/.bash_profile
-</code></pre>
-<p>For me on my Ubuntu box:</p>
-<pre><code>. ~/.bashrc
-</code></pre>
-<p>4. Create a test file, test.rb somewhere (for me ~/code/seleniumrc/test.rb):</p>
-<p>5. Write a test that:</p>
-<ol>
-<li>
-<p>Logs in</p>
-</li>
-<li>
-<p>Creates a slice</p>
-</li>
-<li>
-<p>Captures the new root password</p>
-</li>
-<li>
-<p>Captures the new IP Address</p>
-</li>
-<li>
-<p>SSHs onto the new slice</p>
-</li>
-<li>
-<p>Adds a file, and lists out the content of ~ (aka /home/root)</p>
-</li>
-<li>
-<p>Deletes the slice</p>
-</li>
-<li>
-<p>Logs out</p>
-</li>
-<li></li>
-</ol>
-<pre><code>require &quot;test/unit&quot;
+</code></pre><p>after you add that, re-source your bash file. For me on my Mac</p><pre><code>. ~/.bash_profile
+</code></pre><p>For me on my Ubuntu box:</p><pre><code>. ~/.bashrc
+</code></pre><p>4. Create a test file, test.rb somewhere (for me ~/code/seleniumrc/test.rb):</p><p>5. Write a test that:</p><ol><li><p>Logs in</p></li><li><p>Creates a slice</p></li><li><p>Captures the new root password</p></li><li><p>Captures the new IP Address</p></li><li><p>SSHs onto the new slice</p></li><li><p>Adds a file, and lists out the content of ~ (aka /home/root)</p></li><li><p>Deletes the slice</p></li><li><p>Logs out</p></li><li></li></ol><pre><code>require &quot;test/unit&quot;
 require &quot;rubygems&quot;
 gem &quot;selenium-client&quot;, &quot;&gt;=1.2.9&quot;
 require &quot;selenium/client&quot;
@@ -228,23 +107,7 @@ class NewTest &lt; Test::Unit::TestCase
     @browser.wait_for_page_to_load &quot;30000&quot;
   end
 end
-</code></pre>
-<p>7. Start the selenium server:</p>
-<pre><code>selsrvr
-</code></pre>
-<p>8. run the test:</p>
-<pre><code>ruby ~/code/seleniumrc/test.rb
-</code></pre>
-<p>You should see the firefox browser open up in two windows and see the automation in process. Once the slice is created, I&rsquo;ve setup a timer at 180 seconds (3 min) to wait for the slice to be created and set to a status of active. Like #5 above states, once complete the test captures the root password and ip address off the web UI and uses them to SSH into the new slice. This is my 3rd time using selenium and I like what I see. More to come.</p>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer>
-© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</footer><script src=/js/dark-mode.js></script>
-</body>
-</html>
+</code></pre><p>7. Start the selenium server:</p><pre><code>selsrvr
+</code></pre><p>8. run the test:</p><pre><code>ruby ~/code/seleniumrc/test.rb
+</code></pre><p>You should see the firefox browser open up in two windows and see the automation in process. Once the slice is created, I&rsquo;ve setup a timer at 180 seconds (3 min) to wait for the slice to be created and set to a status of active. Like #5 above states, once complete the test captures the root password and ip address off the web UI and uses them to SSH into the new slice. This is my 3rd time using selenium and I like what I see. More to come.</p></div></div></article></div></main><footer>© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae target=_blank>Vitae</a> theme for <a href=https://gohugo.io target=_blank>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-38456568-3","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></footer><script src=/js/dark-mode.js></script></body></html>

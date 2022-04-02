@@ -1,310 +1,155 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<title>Ruby Design Patterns by Russ Olsen | JM (Jason Meridth)</title>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.2">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=keywords content="ruby,design patterns">
-<meta name=description content=" 
-After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished “Design Patterns in Ruby” by Russ Olsen. The format of most of the …">
-<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
-<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
-<link rel=stylesheet type=text/css media=screen href=/css/main.css>
-<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
-<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Ruby Design Patterns by Russ Olsen | JM (Jason Meridth)</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.96.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content="ruby,design patterns"><meta name=description content=" 
+After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished “Design Patterns in Ruby” by Russ Olsen. The format of most of the …"><link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16><link rel=stylesheet type=text/css media=screen href=/css/normalize.css><link rel=stylesheet type=text/css media=screen href=/css/main.css><link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous><script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
 <script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
-<script>localStorage.setItem('theme','dark')</script>
-<meta property="og:title" content="Ruby Design Patterns by Russ Olsen">
-<meta property="og:description" content="After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:
- A introduction to why you might need the pattern A static language developer&rsquo;s approach with the Ruby language A seasoned Ruby developer&rsquo;s approach to the design pattern Using and Abusing In the wild Wrapping up  Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: GO BUY THE BOOK.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://blog.jasonmeridth.com/posts/ruby-design-patterns-by-russ-olsen/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2009-02-26T04:29:00-06:00">
-<meta property="article:modified_time" content="2009-02-26T04:29:00-06:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Ruby Design Patterns by Russ Olsen">
-<meta name=twitter:description content="After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:
- A introduction to why you might need the pattern A static language developer&rsquo;s approach with the Ruby language A seasoned Ruby developer&rsquo;s approach to the design pattern Using and Abusing In the wild Wrapping up  Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: GO BUY THE BOOK.">
-<meta itemprop=name content="Ruby Design Patterns by Russ Olsen">
-<meta itemprop=description content="After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:
- A introduction to why you might need the pattern A static language developer&rsquo;s approach with the Ruby language A seasoned Ruby developer&rsquo;s approach to the design pattern Using and Abusing In the wild Wrapping up  Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: GO BUY THE BOOK."><meta itemprop=datePublished content="2009-02-26T04:29:00-06:00">
-<meta itemprop=dateModified content="2009-02-26T04:29:00-06:00">
-<meta itemprop=wordCount content="1342">
-<meta itemprop=keywords content="ruby,design patterns,">
-</head>
-<body>
-<header>
-<div id=avatar>
-<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
-</div>
-<div id=titletext>
-<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
-</div>
-<div id=title-description>
-<p id=subtitle>Learn, Converse, Share</p>
-<div id=social>
-<nav><ul>
-<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
-<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
-<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
-<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
-<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
-</ul></nav>
-</div>
-</div>
-<div id=mainmenu>
-<nav>
-<ul>
-<li><a href=/>Home</a></li>
-<li><a href=/posts>All Posts</a></li>
-<li><a href=/about>About</a></li>
-<li><a href=/tags>Tags</a></li>
-<li><a href=/categories>Categories</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<main>
-<div class=post>
-<article>
-<div class=post-header>
-<div class=meta>
-<div class=date>
-<span class=day>26</span>
-<span class=rest>Feb 2009</span>
-</div>
-</div>
-<div class=matter>
-<h1 class=title>Ruby Design Patterns by Russ Olsen</h1>
-<p class=post-meta>
-<span class=post-meta>
-&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><script>localStorage.setItem("theme","dark")</script><meta property="og:title" content="Ruby Design Patterns by Russ Olsen"><meta property="og:description" content="After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:
+ A introduction to why you might need the pattern A static language developer&rsquo;s approach with the Ruby language A seasoned Ruby developer&rsquo;s approach to the design pattern Using and Abusing In the wild Wrapping up  Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: GO BUY THE BOOK."><meta property="og:type" content="article"><meta property="og:url" content="http://blog.jasonmeridth.com/posts/ruby-design-patterns-by-russ-olsen/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2009-02-26T04:29:00-06:00"><meta property="article:modified_time" content="2009-02-26T04:29:00-06:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Ruby Design Patterns by Russ Olsen"><meta name=twitter:description content="After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:
+ A introduction to why you might need the pattern A static language developer&rsquo;s approach with the Ruby language A seasoned Ruby developer&rsquo;s approach to the design pattern Using and Abusing In the wild Wrapping up  Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: GO BUY THE BOOK."><meta itemprop=name content="Ruby Design Patterns by Russ Olsen"><meta itemprop=description content="After nudging by Joe Ocampo and Scott Bellware, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:
+ A introduction to why you might need the pattern A static language developer&rsquo;s approach with the Ruby language A seasoned Ruby developer&rsquo;s approach to the design pattern Using and Abusing In the wild Wrapping up  Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: GO BUY THE BOOK."><meta itemprop=datePublished content="2009-02-26T04:29:00-06:00"><meta itemprop=dateModified content="2009-02-26T04:29:00-06:00"><meta itemprop=wordCount content="1342"><meta itemprop=keywords content="ruby,design patterns,"></head><body><header><div id=avatar><a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a></div><div id=titletext><h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2></div><div id=title-description><p id=subtitle>Learn, Converse, Share</p><div id=social><nav><ul><li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li><li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li><li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li><li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li><li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li></ul></nav></div></div><div id=mainmenu><nav><ul><li><a href=/>Home</a></li><li><a href=/posts>All Posts</a></li><li><a href=/about>About</a></li><li><a href=/tags>Tags</a></li><li><a href=/categories>Categories</a></li></ul></nav></div></header><main><div class=post><article><div class=post-header><div class=meta><div class=date><span class=day>26</span>
+<span class=rest>Feb 2009</span></div></div><div class=matter><h1 class=title>Ruby Design Patterns by Russ Olsen</h1><p class=post-meta><span class=post-meta>&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
 &nbsp;| &nbsp;
-<i class="fas fa-book"></i>&nbsp;1342&nbsp;words
-</span>
-</p>
-</div>
-</div>
-<div class=markdown>
-<p><figure>
-<img src="http://www.informit.com/ShowCover.aspx?isbn=0321539265&type=f" alt>
-</figure></p>
-<p>After nudging by <a href=http://agilejoe.lostechies.com/ target=_blank>Joe Ocampo</a> and <a href=https://twitter.com/sbellware target=_blank>Scott Bellware</a>, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:</p>
-<ol>
-<li>A introduction to why you might need the pattern</li>
-<li>A static language developer&rsquo;s approach with the Ruby language</li>
-<li>A seasoned Ruby developer&rsquo;s approach to the design pattern</li>
-<li>Using and Abusing</li>
-<li>In the wild</li>
-<li>Wrapping up</li>
-</ol>
-<p>Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: <strong>GO BUY THE BOOK</strong>. You won&rsquo;t regret it. Even if you are trying to understand patterns in another language. Russ Olsen does an excellent job explaining the INTENT of the patterns. FUN When teaching the reader about &ldquo;Truth, Lies, and nil&rdquo;, the author even pokes fun at himself:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#e6db74>&#39;russ&#39;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;smart&#39;</span>    <span style=color:#75715e># sadly, false</span>
-</code></pre></div><hr>
-<p>BOOLEAN In Ruby, zero, being neither false nor nil, evaluates to true in Boolean expression.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>if</span> <span style=color:#ae81ff>0</span>
- puts(<span style=color:#e6db74>&#39;Zero is true!&#39;</span>)
-<span style=color:#66d9ef>end</span>
-</code></pre></div><p>will print out: Zero is true!</p>
-<hr>
-<p>ARRAYS Points for matrix reference in array examples</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>x <span style=color:#f92672>=</span> <span style=color:#f92672>[]</span>
-y <span style=color:#f92672>=</span> Array<span style=color:#f92672>.</span>new
-a <span style=color:#f92672>=</span> <span style=color:#f92672>[</span><span style=color:#e6db74>&#39;neo&#39;</span>, <span style=color:#e6db74>&#39;trinity&#39;</span>, <span style=color:#e6db74>&#39;tank&#39;</span><span style=color:#f92672>]</span>
-</code></pre></div><hr>
-<p>REGULAR EXPRESSIONS The flow of the language when creating regular expressions:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#e6db74>/old/</span> <span style=color:#f92672>=~</span> <span style=color:#e6db74>&#39;this old house&#39;</span>     <span style=color:#75715e># 5 - the index of &#39;old&#39;</span>
-<span style=color:#e6db74>/Russ|Russell/</span> <span style=color:#f92672>=~</span> <span style=color:#e6db74>&#39;Fred&#39;</span>      <span style=color:#75715e># nil - Fred is not Russ nor Russell</span>
-<span style=color:#e6db74>/.*/</span> <span style=color:#f92672>=~</span> <span style=color:#e6db74>&#39;any old string&#39;</span>      <span style=color:#75715e># 0 - the RE will match anything</span>
-</code></pre></div><hr>
-<p>ARBITRARY PARAMETERS Any author that uses DC comic character to explain arbitrary numbers of arguments, is a winner in my mind:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>describe_hero</span>(name, <span style=color:#f92672>*</span>super_powers<span style=color:#f92672>&gt;</span>
- puts(<span style=color:#e6db74>&#34;Name: </span><span style=color:#e6db74>#{</span>name<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
- <span style=color:#66d9ef>for</span> power <span style=color:#66d9ef>in</span> super_powers
-     puts(<span style=color:#e6db74>&#34;Super power: </span><span style=color:#e6db74>#{</span>power<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
- <span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-describe_hero(<span style=color:#e6db74>&#34;Batman&#34;</span>)
-describe_hero(<span style=color:#e6db74>&#34;Flash&#34;</span>, <span style=color:#e6db74>&#34;speed&#34;</span>)
-describe_hero(<span style=color:#e6db74>&#34;Superman&#34;</span>, <span style=color:#e6db74>&#34;can fly&#34;</span>, <span style=color:#e6db74>&#34;x-ray vision&#34;</span>, <span style=color:#e6db74>&#34;invulnerable&#34;</span>)   <span style=color:#75715e># w00t!</span>
-</code></pre></div><hr>
-<p>DUCK TYPING AND UNIT TESTS He mentions duck typing and the fact that &ldquo;Unit Tests Are Not Optional&rdquo; is a section heading when teaching the Template Method Pattern.</p>
-<hr>
-<p>PROCS AND BLOCKS</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#75715e># using the do/end notation</span>
-hello <span style=color:#f92672>=</span> lambda <span style=color:#66d9ef>do</span>
- puts(<span style=color:#e6db74>&#39;Hello&#39;</span>)
- puts(<span style=color:#e6db74>&#39;I am a follower of Pablo&#39;</span>)
-<span style=color:#66d9ef>end</span>
-<span style=color:#75715e>#you may use curly braces instead of do/end</span>
-hello <span style=color:#f92672>=</span> lambda {
- puts(<span style=color:#e6db74>&#39;Hello, I am a follower of Pablo&#39;</span>)
-}
-<span style=color:#75715e>#the preferred way to use curly braces</span>
-hello <span style=color:#f92672>=</span> lambda {puts(<span style=color:#e6db74>&#39;Hello, I am a follower of Pablo&#39;</span>)}
-</code></pre></div><hr>
-<p>STRATEGY PATTERN using proc-based formatters to create a ruby-based strategy pattern</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Report</span>
- <span style=color:#66d9ef>attr_reader</span> <span style=color:#e6db74>:title</span>, <span style=color:#e6db74>:text</span>
- <span style=color:#66d9ef>attr_accessor</span> <span style=color:#e6db74>:formatter</span>
- <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(<span style=color:#f92672>&amp;</span>formatter)
-   @title <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Monthly Report&#39;</span>
-   @text <span style=color:#f92672>=</span> <span style=color:#f92672>[</span><span style=color:#e6db74>&#39;Things are going&#39;</span>, <span style=color:#e6db74>&#39;really, really well.&#39;</span> <span style=color:#f92672>]</span>
-   @formatter <span style=color:#f92672>=</span> formatter
- <span style=color:#66d9ef>end</span>
- <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>output_report</span>
-   @formatter<span style=color:#f92672>.</span>call( self )
- <span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-
-<span style=color:#66d9ef>HTML_FORMATTER</span> <span style=color:#f92672>=</span> lambda <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>context<span style=color:#f92672>|</span>
-<span style=color:#f92672>...</span>code to output <span style=color:#66d9ef>HTML</span>
-report <span style=color:#f92672>=</span> <span style=color:#66d9ef>Report</span><span style=color:#f92672>.</span>new <span style=color:#f92672>&amp;</span><span style=color:#66d9ef>HTML_FORMATTER</span>
-report<span style=color:#f92672>.</span>output_report
-</code></pre></div><p>You could create any type of formatter you want in a proc instead creating new classes.</p>
-<hr>
-<p>OBSERVER PATTERN Modules exist that encapsulate things that some of us static developers might already be used to:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>require <span style=color:#e6db74>&#39;observer&#39;</span>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Employee</span>
-<span style=color:#66d9ef>include</span> <span style=color:#66d9ef>Observable</span>
-<span style=color:#66d9ef>attr_reader</span> <span style=color:#e6db74>:name</span>, <span style=color:#e6db74>:address</span>
-<span style=color:#66d9ef>attr_reader</span> <span style=color:#e6db74>:salary</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>( namtitle, salary)
- @name <span style=color:#f92672>=</span> name
- @titletitle
- @salary <span style=color:#f92672>=</span> salary
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>salary</span><span style=color:#f92672>=</span>(new_salary)
- @salary <span style=color:#f92672>=</span> new_salary
- changed
- notify_observers(self)
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-</code></pre></div><hr>
-<p>ITERATOR PATTERN Internal Iterators versus External Iterators: (had never heard it put this way) External iterator - client drives the iteration&mldr;you won&rsquo;t call next until you are good and ready for the next element Internal iterator - the aggregate relentlessly pushes the code block to accept item after item.</p>
-<hr>
-<p>COMMAND PATTERN The Command pattern translates very smoothly into code blocks. Here is a PabloForPresidentButton class reworked to use code blocks:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PabloForPresidentButton</span>
-<span style=color:#66d9ef>attr_accessor</span> <span style=color:#e6db74>:command</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(<span style=color:#f92672>&amp;</span>block)
- @command <span style=color:#f92672>=</span> block
-<span style=color:#66d9ef>end</span>
-<span style=color:#75715e>#</span>
-<span style=color:#75715e># Lots of button drawing and management</span>
-<span style=color:#75715e># code omitted ...</span>
-<span style=color:#75715e>#</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>on_button_push</span>
- @command<span style=color:#f92672>.</span>call <span style=color:#66d9ef>if</span> @command
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-
-new_button <span style=color:#f92672>=</span> <span style=color:#66d9ef>PabloForPresidentButton</span><span style=color:#f92672>.</span>new <span style=color:#66d9ef>do</span>
-<span style=color:#75715e>#</span>
-<span style=color:#75715e># Make a developer stop looking so nerdy</span>
-<span style=color:#75715e># by placing one over his pocket protector</span>
-<span style=color:#75715e>#</span>
-<span style=color:#66d9ef>end</span>
-</code></pre></div><p>The author does not diminish the needs for classes. For straightforward actions, use a Proc object. For complex object or objects that will carry around a lot of state, create a command class.</p>
-<hr>
-<p>ADAPTER PATTERN Instead of adhering to some interface and trying to create your adapter, why not just extend the original class.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#75715e># load original class</span>
-require <span style=color:#e6db74>&#39;lostechies_text_object&#39;</span>
-<span style=color:#75715e># now add some methods to original class</span>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>LosTechiesTextObject</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>sponsor</span>
- <span style=color:#66d9ef>return</span> friend_of_pablo
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>blogger</span>
- <span style=color:#66d9ef>return</span> follower_of_pablo
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-</code></pre></div><p>Before any of you Open-Closed people attack, please re-read the definition of OCP - Open for extension, closed for modification. Doesn&rsquo;t this adhere to that? :)</p>
-<hr>
-<p>PROXY PATTERN There are three tyes of Proxies: The Protection Proxy, Remote Proxy, Virtual Proxy These are mentioned in the Gang of Four book. He introduces a Ruby-esqe way to approach proxies: the method_missing Method</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AccountProxy</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(real_account)
- @subject <span style=color:#f92672>=</span> real_account
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>method_missing</span>(name, <span style=color:#f92672>*</span>args)
- puts(<span style=color:#e6db74>&#34;Delegating </span><span style=color:#e6db74>#{</span>name<span style=color:#e6db74>}</span><span style=color:#e6db74> message to subject.&#34;</span>)
- @subject<span style=color:#f92672>.</span>send(name, <span style=color:#f92672>*</span>args)
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-ap <span style=color:#f92672>=</span> <span style=color:#66d9ef>AccountProxy</span><span style=color:#f92672>.</span>new( <span style=color:#66d9ef>BankAccount</span><span style=color:#f92672>.</span>new(<span style=color:#ae81ff>100</span>) )
-ap<span style=color:#f92672>.</span>deposit(<span style=color:#ae81ff>25</span>)
-ap<span style=color:#f92672>.</span>withdraw(<span style=color:#ae81ff>50</span>)
-puts(<span style=color:#e6db74>&#34;account balance is now: </span><span style=color:#e6db74>#{</span>ap<span style=color:#f92672>.</span>balance<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
-</code></pre></div><p>Will output: delegating deposit method to subject. delegating withdraw method to subject. delegating balance method to subject. account balance is now: 75</p>
-<hr>
-<p>DECORATOR PATTERN</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>module</span> Decorator1
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>do_something</span>(common_item_to_decorate)
- <span style=color:#75715e>#code</span>
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>module</span> Decorator2
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>do_something</span>(common_item_to_decorate)
- <span style=color:#75715e>#code</span>
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-d <span style=color:#f92672>=</span> <span style=color:#66d9ef>SimpleItem</span><span style=color:#f92672>.</span>new()
-d<span style=color:#f92672>.</span>extend(<span style=color:#66d9ef>Decorator1</span>)
-d<span style=color:#f92672>.</span>extend(<span style=color:#66d9ef>Decorator2</span>)
-e<span style=color:#f92672>.</span>do_something(<span style=color:#e6db74>&#39;howdy&#39;</span>)
-</code></pre></div><hr>
-<p>SINGLETON PATTERN The author admits the career of the singleton has been checkered, but still shows that you can use it in the Ruby world. An example he gives us to allow testing of singleton implementation code is to put the implementation code in a base class and have the child be the singleton:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>require <span style=color:#e6db74>&#39;singleton&#39;</span>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SimpleLogger</span>
-<span style=color:#75715e>#  All of the logging functionality in this class...</span>
-<span style=color:#75715e>#  Test this code</span>
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SingletonLogger</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>SimpleLogger</span>
-</code></pre></div><hr>
-<p>FACTORY/ABSTRACT FACTORY PATTERN I never had it straight, exactly, what the difference between these patterns were (yes, besides name). I never bothered to look. According to the author, Factory returns back a single object while Abstract Factory is &ldquo;an object dedicated to creating a compatible set of objects&rdquo;. According to GoF book (which I have open in front of me), Abstract Factory &ldquo;provides an interface for creating families of related or dependent objects without specifying their concreate classes&rdquo;. Which one do you think would have turned the light bulb off in your head? :) The other item was using &ldquo;Convention Over Configuration&rdquo; to generate abstract factories:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IOFactory</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(format)
- @reader_class <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>class<span style=color:#f92672>.</span>const_get(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>#{</span>format<span style=color:#e6db74>}</span><span style=color:#e6db74>Reader&#34;</span>)
- @writer_class <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>class<span style=color:#f92672>.</span>const_get(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>#{</span>format<span style=color:#e6db74>}</span><span style=color:#e6db74>Writer&#34;</span>)
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>new_reader</span>
- @reader_class<span style=color:#f92672>.</span>new
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>new_writer</span>
- @writer_class<span style=color:#f92672>.</span>new
-<span style=color:#66d9ef>end</span>
-<span style=color:#66d9ef>end</span>
-html_factory <span style=color:#f92672>=</span> <span style=color:#66d9ef>IOFactory</span><span style=color:#f92672>.</span>new(<span style=color:#e6db74>&#39;HTML&#39;</span>)
-html_reader <span style=color:#f92672>=</span> html_factory<span style=color:#f92672>.</span>new_reader
-pdf_factory <span style=color:#f92672>=</span> <span style=color:#66d9ef>IOFactory</span><span style=color:#f92672>.</span>new(<span style=color:#e6db74>&#39;PDF&#39;</span>)
-pdf_writer <span style=color:#f92672>=</span> pdf_factory<span style=color:#f92672>.</span>new_writer
-</code></pre></div><h2 id=comments>Comments</h2>
-<p><strong><a href=#395 title="2009-02-26 05:11:17">Scott Bellware</a>:</strong> Cheers!</p>
-<p><strong><a href=#396 title="2009-02-26 18:20:04">Joe Ocampo</a>:</strong> Your welcome, About the only thing I would critique is that from what I have observed from most frameworks in Ruby is that the parens are omitted when there is only one arg. It reads betters: # d = SimpleItem.new() # d.extend(Decorator1) # d.extend(Decorator2) to # d = SimpleItem.new # d.extend Decorator1 # d.extend Decorator2</p>
-<p><strong><a href=#397 title="2009-02-28 13:16:03">Russ Olsen</a>:</strong> Jason, Hey thanks for the kind words, I&rsquo;m glad that you are finding the book useful. The funny thing about the factories patterns is a) that I wasn&rsquo;t 100% clear on the difference between the two before I started researching the book and b) given Ruby&rsquo;s dynamic nature, you really don&rsquo;t find many of examples of the classic factories in real Ruby code. Oh, and in the interest of fairness I&rsquo;m going to include some Marvel characters in my next book. Russ</p>
-<p><strong><a href=#398 title="2009-02-28 13:21:30">Russ Olsen</a>:</strong> Joe Ocampo wrote: > About the only thing I would critique is that from what I have > observed from most frameworks in Ruby is that the parens are > omitted when there is only one arg. I think there is a range of opinions regarding the parens, yes or no? question in the Ruby community. I am sure, however, that leaving the parens off is the surest way to confuse people who are newly arrived in Ruby from say Java. I can&rsquo;t tell you the number of times that I have confused a room full of newly minted Ruby programmers because I left the parens off of some example. Put the parens back on and their faces light up. Russ</p>
-</div>
-<div class=tags>
-<div class=taxosfloating_left>
-<p>Tags</p>
-</div>
-<div class=termsfloating_right>
-<p>
-<a href=/tags/design-patterns/>design-patterns</a>
-<a href=/tags/ruby/>ruby</a>
-</p>
-</div>
-<div class=clearit></div>
-</div>
-</article>
-</div>
-</main>
-<footer>
-© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</footer><script src=/js/dark-mode.js></script>
-</body>
-</html>
+<i class="fas fa-book"></i>&nbsp;1342&nbsp;words</span></p></div></div><div class=markdown><p><figure><img src="http://www.informit.com/ShowCover.aspx?isbn=0321539265&type=f" alt></figure></p><p>After nudging by <a href=http://agilejoe.lostechies.com/ target=_blank>Joe Ocampo</a> and <a href=https://twitter.com/sbellware target=_blank>Scott Bellware</a>, I finally sat down at finished &ldquo;Design Patterns in Ruby&rdquo; by Russ Olsen. The format of most of the chapters made the book an interesting read:</p><ol><li>A introduction to why you might need the pattern</li><li>A static language developer&rsquo;s approach with the Ruby language</li><li>A seasoned Ruby developer&rsquo;s approach to the design pattern</li><li>Using and Abusing</li><li>In the wild</li><li>Wrapping up</li></ol><p>Some of the items that I learned [LosTechies is not a cult contrary to some of the examples you read below; some of the examples below are using LosTechies nomenclature but closely resemble what the author had in the book] If any of the stuff below intrigues you: <strong>GO BUY THE BOOK</strong>. You won&rsquo;t regret it. Even if you are trying to understand patterns in another language. Russ Olsen does an excellent job explaining the INTENT of the patterns. FUN When teaching the reader about &ldquo;Truth, Lies, and nil&rdquo;, the author even pokes fun at himself:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#e6db74>&#39;russ&#39;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#39;smart&#39;</span>    <span style=color:#75715e># sadly, false</span>
+</span></span></code></pre></div><hr><p>BOOLEAN In Ruby, zero, being neither false nor nil, evaluates to true in Boolean expression.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span> puts(<span style=color:#e6db74>&#39;Zero is true!&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>will print out: Zero is true!</p><hr><p>ARRAYS Points for matrix reference in array examples</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span>x <span style=color:#f92672>=</span> <span style=color:#f92672>[]</span>
+</span></span><span style=display:flex><span>y <span style=color:#f92672>=</span> Array<span style=color:#f92672>.</span>new
+</span></span><span style=display:flex><span>a <span style=color:#f92672>=</span> <span style=color:#f92672>[</span><span style=color:#e6db74>&#39;neo&#39;</span>, <span style=color:#e6db74>&#39;trinity&#39;</span>, <span style=color:#e6db74>&#39;tank&#39;</span><span style=color:#f92672>]</span>
+</span></span></code></pre></div><hr><p>REGULAR EXPRESSIONS The flow of the language when creating regular expressions:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#e6db74>/old/</span> <span style=color:#f92672>=~</span> <span style=color:#e6db74>&#39;this old house&#39;</span>     <span style=color:#75715e># 5 - the index of &#39;old&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>/Russ|Russell/</span> <span style=color:#f92672>=~</span> <span style=color:#e6db74>&#39;Fred&#39;</span>      <span style=color:#75715e># nil - Fred is not Russ nor Russell</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>/.*/</span> <span style=color:#f92672>=~</span> <span style=color:#e6db74>&#39;any old string&#39;</span>      <span style=color:#75715e># 0 - the RE will match anything</span>
+</span></span></code></pre></div><hr><p>ARBITRARY PARAMETERS Any author that uses DC comic character to explain arbitrary numbers of arguments, is a winner in my mind:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>describe_hero</span>(name, <span style=color:#f92672>*</span>super_powers<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span> puts(<span style=color:#e6db74>&#34;Name: </span><span style=color:#e6db74>#{</span>name<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>for</span> power <span style=color:#66d9ef>in</span> super_powers
+</span></span><span style=display:flex><span>     puts(<span style=color:#e6db74>&#34;Super power: </span><span style=color:#e6db74>#{</span>power<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>describe_hero(<span style=color:#e6db74>&#34;Batman&#34;</span>)
+</span></span><span style=display:flex><span>describe_hero(<span style=color:#e6db74>&#34;Flash&#34;</span>, <span style=color:#e6db74>&#34;speed&#34;</span>)
+</span></span><span style=display:flex><span>describe_hero(<span style=color:#e6db74>&#34;Superman&#34;</span>, <span style=color:#e6db74>&#34;can fly&#34;</span>, <span style=color:#e6db74>&#34;x-ray vision&#34;</span>, <span style=color:#e6db74>&#34;invulnerable&#34;</span>)   <span style=color:#75715e># w00t!</span>
+</span></span></code></pre></div><hr><p>DUCK TYPING AND UNIT TESTS He mentions duck typing and the fact that &ldquo;Unit Tests Are Not Optional&rdquo; is a section heading when teaching the Template Method Pattern.</p><hr><p>PROCS AND BLOCKS</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#75715e># using the do/end notation</span>
+</span></span><span style=display:flex><span>hello <span style=color:#f92672>=</span> lambda <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span> puts(<span style=color:#e6db74>&#39;Hello&#39;</span>)
+</span></span><span style=display:flex><span> puts(<span style=color:#e6db74>&#39;I am a follower of Pablo&#39;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#you may use curly braces instead of do/end</span>
+</span></span><span style=display:flex><span>hello <span style=color:#f92672>=</span> lambda {
+</span></span><span style=display:flex><span> puts(<span style=color:#e6db74>&#39;Hello, I am a follower of Pablo&#39;</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e>#the preferred way to use curly braces</span>
+</span></span><span style=display:flex><span>hello <span style=color:#f92672>=</span> lambda {puts(<span style=color:#e6db74>&#39;Hello, I am a follower of Pablo&#39;</span>)}
+</span></span></code></pre></div><hr><p>STRATEGY PATTERN using proc-based formatters to create a ruby-based strategy pattern</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Report</span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>attr_reader</span> <span style=color:#e6db74>:title</span>, <span style=color:#e6db74>:text</span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>attr_accessor</span> <span style=color:#e6db74>:formatter</span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(<span style=color:#f92672>&amp;</span>formatter)
+</span></span><span style=display:flex><span>   @title <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;Monthly Report&#39;</span>
+</span></span><span style=display:flex><span>   @text <span style=color:#f92672>=</span> <span style=color:#f92672>[</span><span style=color:#e6db74>&#39;Things are going&#39;</span>, <span style=color:#e6db74>&#39;really, really well.&#39;</span> <span style=color:#f92672>]</span>
+</span></span><span style=display:flex><span>   @formatter <span style=color:#f92672>=</span> formatter
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>output_report</span>
+</span></span><span style=display:flex><span>   @formatter<span style=color:#f92672>.</span>call( self )
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>HTML_FORMATTER</span> <span style=color:#f92672>=</span> lambda <span style=color:#66d9ef>do</span> <span style=color:#f92672>|</span>context<span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>...</span>code to output <span style=color:#66d9ef>HTML</span>
+</span></span><span style=display:flex><span>report <span style=color:#f92672>=</span> <span style=color:#66d9ef>Report</span><span style=color:#f92672>.</span>new <span style=color:#f92672>&amp;</span><span style=color:#66d9ef>HTML_FORMATTER</span>
+</span></span><span style=display:flex><span>report<span style=color:#f92672>.</span>output_report
+</span></span></code></pre></div><p>You could create any type of formatter you want in a proc instead creating new classes.</p><hr><p>OBSERVER PATTERN Modules exist that encapsulate things that some of us static developers might already be used to:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span>require <span style=color:#e6db74>&#39;observer&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Employee</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>include</span> <span style=color:#66d9ef>Observable</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>attr_reader</span> <span style=color:#e6db74>:name</span>, <span style=color:#e6db74>:address</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>attr_reader</span> <span style=color:#e6db74>:salary</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>( namtitle, salary)
+</span></span><span style=display:flex><span> @name <span style=color:#f92672>=</span> name
+</span></span><span style=display:flex><span> @titletitle
+</span></span><span style=display:flex><span> @salary <span style=color:#f92672>=</span> salary
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>salary</span><span style=color:#f92672>=</span>(new_salary)
+</span></span><span style=display:flex><span> @salary <span style=color:#f92672>=</span> new_salary
+</span></span><span style=display:flex><span> changed
+</span></span><span style=display:flex><span> notify_observers(self)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><hr><p>ITERATOR PATTERN Internal Iterators versus External Iterators: (had never heard it put this way) External iterator - client drives the iteration&mldr;you won&rsquo;t call next until you are good and ready for the next element Internal iterator - the aggregate relentlessly pushes the code block to accept item after item.</p><hr><p>COMMAND PATTERN The Command pattern translates very smoothly into code blocks. Here is a PabloForPresidentButton class reworked to use code blocks:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>PabloForPresidentButton</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>attr_accessor</span> <span style=color:#e6db74>:command</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(<span style=color:#f92672>&amp;</span>block)
+</span></span><span style=display:flex><span> @command <span style=color:#f92672>=</span> block
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Lots of button drawing and management</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># code omitted ...</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>on_button_push</span>
+</span></span><span style=display:flex><span> @command<span style=color:#f92672>.</span>call <span style=color:#66d9ef>if</span> @command
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>new_button <span style=color:#f92672>=</span> <span style=color:#66d9ef>PabloForPresidentButton</span><span style=color:#f92672>.</span>new <span style=color:#66d9ef>do</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Make a developer stop looking so nerdy</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># by placing one over his pocket protector</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>The author does not diminish the needs for classes. For straightforward actions, use a Proc object. For complex object or objects that will carry around a lot of state, create a command class.</p><hr><p>ADAPTER PATTERN Instead of adhering to some interface and trying to create your adapter, why not just extend the original class.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#75715e># load original class</span>
+</span></span><span style=display:flex><span>require <span style=color:#e6db74>&#39;lostechies_text_object&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># now add some methods to original class</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>LosTechiesTextObject</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>sponsor</span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>return</span> friend_of_pablo
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>blogger</span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>return</span> follower_of_pablo
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span></code></pre></div><p>Before any of you Open-Closed people attack, please re-read the definition of OCP - Open for extension, closed for modification. Doesn&rsquo;t this adhere to that? :)</p><hr><p>PROXY PATTERN There are three tyes of Proxies: The Protection Proxy, Remote Proxy, Virtual Proxy These are mentioned in the Gang of Four book. He introduces a Ruby-esqe way to approach proxies: the method_missing Method</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AccountProxy</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(real_account)
+</span></span><span style=display:flex><span> @subject <span style=color:#f92672>=</span> real_account
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>method_missing</span>(name, <span style=color:#f92672>*</span>args)
+</span></span><span style=display:flex><span> puts(<span style=color:#e6db74>&#34;Delegating </span><span style=color:#e6db74>#{</span>name<span style=color:#e6db74>}</span><span style=color:#e6db74> message to subject.&#34;</span>)
+</span></span><span style=display:flex><span> @subject<span style=color:#f92672>.</span>send(name, <span style=color:#f92672>*</span>args)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>ap <span style=color:#f92672>=</span> <span style=color:#66d9ef>AccountProxy</span><span style=color:#f92672>.</span>new( <span style=color:#66d9ef>BankAccount</span><span style=color:#f92672>.</span>new(<span style=color:#ae81ff>100</span>) )
+</span></span><span style=display:flex><span>ap<span style=color:#f92672>.</span>deposit(<span style=color:#ae81ff>25</span>)
+</span></span><span style=display:flex><span>ap<span style=color:#f92672>.</span>withdraw(<span style=color:#ae81ff>50</span>)
+</span></span><span style=display:flex><span>puts(<span style=color:#e6db74>&#34;account balance is now: </span><span style=color:#e6db74>#{</span>ap<span style=color:#f92672>.</span>balance<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span></code></pre></div><p>Will output: delegating deposit method to subject. delegating withdraw method to subject. delegating balance method to subject. account balance is now: 75</p><hr><p>DECORATOR PATTERN</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>module</span> Decorator1
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>do_something</span>(common_item_to_decorate)
+</span></span><span style=display:flex><span> <span style=color:#75715e>#code</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>module</span> Decorator2
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>do_something</span>(common_item_to_decorate)
+</span></span><span style=display:flex><span> <span style=color:#75715e>#code</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>d <span style=color:#f92672>=</span> <span style=color:#66d9ef>SimpleItem</span><span style=color:#f92672>.</span>new()
+</span></span><span style=display:flex><span>d<span style=color:#f92672>.</span>extend(<span style=color:#66d9ef>Decorator1</span>)
+</span></span><span style=display:flex><span>d<span style=color:#f92672>.</span>extend(<span style=color:#66d9ef>Decorator2</span>)
+</span></span><span style=display:flex><span>e<span style=color:#f92672>.</span>do_something(<span style=color:#e6db74>&#39;howdy&#39;</span>)
+</span></span></code></pre></div><hr><p>SINGLETON PATTERN The author admits the career of the singleton has been checkered, but still shows that you can use it in the Ruby world. An example he gives us to allow testing of singleton implementation code is to put the implementation code in a base class and have the child be the singleton:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span>require <span style=color:#e6db74>&#39;singleton&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SimpleLogger</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#  All of the logging functionality in this class...</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#  Test this code</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SingletonLogger</span> <span style=color:#f92672>&lt;</span> <span style=color:#66d9ef>SimpleLogger</span>
+</span></span></code></pre></div><hr><p>FACTORY/ABSTRACT FACTORY PATTERN I never had it straight, exactly, what the difference between these patterns were (yes, besides name). I never bothered to look. According to the author, Factory returns back a single object while Abstract Factory is &ldquo;an object dedicated to creating a compatible set of objects&rdquo;. According to GoF book (which I have open in front of me), Abstract Factory &ldquo;provides an interface for creating families of related or dependent objects without specifying their concreate classes&rdquo;. Which one do you think would have turned the light bulb off in your head? :) The other item was using &ldquo;Convention Over Configuration&rdquo; to generate abstract factories:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>IOFactory</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>initialize</span>(format)
+</span></span><span style=display:flex><span> @reader_class <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>class<span style=color:#f92672>.</span>const_get(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>#{</span>format<span style=color:#e6db74>}</span><span style=color:#e6db74>Reader&#34;</span>)
+</span></span><span style=display:flex><span> @writer_class <span style=color:#f92672>=</span> self<span style=color:#f92672>.</span>class<span style=color:#f92672>.</span>const_get(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>#{</span>format<span style=color:#e6db74>}</span><span style=color:#e6db74>Writer&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>new_reader</span>
+</span></span><span style=display:flex><span> @reader_class<span style=color:#f92672>.</span>new
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>new_writer</span>
+</span></span><span style=display:flex><span> @writer_class<span style=color:#f92672>.</span>new
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>end</span>
+</span></span><span style=display:flex><span>html_factory <span style=color:#f92672>=</span> <span style=color:#66d9ef>IOFactory</span><span style=color:#f92672>.</span>new(<span style=color:#e6db74>&#39;HTML&#39;</span>)
+</span></span><span style=display:flex><span>html_reader <span style=color:#f92672>=</span> html_factory<span style=color:#f92672>.</span>new_reader
+</span></span><span style=display:flex><span>pdf_factory <span style=color:#f92672>=</span> <span style=color:#66d9ef>IOFactory</span><span style=color:#f92672>.</span>new(<span style=color:#e6db74>&#39;PDF&#39;</span>)
+</span></span><span style=display:flex><span>pdf_writer <span style=color:#f92672>=</span> pdf_factory<span style=color:#f92672>.</span>new_writer
+</span></span></code></pre></div><h2 id=comments>Comments</h2><p><strong><a href=#395 title="2009-02-26 05:11:17">Scott Bellware</a>:</strong> Cheers!</p><p><strong><a href=#396 title="2009-02-26 18:20:04">Joe Ocampo</a>:</strong> Your welcome, About the only thing I would critique is that from what I have observed from most frameworks in Ruby is that the parens are omitted when there is only one arg. It reads betters: # d = SimpleItem.new() # d.extend(Decorator1) # d.extend(Decorator2) to # d = SimpleItem.new # d.extend Decorator1 # d.extend Decorator2</p><p><strong><a href=#397 title="2009-02-28 13:16:03">Russ Olsen</a>:</strong> Jason, Hey thanks for the kind words, I&rsquo;m glad that you are finding the book useful. The funny thing about the factories patterns is a) that I wasn&rsquo;t 100% clear on the difference between the two before I started researching the book and b) given Ruby&rsquo;s dynamic nature, you really don&rsquo;t find many of examples of the classic factories in real Ruby code. Oh, and in the interest of fairness I&rsquo;m going to include some Marvel characters in my next book. Russ</p><p><strong><a href=#398 title="2009-02-28 13:21:30">Russ Olsen</a>:</strong> Joe Ocampo wrote: > About the only thing I would critique is that from what I have > observed from most frameworks in Ruby is that the parens are > omitted when there is only one arg. I think there is a range of opinions regarding the parens, yes or no? question in the Ruby community. I am sure, however, that leaving the parens off is the surest way to confuse people who are newly arrived in Ruby from say Java. I can&rsquo;t tell you the number of times that I have confused a room full of newly minted Ruby programmers because I left the parens off of some example. Put the parens back on and their faces light up. Russ</p></div><div class=tags><div class=taxosfloating_left><p>Tags</p></div><div class=termsfloating_right><p><a href=/tags/design-patterns/>design-patterns</a>
+<a href=/tags/ruby/>ruby</a></p></div><div class=clearit></div></div></article></div></main><footer>© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae target=_blank>Vitae</a> theme for <a href=https://gohugo.io target=_blank>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-38456568-3","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></footer><script src=/js/dark-mode.js></script></body></html>

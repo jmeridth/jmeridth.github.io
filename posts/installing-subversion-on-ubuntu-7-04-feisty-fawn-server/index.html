@@ -1,155 +1,18 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<title>Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server | JM (Jason Meridth)</title>
-<meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.2">
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=keywords content="jason meridth,meridth,jm,software developer">
-<meta name=description content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post …">
-<link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16>
-<link rel=stylesheet type=text/css media=screen href=/css/normalize.css>
-<link rel=stylesheet type=text/css media=screen href=/css/main.css>
-<link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous>
-<script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server | JM (Jason Meridth)</title><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=generator content="Hugo 0.96.0"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=description content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post …"><link rel=icon type=image/png href=/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicon-16x16.png sizes=16x16><link rel=stylesheet type=text/css media=screen href=/css/normalize.css><link rel=stylesheet type=text/css media=screen href=/css/main.css><link rel=stylesheet type=text/css media=screen href=/css/all.css><link rel=stylesheet href=/css/katex.css crossorigin=anonymous><script defer src=/js/katex.js integrity=sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi crossorigin=anonymous></script>
 <script defer src=/js/auto-render.js integrity=sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M crossorigin=anonymous onload=renderMathInElement(document.body)></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script>
-<script>localStorage.setItem('theme','dark')</script>
-<meta property="og:title" content="Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server">
-<meta property="og:description" content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post will show how to set this up with svn+ssh, which is considered more secure. To install subversion, open a terminal and run the following command:
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script><script>localStorage.setItem("theme","dark")</script><meta property="og:title" content="Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server"><meta property="og:description" content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post will show how to set this up with svn+ssh, which is considered more secure. To install subversion, open a terminal and run the following command:
 sudo apt-get install subversion libapache2-svn
-We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://blog.jasonmeridth.com/posts/installing-subversion-on-ubuntu-7-04-feisty-fawn-server/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2007-05-01T23:53:00-05:00">
-<meta property="article:modified_time" content="2007-05-01T23:53:00-05:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server">
-<meta name=twitter:description content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post will show how to set this up with svn+ssh, which is considered more secure. To install subversion, open a terminal and run the following command:
+We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space."><meta property="og:type" content="article"><meta property="og:url" content="http://blog.jasonmeridth.com/posts/installing-subversion-on-ubuntu-7-04-feisty-fawn-server/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2007-05-01T23:53:00-05:00"><meta property="article:modified_time" content="2007-05-01T23:53:00-05:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server"><meta name=twitter:description content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post will show how to set this up with svn+ssh, which is considered more secure. To install subversion, open a terminal and run the following command:
 sudo apt-get install subversion libapache2-svn
-We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space.">
-<meta itemprop=name content="Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server">
-<meta itemprop=description content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post will show how to set this up with svn+ssh, which is considered more secure. To install subversion, open a terminal and run the following command:
+We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space."><meta itemprop=name content="Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server"><meta itemprop=description content="This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network. The next post will show how to set this up with svn+ssh, which is considered more secure. To install subversion, open a terminal and run the following command:
 sudo apt-get install subversion libapache2-svn
-We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space."><meta itemprop=datePublished content="2007-05-01T23:53:00-05:00">
-<meta itemprop=dateModified content="2007-05-01T23:53:00-05:00">
-<meta itemprop=wordCount content="729">
-<meta itemprop=keywords content>
-</head>
-<body>
-<header>
-<div id=avatar>
-<a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a>
-</div>
-<div id=titletext>
-<h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2>
-</div>
-<div id=title-description>
-<p id=subtitle>Learn, Converse, Share</p>
-<div id=social>
-<nav><ul>
-<li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li>
-<li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li>
-<li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li>
-<li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li>
-<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
-</ul></nav>
-</div>
-</div>
-<div id=mainmenu>
-<nav>
-<ul>
-<li><a href=/>Home</a></li>
-<li><a href=/posts>All Posts</a></li>
-<li><a href=/about>About</a></li>
-<li><a href=/tags>Tags</a></li>
-<li><a href=/categories>Categories</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<main>
-<div class=post>
-<article>
-<div class=post-header>
-<div class=meta>
-<div class=date>
-<span class=day>01</span>
-<span class=rest>May 2007</span>
-</div>
-</div>
-<div class=matter>
-<h1 class=title>Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server</h1>
-<p class=post-meta>
-<span class=post-meta>
-&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space."><meta itemprop=datePublished content="2007-05-01T23:53:00-05:00"><meta itemprop=dateModified content="2007-05-01T23:53:00-05:00"><meta itemprop=wordCount content="729"><meta itemprop=keywords content></head><body><header><div id=avatar><a href=http://blog.jasonmeridth.com/><img src=/img/avatar.jpg alt="JM (Jason Meridth)"></a></div><div id=titletext><h2 id=title><a href=http://blog.jasonmeridth.com/>JM (Jason Meridth)</a></h2></div><div id=title-description><p id=subtitle>Learn, Converse, Share</p><div id=social><nav><ul><li><a href=https://github.com/jmeridth><i title=Github class="icons fab fa-github"></i></a></li><li><a href=mailto:jmeridth@gmail.com><i title=Email class="icons fas fa-envelope"></i></a></li><li><a href=https://linkedin.com/in/jmeridth><i title=LinkedIn class="icons fab fa-linkedin"></i></a></li><li><a href=/index.xml><i title=RSS class="icons fas fa-rss"></i></a></li><li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li></ul></nav></div></div><div id=mainmenu><nav><ul><li><a href=/>Home</a></li><li><a href=/posts>All Posts</a></li><li><a href=/about>About</a></li><li><a href=/tags>Tags</a></li><li><a href=/categories>Categories</a></li></ul></nav></div></header><main><div class=post><article><div class=post-header><div class=meta><div class=date><span class=day>01</span>
+<span class=rest>May 2007</span></div></div><div class=matter><h1 class=title>Installing Subversion on Ubuntu 7.04 (Feisty Fawn) Server</h1><p class=post-meta><span class=post-meta>&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
 &nbsp;| &nbsp;
-<i class="fas fa-book"></i>&nbsp;729&nbsp;words
-</span>
-</p>
-</div>
-</div>
-<div class=markdown>
-<p>This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network.  The next post will show how to set this up with svn+ssh, which is considered more secure.
-To install subversion, open a terminal and run the following command:</p>
-<p>sudo apt-get install subversion libapache2-svn</p>
-<p>We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space.</p>
-<p>sudo svnadmin create /home/svn</p>
-<p>Next we&rsquo;ll need to edit the configuration file for the subversion webdav module. You can use a different editor if you&rsquo;d like.</p>
-<p>sudo vim /etc/apache2/mods-enabled/dav_svn.conf</p>
-<p>The Location element in the configuration file dictates the root directory where subversion will be accessible from, for instance: <a href=http://www.server.com/svn target=_blank>http://www.server.com/svn</a></p>
-<p>&lt;Location /home/svn></p>
-<p>The DAV line needs to be uncommented to enable the dav module</p>
-<h1 id=uncomment-this-to-enable-the-repository>Uncomment this to enable the repository</h1>
-<p>DAV svn</p>
-<p>The SVNPath line should be set to the same place your created the repository with the svnadmin command.</p>
-<h1 id=set-this-to-the-path-to-your-repository>Set this to the path to your repository</h1>
-<p>SVNPath /home/svn</p>
-<p>The next section will let you turn on authentication. This is just basic authentication, so don&rsquo;t consider it extremely secure. The password file will be located where the AuthUserFile setting sets it to</p>
-<h1 id=uncomment-the-following-3-lines-to-enable-basic-authentication>Uncomment the following 3 lines to enable Basic Authentication</h1>
-<p>AuthType Basic
+<i class="fas fa-book"></i>&nbsp;729&nbsp;words</span></p></div></div><div class=markdown><p>This article covers installing subversion with the apache module so that it can be easily accessed from other systems on a public network.  The next post will show how to set this up with svn+ssh, which is considered more secure.
+To install subversion, open a terminal and run the following command:</p><p>sudo apt-get install subversion libapache2-svn</p><p>We&rsquo;re going to create the subversion repository in /svn, although you should choose a location that has a good amount of space.</p><p>sudo svnadmin create /home/svn</p><p>Next we&rsquo;ll need to edit the configuration file for the subversion webdav module. You can use a different editor if you&rsquo;d like.</p><p>sudo vim /etc/apache2/mods-enabled/dav_svn.conf</p><p>The Location element in the configuration file dictates the root directory where subversion will be accessible from, for instance: <a href=http://www.server.com/svn target=_blank>http://www.server.com/svn</a></p><p>&lt;Location /home/svn></p><p>The DAV line needs to be uncommented to enable the dav module</p><h1 id=uncomment-this-to-enable-the-repository>Uncomment this to enable the repository</h1><p>DAV svn</p><p>The SVNPath line should be set to the same place your created the repository with the svnadmin command.</p><h1 id=set-this-to-the-path-to-your-repository>Set this to the path to your repository</h1><p>SVNPath /home/svn</p><p>The next section will let you turn on authentication. This is just basic authentication, so don&rsquo;t consider it extremely secure. The password file will be located where the AuthUserFile setting sets it to</p><h1 id=uncomment-the-following-3-lines-to-enable-basic-authentication>Uncomment the following 3 lines to enable Basic Authentication</h1><p>AuthType Basic
 AuthName &ldquo;Subversion Repository&rdquo;
-AuthUserFile /etc/apache2/dav_svn.passwd</p>
-<p>To create a user on the repository use, the following command:</p>
-<p>sudo htpasswd2 -cm /etc/apache2/dav_svn.passwd </p>
-<p><strong>UPDATE: If using newer version of apache-utils, use the following (Thanks Ian - comment below)</strong></p>
-<p>sudo htpasswd -cm /etc/apache2/dav_svn.passwd </p>
-<p>Note that you should only use the -c option the FIRST time that you create a user. After that you will only want to use the -m option, which specifies MD5 encryption of the password, but doesn&rsquo;t recreate the file.</p>
-<p>Restart apache by running the following command:</p>
-<p>sudo /etc/init.d/apache2 restart</p>
-<p>Now if you go in your browser to <a href=http://www.server.com/svn target=_blank>http://www.server.com/svn</a>, you should see that the repository is enabled for anonymous read access, but commit access will require a username.
-<figure>
-<img src="http://www.edreaminghome.com/view_image.php?file_id=317&size=400" alt>
-</figure></p>
-<p>If you want to force all users to authenticate even for read access, add the following line right below the AuthUserFile line from above. Restart apache after changing this line.</p>
-<p><strong><em>Require valid-user</em></strong></p>
-<p>Now if you refresh your browser, you&rsquo;ll be prompted for your credentials.
+AuthUserFile /etc/apache2/dav_svn.passwd</p><p>To create a user on the repository use, the following command:</p><p>sudo htpasswd2 -cm /etc/apache2/dav_svn.passwd</p><p><strong>UPDATE: If using newer version of apache-utils, use the following (Thanks Ian - comment below)</strong></p><p>sudo htpasswd -cm /etc/apache2/dav_svn.passwd</p><p>Note that you should only use the -c option the FIRST time that you create a user. After that you will only want to use the -m option, which specifies MD5 encryption of the password, but doesn&rsquo;t recreate the file.</p><p>Restart apache by running the following command:</p><p>sudo /etc/init.d/apache2 restart</p><p>Now if you go in your browser to <a href=http://www.server.com/svn target=_blank>http://www.server.com/svn</a>, you should see that the repository is enabled for anonymous read access, but commit access will require a username.<figure><img src="http://www.edreaminghome.com/view_image.php?file_id=317&size=400" alt></figure></p><p>If you want to force all users to authenticate even for read access, add the following line right below the AuthUserFile line from above. Restart apache after changing this line.</p><p><strong><em>Require valid-user</em></strong></p><p>Now if you refresh your browser, you&rsquo;ll be prompted for your credentials.
 Welcome to the stability of Linux.
-Welcome to the best source control system out there.</p>
-<h2 id=comments>Comments</h2>
-<p><strong><a href=#12 title="2007-05-08 09:21:42">maarten</a>:</strong> Thanks for the information! An extra hint: don&rsquo;t forget to uncomment the closing tag at the end of the file /etc/apache2/mods-enabled/dav_svn.conf that corresponds to the opening tag</p>
-<p><strong><a href=#13 title="2007-05-11 20:49:31">Nexact</a>:</strong> Great Howto.</p>
-<p><strong><a href=#14 title="2007-05-15 12:55:11">poroimes</a>:</strong> And if you want to access your repository from <a href=http://www.server.com/svn target=_blank>http://www.server.com/svn</a>, change "" => ""</p>
-<p><strong><a href=#15 title="2007-05-15 13:21:45">poromies</a>:</strong> I noticed one more thing&mldr; If you want your repository to be authenticated remember to uncomment following lines from /etc/apache2/mods-enabled/dav_svn.conf too Require valid-user</p>
-<p><strong><a href=#16 title="2007-05-15 13:31:14">jmeridth</a>:</strong> Thanks for the input everyone. I don&rsquo;t claim to be an expert. All input is welcome.</p>
-<p><strong><a href=#17 title="2007-06-27 17:05:09">Shahryar Ghazi</a>:</strong> is accessing the repository through dav secure??</p>
-<p><strong><a href=#18 title="2007-08-19 14:57:40">Ian</a>:</strong> Just to clarify - the line sudo htpasswd2 -cm /etc/apache2/dav_svn.passwd should be sudo htpasswd -cm /etc/apache2/dav_svn.passwd in newer versions of apache2-utils</p>
-<p><strong><a href=#19 title="2007-09-17 14:35:05">UWeyeguy</a>:</strong> All I get is: Revision 0: / Powered by Subversion version 1.4.3 (r23084).</p>
-<p><strong><a href=#20 title="2007-09-21 02:05:08">Russ</a>:</strong> Me too. All I&rsquo;m getting is Revision 0: / Powered by Subversion version 1.4.3 (r23084).</p>
-<p><strong><a href=#21 title="2007-09-21 10:23:27">Jason Meridth</a>:</strong> Hopefully you were prompted for security (username/password). If not, please check your security setup again. Usually when you see that it means your subversion install was complete. Now start using the subversion command line operations to interact with your repsitory. Look here for more operations information: <a href=http://svnbook.red-bean.com/en/1.1/ch09.html target=_blank>http://svnbook.red-bean.com/en/1.1/ch09.html</a> The excellent resource out there: <a href=http://svnbook.red-bean.com/ target=_blank>http://svnbook.red-bean.com/</a></p>
-<p><strong><a href=#22 title="2007-09-21 14:10:49">Sean Chambers</a>:</strong> Here&rsquo;s another link that has some more information on setting up Trac for project management on Ubuntu and some other stuff. <a href=http://ariejan.net/2006/12/01/how-to-setup-a-ubuntu-development-server-part-1/ target=_blank>http://ariejan.net/2006/12/01/how-to-setup-a-ubuntu-development-server-part-1/</a> Good post Jason! I actually am running subversion at work on a VMWare Ubuntu server. At home I have a stand alone box that is running it with a self-signed SSL certificate because I can access it over the web</p>
-<p><strong><a href=#23 title="2007-09-21 15:08:26">Sean Chambers</a>:</strong> Whoops! Wrong link. the one about Trac is part two: <a href=http://ariejan.net/2006/12/02/how-to-setup-a-ubuntu-development-server-part-2/ target=_blank>http://ariejan.net/2006/12/02/how-to-setup-a-ubuntu-development-server-part-2/</a></p>
-<p><strong><a href=#24 title="2008-02-07 17:59:46">JDS</a>:</strong> If all you get is &ldquo;Revision 0: /&rdquo; then the thing, including Apache/WEBDAV SVN part, is working. However, there is nothing in your repository yet! A VERY IMPORTANT STEP: Immediately after creating a repository, import data into the repo. Follow the steps in the RedBean book, mentioned in other comments.</p>
-</div>
-</div>
-</article>
-</div>
-</main>
-<footer>
-© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae>Vitae</a> theme for <a href=https://gohugo.io>Hugo</a>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-38456568-3','auto'),ga('send','pageview'))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</footer><script src=/js/dark-mode.js></script>
-</body>
-</html>
+Welcome to the best source control system out there.</p><h2 id=comments>Comments</h2><p><strong><a href=#12 title="2007-05-08 09:21:42">maarten</a>:</strong> Thanks for the information! An extra hint: don&rsquo;t forget to uncomment the closing tag at the end of the file /etc/apache2/mods-enabled/dav_svn.conf that corresponds to the opening tag</p><p><strong><a href=#13 title="2007-05-11 20:49:31">Nexact</a>:</strong> Great Howto.</p><p><strong><a href=#14 title="2007-05-15 12:55:11">poroimes</a>:</strong> And if you want to access your repository from <a href=http://www.server.com/svn target=_blank>http://www.server.com/svn</a>, change "" => ""</p><p><strong><a href=#15 title="2007-05-15 13:21:45">poromies</a>:</strong> I noticed one more thing&mldr; If you want your repository to be authenticated remember to uncomment following lines from /etc/apache2/mods-enabled/dav_svn.conf too Require valid-user</p><p><strong><a href=#16 title="2007-05-15 13:31:14">jmeridth</a>:</strong> Thanks for the input everyone. I don&rsquo;t claim to be an expert. All input is welcome.</p><p><strong><a href=#17 title="2007-06-27 17:05:09">Shahryar Ghazi</a>:</strong> is accessing the repository through dav secure??</p><p><strong><a href=#18 title="2007-08-19 14:57:40">Ian</a>:</strong> Just to clarify - the line sudo htpasswd2 -cm /etc/apache2/dav_svn.passwd should be sudo htpasswd -cm /etc/apache2/dav_svn.passwd in newer versions of apache2-utils</p><p><strong><a href=#19 title="2007-09-17 14:35:05">UWeyeguy</a>:</strong> All I get is: Revision 0: / Powered by Subversion version 1.4.3 (r23084).</p><p><strong><a href=#20 title="2007-09-21 02:05:08">Russ</a>:</strong> Me too. All I&rsquo;m getting is Revision 0: / Powered by Subversion version 1.4.3 (r23084).</p><p><strong><a href=#21 title="2007-09-21 10:23:27">Jason Meridth</a>:</strong> Hopefully you were prompted for security (username/password). If not, please check your security setup again. Usually when you see that it means your subversion install was complete. Now start using the subversion command line operations to interact with your repsitory. Look here for more operations information: <a href=http://svnbook.red-bean.com/en/1.1/ch09.html target=_blank>http://svnbook.red-bean.com/en/1.1/ch09.html</a> The excellent resource out there: <a href=http://svnbook.red-bean.com/ target=_blank>http://svnbook.red-bean.com/</a></p><p><strong><a href=#22 title="2007-09-21 14:10:49">Sean Chambers</a>:</strong> Here&rsquo;s another link that has some more information on setting up Trac for project management on Ubuntu and some other stuff. <a href=http://ariejan.net/2006/12/01/how-to-setup-a-ubuntu-development-server-part-1/ target=_blank>http://ariejan.net/2006/12/01/how-to-setup-a-ubuntu-development-server-part-1/</a> Good post Jason! I actually am running subversion at work on a VMWare Ubuntu server. At home I have a stand alone box that is running it with a self-signed SSL certificate because I can access it over the web</p><p><strong><a href=#23 title="2007-09-21 15:08:26">Sean Chambers</a>:</strong> Whoops! Wrong link. the one about Trac is part two: <a href=http://ariejan.net/2006/12/02/how-to-setup-a-ubuntu-development-server-part-2/ target=_blank>http://ariejan.net/2006/12/02/how-to-setup-a-ubuntu-development-server-part-2/</a></p><p><strong><a href=#24 title="2008-02-07 17:59:46">JDS</a>:</strong> If all you get is &ldquo;Revision 0: /&rdquo; then the thing, including Apache/WEBDAV SVN part, is working. However, there is nothing in your repository yet! A VERY IMPORTANT STEP: Immediately after creating a repository, import data into the repo. Follow the steps in the RedBean book, mentioned in other comments.</p></div></div></article></div></main><footer>© Copyright notice | <a href=https://github.com/dataCobra/hugo-vitae target=_blank>Vitae</a> theme for <a href=https://gohugo.io target=_blank>Hugo</a>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-38456568-3","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></footer><script src=/js/dark-mode.js></script></body></html>
