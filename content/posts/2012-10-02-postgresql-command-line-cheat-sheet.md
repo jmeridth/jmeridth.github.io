@@ -8,4 +8,4 @@ tags:
 layout: post
 ---
 
-{% gist f2ad6b580ae18501c538 %}
+{{< gist jmeridth f2ad6b580ae18501c538 >}}
