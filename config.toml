@@ -22,7 +22,7 @@ googleAnalytics = "UA-38456568-3"
 
 [params]
 	# Enable dark mode as default
-	darkmode = true
+	darkmode = false
 
 	# Use homepage.md instead of a list of posts
 	homepage = false
