@@ -12,7 +12,7 @@ I’ve been in major transition the last couple months. I decided to leave San A
 
 You won’t regret it. I’ve worked with both guys twice now and it has truly been a pleasure.
 
-{{< gist id=eac742b1c77bf291335d >}}
+{{< gist jmeridth eac742b1c77bf291335d >}}
 
 Did I mention you get to work with [Github][4]? :)
 

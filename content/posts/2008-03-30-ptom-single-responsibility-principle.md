@@ -19,7 +19,7 @@ let's look at some .NET code.
 
 #### **Anti-SRP (Active Record)**
 
-Imagine you have a User entity that has a username and password property. I'm using the Castle Active Record libraries for this example. {{< gist 4542522 ptom_single_responsibility_example1.cs >}}
+Imagine you have a User entity that has a username and password property. I'm using the Castle Active Record libraries for this example. {{< gist jmeridth 4542522 "ptom_single_responsibility_example1.cs" >}}
 
 #### As you can see you use attributes to dictate how your properties map to columns in your database table. Your entity name usually matches your table name, when using just the ActiveRecord attribute with no explicit table name (i.e., [ActiveRecord("UserTableName")]
 
@@ -27,7 +27,7 @@ To save the user you would take an instantiated user and just call user.Save(); 
 
 #### **Translation to SRP**
 
-What I would normally do is have an architecture like the following: ![image](jasonmeridth/files/WindowsLiveWriter/PTOMSingleResponsibilityPrinciple_13E55/image_4.png) The UserRepository would be used by a web controller (I use monorail for my web projects), being passed a User instance, and Save(user) would be called. {{< gist 4542559 ptom_single_responsibility_example2.cs >}} So, what it boils down to is that the user class now knows nothing on how it is persisted to the database. SRP is one of the hardest principles to enforce because there is always room for refactoring out one class to multiple; each class has one responsibility. It is personal preference because class explosion does cause some people to become code zealots. One of my other favorite quotes lately is:
+What I would normally do is have an architecture like the following: ![image](jasonmeridth/files/WindowsLiveWriter/PTOMSingleResponsibilityPrinciple_13E55/image_4.png) The UserRepository would be used by a web controller (I use monorail for my web projects), being passed a User instance, and Save(user) would be called. {{< gist jmeridth 4542559 "ptom_single_responsibility_example2.cs" >}} So, what it boils down to is that the user class now knows nothing on how it is persisted to the database. SRP is one of the hardest principles to enforce because there is always room for refactoring out one class to multiple; each class has one responsibility. It is personal preference because class explosion does cause some people to become code zealots. One of my other favorite quotes lately is:
 
 > Always code as if the guy maintaining your code would be a violent psychopath and he knows where you live.
 

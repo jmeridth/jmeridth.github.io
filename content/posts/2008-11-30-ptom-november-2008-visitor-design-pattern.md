@@ -15,11 +15,11 @@ Visitor Design Pattern - _"_Represent an operation to be performed on the elemen
 
 ## C# Code
 
-Test Firsts (NUnit): {{< gist 1067984 >}} I have two test fixtures, one for hourly employees and one for full-time employees. Hopefully, via my rough version of Behavior Driven Development (BDD), you can read my tests without any problems. Implementation: {{< gist 1067988 >}} Please remember, this is "blog friendly" code. I would definitely break the visitor class apart into a few classes (i.e., WageCalculator, SickPayDeductionCalculator, etc).
+Test Firsts (NUnit): {{< gist jmeridth 1067984 >}} I have two test fixtures, one for hourly employees and one for full-time employees. Hopefully, via my rough version of Behavior Driven Development (BDD), you can read my tests without any problems. Implementation: {{< gist jmeridth 1067988 >}} Please remember, this is "blog friendly" code. I would definitely break the visitor class apart into a few classes (i.e., WageCalculator, SickPayDeductionCalculator, etc).
 
 ## Ruby Code
 
-Please understand that I'm a Ruby newbie and I'm petty sure there is a more "Ruby-ish" way to do this.__I've recently been placed on a Ruby team and I'm making the transition from the static language mind-set to the dynamic language mind-set. I do understand with mix-ins you can dynamically add functionality to a class based on context, so visitor may not be necessary at all. I'm still grokking that concept. I still believe in the Open/Closed principle, but it may be moot with dynamic languages. It's actually very exciting being a newbie developer again. It feeds my insatiable need to learn. Test (Using RSpec): {{< gist 1067994 >}} Implementation: {{< gist 1067996 >}}
+Please understand that I'm a Ruby newbie and I'm petty sure there is a more "Ruby-ish" way to do this.__I've recently been placed on a Ruby team and I'm making the transition from the static language mind-set to the dynamic language mind-set. I do understand with mix-ins you can dynamically add functionality to a class based on context, so visitor may not be necessary at all. I'm still grokking that concept. I still believe in the Open/Closed principle, but it may be moot with dynamic languages. It's actually very exciting being a newbie developer again. It feeds my insatiable need to learn. Test (Using RSpec): {{< gist jmeridth 1067994 >}} Implementation: {{< gist jmeridth 1067996 >}}
 
 ## What I Learned
 
