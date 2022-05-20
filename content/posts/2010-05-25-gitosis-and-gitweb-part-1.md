@@ -77,7 +77,7 @@ Now let’s install it:
 ~/src/gitosis $ python setup.py install
 ```
 
-{% gist 352769 %}
+{{< gist 352769 >}}
 
 Gitosis is now installed. Next steps are to create git user and handle a file permission on a git hook.
 
