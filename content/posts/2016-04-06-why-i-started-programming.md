@@ -16,14 +16,15 @@ I mentor a good number of younger software developers or aspiring software devel
 
 - The idea of learning another business industry so I could create software for them excited me.  Here are some of the industries I've learned through my career:
   - Banking
+  - Security (both digital and hardware)
   - Oil &amp; Gas
-  - Hosting
+  - Hosting/Cloud Providers
   - Medical
   - Daycare
   - Salon
   - Restaurant/Service
   - E-Commerce
-  - Sports Merchandise
-  - Home Security
+  - Sports (team and communication management)
+  - Construction
 
 [1]: https://en.wikipedia.org/wiki/QBasic#Easter_egg
