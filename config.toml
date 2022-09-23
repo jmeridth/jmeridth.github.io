@@ -1,8 +1,8 @@
 BaseURL = "http://blog.jasonmeridth.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "JM"
-title = "JM (Jason Meridth)"
+author = "Jason Meridth"
+title = "Jason Meridth"
 theme = "vitae"
 paginate = 5
 enableRobotsTXT = true
