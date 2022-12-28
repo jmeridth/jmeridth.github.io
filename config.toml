@@ -13,8 +13,6 @@ pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-googleAnalytics = "UA-38456568-3"
-
 [taxonomies]
 	tag = "tags"
 	category = "categories"
