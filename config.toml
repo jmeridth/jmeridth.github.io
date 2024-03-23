@@ -48,7 +48,7 @@ expiryDate = ["expiryDate"]
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "/img/avatar.jpg"
+	avatar = "/img/jmavatar.jpeg"
 
 	# Optional favicons for website
 	favicon = true
