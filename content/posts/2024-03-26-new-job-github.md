@@ -1,6 +1,6 @@
 ---
 url: /posts/new-job-github
-title: New Job: GitHub
+title: "New Job: GitHub"
 layout: post
 date: '2024-03-26 08:00:00'
 tags:
