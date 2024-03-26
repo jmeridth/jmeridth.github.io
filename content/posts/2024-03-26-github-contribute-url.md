@@ -2,7 +2,7 @@
 url: /posts/github-contribute-url
 title: GitHub Contribute URL
 layout: post
-date: '2024-03-26 12:33:00'
+date: '2024-03-26 00:33:00 -0500'
 tags:
 - open-source
 - github
