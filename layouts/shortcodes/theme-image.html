@@ -1,0 +1,10 @@
+{{if .Get 2 }}
+<a href="{{ index .Params 2 }}">
+{{ end }}
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="{{ index .Params 0 }}">
+    <img alt="GitHub Logo" width="50%" src="{{ index .Params 1}}">
+  </picture>
+{{if .Get 2 }}
+</a>
+{{ end }}

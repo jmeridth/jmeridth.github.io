@@ -1,9 +1,0 @@
-version: '3'
-services:
-  hugo:
-    container_name: blog
-    build: .
-    ports:
-      - 1313:1313
-    volumes:
-      - .:/src

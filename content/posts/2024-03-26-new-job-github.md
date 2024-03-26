@@ -8,12 +8,6 @@ tags:
 - github
 ---
 
-I have landed a new gig at GitHub.  I will be a Senior Software Engineer on the GitHub OSPO (Open Source Program Office) team.  I am super excited to be working with this team and this company.
+I have landed a new gig at [GitHub](https://github.com).  I will be a Senior Software Engineer on the [GitHub OSPO (Open Source Program Office) team](https://github.blog/2023-03-13-an-open-source-project-to-empower-ospos-everywhere/).  I am super excited to be working with this team and this company.
 
-<picture>
-    <a href="https://github.com">
-      <img align="center" alt="GitHub Logo" width="50%" src="https://raw.githubusercontent.com/jmeridth/jmeridth.github.io/main/static/img/github-logo.png">
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jmeridth/jmeridth.github.io/main/static/img/github-logo-light.png?raw=true">
-      <img alt="GitHub Logo" width="50%" src="https://raw.githubusercontent.com/jmeridth/jmeridth.github.io/main/static/img/github-logo-dark.png">
-    </a>
-</picture>
+{{< theme-image "/img/github-logo-light.png?raw=true" "/img/github-logo-dark.png" "https://github.com" >}}
