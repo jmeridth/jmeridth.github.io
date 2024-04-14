@@ -1,5 +1,5 @@
 ---
-name: Release Drafter
+name: Release Handler
 
 on:
   push:
@@ -13,7 +13,6 @@ jobs:
   main:
     permissions:
       contents: write
-      pull-requests: read
     name: Generate release notes
     runs-on: ubuntu-latest
     steps:
@@ -22,4 +21,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           config-name: release-drafter.yml
-          # publish: true
+          publish: true
