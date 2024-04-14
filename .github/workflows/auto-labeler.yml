@@ -16,6 +16,7 @@
   jobs:
     main:
       permissions:
+        contents: write
         pull-requests: write
       name: Auto label pull requests
       runs-on: ubuntu-latest
