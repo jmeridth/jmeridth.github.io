@@ -1,5 +1,5 @@
 ---
-name: Auto Labeler and Release Handler
+name: Release Handler
 
 on:
   push:
