@@ -20,7 +20,7 @@ jobs:
   main:
     permissions:
       contents: write
-      pull-requests: read
+      pull-requests: write
     name: Generate release notes
     runs-on: ubuntu-latest
     steps:
