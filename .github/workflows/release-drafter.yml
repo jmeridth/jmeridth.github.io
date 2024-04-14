@@ -12,12 +12,12 @@ permissions:
 jobs:
   main:
     permissions:
+      contents: write
       pull-requests: read
-      statuses: write
     name: Generate release notes
     runs-on: ubuntu-latest
     steps:
-      - uses: release-drafter/release-drafter@v5
+      - uses: release-drafter/release-drafter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
