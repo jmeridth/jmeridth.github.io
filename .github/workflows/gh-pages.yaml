@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
 
 jobs:
   deploy:
@@ -17,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
 

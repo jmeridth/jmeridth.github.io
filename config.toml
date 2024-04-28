@@ -14,6 +14,15 @@ pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
+[markup]
+  [markup.highlight]
+    codeFences = true
+    noClasses = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    style = "monokai"
+
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
 lastmod = ["lastmod", ":git", "date", "publishDate"]

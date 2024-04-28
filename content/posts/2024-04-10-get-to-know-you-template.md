@@ -12,4 +12,4 @@ I've been onboarding at [GitHub](https://github.com) for a few weeks now.  I've 
 
 ## Get To Know You Template
 
-{{< jm-gist jmeridth b9f83b84728e85f7734a526b81394bd3 >}}
+{{< gist jmeridth b9f83b84728e85f7734a526b81394bd3 >}}
