@@ -1,0 +1,7 @@
+{{- if .Site.Copyright }}
+<footer>
+    {{ with .Site.Copyright }}{{ . | markdownify }}{{ end }}
+</footer>
+{{- else }}
+{{- end -}}
+<script src="{{ relURL "js/dark-mode.js" }}"></script>

@@ -1,4 +1,6 @@
 ---
+name: label checker
+
 on:
   pull_request:
     types:
