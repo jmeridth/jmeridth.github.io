@@ -35,98 +35,25 @@ expiryDate = ["expiryDate"]
 	series = "series"
 
 [params]
-	# Enable dark mode as default
 	darkmode = false
-
-	# Use homepage.md instead of a list of posts
 	homepage = false
-
-	# Add meta keywords in head part (Site Keywords or Tags of Page)
 	keywords = ["jason meridth","meridth","jm","software developer"]
-
-	# Add meta description in head part
 	description = "I am a continuously learning software developer trying to not let best be the enemy of better."
-
-	# Add pagetitle to homepage <title> tag
 	pagetitle = "Learn, Converse, Share"
-
-	# Add a subtitle to your website
 	subtitle = "Learn, Converse, Share"
-
-	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
-
-	# Optional 80x80 avatar image.
 	avatar = "/img/jmavatar.jpeg"
-
-	# Optional favicons for website
 	favicon = true
-
-	# Add list of sections that should show up on the homepage
 	mainSections = ["posts"]
-
-	# Add list of Sections/Types that should no be considered by RSS
-	#nofeedSections = ["post"]
-
-	# Deactivate Taxonomies for specific page types
-	#disableTaxoTypes = [""]
-
-	# Custom CSS applied to default styles. (Path could be "static/css/")
-	#customcss = "css/custom.css"
-
-	# Show reading time on a post
 	readingTime = true
-
-	# Show word count on a post
 	wordCount = true
-
-	# Show author on a post (groups with readingTime and wordCount)
 	hideAuthor = true
 
-# Custom JavaScript
 [params.customjs]
-# enable Javascript by setting to true
 enabled = false
 
-# add a filepath (could be "static/js/")
-#src = "js/main.js"
-
-# specifies which referrer information to send when fetching the script
-#referrerpolicy = "no-referrer"
-
-# specifies that the script should not be executed in browsers supporting ES2015 modules
-#nomodule = false
-
-# Allows a browser to check for integrity to ensure the code hasn't been manipulated
-#integrity= ""
-
-# execute the script when page has finished parsing (external only)
-#defer = true
-
-# sets the mode of the request to an http cors request
-#crossorigin=true
-
-# executes the script asynchronously (external only)
-#async = true
-
-# Comments
 [params.comments]
-# Enable Comments with "true"
 enabled = false
-
-# Comment provider:
-#   disqus (https://disqus.com)
-#   commento (https://commento.io)
-#engine = "disqus"
-
-# Content types to disable comments on.
-#disableOnTypes = ["page"]
-
-[params.comments.disqus]
-#shortname = "" # Paste the shortname from your Disqus dashboard.
-
-[params.comments.commento]
-#host = "" # Paste the domain of you commento.io system
 
 # Navigation
 [[menu.main]]
