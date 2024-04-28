@@ -15,7 +15,10 @@ jobs:
         echo The PR was merged
         echo ${{ contains(github.event.pull_request.labels.*.name, 'ready-for-review') }}
   if_labelled:
-    if: contains(fromJson('["major", "minor", "release"]'), github.event.pull_request.labels.*.name)
+    if: |
+      contains(github.event.pull_request.labels.*.name, 'major') ||
+      contains(github.event.pull_request.labels.*.name, 'minor') ||
+      contains(github.event.pull_request.labels.*.name, 'release')
     runs-on: ubuntu-latest
     steps:
     - run: |
