@@ -1,4 +1,4 @@
-BaseURL = "http://blog.jasonmeridth.com/"
+BaseURL = "https://blog.jasonmeridth.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "Jason Meridth"
