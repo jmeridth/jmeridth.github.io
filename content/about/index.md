@@ -10,4 +10,4 @@ I am a continually learning and accomplished software developer with passion in 
 
 I reserve the right to change my mind upon obtaining more information.
 
-[Why I Started Programming](../posts/2016-04-06-why-i-started-programming.md)
+[Why I Started Programming](/posts/why-i-started-programming/)
