@@ -1,5 +1,0 @@
-{{- if eq site.Params.comments.engine "disqus" }}
-{{ partial "comments/disqus.html" . }}
-{{- else if eq site.Params.comments.engine "commento" }}
-{{ partial "comments/commento.html" . }}
-{{- end }}
