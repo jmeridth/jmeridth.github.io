@@ -10,4 +10,4 @@ Then [cmd|ctrl]+P -> Run Task -> Serve or Serve With Drafts
 
 ## Production
 
-[blog.jasonmeridth.com](http://blog.jasonmeridth.com)
+[jmeridth.com](http://jmeridth.com)
