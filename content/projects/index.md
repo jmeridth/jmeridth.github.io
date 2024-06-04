@@ -7,7 +7,7 @@ permalink: /projects/
 Projects that I currently maintain:
 
 - [Argo Helm](https://github.com/argoproj/argo-helm)
-= [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
+- [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
 - [Issue-Metrics GitHub Action](https://github.com/github/issue-metrics)
 - [Evergreen GitHub Action](https://github.com/github/evergreen)
 - [Cleanowners GitHub Action](https://github.com/github/cleanowners)
