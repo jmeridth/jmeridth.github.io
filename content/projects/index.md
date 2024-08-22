@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-Projects that I currently maintain:
+Projects that I currently contribute to:
 
 - [Argo Helm](https://github.com/argoproj/argo-helm)
 - [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
