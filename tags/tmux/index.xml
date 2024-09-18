@@ -1,5 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tmux on Learn, Converse, Share</title><link>http://jmeridth.com/tags/tmux/</link><description>Recent content in Tmux on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 26 Jan 2015 08:46:04 -0600</lastBuildDate><atom:link href="http://jmeridth.com/tags/tmux/index.xml" rel="self" type="application/rss+xml"/><item><title>Copying Text With Mouse In TMUX</title><link>http://jmeridth.com/posts/copying-text-with-mouse-in-tmux/</link><pubDate>Mon, 26 Jan 2015 08:46:04 -0600</pubDate><guid>http://jmeridth.com/posts/copying-text-with-mouse-in-tmux/</guid><description>TL;DR Hold down shift key and select text with left mouse button. This will copy to clipboard. Then hold down the shift key again and click the middle button on your mouse. Voila!
-Long version: After finally moving over to Ubuntu as my native operating system, I&amp;rsquo;ve been using the default Terminal application for development. I run my weechat IRC session on a remote node in TMUX so I can detach/reattach at will and stay connected.</description></item><item><title>TMUX Cheat Sheet</title><link>http://jmeridth.com/posts/tmux-cheat-sheet/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/tmux-cheat-sheet/</guid><description>Install TMUX
-sudo apt-get install tmux personal config file is at ~/.tmux.conf
-change prefix to ctrl-a instead of default ctrl-b (easier on my hands)
-unbind C-b set -g prefix C-a Outside of session Link to heading tmux list-sessions List all sessions tmux list-keys List all key bindings tmux list-commands List all commands tmux source-file ~/.tmux.conf Reload TMUX conf file tmux a -t session_name Attach to named session Inside of session Link to heading Ctrl-a, new -s session_name Create new named session Ctrl-a, c Create new window Ctrl-a, , Rename window Ctrl-a, w List windows Ctrl-a, l Move to previously selected window Ctrl-a, n Move to next window Ctrl-a, p Move to previous window Ctrl-a, d Leave session Ctrl-a, s List sessions - default, if not mapped elsewhere Ctrl-a, ?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tmux on Learn, Converse, Share</title><link>http://jmeridth.com/tags/tmux/</link><description>Recent content in Tmux on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 26 Jan 2015 08:46:04 -0600</lastBuildDate><atom:link href="http://jmeridth.com/tags/tmux/index.xml" rel="self" type="application/rss+xml"/><item><title>Copying Text With Mouse In TMUX</title><link>http://jmeridth.com/posts/copying-text-with-mouse-in-tmux/</link><pubDate>Mon, 26 Jan 2015 08:46:04 -0600</pubDate><guid>http://jmeridth.com/posts/copying-text-with-mouse-in-tmux/</guid><description>&lt;p>TL;DR
+Hold down shift key and select text with left mouse button. This will copy to clipboard. Then hold down the shift key again and click the middle button on your mouse. Voila!&lt;/p>
+&lt;p>Long version:
+After finally moving over to Ubuntu as my native operating system, I&amp;rsquo;ve been using the default Terminal application for development. I run my weechat IRC session on a remote node in TMUX so I can detach/reattach at will and stay connected. I&amp;rsquo;m using ZNC as my bounce also in case the tmux session or weechat crashes. This means it stays connected and will replay anything I missed while disconnected. Anyway, I have had issues with copy/paste in the Terminal app, especially when my development sessions are in TMUX. I&amp;rsquo;ve been using Ctrl+Shift and selecting text and it has been working, but has been adding a newline on the end when I use Ctrl+Shift+V (paste). Hodling down the shift key was the trick. Hold down the shift key and select text with left mouse button. This will copy to clipboard. Then hold down the shift key again and click the middle button on your mouse. This will paste the text WITHOUT a newline.&lt;/p></description></item><item><title>TMUX Cheat Sheet</title><link>http://jmeridth.com/posts/tmux-cheat-sheet/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/tmux-cheat-sheet/</guid><description>&lt;p>Install TMUX&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get install tmux
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>personal config file is at ~/.tmux.conf&lt;/p>
+&lt;p>change prefix to ctrl-a instead of default ctrl-b (easier on my hands)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">unbind C-b
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> -g prefix C-a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="outside-of-session">
+ Outside of session
+ &lt;a class="heading-link" href="#outside-of-session">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>tmux list-sessions&lt;/strong> List all sessions&lt;/li>
+&lt;li>&lt;strong>tmux list-keys&lt;/strong> List all key bindings&lt;/li>
+&lt;li>&lt;strong>tmux list-commands&lt;/strong> List all commands&lt;/li>
+&lt;li>&lt;strong>tmux source-file ~/.tmux.conf&lt;/strong> Reload TMUX conf file&lt;/li>
+&lt;li>&lt;strong>tmux a -t session_name&lt;/strong> Attach to named session&lt;/li>
+&lt;/ul>
+&lt;h3 id="inside-of-session">
+ Inside of session
+ &lt;a class="heading-link" href="#inside-of-session">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Ctrl-a, new -s session_name&lt;/strong> Create new named session&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, c&lt;/strong> Create new window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, ,&lt;/strong> Rename window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, w&lt;/strong> List windows&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, l&lt;/strong> Move to previously selected window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, n&lt;/strong> Move to next window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, p&lt;/strong> Move to previous window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, d&lt;/strong> Leave session&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, s&lt;/strong> List sessions - default, if not mapped elsewhere&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, ?&lt;/strong> List all keybindings&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, %&lt;/strong> Split into vertical panes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, ”&lt;/strong> Split into horizontal panes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, {or}&lt;/strong> Switch between panes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyUp&lt;/strong> Switch to pane above&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyDown&lt;/strong> Switch to pane below&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyLeft&lt;/strong> Switch to pane to the left&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyRight&lt;/strong> Switch to pane to the right&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, space&lt;/strong> Make each pane equal sizes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, s&lt;/strong> Sync sessions - what you type shows in all &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.tmux.conf#L13" class="external-link" target="_blank" rel="noopener">mapping&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

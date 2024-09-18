@@ -1,11 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cli on Learn, Converse, Share</title><link>http://jmeridth.com/tags/cli/</link><description>Recent content in Cli on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 19 Apr 2016 15:36:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Personal VIM Cheatsheet</title><link>http://jmeridth.com/posts/personal-vim-cheatsheet/</link><pubDate>Tue, 19 Apr 2016 15:36:00 -0500</pubDate><guid>http://jmeridth.com/posts/personal-vim-cheatsheet/</guid><description>Originally posted on 03-03-2014 and continually updated
-Will be adding to this post as I learn/remember shortcuts
-. - repeat last command in normal mode @: then @@ - repeat last command entered with : source # - find all occurances of the word I&amp;rsquo;m currently on dfc - delete everything including the letter &amp;lsquo;c&amp;rsquo; dtc - delete everything up to the letter &amp;lsquo;c&amp;rsquo; :e! - reload current file (typically after doing a git pull) :b# - go back to previous buffer shift+h - go to top of screen shift+m - go to middle of screen shift+l - go to bottom of screen ctrl+v [h|j|k|l] - highlight individual items (great for highlighting column(s) gUiw - capitalize the current word gUU - capitalize current line vU - capitalize current character guiw - lowercase the current word guu - lowercase the current line vu - lowercase current character [num]j - go down num lines from current line [num]k - go up num lines from current line ctrl+O - jump back to previous (older) location in file info ctrl+I - jump forward to next (newer) location in file info ctrl+w + [H,J,K,L] - move current window to the far left, bottom, top or right keybindings I use all the time via mappgings in my .</description></item><item><title>Meta keys with iTerm and Weechat</title><link>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</link><pubDate>Tue, 14 Jul 2015 10:12:00 -0500</pubDate><guid>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</guid><description>Found this tip today about how to ensure your iTerm console sends +Esc to weechat for the meta keys to work properly.
-To make alt key bindings behave well for Mac OS X iTerm2, go to Preferences-&amp;gt;Profiles-&amp;gt;Keys and click +Esc radio button for option keys.
-I like to use meta+c to clear a buffer and meta+x to close a buffer. meta for me is the Alt key. Here is the keybindings in my .</description></item><item><title>Weechat keyboard shortcuts</title><link>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</link><pubDate>Fri, 14 Mar 2014 23:52:39 -0500</pubDate><guid>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</guid><description>I&amp;rsquo;ve switched from using irssi to Weechat since I rejoined the ranks as a Racker.
-Here is my current weechat.conf file
-Some of the ones I use often:
-ctrl+h - window left ctrl+j - window down ctrl+k - window up ctrl+l - window right ctrl+z - window zoom (make current small window full screen) ctrl+n - next buffer ctrl+p - previous buffer ctrl+y - clipboard paste ctrl+r - search ctrl+j - stop search normal commands not included with my weechat.</description></item><item><title>How to Run a Single Test With Tox</title><link>http://jmeridth.com/posts/how-to-run-a-single-test-with-tox/</link><pubDate>Fri, 07 Mar 2014 04:49:53 -0600</pubDate><guid>http://jmeridth.com/posts/how-to-run-a-single-test-with-tox/</guid><description>I have to run a single python test once in a while and keep forgetting how to do it with Tox.
-Here it is:
-tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name Hope this helps someone else.
-Happy bit twiddling.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cli on Learn, Converse, Share</title><link>http://jmeridth.com/tags/cli/</link><description>Recent content in Cli on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 19 Apr 2016 15:36:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/cli/index.xml" rel="self" type="application/rss+xml"/><item><title>Personal VIM Cheatsheet</title><link>http://jmeridth.com/posts/personal-vim-cheatsheet/</link><pubDate>Tue, 19 Apr 2016 15:36:00 -0500</pubDate><guid>http://jmeridth.com/posts/personal-vim-cheatsheet/</guid><description>&lt;p>&lt;em>Originally posted on 03-03-2014 and continually updated&lt;/em>&lt;/p>
+&lt;p>Will be adding to this post as I learn/remember shortcuts&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>.&lt;/code> - repeat last command in normal mode&lt;/li>
+&lt;li>&lt;code>@:&lt;/code> then &lt;code>@@&lt;/code> - repeat last command entered with &lt;code>:&lt;/code> &lt;a href="http://vim.wikia.com/wiki/Repeat_last_colon_command" class="external-link" target="_blank" rel="noopener">source&lt;/a>&lt;/li>
+&lt;li>&lt;code>#&lt;/code> - find all occurances of the word I&amp;rsquo;m currently on&lt;/li>
+&lt;li>&lt;code>dfc&lt;/code> - delete everything including the letter &amp;lsquo;c&amp;rsquo;&lt;/li>
+&lt;li>&lt;code>dtc&lt;/code> - delete everything up to the letter &amp;lsquo;c&amp;rsquo;&lt;/li>
+&lt;li>&lt;code>:e!&lt;/code> - reload current file (typically after doing a git pull)&lt;/li>
+&lt;li>&lt;code>:b#&lt;/code> - go back to previous buffer&lt;/li>
+&lt;li>shift+h - go to top of screen&lt;/li>
+&lt;li>shift+m - go to middle of screen&lt;/li>
+&lt;li>shift+l - go to bottom of screen&lt;/li>
+&lt;li>ctrl+v &lt;code>[h|j|k|l]&lt;/code> - highlight individual items (great for highlighting column(s)&lt;/li>
+&lt;li>&lt;code>gUiw&lt;/code> - capitalize the current word&lt;/li>
+&lt;li>&lt;code>gUU&lt;/code> - capitalize current line&lt;/li>
+&lt;li>&lt;code>vU&lt;/code> - capitalize current character&lt;/li>
+&lt;li>&lt;code>guiw&lt;/code> - lowercase the current word&lt;/li>
+&lt;li>&lt;code>guu&lt;/code> - lowercase the current line&lt;/li>
+&lt;li>&lt;code>vu&lt;/code> - lowercase current character&lt;/li>
+&lt;li>&lt;code>[num]j&lt;/code> - go down num lines from current line&lt;/li>
+&lt;li>&lt;code>[num]k&lt;/code> - go up num lines from current line&lt;/li>
+&lt;li>ctrl+O - jump back to previous (older) location in file &lt;a href="http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations" class="external-link" target="_blank" rel="noopener">info&lt;/a>&lt;/li>
+&lt;li>ctrl+I - jump forward to next (newer) location in file &lt;a href="http://vim.wikia.com/wiki/Jumping_to_previously_visited_locations" class="external-link" target="_blank" rel="noopener">info&lt;/a>&lt;/li>
+&lt;li>ctrl+w + [H,J,K,L] - move current window to the far left, bottom, top or right&lt;/li>
+&lt;/ul>
+&lt;p>keybindings I use all the time via mappgings in my &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/vimrc" class="external-link" target="_blank" rel="noopener">.vimrc&lt;/a>&lt;/p></description></item><item><title>Meta keys with iTerm and Weechat</title><link>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</link><pubDate>Tue, 14 Jul 2015 10:12:00 -0500</pubDate><guid>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</guid><description>&lt;p>Found &lt;a href="https://github.com/davidxia/weechat/blob/9f18f8fbff9dcf424d4a6136d446f83631fbd021/README.md#L20" class="external-link" target="_blank" rel="noopener">this&lt;/a> tip today about how to ensure your iTerm console sends &lt;code>+Esc&lt;/code> to weechat for the meta keys to work properly.&lt;/p>
+&lt;blockquote>
+&lt;p>To make alt key bindings behave well for Mac OS X iTerm2, go to Preferences-&amp;gt;Profiles-&amp;gt;Keys and click +Esc radio button for option keys.&lt;/p>
+&lt;/blockquote>
+&lt;p>I like to use meta+c to clear a buffer and meta+x to close a buffer. meta for me is the &lt;code>Alt&lt;/code> key. &lt;a href="https://github.com/jmeridth/myansible/commit/ffce0dcf38667e6f5ab7e18b6d7471a37b398b14" class="external-link" target="_blank" rel="noopener">Here&lt;/a> is the keybindings in my &lt;code>.weechat.conf&lt;/code>.&lt;/p></description></item><item><title>Weechat keyboard shortcuts</title><link>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</link><pubDate>Fri, 14 Mar 2014 23:52:39 -0500</pubDate><guid>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</guid><description>&lt;p>I&amp;rsquo;ve switched from using irssi to &lt;a href="http://weechat.org" class="external-link" target="_blank" rel="noopener">Weechat&lt;/a> since I rejoined the ranks as a &lt;a href="http://www.rackspace.com" class="external-link" target="_blank" rel="noopener">Racker&lt;/a>.&lt;/p>
+&lt;p>&lt;a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf" class="external-link" target="_blank" rel="noopener">Here&lt;/a> is my current weechat.conf file&lt;/p>
+&lt;p>Some of the ones I use often:&lt;/p>
+&lt;ul>
+&lt;li>ctrl+h - window left&lt;/li>
+&lt;li>ctrl+j - window down&lt;/li>
+&lt;li>ctrl+k - window up&lt;/li>
+&lt;li>ctrl+l - window right&lt;/li>
+&lt;li>ctrl+z - window zoom (make current small window full screen)&lt;/li>
+&lt;li>ctrl+n - next buffer&lt;/li>
+&lt;li>ctrl+p - previous buffer&lt;/li>
+&lt;li>ctrl+y - clipboard paste&lt;/li>
+&lt;li>ctrl+r - search&lt;/li>
+&lt;li>ctrl+j - stop search&lt;/li>
+&lt;/ul>
+&lt;p>normal commands not included with my weechat.conf that I use:&lt;/p></description></item><item><title>How to Run a Single Test With Tox</title><link>http://jmeridth.com/posts/how-to-run-a-single-test-with-tox/</link><pubDate>Fri, 07 Mar 2014 04:49:53 -0600</pubDate><guid>http://jmeridth.com/posts/how-to-run-a-single-test-with-tox/</guid><description>&lt;p>I have to run a single python test once in a while and keep forgetting how to do it with Tox.&lt;/p>
+&lt;p>Here it is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Hope this helps someone else.&lt;/p>
+&lt;p>Happy bit twiddling.&lt;/p></description></item></channel></rss>

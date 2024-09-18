@@ -1,17 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Learn, Converse, Share</title><link>http://jmeridth.com/tags/tools/</link><description>Recent content in Tools on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 23 Mar 2013 00:00:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Run a Specific RSpec Spec</title><link>http://jmeridth.com/posts/run-a-specific-rspec-spec/</link><pubDate>Sat, 23 Mar 2013 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/run-a-specific-rspec-spec/</guid><description>Update: You can specify a line number to run in your spec if you&amp;rsquo;re wanting to run a specific spec. Example: rspec spec/controllers/sessions_controller_spec.rb:90
-Tired of looking this up and want to use my writing part of my brain to blog it:
-rake spec SPEC=spec/controllers/sessions_controller_spec.rb \ SPEC_OPTS=&amp;#34;-e \&amp;#34;should log in with cookie\&amp;#34;&amp;#34; This is importatnt to me while coding Rails because if I just run
-rspec specs/controllers/sessions_controller_spec.rb the test database isn’t cleared out.</description></item><item><title>Set VIM as Default Editor</title><link>http://jmeridth.com/posts/set-vim-as-default-editor/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/set-vim-as-default-editor/</guid><description>Environment: Ubuntu
-sudo update-alternatives --config editor OUTPUT: There are 4 choices for the alternative editor (providing /usr/bin/editor). Selection Path Priority Status ------------------------------------------------------------ * 0 /bin/nano 40 auto mode 1 /bin/ed -100 manual mode 2 /bin/nano 40 manual mode 3 /usr/bin/vim.basic 30 manual mode 4 /usr/bin/vim.tiny 10 manual mode Press enter to keep the current choice[*], or type selection number: 3 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in manual mode</description></item><item><title>Setup RVM and Ruby</title><link>http://jmeridth.com/posts/setup-rvm-and-ruby/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/setup-rvm-and-ruby/</guid><description>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….
-Install curl
-sudo apt-get install curl Install RVM (forgot this, thanks Jasdeep)
-curl -L get.rvm.io | bash -s stable --auto Reload .bash_profile
-. ~/.bash_profile Run rvm requirements to see what needs to be installed
-rvm requirements ... Requirements for ubuntu/12.10/x86_64 NOTE: &amp;#39;ruby&amp;#39; represents Matz&amp;#39;s Ruby Interpreter (MRI) (1.</description></item><item><title>TMUX Cheat Sheet</title><link>http://jmeridth.com/posts/tmux-cheat-sheet/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/tmux-cheat-sheet/</guid><description>Install TMUX
-sudo apt-get install tmux personal config file is at ~/.tmux.conf
-change prefix to ctrl-a instead of default ctrl-b (easier on my hands)
-unbind C-b set -g prefix C-a Outside of session Link to heading tmux list-sessions List all sessions tmux list-keys List all key bindings tmux list-commands List all commands tmux source-file ~/.tmux.conf Reload TMUX conf file tmux a -t session_name Attach to named session Inside of session Link to heading Ctrl-a, new -s session_name Create new named session Ctrl-a, c Create new window Ctrl-a, , Rename window Ctrl-a, w List windows Ctrl-a, l Move to previously selected window Ctrl-a, n Move to next window Ctrl-a, p Move to previous window Ctrl-a, d Leave session Ctrl-a, s List sessions - default, if not mapped elsewhere Ctrl-a, ?</description></item><item><title>Pair Programming with Screen</title><link>http://jmeridth.com/posts/pair-programming-with-screen/</link><pubDate>Thu, 04 Feb 2010 16:44:00 -0600</pubDate><guid>http://jmeridth.com/posts/pair-programming-with-screen/</guid><description>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using NERDTree (example) and vim.rails (cheat sheet) by @tpope has made my VIM experience much more pleasant..
-Checkout my vim files on github
-This post is for me to remember how to use Gnu screen to pair program.</description></item><item><title>TextMate and Community Server 2008.5</title><link>http://jmeridth.com/posts/textmate-and-community-server-2008-5/</link><pubDate>Thu, 21 May 2009 08:32:38 -0500</pubDate><guid>http://jmeridth.com/posts/textmate-and-community-server-2008-5/</guid><description>This is my first blog post from TextMate on my Mac. I&amp;rsquo;m using the HTML formatting. I will try the markdown and textile versions later. The key to getting this working with Community Server was when you click &amp;ldquo;Bundles-&amp;gt;Blogging-&amp;gt;Setup Blogs&amp;rdquo; and the following template shows up:
-# List of Blogs # # Enter a blog name followed by the endpoint URL # # Blog Name URL you put the following underneath the commented header</description></item><item><title>WinSnap</title><link>http://jmeridth.com/posts/winsnap/</link><pubDate>Tue, 02 Jan 2007 00:52:00 -0600</pubDate><guid>http://jmeridth.com/posts/winsnap/</guid><description>I&amp;rsquo;ve used a few screen shot capturing tools and have even used the famous Alt-PrintScreen.
-The best FREE tool I&amp;rsquo;ve used lately is WinSnap.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Learn, Converse, Share</title><link>http://jmeridth.com/tags/tools/</link><description>Recent content in Tools on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 23 Mar 2013 00:00:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Run a Specific RSpec Spec</title><link>http://jmeridth.com/posts/run-a-specific-rspec-spec/</link><pubDate>Sat, 23 Mar 2013 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/run-a-specific-rspec-spec/</guid><description>&lt;p>&lt;strong>Update:&lt;/strong> You can specify a line number to run in your spec if you&amp;rsquo;re wanting to run a specific spec. Example: &lt;code>rspec spec/controllers/sessions_controller_spec.rb:90&lt;/code>&lt;/p>
+&lt;p>Tired of looking this up and want to use my writing part of my brain to blog it:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rake spec &lt;span class="nv">SPEC&lt;/span>&lt;span class="o">=&lt;/span>spec/controllers/sessions_controller_spec.rb &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> &lt;span class="nv">SPEC_OPTS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;-e \&amp;#34;should log in with cookie\&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is importatnt to me while coding Rails because if I just run&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rspec specs/controllers/sessions_controller_spec.rb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>the test database isn’t cleared out. By running &lt;code>rake spec&lt;/code> I get that.&lt;/p></description></item><item><title>Set VIM as Default Editor</title><link>http://jmeridth.com/posts/set-vim-as-default-editor/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/set-vim-as-default-editor/</guid><description>&lt;p>Environment: Ubuntu&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo update-alternatives --config editor
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">OUTPUT:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are &lt;span class="m">4&lt;/span> choices &lt;span class="k">for&lt;/span> the alternative editor &lt;span class="o">(&lt;/span>providing /usr/bin/editor&lt;span class="o">)&lt;/span>.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Selection Path Priority Status
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">------------------------------------------------------------
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">* &lt;span class="m">0&lt;/span> /bin/nano &lt;span class="m">40&lt;/span> auto mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">1&lt;/span> /bin/ed -100 manual mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">2&lt;/span> /bin/nano &lt;span class="m">40&lt;/span> manual mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">3&lt;/span> /usr/bin/vim.basic &lt;span class="m">30&lt;/span> manual mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="m">4&lt;/span> /usr/bin/vim.tiny &lt;span class="m">10&lt;/span> manual mode
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Press enter to keep the current choice&lt;span class="o">[&lt;/span>*&lt;span class="o">]&lt;/span>, or &lt;span class="nb">type&lt;/span> selection number: &lt;span class="m">3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o">(&lt;/span>editor&lt;span class="o">)&lt;/span> in manual mode
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Setup RVM and Ruby</title><link>http://jmeridth.com/posts/setup-rvm-and-ruby/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/setup-rvm-and-ruby/</guid><description>&lt;p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p>
+&lt;p>Install curl&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get install curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install RVM (forgot this, thanks &lt;a href="http://twitter.com/jssingh" class="external-link" target="_blank" rel="noopener">Jasdeep&lt;/a>)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -L get.rvm.io &lt;span class="p">|&lt;/span> bash -s stable --auto
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Reload .bash_profile&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">. ~/.bash_profile
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run rvm requirements to see what needs to be installed&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rvm requirements
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Requirements &lt;span class="k">for&lt;/span> ubuntu/12.10/x86_64
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NOTE: &lt;span class="s1">&amp;#39;ruby&amp;#39;&lt;/span> represents Matz&lt;span class="s1">&amp;#39;s Ruby Interpreter (MRI) (1.8.X, 1.9.X)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> This is the *original* / standard Ruby Language Interpreter
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> &amp;#39;&lt;/span>ree&lt;span class="s1">&amp;#39; represents Ruby Enterprise Edition
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> &amp;#39;&lt;/span>rbx&lt;span class="err">&amp;#39;&lt;/span> represents Rubinius
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Additional Dependencies:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For update-system:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For rvm:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get --no-install-recommends install bash curl git patch bzip2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For ruby:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get --no-install-recommends install build-essential openssl libreadline6 libreadline6-dev &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>libxml2-dev libxslt-dev autoconf libc6-dev libgdbm-dev ncurses-dev automake libtool bison &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>subversion pkg-config libffi-dev
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For jruby:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get --no-install-recommends install curl g%2B%2B openjdk-6-jre-headless
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install everything you need&lt;/p></description></item><item><title>TMUX Cheat Sheet</title><link>http://jmeridth.com/posts/tmux-cheat-sheet/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/tmux-cheat-sheet/</guid><description>&lt;p>Install TMUX&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get install tmux
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>personal config file is at ~/.tmux.conf&lt;/p>
+&lt;p>change prefix to ctrl-a instead of default ctrl-b (easier on my hands)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">unbind C-b
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">set&lt;/span> -g prefix C-a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="outside-of-session">
+ Outside of session
+ &lt;a class="heading-link" href="#outside-of-session">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>tmux list-sessions&lt;/strong> List all sessions&lt;/li>
+&lt;li>&lt;strong>tmux list-keys&lt;/strong> List all key bindings&lt;/li>
+&lt;li>&lt;strong>tmux list-commands&lt;/strong> List all commands&lt;/li>
+&lt;li>&lt;strong>tmux source-file ~/.tmux.conf&lt;/strong> Reload TMUX conf file&lt;/li>
+&lt;li>&lt;strong>tmux a -t session_name&lt;/strong> Attach to named session&lt;/li>
+&lt;/ul>
+&lt;h3 id="inside-of-session">
+ Inside of session
+ &lt;a class="heading-link" href="#inside-of-session">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Ctrl-a, new -s session_name&lt;/strong> Create new named session&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, c&lt;/strong> Create new window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, ,&lt;/strong> Rename window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, w&lt;/strong> List windows&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, l&lt;/strong> Move to previously selected window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, n&lt;/strong> Move to next window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, p&lt;/strong> Move to previous window&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, d&lt;/strong> Leave session&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, s&lt;/strong> List sessions - default, if not mapped elsewhere&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, ?&lt;/strong> List all keybindings&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, %&lt;/strong> Split into vertical panes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, ”&lt;/strong> Split into horizontal panes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, {or}&lt;/strong> Switch between panes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyUp&lt;/strong> Switch to pane above&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyDown&lt;/strong> Switch to pane below&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyLeft&lt;/strong> Switch to pane to the left&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, KeyRight&lt;/strong> Switch to pane to the right&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, space&lt;/strong> Make each pane equal sizes&lt;/li>
+&lt;li>&lt;strong>Ctrl-a, s&lt;/strong> Sync sessions - what you type shows in all &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/.tmux.conf#L13" class="external-link" target="_blank" rel="noopener">mapping&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Pair Programming with Screen</title><link>http://jmeridth.com/posts/pair-programming-with-screen/</link><pubDate>Thu, 04 Feb 2010 16:44:00 -0600</pubDate><guid>http://jmeridth.com/posts/pair-programming-with-screen/</guid><description>&lt;p>I’ve decided, once again, to make the jump back to VIM full-time. It will help my bash-fu become stronger and also ensure that I can pair program with any other dev. TextMate is awesome for personal development, but using &lt;a href="http://http//www.vim.org/scripts/script.php?script_id=1658" class="external-link" target="_blank" rel="noopener">NERDTree&lt;/a> (&lt;a href="http://www.flickr.com/photos/30496122@N07/2862367534/sizes/o/" class="external-link" target="_blank" rel="noopener">example&lt;/a>) and &lt;a href="http://rails.vim.tpope.net/" class="external-link" target="_blank" rel="noopener">vim.rails&lt;/a> (&lt;a href="http://cheat.errtheblog.com/s/rails_vim/" class="external-link" target="_blank" rel="noopener">cheat sheet&lt;/a>) by &lt;a href="http://twitter.com/tpope" class="external-link" target="_blank" rel="noopener">@tpope&lt;/a> has made my VIM experience much more pleasant..&lt;/p>
+&lt;p>Checkout my vim files on &lt;a href="http://github.com/armmer/vim_files" class="external-link" target="_blank" rel="noopener">github&lt;/a>&lt;/p>
+&lt;p>This post is for me to remember how to use &lt;a href="http://www.gnu.org/software/screen/" class="external-link" target="_blank" rel="noopener">Gnu screen&lt;/a> to pair program. side note: &lt;a href="http://cheat.errtheblog.com/s/screen/" class="external-link" target="_blank" rel="noopener">here&lt;/a> is the best cheat sheet on Gnu Screen.&lt;/p></description></item><item><title>TextMate and Community Server 2008.5</title><link>http://jmeridth.com/posts/textmate-and-community-server-2008-5/</link><pubDate>Thu, 21 May 2009 08:32:38 -0500</pubDate><guid>http://jmeridth.com/posts/textmate-and-community-server-2008-5/</guid><description>&lt;p>This is my first blog post from TextMate on my Mac. I&amp;rsquo;m using the HTML formatting. I will try the markdown and textile versions later. The key to getting this working with Community Server was when you click &amp;ldquo;Bundles-&amp;gt;Blogging-&amp;gt;Setup Blogs&amp;rdquo; and the following template shows up:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># List of Blogs&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Enter a blog name followed by the endpoint URL&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Blog Name URL&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>you put the following underneath the commented header&lt;/p></description></item><item><title>WinSnap</title><link>http://jmeridth.com/posts/winsnap/</link><pubDate>Tue, 02 Jan 2007 00:52:00 -0600</pubDate><guid>http://jmeridth.com/posts/winsnap/</guid><description>&lt;p>I&amp;rsquo;ve used a few screen shot capturing tools and have even used the famous Alt-PrintScreen.&lt;/p>
+&lt;p>The best FREE tool I&amp;rsquo;ve used lately is &lt;a href="http://www.ntwind.com/software/winsnap.html" class="external-link" target="_blank" rel="noopener">WinSnap&lt;/a>.&lt;/p>
+&lt;p>&lt;img alt="Windows Snapshot Maker" src="http://www.ntwind.com/images/winsnap/winsnap_small.png">&lt;/p></description></item></channel></rss>
