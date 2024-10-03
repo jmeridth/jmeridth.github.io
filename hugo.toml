@@ -143,27 +143,15 @@ weight = 2
 url = "https://www.linkedin.com/in/jmeridth/"
 
 [[params.social]]
-name = "X"
-icon = "fa-brands fa-x-twitter fa-2x"
-weight = 3
-url = "https://twitter.com/jmeridth/"
-
-[[params.social]]
-name = "X"
-icon = "fa-brands fa-mastodon fa-2x"
-weight = 4
-url = "@jmeridth@mastodon.social"
-
-[[params.social]]
 name = "Keybase"
 icon = "fa-brands fa-keybase fa-2x"
-weight = 5
+weight = 3
 url = "https://keybase.io/jmeridth/"
 
 [[params.social]]
 name = "RSS"
 icon = "fa-solid fa-rss fa-2x"
-weight = 6
+weight = 4
 url = "/index.xml"
 rel = "alternate"
 type = "application/rss+xml"
