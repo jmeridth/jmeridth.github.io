@@ -14,13 +14,14 @@ permalink: /projects/
 - [Contributors GitHub Action](https://github.com/github/contributors)
 - [Automatic-Contrib-PRs GitHub Action](https://github.com/github/automatic-contrib-prs)
 
-### Fun Websites[^1]
+### Fun Websites
 
 - [CoolStoryBroNeedsMoreDragons](https://coolstorybroneedsmoredragons.com) or [CSBNMD.com](https://csbnmd.com)
-- [IWasCrazyOnce.com](https://iwascrazyonce.com) (inside joke)
-- [RestingDadFace.com](https://restingdadface.com) (inside joke)
-- [RolleIt.com](https://rolledit.com) (inside joke)
-- [WhySoPissy.com](https://whysopissy.com) (inside joke)
-- [YouSoundLikeADouche.com](https://yousoundlikeadouche.com) (inside joke)
+- [IWasCrazyOnce.com](https://iwascrazyonce.com)[^1]
+- [RestingDadFace.com](https://restingdadface.com)[^1]
+- [RolleIt.com](https://rolledit.com)[^1][^2]
+- [WhySoPissy.com](https://whysopissy.com)[^1]
+- [YouSoundLikeADouche.com](https://yousoundlikeadouche.com)[^1]
 
-[^1]: Some of the above websites are inside jokes and are meant to cause humor for those who understand the context. Not meant to actually insult anyone.
+[^1]: Some of the above websites are **inside jokes** and are meant to cause humor for those who understand the context. Not meant to actually insult anyone.
+[^2]: Change the size of your screen to see the background change.  A little CSS fun
