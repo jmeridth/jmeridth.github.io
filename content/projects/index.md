@@ -14,7 +14,7 @@ permalink: /projects/
 - [Contributors GitHub Action](https://github.com/github/contributors)
 - [Automatic-Contrib-PRs GitHub Action](https://github.com/github/automatic-contrib-prs)
 
-### Fun Websites
+### Fun Websites[^1]
 
 - [CoolStoryBroNeedsMoreDragons](https://coolstorybroneedsmoredragons.com) or [CSBNMD.com](https://csbnmd.com)
 - [IWasCrazyOnce.com](https://iwascrazyonce.com) (inside joke)
@@ -23,6 +23,4 @@ permalink: /projects/
 - [WhySoPissy.com](https://whysopissy.com) (inside joke)
 - [YouSoundLikeADouche.com](https://yousoundlikeadouche.com) (inside joke)
 
-> [!NOTE]
-> Some of the above websites are inside jokes and are meant to cause humor for those who understand the context.
-> Not meant to actually insult anyone.
+[^1]: Some of the above websites are inside jokes and are meant to cause humor for those who understand the context. Not meant to actually insult anyone.
