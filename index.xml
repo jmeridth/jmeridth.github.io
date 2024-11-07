@@ -1424,7 +1424,13 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;li>&lt;a href="https://www.linkedin.com/in/jmeridth/" class="external-link" target="_blank" rel="noopener">LinkedIn&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://keybase.io/jmeridth" class="external-link" target="_blank" rel="noopener">Keybase&lt;/a>&lt;/li>
 &lt;li>jmeridth -at- gmail -dot- com&lt;/li>
-&lt;/ul></description></item><item><title>Projects</title><link>http://jmeridth.com/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://jmeridth.com/projects/</guid><description>&lt;p>Projects that I currently contribute to:&lt;/p>
+&lt;/ul></description></item><item><title>Projects</title><link>http://jmeridth.com/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://jmeridth.com/projects/</guid><description>&lt;h3 id="projects-that-i-currently-contribute-to">
+ Projects that I currently contribute to
+ &lt;a class="heading-link" href="#projects-that-i-currently-contribute-to">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/argoproj/argo-helm" class="external-link" target="_blank" rel="noopener">Argo Helm&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/github/stale-repos" class="external-link" target="_blank" rel="noopener">Stale-Repos GitHub Action&lt;/a>&lt;/li>
@@ -1433,4 +1439,23 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;li>&lt;a href="https://github.com/github/cleanowners" class="external-link" target="_blank" rel="noopener">Cleanowners GitHub Action&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/github/contributors" class="external-link" target="_blank" rel="noopener">Contributors GitHub Action&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/github/automatic-contrib-prs" class="external-link" target="_blank" rel="noopener">Automatic-Contrib-PRs GitHub Action&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul>
+&lt;h3 id="fun-websites">
+ Fun Websites
+ &lt;a class="heading-link" href="#fun-websites">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://coolstorybroneedsmoredragons.com" class="external-link" target="_blank" rel="noopener">CoolStoryBroNeedsMoreDragons&lt;/a> or &lt;a href="https://csbnmd.com" class="external-link" target="_blank" rel="noopener">CSBNMD.com&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://iwascrazyonce.com" class="external-link" target="_blank" rel="noopener">IWasCrazyOnce.com&lt;/a> (inside joke)&lt;/li>
+&lt;li>&lt;a href="https://restingdadface.com" class="external-link" target="_blank" rel="noopener">RestingDadFace.com&lt;/a> (inside joke)&lt;/li>
+&lt;li>&lt;a href="https://rolledit.com" class="external-link" target="_blank" rel="noopener">RolleIt.com&lt;/a> (inside joke)&lt;/li>
+&lt;li>&lt;a href="https://whysopissy.com" class="external-link" target="_blank" rel="noopener">WhySoPissy.com&lt;/a> (inside joke)&lt;/li>
+&lt;li>&lt;a href="https://yousoundlikeadouche.com" class="external-link" target="_blank" rel="noopener">YouSoundLikeADouche.com&lt;/a> (inside joke)&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>[!NOTE]
+Some of the above websites are inside jokes and are meant to cause humor for those who understand the context.
+Not meant to actually insult anyone.&lt;/p></description></item></channel></rss>
