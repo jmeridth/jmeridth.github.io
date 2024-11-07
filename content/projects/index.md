@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-Projects that I currently contribute to:
+### Projects that I currently contribute to
 
 - [Argo Helm](https://github.com/argoproj/argo-helm)
 - [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
@@ -13,3 +13,16 @@ Projects that I currently contribute to:
 - [Cleanowners GitHub Action](https://github.com/github/cleanowners)
 - [Contributors GitHub Action](https://github.com/github/contributors)
 - [Automatic-Contrib-PRs GitHub Action](https://github.com/github/automatic-contrib-prs)
+
+### Fun Websites
+
+- [CoolStoryBroNeedsMoreDragons](https://coolstorybroneedsmoredragons.com) or [CSBNMD.com](https://csbnmd.com)
+- [IWasCrazyOnce.com](https://iwascrazyonce.com) (inside joke)
+- [RestingDadFace.com](https://restingdadface.com) (inside joke)
+- [RolleIt.com](https://rolledit.com) (inside joke)
+- [WhySoPissy.com](https://whysopissy.com) (inside joke)
+- [YouSoundLikeADouche.com](https://yousoundlikeadouche.com) (inside joke)
+
+> [!NOTE]
+> Some of the above websites are inside jokes and are meant to cause humor for those who understand the context.
+> Not meant to actually insult anyone.
