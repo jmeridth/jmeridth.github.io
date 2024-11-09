@@ -19,7 +19,7 @@ permalink: /projects/
 - [CoolStoryBroNeedsMoreDragons](https://coolstorybroneedsmoredragons.com) or [CSBNMD.com](https://csbnmd.com)
 - [IWasCrazyOnce.com](https://iwascrazyonce.com)[^1]
 - [RestingDadFace.com](https://restingdadface.com)[^1]
-- [RolleIt.com](https://rolledit.com)[^1][^2]
+- [RolleIt.com](https://rolledit.com)[^1] <sup>and</sup> [^2]
 - [WhySoPissy.com](https://whysopissy.com)[^1]
 - [YouSoundLikeADouche.com](https://yousoundlikeadouche.com)[^1]
 
