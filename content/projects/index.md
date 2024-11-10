@@ -14,7 +14,7 @@ permalink: /projects/
 - [Contributors GitHub Action](https://github.com/github/contributors)
 - [Automatic-Contrib-PRs GitHub Action](https://github.com/github/automatic-contrib-prs)
 
-### Fun Websites
+### Fun Websites (all safe for work)
 
 - [CoolStoryBroNeedsMoreDragons](https://coolstorybroneedsmoredragons.com) or [CSBNMD.com](https://csbnmd.com)
 - [IWasCrazyOnce.com](https://iwascrazyonce.com)[^1]
