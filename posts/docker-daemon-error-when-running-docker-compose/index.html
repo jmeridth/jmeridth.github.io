@@ -19,7 +19,7 @@ ERROR: Couldn't connect to Docker daemon at http+docker://localunixsocket - is i
 One-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
 <span class=tag><a href=/tags/ubuntu/>Ubuntu</a>
 </span><span class=separator>•</span>
-<span class=tag><a href=/tags/vim/>Vim</a></span></div></div></header><div class=post-content><p><img alt="docker why" src=/img/why-docker-why-i-just-want-to-deploy.jpg></p><p>TL;DR Make sure you don&rsquo;t have any old mounted volumes around if you see the error below.</p><p>I just got the following error when trying to run <code>docker-compose up -d</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ERROR: Couldn<span class=s1>&#39;t connect to Docker daemon at http+docker://localunixsocket
+<span class=tag><a href=/tags/vim/>Vim</a></span></div></div></header><div class=post-content><p><img src=/img/why-docker-why-i-just-want-to-deploy.jpg alt="docker why"></p><p>TL;DR Make sure you don&rsquo;t have any old mounted volumes around if you see the error below.</p><p>I just got the following error when trying to run <code>docker-compose up -d</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ERROR: Couldn<span class=s1>&#39;t connect to Docker daemon at http+docker://localunixsocket
 </span></span></span><span class=line><span class=cl><span class=s1>- is it running?
 </span></span></span><span class=line><span class=cl><span class=s1>
 </span></span></span><span class=line><span class=cl><span class=s1>If it&#39;</span>s at a non-standard location,

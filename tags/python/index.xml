@@ -10,7 +10,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install the &lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/" class="external-link" target="_blank" rel="noopener">virtualenvwrapper&lt;/a> package. It lets you manage python virtual environments easier than just using &lt;a href="https://virtualenv.pypa.io/en/stable/" class="external-link" target="_blank" rel="noopener">virtualenv&lt;/a>&lt;/p>
 &lt;p>&lt;code>sudo pip install virtualenvwrapper&lt;/code>&lt;/p></description></item><item><title>How To Use the Python Debugger aka pdb</title><link>http://jmeridth.com/posts/how-to-use-python-debugger-aka-pdb/</link><pubDate>Wed, 22 Jun 2016 15:10:10 -0500</pubDate><guid>http://jmeridth.com/posts/how-to-use-python-debugger-aka-pdb/</guid><description>&lt;p>I have been using the Python Debugger aka pdb &lt;a href="https://docs.python.org/2/library/pdb.html" class="external-link" target="_blank" rel="noopener">docs for 2.7&lt;/a>/&lt;a href="https://docs.python.org/3.5/library/pdb.html" class="external-link" target="_blank" rel="noopener">docs for 3.5&lt;/a> a lot recently and wanted to share a cheat sheet I found and also the common commands I use.&lt;/p>
 &lt;p>The cheatsheet:&lt;/p>
-&lt;p>&lt;img alt="pdb cheatsheet" src="%7B%7Bsite.url%7D%7D/images/pdb_cheatsheet.png">&lt;/p>
+&lt;p>&lt;img src="%7B%7Bsite.url%7D%7D/images/pdb_cheatsheet.png" alt="pdb cheatsheet">&lt;/p>
 &lt;p>The easiest thing to do is put the following in your code somewhere:&lt;/p>
 &lt;pre>&lt;code> import pdb; pdb.set_trace()
 &lt;/code>&lt;/pre>
@@ -20,6 +20,6 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Hope this helps someone else.&lt;/p>
 &lt;p>Happy bit twiddling.&lt;/p></description></item><item><title>xkcd - ubuntu, python comics</title><link>http://jmeridth.com/posts/xkcd-ubuntu-python-comics/</link><pubDate>Mon, 28 Apr 2008 16:34:00 -0500</pubDate><guid>http://jmeridth.com/posts/xkcd-ubuntu-python-comics/</guid><description>&lt;p>If you don&amp;rsquo;t currently read &lt;a href="http://www.xkcd.com" class="external-link" target="_blank" rel="noopener">xkcd.com&lt;/a>, you should be.  It has some mushy lovey dovey junk in it sometimes, but the python references and open source references are hilarious.&lt;/p>
 &lt;p>Today&amp;rsquo;s comic: (mouse over for the Ubuntu reference)&lt;/p>
-&lt;p>&lt;img src="http://imgs.xkcd.com/comics/zealous_autoconfig.png">&lt;/p>
+&lt;p>&lt;img src="http://imgs.xkcd.com/comics/zealous_autoconfig.png" alt="">&lt;/p>
 &lt;p>One of my other favs:&lt;/p>
-&lt;p>&lt;img src="http://imgs.xkcd.com/comics/python.png">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="http://imgs.xkcd.com/comics/python.png" alt="">&lt;/p></description></item></channel></rss>
