@@ -26,7 +26,7 @@ One-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidd
 </span></span></code></pre></div><p>On Mac:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git grep -l <span class=s1>&#39;original_text&#39;</span> <span class=p>|</span> xargs sed -i <span class=s1>&#39;&#39;</span> -e <span class=s1>&#39;s/original_text/new_text/g&#39;</span>
 </span></span></code></pre></div><p>I needed to change a string in a bunch of files and I used the command above using git grep to do it. Worked like a charm.</p><p>The <code>-l</code> argument to git grep only returns the file names and not the location in the file like it usually does.</p><p>The <code>-e</code> argument is needed with the <code>sed</code> portion on OSX as stated by <a href=https://twitter.com/asmeurer/ class=external-link target=_blank rel=noopener>asmeurer</a> in the comments</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
-2024
+2025
 JM (Jason Meridth)
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>

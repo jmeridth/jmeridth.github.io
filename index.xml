@@ -1433,6 +1433,7 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;/h3>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/argoproj/argo-helm" class="external-link" target="_blank" rel="noopener">Argo Helm&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/github/ospo-reusable-workflows" class="external-link" target="_blank" rel="noopener">OSPO Reusable Workflows&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/github/stale-repos" class="external-link" target="_blank" rel="noopener">Stale-Repos GitHub Action&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/github/issue-metrics" class="external-link" target="_blank" rel="noopener">Issue-Metrics GitHub Action&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/github/evergreen" class="external-link" target="_blank" rel="noopener">Evergreen GitHub Action&lt;/a>&lt;/li>
