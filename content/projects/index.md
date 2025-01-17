@@ -7,6 +7,7 @@ permalink: /projects/
 ### Projects that I currently contribute to
 
 - [Argo Helm](https://github.com/argoproj/argo-helm)
+- [OSPO Reusable Workflows](https://github.com/github/ospo-reusable-workflows)
 - [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
 - [Issue-Metrics GitHub Action](https://github.com/github/issue-metrics)
 - [Evergreen GitHub Action](https://github.com/github/evergreen)
