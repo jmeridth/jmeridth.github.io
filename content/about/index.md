@@ -4,9 +4,9 @@ title: About
 permalink: /about/
 ---
 
-My name is JM (Jason Meridth).
+My name is Jason Meridth.
 
-I am a continually learning and accomplished software developer with passion in automation, open source, innersource, mentoring, developer tooling and security. I have experience in multiple software design life cycles, frameworks, languages, automation and orchestration technologies. I have experience in both start-up and enterprise environments. I also have experience as a Tech/Team Lead and Manager.
+I am a hands-on technical leader with start-up and enterprise experience in software design life cycles, frameworks, languages, automation, orchestration technologies and distributed systems. Contributes to multiple open source projects. I have strong passions in distributed systems, automation, open source, Innersource, mentoring, developer tooling and security. I have experience as a Tech/Team Lead and Manager.
 
 I reserve the right to change my mind upon obtaining more information.
 
