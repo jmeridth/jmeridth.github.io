@@ -3,8 +3,10 @@ title = "Learn, Converse, Share"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
-paginate = 20
 enableEmoji = true
+
+[pagination]
+pagerSize = 20
 
 [services]
 [services.disqus]
