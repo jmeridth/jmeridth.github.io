@@ -23,7 +23,11 @@ To add a new search engine, click on "Add" and fill in the following fields:
 
 For `blog`, the Search Engine would be `blog`, URL would be `https://github.com/jmeridth/jmeridth.github.io`, keyword would be `blog`.
 
+![Chromium Search Engine Blog](/img/chromiumsearchengine-blog.png)
+
 For `tags`, the Search Engine would be `tags`, URL would be `https://jmeridth.github.io/tags/%s`, keyword would be `tags`.
+
+![Chromium Search Engine Tags](img/chromiumsearchengine-tags.png)
 
 I find this method of navigation to be very efficient, especially when combined with the ability to use the tab key to provide dynamic strings to the URL. It allows me to quickly access my most frequently visited sites without having to remember long URLs or navigate through bookmarks.
 
