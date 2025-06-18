@@ -21,11 +21,11 @@ To add a new search engine, click on "Add" and fill in the following fields:
 - **Keyword**: A keyword that you will type in the address bar to trigger this search engine (e.g., "blog").
 - **URL with %s in place of query**: The URL you want to navigate to, with `%s` as a placeholder for the search term (e.g., `
 
-For `blog`, the Search Engine would be `blog`, URL would be `https://github.com/jmeridth/jmeridth.github.io`, keyword would be `blog`.
+For `blog`, the Name would be `blog`, Shortcut would be `blog`, and URL would be `https://github.com/jmeridth/jmeridth.github.io`.
 
 ![Chromium Search Engine Blog](/img/chromiumsearchengine_blog.png)
 
-For `tags`, the Search Engine would be `tags`, URL would be `https://jmeridth.github.io/tags/%s`, keyword would be `tags`.
+For `tags`, the Name would be `tags`, Shortcut would be `tags`, and URL would be `https://jmeridth.github.io/tags/%s`.
 
 ![Chromium Search Engine Tags](/img/chromiumsearchengine_tags.png)
 
