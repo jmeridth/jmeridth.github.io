@@ -2,7 +2,7 @@
 url: /posts/proton-migration
 title: "Proton Migration"
 layout: post
-date: '2025-07-05 17:38:00 -0500'
+date: '2025-07-05 15:38:00 -0500'
 tags:
 - security
 - proton
