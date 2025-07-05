@@ -59,7 +59,7 @@ All with end-to-end encryption:
 
 ### Cons
 
-- Keyboard shortcuts are not standardized (IMO) and not editable. [Vote for this feature](https://protonmail.uservoice.com/forums/284483-proton-mail/suggestions/38545198-improve-keyboard-shortcuts-gmail-like)
+- Keyboard shortcuts are not standardized (IMO, Gmail shortcuts are widely used in many apps) and not editable. [Vote for this feature](https://protonmail.uservoice.com/forums/284483-proton-mail/suggestions/38545198-improve-keyboard-shortcuts-gmail-like)
 
 #### Mobile
 
