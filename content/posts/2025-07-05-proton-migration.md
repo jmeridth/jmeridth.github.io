@@ -117,7 +117,7 @@ All with end-to-end encryption:
 
 ## Proton Wallet
 
-- haven't used yet
+- Haven't used yet
 
 ## Feedback and Feature Requests
 
@@ -129,15 +129,15 @@ https://protonmail.uservoice.com/
 
 https://proton.me/community/open-source
 
-[Proton Mail](https://github.com/ProtonMail)
-[Proton Pass](https://github.com/protonpass)
-[Proton VPN](https://github.com/ProtonVPN)
-[Proton Drive](https://github.com/ProtonDriveApps)
+- [Proton Mail](https://github.com/ProtonMail)
+- [Proton Pass](https://github.com/protonpass)
+- [Proton VPN](https://github.com/ProtonVPN)
+- [Proton Drive](https://github.com/ProtonDriveApps)
 
 ### Reddit
 
-[r/ProtonMail](https://www.reddit.com/r/ProtonMail/)
-[r/ProtonDrive](https://www.reddit.com/r/ProtonDrive/)
-[r/ProtonPass](https://www.reddit.com/r/ProtonPass/)
-[r/ProtonVPN](https://www.reddit.com/r/ProtonVPN/)
-[r/ProtonWallet](https://www.reddit.com/r/ProtonWallet/)
+- [r/ProtonMail](https://www.reddit.com/r/ProtonMail/)
+- [r/ProtonDrive](https://www.reddit.com/r/ProtonDrive/)
+- [r/ProtonPass](https://www.reddit.com/r/ProtonPass/)
+- [r/ProtonVPN](https://www.reddit.com/r/ProtonVPN/)
+- [r/ProtonWallet](https://www.reddit.com/r/ProtonWallet/)
