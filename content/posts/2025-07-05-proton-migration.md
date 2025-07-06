@@ -158,3 +158,7 @@ https://proton.me/community/open-source
 - [r/ProtonPass](https://www.reddit.com/r/ProtonPass/)
 - [r/ProtonVPN](https://www.reddit.com/r/ProtonVPN/)
 - [r/ProtonWallet](https://www.reddit.com/r/ProtonWallet/)
+
+## Bug Bounty
+
+https://proton.me/security/bug-bounty
