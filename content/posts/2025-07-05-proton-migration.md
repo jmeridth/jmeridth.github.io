@@ -10,7 +10,7 @@ tags:
 
 ![Proton Logo](/img/proton_logo_with_tagline.png)
 
-TL;DR: I'm migrating from Google to Proton. There is a [free tier] if you'd like to try out all of the products before entertaining a migration/paid account.
+TL;DR: I'm migrating from Google to Proton. There is a [free tier](https://proton.me/support/proton-plans#proton-free) if you'd like to try out all of the products before entertaining a migration/paid account.
 
 The biggest reason to move to Proton is the end-to-end encryption and the security of your data. Proton is based in Switzerland, which has some of the strongest privacy laws in the world.
 
