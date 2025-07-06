@@ -19,7 +19,7 @@ The biggest reason to move to Proton is the end-to-end encryption and the securi
 Main reasons for my switch:
 
 - Security and Privacy
-  - I discovered severe security issues with Google
+  - I discovered severe security issues with Google.
 - Google had decided to increase my monthly Google Workspace (business) account price to the point where a Proton Duo account was less monthly. This includes the entire Proton suite of products (Mail, Calendar, Drive, Pass, VPN, and Wallet)
   - Extra win was I was paying for NordVPN also. Don't get me wrong, I love NordVPN, but Proton VPN is included in the Proton Duo Suite.
 
@@ -45,11 +45,13 @@ All with end-to-end encryption:
 - [Proton VPN](https://protonvpn.com/) - virtual private network service
 - [Proton Wallet](https://proton.me/wallet) - cryptocurrency wallet
 
+---
+
 ## Proton Mail
 
 ### Pros
 
-- you get the following emails in addition to your free @protonmail.com email:
+- You get the following emails in addition to your free @protonmail.com email:
   - @proton.me
   - @pm.me
 - Decent UI
@@ -66,6 +68,8 @@ All with end-to-end encryption:
 - Be careful on deleting multiple emails quickly, the undo links that pop up are slow and you may undo the incorrect one
 - Have had slowness issues with [Alternative Routing](https://proton.me/blog/anti-censorship-alternative-routing) feature, I'm working with support on it
 
+---
+
 ## Proton Calendar
 
 ### Pros
@@ -79,6 +83,8 @@ All with end-to-end encryption:
 - After you import your calendar:
     - all participants are removed from events and there is no way to edit participants on existing events. [Vote for this feature](https://protonmail.uservoice.com/forums/932842-proton-calendar/suggestions/48369923-edit-add-participants-on-existing-events)
 
+---
+
 ## Proton Pass
 
 ### Pros
@@ -90,6 +96,7 @@ All with end-to-end encryption:
 
 - You have to use your Proton account password to log into your Pass account. There is no separate primary password for Pass. [Vote for this feature](https://protonmail.uservoice.com/forums/953584-proton-pass/suggestions/48633443-log-into-proton-pass-directly-with-its-own-passwor)
 
+---
 
 ## Proton Drive
 
@@ -105,6 +112,8 @@ All with end-to-end encryption:
   - Import:
     - Folders are not automatically turned into albums
 
+---
+
 ## Proton VPN
 
 ### Pros
@@ -117,9 +126,13 @@ All with end-to-end encryption:
 
 - No way to pause current connection
 
+---
+
 ## Proton Wallet
 
 - Haven't used yet
+
+---
 
 ## Feedback and Feature Requests
 
