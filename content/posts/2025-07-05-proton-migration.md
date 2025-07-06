@@ -56,7 +56,9 @@ All with end-to-end encryption:
   - @pm.me
 - Decent UI
 - Can use your own domain
-- Can use aliases with provided or custom domains
+- Can use hide-my-email aliases with provided or custom domains
+  - Regular aliases are when you use a plus sign and additional content (example: `mine+aliastext@proton.me`)
+  - Hide-my-aliases are where you have an email like `amazon+randomword1234@passmail.com` that redirects to your primary proton email aka `amazon+randomword12345@passmail.com` -> `me@proton.me`
   - This is due to [SimpleLogin integration](https://simplelogin.io/blog/simplelogin-join-proton/)
 
 ### Cons
