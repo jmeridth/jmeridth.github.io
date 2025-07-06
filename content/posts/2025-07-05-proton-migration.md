@@ -20,10 +20,10 @@ Main reasons for my switch:
 
 - Security and Privacy
   - I discovered severe security issues with Google
-- Google Business was increasing my monthly Google business account and the Proton Duo pricing was less monthly and I get the whole suite of products (Mail, Calendar, Drive, Pass, VPN, and Wallet)
-  - I was paying for NordVPN and Google Business and got a cheaper rate migrating to Proton Duo.
+- Google had decided to increase my monthly Google Workspace (business) account price to the point where a Proton Duo account was less monthly. This includes the entire Proton suite of products (Mail, Calendar, Drive, Pass, VPN, and Wallet)
+  - Extra win was I was paying for NordVPN also. Don't get me wrong, I love NordVPN, but Proton VPN is included in the Proton Duo Suite.
 
-Proton Duo Suite is what I decided on (not because of partner, but 1TB storage)
+I decided on the Proton Duo Suite because of its storage size (1TB). I have a lot of photos and drive contents and the 500GB in the Proton Premium account would not be enough for me.
 
 ## Notes
 
