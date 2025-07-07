@@ -97,7 +97,7 @@ All with end-to-end encryption:
 ### Cons
 
 - You have to use your Proton account password to log into your Pass account. There is no separate primary password for Pass. [Vote for this feature](https://protonmail.uservoice.com/forums/953584-proton-pass/suggestions/48633443-log-into-proton-pass-directly-with-its-own-passwor)
-  - The current want to have a master/primary password for Proton Pass is called a [second password](https://proton.me/support/pass-extra-password). You still have to log into your Proton account first. It doesn't make sense to me.
+  - If you want to have a master/primary password for Proton Pass, it is called a [second password](https://proton.me/support/pass-extra-password). You still have to log into your Proton account first. It doesn't make sense to me.
 
 ---
 
