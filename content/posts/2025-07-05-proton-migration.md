@@ -10,7 +10,7 @@ tags:
 
 ![Proton Logo](/img/proton_logo_with_tagline.png)
 
-**UPDATE (7/8/2025):** [2025 Summer Roadmaps](https://proton.me/blog/proton-2025-summer-roadmaps) was shared today. There are some exciting features each product is working on.
+**UPDATE (7/8/2025):** [2025 Summer Roadmaps](https://proton.me/blog/proton-2025-summer-roadmaps) were shared today. There are some exciting features each product is working on.
 
 TL;DR: I'm migrating from Google to Proton. There is a [free tier](https://proton.me/support/proton-plans#proton-free) if you'd like to try out all of the products before entertaining a migration/paid account.
 
