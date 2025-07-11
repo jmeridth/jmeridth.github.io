@@ -34,6 +34,20 @@ My usages and perspectives are my own.
 Browser: [Brave](https://brave.com/) (Chromium-based, privacy-focused browser)
 Mobile: iPhone (iOS 18.5+)
 
+## Migration from Google
+
+You can use the Proton Easy Switch tool](https://proton.me/support/easy-switch) to migrate your data from Google to Proton. It supports:
+
+- Gmail
+- Google Calendar
+- Google Drive
+- Google Contacts
+- Google Photos
+
+The other option is to use the [Google Takeout](https://takeout.google.com/) tool to export your data from Google and then import it into Proton. This is a more manual process, but it gives you more control over what data you want to migrate.
+
+Thank you [@andimiya](https://github.com/andimiya) for suggesting this section.
+
 ## Products Provided
 
 All with ["end-to-end encryption"](https://proton.me/support/proton-mail-encryption-explained):
