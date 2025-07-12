@@ -36,7 +36,7 @@ Mobile: iPhone (iOS 18.5+)
 
 ## Migration from Google
 
-You can use the Proton Easy Switch tool](https://proton.me/support/easy-switch) to migrate your data from Google to Proton. It supports:
+You can use the [Proton Easy Switch tool](https://proton.me/support/easy-switch) to migrate your data from Google to Proton. It supports:
 
 - Gmail
 - Google Calendar
