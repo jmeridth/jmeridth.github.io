@@ -145,12 +145,6 @@ weight = 2
 url = "https://www.linkedin.com/in/jmeridth/"
 
 [[params.social]]
-name = "Keybase"
-icon = "fa-brands fa-keybase fa-2x"
-weight = 3
-url = "https://keybase.io/jmeridth/"
-
-[[params.social]]
 name = "RSS"
 icon = "fa-solid fa-rss fa-2x"
 weight = 4

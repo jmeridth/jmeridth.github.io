@@ -8,5 +8,4 @@ I'm typically `jmeridth` everywhere on the internet. Here are some of the places
 
 - [GitHub](https://github.com/jmeridth)
 - [LinkedIn](https://www.linkedin.com/in/jmeridth/)
-- [Keybase](https://keybase.io/jmeridth)
 - blog -dot- operate716 -at- passmail -dot- com
