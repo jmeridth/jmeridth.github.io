@@ -178,7 +178,7 @@ url = "projects/"
 [[languages.en.menu.main]]
 name = "Talks"
 weight = 5
-url = "https://github.com/jmeridth/presentations/blob/main/README.md"
+url = "talks/"
 
 [[languages.en.menu.main]]
 name = "Contact Me"
