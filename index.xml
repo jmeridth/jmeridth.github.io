@@ -1462,4 +1462,84 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1">
-&lt;p>Some of the above websites are &lt;strong>inside jokes&lt;/strong> and are meant to cause humor for those who understand the context. Not meant to actually insult anyone.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref3:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref4:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>Some of the above websites are &lt;strong>inside jokes&lt;/strong> and are meant to cause humor for those who understand the context. Not meant to actually insult anyone.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref3:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref4:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p></description></item><item><title>Talks</title><link>http://jmeridth.com/talks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://jmeridth.com/talks/</guid><description>&lt;p>My Talks/Presentations&lt;/p>
+&lt;h2 id="2024">
+ 2024
+ &lt;a class="heading-link" href="#2024">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: center">Date&lt;/th>
+ &lt;th style="text-align: center">Topic&lt;/th>
+ &lt;th style="text-align: center">Video&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: center">11/12/2024&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="http://jmeridth.com/talks/20241112_untangling_the_threads_argocon_2024.pdf" >Untangling the Threads: Understanding Argo Workflows with Workflow Tracing&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://youtu.be/F0-D99NqBjs" class="external-link" target="_blank" rel="noopener">YouTube&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: center">10/24/2024&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="http://jmeridth.com/talks/20241024_open_source_security_and_community.pdf" >Open Source Security and Community&lt;/a>&lt;/td>
+ &lt;td style="text-align: center">&lt;a href="https://www.youtube.com/live/PPiWTIBGRCM?feature=shared&amp;amp;t=3050" class="external-link" target="_blank" rel="noopener">YouTube&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="2023">
+ 2023
+ &lt;a class="heading-link" href="#2023">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Date&lt;/th>
+ &lt;th>Topic&lt;/th>
+ &lt;th>Video&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>11/06/2023&lt;/td>
+ &lt;td>&lt;a href="http://jmeridth.com/talks/20231106_pull_requests_welcome_argocon_2023.pdf" >ArgoProj - Pull Requests Welcome&lt;/a>&lt;/td>
+ &lt;td>&lt;a href="https://www.youtube.com/watch?v=INQQyrBkqjw" class="external-link" target="_blank" rel="noopener">YouTube&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="2010">
+ 2010
+ &lt;a class="heading-link" href="#2010">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+ &lt;span class="sr-only">Link to heading&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Date&lt;/th>
+ &lt;th>Topic&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>05/09/2010&lt;/td>
+ &lt;td>&lt;a href="http://jmeridth.com/talks/20100509_rake.pdf" >Rake&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3/19/2010&lt;/td>
+ &lt;td>&lt;a href="http://jmeridth.com/talks/20100319_selenium.pdf" >Selenium&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3/19/2010&lt;/td>
+ &lt;td>&lt;a href="http://jmeridth.com/talks/20100319_shoulda_mocha.pdf" >Shoulda&lt;/a>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item></channel></rss>
