@@ -23,6 +23,7 @@ description = "I am a continuously learning software developer trying to not let
 keywords = "jason meridth,meridth,jm,software developer"
 info = ["Continuously Learning Software Developer"]
 avatarURL = "images/jm.jpg"
+favicon_32 = "/favicon.ico"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"
 since = 2007
