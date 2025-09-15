@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Irc on Learn, Converse, Share</title><link>http://jmeridth.com/tags/irc/</link><description>Recent content in Irc on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 14 Jul 2015 10:12:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/irc/index.xml" rel="self" type="application/rss+xml"/><item><title>Meta keys with iTerm and Weechat</title><link>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</link><pubDate>Tue, 14 Jul 2015 10:12:00 -0500</pubDate><guid>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</guid><description>&lt;p>Found &lt;a href="https://github.com/davidxia/weechat/blob/9f18f8fbff9dcf424d4a6136d446f83631fbd021/README.md#L20" class="external-link" target="_blank" rel="noopener">this&lt;/a> tip today about how to ensure your iTerm console sends &lt;code>+Esc&lt;/code> to weechat for the meta keys to work properly.&lt;/p>
-&lt;blockquote>
-&lt;p>To make alt key bindings behave well for Mac OS X iTerm2, go to Preferences-&amp;gt;Profiles-&amp;gt;Keys and click +Esc radio button for option keys.&lt;/p>&lt;/blockquote>
-&lt;p>I like to use meta+c to clear a buffer and meta+x to close a buffer. meta for me is the &lt;code>Alt&lt;/code> key. &lt;a href="https://github.com/jmeridth/myansible/commit/ffce0dcf38667e6f5ab7e18b6d7471a37b398b14" class="external-link" target="_blank" rel="noopener">Here&lt;/a> is the keybindings in my &lt;code>.weechat.conf&lt;/code>.&lt;/p></description></item><item><title>Weechat keyboard shortcuts</title><link>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</link><pubDate>Fri, 14 Mar 2014 23:52:39 -0500</pubDate><guid>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</guid><description>&lt;p>I&amp;rsquo;ve switched from using irssi to &lt;a href="http://weechat.org" class="external-link" target="_blank" rel="noopener">Weechat&lt;/a> since I rejoined the ranks as a &lt;a href="http://www.rackspace.com" class="external-link" target="_blank" rel="noopener">Racker&lt;/a>.&lt;/p>
-&lt;p>&lt;a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf" class="external-link" target="_blank" rel="noopener">Here&lt;/a> is my current weechat.conf file&lt;/p>
-&lt;p>Some of the ones I use often:&lt;/p>
-&lt;ul>
-&lt;li>ctrl+h - window left&lt;/li>
-&lt;li>ctrl+j - window down&lt;/li>
-&lt;li>ctrl+k - window up&lt;/li>
-&lt;li>ctrl+l - window right&lt;/li>
-&lt;li>ctrl+z - window zoom (make current small window full screen)&lt;/li>
-&lt;li>ctrl+n - next buffer&lt;/li>
-&lt;li>ctrl+p - previous buffer&lt;/li>
-&lt;li>ctrl+y - clipboard paste&lt;/li>
-&lt;li>ctrl+r - search&lt;/li>
-&lt;li>ctrl+j - stop search&lt;/li>
-&lt;/ul>
-&lt;p>normal commands not included with my weechat.conf that I use:&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Irc on Learn, Converse, Share</title><link>http://jmeridth.com/tags/irc/</link><description>Recent content in Irc on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 14 Jul 2015 10:12:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/irc/index.xml" rel="self" type="application/rss+xml"/><item><title>Meta keys with iTerm and Weechat</title><link>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</link><pubDate>Tue, 14 Jul 2015 10:12:00 -0500</pubDate><guid>http://jmeridth.com/posts/meta-keys-with-iterm-and-weechat/</guid><description>&lt;p&gt;Found &lt;a href="https://github.com/davidxia/weechat/blob/9f18f8fbff9dcf424d4a6136d446f83631fbd021/README.md#L20" class="external-link" target="_blank" rel="noopener"&gt;this&lt;/a&gt; tip today about how to ensure your iTerm console sends &lt;code&gt;+Esc&lt;/code&gt; to weechat for the meta keys to work properly.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To make alt key bindings behave well for Mac OS X iTerm2, go to Preferences-&amp;gt;Profiles-&amp;gt;Keys and click +Esc radio button for option keys.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I like to use meta+c to clear a buffer and meta+x to close a buffer. meta for me is the &lt;code&gt;Alt&lt;/code&gt; key. &lt;a href="https://github.com/jmeridth/myansible/commit/ffce0dcf38667e6f5ab7e18b6d7471a37b398b14" class="external-link" target="_blank" rel="noopener"&gt;Here&lt;/a&gt; is the keybindings in my &lt;code&gt;.weechat.conf&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Weechat keyboard shortcuts</title><link>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</link><pubDate>Fri, 14 Mar 2014 23:52:39 -0500</pubDate><guid>http://jmeridth.com/posts/weechat-keyboard-shortcuts/</guid><description>&lt;p&gt;I&amp;rsquo;ve switched from using irssi to &lt;a href="http://weechat.org" class="external-link" target="_blank" rel="noopener"&gt;Weechat&lt;/a&gt; since I rejoined the ranks as a &lt;a href="http://www.rackspace.com" class="external-link" target="_blank" rel="noopener"&gt;Racker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/jmeridth/dotfiles/blob/master/weechat.conf" class="external-link" target="_blank" rel="noopener"&gt;Here&lt;/a&gt; is my current weechat.conf file&lt;/p&gt;
+&lt;p&gt;Some of the ones I use often:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ctrl+h - window left&lt;/li&gt;
+&lt;li&gt;ctrl+j - window down&lt;/li&gt;
+&lt;li&gt;ctrl+k - window up&lt;/li&gt;
+&lt;li&gt;ctrl+l - window right&lt;/li&gt;
+&lt;li&gt;ctrl+z - window zoom (make current small window full screen)&lt;/li&gt;
+&lt;li&gt;ctrl+n - next buffer&lt;/li&gt;
+&lt;li&gt;ctrl+p - previous buffer&lt;/li&gt;
+&lt;li&gt;ctrl+y - clipboard paste&lt;/li&gt;
+&lt;li&gt;ctrl+r - search&lt;/li&gt;
+&lt;li&gt;ctrl+j - stop search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;normal commands not included with my weechat.conf that I use:&lt;/p&gt;</description></item></channel></rss>

@@ -1,43 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rvm on Learn, Converse, Share</title><link>http://jmeridth.com/tags/rvm/</link><description>Recent content in Rvm on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 06 Mar 2013 00:00:00 -0600</lastBuildDate><atom:link href="http://jmeridth.com/tags/rvm/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup RVM and Ruby</title><link>http://jmeridth.com/posts/setup-rvm-and-ruby/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/setup-rvm-and-ruby/</guid><description>&lt;p>I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p>
-&lt;p>Install curl&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">sudo apt-get install curl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install RVM (forgot this, thanks &lt;a href="http://twitter.com/jssingh" class="external-link" target="_blank" rel="noopener">Jasdeep&lt;/a>)&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -L get.rvm.io &lt;span class="p">|&lt;/span> bash -s stable --auto
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Reload .bash_profile&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">. ~/.bash_profile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run rvm requirements to see what needs to be installed&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">rvm requirements
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Requirements &lt;span class="k">for&lt;/span> ubuntu/12.10/x86_64
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">NOTE: &lt;span class="s1">&amp;#39;ruby&amp;#39;&lt;/span> represents Matz&lt;span class="s1">&amp;#39;s Ruby Interpreter (MRI) (1.8.X, 1.9.X)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> This is the *original* / standard Ruby Language Interpreter
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> &amp;#39;&lt;/span>ree&lt;span class="s1">&amp;#39; represents Ruby Enterprise Edition
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1"> &amp;#39;&lt;/span>rbx&lt;span class="err">&amp;#39;&lt;/span> represents Rubinius
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Additional Dependencies:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For update-system:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get update
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For rvm:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get --no-install-recommends install bash curl git patch bzip2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For ruby:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get --no-install-recommends install build-essential openssl libreadline6 libreadline6-dev &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>libxml2-dev libxslt-dev autoconf libc6-dev libgdbm-dev ncurses-dev automake libtool bison &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>subversion pkg-config libffi-dev
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># For jruby:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get --no-install-recommends install curl g%2B%2B openjdk-6-jre-headless
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Install everything you need&lt;/p></description></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</link><pubDate>Thu, 25 Nov 2010 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</guid><description>&lt;p>So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">my_app/&lt;span class="o">(&lt;/span>master&lt;span class="o">)&lt;/span>$ rails console
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in &lt;span class="sb">`&lt;/span>require&lt;span class="s1">&amp;#39;: no such file to load -- readline (LoadError)
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1">from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in &lt;span class="sb">`&lt;/span>require&lt;span class="s1">&amp;#39;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1">from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in &lt;span class="sb">`&lt;/span>require&lt;span class="s1">&amp;#39;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1">from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from script/rails:6:in &lt;span class="sb">`&lt;/span>require&lt;span class="s1">&amp;#39;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s1">from script/rails:6:in `&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I looked at the RVM site and saw how to install the readline package:&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rvm on Learn, Converse, Share</title><link>http://jmeridth.com/tags/rvm/</link><description>Recent content in Rvm on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 06 Mar 2013 00:00:00 -0600</lastBuildDate><atom:link href="http://jmeridth.com/tags/rvm/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup RVM and Ruby</title><link>http://jmeridth.com/posts/setup-rvm-and-ruby/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/setup-rvm-and-ruby/</guid><description>&lt;p&gt;I’m putting this here so that I have it saved. I’ve done this many times and until I automate it with a Puppet or Chef script….&lt;/p&gt;
+&lt;p&gt;Install curl&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install curl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install RVM (forgot this, thanks &lt;a href="http://twitter.com/jssingh" class="external-link" target="_blank" rel="noopener"&gt;Jasdeep&lt;/a&gt;)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -L get.rvm.io &lt;span class="p"&gt;|&lt;/span&gt; bash -s stable --auto
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reload .bash_profile&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;. ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Run rvm requirements to see what needs to be installed&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rvm requirements
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Requirements &lt;span class="k"&gt;for&lt;/span&gt; ubuntu/12.10/x86_64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;NOTE: &lt;span class="s1"&gt;&amp;#39;ruby&amp;#39;&lt;/span&gt; represents Matz&lt;span class="s1"&gt;&amp;#39;s Ruby Interpreter (MRI) (1.8.X, 1.9.X)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; This is the *original* / standard Ruby Language Interpreter
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#39;&lt;/span&gt;ree&lt;span class="s1"&gt;&amp;#39; represents Ruby Enterprise Edition
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#39;&lt;/span&gt;rbx&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; represents Rubinius
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Additional Dependencies:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# For update-system:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# For rvm:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get --no-install-recommends install bash curl git patch bzip2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# For ruby:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get --no-install-recommends install build-essential openssl libreadline6 libreadline6-dev &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="se"&gt;&lt;/span&gt;curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="se"&gt;&lt;/span&gt;libxml2-dev libxslt-dev autoconf libc6-dev libgdbm-dev ncurses-dev automake libtool bison &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="se"&gt;&lt;/span&gt;subversion pkg-config libffi-dev
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# For jruby:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get --no-install-recommends install curl g%2B%2B openjdk-6-jre-headless
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install everything you need&lt;/p&gt;</description></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</link><pubDate>Thu, 25 Nov 2010 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</guid><description>&lt;p&gt;So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;my_app/&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;$ rails console
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;: no such file to load -- readline (LoadError)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in `&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;from script/rails:6:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from script/rails:6:in `&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I looked at the RVM site and saw how to install the readline package:&lt;/p&gt;</description></item></channel></rss>

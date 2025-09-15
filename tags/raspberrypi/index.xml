@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberrypi on Learn, Converse, Share</title><link>http://jmeridth.com/tags/raspberrypi/</link><description>Recent content in Raspberrypi on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 28 Dec 2018 10:35:23 +0000</lastBuildDate><atom:link href="http://jmeridth.com/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml"/><item><title>Raspberry Pi Kubernetes Cluster - Part 4</title><link>http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-4/</link><pubDate>Fri, 28 Dec 2018 10:35:23 +0000</pubDate><guid>http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-4/</guid><description>&lt;p>&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1" >Raspberry Pi Kubenetes Cluster - Part 1&lt;/a>&lt;/p>
-&lt;p>&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-2" >Raspberry Pi Kubenetes Cluster - Part 2&lt;/a>&lt;/p>
-&lt;p>&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-3" >Raspberry Pi Kubenetes Cluster - Part 3&lt;/a>&lt;/p>
-&lt;p>&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-4" >Raspberry Pi Kubenetes Cluster - Part 4&lt;/a>&lt;/p>
-&lt;p>Howdy again.&lt;/p>
-&lt;p>In this post I&amp;rsquo;m going to show you how to create a docker image to run on ARM architecture and also how to deploy it and view it.&lt;/p>
-&lt;p>To start please view my basic flask application called fl8 &lt;a href="https://github.com/meridth/fl8" class="external-link" target="_blank" rel="noopener">here&lt;/a>&lt;/p>
-&lt;p>If you&amp;rsquo;d like to clone and use it:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git clone git@github.com:meridth/fl8.git &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> &lt;span class="nb">cd&lt;/span> fl8
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="arm-docker-image">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberrypi on Learn, Converse, Share</title><link>http://jmeridth.com/tags/raspberrypi/</link><description>Recent content in Raspberrypi on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 28 Dec 2018 10:35:23 +0000</lastBuildDate><atom:link href="http://jmeridth.com/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml"/><item><title>Raspberry Pi Kubernetes Cluster - Part 4</title><link>http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-4/</link><pubDate>Fri, 28 Dec 2018 10:35:23 +0000</pubDate><guid>http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-4/</guid><description>&lt;p&gt;&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-1" &gt;Raspberry Pi Kubenetes Cluster - Part 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-2" &gt;Raspberry Pi Kubenetes Cluster - Part 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-3" &gt;Raspberry Pi Kubenetes Cluster - Part 3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://jmeridth.com/posts/raspberry-pi-kubernetes-cluster-part-4" &gt;Raspberry Pi Kubenetes Cluster - Part 4&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Howdy again.&lt;/p&gt;
+&lt;p&gt;In this post I&amp;rsquo;m going to show you how to create a docker image to run on ARM architecture and also how to deploy it and view it.&lt;/p&gt;
+&lt;p&gt;To start please view my basic flask application called fl8 &lt;a href="https://github.com/meridth/fl8" class="external-link" target="_blank" rel="noopener"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to clone and use it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone git@github.com:meridth/fl8.git &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; fl8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="arm-docker-image"&gt;
  ARM docker image
- &lt;a class="heading-link" href="#arm-docker-image">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>First we need to learn about QEMU&lt;/p>
-&lt;h3 id="what-is-qemu-and-qemu-installation">
+ &lt;a class="heading-link" href="#arm-docker-image"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;First we need to learn about QEMU&lt;/p&gt;
+&lt;h3 id="what-is-qemu-and-qemu-installation"&gt;
  What is QEMU and QEMU installation
- &lt;a class="heading-link" href="#what-is-qemu-and-qemu-installation">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
- &lt;span class="sr-only">Link to heading&lt;/span>
- &lt;/a>
-&lt;/h3>
-&lt;p>QEMU (Quick EMUlator) is an Open-Source hosted hypervisor, i.e. an hypervisor running on a OS just as other computer programs, which performs hardware virtualization. QEMU emulates CPUs of several architectures, e.g. x86, PPC, ARM and SPARC. It allows the execution of non-native target executables emulating the native execution and, as we require in this case, the cross-building process.&lt;/p></description></item></channel></rss>
+ &lt;a class="heading-link" href="#what-is-qemu-and-qemu-installation"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;QEMU (Quick EMUlator) is an Open-Source hosted hypervisor, i.e. an hypervisor running on a OS just as other computer programs, which performs hardware virtualization. QEMU emulates CPUs of several architectures, e.g. x86, PPC, ARM and SPARC. It allows the execution of non-native target executables emulating the native execution and, as we require in this case, the cross-building process.&lt;/p&gt;</description></item></channel></rss>
