@@ -16,4 +16,4 @@ Things that I'm currently passionate about:
 - Cloud Native
 - Mentoring
 
-I am always learning and do my best to help others learn. I reserve the right to change my mind once I obtain new/different information. I try my best to `not let perfect be the enemy of good`.
+I am always learning and do my best to help others learn. I reserve the right to change my mind once I obtain new/different information. I try my best to not let perfect be the enemy of good.
