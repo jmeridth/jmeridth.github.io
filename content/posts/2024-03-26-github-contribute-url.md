@@ -12,7 +12,9 @@ tags:
 
 I sometimes get asked what is the best way to contribute to an open-source project.  If the project is hosted on GitHub, there is a helper URL for each repository that will highlight any issues that the maintainers have labelled with `good first issue` or `help wanted`.
 
-that URL is `/contribute` on the the end of the repository URL.  For example, the URL for the `github.com/jmeridth/jmeridth.github.io` repository is <https://github.com/jmeridth/jmeridth.github.io/contribute>
+that URL is `/contribute` on the the end of the repository URL.  For example, the URL for the `github.com/jmeridth/jmeridth.github.io` repository is:
+
+<https://github.com/jmeridth/jmeridth.github.io/contribute>
 
 You can search multiple repositories with GitHub's new <https://forgoodfirstissue.github.com/> website.  This site is a great way to find projects that are looking for help.
 
