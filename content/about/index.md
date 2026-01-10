@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-My name is Jason Meridth. At work I typically go by JM. I'm a father. I'm a nerd. I love [writing software](https://github.com/jmeridth). I tinker with hardware. A blog post I wrote a while ago talking about [my history in software development/programming](/posts/why-i-started-programming/).
+My name is Jason Meridth. I'm a father. I'm a nerd. I love [writing software](https://github.com/jmeridth). I tinker with hardware. A blog post I wrote a while ago talking about [my history in software development/programming](/posts/why-i-started-programming/).
 
 Things that I'm currently passionate about:
 
