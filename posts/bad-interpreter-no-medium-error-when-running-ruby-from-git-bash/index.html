@@ -18,7 +18,7 @@ One-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidd
 </span></span><span class=line><span class=cl>sh.exe<span class=s2>&#34;: /c/Ruby/bin/gem: D:/Users/Luis/projects/oss/oci/installer2-trunk/ruby/bin/ruby.exe: bad interpreter: no medium
 </span></span></span></code></pre></div><p>Umm&mldr;.. D:/Users/Luis? After some googling I found <a href=http://stackoverflow.com/questions/835865/bad-interpreter-no-medium-error-when-running-ruby-from-git-bash class=external-link target=_blank rel=noopener>this article on StackOverflow</a> that directed me to this <a href=http://www.liquidfish.net/2009/04/ruby-and-git-bash-woes.htm class=external-link target=_blank rel=noopener>blog</a>.  It pretty much states that the shebang line (#!) at the top of my Ruby One-Click installer file had changed/been corrupted, I don&rsquo;t know.  I changed the line to point to my ruby exe (#!C:Rubybinruby.exe) and my gem commands started working again.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
-2025
+2026
 Jason Meridth
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>

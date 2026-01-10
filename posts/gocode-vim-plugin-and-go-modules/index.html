@@ -19,19 +19,19 @@ Unfortunately, he is using Go’s modules and the version of the gocode Vim plug
 <a class=heading-link href=#solution><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>Use <a href=https://github.com/stamblerre/gocode class=external-link target=_blank rel=noopener>this fork</a> of the gocode Vim plugin and you&rsquo;ll get support for Go modules.</p><p>I use <a href=https://github.com/junegunn/vim-plug class=external-link target=_blank rel=noopener>Vim Plug</a> for my Vim plugins. Huge fan of Vundle but I like the post-actions feature of Plug. I just had to change one line of my vimrc and re-run updates.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-diff data-lang=diff><span class=line><span class=cl><span class=gh>diff --git a/vimrc b/vimrc
 </span></span></span><span class=line><span class=cl><span class=gh>index 3e8edf1..8395705 100644
-</span></span></span><span class=line><span class=cl><span class=gh></span><span class=gd>--- a/vimrc
-</span></span></span><span class=line><span class=cl><span class=gd></span><span class=gi>+++ b/vimrc
-</span></span></span><span class=line><span class=cl><span class=gi></span><span class=gu>@@ -73,7 +73,7 @@ endif
-</span></span></span><span class=line><span class=cl><span class=gu></span>           let editor_name=&#39;nvim&#39;
+</span></span></span><span class=line><span class=cl><span class=gd>--- a/vimrc
+</span></span></span><span class=line><span class=cl><span class=gi>+++ b/vimrc
+</span></span></span><span class=line><span class=cl><span class=gu>@@ -73,7 +73,7 @@ endif
+</span></span></span><span class=line><span class=cl>           let editor_name=&#39;nvim&#39;
 </span></span><span class=line><span class=cl>           Plug &#39;zchee/deoplete-go&#39;, { &#39;do&#39;: &#39;make&#39;}
 </span></span><span class=line><span class=cl>         endif
 </span></span><span class=line><span class=cl><span class=gd>-        Plug &#39;nsf/gocode&#39;, { &#39;rtp&#39;: &#39;vim&#39;, &#39;do&#39;: &#39;~/.config/nvim/plugged/gocode/vim/symlink.sh&#39; }
-</span></span></span><span class=line><span class=cl><span class=gd></span><span class=gi>+        Plug &#39;stamblerre/gocode&#39;, { &#39;rtp&#39;: &#39;vim&#39;, &#39;do&#39;: &#39;~/.vim/plugged/gocode/vim/symlink.sh&#39; }
-</span></span></span><span class=line><span class=cl><span class=gi></span>         Plug &#39;godoctor/godoctor.vim&#39;, {&#39;for&#39;: &#39;go&#39;} &#34; Gocode refactoring tool
+</span></span></span><span class=line><span class=cl><span class=gi>+        Plug &#39;stamblerre/gocode&#39;, { &#39;rtp&#39;: &#39;vim&#39;, &#39;do&#39;: &#39;~/.vim/plugged/gocode/vim/symlink.sh&#39; }
+</span></span></span><span class=line><span class=cl>         Plug &#39;godoctor/godoctor.vim&#39;, {&#39;for&#39;: &#39;go&#39;} &#34; Gocode refactoring tool
 </span></span><span class=line><span class=cl>     &#34; }
 </span></span></code></pre></div><p>That is the line I had to change then run <code>:PlugUpdate!</code> and the new plugin was installed.</p><p>I figured all of this out due to <a href=https://github.com/zchee/deoplete-go/issues/134#issuecomment-435436305 class=external-link target=_blank rel=noopener>this comment</a> by <a href=https://github.com/cippaciong class=external-link target=_blank rel=noopener>Tommaso Sardelli</a> on Github. Thank you Tommaso.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
-2025
+2026
 Jason Meridth
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>

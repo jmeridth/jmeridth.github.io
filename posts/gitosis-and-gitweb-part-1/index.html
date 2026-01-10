@@ -38,13 +38,13 @@
 </span></span></code></pre></div><script src=https://gist.github.com/jmeridth/352769.js></script><p>Gitosis is now installed. Next steps are to create git user and handle a file permission on a git hook.</p><h2 id=create-git-user>Create Git User
 <a class=heading-link href=#create-git-user><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo adduser <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  --system <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  --shell /bin/bash <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  --gecos <span class=s1>&#39;git version control&#39;</span> <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  --group <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  --disabled-password <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  --home /home/git <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  git
+</span></span></span><span class=line><span class=cl>  --system <span class=se>\
+</span></span></span><span class=line><span class=cl>  --shell /bin/bash <span class=se>\
+</span></span></span><span class=line><span class=cl>  --gecos <span class=s1>&#39;git version control&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl>  --group <span class=se>\
+</span></span></span><span class=line><span class=cl>  --disabled-password <span class=se>\
+</span></span></span><span class=line><span class=cl>  --home /home/git <span class=se>\
+</span></span></span><span class=line><span class=cl>  git
 </span></span></code></pre></div><p>You’ll see something like the following if it is successful</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Adding system user <span class=s1>&#39;git&#39;</span> <span class=o>(</span>UID 103<span class=o>)</span> ...
 </span></span><span class=line><span class=cl>Adding new group <span class=s1>&#39;git&#39;</span> <span class=o>(</span>GID 105<span class=o>)</span> ...
 </span></span><span class=line><span class=cl>Adding new user <span class=s1>&#39;git&#39;</span> <span class=o>(</span>UID 103<span class=o>)</span> with group <span class=s1>&#39;git&#39;</span> ...
@@ -98,7 +98,7 @@
 </span></span><span class=line><span class=cl>drwxr-xr-x <span class=m>3</span> user staff <span class=m>1028</span> May <span class=m>22</span> 21:31 keydir
 </span></span></code></pre></div><p>Next Park: <a href=/posts/gitosis-and-gitweb-part-2>Gitosis and Gitweb Part 2</a></p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
-2025
+2026
 Jason Meridth
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>

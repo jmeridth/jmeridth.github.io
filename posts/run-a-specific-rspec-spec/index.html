@@ -21,11 +21,11 @@ One-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidd
 <span class=tag><a href=/tags/tools/>Tools</a>
 </span><span class=separator>•</span>
 <span class=tag><a href=/tags/rspec/>Rspec</a></span></div></div></header><div class=post-content><p><strong>Update:</strong> You can specify a line number to run in your spec if you&rsquo;re wanting to run a specific spec. Example: <code>rspec spec/controllers/sessions_controller_spec.rb:90</code></p><p>Tired of looking this up and want to use my writing part of my brain to blog it:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>rake spec <span class=nv>SPEC</span><span class=o>=</span>spec/controllers/sessions_controller_spec.rb <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>  <span class=nv>SPEC_OPTS</span><span class=o>=</span><span class=s2>&#34;-e \&#34;should log in with cookie\&#34;&#34;</span>
+</span></span></span><span class=line><span class=cl>  <span class=nv>SPEC_OPTS</span><span class=o>=</span><span class=s2>&#34;-e \&#34;should log in with cookie\&#34;&#34;</span>
 </span></span></code></pre></div><p>This is importatnt to me while coding Rails because if I just run</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>rspec specs/controllers/sessions_controller_spec.rb
 </span></span></code></pre></div><p>the test database isn’t cleared out. By running <code>rake spec</code> I get that.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
-2025
+2026
 Jason Meridth
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>

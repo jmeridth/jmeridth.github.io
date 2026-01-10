@@ -41,7 +41,7 @@ I know that we are all enamored by the UI of GitHub.com. I am. Unfortunately yo
 </span></span></code></pre></div><p>Once that was done I can see the repository and it’s information on Gitweb.</p><p><img src=/img/gitweb-part3.png alt></p><p>If you want to edit the project description from &ldquo;Unnamed repository; edit this file &lsquo;description&rsquo; to name the repository.&rdquo; go to the repositories description file (/home/git/repositories/          lostechies.git/description for this repo) and edit the file and save.</p><h3 id=cron-job>Cron job
 <a class=heading-link href=#cron-job><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h3><p>I, again with the leadership of Ant, utilized a cron job he wrote to automatically make the repositories have permissions of 755. I do have some repositories, like gitosis-admin, that I do not ever want visible on Gitweb. The cron job excludes them. Here is the cron job code, showing that I don’t want to show my personal.git and gitosis-admin.git repositories. This could be easily written in Ruby or any other “scripting language” of your choice:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/sh
-</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nv>GITOSIS_REPO_PATH</span><span class=o>=</span><span class=s2>&#34;/home/git/repositories&#34;</span>
 </span></span><span class=line><span class=cl><span class=nv>GITOSIS_ADMIN_PATH</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$GITOSIS_REPO_PATH</span><span class=s2>/gitosis-admin.git&#34;</span>
 </span></span><span class=line><span class=cl><span class=nv>PERSON_REPO_PATH</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$GITOSIS_REPO_PATH</span><span class=s2>/personal.git&#34;</span>
@@ -68,7 +68,7 @@ Translation: Find all the directories in my gitosis repository path (/home/git/r
 <a class=heading-link href=#comments><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><p><strong><a href=#483 title="2010-07-09 22:07:08">katy lavallee</a>:</strong> Anxiously awaiting the next part :)</p><p><strong><a href=#513 title="2011-11-05 01:16:00">Thorpe</a>:</strong> You said you chose Bash so that you could take some time to learn it. Unfortunately however, your shebang points to sh not bash. There is some differences.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
-2025
+2026
 Jason Meridth
 ·
 Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>
