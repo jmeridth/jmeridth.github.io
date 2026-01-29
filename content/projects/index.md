@@ -4,9 +4,13 @@ title: Projects
 permalink: /projects/
 ---
 
-### Projects that I currently contribute to
+### Projects that I currently contribute to/maintain
 
 - [Argo Helm](https://github.com/argoproj/argo-helm)
+- [Security Insights](https://github.com/ossf/security-insights)
+
+### Projects that I formerly contributed to/maintained
+
 - [OSPO Reusable Workflows](https://github.com/github/ospo-reusable-workflows)
 - [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
 - [Issue-Metrics GitHub Action](https://github.com/github/issue-metrics)
