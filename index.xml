@@ -1434,15 +1434,25 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;li&gt;&lt;a href="https://github.com/jmeridth" class="external-link" target="_blank" rel="noopener"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.linkedin.com/in/jmeridth/" class="external-link" target="_blank" rel="noopener"&gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;j -dot- meridth -at- gmail -dot- com&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Projects</title><link>http://jmeridth.com/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://jmeridth.com/projects/</guid><description>&lt;h3 id="projects-that-i-currently-contribute-to"&gt;
- Projects that I currently contribute to
- &lt;a class="heading-link" href="#projects-that-i-currently-contribute-to"&gt;
+&lt;/ul&gt;</description></item><item><title>Projects</title><link>http://jmeridth.com/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://jmeridth.com/projects/</guid><description>&lt;h3 id="projects-that-i-currently-contribute-tomaintain"&gt;
+ Projects that I currently contribute to/maintain
+ &lt;a class="heading-link" href="#projects-that-i-currently-contribute-tomaintain"&gt;
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
  &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
  &lt;/a&gt;
 &lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/argoproj/argo-helm" class="external-link" target="_blank" rel="noopener"&gt;Argo Helm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ossf/security-insights" class="external-link" target="_blank" rel="noopener"&gt;Security Insights&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="projects-that-i-formerly-contributed-tomaintained"&gt;
+ Projects that I formerly contributed to/maintained
+ &lt;a class="heading-link" href="#projects-that-i-formerly-contributed-tomaintained"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/ospo-reusable-workflows" class="external-link" target="_blank" rel="noopener"&gt;OSPO Reusable Workflows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/stale-repos" class="external-link" target="_blank" rel="noopener"&gt;Stale-Repos GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/issue-metrics" class="external-link" target="_blank" rel="noopener"&gt;Issue-Metrics GitHub Action&lt;/a&gt;&lt;/li&gt;
