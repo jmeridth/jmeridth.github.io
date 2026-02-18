@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-### Projects that I currently contribute to/maintain
+### Projects that I currently maintain
 
 - [argo-helm](https://github.com/argoproj/argo-helm): ArgoProj Helm Charts
 - [privateer](https://github.com/privateerproj/privateer): Plugin-based framework to validate deployed resources
