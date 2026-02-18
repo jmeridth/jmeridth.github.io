@@ -6,10 +6,13 @@ permalink: /projects/
 
 ### Projects that I currently contribute to/maintain
 
-- [Argo Helm](https://github.com/argoproj/argo-helm)
-- [Security Insights](https://github.com/ossf/security-insights)
+- [argo-helm: ArgoProj Helm Charts](https://github.com/argoproj/argo-helm)
+- [security-insights: Machine-readable specification for the attestation of security-relevant data](https://github.com/ossf/security-insights)
+- [privateer: Plugin-based framework to validate deployed resources](https://github.com/privateerproj/privateer]
+- [privateer-sdk: Privateer plugin SDK](https://github.com/privateerproj/privateer-sdk]
+- [pvtr-github-repo: Privateer plugin to scan GitHub repositories for security hygiene](https://github.com/revanite-io/pvtr-github-repo]
 
-### Projects that I formerly contributed to/maintained
+### Projects that I formerly maintained
 
 - [OSPO Reusable Workflows](https://github.com/github/ospo-reusable-workflows)
 - [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
