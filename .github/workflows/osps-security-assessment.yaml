@@ -1,0 +1,46 @@
+name: OSPS Security Assessment
+
+on:
+  schedule:
+    # Run weekly on Mondays at 9 AM UTC
+    - cron: "0 9 * * 1"
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  osps-assessment:
+    runs-on: ubuntu-latest
+    name: OSPS Security Assessment
+
+    permissions:
+      contents: read
+      id-token: write
+      security-events: write # Required for SARIF upload
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: octo-sts/action@f603d3be9d8dd9871a265776e625a27b00effe05
+        id: octo-sts
+        with:
+          scope: jmeridth/jmeridth.github.io
+          identity: jmeridth.github.io
+
+      - name: Open Source Project Security Baseline Scanner
+        uses: revanite-io/osps-baseline-action@6d2d044b2ec5299d4d8b82da3027c7f5ddadda6e
+        with:
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          token: ${{ steps.octo-sts.outputs.token }}
+          catalog: "osps-baseline"
+          upload-sarif: "true"
+
+      - name: Upload Assessment Results
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: osps-assessment-results-${{ github.run_number }}
+          path: evaluation_results/
+          retention-days: 30
