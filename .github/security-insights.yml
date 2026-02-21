@@ -1,0 +1,57 @@
+header:
+  schema-version: 2.2.0
+  last-updated: "2026-02-21"
+  last-reviewed: "2026-02-21"
+  url: https://github.com/jmeridth/jmeridth.github.io/blob/main/.github/security-insights.yml
+  project-si-source: https://raw.githubusercontent.com/jmeridth/jmeridth.github.io/refs/heads/main/.github/security-insights.yml
+  comment: |
+    This file contains security insights for the jmeridth.github.io personal site.
+
+repository:
+  url: https://github.com/jmeridth/jmeridth.github.io
+  status: active
+  bug-fixes-only: false
+  accepts-change-request: true
+  accepts-automated-change-request: true
+  no-third-party-packages: false
+  core-team:
+    - name: Jason Meridth
+      affiliation: Chainguard
+      social: https://github.com/jmeridth
+      primary: true
+  documentation:
+    contributing-guide: https://github.com/jmeridth/.github/blob/main/.github/CONTRIBUTING.md
+    security-policy: https://github.com/jmeridth/.github/blob/main/.github/SECURITY.md
+  license:
+    url: https://github.com/jmeridth/.github/blob/main/LICENSE
+    expression: MIT
+  release:
+    automated-pipeline: true
+    distribution-points:
+      - uri: https://jmeridth.github.io
+        comment: Deployed to GitHub Pages via GitHub Actions
+  security:
+    assessments:
+      self:
+        comment: |
+          A self assessment has not been published for this repo.
+    champions:
+      - name: Jason Meridth
+        primary: true
+    tools:
+      - name: Dependabot
+        type: SCA
+        version: "2"
+        rulesets:
+          - default
+        results:
+          adhoc:
+            name: Scheduled SCA Scan Results
+            predicate-uri: https://docs.github.com/en/graphql/reference/objects#repositoryvulnerabilityalert
+            location: https://github.com/jmeridth/jmeridth.github.io/security/dependabot
+            comment: |
+              The results of the scheduled SCA scan are available in the Dependabot tab of the Security Insights page.
+        integration:
+          adhoc: true
+          ci: false
+          release: false
