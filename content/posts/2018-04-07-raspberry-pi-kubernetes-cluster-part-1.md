@@ -32,9 +32,9 @@ The items I bought were:
 
 Here is the tweet when it all arrived:
 
-<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I blame <a href="https://twitter.com/hhoover?ref_src=twsrc%5Etfw">@hhoover</a> ;). I will be building my <a href="https://twitter.com/kubernetesio?ref_src=twsrc%5Etfw">@kubernetesio</a> cluster once the 6pi case shows up next Wednesday. The extra pi is to upgrade my <a href="https://twitter.com/RetroPieProject?ref_src=twsrc%5Etfw">@RetroPieProject</a>. Touch screen is an addition I want to try. Side project here I come. <a href="https://t.co/EebIKbsCeH">pic.twitter.com/EebIKbsCeH</a></p>&mdash; Jason Meridth (@jmeridth) <a href="https://twitter.com/jmeridth/status/980075584725422080?ref_src=twsrc%5Etfw">March 31, 2018</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+> I blame [@hhoover](https://twitter.com/hhoover?ref_src=twsrc%5Etfw) ;). I will be building my [@kubernetesio](https://twitter.com/kubernetesio?ref_src=twsrc%5Etfw) cluster once the 6pi case shows up next Wednesday. The extra pi is to upgrade my [@RetroPieProject](https://twitter.com/RetroPieProject?ref_src=twsrc%5Etfw). Touch screen is an addition I want to try. Side project here I come. [pic.twitter.com/EebIKbsCeH](https://t.co/EebIKbsCeH)
+> 
+> — Jason Meridth (@jmeridth) [March 31, 2018](https://twitter.com/jmeridth/status/980075584725422080?ref_src=twsrc%5Etfw)
 
 I spent this morning finally putting it together.
 
