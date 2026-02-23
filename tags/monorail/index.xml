@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Monorail on Learn, Converse, Share</title><link>http://jmeridth.com/tags/monorail/</link><description>Recent content in Monorail on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 30 Mar 2008 00:21:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/monorail/index.xml" rel="self" type="application/rss+xml"/><item><title>PTOM - Single Responsibility Principle</title><link>http://jmeridth.com/posts/ptom-single-responsibility-principle/</link><pubDate>Sun, 30 Mar 2008 00:21:00 -0500</pubDate><guid>http://jmeridth.com/posts/ptom-single-responsibility-principle/</guid><description>&lt;h3 id="the-single-responsibility-principle"&gt;
+ The Single Responsibility Principle
+ &lt;a class="heading-link" href="#the-single-responsibility-principle"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;This post is about the first letter in Uncle Bob&amp;rsquo;s SOLID acronym, &lt;a href="http://www.objectmentor.com/resources/articles/srp.pdf" class="external-link" target="_blank" rel="noopener"&gt;Single Responsibility Principle&lt;/a&gt;, and a continuation of &lt;a href="blogs/chad_myers/archive/2008/03/07/pablo-s-topic-of-the-month-march-solid-principles.aspx" &gt;The Los Techies Pablo&amp;rsquo;s Topic of the Month - March: SOLID Principles&lt;/a&gt;. Sean has already &lt;a href="http://www.lostechies.com/blogs/sean_chambers/archive/2008/03/15/ptom-single-responsibility-principle.aspx" class="external-link" target="_blank" rel="noopener"&gt;posted&lt;/a&gt; on this, but I&amp;rsquo;d like to &amp;ldquo;contribute&amp;rdquo;. &lt;em&gt;&lt;strong&gt;Note about the SOLID acronym and this blog &amp;ldquo;storm&amp;rdquo;&lt;/strong&gt;: This &amp;ldquo;principle&amp;rdquo; is more or less common sense, as are most of the other items in the SOLID acronym. I like the idea of this series because I personally have interviewed with companies who would ask about possible code scenarios and I respond with one of these principles or one of the GOF patterns and they look back at me with a blank stare. I know these are just labels, but if they can reduce the miscommunication possibilities and start standardizing our industry, I&amp;rsquo;m all for it. I know some of the new ideas and labels out there are still being hammered out (i.e., like the BDD discussions as of late), but that is part of the process and what has to happen in such a young industry like ours.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Knowledge</title><link>http://jmeridth.com/posts/knowledge/</link><pubDate>Wed, 14 Nov 2007 05:37:19 -0600</pubDate><guid>http://jmeridth.com/posts/knowledge/</guid><description>&lt;p&gt;Joe&amp;rsquo;s post reminded me of something that I heard while at the ALT.net conference.  While attending the MonoRail session, the developers were talking about which view engine to use and the topic of Boo and Brail came about.  When that was mentioned a few guys stated that they wanted to learn Boo but couldn&amp;rsquo;t see themselves switching from C# or VB.NET to a new language.&lt;/p&gt;</description></item><item><title>MonoRail</title><link>http://jmeridth.com/posts/monorail-5-sending-an-email-and-authentication/</link><pubDate>Sat, 03 Nov 2007 01:59:40 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-5-sending-an-email-and-authentication/</guid><description>&lt;h3 id="recap"&gt;
+ RECAP
+ &lt;a class="heading-link" href="#recap"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;ve been pretty busy as of late and even had some issues with the way I was trying to unit test validation.  As you can see &lt;a href="http://www.lostechies.com/blogs/joeydotnet/archive/2007/10/25/monorail-controller-test-analysis-problem-and-resolution.aspx" class="external-link" target="_blank" rel="noopener"&gt;here&lt;/a&gt;, I was able to get some help from &lt;a href="http://www.lostechies.com/blogs/joeydotnet" class="external-link" target="_blank" rel="noopener"&gt;Joey&lt;/a&gt; on this and it has made me realize that I need to re-write my MonoRail Validation post to use the &amp;ldquo;correct&amp;rdquo; manner of validation.  Even Oren agrees that the &lt;a href="http://www.ayende.com/Blog/archive/2007/10/21/The-IoC-mind-set-Validation.aspx" class="external-link" target="_blank" rel="noopener"&gt;validation&lt;/a&gt; library in MonoRail works, it is just not the ideal way of doing it.&lt;/p&gt;</description></item><item><title>Routing from ASP.NET MVC inspires MonoRail</title><link>http://jmeridth.com/posts/routing-from-asp-net-mvc-inspires-monorail/</link><pubDate>Wed, 17 Oct 2007 02:46:29 -0500</pubDate><guid>http://jmeridth.com/posts/routing-from-asp-net-mvc-inspires-monorail/</guid><description>&lt;p&gt;According to the recent check-in on MonoRail (build 586), they are setting the foundation to having routing just like ASP.NET MVC.&lt;/p&gt;
+&lt;p&gt;Very cool.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://builds.castleproject.org/cruise/ViewSpecific.castle?name=CastleProject&amp;amp;log=log20071017002115Lbuild.586.xml&amp;amp;detail=Summary" class="external-link" target="_blank" rel="noopener"&gt;http://builds.castleproject.org/cruise/ViewSpecific.castle?name=CastleProject&amp;amp;log=log20071017002115Lbuild.586.xml&amp;amp;detail=Summary&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;UPDATE: &lt;em&gt;&lt;em&gt;&lt;a href="http://colinramsay.co.uk/diary/" class="external-link" target="_blank" rel="noopener"&gt;Colin_&lt;/a&gt;&lt;/em&gt; gives more insight into the code change&lt;/em&gt;&lt;/em&gt;&lt;a href="http://colinramsay.co.uk/2007/10/17/new-monorail-routing/" class="external-link" target="_blank" rel="noopener"&gt;here_&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Oh, yeah, props to Colin for getting a contribution with Build 585.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://builds.castleproject.org/cruise/ViewSpecific.castle?name=CastleProject&amp;amp;log=log20071016200558Lbuild.585.xml&amp;amp;detail=Summary" class="external-link" target="_blank" rel="noopener"&gt;http://builds.castleproject.org/cruise/ViewSpecific.castle?name=CastleProject&amp;amp;log=log20071016200558Lbuild.585.xml&amp;amp;detail=Summary&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Side Note: My next MonoRail post is coming soon.  Email and Authentication/Authorization.&lt;/p&gt;
+&lt;h2 id="comments"&gt;
+ Comments
+ &lt;a class="heading-link" href="#comments"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="#161" title="2008-01-30 14:17:16" &gt;Omer Rauchwerger&lt;/a&gt;:&lt;/strong&gt; Coolness! Go Monorail! :-)&lt;/p&gt;</description></item><item><title>MonoRail screencasts</title><link>http://jmeridth.com/posts/monorail-screencasts/</link><pubDate>Mon, 08 Oct 2007 23:27:11 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-screencasts/</guid><description>&lt;p&gt;If you want a great into to MonoRail, check out &lt;a href="http://colinramsay.co.uk/category/screencasts/" class="external-link" target="_blank" rel="noopener"&gt;Colin&amp;rsquo;s screencasts&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I will possibly be re-writing my validation post.&lt;/p&gt;</description></item><item><title>MonoRail</title><link>http://jmeridth.com/posts/monorail-4-validation/</link><pubDate>Wed, 26 Sep 2007 15:08:25 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-4-validation/</guid><description>&lt;p&gt;This post was decided upon after watching &lt;a href="http://hammett.castleproject.org/" class="external-link" target="_blank" rel="noopener"&gt;Hammet&lt;/a&gt;&amp;rsquo;s &lt;a href="http://hammett.castleproject.org/wp-content/uploads/2007/01/mr%20formvalidation.html" class="external-link" target="_blank" rel="noopener"&gt;screencast&lt;/a&gt; on using attribute-based validation in MonoRail.&lt;/p&gt;
+&lt;p&gt;*&lt;strong&gt;NOTE&lt;/strong&gt;: I do not agree with embedding validation into the domain model.  I would prefer a service handle this, but I&amp;rsquo;m utilizing the validation that is in the framework.  I&amp;rsquo;ve been skimming some of Bill McCafferty&amp;rsquo;s MonoRail posts and have seen him use items like fValidate, but haven&amp;rsquo;t had an opportunity to use them.  Anyone have any preferences?&lt;/p&gt;</description></item><item><title>MonoRail HotSwap</title><link>http://jmeridth.com/posts/monorail-hotswap/</link><pubDate>Sun, 23 Sep 2007 19:27:16 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-hotswap/</guid><description>&lt;p&gt;Ayende (pronounced A-yend  (no eh at the end) - verified in this &lt;a href="http://ayende.com/Blog/archive/2007/09/23/MonoRail.HotSwap-in-Action.aspx" class="external-link" target="_blank" rel="noopener"&gt;post&lt;/a&gt; after hearing Colin pronounce it) posted on an idea he has - &lt;a href="http://ayende.com/Blog/archive/2007/09/22/Introducing-MonoRail.HotSwap.aspx" class="external-link" target="_blank" rel="noopener"&gt;MonoRail HotSwap&lt;/a&gt; and &lt;a href="http://colinramsay.co.uk/" class="external-link" target="_blank" rel="noopener"&gt;Colin Ramsay&lt;/a&gt; did a &lt;a href="http://colinramsay.co.uk/2007/09/23/hotswap-for-monorail-in-action/" class="external-link" target="_blank" rel="noopener"&gt;screencast of MonoRail HotSwap&lt;/a&gt;.  I know that the AppDomain having to reset because a code change occurred can be annoying sometimes, but it hasn&amp;rsquo;t bothered me to the point where I would need this feature.  However, it is still very cool how the Windsor container is swapping out the old code for the new but doesn&amp;rsquo;t change the dll in the bin directory, therefore the AppDomain doesn&amp;rsquo;t need to refresh.  Check out the screencast.&lt;/p&gt;</description></item><item><title>Brad Abrams hints (again) on Microsoft MVC framework for ASP.NET and Phil Haack will head it up</title><link>http://jmeridth.com/posts/brad-abrams-hints-again-on-microsoft-mvc-framework-for-asp-net-and-phil-haack-will-head-it-up/</link><pubDate>Tue, 18 Sep 2007 21:41:15 -0500</pubDate><guid>http://jmeridth.com/posts/brad-abrams-hints-again-on-microsoft-mvc-framework-for-asp-net-and-phil-haack-will-head-it-up/</guid><description>&lt;p&gt;Brad Abrams, Group manager of the .NET Framework, &lt;a href="http://blogs.msdn.com/brada/archive/2007/09/18/phil-haack-joins-the-ranks.aspx" class="external-link" target="_blank" rel="noopener"&gt;posted today&lt;/a&gt; announcing the Microsoft hiring of Phil Haack, core SubText blogging engine developer.  Brad mentions that Phil will head the team to bring about a &lt;strong&gt;MVC architecture for ASP.NET.&lt;/strong&gt;  I&amp;rsquo;ve followed Phil&amp;rsquo;s blog and am glad to hear people of his talent will be behind that movement.  He even mentions speaking with Scott Guthrie at Redmond and stating that he wants to work on the MVC Framework (&lt;a href="http://haacked.com/archive/2007/09/17/why-is-microsoft-removing-my-mvp-status.aspx" class="external-link" target="_blank" rel="noopener"&gt;here&lt;/a&gt;), and voila!! I&amp;rsquo;m still on the MonoRail bandwagon, but we all know that if Microsoft comes out with a MVC Framework, it will most likely be accepted as the standard (whether or not it is the better of the MVC frameworks).  Hopefully, MS will listen to the industry on what is needed for that idea to succeed.&lt;/p&gt;</description></item><item><title>Monorail</title><link>http://jmeridth.com/posts/monorail-3-viewcomponents/</link><pubDate>Tue, 18 Sep 2007 15:27:10 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-3-viewcomponents/</guid><description>&lt;h4 id="unit-testing"&gt;
+ UNIT TESTING
+ &lt;a class="heading-link" href="#unit-testing"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;After the past 2 1/2 posts I&amp;rsquo;ve migrated my unit tests to use the &lt;a href="http://schambers.wordpress.com/2007/09/04/testing-monorail-controllers-from-castles-trunk/" class="external-link" target="_blank" rel="noopener"&gt;BaseControllerTest abstract class&lt;/a&gt; that originated from the &lt;a href="http://joeydotnet.com/blog/archive/2007/09/06/Quick-Tip-Asserting-response-redirects-in-a-MonoRail-controller-test.aspx" class="external-link" target="_blank" rel="noopener"&gt;Eleutian guys, but is now a part of the Castle MonoRail trunk download&lt;/a&gt;.
+Here is my ExampleControllerTests class:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 1: using Castle.MonoRail.TestSupport;
+
+
+ 2: using JasonMeridth.Controllers;
+
+
+ 3: using NUnit.Framework;
+
+
+ 4:
+
+
+ 5: namespace JasonMeridth.Tests.Controllers
+
+
+ 6: {
+
+
+ 7: [TestFixture]
+
+
+ 8: public class ExampleControllerTests : BaseControllerTest
+
+
+ 9: {
+
+
+ 10: private ExampleController exampleController;
+
+
+ 11:
+
+
+ 12: [SetUp
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Monorail</title><link>http://jmeridth.com/posts/monorail-0-controllers/</link><pubDate>Sat, 08 Sep 2007 21:20:59 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-0-controllers/</guid><description>&lt;p&gt;One of the first things I should have posted:  &lt;a href="http://www.castleproject.org/monorail/documentation/trunk/manual/howitworks.html" class="external-link" target="_blank" rel="noopener"&gt;How It Works&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This image is good for all you visual learners out there:&lt;/p&gt;
+&lt;p&gt;&lt;img src="jasonmeridth/files/2011/03Monorail1bControllers_954B/image_thumb.png" alt="image"&gt;
+(from the Castle Project documentation)&lt;/p&gt;
+&lt;p&gt;This will help us when we go to the next post on layouts (view engines).&lt;/p&gt;
+&lt;p&gt;Instead of starting on the page, it starts with the controller as a true MVC architecture should.&lt;/p&gt;</description></item><item><title>Monorail</title><link>http://jmeridth.com/posts/monorail-2-layouts-amp-rescues/</link><pubDate>Sat, 08 Sep 2007 21:20:00 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-2-layouts-amp-rescues/</guid><description>&lt;h2 id="layouts"&gt;
+ &lt;strong&gt;&lt;em&gt;LAYOUTS&lt;/em&gt;&lt;/strong&gt;
+ &lt;a class="heading-link" href="#layouts"&gt;
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"&gt;&lt;/i&gt;
+ &lt;span class="sr-only"&gt;Link to heading&lt;/span&gt;
+ &lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;UPDATED: Used the Code Snippet plug-in&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Layouts are like &lt;a href="http://msdn2.microsoft.com/en-us/library/wtxbf3hh.aspx" class="external-link" target="_blank" rel="noopener"&gt;master pages&lt;/a&gt; or template pages in Adobe DreamWeaver.  They allow you to template your site.  I have a default.vm under my ../Views/layouts folder and the way to make a controller utilize the layout is to add a layout attribute to the class definition:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 1: using System;
+
+
+ 2: using Castle.MonoRail.Framework;
+
+
+ 3:
+
+
+ 4: namespace JasonMeridth.Controllers
+
+
+ 5: {
+
+
+ 6: [Layout(&amp;quot;default&amp;quot;), Rescue(&amp;quot;generalerror&amp;quot;)]
+
+
+ 7: public class ExampleController : SmartDispatcherController
+
+
+ 8: {
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As you probably saw in my last post, it wasn&amp;rsquo;t just a simple &amp;ldquo;hello world&amp;rdquo; text on a white background.
+The reason I had a design was due to the ****&lt;a href="http://api.castleproject.org/html/T_Castle_MonoRail_Framework_LayoutAttribute.htm" class="external-link" target="_blank" rel="noopener"&gt;Layout attribute&lt;/a&gt; on the ExampleController class.
+Layouts are simply NVelocity files (or whichever viewing engine you chose) placed in the /Views/layouts folder.  In my case it is the default.vm file:&lt;/p&gt;</description></item><item><title>Monorail</title><link>http://jmeridth.com/posts/monorail-1-reasons-setup-and-first-output/</link><pubDate>Fri, 24 Aug 2007 08:01:00 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-1-reasons-setup-and-first-output/</guid><description>&lt;p&gt;&lt;em&gt;**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2 **&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;REASONS:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve had a few friends ask me what is MonoRail and how do I set it up?  I decided to go from the ground up here.  There is nothing here that you can&amp;rsquo;t get from the &lt;a href="http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html" class="external-link" target="_blank" rel="noopener"&gt;Castle website documentation&lt;/a&gt;.  I just want to grok this stuff and like Mr. Torvalds says, &amp;ldquo;&lt;a href="http://lkml.org/lkml/2000/8/25/132" class="external-link" target="_blank" rel="noopener"&gt;Talk is cheap, show me the code&lt;/a&gt;&amp;quot;.  I also want to learn how to unit test in this environment.  I&amp;rsquo;ve heard the great things about Ruby on Rails (RoR from now on), but want to make that migration slowly.&lt;/p&gt;</description></item><item><title>Monorail on WebHost4Life</title><link>http://jmeridth.com/posts/monorail-on-webhost4life/</link><pubDate>Sat, 11 Aug 2007 04:38:40 -0500</pubDate><guid>http://jmeridth.com/posts/monorail-on-webhost4life/</guid><description>&lt;p&gt;If anyone else is using hosting with &lt;a href="http://www.webhost4life.com" class="external-link" target="_blank" rel="noopener"&gt;WebHost4Life&lt;/a&gt;, I&amp;rsquo;ve gotten a Monorail site up there pretty quick using the MonoRailHttpHandlerFactory in my web.config, as suggested by the &lt;a href="http://www.castleproject.org/monorail/documentation/trunk/usersguide/installing.html#DeployingToSharedHost" class="external-link" target="_blank" rel="noopener"&gt;Castle Monorail installation documentation&lt;/a&gt;. &lt;em&gt;Please note that the documentation has .ashx, it should be .aspx&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve also put in a support ticket to see if &lt;a href="http://www.webhost4life.com" class="external-link" target="_blank" rel="noopener"&gt;WebHost4Life&lt;/a&gt; will add the .rails extensions to the known ASP.NET extensions.  I&amp;rsquo;ll update this post if it goes through.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;UPDATE:  &lt;a href="http://www.webhost4life.com" class="external-link" target="_blank" rel="noopener"&gt;WebHost4Life&lt;/a&gt; was kind enough, after 2 help tickets, to add the .rails extension to the known ASP.NET extensions.  It works now.  They tried to get me to add a mime type for my specific domain (jasonmeridth.com) and that did not work.  Mime type of text/h&lt;/em&gt;****&lt;em&gt;tml and extension of .rails failed.  If they ask you to do that, it will not work.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Current things on my plate</title><link>http://jmeridth.com/posts/current-things-on-my-plate/</link><pubDate>Fri, 10 Aug 2007 00:18:31 -0500</pubDate><guid>http://jmeridth.com/posts/current-things-on-my-plate/</guid><description>&lt;p&gt;I&amp;rsquo;m doing a good deal of stuff lately:&lt;/p&gt;
+&lt;p&gt;1. Helping build/standardize the local .NET Users group in San Antonio (&lt;a href="http://www.alamocoders.net" class="external-link" target="_blank" rel="noopener"&gt;Alamo Coders&lt;/a&gt;)
+2. Study/Learn/Grok &lt;a href="http://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215" class="external-link" target="_blank" rel="noopener"&gt;Domain Driven Design (DDD)&lt;/a&gt; and &lt;a href="http://dannorth.net/introducing-bdd/" class="external-link" target="_blank" rel="noopener"&gt;Behavior Driven Design (BDD)&lt;/a&gt;
+3. Put out a production &lt;a href="http://www.castleproject.org/monorail/index.html" class="external-link" target="_blank" rel="noopener"&gt;Monorail&lt;/a&gt; site for a local mom &amp;amp; pop shop
+4. Heal from a bad case of &lt;a href="http://en.wikipedia.org/wiki/Cellulitis" class="external-link" target="_blank" rel="noopener"&gt;Cellulitis&lt;/a&gt; (staph infection) in my leg (OUCH!)
+5. Check out &lt;a href="http://www.jpboodhoo.com/blog/" class="external-link" target="_blank" rel="noopener"&gt;Jean-Paul Boodhoo&amp;rsquo;s&lt;/a&gt; presentation next &lt;a href="http://www.adnug.org/Home/tabid/36/ctl/Details/Mid/363/ItemID/1/Default.aspx?selecteddate=8/13/2007" class="external-link" target="_blank" rel="noopener"&gt;Monday at the Austin .NET Users Group meeting&lt;/a&gt; (maybe not, because of my leg)
+6. Study &lt;a href="http://www.ruby-lang.org/en/" class="external-link" target="_blank" rel="noopener"&gt;Ruby&lt;/a&gt;/&lt;a href="http://www.iunknown.com/2007/07/a-first-look-at.html" class="external-link" target="_blank" rel="noopener"&gt;IronRuby&lt;/a&gt; - &lt;a href="http://tryruby.hobix.com/" class="external-link" target="_blank" rel="noopener"&gt;a great place to start&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Castle and Visual Studio integration</title><link>http://jmeridth.com/posts/castle-and-visual-studio-integration/</link><pubDate>Tue, 03 Jul 2007 10:17:00 -0500</pubDate><guid>http://jmeridth.com/posts/castle-and-visual-studio-integration/</guid><description>&lt;p&gt;Hammet (Hamilton Verissimo), founder of the Castle Project (MonoRail, Windsor, ActiveRecord, etc.) just posted about a Castle Contrib project to help with highlighting of NVelocity language syntax in Visual Studio 2005.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://hammett.castleproject.org/?p=169" class="external-link" target="_blank" rel="noopener"&gt;The post.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://using.castleproject.org/display/Contrib/Castle&amp;#43;Visual&amp;#43;Studio&amp;#43;Integration" class="external-link" target="_blank" rel="noopener"&gt;The download from Castle Contrib.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hope this motivates me again to try and get a Monorail site out.&lt;/p&gt;</description></item><item><title>Bill McCafferty is moving to Monorail</title><link>http://jmeridth.com/posts/bill-mccafferty-is-moving-to-monorail/</link><pubDate>Tue, 29 May 2007 15:33:00 -0500</pubDate><guid>http://jmeridth.com/posts/bill-mccafferty-is-moving-to-monorail/</guid><description>&lt;p&gt;Bill McCafferty, the author of &lt;a href="http://www.codeproject.com/aspnet/NHibernateBestPractices.asp" class="external-link" target="_blank" rel="noopener"&gt;NHibernate Best Practices on CodeProject&lt;/a&gt;, after researching many Separation of Concern Alternatives has decided to have his development team move to &lt;a href="http://www.castleproject.org/monorail/index.html" class="external-link" target="_blank" rel="noopener"&gt;Monorail&lt;/a&gt;. (&lt;a href="http://devlicio.us/blogs/billy_mccafferty/archive/2007/05/29/concise-introduction-to-castle-monorail.aspx" class="external-link" target="_blank" rel="noopener"&gt;read the post&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m curious to see how it goes.  I&amp;rsquo;d love for my current position to allow for such a migration but the time needed is not there right now.  Maybe someday.&lt;/p&gt;
+&lt;p&gt;Also, Hammet, the key contributor and found of the Castle project, has &lt;a href="http://www.google.com/reader/view/" class="external-link" target="_blank" rel="noopener"&gt;posted on Castle View Components&lt;/a&gt;.  He links to Kevin Miller&amp;rsquo;s blog &lt;a href="http://blogs.dovetailsoftware.com/blogs/kmiller/archive/2007/05/08/monorail-and-3rd-party-viewcomponents.aspx" class="external-link" target="_blank" rel="noopener"&gt;post about ASP.NET Controls vs. View Components&lt;/a&gt; (I&amp;rsquo;m mentioned in this post, redirecting Kevin to &lt;a href="http://joeydotnet.com/blog/category/16.aspx" class="external-link" target="_blank" rel="noopener"&gt;JoeyDotNet&amp;rsquo;s View Component posts&lt;/a&gt; - shameless plug).&lt;/p&gt;</description></item><item><title>joeyDotNet - Creating reusable components in Monorail</title><link>http://jmeridth.com/posts/joeydotnet-creating-reusable-components-in-monorail/</link><pubDate>Fri, 13 Apr 2007 23:03:05 -0500</pubDate><guid>http://jmeridth.com/posts/joeydotnet-creating-reusable-components-in-monorail/</guid><description>&lt;p&gt;I found an excellent &lt;a href="http://joeydotnet.com/blog/archive/2007/04/13/Having-fun-creating-reusable-components-in-MonoRail.aspx" class="external-link" target="_blank" rel="noopener"&gt;post&lt;/a&gt; by &lt;a href="http://joeydotnet.com/blog/Default.aspx" class="external-link" target="_blank" rel="noopener"&gt;joeyDotNet&lt;/a&gt; on how to start porting over ASP.NET custom server controls to &lt;a href="http://www.castleproject.org/monorail/index.html" class="external-link" target="_blank" rel="noopener"&gt;Monorail&lt;/a&gt; (w/ Brail).&lt;/p&gt;
+&lt;p&gt;Check it out.&lt;/p&gt;</description></item><item><title>Reminder - How to enable syntax highlighting for HTML files with non-standard extensions</title><link>http://jmeridth.com/posts/reminder-how-to-enable-syntax-highlighting-for-html-files-with-non-standard-extensions/</link><pubDate>Wed, 21 Mar 2007 21:34:00 -0500</pubDate><guid>http://jmeridth.com/posts/reminder-how-to-enable-syntax-highlighting-for-html-files-with-non-standard-extensions/</guid><description>&lt;p&gt;If you are using VS2005, you can also go to Tools-&amp;gt;Options-&amp;gt;Text Editor-&amp;gt;File Extension and associate the file extension with the HTML Editor.&lt;/p&gt;
+&lt;p&gt;This is particularly useful for the Monorail View types [Boo (boo extension) and NVelocity (vm extension)]&lt;/p&gt;</description></item></channel></rss>

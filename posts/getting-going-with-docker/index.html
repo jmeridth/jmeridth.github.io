@@ -17,19 +17,19 @@ So, on OSX you can install the docker-machine and docker brew formulas with home
 </span></span></code></pre></div><p>This creates the docker host on virtualbox and names it default. So when you run <code>docker-machine ls</code> you will see something like the following:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>› docker-machine ls
 </span></span><span class=line><span class=cl>NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DOCKER    ERRORS
 </span></span><span class=line><span class=cl>default   *        virtualbox   Running   tcp://192.168.99.100:2376           v1.10.3
-</span></span></code></pre></div><p>I created a Dockerfile to create the docker image with the following content:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>FROM ubuntu:latest
-</span></span><span class=line><span class=cl>MAINTAINER Jason Meridth &lt;jmeridth@gmail.com&gt;
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>RUN apt-get update <span class=o>&amp;&amp;</span> <span class=se>\
+</span></span></code></pre></div><p>I created a Dockerfile to create the docker image with the following content:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-dockerfile data-lang=dockerfile><span class=line><span class=cl><span class=k>FROM</span><span class=w> </span><span class=s>ubuntu:latest</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=k>MAINTAINER</span><span class=w> </span><span class=s>Jason</span> Meridth &lt;jmeridth@gmail.com&gt;<span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=k>RUN</span> apt-get update <span class=o>&amp;&amp;</span> <span class=se>\
 </span></span></span><span class=line><span class=cl>    apt-get install -y memcached <span class=o>&amp;&amp;</span> <span class=se>\
-</span></span></span><span class=line><span class=cl>    apt-get clean
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>EXPOSE <span class=m>11211</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>CMD <span class=o>[</span><span class=s2>&#34;-u&#34;</span>, <span class=s2>&#34;root&#34;</span>, <span class=s2>&#34;-m&#34;</span>, <span class=s2>&#34;1000&#34;</span><span class=o>]</span>
-</span></span><span class=line><span class=cl>USER daemon
-</span></span><span class=line><span class=cl>ENTRYPOINT memcached
-</span></span></code></pre></div><p>This Dockerfile will do the following:</p><ul><li>create a new image based on the latest Ubuntu docker image on <a href=https://dockerhub.com class=external-link target=_blank rel=noopener>DockerHub</a>.</li><li>set the maintainer to myself</li><li>update the instance</li><li>install memcached</li><li>cleanup the update/install</li><li>expose port 11211 from the instance</li><li>run the arguments against the entry point (memcached)</li><li>set user to daemon</li><li>set entry point to be memcached</li></ul><p>After the docker host is create I then built the image with the following command:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>docker build -t memcached_img .
+</span></span></span><span class=line><span class=cl>    apt-get clean<span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=k>EXPOSE</span><span class=w> </span><span class=s>11211</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=err>
+</span></span></span><span class=line><span class=cl><span class=k>CMD</span> <span class=p>[</span><span class=s2>&#34;-u&#34;</span><span class=p>,</span> <span class=s2>&#34;root&#34;</span><span class=p>,</span> <span class=s2>&#34;-m&#34;</span><span class=p>,</span> <span class=s2>&#34;1000&#34;</span><span class=p>]</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=k>USER</span><span class=w> </span><span class=s>daemon</span><span class=err>
+</span></span></span><span class=line><span class=cl><span class=k>ENTRYPOINT</span> memcached<span class=err>
+</span></span></span></code></pre></div><p>This Dockerfile will do the following:</p><ul><li>create a new image based on the latest Ubuntu docker image on <a href=https://dockerhub.com class=external-link target=_blank rel=noopener>DockerHub</a>.</li><li>set the maintainer to myself</li><li>update the instance</li><li>install memcached</li><li>cleanup the update/install</li><li>expose port 11211 from the instance</li><li>run the arguments against the entry point (memcached)</li><li>set user to daemon</li><li>set entry point to be memcached</li></ul><p>After the docker host is create I then built the image with the following command:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>docker build -t memcached_img .
 </span></span></code></pre></div><p><code>-t</code> lets you set a tag on the image so you can use that instead of the unique ID when creating the instance.</p><p>To see the new image you run the following:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>docker images
 </span></span></code></pre></div><p>and you&rsquo;ll see something like:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>› docker images
 </span></span><span class=line><span class=cl>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE

@@ -25,4 +25,27 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;from script/rails:6:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from script/rails:6:in `&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I looked at the RVM site and saw how to install the readline package:&lt;/p&gt;</description></item></channel></rss>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I looked at the RVM site and saw how to install the readline package:&lt;/p&gt;</description></item><item><title>Using gsub to wrap substring</title><link>http://jmeridth.com/posts/using-gsub-to-wrap-substring/</link><pubDate>Thu, 10 Sep 2009 19:56:47 -0500</pubDate><guid>http://jmeridth.com/posts/using-gsub-to-wrap-substring/</guid><description>&lt;p&gt;Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak&amp;rsquo;s &lt;a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block" class="external-link" target="_blank" rel="noopener"&gt;&amp;ldquo;gsub with a block&amp;rdquo;&lt;/a&gt; post on &lt;a href="http://robots.thoughtbot.com" class="external-link" target="_blank" rel="noopener"&gt;the Thoughtbot blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I use the twitter gem and just display my last status on my personal homepage at &lt;a href="http://jasonmeridth.com" class="external-link" target="_blank" rel="noopener"&gt;JasonMeridth.com&lt;/a&gt;. I didn&amp;rsquo;t want to hand out my username and password so all I do is encapsulate the twitter piece in a module called TwitterHelper and put it into my app/helpers/ folder in my Rails application:&lt;/p&gt;</description></item><item><title>Git local pre-commit hook</title><link>http://jmeridth.com/posts/git-local-pre-commit-hook/</link><pubDate>Thu, 10 Sep 2009 16:47:21 -0500</pubDate><guid>http://jmeridth.com/posts/git-local-pre-commit-hook/</guid><description>&lt;p&gt;I&amp;rsquo;ve personally added a pre-commit hook to my local git repos. It&amp;rsquo;s like a personal CI before I push back to origin/master. I run my tests locally anyway before committing and pushing, so I thought I would automate it.&lt;/p&gt;
+&lt;p&gt;I open the .git/hooks/pre-commit file in my local repo (i.e, full path is something like /Users/jasonmeridth/code/rails/myapp/.git/hooks/pre-commit) and put the following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/sh
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake db:migrate
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake db:test:prepare
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For non-rails developers, this will run any database migrations on my _development database, then ensure the_test database has the same schema, and then runs the tests.&lt;/p&gt;</description></item><item><title>Current Status</title><link>http://jmeridth.com/posts/current-status/</link><pubDate>Thu, 12 Feb 2009 04:53:00 -0600</pubDate><guid>http://jmeridth.com/posts/current-status/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;UPDATE:  I&amp;rsquo;m very eager to see where IronRuby and RSpec go for the .NET world.  Testing my C# Applications with RSpec would be awesome.  Check out the &lt;a href="http://msdn.microsoft.com/en-us/magazine/dd434651.aspx" class="external-link" target="_blank" rel="noopener"&gt;MSDN magazine article&lt;/a&gt; about this stuff if you haven&amp;rsquo;t already.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m working with a Ruby on Rails project now (RoR from now on) and absolutely loving it. I&amp;rsquo;m on nothing but Linux boxes, working with Ruby, and have been put in charge of strengthening our testing skills. I kind of laugh at this because I am having to learn Ruby, Rails, Nginx, Mongrels, etc and then figure out how to test RoR code.&lt;/p&gt;</description></item><item><title>Creating an older rails project with multiple (newer) versions installed</title><link>http://jmeridth.com/posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/</link><pubDate>Tue, 25 Nov 2008 20:27:55 -0600</pubDate><guid>http://jmeridth.com/posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/</guid><description>&lt;p&gt;I have been studying rspec the last week or two and have been using Rail 2.1.2 to do my exploring.  I was finally ready to jump into some legacy code and couldn&amp;rsquo;t even create a spec folder on the directory tree because the version of rails was older:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 1: user$ ruby script/generate rspec
+
+
+
+ 2: Cannot find gem for Rails ~&amp;gt;1.2.3.0:
+
+
+
+ 3: Install the missing gem with 'gem install -v=1.2.3 rails', or
+
+
+
+ 4: change environment.rb to define RAILS_GEM_VERSION with your desired version.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After looking at the rails file in /usr/bin, I noticed the regex was looking for something that matched the following regex string:&lt;/p&gt;</description></item></channel></rss>

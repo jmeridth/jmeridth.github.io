@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bdd on Learn, Converse, Share</title><link>http://jmeridth.com/tags/bdd/</link><description>Recent content in Bdd on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 26 Nov 2007 01:58:35 -0600</lastBuildDate><atom:link href="http://jmeridth.com/tags/bdd/index.xml" rel="self" type="application/rss+xml"/><item><title>BDD macro and Reshaper Template</title><link>http://jmeridth.com/posts/bdd-macro-and-reshaper-template/</link><pubDate>Mon, 26 Nov 2007 01:58:35 -0600</pubDate><guid>http://jmeridth.com/posts/bdd-macro-and-reshaper-template/</guid><description>&lt;p&gt;My colleague, &lt;a href="http://blog.agilejoe.com" class="external-link" target="_blank" rel="noopener"&gt;Joe Ocampo&lt;/a&gt;, created a ReSharper template:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 1: [Test]
+
+
+ 2: public void
+
+
+ 3: &amp;quot;$Specification$&amp;quot;()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To add the template, go to ReSharper-&amp;gt;Options in the menu:&lt;/p&gt;
+&lt;p&gt;&lt;img src="blogs/jason_meridth/WindowsLiveWriter/BDDmacroandReSharper_11F81/resharper_menu_thumb.jpg" alt="resharper_menu"&gt;&lt;/p&gt;
+&lt;p&gt;Then choose &amp;ldquo;Live Templates&amp;rdquo; underneath the Templates heading from the items on the left of the popup window.  Under the &amp;ldquo;User Templates&amp;rdquo; section create a new template called &amp;ldquo;test&amp;rdquo; with the text above:&lt;/p&gt;
+&lt;p&gt;&lt;img src="blogs/jason_meridth/WindowsLiveWriter/BDDmacroandReSharper_11F81/resharper_live_templates_thumb.jpg" alt="resharper_live_templates"&gt;&lt;/p&gt;
+&lt;p&gt;When you write your unit test fixture with the &amp;ldquo;Given, When, Should&amp;rdquo; format, these items come in handy.  Once you get ready to write your test, you can just type the word &amp;ldquo;test&amp;rdquo;, then press tab and get the following in Visual Studio:&lt;/p&gt;</description></item></channel></rss>

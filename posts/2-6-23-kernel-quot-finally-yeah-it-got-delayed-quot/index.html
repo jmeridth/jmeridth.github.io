@@ -6,223 +6,224 @@
   
 
 
-&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;'><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=fediverse:creator content><meta name=twitter:card content="summary"><meta name=twitter:title content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta name=twitter:description content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:url" content="http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/"><meta property="og:site_name" content="Learn, Converse, Share"><meta property="og:title" content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta property="og:description" content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2007-10-11T01:15:38-05:00"><meta property="article:modified_time" content="2007-10-11T01:15:38-05:00"><link rel=canonical href=http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.26a83dcefaf34339737bf29f77b17753bab5e60782b1ca9ba200abbb73b48cb0.css integrity="sha256-Jqg9zvrzQzlze/Kfd7F3U7q15geCscqbogCru3O0jLA=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/css_dark_mode_gist_embed_code.min.5f4f026828cc544c1497785bca628b4ddc8a6c1f154cc2b83c87a13ceaff419a.css integrity="sha256-X08CaCjMVEwUl3hbymKLTdyKbB8VTMK4PIehPOr/QZo=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/favicon.ico sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://jmeridth.com/>Learn, Converse, Share
+&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;'><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=fediverse:creator content><meta name=twitter:card content="summary"><meta name=twitter:title content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta name=twitter:description content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:url" content="http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/"><meta property="og:site_name" content="Learn, Converse, Share"><meta property="og:title" content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta property="og:description" content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2007-10-11T01:15:38-05:00"><meta property="article:modified_time" content="2007-10-11T01:15:38-05:00"><meta property="article:tag" content="Linux"><link rel=canonical href=http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.26a83dcefaf34339737bf29f77b17753bab5e60782b1ca9ba200abbb73b48cb0.css integrity="sha256-Jqg9zvrzQzlze/Kfd7F3U7q15geCscqbogCru3O0jLA=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/css_dark_mode_gist_embed_code.min.5f4f026828cc544c1497785bca628b4ddc8a6c1f154cc2b83c87a13ceaff419a.css integrity="sha256-X08CaCjMVEwUl3hbymKLTdyKbB8VTMK4PIehPOr/QZo=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/favicon.ico sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://jmeridth.com/>Learn, Converse, Share
 </a><input type=checkbox id=menu-toggle>
 <label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/tags/>Tags</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li><li class=navigation-item><a class=navigation-link href=/talks/>Talks</a></li><li class=navigation-item><a class=navigation-link href=/contact/>Contact Me</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/>2.6.23 Kernel, "Finally. Yeah, it got delayed"</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
 <time datetime=2007-10-11T01:15:38-05:00>October 11, 2007
 </time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
-5-minute read</span></div></div></header><div class=post-content><h4 id=finally-yeah-it-got-delayed-not-because-of-any-huge-issues-but-because-of-various-bugfixes-trickling-in-and-causing-me-to-reset-my--linus-torvalds-said-announcing-the-2623-kernel-he-noted-few-changes-since-the-last-release-candidate-not-a-whole-lot-of-changes-since--rc9-although-there-source-level-changes-can-be-viewed-via-the-gitweb-interface-a-nice-overview-of-all-changes-can-be-found-at-kernel-newbies-linus-went-on-to-describe-his-plan-going-forward><em>Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my &lsquo;release clock&rsquo; all the time. But it&rsquo;s out there now, and hopefully better for the wait,</em>" Linus Torvalds said <a href=http://kerneltrap.org/mailarchive/linux-kernel/2007/10/9/333488 class=external-link target=_blank rel=noopener>announcing the 2.6.23 kernel</a>. He noted few changes since the last release candidate, &ldquo;<em>not a whole lot of changes since -rc9, although there&rsquo;s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there&rsquo;s basically a number of mostly one-liners (mostly in drivers, but there&rsquo;s some networking fixes and soem VFS/VM fixes there too).</em>&rdquo; Source level changes can be viewed via the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary" class=external-link target=_blank rel=noopener>gitweb interface</a>. A nice overview of all changes can be found at <a href=http://kernelnewbies.org/Linux_2_6_23 class=external-link target=_blank rel=noopener>Kernel Newbies</a>. Linus went on to describe his plan going forward
+5-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/linux/>Linux</a></span></div></div></header><div class=post-content><h4 id=finally-yeah-it-got-delayed-not-because-of-any-huge-issues-but-because-of-various-bugfixes-trickling-in-and-causing-me-to-reset-my--linus-torvalds-said-announcing-the-2623-kernel-he-noted-few-changes-since-the-last-release-candidate-not-a-whole-lot-of-changes-since--rc9-although-there-source-level-changes-can-be-viewed-via-the-gitweb-interface-a-nice-overview-of-all-changes-can-be-found-at-kernel-newbies-linus-went-on-to-describe-his-plan-going-forward><em>Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my &lsquo;release clock&rsquo; all the time. But it&rsquo;s out there now, and hopefully better for the wait,</em>" Linus Torvalds said <a href=http://kerneltrap.org/mailarchive/linux-kernel/2007/10/9/333488 class=external-link target=_blank rel=noopener>announcing the 2.6.23 kernel</a>. He noted few changes since the last release candidate, &ldquo;<em>not a whole lot of changes since -rc9, although there&rsquo;s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there&rsquo;s basically a number of mostly one-liners (mostly in drivers, but there&rsquo;s some networking fixes and soem VFS/VM fixes there too).</em>&rdquo; Source level changes can be viewed via the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary" class=external-link target=_blank rel=noopener>gitweb interface</a>. A nice overview of all changes can be found at <a href=http://kernelnewbies.org/Linux_2_6_23 class=external-link target=_blank rel=noopener>Kernel Newbies</a>. Linus went on to describe his plan going forward
 <a class=heading-link href=#finally-yeah-it-got-delayed-not-because-of-any-huge-issues-but-because-of-various-bugfixes-trickling-in-and-causing-me-to-reset-my--linus-torvalds-said-announcing-the-2623-kernel-he-noted-few-changes-since-the-last-release-candidate-not-a-whole-lot-of-changes-since--rc9-although-there-source-level-changes-can-be-viewed-via-the-gitweb-interface-a-nice-overview-of-all-changes-can-be-found-at-kernel-newbies-linus-went-on-to-describe-his-plan-going-forward><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h4><blockquote><p>&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;</p></blockquote><hr><pre><code>**From: Linus Torvalds &lt;torvalds@...&gt;**
-Subject: [Linux 2.6.23
-](http://kerneltrap.org/mailarchive/linux-kernel/2007/10/9/333488)Date: Oct 9, 11:54 am 2007
-
-Finally.
-
-Yeah, it got delayed, not because of any huge issues, but because of
-various bugfixes trickling in and causing me to reset my &quot;release clock&quot;
-all the time. But it's out there now, and hopefully better for the wait.
-
-Not a whole lot of changes since -rc9, although there's a few updates to
-mips, sparc64 and blackfin in there.  Ignoring those arch updates, there's
-basically a number of mostly one-liners (mostly in drivers, but there's
-some networking fixes and soem VFS/VM fixes there too).
-
-Shortlog and diffstat appended (both relative to -rc9, of course - the
-full log from 2.6.22 is on kernel.org as usual).
-
-I want this to be what people look at for a few days, but expect the x86
-merge to go ahead after that. So far, all indications are still that it's
-going to be all smooth sailing, but hey, those indicators seem to always
-say that, and only after the fact do people notice any problems ;)
-
-  Linus
-
----
-Akinobu Mita (1):
-      [SPARC64]: check fork_idle() error
-
-Al Viro (1):
-      fix bogus reporting of signals by audit
-
-Alexey Dobriyan (2):
-      Move kasprintf.o to obj-y
-      [ROSE]: Fix rose.ko oops on unload
-
-Alexey Kuznetsov (1):
-      [SFQ]: Remove artificial limitation for queue limit.
-
-Andrew Morton (1):
-      binfmt_flat: checkpatch fixing minimum support for the blackfin relocations
-
-Anton Blanchard (2):
-      [POWERPC] Fix xics set_affinity code
-      Fix timer_stats printout of events/sec
-
-Attila Kinali (1):
-      Add manufacturer and card id of teltonica pcmcia modems
-
-Ben Dooks (2):
-      [ARM] 4597/2: OSIRIS: ensure CPLD0 is preserved after suspend
-      [ARM] 4598/2: OSIRIS: Ensure we do not get nRSTOUT during suspend
-
-Benjamin Herrenschmidt (1):
-      Fix non-terminated PCI match table in PowerMac IDE
-
-Bernd Schmidt (1):
-      Binfmt_flat: Add minimum support for the Blackfin relocations
-
-Brian Haley (1):
-      [IPv6]: Fix ICMPv6 redirect handling with target multicast address
-
-Bryan Wu (1):
-      Blackfin arch: add some missing syscall
-
-Dale Farnsworth (1):
-      mv643xx_eth: Do not modify struct netdev tx_queue_len
-
-David S. Miller (8):
-      [SPARC]: Fix EBUS use of uninitialized variable.
-      [SPARC64]: Fix put_user() calls in binfmt_aout32.c
-      [SPARC64]: Fix missing load-twin usage in Niagara-1 memcpy.
-      [SPARC64]: Don't use in/local regs for ldx/stx data in N1 memcpy.
-      [SPARC64]: Fix domain-services port probing.
-      [SPARC64]: VIO device addition log message level is too high.
-      [SPARC64]: Temporary workaround for PCI-E slot on T1000.
-      [SPARC64]: Fix 'niu' complex IRQ probing.
-
-Dmitry Torokhov (1):
-      Driver core: fix SYSF_DEPRECATED breakage for nested classdevs
-
-Eric Dumazet (1):
-      [TCP]: secure_tcp_sequence_number() should not use a too fast clock
-
-FUJITA Tomonori (1):
-      [SCSI] megaraid_old: fix READ_CAPACITY
-
-Florian Fainelli (2):
-      [MIPS] Alchemy: Fix USB initialization.
-      [MIPS] Au1000: set the PCI controller IO base
-
-Francois Romieu (1):
-      r8169: revert part of 6dccd16b7c2703e8bbf8bca62b5cf248332afbe2
-
-Giuseppe Sacco (2):
-      [MIPS] IP32: Enable PCI bridges
-      [MIPS] IP32: Fix fatal typo in address computation.
-
-Hugh Dickins (1):
-      Fix sys_remap_file_pages BUG at highmem.c:15!
-
-Ilpo Järvinen (1):
-      [TCP]: Fix fastpath_cnt_hint when GSO skb is partially ACKed
-
-Ingo Molnar (1):
-      sched: fix profile=sleep
-
-Jeff Garzik (2):
-      aic94xx: fix DMA data direction for SMP requests
-      sata_mv: correct S/G table limits
-
-Jeremy Fitzhardinge (1):
-      xen: disable split pte locks for now
-
-Jiri Slaby (1):
-      Ata: pata_marvell, use ioread* for iomap-ped memory
-
-Joe Perches (1):
-      bcm43xx: Correct printk with PFX before KERN_
-
-John W. Linville (1):
-      [IEEE80211]: avoid integer underflow for runt rx frames
-
-Karsten Keil (1):
-      ISDN: Fix data access out of array bounds
-
-Kyle McMartin (1):
-      Revert &quot;intel_agp: fix stolen mem range on G33&quot;
-
-Linus Torvalds (3):
-      VT_WAITACTIVE: Avoid returning EINTR when not necessary
-      Don't do load-average calculations at even 5-second intervals
-      Linux 2.6.23
-
-Maarten Bressers (1):
-      Correct Makefile rule for generating custom keymap
-
-Maciej W. Rozycki (1):
-      [MIPS] pg-r4k.c: Fix a typo in an R4600 v2 erratum workaround
-
-Michael Hennerich (2):
-      Blackfin arch: gpio pinmux and resource allocation API required by BF537 on chip ethernet mac driver
-      Blackfin arch: fix PORT_J BUG for BF537/6 EMAC driver reported by Kalle Pokki &lt;kalle.pokki@iki.fi&gt;
-
-Olof Johansson (1):
-      libata: fix for sata_mv &gt;64KB DMA segments
-
-Pavel Machek (1):
-      sysrq docs: document sequence that actually works
-
-Peter Korsgaard (1):
-      dm9601: Fix receive MTU
-
-Peter Zijlstra (2):
-      lockstat: documentation
-      mm: set_page_dirty_balance() vs -&gt;page_mkwrite()
-
-Rafal Bilski (1):
-      Longhaul: add auto enabled &quot;revid_errata&quot; option
-
-Ralf Baechle (2):
-      [MIPS] Type proof reimplementation of cmpxchg.
-      [MIPS] Terminally fix local_{dec,sub}_if_positive
-
-Richard Knutsson (1):
-      softmac: Fix compiler-warning
-
-Ron Mercer (2):
-      qla3xxx: bugfix: Add memory barrier before accessing rx completion.
-      qla3xxx: bugfix: Fix VLAN rx completion handling.
-
-Scott Thompson (1):
-      drivers/ata/pata_ixp4xx_cf.c: ioremap return code check
-
-Serge Belyshev (1):
-      Remove unnecessary cast in prefetch()
-
-Stefan Richter (1):
-      firewire: point to migration document
-
-Stephen Hemminger (2):
-      sky2: jumbo frame regression fix
-      [PKT_SCHED] cls_u32: error code isn't been propogated properly
-
-Sunil Mushran (1):
-      ocfs2: Unlock mutex in local alloc failure case
-
-Tejun Heo (1):
-      ata_piix: add another TECRA M3 entry to broken suspend list
-
-Trond Myklebust (1):
-      NLM: Fix a memory leak in nlmsvc_testlock
-
-Yan Zheng (3):
-      fix VM_CAN_NONLINEAR check in sys_remap_file_pages
-      fix page release issue in filemap_fault
-      AIO: fix cleanup in io_submit_one(...)
-
----
- Documentation/lockstat.txt                        |  120 +++++++
- Documentation/sysrq.txt                           |    2 +-
- Makefile                                          |    2 +-
- arch/arm/mach-s3c2440/mach-osiris.c               |   18 +
- arch/blackfin/kernel/bfin_gpio.c                  |  285 ++++++++++++++--
- arch/blackfin/mach-common/entry.S                 |   23 +-
- arch/i386/kernel/cpu/cpufreq/longhaul.c           |   60 ++++-
- arch/mips/au1000/common/pci.c                     |    1 +
- arch/mips/au1000/mtx-1/board_setup.c              |    4 +-
- arch/mips/au1000/pb1000/board_setup.c             |    6 +-
-</code></pre></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+<span class=sr-only>Link to heading</span></a></h4><blockquote><p>&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;</p></blockquote><hr><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>From: Linus Torvalds &lt;torvalds@...&gt;
+</span></span><span class=line><span class=cl>Subject: Linux 2.6.23
+</span></span><span class=line><span class=cl>Date: Oct 9, 11:54 am 2007
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Finally.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Yeah, it got delayed, not because of any huge issues, but because of
+</span></span><span class=line><span class=cl>various bugfixes trickling in and causing me to reset my &#34;release clock&#34;
+</span></span><span class=line><span class=cl>all the time. But it&#39;s out there now, and hopefully better for the wait.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Not a whole lot of changes since -rc9, although there&#39;s a few updates to
+</span></span><span class=line><span class=cl>mips, sparc64 and blackfin in there.  Ignoring those arch updates, there&#39;s
+</span></span><span class=line><span class=cl>basically a number of mostly one-liners (mostly in drivers, but there&#39;s
+</span></span><span class=line><span class=cl>some networking fixes and soem VFS/VM fixes there too).
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Shortlog and diffstat appended (both relative to -rc9, of course - the
+</span></span><span class=line><span class=cl>full log from 2.6.22 is on kernel.org as usual).
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>I want this to be what people look at for a few days, but expect the x86
+</span></span><span class=line><span class=cl>merge to go ahead after that. So far, all indications are still that it&#39;s
+</span></span><span class=line><span class=cl>going to be all smooth sailing, but hey, those indicators seem to always
+</span></span><span class=line><span class=cl>say that, and only after the fact do people notice any problems ;)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  Linus
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>---
+</span></span><span class=line><span class=cl>Akinobu Mita (1):
+</span></span><span class=line><span class=cl>      [SPARC64]: check fork_idle() error
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Al Viro (1):
+</span></span><span class=line><span class=cl>      fix bogus reporting of signals by audit
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Alexey Dobriyan (2):
+</span></span><span class=line><span class=cl>      Move kasprintf.o to obj-y
+</span></span><span class=line><span class=cl>      [ROSE]: Fix rose.ko oops on unload
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Alexey Kuznetsov (1):
+</span></span><span class=line><span class=cl>      [SFQ]: Remove artificial limitation for queue limit.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Andrew Morton (1):
+</span></span><span class=line><span class=cl>      binfmt_flat: checkpatch fixing minimum support for the blackfin relocations
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Anton Blanchard (2):
+</span></span><span class=line><span class=cl>      [POWERPC] Fix xics set_affinity code
+</span></span><span class=line><span class=cl>      Fix timer_stats printout of events/sec
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Attila Kinali (1):
+</span></span><span class=line><span class=cl>      Add manufacturer and card id of teltonica pcmcia modems
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Ben Dooks (2):
+</span></span><span class=line><span class=cl>      [ARM] 4597/2: OSIRIS: ensure CPLD0 is preserved after suspend
+</span></span><span class=line><span class=cl>      [ARM] 4598/2: OSIRIS: Ensure we do not get nRSTOUT during suspend
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Benjamin Herrenschmidt (1):
+</span></span><span class=line><span class=cl>      Fix non-terminated PCI match table in PowerMac IDE
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Bernd Schmidt (1):
+</span></span><span class=line><span class=cl>      Binfmt_flat: Add minimum support for the Blackfin relocations
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Brian Haley (1):
+</span></span><span class=line><span class=cl>      [IPv6]: Fix ICMPv6 redirect handling with target multicast address
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Bryan Wu (1):
+</span></span><span class=line><span class=cl>      Blackfin arch: add some missing syscall
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Dale Farnsworth (1):
+</span></span><span class=line><span class=cl>      mv643xx_eth: Do not modify struct netdev tx_queue_len
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>David S. Miller (8):
+</span></span><span class=line><span class=cl>      [SPARC]: Fix EBUS use of uninitialized variable.
+</span></span><span class=line><span class=cl>      [SPARC64]: Fix put_user() calls in binfmt_aout32.c
+</span></span><span class=line><span class=cl>      [SPARC64]: Fix missing load-twin usage in Niagara-1 memcpy.
+</span></span><span class=line><span class=cl>      [SPARC64]: Don&#39;t use in/local regs for ldx/stx data in N1 memcpy.
+</span></span><span class=line><span class=cl>      [SPARC64]: Fix domain-services port probing.
+</span></span><span class=line><span class=cl>      [SPARC64]: VIO device addition log message level is too high.
+</span></span><span class=line><span class=cl>      [SPARC64]: Temporary workaround for PCI-E slot on T1000.
+</span></span><span class=line><span class=cl>      [SPARC64]: Fix &#39;niu&#39; complex IRQ probing.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Dmitry Torokhov (1):
+</span></span><span class=line><span class=cl>      Driver core: fix SYSF_DEPRECATED breakage for nested classdevs
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Eric Dumazet (1):
+</span></span><span class=line><span class=cl>      [TCP]: secure_tcp_sequence_number() should not use a too fast clock
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>FUJITA Tomonori (1):
+</span></span><span class=line><span class=cl>      [SCSI] megaraid_old: fix READ_CAPACITY
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Florian Fainelli (2):
+</span></span><span class=line><span class=cl>      [MIPS] Alchemy: Fix USB initialization.
+</span></span><span class=line><span class=cl>      [MIPS] Au1000: set the PCI controller IO base
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Francois Romieu (1):
+</span></span><span class=line><span class=cl>      r8169: revert part of 6dccd16b7c2703e8bbf8bca62b5cf248332afbe2
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Giuseppe Sacco (2):
+</span></span><span class=line><span class=cl>      [MIPS] IP32: Enable PCI bridges
+</span></span><span class=line><span class=cl>      [MIPS] IP32: Fix fatal typo in address computation.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Hugh Dickins (1):
+</span></span><span class=line><span class=cl>      Fix sys_remap_file_pages BUG at highmem.c:15!
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Ilpo Järvinen (1):
+</span></span><span class=line><span class=cl>      [TCP]: Fix fastpath_cnt_hint when GSO skb is partially ACKed
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Ingo Molnar (1):
+</span></span><span class=line><span class=cl>      sched: fix profile=sleep
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Jeff Garzik (2):
+</span></span><span class=line><span class=cl>      aic94xx: fix DMA data direction for SMP requests
+</span></span><span class=line><span class=cl>      sata_mv: correct S/G table limits
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Jeremy Fitzhardinge (1):
+</span></span><span class=line><span class=cl>      xen: disable split pte locks for now
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Jiri Slaby (1):
+</span></span><span class=line><span class=cl>      Ata: pata_marvell, use ioread* for iomap-ped memory
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Joe Perches (1):
+</span></span><span class=line><span class=cl>      bcm43xx: Correct printk with PFX before KERN_
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>John W. Linville (1):
+</span></span><span class=line><span class=cl>      [IEEE80211]: avoid integer underflow for runt rx frames
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Karsten Keil (1):
+</span></span><span class=line><span class=cl>      ISDN: Fix data access out of array bounds
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Kyle McMartin (1):
+</span></span><span class=line><span class=cl>      Revert &#34;intel_agp: fix stolen mem range on G33&#34;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Linus Torvalds (3):
+</span></span><span class=line><span class=cl>      VT_WAITACTIVE: Avoid returning EINTR when not necessary
+</span></span><span class=line><span class=cl>      Don&#39;t do load-average calculations at even 5-second intervals
+</span></span><span class=line><span class=cl>      Linux 2.6.23
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Maarten Bressers (1):
+</span></span><span class=line><span class=cl>      Correct Makefile rule for generating custom keymap
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Maciej W. Rozycki (1):
+</span></span><span class=line><span class=cl>      [MIPS] pg-r4k.c: Fix a typo in an R4600 v2 erratum workaround
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Michael Hennerich (2):
+</span></span><span class=line><span class=cl>      Blackfin arch: gpio pinmux and resource allocation API required by BF537 on chip ethernet mac driver
+</span></span><span class=line><span class=cl>      Blackfin arch: fix PORT_J BUG for BF537/6 EMAC driver reported by Kalle Pokki &lt;kalle.pokki@iki.fi&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Olof Johansson (1):
+</span></span><span class=line><span class=cl>      libata: fix for sata_mv &gt;64KB DMA segments
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Pavel Machek (1):
+</span></span><span class=line><span class=cl>      sysrq docs: document sequence that actually works
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Peter Korsgaard (1):
+</span></span><span class=line><span class=cl>      dm9601: Fix receive MTU
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Peter Zijlstra (2):
+</span></span><span class=line><span class=cl>      lockstat: documentation
+</span></span><span class=line><span class=cl>      mm: set_page_dirty_balance() vs -&gt;page_mkwrite()
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Rafal Bilski (1):
+</span></span><span class=line><span class=cl>      Longhaul: add auto enabled &#34;revid_errata&#34; option
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Ralf Baechle (2):
+</span></span><span class=line><span class=cl>      [MIPS] Type proof reimplementation of cmpxchg.
+</span></span><span class=line><span class=cl>      [MIPS] Terminally fix local_{dec,sub}_if_positive
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Richard Knutsson (1):
+</span></span><span class=line><span class=cl>      softmac: Fix compiler-warning
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Ron Mercer (2):
+</span></span><span class=line><span class=cl>      qla3xxx: bugfix: Add memory barrier before accessing rx completion.
+</span></span><span class=line><span class=cl>      qla3xxx: bugfix: Fix VLAN rx completion handling.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Scott Thompson (1):
+</span></span><span class=line><span class=cl>      drivers/ata/pata_ixp4xx_cf.c: ioremap return code check
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Serge Belyshev (1):
+</span></span><span class=line><span class=cl>      Remove unnecessary cast in prefetch()
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Stefan Richter (1):
+</span></span><span class=line><span class=cl>      firewire: point to migration document
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Stephen Hemminger (2):
+</span></span><span class=line><span class=cl>      sky2: jumbo frame regression fix
+</span></span><span class=line><span class=cl>      [PKT_SCHED] cls_u32: error code isn&#39;t been propogated properly
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Sunil Mushran (1):
+</span></span><span class=line><span class=cl>      ocfs2: Unlock mutex in local alloc failure case
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Tejun Heo (1):
+</span></span><span class=line><span class=cl>      ata_piix: add another TECRA M3 entry to broken suspend list
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Trond Myklebust (1):
+</span></span><span class=line><span class=cl>      NLM: Fix a memory leak in nlmsvc_testlock
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>Yan Zheng (3):
+</span></span><span class=line><span class=cl>      fix VM_CAN_NONLINEAR check in sys_remap_file_pages
+</span></span><span class=line><span class=cl>      fix page release issue in filemap_fault
+</span></span><span class=line><span class=cl>      AIO: fix cleanup in io_submit_one(...)
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>---
+</span></span><span class=line><span class=cl> Documentation/lockstat.txt                        |  120 +++++++
+</span></span><span class=line><span class=cl> Documentation/sysrq.txt                           |    2 +-
+</span></span><span class=line><span class=cl> Makefile                                          |    2 +-
+</span></span><span class=line><span class=cl> arch/arm/mach-s3c2440/mach-osiris.c               |   18 +
+</span></span><span class=line><span class=cl> arch/blackfin/kernel/bfin_gpio.c                  |  285 ++++++++++++++--
+</span></span><span class=line><span class=cl> arch/blackfin/mach-common/entry.S                 |   23 +-
+</span></span><span class=line><span class=cl> arch/i386/kernel/cpu/cpufreq/longhaul.c           |   60 ++++-
+</span></span><span class=line><span class=cl> arch/mips/au1000/common/pci.c                     |    1 +
+</span></span><span class=line><span class=cl> arch/mips/au1000/mtx-1/board_setup.c              |    4 +-
+</span></span><span class=line><span class=cl> arch/mips/au1000/pb1000/board_setup.c             |    6 +-
+</span></span></code></pre></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
 2026
 Jason Meridth

@@ -40,10 +40,10 @@ One-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidd
 </span></span><span class=line><span class=cl>  Using cached requests-2.10.0-py2.py3-none-any.whl
 </span></span><span class=line><span class=cl>  Installing collected packages: requests
 </span></span><span class=line><span class=cl>  Successfully installed requests-2.10.0
-</span></span></code></pre></div><p>Create file to test with:</p><p><code>vim test.py</code></p><p>inside <code>test.py</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>import requests
+</span></span></code></pre></div><p>Create file to test with:</p><p><code>vim test.py</code></p><p>inside <code>test.py</code>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>requests</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=nv>r</span> <span class=o>=</span> requests.get<span class=o>(</span><span class=s1>&#39;https://jasonmeridth.com&#39;</span><span class=o>)</span>
-</span></span><span class=line><span class=cl>print r.status_code
+</span></span><span class=line><span class=cl><span class=n>r</span> <span class=o>=</span> <span class=n>requests</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>&#39;https://jasonmeridth.com&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span> <span class=n>r</span><span class=o>.</span><span class=n>status_code</span>
 </span></span></code></pre></div><p>get out of the file by pressing <code>Esc</code> on your keyboard then typing <code>:wq</code></p><p>continuing:</p><p><code>python test.py</code></p><p>output should be:</p><p><code>200</code></p><p>Voila!!</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
 2026

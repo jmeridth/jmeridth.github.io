@@ -29,15 +29,15 @@ Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-88-generic x86_64) * Documentati
 <time datetime=2016-07-03T08:58:00-05:00>July 3, 2016
 </time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
 2-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
-<span class=tag><a href=/tags/ubuntu/>Ubuntu</a></span></div></div></header><div class=post-content><p>Afer you log into an ubuntu instance you&rsquo;ll usually see something like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Welcome to Ubuntu 14.04.4 LTS <span class=o>(</span>GNU/Linux 3.13.0-88-generic x86_64<span class=o>)</span>
+<span class=tag><a href=/tags/ubuntu/>Ubuntu</a></span></div></div></header><div class=post-content><p>Afer you log into an ubuntu instance you&rsquo;ll usually see something like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-88-generic x86_64)
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl> * Documentation:  https://help.ubuntu.com/
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  System information as of Fri Jul  <span class=m>1</span> 21:17:15 UTC <span class=m>2016</span>
+</span></span><span class=line><span class=cl>  System information as of Fri Jul  1 21:17:15 UTC 2016
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  System load:  0.0               Processes:           <span class=m>100</span>
-</span></span><span class=line><span class=cl>  Usage of /:   20.1% of 7.74GB   Users logged in:     <span class=m>0</span>
-</span></span><span class=line><span class=cl>  Memory usage: 28%               IP address <span class=k>for</span> eth0: 172.30.0.115
+</span></span><span class=line><span class=cl>  System load:  0.0               Processes:           100
+</span></span><span class=line><span class=cl>  Usage of /:   20.1% of 7.74GB   Users logged in:     0
+</span></span><span class=line><span class=cl>  Memory usage: 28%               IP address for eth0: 172.30.0.115
 </span></span><span class=line><span class=cl>  Swap usage:   0%
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>  Graph this data and manage this system at:
@@ -46,23 +46,23 @@ Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-88-generic x86_64) * Documentati
 </span></span><span class=line><span class=cl>  Get cloud support with Ubuntu Advantage Cloud Guest:
 </span></span><span class=line><span class=cl>    http://www.ubuntu.com/business/services/cloud
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=m>7</span> packages can be updated.
-</span></span><span class=line><span class=cl><span class=m>7</span> updates are security updates.
+</span></span><span class=line><span class=cl>7 packages can be updated.
+</span></span><span class=line><span class=cl>7 updates are security updates.
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>Last login: Fri Jul  <span class=m>1</span> 21:17:15 <span class=m>2016</span> from 1.2.3.4
-</span></span></code></pre></div><p>I have logged into many ubuntu servers in my time and today I finally looked up how the information that displays gets generated and displayed. I&rsquo;ve used <code>/etc/motd</code> aka <code>message of the day</code> many times before but I noticed tha file doesn&rsquo;t exist in a vanilla Ubuntu install. There are two main commands that are populating the information shown at login.</p><p>For system information:</p><p><code>landscape-sysinfo</code></p><p>example output:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-&gt;$ landscape-sysinfo
-</span></span><span class=line><span class=cl>  System load:  0.0               Processes:           <span class=m>99</span>
-</span></span><span class=line><span class=cl>  Usage of /:   20.1% of 7.74GB   Users logged in:     <span class=m>1</span>
-</span></span><span class=line><span class=cl>  Memory usage: 28%               IP address <span class=k>for</span> eth0: 10.10.10.10
+</span></span><span class=line><span class=cl>Last login: Fri Jul  1 21:17:15 2016 from 1.2.3.4
+</span></span></code></pre></div><p>I have logged into many ubuntu servers in my time and today I finally looked up how the information that displays gets generated and displayed. I&rsquo;ve used <code>/etc/motd</code> aka <code>message of the day</code> many times before but I noticed tha file doesn&rsquo;t exist in a vanilla Ubuntu install. There are two main commands that are populating the information shown at login.</p><p>For system information:</p><p><code>landscape-sysinfo</code></p><p>example output:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>-&gt;$ landscape-sysinfo
+</span></span><span class=line><span class=cl>  System load:  0.0               Processes:           99
+</span></span><span class=line><span class=cl>  Usage of /:   20.1% of 7.74GB   Users logged in:     1
+</span></span><span class=line><span class=cl>  Memory usage: 28%               IP address for eth0: 10.10.10.10
 </span></span><span class=line><span class=cl>  Swap usage:   0%
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>  Graph this data and manage this system at:
 </span></span><span class=line><span class=cl>    https://landscape.canonical.com/
-</span></span></code></pre></div><p>For packages status:</p><p><code>/usr/lib/update-notifier/update-motd-updates-available</code></p><p>example output:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>-&gt;$ /usr/lib/update-notifier/update-motd-updates-available
+</span></span></code></pre></div><p>For packages status:</p><p><code>/usr/lib/update-notifier/update-motd-updates-available</code></p><p>example output:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>-&gt;$ /usr/lib/update-notifier/update-motd-updates-available
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=m>7</span> packages can be updated.
-</span></span><span class=line><span class=cl><span class=m>7</span> updates are security updates.
+</span></span><span class=line><span class=cl>7 packages can be updated.
+</span></span><span class=line><span class=cl>7 updates are security updates.
 </span></span></code></pre></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
 2026

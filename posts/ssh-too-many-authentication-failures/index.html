@@ -25,22 +25,22 @@ Received disconnect from 123.123.132.132: Too many authentication failures for h
 <a class=heading-link href=#solution-2><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h1><p>You can solve this on the command line like this:</p><p><code>ssh -o IdentitiesOnly=yes -i ~/.ssh/example_rsa foo.example.com</code></p><p>What is IdentitiesOnly? Explained in Solution 3 below.</p><h1 id=solution-3-best>Solution 3 (best)
 <a class=heading-link href=#solution-3-best><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h1><p>Specifiy, explicitly, which key goes to which host(s) in your <code>.ssh/config</code> file.</p><p>You need to configure which key (“IdentityFile”) goes with which domain (or host). You also want to handle the case when the specified key doesn’t work, which would usually be because the public key isn’t in ~/.ssh/authorized_keys on the server. The default is for SSH to then try any other keys it has access to, which takes us back to too many attempts. Setting “IdentitiesOnly” to “yes” tells SSH to only try the specified key and, if that fails, fall through to password authentication (presuming the server allows it).</p><p>Your ~/.ssh/config would look like:</p><pre tabindex=0><code>Host *.myhost.com
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/myhost
-Host secure.myhost.com
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/mysecurehost_rsa
-Host *.myotherhost.domain
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/myotherhost_rsa
-</code></pre><p><code>Host</code> is the host the key can connect to
+<span class=sr-only>Link to heading</span></a></h1><p>Specifiy, explicitly, which key goes to which host(s) in your <code>.ssh/config</code> file.</p><p>You need to configure which key (“IdentityFile”) goes with which domain (or host). You also want to handle the case when the specified key doesn’t work, which would usually be because the public key isn’t in ~/.ssh/authorized_keys on the server. The default is for SSH to then try any other keys it has access to, which takes us back to too many attempts. Setting “IdentitiesOnly” to “yes” tells SSH to only try the specified key and, if that fails, fall through to password authentication (presuming the server allows it).</p><p>Your ~/.ssh/config would look like:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>Host *.myhost.com
+</span></span><span class=line><span class=cl>  IdentitiesOnly yes
+</span></span><span class=line><span class=cl>  IdentityFile ~/.ssh/myhost
+</span></span><span class=line><span class=cl>Host secure.myhost.com
+</span></span><span class=line><span class=cl>  IdentitiesOnly yes
+</span></span><span class=line><span class=cl>  IdentityFile ~/.ssh/mysecurehost_rsa
+</span></span><span class=line><span class=cl>Host *.myotherhost.domain
+</span></span><span class=line><span class=cl>  IdentitiesOnly yes
+</span></span><span class=line><span class=cl>  IdentityFile ~/.ssh/myotherhost_rsa
+</span></span></code></pre></div><p><code>Host</code> is the host the key can connect to
 <code>IdentitiesOnly</code> means only to try <em>this</em> specific key to connect, no others
-<code>IdentityFile</code> is the path to the key</p><p>You can try multiple keys if needed</p><pre tabindex=0><code>Host *.myhost.com
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/myhost_rsa
-  IdentityFile ~/.ssh/myhost_dsa
-</code></pre><p>Hope this helps someone else.</p><p>Cheers!</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+<code>IdentityFile</code> is the path to the key</p><p>You can try multiple keys if needed</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>Host *.myhost.com
+</span></span><span class=line><span class=cl>  IdentitiesOnly yes
+</span></span><span class=line><span class=cl>  IdentityFile ~/.ssh/myhost_rsa
+</span></span><span class=line><span class=cl>  IdentityFile ~/.ssh/myhost_dsa
+</span></span></code></pre></div><p>Hope this helps someone else.</p><p>Cheers!</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
 2026
 Jason Meridth

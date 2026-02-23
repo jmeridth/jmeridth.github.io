@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Learn, Converse, Share</title><link>http://jmeridth.com/tags/programming/</link><description>Recent content in Programming on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 03 Jan 2007 00:40:00 -0600</lastBuildDate><atom:link href="http://jmeridth.com/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>The D Programming Language</title><link>http://jmeridth.com/posts/the-d-programming-language/</link><pubDate>Wed, 03 Jan 2007 00:40:00 -0600</pubDate><guid>http://jmeridth.com/posts/the-d-programming-language/</guid><description>&lt;p&gt;Slashdot has posted a new &lt;a href="http://developers.slashdot.org/article.pl%3fsid%3d07/01/01/2041256%26from%3drss" class="external-link" target="_blank" rel="noopener"&gt;article&lt;/a&gt; about the D programming language.&lt;/p&gt;
+&lt;p&gt;From the article:&lt;/p&gt;
+&lt;p&gt;For those with a C/C++ background, D offers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;native code speed&lt;/li&gt;
+&lt;li&gt;extremely fast compilation times&lt;/li&gt;
+&lt;li&gt;garbage collection (although you can manage your own memory if you want)&lt;/li&gt;
+&lt;li&gt;OOP - by reference only, easy initialization, always virtual&lt;/li&gt;
+&lt;li&gt;cleaner template metaprogramming syntax, more powerful templates, as well&lt;/li&gt;
+&lt;li&gt;built-in dynamic and associative arrays, array slicing&lt;/li&gt;
+&lt;li&gt;versioning (no preprocessor madness)&lt;/li&gt;
+&lt;li&gt;link-compatibility with C&lt;/li&gt;
+&lt;li&gt;nested functions&lt;/li&gt;
+&lt;li&gt;class delegates / function pointers&lt;/li&gt;
+&lt;li&gt;module system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For those with a C#/Java background (a shorter list, but one with big wins):&lt;/p&gt;</description></item></channel></rss>
