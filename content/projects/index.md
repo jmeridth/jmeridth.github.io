@@ -11,6 +11,8 @@ permalink: /projects/
 - [privateer-sdk](https://github.com/privateerproj/privateer-sdk): Privateer plugin SDK
 - [security-insights](https://github.com/ossf/security-insights): Machine-readable specification for the attestation of security-relevant data
 - [pvtr-github-repo-scanner](https://github.com/ossf/pvtr-github-repo-scanner): Privateer plugin to scan GitHub repositories for security hygiene
+- [osps-baseline-action](https://github.com/revanite-io/osps-baseline-action): GitHub Action for running OSPS security assessments
+- [security-insights-action](https://github.com/revanite-io/security-insights-action): GitHub Action for validating a repository's security-insights.yml file against the official OSSF Security Insights CUE schema
 
 ### Projects that I formerly maintained
 
