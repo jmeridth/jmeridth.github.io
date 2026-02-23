@@ -10,7 +10,7 @@ layout: post
 1. Create a label (i.e., Saved)
 1. Apply that label to your email.
 1. Check the emails in your inbox that you want moved out.
-1. From the dropdown choose, Apply label: <Your new label>
+1. From the dropdown choose, Apply label: \[Your new label\]
 1. You'll see the label name appear next to the email subject
 1. With the emails still checked, hit the Archive button above the emails
 1. This will move your emails out of your inbox.
