@@ -2,7 +2,7 @@
 &lt;li&gt;Create a label (i.e., Saved)&lt;/li&gt;
 &lt;li&gt;Apply that label to your email.&lt;/li&gt;
 &lt;li&gt;Check the emails in your inbox that you want moved out.&lt;/li&gt;
-&lt;li&gt;From the dropdown choose, Apply label: &lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;From the dropdown choose, Apply label: [Your new label]&lt;/li&gt;
 &lt;li&gt;You&amp;rsquo;ll see the label name appear next to the email subject&lt;/li&gt;
 &lt;li&gt;With the emails still checked, hit the Archive button above the emails&lt;/li&gt;
 &lt;li&gt;This will move your emails out of your inbox.&lt;/li&gt;
