@@ -2,7 +2,9 @@
 
 ## Local Development
 
-Let the devcontainer start in vscode
+```bash
+just run
+```
 
 [Open Browser](http://localhost:1313)
 
