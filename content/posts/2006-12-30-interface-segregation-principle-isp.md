@@ -2,6 +2,9 @@
 url: /posts/interface-segregation-principle-isp
 title: Interface Segregation Principle (ISP)
 date: 2006-12-30 00:38:00 -06:00
+tags:
+- design-patterns
+- dotnet
 layout: post
 ---
 

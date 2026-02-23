@@ -3,6 +3,13 @@ url: /posts/ptom-single-responsibility-principle
 title: PTOM - Single Responsibility Principle
 date: 2008-03-30 00:21:00 -05:00
 layout: post
+tags:
+- design-patterns
+- dotnet
+- csharp
+- nhibernate
+- castle
+- monorail
 ---
 
 ### The Single Responsibility Principle

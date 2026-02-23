@@ -22,7 +22,7 @@ This post is going to go over my typical workflow for work.  I’ll get as deta
   1. git pull origin master
   2. git checkout –b user_prompt
   3. `write some code`
-  4. git add <filename> (as necessary)
+  4. `git add <filename>` (as necessary)
   5. git commit –a –m “commit message”
   6. repeat step 3-5 as many times as necessary
   7. git checkout master
@@ -99,9 +99,9 @@ I already di the cd command (cd /c/code/console_app).  I then type the “git re
 
 ![](/img/gitforwindowsdevelopers/part2/14.png)
 
-What the?  Okay, the command is “git remote” with the “add”, “origin”, and “git@github.com:armmer/console_app.git” parameters.  The “git remote” command with the “add” parameter tells your local git repository that you are adding the path/URL/location of a remote repository that you want to watch.  In this case we’re going to label this remote repository “origin” and the location is “git@github.com:armmer/console_app.git”.
+What the?  Okay, the command is “git remote” with the “add”, “origin”, and “<git@github.com>:armmer/console_app.git” parameters.  The “git remote” command with the “add” parameter tells your local git repository that you are adding the path/URL/location of a remote repository that you want to watch.  In this case we’re going to label this remote repository “origin” and the location is “<git@github.com>:armmer/console_app.git”.
 
-SIDE NOTE:  git@github.com:armmer/console_app.git doesn’t look like a HTTP URL or a ssh:// protocol.  What protocol is that?  It is still SSH.  The git protocol, usually using port 9418, is used for clone, fetch, or pull (i.e., git://github.com/armmer/console_app.git). Please reference Stefan’s comment below for more details.
+SIDE NOTE:  <git@github.com>:armmer/console_app.git doesn’t look like a HTTP URL or a ssh:// protocol.  What protocol is that?  It is still SSH.  The git protocol, usually using port 9418, is used for clone, fetch, or pull (i.e., git://github.com/armmer/console_app.git). Please reference Stefan’s comment below for more details.
 
 Now I have told my local repository to watch my newly created github.com remote public repository.
 
@@ -145,7 +145,7 @@ A couple things to notice:
 
 GIT BRANCH
 
-2. It shows the “(user_prompt)” text at the end of my bash prompt now.  That means that I’m on the user_prompt branch.  To verify, I issue the “git branch” command.  This lists all the local branches.
+1. It shows the “(user_prompt)” text at the end of my bash prompt now.  That means that I’m on the user_prompt branch.  To verify, I issue the “git branch” command.  This lists all the local branches.
 
 ![](/img/gitforwindowsdevelopers/part2/19.png)
 
@@ -345,7 +345,7 @@ I type “git remote –v” to look at the remote repositories that I’m watch
 
 ![](/img/gitforwindowsdevelopers/part2/49.png)
 
-We are monitoring the “git@github.com:armmer/console_app.git” repository and have named it “origin”.
+We are monitoring the “<git@github.com>:armmer/console_app.git” repository and have named it “origin”.
 
 GIT PULL
 

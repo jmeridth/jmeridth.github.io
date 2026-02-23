@@ -3,11 +3,15 @@ url: /posts/update-teamcity
 title: Update - TeamCity
 date: 2008-02-18 16:09:56 -06:00
 layout: post
+tags:
+- teamcity
+- ci
+- nant
 ---
 
 As you saw from my [last TeamCity post](http://www.lostechies.com/blogs/jason_meridth/archive/2008/01/24/jetbrains-teamcity.aspx), I was a little frustrated about the fact that I had to create an environment variable to use the NAnt runner.  A colleague, [Dru Sellers](http://geekswithblogs.net/dsellers/Default.aspx), contacted me and mentioned the Command Line Build Runner.  He understood that I don't like my build process to be dependent on anything on the server, so I should be able to deploy my source to any server (minus the website being setup in IIS - automating that process is a post for another day).
 
-So, from the screen shot below you can see that Command Line is an option in the Build Runner drop down, just as NAnt was.  The Command executable is the path to the NAnt exe that I have in my tools folder that I have in my repository.  The Command parameters is the name of the build file.  This is not necessary because NAnt will find the build file in the current directory, but I like to be explicit. (/f:<buildfilename> or -buildfile:<buildfilename> are the same, if you are using the latter).
+So, from the screen shot below you can see that Command Line is an option in the Build Runner drop down, just as NAnt was.  The Command executable is the path to the NAnt exe that I have in my tools folder that I have in my repository.  The Command parameters is the name of the build file.  This is not necessary because NAnt will find the build file in the current directory, but I like to be explicit. (`/f:<buildfilename>` or `-buildfile:<buildfilename>` are the same, if you are using the latter).
 
 ![image](blogs/jason_meridth/WindowsLiveWriter/c84155d26dd2_9957/image_thumb.png)
 

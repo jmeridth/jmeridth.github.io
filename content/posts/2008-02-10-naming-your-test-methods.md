@@ -3,6 +3,10 @@ url: /posts/naming-your-test-methods
 title: Naming your test methods
 date: 2008-02-10 04:23:43 -06:00
 layout: post
+tags:
+- tdd
+- testing
+- resharper
 ---
 
 Today I had an opportunity to go to the TDD Coding Dojo hosting by [Chad Myers](http://feeds.feedburner.com/ChadMyersBlog) and [Ray Houston](http://www.rayhouston.com/blog) and I had a blast.  Some of the attendees have been doing TDD for a while (some have even migrated to instituting BDD into their development process) and some of them were trying to see what TDD was all about.  I think those people left with a better understanding of what TDD truly is and can be in their own development environments.

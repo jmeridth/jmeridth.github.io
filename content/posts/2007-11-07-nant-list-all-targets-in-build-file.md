@@ -3,6 +3,8 @@ url: /posts/nant-list-all-targets-in-build-file
 title: NAnt - list all targets in build file
 date: 2007-11-07 15:06:56 -06:00
 layout: post
+tags:
+- nant
 ---
 
 For my recollection and anyone else who finds the need to list all projects for a build file:

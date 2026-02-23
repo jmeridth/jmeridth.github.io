@@ -3,6 +3,9 @@ url: /posts/monorail-2-layouts-amp-rescues
 title: Monorail
 date: 2007-09-08 21:20:00 -05:00
 layout: post
+tags:
+- monorail
+- castle
 ---
 
 ## **_LAYOUTS_**

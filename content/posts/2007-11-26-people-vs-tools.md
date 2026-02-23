@@ -3,6 +3,11 @@ url: /posts/people-vs-tools
 title: People vs. tools
 date: 2007-11-26 00:38:00 -06:00
 layout: post
+tags:
+- agile
+- alt-net
+- ci
+- nant
 ---
 
 I'm not a very theoretical guy.  I don't like to discuss things to no solution.  When presented with a new idea, I like to see the code, tool, or mechanism that helps put that theory/idea into action.  I'm fine tuning (still working very hard at) my people skills.  I know that in order for software to succeed it's the communication that matters.  I can usually make people think about what they want and they usually know they need to be prepared when they approach me, because I don't like to waste time.  I like the occasional "check my email" or "watch that YouTube video"; so don't get me wrong.
@@ -17,6 +22,6 @@ The reason I bring this up is because I had a good discussion with some colleagu
 
 It doesn't matter how many tools or processes you put in place, if you haven't helped the team to learn to communicate or commence in knowledge sharing, they will do no good.
 
-Another recent experience was with stories names at my current employer.  Unfortunately, some of our stories names have turned into 3-5 word phrases, therefore leading to some ambiguity about what the expected behavior is of the story.  I had been introduced to Dan North's "As a <x>, I want to <y>, So that I can <z>" a while ago.  After recently seeing some passion around stories I re-read about the format and decided to pitch to our Systems and Business Analysts.  I didn't take the time to access how big of a change/idea this really was going to be.  One of the suggested solutions I was given was to schedule time for training so that the Systems and Business teams have the ability to make inquiries and gain a better understanding of the change.  Common sense solution, but it again highlighted the idea of focusing on the people and not the process/tool.
+Another recent experience was with stories names at my current employer.  Unfortunately, some of our stories names have turned into 3-5 word phrases, therefore leading to some ambiguity about what the expected behavior is of the story.  I had been introduced to Dan North's "As a `<x>`, I want to `<y>`, So that I can `<z>`" a while ago.  After recently seeing some passion around stories I re-read about the format and decided to pitch to our Systems and Business Analysts.  I didn't take the time to access how big of a change/idea this really was going to be.  One of the suggested solutions I was given was to schedule time for training so that the Systems and Business teams have the ability to make inquiries and gain a better understanding of the change.  Common sense solution, but it again highlighted the idea of focusing on the people and not the process/tool.
 
 What experience do you guys/gals have with tools vs. people?  Did you have a team respond to a tool/process that did help in your software creation?

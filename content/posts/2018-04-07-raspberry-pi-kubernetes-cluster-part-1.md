@@ -33,7 +33,7 @@ The items I bought were:
 Here is the tweet when it all arrived:
 
 > I blame [@hhoover](https://twitter.com/hhoover?ref_src=twsrc%5Etfw) ;). I will be building my [@kubernetesio](https://twitter.com/kubernetesio?ref_src=twsrc%5Etfw) cluster once the 6pi case shows up next Wednesday. The extra pi is to upgrade my [@RetroPieProject](https://twitter.com/RetroPieProject?ref_src=twsrc%5Etfw). Touch screen is an addition I want to try. Side project here I come. [pic.twitter.com/EebIKbsCeH](https://t.co/EebIKbsCeH)
-> 
+>
 > — Jason Meridth (@jmeridth) [March 31, 2018](https://twitter.com/jmeridth/status/980075584725422080?ref_src=twsrc%5Etfw)
 
 I spent this morning finally putting it together.

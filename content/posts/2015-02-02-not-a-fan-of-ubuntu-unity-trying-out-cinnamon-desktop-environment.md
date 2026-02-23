@@ -9,8 +9,10 @@ layout: post
 
 Since I _finally_ switched to Linux as my native OS (Ubuntu 14.04 LTS specifically) I have been having a blast.  My only complaint has been Unity.  It is not user friendly.  It makes my 8GB RAM laptop go slow.  I even researched disabling it.  Seems that is quite the feat in Ubuntu these days.  I'm a minimalist when it comes to my computers.  I remember Gnome and have always been a fan.  However, due to an article I read the other day, I decided to read up on [Linux Mint](http://linuxmint.com) and remembered a co-worker was using it as his primary OS.  I have also been playing with Fedora more lately due to its support for containers.  I feel that is the future on application deployments.  However, since Mint is based on Debian and Ubuntu, it is more of a comfort thing for me.  My co-workers suggestion was to try out [Cinnamon](http://cinnamon.linuxmint.com0).  As an Ubuntu package for cinnamon is [no longer maintained](http://askubuntu.com/questions/94201/how-do-i-install-the-cinnamon-desktop), I found a PPA that is still being maintained of the Cinnamon _stable_ branch (yes, I am aware the Cinnamon maintainer has a PPA for nightly builds, but I'm not quite that brave).  I installed it with:
 
-    sudo add-apt-repository ppa:lestcape/cinnamon
-    sudo apt-get install cinnamon
+```bash
+sudo add-apt-repository ppa:lestcape/cinnamon
+sudo apt-get install cinnamon
+```
 
 Once installed you need to logout and choose Cinnamon from the login session screen, like so:
 

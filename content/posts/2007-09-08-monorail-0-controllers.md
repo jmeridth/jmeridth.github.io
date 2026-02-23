@@ -3,6 +3,9 @@ url: /posts/monorail-0-controllers
 title: Monorail
 date: 2007-09-08 21:20:59 -05:00
 layout: post
+tags:
+- monorail
+- castle
 ---
 
 One of the first things I should have posted:  [How It Works](http://www.castleproject.org/monorail/documentation/trunk/manual/howitworks.html)

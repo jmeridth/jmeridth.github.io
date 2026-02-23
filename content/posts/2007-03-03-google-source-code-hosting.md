@@ -2,6 +2,9 @@
 url: /posts/google-source-code-hosting
 title: Google source code hosting
 date: 2007-03-03 01:04:00 -06:00
+tags:
+- subversion
+- tools
 layout: post
 ---
 

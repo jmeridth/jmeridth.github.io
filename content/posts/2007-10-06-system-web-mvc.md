@@ -3,6 +3,10 @@ url: /posts/system-web-mvc
 title: System.Web.MVC
 date: 2007-10-06 19:14:00 -05:00
 layout: post
+tags:
+- asp-net-mvc
+- dotnet
+- alt-net
 ---
 
 Wow!

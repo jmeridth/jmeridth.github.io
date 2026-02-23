@@ -3,6 +3,10 @@ url: /posts/routing-from-asp-net-mvc-inspires-monorail
 title: Routing from ASP.NET MVC inspires MonoRail
 date: 2007-10-17 02:46:29 -05:00
 layout: post
+tags:
+- monorail
+- castle
+- asp-net-mvc
 ---
 
 According to the recent check-in on MonoRail (build 586), they are setting the foundation to having routing just like ASP.NET MVC.

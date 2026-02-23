@@ -2,6 +2,8 @@
 url: /posts/excellent-post-by-jeremy-miller-of-codebetter-com
 title: EXCELLENT Post by Jeremy Miller of CodeBetter.com
 date: 2007-01-10 00:51:00 -06:00
+tags:
+- design-patterns
 layout: post
 ---
 

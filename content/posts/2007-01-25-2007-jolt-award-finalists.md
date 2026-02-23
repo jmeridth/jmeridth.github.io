@@ -2,6 +2,8 @@
 url: /posts/2007-jolt-award-finalists
 title: 2007 Jolt Award Finalists
 date: 2007-01-25 00:57:00 -06:00
+tags:
+- community
 layout: post
 ---
 

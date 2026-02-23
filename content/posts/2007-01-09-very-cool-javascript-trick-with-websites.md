@@ -2,6 +2,8 @@
 url: /posts/very-cool-javascript-trick-with-websites
 title: Very cool javascript trick with websites
 date: 2007-01-09 00:44:00 -06:00
+tags:
+- javascript
 layout: post
 ---
 

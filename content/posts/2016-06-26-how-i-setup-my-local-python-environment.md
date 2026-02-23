@@ -59,7 +59,7 @@ Create file to test with:
 
 inside `test.py`:
 
-```bash
+```python
 import requests
 
 r = requests.get('https://jasonmeridth.com')

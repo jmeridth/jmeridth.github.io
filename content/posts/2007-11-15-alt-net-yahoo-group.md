@@ -3,6 +3,9 @@ url: /posts/alt-net-yahoo-group
 title: ALT.net Yahoo Group
 date: 2007-11-15 13:06:21 -06:00
 layout: post
+tags:
+- alt-net
+- community
 ---
 
 You think it's getting hit a little hard?

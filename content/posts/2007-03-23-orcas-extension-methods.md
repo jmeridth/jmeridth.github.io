@@ -3,6 +3,9 @@ url: /posts/orcas-extension-methods
 title: Orcas - Extension Methods
 date: 2007-03-23 21:33:00 -05:00
 layout: post
+tags:
+- dotnet
+- csharp
 ---
 
 Again, I was reading Guthrie's blog and found his post on [Extension Methods](http://weblogs.asp.net/scottgu/archive/2007/03/13/new-orcas-language-feature-extension-methods.aspx)

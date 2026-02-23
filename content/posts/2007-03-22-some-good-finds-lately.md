@@ -2,6 +2,9 @@
 url: /posts/some-good-finds-lately
 title: Some good finds lately
 date: 2007-03-22 21:33:00 -05:00
+tags:
+- dotnet
+- community
 layout: post
 ---
 

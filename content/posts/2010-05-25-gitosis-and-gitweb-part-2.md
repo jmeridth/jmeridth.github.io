@@ -45,7 +45,7 @@ This is the result of the following command from the last part:
 sudo -H -u git gitosis-init < /tmp/id_rsa.pub
 ```
 
-That command puts the public ssh key into the keydirs directory and adds the associated username from the file to be the first member of the gisotis-admin project. Hence seeing user@local as the member. It matches the filename of the pub file in the keydir directory (user@local.pub). That’s how gitosis relates members listed in the conf file to the keys in the keydir directory, filename minus the pub extension.
+That command puts the public ssh key into the keydirs directory and adds the associated username from the file to be the first member of the gisotis-admin project. Hence seeing user@local as the member. It matches the filename of the pub file in the keydir directory (<user@local.pub>). That’s how gitosis relates members listed in the conf file to the keys in the keydir directory, filename minus the pub extension.
 
 Let’s edit this conf file to include our lostechies project:
 
@@ -192,4 +192,4 @@ Next Part: [Gitosis and Gitweb Part 3](/posts/gitosis-and-gitweb-part-3)
 
 **[garrmankor](#482 "2010-08-21 08:53:28"):** economy regions hypothesis special
 
-**[Mullins](#496 "2011-05-12 10:24:00"):** After creating the losttechies repository locally I needed to create the remote 'origin' by executing: $ git remote add origin git@MYSERVER.com:losttechies.git
+**[Mullins](#496 "2011-05-12 10:24:00"):** After creating the losttechies repository locally I needed to create the remote 'origin' by executing: $ git remote add origin <git@MYSERVER.com>:losttechies.git

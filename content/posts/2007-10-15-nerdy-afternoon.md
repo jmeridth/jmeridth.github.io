@@ -3,6 +3,8 @@ url: /posts/nerdy-afternoon
 title: Nerdy afternoon
 date: 2007-10-15 01:06:57 -05:00
 layout: post
+tags:
+- personal
 ---
 
 1\. My 2GB USB key drive has been bent for about 1 week so I almost bought a 4GB at Fry's last weekend for $89.  I hesitated and it's a good thing.  I went to CompUSA today and saw that they were selling 4GB SanDisk Cruzers for $39.  I went and got one.  To re-iterate what [Jeffrey Palermo](http://www.jeffreypalermo.com) [said](http://codebetter.com/blogs/jeffrey.palermo/archive/2007/06/25/modify-and-restore-firefox-extensions-that-fail-to-load.aspx), I loaded the [PortableApps](http://portableapps.com/) suite.

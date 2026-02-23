@@ -42,7 +42,7 @@ default   *        virtualbox   Running   tcp://192.168.99.100:2376           v1
 
 I created a Dockerfile to create the docker image with the following content:
 
-```bash
+```dockerfile
 FROM ubuntu:latest
 MAINTAINER Jason Meridth <jmeridth@gmail.com>
 
@@ -112,7 +112,6 @@ As you can see this shows the mapping from the host port of 45001 to the contain
 
 Note: You may need to add the `-a` argument to the `docker ps` command to see all container instances (including the ones not currently running).
 
-[1]: http://www.rackspace.com
 [2]: http://brew.sh
 [3]: https://caskroom.github.io/
 [4]: https://dockerhub.com

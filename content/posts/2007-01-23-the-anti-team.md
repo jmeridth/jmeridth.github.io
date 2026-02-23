@@ -2,6 +2,8 @@
 url: /posts/the-anti-team
 title: The Anti-team
 date: 2007-01-23 00:53:00 -06:00
+tags:
+- agile
 layout: post
 ---
 

@@ -3,6 +3,9 @@ url: /posts/codebetter-communityserverextensions
 title: CodeBetter.CommunityServerExtensions
 date: 2007-10-13 02:31:48 -05:00
 layout: post
+tags:
+- dotnet
+- community
 ---
 
 I like to give people credit when I use their software.  One particular developer is [Brendan Tompkins](http://devlicio.us/blogs/brendantompkins/default.aspx) of [Devlicio.us](http://devlicio.us/).

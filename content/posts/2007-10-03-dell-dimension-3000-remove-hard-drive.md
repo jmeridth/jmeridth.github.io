@@ -3,6 +3,8 @@ url: /posts/dell-dimension-3000-remove-hard-drive
 title: Dell Dimension 3000 - remove hard drive
 date: 2007-10-03 10:38:41 -05:00
 layout: post
+tags:
+- personal
 ---
 
 **Precursor: My MonoRail posts will continue soon, but I'm moving my office and have also had the "tech support" calls from friends and family lately, hence the OS, hardware posts.  We all have to do this stuff at sometime, right?  The services and CC.NET posts were because I'm managing our web server.

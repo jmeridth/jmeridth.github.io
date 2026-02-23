@@ -3,6 +3,9 @@ url: /posts/port-80-and-smiles
 title: Port 80 and smiles
 date: 2007-11-14 05:11:34 -06:00
 layout: post
+tags:
+- personal
+- community
 ---
 
 Tonight, after a "rough" presentation on LINQ 2 SQL (presented by me) at the local user group meeting, I came home to my wife and just decided to not unpack my laptop.  I know presenters have those times when something just doesn't work and even the fall back presentation code fails too.  Well, that happened tonight.  *I hear the violins playing in the background*

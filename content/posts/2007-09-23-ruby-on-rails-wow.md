@@ -3,6 +3,8 @@ url: /posts/ruby-on-rails-wow
 title: Ruby on Rails - WOW!
 date: 2007-09-23 19:45:04 -05:00
 layout: post
+tags:
+- ruby
 ---
 
 Okay, I've been hearing about Ruby and even went through the ["Try Ruby" on hobbix walk-through](http://tryruby.hobix.com/). I've scripted in Python, another dynamic language, for my Linux bash scripts and I've also create a web site to interact with Amazon web services with [IronPython](http://www.codeplex.com/IronPython) (post coming soon on that), but wasn't impressed enough to pursue learning of Ruby hard-core.  After the few posts on LosTechies from [Joey](http://www.lostechies.com/blogs/joeydotnet), [Joe](http://www.lostechies.com/blogs/joe_ocampo), and [Sean](http://www.lostechies.com/blogs/sean_chambers), I decided to follow [Sean's advice](http://www.lostechies.com/blogs/sean_chambers/archive/2007/09/23/647.aspx#669) and watch the [screencasts on Ruby.com](http://www.rubyonrails.org/screencasts).  I'm not even through the [blog creation screencast](http://media.rubyonrails.org/video/rails_take2_with_sound.mov) and I need to post on this.

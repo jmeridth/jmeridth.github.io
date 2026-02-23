@@ -20,7 +20,7 @@ This is my first blog post from TextMate on my Mac. I'm using the HTML formattin
 
 you put the following underneath the commented header
 
-My Blog Name <http://username@www.mydomain.com/blogs/<api_key>/metablog.ashx#<api_key>>
+My Blog Name <<http://username@www.mydomain.com/blogs/><api_key>/metablog.ashx#<api_key>>
 
 The key part is #<api_key>. api_key in Community Server terms is the portion of your url after domain/blogs/ and before the page requested. Mine is jason_meridth. My full URL for TextMate blogging would be <http://myusername_notsharing@www.lostechies.com/blogs/jason_meridth/metablog.ashx#jason_meridth>.
 

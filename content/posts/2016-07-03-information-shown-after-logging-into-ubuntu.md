@@ -9,7 +9,7 @@ layout: post
 
 Afer you log into an ubuntu instance you'll usually see something like this:
 
-```bash
+```text
 Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-88-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
@@ -43,7 +43,7 @@ For system information:
 
 example output:
 
-```bash
+```text
 ->$ landscape-sysinfo
   System load:  0.0               Processes:           99
   Usage of /:   20.1% of 7.74GB   Users logged in:     1
@@ -60,7 +60,7 @@ For packages status:
 
 example output:
 
-```bash
+```text
 ->$ /usr/lib/update-notifier/update-motd-updates-available
 
 7 packages can be updated.

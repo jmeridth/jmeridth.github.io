@@ -3,6 +3,8 @@ url: /posts/svnrepository-com-rocks
 title: SVNRepository.com ROCKS!!
 date: 2007-08-20 00:50:55 -05:00
 layout: post
+tags:
+- subversion
 ---
 
 To all developers,

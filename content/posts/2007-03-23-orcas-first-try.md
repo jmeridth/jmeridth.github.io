@@ -3,6 +3,8 @@ url: /posts/orcas-first-try
 title: Orcas - First try
 date: 2007-03-23 21:33:00 -05:00
 layout: post
+tags:
+- csharp
 ---
 
 After reading a post by Scott Guthrie on the [new C# Orcas language features](http://weblogs.asp.net/scottgu/archive/2007/03/08/new-c-orcas-language-features-automatic-properties-object-initializers-and-collection-initializers.aspx) I decided to download Orcas and try them out.  (**excited**)
@@ -28,7 +30,7 @@ Person person = new Person { FirstName="Scott", LastName="Guthrie", Age=32 };
 
 I personally like this because I like to have a constructor initializer for all my objects.  That is no longer necessary. =)
 
-  2. Collection initilizers
+  1. Collection initilizers
 Orcas:
 
 ```csharp
@@ -41,7 +43,7 @@ people.Add( new Person { FirstName = "Susanne", LastName = "Guthrie", Age = 32 }
 
 The new feature I played with that I'm still not to sure about is:
 
-  3. Automatic Properties
+  1. Automatic Properties
 Example:
 Prior to Orcas:
 

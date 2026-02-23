@@ -3,6 +3,9 @@ url: /posts/upgrade-dotnetnuke-from-4-03-03-to-4-05-05-and-alamocoders
 title: Upgrade DotNetNuke from 4.03.03 to 4.05.05 and AlamoCoders
 date: 2007-09-09 23:06:26 -05:00
 layout: post
+tags:
+- dotnet
+- community
 ---
 
 I found this [post](http://www.mitchelsellers.com/Blogs/tabid/54/articleType/ArticleView/articleId/120/Upgrade-to-DotNetNuke-455-From-4x.aspx) and followed it to the "T" upgrading a DNN site to 4.5.5.  It worked perfectly.  Just trying to help get the word out if anyone else needs this information.

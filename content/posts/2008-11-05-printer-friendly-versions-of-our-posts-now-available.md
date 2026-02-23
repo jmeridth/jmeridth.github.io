@@ -3,6 +3,8 @@ url: /posts/printer-friendly-versions-of-our-posts-now-available
 title: "'Printer Friendly Versions' of our posts now available"
 date: 2008-11-05 06:53:11 -06:00
 layout: post
+tags:
+- community
 ---
 
 ![Printer Friendly Version Example](jasonmeridth/files/2011/03/Picture-1_thumb.png)

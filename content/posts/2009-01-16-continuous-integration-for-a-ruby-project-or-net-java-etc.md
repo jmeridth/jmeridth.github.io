@@ -3,6 +3,13 @@ url: /posts/continuous-integration-for-a-ruby-project-or-net-java-etc
 title: Personal CI history and Hudson CI as service on Ubuntu/Debian
 date: 2009-01-16 04:08:00 -06:00
 layout: post
+tags:
+- ci
+- hudson
+- ruby
+- git
+- linux
+- ubuntu
 ---
 
 _UPDATE: CruiseControl.rb does have Git support from[git://github.com/benburkert/cruisecontrolrb.git.](//github.com/benburkert/cruisecontrolrb.git) Thank you Jeremy for the heads' up (comment below)_

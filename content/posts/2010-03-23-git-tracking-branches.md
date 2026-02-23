@@ -3,51 +3,61 @@ url: /posts/git-tracking-branches
 title: Git tracking branches
 date: 2010-03-23 21:36:00 -05:00
 layout: post
+tags:
+- git
 ---
 
 I have encountered this message multiple times when dealing with Git:
 
-    ~/code/blog/armmer.github.com(master) $ git pull
-    You asked me to pull without telling me which branch you
-    want to merge with, and 'branch.master.merge' in
-    your configuration file does not tell me, either. Please
-    specify which branch you want to use on the command line and
-    try again (e.g. 'git pull  ').
-    See git-pull(1)for details.
+```text
+~/code/blog/armmer.github.com(master) $ git pull
+You asked me to pull without telling me which branch you
+want to merge with, and 'branch.master.merge' in
+your configuration file does not tell me, either. Please
+specify which branch you want to use on the command line and
+try again (e.g. 'git pull  ').
+See git-pull(1)for details.
 
-    If you often merge with the same branch, you may want to
-    use something like the following in your configuration file:
+If you often merge with the same branch, you may want to
+use something like the following in your configuration file:
 
-        [branch "master"]
-        remote =
-        merge =
+    [branch "master"]
+    remote =
+    merge =
 
-        [remote ""]
-        url =
-        fetch =
+    [remote ""]
+    url =
+    fetch =
 
-    See git-config(1) for details.
+See git-config(1) for details.
+```
 
 and I’ve been waiting for it again so that I can blog about it. What this means is that the local master branch of my github pages repository is not tracking a remote branch. The quickest way to get around this would be for me to explicitly state the remote name and branch:
 
-    ~/code/blog/armmer.github.com(master) $ git pull origin master
+```bash
+~/code/blog/armmer.github.com(master) $ git pull origin master
+```
 
 and it would pull successfully. Well, I don’t want to have to specify the remote and branch. The easiest way to do this is to edit the configuration file as suggested and add the following (at least in my case):
 
-    [branch "master"]
-        remote = origin
-        merge = refs/heads/master
+```text
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
 
-        [remote "origin"]
-        url = git@github.com:armmer/armmer.github.com.git
-        fetch = +refs/heads/*:refs/remotes/origin/*
+    [remote "origin"]
+    url = git@github.com:armmer/armmer.github.com.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+```
 
 The +refs/heads/**:refs/remotes/origin/** notation is what I call the [refspec format](http://progit.org/book/ch9-5.html).
 
 Now if I do a _git pull_ I get:
 
-    ~/code/blog/armmer.github.com(master) $ git pull
-    Already up-to-date.
+```bash
+~/code/blog/armmer.github.com(master) $ git pull
+Already up-to-date.
+```
 
 It worked. Now back to coding…
 

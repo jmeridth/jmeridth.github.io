@@ -42,7 +42,7 @@ You need to configure which key (“IdentityFile”) goes with which domain (or 
 
 Your ~/.ssh/config would look like:
 
-```
+```text
 Host *.myhost.com
   IdentitiesOnly yes
   IdentityFile ~/.ssh/myhost
@@ -60,7 +60,7 @@ Host *.myotherhost.domain
 
 You can try multiple keys if needed
 
-```
+```text
 Host *.myhost.com
   IdentitiesOnly yes
   IdentityFile ~/.ssh/myhost_rsa

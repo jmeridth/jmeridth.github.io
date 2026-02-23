@@ -100,7 +100,7 @@ All with ["end-to-end encryption"](https://proton.me/support/proton-mail-encrypt
 - Not able to search locations for your events. [Vote for this feature](https://protonmail.uservoice.com/forums/932842-proton-calendar/suggestions/42224578-calendar-location-maps-integration-e-g-open-stre)
 - Duplicate events are not available on mobile apps. It is available on the web app. [Vote for this feature](https://protonmail.uservoice.com/forums/932842-proton-calendar/suggestions/42699347-duplicate-event) (already started, supposedly)
 - After you import your calendar:
-    - all participants are removed from events and there is no way to edit participants on existing events. [Vote for this feature](https://protonmail.uservoice.com/forums/932842-proton-calendar/suggestions/48369923-edit-add-participants-on-existing-events)
+  - all participants are removed from events and there is no way to edit participants on existing events. [Vote for this feature](https://protonmail.uservoice.com/forums/932842-proton-calendar/suggestions/48369923-edit-add-participants-on-existing-events)
 
 ---
 
@@ -158,11 +158,11 @@ All with ["end-to-end encryption"](https://proton.me/support/proton-mail-encrypt
 
 ### Via Votes
 
-https://protonmail.uservoice.com/
+<https://protonmail.uservoice.com/>
 
 ### Open Source
 
-https://proton.me/community/open-source
+<https://proton.me/community/open-source>
 
 - [Proton Mail](https://github.com/ProtonMail)
 - [Proton Pass](https://github.com/protonpass)
@@ -179,4 +179,4 @@ https://proton.me/community/open-source
 
 ## Bug Bounty
 
-https://proton.me/security/bug-bounty
+<https://proton.me/security/bug-bounty>

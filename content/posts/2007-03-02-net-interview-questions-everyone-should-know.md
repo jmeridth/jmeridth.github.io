@@ -2,6 +2,8 @@
 url: /posts/net-interview-questions-everyone-should-know
 title: ".NET interview questions everyone should know"
 date: 2007-03-02 01:03:00 -06:00
+tags:
+- dotnet
 layout: post
 ---
 

@@ -2,6 +2,8 @@
 url: /posts/the-end-user
 title: The end user
 date: 2007-01-30 01:01:00 -06:00
+tags:
+- agile
 layout: post
 ---
 

@@ -3,6 +3,8 @@ url: /posts/gmail-labs
 title: Gmail Labs
 date: 2008-11-14 13:51:08 -06:00
 layout: post
+tags:
+- personal
 ---
 
 Maybe I'm a little late noticing this, but the Labs option once you're in your gmail settings:

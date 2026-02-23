@@ -3,6 +3,9 @@ url: /posts/how-to-install-twhirl-on-ubuntu-7-10-gutsy-gibbon
 title: How to install Twhirl on Ubuntu (7.10 Gutsy Gibbon)
 date: 2008-04-17 03:24:00 -05:00
 layout: post
+tags:
+- linux
+- ubuntu
 ---
 
 _**Update**: I jumped the gun and I thought I'd never have to say this about Linux, but you may have to reboot after the install.  I lost atitle bars on all windows after the install.  After reboot, they came back.  Glad I didn't have to go down that rabbit hole._

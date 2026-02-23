@@ -2,6 +2,9 @@
 url: /posts/resharper-templates
 title: Resharper Templates
 date: 2006-12-11 00:26:00 -06:00
+tags:
+- resharper
+- tools
 layout: post
 ---
 

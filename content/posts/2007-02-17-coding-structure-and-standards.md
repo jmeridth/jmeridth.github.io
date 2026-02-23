@@ -2,6 +2,9 @@
 url: /posts/coding-structure-and-standards
 title: Coding Structure and Standards
 date: 2007-02-17 01:02:00 -06:00
+tags:
+- design-patterns
+- agile
 layout: post
 ---
 

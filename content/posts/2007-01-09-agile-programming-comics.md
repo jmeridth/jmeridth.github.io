@@ -2,6 +2,8 @@
 url: /posts/agile-programming-comics
 title: Agile Programming Comics
 date: 2007-01-09 00:45:00 -06:00
+tags:
+- agile
 layout: post
 ---
 

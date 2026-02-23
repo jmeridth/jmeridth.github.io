@@ -3,6 +3,8 @@ url: /posts/that-was-stupid-marcus-pwnage-pants-bratton
 title: That was stupid! ~ Marcus Pwnage Pants Bratton
 date: 2008-01-18 19:09:00 -06:00
 layout: post
+tags:
+- personal
 ---
 
 ![](http://www.dkimages.com/discover/previews/812/10089644.JPG)

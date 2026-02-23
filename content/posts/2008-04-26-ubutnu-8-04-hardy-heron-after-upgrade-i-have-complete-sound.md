@@ -3,6 +3,10 @@ url: /posts/ubutnu-8-04-hardy-heron-after-upgrade-i-have-complete-sound
 title: Ubutnu 8.04 (Hardy Heron) after upgrade - I have complete sound!!
 date: 2008-04-26 16:46:00 -05:00
 layout: post
+tags:
+- linux
+- ubuntu
+- firefox
 ---
 
 _**UPDATE**: Do not upgrade your virtual box install.  Stay with the Gutsy version if you already have it.  If you are just installing Hardy Heron from scratch, I will have a post in a little bit and link to it here about how to ensure you get the correct version._

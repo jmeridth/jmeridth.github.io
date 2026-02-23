@@ -2,6 +2,9 @@
 url: /posts/ruby-development-in-visual-studio-2005
 title: Ruby development in Visual Studio 2005
 date: 2007-01-03 00:40:00 -06:00
+tags:
+- ruby
+- visual-studio
 layout: post
 ---
 

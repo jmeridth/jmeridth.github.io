@@ -3,6 +3,10 @@ url: /posts/jetbrains-teamcity
 title: JetBrains TeamCity
 date: 2008-01-24 20:14:36 -06:00
 layout: post
+tags:
+- teamcity
+- ci
+- nant
 ---
 
 Being sick today has allowed me to catch up on my ASP.NET MVC knowledge and also move the remainder of my CC.NET projects to [JetBrains TeamCity](http://www.jetbrains.com/teamcity/).  Being sick is no fun though. *Cough Cough*
@@ -17,7 +21,7 @@ Like Sean mentions, I like the following:
 * web interface customization, no more XML hell
 * more to come...
 
-_**UPDATE: The administration section of the software suggests using MySQL for a production installation.  I followed the instructions online for installing MySQL and setting up the database and connectivity.  It worked without any problems.  I love good,detailed instructions.  Kudos to JetBrains.**_
+***UPDATE: The administration section of the software suggests using MySQL for a production installation.  I followed the instructions online for installing MySQL and setting up the database and connectivity.  It worked without any problems.  I love good,detailed instructions.  Kudos to JetBrains.***
 
 Only "problem" I've had is that I like to have my builds use whatever version of NAnt they use -- in a lib folder in my trunk -- and that is the NAnt.exe file that is used and [TeamCity](http://www.jetbrains.com/teamcity/) wants an environment variable NAntHome to point to the NAnt path on the server (i.e., C:Program FilesNAnt, NOT C:Program FilesNAntbin -- it will handle finding the exe file, lesson learned)
 

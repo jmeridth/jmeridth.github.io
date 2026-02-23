@@ -2,6 +2,8 @@
 url: /posts/windows-mobile-6
 title: Windows Mobile 6
 date: 2007-02-09 01:02:00 -06:00
+tags:
+- personal
 layout: post
 ---
 

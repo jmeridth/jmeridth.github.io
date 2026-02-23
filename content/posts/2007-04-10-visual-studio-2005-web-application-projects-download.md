@@ -3,6 +3,9 @@ url: /posts/visual-studio-2005-web-application-projects-download
 title: Visual Studio 2005 Web Application Projects download
 date: 2007-04-10 10:22:00 -05:00
 layout: post
+tags:
+- visual-studio
+- dotnet
 ---
 
 **UPDATE: This feature is included in the [Visual Studio 2005 Service Pack 1](http://msdn2.microsoft.com/en-us/vstudio/bb265237.aspx)**

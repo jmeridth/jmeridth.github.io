@@ -3,6 +3,8 @@ url: /posts/castle-api-available-now
 title: Castle API available now
 date: 2007-08-30 21:53:00 -05:00
 layout: post
+tags:
+- castle
 ---
 
 [Hammet](http://hammett.castleproject.org/) has announced that the [Castle API](http://api.castleproject.org/) is now available online.

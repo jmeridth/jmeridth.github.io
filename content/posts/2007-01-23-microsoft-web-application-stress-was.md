@@ -2,6 +2,9 @@
 url: /posts/microsoft-web-application-stress-was
 title: Microsoft Web Application Stress (WAS)
 date: 2007-01-23 00:54:00 -06:00
+tags:
+- tools
+- testing
 layout: post
 ---
 

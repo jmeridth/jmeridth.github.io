@@ -3,6 +3,10 @@ url: /posts/monorail-3-viewcomponents
 title: Monorail
 date: 2007-09-18 15:27:10 -05:00
 layout: post
+tags:
+- monorail
+- castle
+- tdd
 ---
 
 #### UNIT TESTING

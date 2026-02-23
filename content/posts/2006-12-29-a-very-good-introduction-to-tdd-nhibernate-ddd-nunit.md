@@ -2,6 +2,10 @@
 url: /posts/a-very-good-introduction-to-tdd-nhibernate-ddd-nunit
 title: A very good introduction to TDD, NHibernate, DDD, NUnit
 date: 2006-12-29 00:36:00 -06:00
+tags:
+- tdd
+- nhibernate
+- dotnet
 layout: post
 ---
 

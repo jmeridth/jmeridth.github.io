@@ -3,6 +3,9 @@ url: /posts/for-those-annoyed-with-having-to-add-the-public-keyword-to-your-new-
 title: For those annoyed with having to add the public keyword to your new classes....
 date: 2007-09-13 00:28:27 -05:00
 layout: post
+tags:
+- visual-studio
+- csharp
 ---
 
 Read the following [blog entry](http://davidhayden.com/blog/dave/archive/2005/11/05/2556.aspx) from [David Hayden](http://www.davidhayden.com/davidhayden/default.aspx).  This teaches you how to update the class template that Visual Studio 2005 uses to create new classes.
