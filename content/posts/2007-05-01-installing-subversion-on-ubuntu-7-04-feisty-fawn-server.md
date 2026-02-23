@@ -26,7 +26,7 @@ Next we'll need to edit the configuration file for the subversion webdav module.
 sudo vim /etc/apache2/mods-enabled/dav_svn.conf
 ```
 
-The Location element in the configuration file dictates the root directory where subversion will be accessible from, for instance: <http://www.server.com/svn>
+The Location element in the configuration file dictates the root directory where subversion will be accessible from, for instance: `http://www.server.com/svn`
 
 ```html
 <Location /home/svn>
@@ -75,9 +75,7 @@ Restart apache by running the following command:
 sudo /etc/init.d/apache2 restart
 ```
 
-Now if you go in your browser to <http://www.server.com/svn>, you should see that the repository is enabled for anonymous read access, but commit access will require a username.
-
-![](http://www.edreaminghome.com/view_image.php?file_id=317&size=400)
+Now if you go in your browser to `http://www.server.com/svn`, you should see that the repository is enabled for anonymous read access, but commit access will require a username.
 
 If you want to force all users to authenticate even for read access, add the following line right below the AuthUserFile line from above. Restart apache after changing this line.
 
@@ -96,7 +94,7 @@ Welcome to the best source control system out there.
 
 **[Nexact](#13 "2007-05-11 20:49:31"):** Great Howto.
 
-**[poroimes](#14 "2007-05-15 12:55:11"):** And if you want to access your repository from <http://www.server.com/svn>, change "" => ""
+**[poroimes](#14 "2007-05-15 12:55:11"):** And if you want to access your repository from `http://www.server.com/svn`, change "" => ""
 
 **[poromies](#15 "2007-05-15 13:21:45"):** I noticed one more thing... If you want your repository to be authenticated remember to uncomment following lines from /etc/apache2/mods-enabled/dav_svn.conf too  Require valid-user
 
