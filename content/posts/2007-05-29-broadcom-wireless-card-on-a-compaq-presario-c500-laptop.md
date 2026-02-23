@@ -4,6 +4,9 @@ title: Ubuntu Feisty Fawn and the Broadcom wireless card on a Compaq Presario C5
   Laptop
 date: 2007-05-29 21:06:00 -05:00
 layout: post
+tags:
+- linux
+- ubuntu
 ---
 
 You'd start to think that I'm no longer a developer, and more of a architecture IT person now with all of the latest Linux installation posts I've had lately.  These are do to the new tricks/fixes I'm having to learn to get Ubuntu Feisty Fawn to not be so feisty.  It's still better than Vista (for AgileJoe, knowing his comments are coming)
@@ -12,7 +15,7 @@ This past weekend I had a friend ask me to come over and help with a wireless pr
 
 Anyways his Compaq Presario C500 laptop had Vista on it and it could see his printer but still couldn't print.  Same 'ol, same 'ol with there not being any Vista printer drivers ready. After an hour of looking for drivers I suggested Linux.  He had never heard of it.  I asked him if he trusted me and did he use any software that was specific to Windows.  He said yes to the first question and no to the second.
 
-I took his laptop home and loaded Ubuntu 7.04 (Feisty Fawn).  No problems.  I copied off his photos from his My Docs folder to my USB key drive and then plugged it in and put back in his /home/<username>/photos folder after loading Ubuntu. I could not get the wireless card to work.  It detected the interface and I verified that it was in the /etc/network/interfaces file.  The wireless blue key on the main board of the laptop would not light up no matter was I tried.
+I took his laptop home and loaded Ubuntu 7.04 (Feisty Fawn).  No problems.  I copied off his photos from his My Docs folder to my USB key drive and then plugged it in and put back in his /home/`<username>`/photos folder after loading Ubuntu. I could not get the wireless card to work.  It detected the interface and I verified that it was in the /etc/network/interfaces file.  The wireless blue key on the main board of the laptop would not light up no matter was I tried.
 
 I plugged in my CAT5 cable and updated the OS with the latest patches and also loaded Automatix 2.0.  Got RealPlayer and a few other software programs loaded he mentioned that he liked.
 

@@ -10,4 +10,4 @@ layout: post
 
 Thanks to [Shawn Weisfeld](http://www.drowningintechnicaldebt.com/ShawnWeisfeld/Default.aspx) for recording this presentation.  Enjoy.
 
-<iframe src="http://blip.tv/play/AYHgu3EC.html?p=1" width="550" height="443" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#AYHgu3EC" style="display:none"></embed>
+*The video was previously hosted on blip.tv, which is no longer available.*

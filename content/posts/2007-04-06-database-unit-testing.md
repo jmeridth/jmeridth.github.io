@@ -3,6 +3,10 @@ url: /posts/database-unit-testing
 title: Database unit testing
 date: 2007-04-06 14:31:00 -05:00
 layout: post
+tags:
+- tdd
+- dotnet
+- nhibernate
 ---
 
 **Question**:  _How do you handle database unit testing?_

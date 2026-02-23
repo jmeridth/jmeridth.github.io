@@ -3,6 +3,11 @@ url: /posts/current-status
 title: Current Status
 date: 2009-02-12 04:53:00 -06:00
 layout: post
+tags:
+- ruby
+- rails
+- testing
+- tdd
 ---
 
 **_UPDATE:  I'm very eager to see where IronRuby and RSpec go for the .NET world.  Testing my C# Applications with RSpec would be awesome.  Check out the [MSDN magazine article](http://msdn.microsoft.com/en-us/magazine/dd434651.aspx) about this stuff if you haven't already._**

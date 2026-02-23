@@ -3,6 +3,8 @@ url: /posts/net-3-5-install-anyone-using-a-modem
 title: ".net 3.5 install, anyone using a modem?"
 date: 2007-11-26 22:11:56 -06:00
 layout: post
+tags:
+- dotnet
 ---
 
 ![image](blogs/jason_meridth/WindowsLiveWriter/.net3.5installanyoneusingamodem_F1B9/image_thumb.png)

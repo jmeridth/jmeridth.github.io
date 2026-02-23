@@ -3,6 +3,9 @@ url: /posts/firefox-hudson-build-monitor-add-on
 title: Firefox Hudson Build Monitor add-on
 date: 2009-03-05 02:19:00 -06:00
 layout: post
+tags:
+- hudson
+- ci
 ---
 
 MOZILLA: READ THIS!
@@ -42,7 +45,7 @@ There are 5 tabs:
 NOTE: Whenever I added my RSS feed from my Hudson dashboard to the tool (I'm using Firefox on a Mac) the URL would not stay. Cliffano had a solution for this:
 1\. Go to your Hudson dashboard
 
-2\. Right click your RSS feed of choice (I prefer "for all" which is https://hudson.mydomain.com/rssAll):
+2\. Right click your RSS feed of choice (I prefer "for all" which is <https://hudson.mydomain.com/rssAll>):
 ![](http://2.bp.blogspot.com/_JmjHpHPB6hg/Sa8zrDEwJKI/AAAAAAAAAWg/O7a_KGnm0Hk/s400/Picture+8.png)
 
 3\. Choose "Add Link To Hudson Build Monitor"

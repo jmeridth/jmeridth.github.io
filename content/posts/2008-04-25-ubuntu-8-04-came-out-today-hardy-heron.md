@@ -3,6 +3,9 @@ url: /posts/ubuntu-8-04-came-out-today-hardy-heron
 title: Ubuntu 8.04 came out today (Hardy Heron)
 date: 2008-04-25 02:48:00 -05:00
 layout: post
+tags:
+- linux
+- ubuntu
 ---
 
 Download [here](http://www.ubuntu.com/getubuntu/download).

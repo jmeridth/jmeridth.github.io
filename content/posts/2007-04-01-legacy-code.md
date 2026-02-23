@@ -3,6 +3,9 @@ url: /posts/legacy-code
 title: Legacy Code
 date: 2007-04-01 12:13:00 -05:00
 layout: post
+tags:
+- agile
+- books
 ---
 
 I recently read Jeremy Miller's [post](http://codebetter.com/blogs/jeremy.miller/archive/2007/04/01/Removing-the-_2200_Legacy_2200_-from-your-Code.aspx) on his thoughts about Legacy Code.  His expanded definition of Legacy code was perfect:

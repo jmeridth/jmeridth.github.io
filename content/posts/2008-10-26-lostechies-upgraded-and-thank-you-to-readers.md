@@ -3,6 +3,8 @@ url: /posts/lostechies-upgraded-and-thank-you-to-readers
 title: LosTechies - upgraded and thank you to readers
 date: 2008-10-26 22:48:26 -05:00
 layout: post
+tags:
+- community
 ---
 
 We have successfully upgraded [LosTechies](http://www.lostechies.com) to Community Server 2008.  We are sporting a new theme and will be changing a couple little things here and there.  Thank you to all our readers for allowing us to give back to community.  One of our members was overheard saying that a major key point of LosTechies is to give back to the community more than we take from it.  We have recently expanded to another member outside the continental United States ([Colin Jack of Edinburgh, Scotland](http://colinjack.lostechies.com)) and have also brought on another fellow Texan ([Derick Bailey of McLane Advanced Technologies near Austin](http://derickbailey.lostechies.com)).  We will keep growing and helping to shape the software development community in positive ways.

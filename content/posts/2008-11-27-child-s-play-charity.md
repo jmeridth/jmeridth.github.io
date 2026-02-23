@@ -3,6 +3,8 @@ url: /posts/child-s-play-charity
 title: Child's Play Charity
 date: 2008-11-27 02:30:38 -06:00
 layout: post
+tags:
+- personal
 ---
 
 ![image](jasonmeridth/files/2011/03/image_5.png)

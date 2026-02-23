@@ -3,6 +3,11 @@ url: /posts/monorail-5-sending-an-email-and-authentication
 title: MonoRail
 date: 2007-11-03 01:59:40 -05:00
 layout: post
+tags:
+- monorail
+- castle
+- dotnet
+- tdd
 ---
 
 ### RECAP

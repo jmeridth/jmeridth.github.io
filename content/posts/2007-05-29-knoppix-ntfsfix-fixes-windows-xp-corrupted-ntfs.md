@@ -3,6 +3,8 @@ url: /posts/knoppix-ntfsfix-fixes-windows-xp-corrupted-ntfs
 title: Knoppix ntfsfix fixes Windows XP corrupted NTFS
 date: 2007-05-29 20:33:00 -05:00
 layout: post
+tags:
+- linux
 ---
 
 Interested information from another Linux board:

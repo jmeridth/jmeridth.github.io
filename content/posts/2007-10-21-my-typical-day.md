@@ -3,6 +3,8 @@ url: /posts/my-typical-day
 title: My Typical Day
 date: 2007-10-21 02:26:58 -05:00
 layout: post
+tags:
+- personal
 ---
 
 In response to Joe Ocampo's (AgileJoe) [question](http://www.lostechies.com/blogs/joe_ocampo/archive/2007/10/20/curious-what-does-your-day-look-like.aspx):

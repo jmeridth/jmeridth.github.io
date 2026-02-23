@@ -3,6 +3,9 @@ url: /posts/technical-debt
 title: Technical Debt
 date: 2007-05-16 01:18:00 -05:00
 layout: post
+tags:
+- agile
+- tdd
 ---
 
 **"_You have a piece of functionality that you need to add to your system. You see two ways to do it, one is quick to do but is messy - you are sure that it will make further changes harder in the future. The other results in a cleaner design, but will take longer to put in place_."** ~ [Martin Fowler](http://www.martinfowler.com/bliki/TechnicalDebt.html)

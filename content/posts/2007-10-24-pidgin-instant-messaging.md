@@ -3,6 +3,8 @@ url: /posts/pidgin-instant-messaging
 title: Pidgin - Instant Messaging
 date: 2007-10-24 13:35:33 -05:00
 layout: post
+tags:
+- personal
 ---
 
 I have started using [Pidgin](http://www.pidgin.im/) instant messaging.  It consolidates my Google Talk, MSN Messenger, and Yahoo Accounts.  I've used [Trillian](http://www.ceruleanstudios.com/) in the past with success but it doesn't include Google Talk.  I also have [Skype](http://www.skype.com/) for voice messaging.  I hope Pidgin can include that someday.

@@ -3,6 +3,9 @@ url: /posts/reminder-how-to-enable-syntax-highlighting-for-html-files-with-non-s
 title: Reminder - How to enable syntax highlighting for HTML files with non-standard
   extensions
 date: 2007-03-21 21:34:00 -05:00
+tags:
+- visual-studio
+- monorail
 layout: post
 ---
 

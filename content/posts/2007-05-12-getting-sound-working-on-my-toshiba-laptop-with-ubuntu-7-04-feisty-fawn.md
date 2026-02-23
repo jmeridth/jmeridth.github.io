@@ -3,6 +3,9 @@ url: /posts/getting-sound-working-on-my-toshiba-laptop-with-ubuntu-7-04-feisty-f
 title: Getting sound working on my Toshiba laptop with Ubuntu 7.04 (Feisty Fawn)
 date: 2007-05-12 23:53:00 -05:00
 layout: post
+tags:
+- ubuntu
+- linux
 ---
 
 The [post](http://ubuntuforums.org/showthread.php?t=392350&highlight=toshiba) here on the forums helped me solve my problems.

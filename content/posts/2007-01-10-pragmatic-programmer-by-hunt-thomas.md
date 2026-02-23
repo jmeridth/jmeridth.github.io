@@ -2,6 +2,9 @@
 url: /posts/pragmatic-programmer-by-hunt-thomas
 title: Pragmatic Programmer by Hunt/Thomas
 date: 2007-01-10 00:50:00 -06:00
+tags:
+- books
+- agile
 layout: post
 ---
 

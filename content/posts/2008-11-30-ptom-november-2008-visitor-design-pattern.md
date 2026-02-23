@@ -3,6 +3,11 @@ url: /posts/ptom-november-2008-visitor-design-pattern
 title: PTOM - November 2008 - Visitor Design Pattern
 date: 2008-11-30 21:15:00 -06:00
 layout: post
+tags:
+- design-patterns
+- csharp
+- ruby
+- testing
 ---
 
 ## Definition

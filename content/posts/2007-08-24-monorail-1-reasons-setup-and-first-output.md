@@ -3,6 +3,11 @@ url: /posts/monorail-1-reasons-setup-and-first-output
 title: Monorail
 date: 2007-08-24 08:01:00 -05:00
 layout: post
+tags:
+- monorail
+- castle
+- dotnet
+- tdd
 ---
 
 _**UPDATE: I am using the Castle MonoRail project trunk code, NOT RC2  **_

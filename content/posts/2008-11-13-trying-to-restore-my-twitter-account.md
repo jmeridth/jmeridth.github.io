@@ -3,6 +3,8 @@ url: /posts/trying-to-restore-my-twitter-account
 title: Trying to restore my Twitter account
 date: 2008-11-13 13:51:00 -06:00
 layout: post
+tags:
+- personal
 ---
 
 _update:  created armmer account after following Ben's advice below._

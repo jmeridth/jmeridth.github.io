@@ -2,6 +2,10 @@
 url: /posts/castle-project
 title: Castle Project
 date: 2006-12-14 00:30:00 -06:00
+tags:
+- castle
+- dotnet
+- design-patterns
 layout: post
 ---
 

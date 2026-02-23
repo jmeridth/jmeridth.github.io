@@ -3,6 +3,9 @@ url: /posts/library-thing
 title: Library Thing
 date: 2008-11-27 17:11:00 -06:00
 layout: post
+tags:
+- books
+- personal
 ---
 
 **_UPDATE: Shelfari.com has a much better UI and is just as awesome.  I've made the switch_**

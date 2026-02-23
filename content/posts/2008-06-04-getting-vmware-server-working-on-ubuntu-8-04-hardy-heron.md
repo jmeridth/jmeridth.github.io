@@ -3,6 +3,10 @@ url: /posts/getting-vmware-server-working-on-ubuntu-8-04-hardy-heron
 title: Getting VMWare server working on Ubuntu 8.04 (Hardy Heron)
 date: 2008-06-04 01:08:00 -05:00
 layout: post
+tags:
+- linux
+- ubuntu
+- dotnet
 ---
 
 I had some slow issues with Virtual Box, which I've heard have been fixed.  I'm heading back down the VMWare path and did some research first.

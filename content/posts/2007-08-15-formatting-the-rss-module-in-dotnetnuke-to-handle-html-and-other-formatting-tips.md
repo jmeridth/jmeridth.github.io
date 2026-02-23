@@ -4,17 +4,29 @@ title: Formatting the RSS Module in DotNetNuke to handle HTML and other formatti
   tips
 date: 2007-08-15 14:58:40 -05:00
 layout: post
+tags:
+- dotnet
 ---
 
 I'm currently in the process of moving the [Alamo Coders](http://www.alamocoders.net) website to [DotNetNuke](http://www.dotnetnuke.com) and I'm being introduced to the details of DNN.
 
 By default, the RSS Module isn't HTML friendly.  However, by adding the following to an xsl tag:
 
-value-of disable-output-escaping="yes"
+`value-of disable-output-escaping="yes"`
 
-**Example:
-Before**: <xsl:value-of select="description"/>
-**After**: <xsl:value-of disable-output-escaping="yes" select="description"/>
+**Example:**
+
+Before:
+
+```xml
+<xsl:value-of select="description"/>
+```
+
+After:
+
+```xml
+<xsl:value-of disable-output-escaping="yes" select="description"/>
+```
 
 This allows for HTML encoding in your RSS feed.
 
@@ -22,17 +34,21 @@ Another formatting item is to limit the number of items that show in the module:
 
 To show only the first 5 items:
 
+```xml
 <xsl:if test="position() &lt; 6">
-        <br />
-        <strong><a href="{link}" target="_main"><xsl:value-of select="title"/></a></strong>
-        <br />
-            <xsl:value-of select="pubDate"/>
-        <br />
+        <br />
+        <strong><a href="{link}" target="_main"><xsl:value-of select="title"/></a></strong>
+        <br />
+            <xsl:value-of select="pubDate"/>
+        <br />
 </xsl:if>
+```
 
 Another format to use is:
 
+```xml
 <xsl:for-each select="channel/item[position() &lt; 6]">
+```
 
 Hope this helps someone else, like it helped me.
 

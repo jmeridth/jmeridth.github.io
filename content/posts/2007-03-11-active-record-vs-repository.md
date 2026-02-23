@@ -2,6 +2,10 @@
 url: /posts/active-record-vs-repository
 title: Active Record vs. Repository
 date: 2007-03-11 21:34:00 -05:00
+tags:
+- design-patterns
+- nhibernate
+- castle
 layout: post
 ---
 

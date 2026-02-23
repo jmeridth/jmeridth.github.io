@@ -1,0 +1,23 @@
+config:
+  # MD001 - Heading levels should only increment by one (legacy posts skip levels)
+  MD001: false
+  # MD002 - First heading should be a top-level heading
+  MD002: false
+  # MD013 - Line length
+  MD013: false
+  # MD024 - Multiple headings with the same content (e.g., Pros/Cons comparisons)
+  MD024: false
+  # MD025 - Multiple top-level headings (blog posts may have Comments sections)
+  MD025: false
+  # MD033 - Inline HTML (legacy blog posts use escaped HTML)
+  MD033: false
+  # MD036 - Emphasis used instead of a heading (legacy posts use bold for updates)
+  MD036: false
+  # MD041 - First line should be a top-level heading (Hugo frontmatter)
+  MD041: false
+  # MD045 - Images should have alt text (legacy posts)
+  MD045: false
+  # MD051 - Link fragments should be valid (legacy posts with anchors)
+  MD051: false
+  # MD059 - Link text should be descriptive (legacy posts use "here")
+  MD059: false

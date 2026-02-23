@@ -3,6 +3,9 @@ url: /posts/ubuntu-s-1-bug-report
 title: Ubuntu's
 date: 2007-06-26 00:42:51 -05:00
 layout: post
+tags:
+- ubuntu
+- linux
 ---
 
 LOL!!  Just please go read it:

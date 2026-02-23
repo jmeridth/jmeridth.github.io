@@ -3,6 +3,9 @@ url: /posts/alt-net-day-2-old
 title: Alt.NET Day 2
 date: 2007-10-11 03:20:48 -05:00
 layout: post
+tags:
+- alt-net
+- community
 ---
 
 I apologize for the delay of this post.  It was a great weekend and I learned a great deal about other developers and myself.  It has also made me hit the code harder.  I don't know how Oren or

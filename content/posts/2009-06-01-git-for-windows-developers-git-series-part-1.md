@@ -73,7 +73,7 @@ Once installed, when I click the Windows button and type git (since I’m using 
 
 ![](/img/gitforwindowsdevelopers/part1/12.png)
 
-I also issue the following <a name="commands">commands</a>, “git config –global user.email [my@email.com](mailto:my@email.com)” and “git config –global user.name ‘Jason Meridth’”:
+I also issue the following commands, `git config --global user.email my@email.com` and `git config --global user.name ‘Jason Meridth’`:
 
 ![](/img/gitforwindowsdevelopers/part1/13.png)
 
@@ -85,7 +85,7 @@ I’ve met a good number of Windows developers who don’t know what SSH is.  M
 
 _History and Retrospective_: I used to use cygwin + ssh keys for my git stuff on my windows VMs, but have realized, via advice from a friend, that cygwin will not be the easiest thing to teach to a typical Windows user. I am in no way assuming that any of our readers are "typical" windows users, but he's right. And msysgit needs to become the defacto Windows git tool anyway. What better way to help that project succeed than to give it more users.
 
-I’ll generate the SSH Keys I will use to need to connect to remote repositories.  I issue the following command “ssh-keygen –C ‘your@mail.com’ –t rsa” (using your own email address of course) and then press enter when prompted on file location and return two more times on both passphrase questions:
+I’ll generate the SSH Keys I will use to need to connect to remote repositories.  I issue the following command “ssh-keygen –C ‘<your@mail.com>’ –t rsa” (using your own email address of course) and then press enter when prompted on file location and return two more times on both passphrase questions:
 
 ![](/img/gitforwindowsdevelopers/part1/14.png)
 
@@ -95,7 +95,8 @@ SIDE NOTE:  back up these keys to a secure location.  If they accidentally get c
 
 This process will not apply to the remainder of this post, but will for following posts.
 
-Putting My Code Under Source Control With Git
+### Putting My Code Under Source Control With Git {#commands}
+
 For example’s sake, say we have a folder under C:code.  In that folder we’ve created a folder called “console_app”.  Inside this folder is a .NET 3.5 Console application that will send “hello world” to the output.  Really?  Again? Yep.
 
 ![](/img/gitforwindowsdevelopers/part1/15.png)
@@ -110,14 +111,16 @@ I built the application to ensure the bin and obj folders are created.  I’ll e
 
 Each of these choices shows the two different ways of creating a local git repository or converting an existing folder into a git repository.  I will show how to use Git Bash in this post and will use it mainly in this series. (If I get enough response to show Git GUI, I may do that)
 
-Turning the Console Application Into A Git Repository With Git Bash
+### Turning the Console Application Into A Git Repository With Git Bash
+
 Choosing “Git Bash Here” when right-clicking the C:codeconsole_app folder gave me the following:
 
 ![](/img/gitforwindowsdevelopers/part1/18.png)
 
 Pretty much what I’ve already seen, but notice the path “/c/code/console_app”.  For the individuals who aren’t used to a *nix type path structure, that is the same as C:codeconsole_app.
 
-Finally, Git Commands
+### Finally, Git Commands
+
 In the prompt, type “git init”:
 
 ![](/img/gitforwindowsdevelopers/part1/19.png)
@@ -138,7 +141,7 @@ I tried to create a .gitignore file in Windows Explorer and kept getting this er
 
 Windows doesn’t understand dot files (i.e., .bashrc, .gitignore, etc).  Windows expects your files to have a name.extension convention.
 
-<sarcasm>My love for Windows grows every time I use it</sarcasm>
+\<sarcasm\>My love for Windows grows every time I use it\</sarcasm\>
 
 Remember I said I was building the application for a specific reason (aka the bin and obj folders)?  It was to highlight the necessity of the .gitignore file and how it can explicitly exclude files from your repository.  I go into the Git Bash, at the C:codeconsole_app folder.  I type “ls –al” to list all the files, including dot files.  Notice we have .git, but no .gitignore.  I type “touch .gitignore”.  This will create the .gitignore file with no content.  Issuing “ls –al” again and you see the new file.
 
@@ -180,9 +183,9 @@ And I issue “git status” again:
 
 ![](/img/gitforwindowsdevelopers/part1/27.png)
 
-Now the files are shown as “Changes to be committed”.  Git even shows me how to remove files from the staging area; “git rm –cached <file>”.
+Now the files are shown as “Changes to be committed”.  Git even shows me how to remove files from the staging area; `git rm --cached <file>`.
 
-I now issue the “git commit –m <message>” command:
+I now issue the `git commit -m <message>` command:
 
 ![](/img/gitforwindowsdevelopers/part1/28.png)
 

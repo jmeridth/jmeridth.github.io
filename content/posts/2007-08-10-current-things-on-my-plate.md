@@ -3,6 +3,11 @@ url: /posts/current-things-on-my-plate
 title: Current things on my plate
 date: 2007-08-10 00:18:31 -05:00
 layout: post
+tags:
+- personal
+- monorail
+- ruby
+- books
 ---
 
 I'm doing a good deal of stuff lately:

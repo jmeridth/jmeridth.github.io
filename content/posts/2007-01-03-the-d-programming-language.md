@@ -2,6 +2,8 @@
 url: /posts/the-d-programming-language
 title: The D Programming Language
 date: 2007-01-03 00:40:00 -06:00
+tags:
+- programming
 layout: post
 ---
 

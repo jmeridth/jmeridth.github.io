@@ -3,9 +3,12 @@ url: /posts/i-didn-t-think-websites-still-required-a-certain-platform
 title: I didn't think websites still required a certain platform...
 date: 2007-09-03 03:43:54 -05:00
 layout: post
+tags:
+- linux
+- ubuntu
 ---
 
-<rant>
+\<rant\>
 
 Precursor:  I'm not as much anti-Microsoft as I used to be, but this re-ignited the flame.  Not against Microsoft, but websites that don't want to hit all demographics.
 
@@ -25,6 +28,6 @@ Ignore the "java Firefox plug-in" Google search in the browser.  I was too lazy
 
 ![KingDotComWindowsRequirement](jasonmeridth/files/2011/03Ididntthinkwebsitesstillrequiredacertai_1799/KingDotComWindowsRequirement_thumb.png)
 
-</rant>
+\</rant\>
 
 Back to finishing my monorail posts.  They have been delayed a bit because I'm switching hosting companies.  Goodbye [WebHost4Life](http://www.webhost4life.com) and hello [ServerBeach](http://www.serverbeach.com).

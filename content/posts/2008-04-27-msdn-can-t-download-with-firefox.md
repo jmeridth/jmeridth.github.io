@@ -3,13 +3,16 @@ url: /posts/msdn-can-t-download-with-firefox
 title: MSDN - can't download with firefox
 date: 2008-04-27 03:26:00 -05:00
 layout: post
+tags:
+- firefox
+- linux
 ---
 
 _**UPDATE**: I'm on Linux.  Getting this to work on Windows is simple enough, just like James mentions in the comments. Thanks._
 
 I'm writing this, because it's about the 5th time I've had to use my Windows box or VM to get iso files from MSDN.
 
-<rant>
+\<rant\>
 
 I understand, in a business manner, why Microsoft won't allow downloads from Firefox at MSDN.  I work for a company that was kind enough to give me a MSDN license.  I've used it a great deal to get software like Vistual Studio 2008 and SQL Server 2008 recently.  I also use it for the iso files I use in my VMs.  I recently had to download Vista again and from Firefox the specific items I want (the checkboxes in MSDN's new Silverlight UI) are grayed out.  COME ON!!!!!
 
@@ -19,7 +22,7 @@ I like where Microsoft development teams are going recently (Guthrie, Haack, Con
 
 If someone out there knows a way to do this with Firefox, I will update this post and eat some humble pie.
 
-</rant>
+\</rant\>
 
 ## Comments
 

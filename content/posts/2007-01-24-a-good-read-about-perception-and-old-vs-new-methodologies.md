@@ -2,6 +2,8 @@
 url: /posts/a-good-read-about-perception-and-old-vs-new-methodologies
 title: A good read about perception and old vs. new methodologies
 date: 2007-01-24 00:56:00 -06:00
+tags:
+- agile
 layout: post
 ---
 

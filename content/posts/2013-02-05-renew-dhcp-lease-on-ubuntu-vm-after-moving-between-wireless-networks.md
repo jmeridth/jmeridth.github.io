@@ -23,7 +23,7 @@ alias resetdhcp='sudo dhclient -r eth0 &amp;&amp; sudo dhclient eth0'
 
 then resourced it so I could use it in the bash session I was in
 
-```
+```bash
 source ~/.bashrc
 ```
 

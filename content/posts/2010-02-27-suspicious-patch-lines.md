@@ -35,7 +35,7 @@ git confit core.safecrlf true
 
 The [Github Help Pages](http://help.github.com/dealing-with-lineendings/) provide an excellent explanation about this. Also read the [direct documentation from git-core](http://www.kernel.org/pub/software/scm/git-core/docs/git-config.html). This makes Git convert CRLF at the end of lines in the text files to LF when reading from the filesystem, and convert in reverse when writing to the filesystem. Just be aware also that if you do set this and one of your stored binary files is accidentally marked as text, there is a chance for it to become corrupted.
 
-2) Edit the .git/hooks/pre-commit file and comment out the following lines:
+1) Edit the .git/hooks/pre-commit file and comment out the following lines:
 
 ```bash
 if (/s$/){
@@ -45,7 +45,7 @@ if (/s$/){
 
 The reason why this is a problem is because there is a space (s in posix regex) just before the end of the line (aka a trailing whitespace). Normally this file wouldn’t fire off unless you made it executable, but on Windows all of the git hooks run because there is no concept of whether they are executable or not, they all are by default. On Mac/*nix Git repositories, you need to “chmod +x” (change to executable) the git hook files before Git will run them.
 
-3) When commiting do the following:
+1) When commiting do the following:
 
 ```bash
 git commit --no-verify
@@ -53,13 +53,13 @@ git commit --no-verify
 
 and the pre-commit hook will be ignored.
 
-4) Rename/Move/Delete the .git/hooks/pre-commit file
+1) Rename/Move/Delete the .git/hooks/pre-commit file
 
 ```bash
 mv .git/hooks/pre-commit .git/hooks/pre-commit.stop_working
 ```
 
-5) Change the permissions on the .git/hooks/pre-commit file. In this case, I’m clearing the executable bit for all users (owner, group and rest of the world)
+1) Change the permissions on the .git/hooks/pre-commit file. In this case, I’m clearing the executable bit for all users (owner, group and rest of the world)
 
 ```bash
 chmod a-x .git/hooks/pre-commit

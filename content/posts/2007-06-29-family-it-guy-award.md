@@ -3,6 +3,8 @@ url: /posts/family-it-guy-award
 title: Family IT Guy Award
 date: 2007-06-29 13:33:00 -05:00
 layout: post
+tags:
+- personal
 ---
 
 B# (Ben Scheirman) wrote a post about how to receive this award. :)

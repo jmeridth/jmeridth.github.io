@@ -3,6 +3,9 @@ url: /posts/regopenkeyex-function-and-lol
 title: RegOpenKeyEx Function and LOL
 date: 2008-10-13 14:43:00 -05:00
 layout: post
+tags:
+- dotnet
+- csharp
 ---
 
 I am currently interacting with 64 bit registry entries from a 32-bit application so I'm having to resort to DllImports. Fun fun.

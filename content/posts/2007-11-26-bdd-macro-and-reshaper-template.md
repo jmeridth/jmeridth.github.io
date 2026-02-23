@@ -3,6 +3,11 @@ url: /posts/bdd-macro-and-reshaper-template
 title: BDD macro and Reshaper Template
 date: 2007-11-26 01:58:35 -06:00
 layout: post
+tags:
+- bdd
+- resharper
+- visual-studio
+- tdd
 ---
 
 My colleague, [Joe Ocampo](http://blog.agilejoe.com), created a ReSharper template:

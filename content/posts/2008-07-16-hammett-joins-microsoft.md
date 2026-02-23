@@ -3,6 +3,10 @@ url: /posts/hammett-joins-microsoft
 title: Hammett joins Microsoft
 date: 2008-07-16 02:50:53 -05:00
 layout: post
+tags:
+- castle
+- community
+- dotnet
 ---
 
 _Update: MEF == Managed Extensibility Framework_

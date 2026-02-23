@@ -3,6 +3,10 @@ url: /posts/installing-2-cruisecontrol-services-web-dashboards-on-1-server-pc
 title: Installing 2 CruiseControl services/web dashboards on 1 server/PC
 date: 2007-10-02 21:45:03 -05:00
 layout: post
+tags:
+- cruisecontrol
+- ci
+- dotnet
 ---
 
 Why? I am currently hosting CruiseControl for an open-source project and I don't want my personal projects to show up on their web dashboard.  I also want a complete separation.  That means theirs is running on its own port number and they have their own Virtual Directory (ccnet) on the Default website. The given CruiseControl.msi file does an excellent job of setting up the first CruiseControl service and virtual directory for you.  I won't go into this much, but you will learn a little bit about what it does because I'm installing my instance manually.

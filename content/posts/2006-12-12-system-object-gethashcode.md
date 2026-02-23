@@ -2,6 +2,9 @@
 url: /posts/system-object-gethashcode
 title: System.Object.GetHashCode()
 date: 2006-12-12 00:28:00 -06:00
+tags:
+- dotnet
+- csharp
 layout: post
 ---
 

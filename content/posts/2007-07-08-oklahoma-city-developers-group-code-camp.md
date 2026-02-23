@@ -3,6 +3,9 @@ url: /posts/oklahoma-city-developers-group-code-camp
 title: Oklahoma City Developers Group Code Camp
 date: 2007-07-08 21:48:11 -05:00
 layout: post
+tags:
+- community
+- dotnet
 ---
 
 Anyone in the Oklahoma City area on July 28th should check out the OCDG Code Camp.  The group has a lunch meeting and evening meeting every month.

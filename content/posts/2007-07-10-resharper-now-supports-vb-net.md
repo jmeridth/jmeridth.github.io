@@ -3,6 +3,10 @@ url: /posts/resharper-now-supports-vb-net
 title: ReSharper now supports VB.NET
 date: 2007-07-10 14:58:00 -05:00
 layout: post
+tags:
+- resharper
+- tdd
+- dotnet
 ---
 
 This may not be news to everyone, but [ReSharper now supports VB.NET](http://blogs.jetbrains.com/dotnet/2007/07/getting-started-with-resharper-30-and-vbnet-the-basics/).

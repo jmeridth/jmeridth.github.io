@@ -3,6 +3,8 @@ url: /posts/another-reason-to-love-facebook
 title: Another reason to love FaceBook
 date: 2007-09-19 22:35:08 -05:00
 layout: post
+tags:
+- personal
 ---
 
 Check out [this video](http://one.revver.com/watch/202104)

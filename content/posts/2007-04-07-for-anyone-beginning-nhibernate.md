@@ -3,6 +3,10 @@ url: /posts/for-anyone-beginning-nhibernate
 title: For anyone beginning NHibernate
 date: 2007-04-07 16:26:00 -05:00
 layout: post
+tags:
+- nhibernate
+- dotnet
+- books
 ---
 
 I finally have a side project I'm going to use NHibernate on and blog about my experiences.

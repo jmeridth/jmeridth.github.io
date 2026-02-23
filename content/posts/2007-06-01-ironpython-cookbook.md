@@ -3,6 +3,9 @@ url: /posts/ironpython-cookbook
 title: IronPython Cookbook
 date: 2007-06-01 09:11:00 -05:00
 layout: post
+tags:
+- dotnet
+- ruby
 ---
 
 Scott Guthrie has posted a notice of the [IronPython Cookbook](http://www.ironpython.info/index.php/Contents) wiki that is now online.  I have Python experience via scripting in Linux.  It's a very cool language.  It takes some time getting used to no brackets if you are a C-type language developer, but otherwise it is just as powerful as some of the other functional languages out there. (i.e., Ruby, etc.)

@@ -3,6 +3,8 @@ url: /posts/good-find-software-development-videos
 title: Good find - software development videos
 date: 2007-09-18 15:17:00 -05:00
 layout: post
+tags:
+- community
 ---
 
 The videos can be found [here](http://www.informit.com/podcasts/channel.aspx?c=dadf92ca-3bdc-484e-9cd8-cbfe0cfc0de6&rl=1).

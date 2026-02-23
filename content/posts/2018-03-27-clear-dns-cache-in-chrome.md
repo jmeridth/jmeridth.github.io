@@ -13,7 +13,9 @@ I'm blogging this because I keep forgetting how to do it.  Yeah, yeah, I can goo
 <!--more-->
 Go To:
 
-    chrome://net-internals/#dns
+```text
+chrome://net-internals/#dns
+```
 
 Click "Clear host cache" button
 

@@ -2,6 +2,8 @@
 url: /posts/code-complete-by-steve-mcconnell
 title: Code Complete by Steve McConnell
 date: 2007-01-10 00:48:00 -06:00
+tags:
+- books
 layout: post
 ---
 

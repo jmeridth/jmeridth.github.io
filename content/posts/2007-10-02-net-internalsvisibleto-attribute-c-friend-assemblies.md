@@ -3,6 +3,9 @@ url: /posts/net-internalsvisibleto-attribute-c-friend-assemblies
 title: ".NET InternalsVisibleTo attribute == C++ Friend Assemblies"
 date: 2007-10-02 19:57:02 -05:00
 layout: post
+tags:
+- dotnet
+- csharp
 ---
 
 To all developers who haven't heard of this, there is an ability to have a project, say a test project, to have access to another project's Internal classes. ([MSDN definition](http://msdn2.microsoft.com/en-us/library/0tke9fxk\(VS.80\).aspx)).
@@ -25,7 +28,9 @@ This gives us the public key blob that we need to embed into the InternalsVisibl
 
 This is what you would need to add to your AssemblyInfo.cs file of your main assembly:
 
-    [assembly:InternalsVisibleToAttribute("<TestAssemblyName>, PublicKey=00240000048000...RestOfPublicKeyFromAbove")]
+```csharp
+[assembly:InternalsVisibleToAttribute("<TestAssemblyName>, PublicKey=00240000048000...RestOfPublicKeyFromAbove")]
+```
 
 David Kean has even created a tool to create your attribute for you with the public key and everything.  Check it out [here](http://davidkean.net/downloads/publickey.zip).  Blog post [here](http://davidkean.net/archive/2005/10/06/1183.aspx).
 

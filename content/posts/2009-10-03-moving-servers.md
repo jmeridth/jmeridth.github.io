@@ -3,6 +3,8 @@ url: /posts/moving-servers
 title: Moving servers
 date: 2009-10-03 03:32:00 -05:00
 layout: post
+tags:
+- personal
 ---
 
 To our readers,

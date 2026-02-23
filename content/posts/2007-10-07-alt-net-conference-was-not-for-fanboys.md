@@ -3,6 +3,9 @@ url: /posts/alt-net-conference-was-not-for-fanboys
 title: Alt.NET conference was not for fanboys
 date: 2007-10-07 23:26:41 -05:00
 layout: post
+tags:
+- alt-net
+- community
 ---
 
 Please read Colin's [post](http://colinramsay.co.uk/2007/10/07/abandon-altnet/) and then read my [comment](http://colinramsay.co.uk/2007/10/07/abandon-altnet/#comment-3603) response to a blog entry I just read from Colin Ramsay ([post here](http://colinramsay.co.uk/2007/10/07/abandon-altnet/)).

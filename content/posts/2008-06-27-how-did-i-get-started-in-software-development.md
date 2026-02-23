@@ -3,6 +3,10 @@ url: /posts/how-did-i-get-started-in-software-development
 title: How did I get started in software development?
 date: 2008-06-27 22:41:00 -05:00
 layout: post
+tags:
+- personal
+- agile
+- community
 ---
 
 Thanks for tagging me [Joey.](http://joeybeninghove.lostechies.com)
@@ -37,8 +41,7 @@ The current team I'm on successfully wrote an internal web app for our mortgage 
 * [Ray Houston](http://rhouston.lostechies.com)
 * [Dru Sellers](http://blog.acuriousmind.com/)
 
-* [David Laribee
-](http://codebetter.com/blogs/david_laribee/default.aspx)
+* [David Laribee](http://codebetter.com/blogs/david_laribee/default.aspx)
 * [Nelson Montalvo](http://codemonkey.nmonta.com/)
 
 ## Comments

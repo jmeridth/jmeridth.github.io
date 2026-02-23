@@ -14,11 +14,12 @@ TL;DR: Managing search engines in Chromium-based browsers can significantly enha
 
 I am a keyboard user more than a mouse user. I don't tend to use bookmarks in my browser. I prefer to use "shortcuts" in my browser's address bar to quickly access different websites. The aliases are entries into my Chromium-based browser's settings, search engines. This allows me to type a keyword followed by a search term to quickly navigate to the desired site or perform a search.
 
-Example: typing `@blog` goes to this repository, https://github.com/jmeridth/jmeridth.github.io. Another option typing `@tags`, tabbing and then typing `go` will result in the url https://jmeridth.github.io/tags/go.
+Example: typing `@blog` goes to this repository, <https://github.com/jmeridth/jmeridth.github.io>. Another option typing `@tags`, tabbing and then typing `go` will result in the url <https://jmeridth.github.io/tags/go>.
 
 Both of these can be created by going to the search engines settings in your browser. In Chromium-based browsers, you can access this by navigating to `chrome://settings/searchEngines`. Here, you can add new search engines or edit existing ones.
 
 To add a new search engine, click on "Add" and fill in the following fields:
+
 - **Search engine**: A name for the search engine (e.g., "Blog").
 - **Keyword**: A keyword that you will type in the address bar to trigger this search engine (e.g., "@blog").
 - **URL with %s in place of query**: The URL you want to navigate to, with `%s` as a placeholder for the search term (e.g., `

@@ -2,6 +2,9 @@
 url: /posts/free-agile-project-management-tools
 title: Free Agile Project Management Tools
 date: 2007-01-24 00:57:00 -06:00
+tags:
+- agile
+- tools
 layout: post
 ---
 

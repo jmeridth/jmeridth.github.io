@@ -9,7 +9,7 @@ layout: post
 
 I setup [GitWeb][1] at work recently. It is very fast and extremely useful. I noticed that the repositories the web view was looking at didn’t show acategory or other branches. Only the master branch. I had used
 
-```
+```bash
 git clone --bare git@host:repository.git
 ```
 

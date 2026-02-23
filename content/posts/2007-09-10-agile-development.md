@@ -3,6 +3,9 @@ url: /posts/agile-development
 title: Agile Development
 date: 2007-09-10 01:27:00 -05:00
 layout: post
+tags:
+- agile
+- tdd
 ---
 
 Currently I'm working on a team of 8 developers and have been practicing Agile for just under 2 years now.  I read about it and tried a couple time before this 2 year span, but didn't realize how wrong I was approaching it.  [Scott Bellware](http://codebetter.com/blogs/scott.bellware/default.aspx) has been posting about how [Agile development does not have the answers](http://codebetter.com/blogs/scott.bellware/archive/2007/09/09/167738.aspx) and this line:
@@ -13,7 +16,7 @@ and
 
 > _"I think that the difference between a good developer and an excellent developer is the excellent developer's willingness to not know, an openness to explore, and faith in skills that guide solutions to good ends even when the end is not known at the outset."_
 
-The team I'm on practices an [Extreme Programming](http://en.wikipedia.org/wiki/Extreme_Programming) / [Scrum](http://en.wikipedia.org/wiki/Scrum_%28development%29) process and my <strike>manager</strike> Agile coach, [AgileJoe](http://www.lostechies.com/blogs/joe_ocampo), makes a good point when he states that an XP value he believes should be in the core values is Humility.  [The current list](http://en.wikipedia.org/wiki/Extreme_Programming#XP_values) is awesome, but humility allows for the items that Scott mentions in his post.
+The team I'm on practices an [Extreme Programming](http://en.wikipedia.org/wiki/Extreme_Programming) / [Scrum](http://en.wikipedia.org/wiki/Scrum_%28development%29) process and my ~~manager~~ Agile coach, [AgileJoe](http://www.lostechies.com/blogs/joe_ocampo), makes a good point when he states that an XP value he believes should be in the core values is Humility.  [The current list](http://en.wikipedia.org/wiki/Extreme_Programming#XP_values) is awesome, but humility allows for the items that Scott mentions in his post.
 
 When I tried to get a different department in the same company to change it's process to Agile, I met great resistance (as expected).  Change = fear.  The greatest fear was from the programmers on the team that specialized in one section of the software and were afraid of either learning a new portion or having other developers critique their code.  One of the core values of Extreme Programming is courage and it was hard getting that across.  Scott speaks the truth when he states:
 

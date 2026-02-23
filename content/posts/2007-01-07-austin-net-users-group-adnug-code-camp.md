@@ -2,6 +2,9 @@
 url: /posts/austin-net-users-group-adnug-code-camp
 title: Austin .NET Users Group (ADNUG) Code Camp
 date: 2007-01-07 00:43:00 -06:00
+tags:
+- community
+- dotnet
 layout: post
 ---
 

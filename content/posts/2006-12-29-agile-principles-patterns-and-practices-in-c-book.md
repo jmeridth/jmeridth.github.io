@@ -2,6 +2,11 @@
 url: /posts/agile-principles-patterns-and-practices-in-c-book
 title: Agile Principles, Patterns and Practices in C# book
 date: 2006-12-29 00:37:00 -06:00
+tags:
+- agile
+- books
+- design-patterns
+- csharp
 layout: post
 ---
 
