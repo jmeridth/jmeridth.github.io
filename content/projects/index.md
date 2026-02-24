@@ -6,13 +6,14 @@ permalink: /projects/
 
 ### Projects that I currently maintain
 
-- [argo-helm](https://github.com/argoproj/argo-helm): ArgoProj Helm Charts
-- [privateer](https://github.com/privateerproj/privateer): Plugin-based framework to validate deployed resources
-- [privateer-sdk](https://github.com/privateerproj/privateer-sdk): Privateer plugin SDK
-- [security-insights](https://github.com/ossf/security-insights): Machine-readable specification for the attestation of security-relevant data
-- [pvtr-github-repo-scanner](https://github.com/ossf/pvtr-github-repo-scanner): Privateer plugin to scan GitHub repositories for security hygiene
-- [osps-baseline-action](https://github.com/revanite-io/osps-baseline-action): GitHub Action for running OSPS security assessments
-- [security-insights-action](https://github.com/revanite-io/security-insights-action): GitHub Action for validating a repository's security-insights.yml file against the official OSSF Security Insights CUE schema
+- [argoproj/argo-helm](https://github.com/argoproj/argo-helm): ArgoProj Helm Charts
+- [privateerproj/privateer](https://github.com/privateerproj/privateer): Plugin-based framework to validate deployed resources
+- [privateerproj/privateer-sdk](https://github.com/privateerproj/privateer-sdk): Privateer plugin SDK
+- [offs/security-insights](https://github.com/ossf/security-insights): Machine-readable specification for the attestation of security-relevant data
+- [offs/pvtr-github-repo-scanner](https://github.com/ossf/pvtr-github-repo-scanner): Privateer plugin to scan GitHub repositories for security hygiene
+- [revanite-io/osps-baseline-action](https://github.com/revanite-io/osps-baseline-action): GitHub Action for running OSPS security assessments
+- [revanite-io/security-insights-action](https://github.com/revanite-io/security-insights-action): GitHub Action for validating a repository's security-insights.yml file against the official OSSF Security Insights CUE schema
+- [github-community-projects/contributors](https://github.com/github-community-projects/contributors): GitHub Action that given an organization or repository, produces information about the contributors over the specified time period.
 
 ### Projects that I formerly maintained
 
