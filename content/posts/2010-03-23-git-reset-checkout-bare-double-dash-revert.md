@@ -123,7 +123,7 @@ My visual editor of choice will open with the prior commit message allowing me t
 
 **[derick.bailey](#462 "2010-03-24 02:38:35"):** so how do i revert a merge? i just merged BranchA into Master and realized that I didn't want to do that... when i run "git revert HEAD^" on master, I get this message: "fatal: commit (hash#) is a merge but no -m option was given." then when i try the -m option i get "error: switch 'm' expects a numerical value" ... for "parent number" ... umm.... what?
 
-**[Jason Meridth](#463 "2010-03-24 03:44:42"):** @derick <http://www.kernel.org/pub/software/scm/git/docs/howto/revert-a-faulty-merge.txt> summarizes this situation. Wicked stuff. I'll be researching this problem in more depth
+**[Jason Meridth](#463 "2010-03-24 03:44:42"):** @derick <https://www.kernel.org/pub/software/scm/git/docs/howto/revert-a-faulty-merge.html> summarizes this situation. Wicked stuff. I'll be researching this problem in more depth
 
 **[Jason Meridth](#464 "2010-03-24 04:11:55"):** @derick @qrush responded to your tweet and his solution is easier: Just create a new branch from the commit on master, prior to the merge, delete master and rename the new branch to master. this will work if you haven't deleted the topic you merged into master.
 
