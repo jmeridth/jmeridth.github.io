@@ -1,0 +1,19 @@
+{
+  "name": "Learn, Converse, Share",
+  "short_name": "JM",
+  "icons": [
+    {
+      "src": "/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1a1b26",
+  "background_color": "#1a1b26",
+  "display": "standalone"
+}
