@@ -108,7 +108,7 @@ Because reflog is a log, it will show you where the HEAD pointer was 2 months ag
 git show HEAD@{2.months.ago}
 ```
 
-[pg 147](http://progit.org/book/ch6-1.html) ^ is the first parent of the current commit ^2 is the second parent of the current commit (only works if the current commit is a merge commit, where first parent is the branch you on when you merged, second was the other) ~ is the first parent ~2 (or any number) is the grandparent(s) of the current commit only on the current branch or branch you were on when you merged [pg 148](http://progit.org/book/ch6-1.html) Shows you any commits in your current branch that aren’t in the master branch on your origin remote
+[pg 147](http://progit.org/book/ch6-1.html) ^ is the first parent of the current commit^2 is the second parent of the current commit (only works if the current commit is a merge commit, where first parent is the branch you on when you merged, second was the other)~ is the first parent~2 (or any number) is the grandparent(s) of the current commit only on the current branch or branch you were on when you merged [pg 148](http://progit.org/book/ch6-1.html) Shows you any commits in your current branch that aren’t in the master branch on your origin remote
 
 ```bash
 git log origin/master..HEAD
@@ -138,7 +138,7 @@ git stash branch testchanges
 git rebase -i HEAD~3
 ```
 
-Don’t include any commit you’ve already pushed to a central server—doing so will confuse other developers by providing an alternate version of the same change [pg 158](http://progit.org/book/ch6-4.html) It’s important to note that these commits (interactive rebase) are listed in the opposite order (oldest first, newest last) than you normally see then using the log command (newest first). [pg 160](http://progit.org/book/ch6-4.html) …make sure no commit shows up in that list (git log -4 —pretty=format:“%h %s”) that you’ve already pushed to a shared repository [pg 164](http://progit.org/book/ch6-5.html) was wondering how to automate the good/bad declaration [pg 168](http://progit.org/book/ch6-6.html) git submodule update You have to do this every time you pull down a submodule change in the main projects. It’s strange, but it works. [pg 172 (subtree merging)](http://progit.org/book/ch6-7.html) You want to pull the Rack project into your master project as a subdirectory
+Don’t include any commit you’ve already pushed to a central server—doing so will confuse other developers by providing an alternate version of the same change [pg 158](http://progit.org/book/ch6-4.html) It’s important to note that these commits (interactive rebase) are listed in the opposite order (oldest first, newest last) than you normally see then using the log command (newest first). [pg 160](http://progit.org/book/ch6-4.html) …make sure no commit shows up in that list (git log -4 —pretty=format:“%h %s”) that you’ve already pushed to a shared repository [pg 164](http://progit.org/book/ch6-5.html) was wondering how to automate the good/bad declaration [pg 168](http://progit.org/book/ch6-6.html) git submodule updateYou have to do this every time you pull down a submodule change in the main projects. It’s strange, but it works. [pg 172 (subtree merging)](http://progit.org/book/ch6-7.html) You want to pull the Rack project into your master project as a subdirectory
 
 ```bash
 git read-tree --prefix=rack/ -u rack_branch
@@ -150,7 +150,7 @@ git read-tree --prefix=rack/ -u rack_branch
 git config --global core.autocrlf input
 ```
 
-This setup should leave you with CRLF endings in Windows checkouts but LF endings on Mac and Linux systems and in the repository [pg 184](http://progit.org/book/ch7-2.html) To tell Git to treat a specific file as binary data, add the following line to your .gitattributes file: *.extension -crlf -diff [pg 185](http://progit.org/book/ch7-2.html) …one of the most annoying problems known to humanity: version-controlling Word documents (LOL) [pg 192](http://progit.org/book/ch7-3.html) post-receive hook…This scripts can’t stop the push process, but the client doesn’t disconnect until it has completed; so, be careful when you try to do anything that may take a long time [pg 194](http://progit.org/book/ch7-4.html) Is practically the git log command…it prints out only the SHA-1 values and no other information
+This setup should leave you with CRLF endings in Windows checkouts but LF endings on Mac and Linux systems and in the repository [pg 184](http://progit.org/book/ch7-2.html) To tell Git to treat a specific file as binary data, add the following line to your .gitattributes file:*.extension -crlf -diff [pg 185](http://progit.org/book/ch7-2.html) …one of the most annoying problems known to humanity: version-controlling Word documents (LOL) [pg 192](http://progit.org/book/ch7-3.html) post-receive hook…This scripts can’t stop the push process, but the client doesn’t disconnect until it has completed; so, be careful when you try to do anything that may take a long time [pg 194](http://progit.org/book/ch7-4.html) Is practically the git log command…it prints out only the SHA-1 values and no other information
 
 ```bash
 git rev-list [SHA-1]..[SHA-1]
