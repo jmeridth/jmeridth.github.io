@@ -1,0 +1,47 @@
+---
+name: Verify Links and Images
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  htmltest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # tag v6.0.2
+        with:
+          submodules: true
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Get changed posts
+        id: changed-posts
+        uses: tj-actions/changed-files@7dee1b0c1557f278e5c7dc244927139d78c0e22a # tag v47.0.4
+        with:
+          files: content/posts/**
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@75d2e84710de30f6ff7268e08f310b60ef14033f # tag v3.0.0
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Verify links and images
+        if: steps.changed-posts.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: wjdp/htmltest-action@31be84a95c860a331e0cf9a99f71e3eb39d2f86b
+        with:
+          config: .htmltest.yml
+
+      - name: Upload public directory
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # tag v6.0.0
+        with:
+          name: public
+          path: public/
