@@ -1456,6 +1456,9 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;li&gt;&lt;a href="https://github.com/revanite-io/osps-baseline-action" class="external-link" target="_blank" rel="noopener"&gt;revanite-io/osps-baseline-action&lt;/a&gt;: GitHub Action for running OSPS security assessments&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/revanite-io/security-insights-action" class="external-link" target="_blank" rel="noopener"&gt;revanite-io/security-insights-action&lt;/a&gt;: GitHub Action for validating a repository&amp;rsquo;s security-insights.yml file against the official OSSF Security Insights CUE schema&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github-community-projects/contributors" class="external-link" target="_blank" rel="noopener"&gt;github-community-projects/contributors&lt;/a&gt;: GitHub Action that given an organization or repository, produces information about the contributors over the specified time period.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/github-community-projects/cleanowners" class="external-link" target="_blank" rel="noopener"&gt;github-community-projects/cleanowners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/github-community-projects/contributors" class="external-link" target="_blank" rel="noopener"&gt;github-community-projects/contributors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/github-community-projects/measure-innersource" class="external-link" target="_blank" rel="noopener"&gt;github-community-projects/measure-innersource&lt;/a&gt;: A GitHub Action for measuring InnerSource collaboration in a repository&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="projects-that-i-formerly-maintained"&gt;
  Projects that I formerly maintained
@@ -1469,8 +1472,6 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;li&gt;&lt;a href="https://github.com/github/stale-repos" class="external-link" target="_blank" rel="noopener"&gt;Stale-Repos GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/issue-metrics" class="external-link" target="_blank" rel="noopener"&gt;Issue-Metrics GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/evergreen" class="external-link" target="_blank" rel="noopener"&gt;Evergreen GitHub Action&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/github/cleanowners" class="external-link" target="_blank" rel="noopener"&gt;Cleanowners GitHub Action&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/github/contributors" class="external-link" target="_blank" rel="noopener"&gt;Contributors GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/automatic-contrib-prs" class="external-link" target="_blank" rel="noopener"&gt;Automatic-Contrib-PRs GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="fun-websites-all-safe-for-work"&gt;
