@@ -14,6 +14,9 @@ permalink: /projects/
 - [revanite-io/osps-baseline-action](https://github.com/revanite-io/osps-baseline-action): GitHub Action for running OSPS security assessments
 - [revanite-io/security-insights-action](https://github.com/revanite-io/security-insights-action): GitHub Action for validating a repository's security-insights.yml file against the official OSSF Security Insights CUE schema
 - [github-community-projects/contributors](https://github.com/github-community-projects/contributors): GitHub Action that given an organization or repository, produces information about the contributors over the specified time period.
+- [github-community-projects/cleanowners](https://github.com/github-community-projects/cleanowners)
+- [github-community-projects/contributors](https://github.com/github-community-projects/contributors)
+- [github-community-projects/measure-innersource](https://github.com/github-community-projects/measure-innersource): A GitHub Action for measuring InnerSource collaboration in a repository
 
 ### Projects that I formerly maintained
 
@@ -21,8 +24,6 @@ permalink: /projects/
 - [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
 - [Issue-Metrics GitHub Action](https://github.com/github/issue-metrics)
 - [Evergreen GitHub Action](https://github.com/github/evergreen)
-- [Cleanowners GitHub Action](https://github.com/github/cleanowners)
-- [Contributors GitHub Action](https://github.com/github/contributors)
 - [Automatic-Contrib-PRs GitHub Action](https://github.com/github/automatic-contrib-prs)
 
 ### Fun Websites (all safe for work)
