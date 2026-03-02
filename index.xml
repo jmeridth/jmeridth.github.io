@@ -1459,6 +1459,7 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;li&gt;&lt;a href="https://github.com/github-community-projects/cleanowners" class="external-link" target="_blank" rel="noopener"&gt;github-community-projects/cleanowners&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github-community-projects/contributors" class="external-link" target="_blank" rel="noopener"&gt;github-community-projects/contributors&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github-community-projects/measure-innersource" class="external-link" target="_blank" rel="noopener"&gt;github-community-projects/measure-innersource&lt;/a&gt;: A GitHub Action for measuring InnerSource collaboration in a repository&lt;/li&gt;
+&lt;li&gt;[github-community-projects/stale-repos](&lt;a href="https://github.com/github-community-projects/stale-repos]" class="external-link" target="_blank" rel="noopener"&gt;https://github.com/github-community-projects/stale-repos]&lt;/a&gt;: Find stale repositories in a GitHub organization.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="projects-that-i-formerly-maintained"&gt;
  Projects that I formerly maintained
@@ -1469,7 +1470,6 @@ The code examples and a listing of who spoke last year are &lt;a href="http://ww
 &lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/ospo-reusable-workflows" class="external-link" target="_blank" rel="noopener"&gt;OSPO Reusable Workflows&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/github/stale-repos" class="external-link" target="_blank" rel="noopener"&gt;Stale-Repos GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/issue-metrics" class="external-link" target="_blank" rel="noopener"&gt;Issue-Metrics GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/evergreen" class="external-link" target="_blank" rel="noopener"&gt;Evergreen GitHub Action&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/github/automatic-contrib-prs" class="external-link" target="_blank" rel="noopener"&gt;Automatic-Contrib-PRs GitHub Action&lt;/a&gt;&lt;/li&gt;
