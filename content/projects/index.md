@@ -17,11 +17,11 @@ permalink: /projects/
 - [github-community-projects/cleanowners](https://github.com/github-community-projects/cleanowners)
 - [github-community-projects/contributors](https://github.com/github-community-projects/contributors)
 - [github-community-projects/measure-innersource](https://github.com/github-community-projects/measure-innersource): A GitHub Action for measuring InnerSource collaboration in a repository
+- [github-community-projects/stale-repos](https://github.com/github-community-projects/stale-repos]: Find stale repositories in a GitHub organization.
 
 ### Projects that I formerly maintained
 
 - [OSPO Reusable Workflows](https://github.com/github/ospo-reusable-workflows)
-- [Stale-Repos GitHub Action](https://github.com/github/stale-repos)
 - [Issue-Metrics GitHub Action](https://github.com/github/issue-metrics)
 - [Evergreen GitHub Action](https://github.com/github/evergreen)
 - [Automatic-Contrib-PRs GitHub Action](https://github.com/github/automatic-contrib-prs)
