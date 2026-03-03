@@ -15,6 +15,8 @@ When someone files an issue against one of my open source projects, I often want
 
 To avoid this misunderstanding, I will start replying with `I'd be happy to review/merge a PR for this.` instead. This phrasing is more welcoming and shows that I am open to contributions while also expressing my willingness to review and merge pull requests. I hope this change in wording will encourage more people to contribute to my open source projects and foster a more inclusive and collaborative community.
 
+I've added the new phrase to my [saved replies](https://github.com/settings/replies) on my GitHub account so I can choose it easily and reply to issues on the repositories I maintain.
+
 I want to thank all the maintainers of open source projects who take the time to review and merge pull requests. Your work is greatly appreciated and helps make the open source ecosystem thrive.
 
 Cheers.
