@@ -178,6 +178,7 @@ IgnoreURLs:
   - "smile\\.amazon\\.com"
   - "structuremap\\.sourceforge\\.net"
   - "ubuntu-tutorials\\.com"
+  - "ubuntuforums\\.org"
   - "upload\\.wikimedia\\.org"
   - "video\\.google\\.com"
   - "visualpatterns\\.com"
