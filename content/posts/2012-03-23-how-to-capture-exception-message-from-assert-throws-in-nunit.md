@@ -3,7 +3,7 @@ url: /posts/how-to-capture-exception-message-from-assert-throws-in-nunit
 title: How to Capture the Exception Message From Assert.Throws in NUnit
 date: 2012-03-23 00:00:00 -05:00
 tags:
-- ".net"
+- dotnet
 - testing
 layout: post
 ---

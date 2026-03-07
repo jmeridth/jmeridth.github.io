@@ -3,7 +3,7 @@ url: /posts/opportunity
 title: Opportunity
 date: 2011-06-04 06:06:10 -05:00
 tags:
-- ".net"
+- dotnet
 - agile
 layout: post
 ---

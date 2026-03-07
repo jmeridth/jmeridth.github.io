@@ -3,7 +3,7 @@ url: /posts/nuget-dependency-versioning-and-log4net-1.2.11
 title: NuGet Dependency Versioning and Log4net 1.2.11
 date: 2012-04-12 00:00:00 -05:00
 tags:
-- ".net"
+- dotnet
 layout: post
 ---
 

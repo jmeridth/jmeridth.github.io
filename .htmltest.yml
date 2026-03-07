@@ -181,6 +181,7 @@ IgnoreURLs:
   - "ubuntuforums\\.org"
   - "upload\\.wikimedia\\.org"
   - "video\\.google\\.com"
+  - "vim\\.wikia\\.com"
   - "visualpatterns\\.com"
   - "weblogs\\.java\\.net"
   - "wiki\\.ubuntu\\.com"
