@@ -179,6 +179,7 @@ IgnoreURLs:
   - "structuremap\\.sourceforge\\.net"
   - "ubuntu-tutorials\\.com"
   - "ubuntuforums\\.org"
+  - "ubuntugnome\\.org"
   - "upload\\.wikimedia\\.org"
   - "video\\.google\\.com"
   - "vim\\.wikia\\.com"

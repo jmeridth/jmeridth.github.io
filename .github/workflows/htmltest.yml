@@ -3,9 +3,13 @@ name: Verify Links and Images
 
 on:
   pull_request:
+    paths:
+      - content/posts/**
   push:
     branches:
       - main
+    paths:
+      - content/posts/**
   workflow_dispatch:
   workflow_call:
 
