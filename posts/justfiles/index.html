@@ -1,0 +1,79 @@
+<!doctype html><html lang=en><head><title>Justfiles · Learn, Converse, Share</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jason Meridth"><meta name=description content="TL;DR: I&rsquo;m replacing all of my Makefiles with Justfiles. All of the boilerplate I&rsquo;ve had in my Makefiles is just handled. I love it.
+
+  What is Just?
+  
+    
+    Link to heading
+  
+
+Just is a command runner, not a build system. It uses a file called justfile (or Justfile) to define recipes (commands) that you can run with just <recipe-name>. Think of it as a modern, sane replacement for make when all you really want is a way to run project commands."><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=fediverse:creator content><meta name=twitter:card content="summary"><meta name=twitter:title content="Justfiles"><meta name=twitter:description content="TL;DR: I’m replacing all of my Makefiles with Justfiles. All of the boilerplate I’ve had in my Makefiles is just handled. I love it.
+What is Just? Link to heading Just is a command runner, not a build system. It uses a file called justfile (or Justfile) to define recipes (commands) that you can run with just <recipe-name>. Think of it as a modern, sane replacement for make when all you really want is a way to run project commands."><meta property="og:url" content="http://jmeridth.com/posts/justfiles/"><meta property="og:site_name" content="Learn, Converse, Share"><meta property="og:title" content="Justfiles"><meta property="og:description" content="TL;DR: I’m replacing all of my Makefiles with Justfiles. All of the boilerplate I’ve had in my Makefiles is just handled. I love it.
+What is Just? Link to heading Just is a command runner, not a build system. It uses a file called justfile (or Justfile) to define recipes (commands) that you can run with just <recipe-name>. Think of it as a modern, sane replacement for make when all you really want is a way to run project commands."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-03-08T12:00:00-06:00"><meta property="article:modified_time" content="2026-03-08T12:00:00-06:00"><meta property="article:tag" content="Tools"><meta property="article:tag" content="Developer-Experience"><link rel=canonical href=http://jmeridth.com/posts/justfiles/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.26a83dcefaf34339737bf29f77b17753bab5e60782b1ca9ba200abbb73b48cb0.css integrity="sha256-Jqg9zvrzQzlze/Kfd7F3U7q15geCscqbogCru3O0jLA=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/css_dark_mode_gist_embed_code.min.5f4f026828cc544c1497785bca628b4ddc8a6c1f154cc2b83c87a13ceaff419a.css integrity="sha256-X08CaCjMVEwUl3hbymKLTdyKbB8VTMK4PIehPOr/QZo=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/favicon.ico sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://jmeridth.com/>Learn, Converse, Share
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/tags/>Tags</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li><li class=navigation-item><a class=navigation-link href=/talks/>Talks</a></li><li class=navigation-item><a class=navigation-link href=/contact/>Contact Me</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://jmeridth.com/posts/justfiles/>Justfiles</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2026-03-08T12:00:00-06:00>March 8, 2026
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+2-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/tools/>Tools</a>
+</span><span class=separator>•</span>
+<span class=tag><a href=/tags/developer-experience/>Developer-Experience</a></span></div></div></header><div class=post-content><p>TL;DR: I&rsquo;m replacing all of my Makefiles with <a href=https://github.com/casey/just class=external-link target=_blank rel=noopener>Justfiles</a>. All of the boilerplate I&rsquo;ve had in my Makefiles is just handled. I love it.</p><h2 id=what-is-just>What is Just?
+<a class=heading-link href=#what-is-just><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p><a href=https://github.com/casey/just class=external-link target=_blank rel=noopener>Just</a> is a command runner, not a build system. It uses a file called <code>justfile</code> (or <code>Justfile</code>) to define recipes (commands) that you can run with <code>just &lt;recipe-name></code>. Think of it as a modern, sane replacement for <code>make</code> when all you really want is a way to run project commands.</p><h2 id=why-replace-make>Why Replace Make?
+<a class=heading-link href=#why-replace-make><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>If you&rsquo;ve ever used a Makefile purely as a command runner, you know the pain:</p><ul><li><code>.PHONY</code> targets everywhere because you&rsquo;re not actually building files</li><li>Tab-only indentation that silently breaks things if you use spaces</li><li>Arcane syntax for variables and string manipulation</li><li>No built-in way to list available targets</li><li>Recipes run each line in a separate shell by default</li></ul><p><code>Just</code> eliminates all of this. Here&rsquo;s a comparison:</p><p><strong>Makefile:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-makefile data-lang=makefile><span class=line><span class=cl><span class=nf>.PHONY</span><span class=o>:</span> <span class=n>build</span> <span class=n>serve</span> <span class=n>clean</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nf>build</span><span class=o>:</span>
+</span></span><span class=line><span class=cl> hugo --minify
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nf>serve</span><span class=o>:</span>
+</span></span><span class=line><span class=cl> hugo server -D
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nf>clean</span><span class=o>:</span>
+</span></span><span class=line><span class=cl> rm -rf public/
+</span></span></code></pre></div><p><strong>Justfile:</strong></p><pre tabindex=0><code class=language-just data-lang=just>build:
+    hugo --minify
+
+serve:
+    hugo server -D
+
+clean:
+    rm -rf public/
+</code></pre><p>No <code>.PHONY</code>. No gotchas. Just commands.</p><h2 id=features-i-like>Features I Like
+<a class=heading-link href=#features-i-like><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><ul><li><strong><code>just --list</code></strong> shows all available recipes with descriptions</li><li><strong>Comments as documentation</strong> - add a comment above a recipe and it shows in <code>--list</code></li><li><strong>Variables and interpolation</strong> work intuitively</li><li><strong>Arguments</strong> to recipes are straightforward</li><li><strong>OS detection</strong> built in for cross-platform recipes</li><li><strong>Recipes run in the same shell</strong> by default (no more <code>&&</code> chaining between lines)</li><li><strong>Spaces or tabs</strong> for indentation - your choice</li></ul><h2 id=example>Example
+<a class=heading-link href=#example><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><pre tabindex=0><code class=language-just data-lang=just># Run the development server
+serve:
+    hugo server -D
+
+# Build for production
+build:
+    hugo --minify
+
+# Run linting
+lint:
+    markdownlint content/posts/*.md
+
+# Create a new post
+new name:
+    hugo new posts/$(date +%Y-%m-%d)-{{name}}.md
+</code></pre><p>Running <code>just --list</code> outputs:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Available recipes:
+</span></span><span class=line><span class=cl>    build <span class=c1># Build for production</span>
+</span></span><span class=line><span class=cl>    lint  <span class=c1># Run linting</span>
+</span></span><span class=line><span class=cl>    new   <span class=c1># Create a new post</span>
+</span></span><span class=line><span class=cl>    serve <span class=c1># Run the development server</span>
+</span></span></code></pre></div><h2 id=installation>Installation
+<a class=heading-link href=#installation><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h2><p>Available via most package managers:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># macOS</span>
+</span></span><span class=line><span class=cl>brew install just
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># cargo</span>
+</span></span><span class=line><span class=cl>cargo install just
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># many more at https://github.com/casey/just#installation</span>
+</span></span></code></pre></div><p>I hope this helps someone. Cheers.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2007 -
+2026
+Jason Meridth
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>
