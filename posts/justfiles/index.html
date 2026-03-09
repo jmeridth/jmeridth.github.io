@@ -30,34 +30,34 @@ What is Just? Link to heading Just is a command runner, not a build system. It u
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nf>clean</span><span class=o>:</span>
 </span></span><span class=line><span class=cl> rm -rf public/
-</span></span></code></pre></div><p><strong>Justfile:</strong></p><pre tabindex=0><code class=language-just data-lang=just>build:
-    hugo --minify
-
-serve:
-    hugo server -D
-
-clean:
-    rm -rf public/
-</code></pre><p>No <code>.PHONY</code>. No gotchas. Just commands.</p><h2 id=features-i-like>Features I Like
+</span></span></code></pre></div><p><strong>Justfile:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-makefile data-lang=makefile><span class=line><span class=cl><span class=nf>build</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    hugo --minify
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nf>serve</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    hugo server -D
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nf>clean</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    rm -rf public/
+</span></span></code></pre></div><p>No <code>.PHONY</code>. No gotchas. Just commands.</p><h2 id=features-i-like>Features I Like
 <a class=heading-link href=#features-i-like><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
 <span class=sr-only>Link to heading</span></a></h2><ul><li><strong><code>just --list</code></strong> shows all available recipes with descriptions</li><li><strong>Comments as documentation</strong> - add a comment above a recipe and it shows in <code>--list</code></li><li><strong>Variables and interpolation</strong> work intuitively</li><li><strong>Arguments</strong> to recipes are straightforward</li><li><strong>OS detection</strong> built in for cross-platform recipes</li><li><strong>Recipes run in the same shell</strong> by default (no more <code>&&</code> chaining between lines)</li><li><strong>Spaces or tabs</strong> for indentation - your choice</li></ul><h2 id=example>Example
 <a class=heading-link href=#example><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h2><pre tabindex=0><code class=language-just data-lang=just># Run the development server
-serve:
-    hugo server -D
-
-# Build for production
-build:
-    hugo --minify
-
-# Run linting
-lint:
-    markdownlint content/posts/*.md
-
-# Create a new post
-new name:
-    hugo new posts/$(date +%Y-%m-%d)-{{name}}.md
-</code></pre><p>Running <code>just --list</code> outputs:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Available recipes:
+<span class=sr-only>Link to heading</span></a></h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-makefile data-lang=makefile><span class=line><span class=cl><span class=c># Run the development server
+</span></span></span><span class=line><span class=cl><span class=nf>serve</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    hugo server -D
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Build for production
+</span></span></span><span class=line><span class=cl><span class=nf>build</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    hugo --minify
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Run linting
+</span></span></span><span class=line><span class=cl><span class=nf>lint</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    markdownlint content/posts/*.md
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c># Create a new post
+</span></span></span><span class=line><span class=cl><span class=nf>new name</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    hugo new posts/<span class=k>$(</span>date +%Y-%m-%d<span class=k>)</span>-<span class=o>{{</span>name<span class=o>}}</span>.md
+</span></span></code></pre></div><p>Running <code>just --list</code> outputs:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Available recipes:
 </span></span><span class=line><span class=cl>    build <span class=c1># Build for production</span>
 </span></span><span class=line><span class=cl>    lint  <span class=c1># Run linting</span>
 </span></span><span class=line><span class=cl>    new   <span class=c1># Create a new post</span>
