@@ -1,0 +1,16 @@
+<section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="{{ .Permalink | safeURL }}">
+          {{ .Title }}
+        </a>
+        {{ with .Params.icon }}
+          <i class="{{ . }}" aria-hidden="true"></i>
+        {{ end }}
+      </h1>
+    </header>
+
+    {{ .Content }}
+  </article>
+</section>

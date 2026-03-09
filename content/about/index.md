@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+icon: fa-solid fa-user
 ---
 
 My name is Jason Meridth. I'm a father. I'm a nerd. I love [writing software](https://github.com/jmeridth). I tinker with hardware. A blog post I wrote a while ago talking about [my history in software development/programming](/posts/why-i-started-programming/).

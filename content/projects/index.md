@@ -2,6 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
+icon: fa-solid fa-code
 ---
 
 ### Projects that I currently maintain

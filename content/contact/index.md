@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
+icon: fa-solid fa-envelope
 ---
 
 I'm typically `jmeridth` everywhere on the internet. Here are some of the places you can find me:
