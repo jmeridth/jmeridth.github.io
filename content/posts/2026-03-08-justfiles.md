@@ -43,7 +43,7 @@ clean:
 
 **Justfile:**
 
-```just
+```makefile
 build:
     hugo --minify
 
@@ -68,7 +68,7 @@ No `.PHONY`. No gotchas. Just commands.
 
 ## Example
 
-```just
+```makefile
 # Run the development server
 serve:
     hugo server -D
