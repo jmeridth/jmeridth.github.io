@@ -1,4 +1,4 @@
 ---
 title: Tags
-icon: fa-solid fa-tags
+icon: fa-solid fa-tag
 ---
