@@ -5,16 +5,15 @@ on:
   pull_request:
     paths:
       - content/posts/**
-  push:
-    branches:
-      - main
-    paths:
-      - content/posts/**
+  workflow_run:
+    workflows: ["github pages"]
+    types:
+      - completed
   workflow_dispatch:
-  workflow_call:
 
 jobs:
   htmltest:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # tag v6.0.2
@@ -39,13 +38,7 @@ jobs:
         run: hugo --minify
 
       - name: Verify links and images
-        if: steps.changed-posts.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
+        if: steps.changed-posts.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_run'
         uses: wjdp/htmltest-action@31be84a95c860a331e0cf9a99f71e3eb39d2f86b
         with:
           config: .htmltest.yml
-
-      - name: Upload public directory
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # tag v7.0.0
-        with:
-          name: public
-          path: public/
