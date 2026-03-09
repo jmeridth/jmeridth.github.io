@@ -32,13 +32,13 @@ If you've ever used a Makefile purely as a command runner, you know the pain:
 .PHONY: build serve clean
 
 build:
-	hugo --minify
+ hugo --minify
 
 serve:
-	hugo server -D
+ hugo server -D
 
 clean:
-	rm -rf public/
+ rm -rf public/
 ```
 
 **Justfile:**
@@ -88,7 +88,7 @@ new name:
 
 Running `just --list` outputs:
 
-```
+```bash
 Available recipes:
     build # Build for production
     lint  # Run linting
