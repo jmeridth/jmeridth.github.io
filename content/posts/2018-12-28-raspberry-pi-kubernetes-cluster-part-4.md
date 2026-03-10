@@ -4,7 +4,7 @@ title: Raspberry Pi Kubernetes Cluster - Part 4
 date: '2018-12-28 10:35:23'
 tags:
 - kubernetes
-- raspberrypi
+- raspberry-pi
 layout: post
 ---
 
