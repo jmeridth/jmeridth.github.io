@@ -1,3 +1,33 @@
+{{- if eq .Kind "taxonomy" -}}
+<section class="container taxonomy">
+  <header>
+    <h1 class="title">
+      <a class="title-link" href="{{ .Permalink | safeURL }}">
+        {{- i18n (lower .Title) | default .Title | title -}}
+      </a>
+      {{ with .Params.icon }}
+        <i class="{{ . }}" aria-hidden="true"></i>
+      {{ end }}
+    </h1>
+  </header>
+  {{ .Content }}
+  <ul>
+    {{ $type := .Type }}
+    {{ range $key, $value := .Data.Terms.Alphabetical }}
+      {{ $name := .Name }}
+      {{ $count := .Count }}
+      {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+        <li>
+          <span class="taxonomy-element">
+            <a href="{{ .Permalink }}">{{ .Name }}</a>
+            <sup>{{ $count }}</sup>
+          </span>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
+{{- else -}}
 <section class="container list">
   <header>
     <h1 class="title">
@@ -24,3 +54,4 @@
   </ul>
   {{ partial "pagination.html" . }}
 </section>
+{{- end -}}
