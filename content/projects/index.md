@@ -23,7 +23,7 @@ Gather metrics on issues/prs/discussions such as time to first response, count o
 - [github-community-projects/ospo-reusable-workflows](https://github.com/github-community-projects/ospo-reusable-workflows): Centralized Reusable GitHub Actions
 - [github-community-projects/stale-repos](https://github.com/github-community-projects/stale-repos): Find stale repositories in a GitHub organization.
 
-### Projects that I formerly maintained
+### Archived Projects that I formerly maintained
 
 - [Automatic-Contrib-PRs GitHub Action](https://github.com/github/automatic-contrib-prs)
 
