@@ -58,11 +58,22 @@
     if (button._copyStateTimeoutId) {
       clearTimeout(button._copyStateTimeoutId);
     }
+    if (button._copyStateClassName && button._copyStateClassName !== className) {
+      button.classList.remove(button._copyStateClassName);
+    }
     button.textContent = text;
-    if (className) button.classList.add(className);
+    if (className) {
+      button.classList.add(className);
+      button._copyStateClassName = className;
+    } else {
+      button._copyStateClassName = null;
+    }
     button._copyStateTimeoutId = setTimeout(function () {
       button.textContent = "Copy";
-      if (className) button.classList.remove(className);
+      if (button._copyStateClassName) {
+        button.classList.remove(button._copyStateClassName);
+        button._copyStateClassName = null;
+      }
       button._copyStateTimeoutId = null;
     }, duration || 2000);
   }
