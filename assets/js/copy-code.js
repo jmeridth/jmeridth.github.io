@@ -44,7 +44,7 @@
     }
     var fallbackCode = highlightDiv.querySelector("code");
     var classes = (fallbackCode && fallbackCode.className) || "";
-    var match = classes.match(/language-(\w+)/);
+    var match = classes.match(/language-([A-Za-z0-9_-]+)/);
     return match ? match[1] : "";
   }
 
@@ -55,11 +55,15 @@
   }
 
   function showButtonState(button, text, className, duration) {
+    if (button._copyStateTimeoutId) {
+      clearTimeout(button._copyStateTimeoutId);
+    }
     button.textContent = text;
     if (className) button.classList.add(className);
-    setTimeout(function () {
+    button._copyStateTimeoutId = setTimeout(function () {
       button.textContent = "Copy";
       if (className) button.classList.remove(className);
+      button._copyStateTimeoutId = null;
     }, duration || 2000);
   }
 
@@ -116,6 +120,7 @@
       var copyBtn = document.createElement("button");
       copyBtn.className = "copy-btn";
       copyBtn.textContent = "Copy";
+      copyBtn.setAttribute("type", "button");
       copyBtn.setAttribute("aria-label", "Copy code to clipboard");
       copyBtn.addEventListener("click", function () {
         var codeEl =

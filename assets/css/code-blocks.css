@@ -5,7 +5,7 @@
   margin: 2rem 0;
 }
 
-.highlight > div,
+.highlight > div:not(.code-header),
 .highlight > pre {
   margin: 0;
   border-radius: 0;
