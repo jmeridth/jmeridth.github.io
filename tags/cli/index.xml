@@ -46,6 +46,13 @@
 &lt;/ul&gt;
 &lt;p&gt;normal commands not included with my weechat.conf that I use:&lt;/p&gt;</description></item><item><title>How to Run a Single Test With Tox</title><link>http://jmeridth.com/posts/how-to-run-a-single-test-with-tox/</link><pubDate>Fri, 07 Mar 2014 04:49:53 -0600</pubDate><guid>http://jmeridth.com/posts/how-to-run-a-single-test-with-tox/</guid><description>&lt;p&gt;I have to run a single python test once in a while and keep forgetting how to do it with Tox.&lt;/p&gt;
 &lt;p&gt;Here it is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hope this helps someone else.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tox -e py27 -- project_name_here/tests/folder_name1_here/folder_name2_here/test_file_name_here.py:TestClassName.test_method_name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Hope this helps someone else.&lt;/p&gt;
 &lt;p&gt;Happy bit twiddling.&lt;/p&gt;</description></item></channel></rss>

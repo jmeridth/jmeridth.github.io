@@ -6,5 +6,12 @@
  &lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;I started seeing this error recently and had brain farted on why.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Received disconnect from 123.123.132.132: Too many authentication failures &lt;span class="k"&gt;for&lt;/span&gt; hostname
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After a bit of googling it came back to me. This is because I&amp;rsquo;ve loaded too many keys into my ssh-agent locally (&lt;code&gt;ssh-add&lt;/code&gt;). Why did you do that? Well, because it is easier than specifying the &lt;code&gt;IdentityFile&lt;/code&gt; on the cli when trying to connect. But there is a threshhold. This is set by the ssh host by the &lt;code&gt;MaxAuthTries&lt;/code&gt; setting in &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;. The default is 6.&lt;/p&gt;</description></item></channel></rss>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Received disconnect from 123.123.132.132: Too many authentication failures &lt;span class="k"&gt;for&lt;/span&gt; hostname
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After a bit of googling it came back to me. This is because I&amp;rsquo;ve loaded too many keys into my ssh-agent locally (&lt;code&gt;ssh-add&lt;/code&gt;). Why did you do that? Well, because it is easier than specifying the &lt;code&gt;IdentityFile&lt;/code&gt; on the cli when trying to connect. But there is a threshhold. This is set by the ssh host by the &lt;code&gt;MaxAuthTries&lt;/code&gt; setting in &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;. The default is 6.&lt;/p&gt;</description></item></channel></rss>

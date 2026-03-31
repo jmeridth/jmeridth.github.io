@@ -4,15 +4,34 @@
 &lt;p&gt;Unfortunately, he is using Go&amp;rsquo;s modules and the version of the gocode Vim plugin I was using did not support Go modules.&lt;/p&gt;</description></item><item><title>Docker Daemon Error When Running Docker Compose</title><link>http://jmeridth.com/posts/docker-daemon-error-when-running-docker-compose/</link><pubDate>Tue, 02 Jan 2018 12:11:00 -0600</pubDate><guid>http://jmeridth.com/posts/docker-daemon-error-when-running-docker-compose/</guid><description>&lt;p&gt;&lt;img src="http://jmeridth.com/img/why-docker-why-i-just-want-to-deploy.jpg" alt="docker why"&gt;&lt;/p&gt;
 &lt;p&gt;TL;DR Make sure you don&amp;rsquo;t have any old mounted volumes around if you see the error below.&lt;/p&gt;
 &lt;p&gt;I just got the following error when trying to run &lt;code&gt;docker-compose up -d&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ERROR: Couldn&lt;span class="s1"&gt;&amp;#39;t connect to Docker daemon at http+docker://localunixsocket
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ERROR: Couldn&lt;span class="s1"&gt;&amp;#39;t connect to Docker daemon at http+docker://localunixsocket
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;- is it running?
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;If it&amp;#39;&lt;/span&gt;s at a non-standard location,
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;specify the URL with the DOCKER_HOST environment variable.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Please note I have a database using a mounted volume. The issue was that the previous mount was still present. Once I deleted that, &lt;code&gt;docker-compose up -d&lt;/code&gt; would work jut fine.&lt;/p&gt;</description></item><item><title>Ubuntu - set caps lock to escape</title><link>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</link><pubDate>Wed, 22 Nov 2017 10:05:00 -0600</pubDate><guid>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</guid><description>&lt;p&gt;I just got a new laptop and had to google again on how to set caps lock key to escape (I&amp;rsquo;m a Vim user).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install dconf-tools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Please note I have a database using a mounted volume. The issue was that the previous mount was still present. Once I deleted that, &lt;code&gt;docker-compose up -d&lt;/code&gt; would work jut fine.&lt;/p&gt;</description></item><item><title>Ubuntu - set caps lock to escape</title><link>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</link><pubDate>Wed, 22 Nov 2017 10:05:00 -0600</pubDate><guid>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</guid><description>&lt;p&gt;I just got a new laptop and had to google again on how to set caps lock key to escape (I&amp;rsquo;m a Vim user).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install dconf-tools
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dconf write /org/gnome/desktop/input-sources/xkb-options &lt;span class="s2"&gt;&amp;#34;[&amp;#39;caps:escape&amp;#39;]&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To know your options, use the following command:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To know your options, use the following command:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;man xkeyboard-config&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;(MAN pages are your friend; man is short for manual)&lt;/p&gt;
 &lt;p&gt;You can also now use the &lt;code&gt;Dconf&lt;/code&gt; GUI editor if you must (SHAME! ;) )&lt;/p&gt;
@@ -46,7 +65,26 @@
 &lt;li&gt;ctrl+w + [H,J,K,L] - move current window to the far left, bottom, top or right&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;keybindings I use all the time via mappgings in my &lt;a href="https://github.com/jmeridth/dotfiles/blob/master/vimrc" class="external-link" target="_blank" rel="noopener"&gt;.vimrc&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Set VIM as Default Editor</title><link>http://jmeridth.com/posts/set-vim-as-default-editor/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/set-vim-as-default-editor/</guid><description>&lt;p&gt;Environment: Ubuntu&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo update-alternatives --config editor
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo update-alternatives --config editor
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;OUTPUT:
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are &lt;span class="m"&gt;4&lt;/span&gt; choices &lt;span class="k"&gt;for&lt;/span&gt; the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
@@ -61,4 +99,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type&lt;/span&gt; selection number: &lt;span class="m"&gt;3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

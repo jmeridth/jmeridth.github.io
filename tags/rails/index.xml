@@ -1,22 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rails on Learn, Converse, Share</title><link>http://jmeridth.com/tags/rails/</link><description>Recent content in Rails on Learn, Converse, Share</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 02 Apr 2013 00:00:00 -0500</lastBuildDate><atom:link href="http://jmeridth.com/tags/rails/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Default Scope and Unscoped in Rails</title><link>http://jmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</link><pubDate>Tue, 02 Apr 2013 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/using-default-scope-and-unscoped-in-rails/</guid><description>&lt;p&gt;I recently had the need to add a deleted flag to a model in a Rails project. I am usually of the mindset “explicit over implicit” so whenever I needed to use a finder to get content for that model I would do something like:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ruby" data-lang="ruby"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That does lean towards not having DRY (don’t repeat yourself) code. It’s a balancing act. I decided to give default_scope a chance this time. I quickly experienced the downside of that choice. I added the default_scope to my model:&lt;/p&gt;</description></item><item><title>Has And Belongs To Many Join Table Name Must Be In Alphabetical Order</title><link>http://jmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</link><pubDate>Sun, 03 Feb 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</guid><description>&lt;p&gt;TL;DR&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ruby" data-lang="ruby"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="no"&gt;User&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="ss"&gt;deleted&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;That does lean towards not having DRY (don’t repeat yourself) code. It’s a balancing act. I decided to give default_scope a chance this time. I quickly experienced the downside of that choice. I added the default_scope to my model:&lt;/p&gt;</description></item><item><title>Has And Belongs To Many Join Table Name Must Be In Alphabetical Order</title><link>http://jmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</link><pubDate>Sun, 03 Feb 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/has-and-belongs-to-many-join-table-name-must-be-in-alphabetical-order/</guid><description>&lt;p&gt;TL;DR&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations" class="external-link" target="_blank" rel="noopener"&gt;Read this from the Rails Guides&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Today I created an explicit join table between two models because each had has_and_belongs_to_many, as I’ve done many time before. Except, this time, when I tried to render one of my views, it said it couldn’t find a join table.&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
 &lt;p&gt;I created users_roles and the view error stated it was looking for roles_users.&lt;/p&gt;
 &lt;p&gt;Incorrect:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;users_roles
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Correct:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;roles_users
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;My first inclination was the fact that it was looking for it in alphabetical order. Sure enough, the &lt;a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations" class="external-link" target="_blank" rel="noopener"&gt;Rails Guide Documentation&lt;/a&gt; states that Rails developers do need to explicitly create their join tables but they have to be in lexical order (alphabetical).&lt;/p&gt;</description></item><item><title>Create Rails Application in Current Directory</title><link>http://jmeridth.com/posts/create-rails-application-in-current-directory/</link><pubDate>Thu, 25 Oct 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/create-rails-application-in-current-directory/</guid><description>&lt;p&gt;Yes, I know the common way to create a Rails application is&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rails new
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and this will create a subfolder with your new Rails application called .&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;users_roles
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Correct:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;roles_users
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;My first inclination was the fact that it was looking for it in alphabetical order. Sure enough, the &lt;a href="http://guides.rubyonrails.org/association_basics.html#creating-join-tables-for-has_and_belongs_to_many-associations" class="external-link" target="_blank" rel="noopener"&gt;Rails Guide Documentation&lt;/a&gt; states that Rails developers do need to explicitly create their join tables but they have to be in lexical order (alphabetical).&lt;/p&gt;</description></item><item><title>Create Rails Application in Current Directory</title><link>http://jmeridth.com/posts/create-rails-application-in-current-directory/</link><pubDate>Thu, 25 Oct 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/create-rails-application-in-current-directory/</guid><description>&lt;p&gt;Yes, I know the common way to create a Rails application is&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rails new
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;and this will create a subfolder with your new Rails application called .&lt;/p&gt;
 &lt;p&gt;This post is because I keep forgetting how to create a new Rails application if I’m already in the subfolder.&lt;/p&gt;
 &lt;p&gt;If your folder name is the same name you plan to use for your application you can use the command below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rails new .
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notice the period at the end telling it to use the current directory instead of creating a subdirectory.&lt;/p&gt;</description></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</link><pubDate>Thu, 25 Nov 2010 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</guid><description>&lt;p&gt;So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;my_app/&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;$ rails console
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rails new .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Notice the period at the end telling it to use the current directory instead of creating a subdirectory.&lt;/p&gt;</description></item><item><title>Readline Error With RVM and Rails 3 on Ubuntu</title><link>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</link><pubDate>Thu, 25 Nov 2010 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/readline-error-with-rvm-and-rails-3-on-ubuntu/</guid><description>&lt;p&gt;So I’m using Rails 3 with RVM these days. The last few times I created a new slice or restaged a laptop/desktop with Ubuntu I always seem to have an issue when I try to run the Rails console:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;span class="lnt"&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;my_app/&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt;$ rails console
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;: no such file to load -- readline (LoadError)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from /home/jmeridth/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/irb/completion.rb:9:in `&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands/console.rb:3:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;
@@ -25,14 +73,26 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from /code/my_app/shared/bundle/ruby/1.9.1/gems/railties-3.0.1/lib/rails/commands.rb:20:in `&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;from script/rails:6:in &lt;span class="sb"&gt;`&lt;/span&gt;require&lt;span class="s1"&gt;&amp;#39;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;from script/rails:6:in `&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I looked at the RVM site and saw how to install the readline package:&lt;/p&gt;</description></item><item><title>Using gsub to wrap substring</title><link>http://jmeridth.com/posts/using-gsub-to-wrap-substring/</link><pubDate>Thu, 10 Sep 2009 19:56:47 -0500</pubDate><guid>http://jmeridth.com/posts/using-gsub-to-wrap-substring/</guid><description>&lt;p&gt;Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak&amp;rsquo;s &lt;a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block" class="external-link" target="_blank" rel="noopener"&gt;&amp;ldquo;gsub with a block&amp;rdquo;&lt;/a&gt; post on &lt;a href="http://robots.thoughtbot.com" class="external-link" target="_blank" rel="noopener"&gt;the Thoughtbot blog&lt;/a&gt;.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I looked at the RVM site and saw how to install the readline package:&lt;/p&gt;</description></item><item><title>Using gsub to wrap substring</title><link>http://jmeridth.com/posts/using-gsub-to-wrap-substring/</link><pubDate>Thu, 10 Sep 2009 19:56:47 -0500</pubDate><guid>http://jmeridth.com/posts/using-gsub-to-wrap-substring/</guid><description>&lt;p&gt;Over my lunch today I finally had an opportunity to use something I learned yesterday reading Dan Croak&amp;rsquo;s &lt;a href="http://robots.thoughtbot.com/post/183070874/gsub-with-a-block" class="external-link" target="_blank" rel="noopener"&gt;&amp;ldquo;gsub with a block&amp;rdquo;&lt;/a&gt; post on &lt;a href="http://robots.thoughtbot.com" class="external-link" target="_blank" rel="noopener"&gt;the Thoughtbot blog&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I use the twitter gem and just display my last status on my personal homepage at &lt;a href="http://jasonmeridth.com" class="external-link" target="_blank" rel="noopener"&gt;JasonMeridth.com&lt;/a&gt;. I didn&amp;rsquo;t want to hand out my username and password so all I do is encapsulate the twitter piece in a module called TwitterHelper and put it into my app/helpers/ folder in my Rails application:&lt;/p&gt;</description></item><item><title>Git local pre-commit hook</title><link>http://jmeridth.com/posts/git-local-pre-commit-hook/</link><pubDate>Thu, 10 Sep 2009 16:47:21 -0500</pubDate><guid>http://jmeridth.com/posts/git-local-pre-commit-hook/</guid><description>&lt;p&gt;I&amp;rsquo;ve personally added a pre-commit hook to my local git repos. It&amp;rsquo;s like a personal CI before I push back to origin/master. I run my tests locally anyway before committing and pushing, so I thought I would automate it.&lt;/p&gt;
 &lt;p&gt;I open the .git/hooks/pre-commit file in my local repo (i.e, full path is something like /Users/jasonmeridth/code/rails/myapp/.git/hooks/pre-commit) and put the following:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/sh
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/sh
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake db:migrate
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake db:test:prepare
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For non-rails developers, this will run any database migrations on my _development database, then ensure the_test database has the same schema, and then runs the tests.&lt;/p&gt;</description></item><item><title>Current Status</title><link>http://jmeridth.com/posts/current-status/</link><pubDate>Thu, 12 Feb 2009 04:53:00 -0600</pubDate><guid>http://jmeridth.com/posts/current-status/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;UPDATE:  I&amp;rsquo;m very eager to see where IronRuby and RSpec go for the .NET world.  Testing my C# Applications with RSpec would be awesome.  Check out the &lt;a href="http://msdn.microsoft.com/en-us/magazine/dd434651.aspx" class="external-link" target="_blank" rel="noopener"&gt;MSDN magazine article&lt;/a&gt; about this stuff if you haven&amp;rsquo;t already.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For non-rails developers, this will run any database migrations on my _development database, then ensure the_test database has the same schema, and then runs the tests.&lt;/p&gt;</description></item><item><title>Current Status</title><link>http://jmeridth.com/posts/current-status/</link><pubDate>Thu, 12 Feb 2009 04:53:00 -0600</pubDate><guid>http://jmeridth.com/posts/current-status/</guid><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;UPDATE:  I&amp;rsquo;m very eager to see where IronRuby and RSpec go for the .NET world.  Testing my C# Applications with RSpec would be awesome.  Check out the &lt;a href="http://msdn.microsoft.com/en-us/magazine/dd434651.aspx" class="external-link" target="_blank" rel="noopener"&gt;MSDN magazine article&lt;/a&gt; about this stuff if you haven&amp;rsquo;t already.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m working with a Ruby on Rails project now (RoR from now on) and absolutely loving it. I&amp;rsquo;m on nothing but Linux boxes, working with Ruby, and have been put in charge of strengthening our testing skills. I kind of laugh at this because I am having to learn Ruby, Rails, Nginx, Mongrels, etc and then figure out how to test RoR code.&lt;/p&gt;</description></item><item><title>Creating an older rails project with multiple (newer) versions installed</title><link>http://jmeridth.com/posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/</link><pubDate>Tue, 25 Nov 2008 20:27:55 -0600</pubDate><guid>http://jmeridth.com/posts/creating-an-older-rails-project-with-multiple-newer-versions-installed/</guid><description>&lt;p&gt;I have been studying rspec the last week or two and have been using Rail 2.1.2 to do my exploring.  I was finally ready to jump into some legacy code and couldn&amp;rsquo;t even create a spec folder on the directory tree because the version of rails was older:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; 1: user$ ruby script/generate rspec
 

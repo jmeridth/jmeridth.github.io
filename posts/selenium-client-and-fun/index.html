@@ -1,11 +1,18 @@
 <!doctype html><html lang=en><head><title>Selenium-client and fun · Learn, Converse, Share</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Jason Meridth"><meta name=description content="So I&rsquo;ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
 1.
+
+
+1
+
+
 sudo gem install selenium-client
+
+
 2. download the selenium remote control (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it."><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Selenium-client and fun"><meta name=twitter:description content="So I’ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I’m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
 1.
-sudo gem install selenium-client 2. download the selenium remote control (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it."><meta property="og:url" content="http://jmeridth.com/posts/selenium-client-and-fun/"><meta property="og:site_name" content="Learn, Converse, Share"><meta property="og:title" content="Selenium-client and fun"><meta property="og:description" content="So I’ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I’m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
+1 sudo gem install selenium-client 2. download the selenium remote control (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it."><meta property="og:url" content="http://jmeridth.com/posts/selenium-client-and-fun/"><meta property="og:site_name" content="Learn, Converse, Share"><meta property="og:title" content="Selenium-client and fun"><meta property="og:description" content="So I’ve had the pleasure of working with selenium-client, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I’m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.
 1.
-sudo gem install selenium-client 2. download the selenium remote control (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2009-02-12T04:35:00-06:00"><meta property="article:modified_time" content="2009-02-12T04:35:00-06:00"><meta property="article:tag" content="Selenium"><meta property="article:tag" content="Ruby"><meta property="article:tag" content="Testing"><link rel=canonical href=http://jmeridth.com/posts/selenium-client-and-fun/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css integrity="sha256-rUj0didZdIhb3APVJR482+FnjFSmP/dyN2sO0q3EaN0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/css_dark_mode_gist_embed_code.min.5f4f026828cc544c1497785bca628b4ddc8a6c1f154cc2b83c87a13ceaff419a.css integrity="sha256-X08CaCjMVEwUl3hbymKLTdyKbB8VTMK4PIehPOr/QZo=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/favicon.ico sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://jmeridth.com/>Learn, Converse, Share
+1 sudo gem install selenium-client 2. download the selenium remote control (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2009-02-12T04:35:00-06:00"><meta property="article:modified_time" content="2009-02-12T04:35:00-06:00"><meta property="article:tag" content="Selenium"><meta property="article:tag" content="Ruby"><meta property="article:tag" content="Testing"><link rel=canonical href=http://jmeridth.com/posts/selenium-client-and-fun/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css integrity="sha256-rUj0didZdIhb3APVJR482+FnjFSmP/dyN2sO0q3EaN0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/css_dark_mode_gist_embed_code.min.5f4f026828cc544c1497785bca628b4ddc8a6c1f154cc2b83c87a13ceaff419a.css integrity="sha256-X08CaCjMVEwUl3hbymKLTdyKbB8VTMK4PIehPOr/QZo=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/code-blocks.min.cce18e8781cccb1eedffa92d4f6b2689ff41e2ee60a7fdc95e5469ba6dc51e97.css integrity="sha256-zOGOh4HMyx7t/6ktT2smif9B4u5gp/3JXlRpum3FHpc=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/favicon.ico sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://jmeridth.com/>Learn, Converse, Share
 </a><input type=checkbox id=menu-toggle>
 <label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li><li class=navigation-item><a class=navigation-link href=/tags/>Tags</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li><li class=navigation-item><a class=navigation-link href=/talks/>Talks</a></li><li class=navigation-item><a class=navigation-link href=/contact/>Contact Me</a></li><li class=navigation-item><a class=navigation-link href=/index.xml><i class="fa-solid fa-rss" aria-hidden=true></i><span class=sr-only>RSS</span></a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://jmeridth.com/posts/selenium-client-and-fun/>Selenium-client and fun</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
 <time datetime=2009-02-12T04:35:00-06:00>February 12, 2009
@@ -15,12 +22,110 @@ sudo gem install selenium-client 2. download the selenium remote control (versio
 </span><span class=separator>•</span>
 <span class=tag><a href=/tags/ruby/>Ruby</a>
 </span><span class=separator>•</span>
-<span class=tag><a href=/tags/testing/>Testing</a></span></div></div></header><div class=post-content><p>So I&rsquo;ve had the pleasure of working with <a href=http://github.com/ph7/selenium-client/tree/master class=external-link target=_blank rel=noopener>selenium-client</a>, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.</p><p>1.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo gem install selenium-client
-</span></span></code></pre></div><p>2. download the <a href=http://release.seleniumhq.org/selenium-remote-control/1.0-beta-2/selenium-remote-control-1.0-beta-2-dist.zip class=external-link target=_blank rel=noopener>selenium remote control</a> (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it.</p><p>3. update your .bashrc (usually on Ubuntu) or .bash_profile (what I have on my Mac) with a alias to start the selenium server (for me I have unzipped the download into a ~/code/seleniumrc folder:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># commands</span>
+<span class=tag><a href=/tags/testing/>Testing</a></span></div></div></header><div class=post-content><p>So I&rsquo;ve had the pleasure of working with <a href=http://github.com/ph7/selenium-client/tree/master class=external-link target=_blank rel=noopener>selenium-client</a>, the official Ruby client API for Selenium Remote Control (bare bone client driver). Assumptions: 1. You have Ruby 1.8+ installed 2. You have rubygems installed I&rsquo;m going to use the Slicehost Manage website to drive with my selenium tests. No babble, just instructions.</p><p>1.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sudo gem install selenium-client
+</span></span></code></pre></td></tr></table></div></div><p>2. download the <a href=http://release.seleniumhq.org/selenium-remote-control/1.0-beta-2/selenium-remote-control-1.0-beta-2-dist.zip class=external-link target=_blank rel=noopener>selenium remote control</a> (version 1.0 beta at the time of this entry). Remember where you install this because you will be reference the selenium-server.jar inside it.</p><p>3. update your .bashrc (usually on Ubuntu) or .bash_profile (what I have on my Mac) with a alias to start the selenium server (for me I have unzipped the download into a ~/code/seleniumrc folder:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=c1># commands</span>
 </span></span><span class=line><span class=cl><span class=nb>alias</span> <span class=nv>selsrvr</span><span class=o>=</span><span class=s2>&#34;java -jar ~/code/seleniumrc/selenium-server-1.0-beta-2/selenium-server.jar&#34;</span>
-</span></span></code></pre></div><p>after you add that, re-source your bash file. For me on my Mac</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>. ~/.bash_profile
-</span></span></code></pre></div><p>For me on my Ubuntu box:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>. ~/.bashrc
-</span></span></code></pre></div><p>4. Create a test file, test.rb somewhere (for me ~/code/seleniumrc/test.rb):</p><p>5. Write a test that:</p><ol><li><p>Logs in</p></li><li><p>Creates a slice</p></li><li><p>Captures the new root password</p></li><li><p>Captures the new IP Address</p></li><li><p>SSHs onto the new slice</p></li><li><p>Adds a file, and lists out the content of ~ (aka /home/root)</p></li><li><p>Deletes the slice</p></li><li><p>Logs out</p></li><li></li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=nb>require</span> <span class=s2>&#34;test/unit&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>after you add that, re-source your bash file. For me on my Mac</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>. ~/.bash_profile
+</span></span></code></pre></td></tr></table></div></div><p>For me on my Ubuntu box:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>. ~/.bashrc
+</span></span></code></pre></td></tr></table></div></div><p>4. Create a test file, test.rb somewhere (for me ~/code/seleniumrc/test.rb):</p><p>5. Write a test that:</p><ol><li><p>Logs in</p></li><li><p>Creates a slice</p></li><li><p>Captures the new root password</p></li><li><p>Captures the new IP Address</p></li><li><p>SSHs onto the new slice</p></li><li><p>Adds a file, and lists out the content of ~ (aka /home/root)</p></li><li><p>Deletes the slice</p></li><li><p>Logs out</p></li><li></li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span><span class=lnt>68
+</span><span class=lnt>69
+</span><span class=lnt>70
+</span><span class=lnt>71
+</span><span class=lnt>72
+</span><span class=lnt>73
+</span><span class=lnt>74
+</span><span class=lnt>75
+</span><span class=lnt>76
+</span><span class=lnt>77
+</span><span class=lnt>78
+</span><span class=lnt>79
+</span><span class=lnt>80
+</span><span class=lnt>81
+</span><span class=lnt>82
+</span><span class=lnt>83
+</span><span class=lnt>84
+</span><span class=lnt>85
+</span><span class=lnt>86
+</span><span class=lnt>87
+</span><span class=lnt>88
+</span><span class=lnt>89
+</span><span class=lnt>90
+</span><span class=lnt>91
+</span><span class=lnt>92
+</span><span class=lnt>93
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=nb>require</span> <span class=s2>&#34;test/unit&#34;</span>
 </span></span><span class=line><span class=cl><span class=nb>require</span> <span class=s2>&#34;rubygems&#34;</span>
 </span></span><span class=line><span class=cl><span class=n>gem</span> <span class=s2>&#34;selenium-client&#34;</span><span class=p>,</span> <span class=s2>&#34;&gt;=1.2.9&#34;</span>
 </span></span><span class=line><span class=cl><span class=nb>require</span> <span class=s2>&#34;selenium/client&#34;</span>
@@ -113,11 +218,13 @@ sudo gem install selenium-client 2. download the selenium remote control (versio
 </span></span><span class=line><span class=cl>    <span class=vi>@browser</span><span class=o>.</span><span class=n>wait_for_page_to_load</span> <span class=s2>&#34;30000&#34;</span>
 </span></span><span class=line><span class=cl>  <span class=k>end</span>
 </span></span><span class=line><span class=cl><span class=k>end</span>
-</span></span></code></pre></div><p>7. Start the selenium server:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>selsrvr
-</span></span></code></pre></div><p>8. run the test:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ruby ~/code/seleniumrc/test.rb
-</span></span></code></pre></div><p>You should see the firefox browser open up in two windows and see the automation in process. Once the slice is created, I&rsquo;ve setup a timer at 180 seconds (3 min) to wait for the slice to be created and set to a status of active. Like #5 above states, once complete the test captures the root password and ip address off the web UI and uses them to SSH into the new slice. This is my 3rd time using selenium and I like what I see. More to come.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+</span></span></code></pre></td></tr></table></div></div><p>7. Start the selenium server:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>selsrvr
+</span></span></code></pre></td></tr></table></div></div><p>8. run the test:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>ruby ~/code/seleniumrc/test.rb
+</span></span></code></pre></td></tr></table></div></div><p>You should see the firefox browser open up in two windows and see the automation in process. Once the slice is created, I&rsquo;ve setup a timer at 180 seconds (3 min) to wait for the slice to be created and set to a status of active. Like #5 above states, once complete the test captures the root password and ip address off the web UI and uses them to SSH into the new slice. This is my 3rd time using selenium and I like what I see. More to come.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
 2026
 Jason Meridth
 ·
-Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/copy-code.min.d78256594c628b8732cc4c58629c0b8409a668e8b38efd5503cc8c2b6d2e9b45.js integrity="sha256-14JWWUxii4cyzExYYpwLhAmmaOizjv1VA8yMK20um0U="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>

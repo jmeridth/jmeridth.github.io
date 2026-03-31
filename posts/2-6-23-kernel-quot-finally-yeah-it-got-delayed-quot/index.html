@@ -6,15 +6,224 @@
   
 
 
-&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;'><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=twitter:card content="summary"><meta name=twitter:title content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta name=twitter:description content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:url" content="http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/"><meta property="og:site_name" content="Learn, Converse, Share"><meta property="og:title" content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta property="og:description" content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2007-10-11T01:15:38-05:00"><meta property="article:modified_time" content="2007-10-11T01:15:38-05:00"><meta property="article:tag" content="Linux"><link rel=canonical href=http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css integrity="sha256-rUj0didZdIhb3APVJR482+FnjFSmP/dyN2sO0q3EaN0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/css_dark_mode_gist_embed_code.min.5f4f026828cc544c1497785bca628b4ddc8a6c1f154cc2b83c87a13ceaff419a.css integrity="sha256-X08CaCjMVEwUl3hbymKLTdyKbB8VTMK4PIehPOr/QZo=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/favicon.ico sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://jmeridth.com/>Learn, Converse, Share
+&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;'><meta name=keywords content="jason meridth,meridth,jm,software developer"><meta name=twitter:card content="summary"><meta name=twitter:title content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta name=twitter:description content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:url" content="http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/"><meta property="og:site_name" content="Learn, Converse, Share"><meta property="og:title" content='2.6.23 Kernel, "Finally. Yeah, it got delayed"'><meta property="og:description" content='Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my ‘release clock’ all the time. But it’s out there now, and hopefully better for the wait," Linus Torvalds said announcing the 2.6.23 kernel. He noted few changes since the last release candidate, “not a whole lot of changes since -rc9, although there’s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there’s basically a number of mostly one-liners (mostly in drivers, but there’s some networking fixes and soem VFS/VM fixes there too).” Source level changes can be viewed via the gitweb interface. A nice overview of all changes can be found at Kernel Newbies. Linus went on to describe his plan going forward Link to heading “I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it’s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)”'><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2007-10-11T01:15:38-05:00"><meta property="article:modified_time" content="2007-10-11T01:15:38-05:00"><meta property="article:tag" content="Linux"><link rel=canonical href=http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css integrity="sha256-9rGzWnsCUhslM49s9Yl1+ZgKbBKEd2P+NaSDB3WM0ec=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css integrity="sha256-rUj0didZdIhb3APVJR482+FnjFSmP/dyN2sO0q3EaN0=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/css_dark_mode_gist_embed_code.min.5f4f026828cc544c1497785bca628b4ddc8a6c1f154cc2b83c87a13ceaff419a.css integrity="sha256-X08CaCjMVEwUl3hbymKLTdyKbB8VTMK4PIehPOr/QZo=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/code-blocks.min.cce18e8781cccb1eedffa92d4f6b2689ff41e2ee60a7fdc95e5469ba6dc51e97.css integrity="sha256-zOGOh4HMyx7t/6ktT2smif9B4u5gp/3JXlRpum3FHpc=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/favicon.ico sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=http://jmeridth.com/>Learn, Converse, Share
 </a><input type=checkbox id=menu-toggle>
 <label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li><li class=navigation-item><a class=navigation-link href=/tags/>Tags</a></li><li class=navigation-item><a class=navigation-link href=/projects/>Projects</a></li><li class=navigation-item><a class=navigation-link href=/talks/>Talks</a></li><li class=navigation-item><a class=navigation-link href=/contact/>Contact Me</a></li><li class=navigation-item><a class=navigation-link href=/index.xml><i class="fa-solid fa-rss" aria-hidden=true></i><span class=sr-only>RSS</span></a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=http://jmeridth.com/posts/2-6-23-kernel-quot-finally-yeah-it-got-delayed-quot/>2.6.23 Kernel, "Finally. Yeah, it got delayed"</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
 <time datetime=2007-10-11T01:15:38-05:00>October 11, 2007
 </time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
-5-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+6-minute read</span></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
 <span class=tag><a href=/tags/linux/>Linux</a></span></div></div></header><div class=post-content><h4 id=finally-yeah-it-got-delayed-not-because-of-any-huge-issues-but-because-of-various-bugfixes-trickling-in-and-causing-me-to-reset-my--linus-torvalds-said-announcing-the-2623-kernel-he-noted-few-changes-since-the-last-release-candidate-not-a-whole-lot-of-changes-since--rc9-although-there-source-level-changes-can-be-viewed-via-the-gitweb-interface-a-nice-overview-of-all-changes-can-be-found-at-kernel-newbies-linus-went-on-to-describe-his-plan-going-forward><em>Finally. Yeah, it got delayed, not because of any huge issues, but because of various bugfixes trickling in and causing me to reset my &lsquo;release clock&rsquo; all the time. But it&rsquo;s out there now, and hopefully better for the wait,</em>" Linus Torvalds said <a href=http://kerneltrap.org/mailarchive/linux-kernel/2007/10/9/333488 class=external-link target=_blank rel=noopener>announcing the 2.6.23 kernel</a>. He noted few changes since the last release candidate, &ldquo;<em>not a whole lot of changes since -rc9, although there&rsquo;s a few updates to mips, sparc64 and blackfin in there. Ignoring those arch updates, there&rsquo;s basically a number of mostly one-liners (mostly in drivers, but there&rsquo;s some networking fixes and soem VFS/VM fixes there too).</em>&rdquo; Source level changes can be viewed via the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary" class=external-link target=_blank rel=noopener>gitweb interface</a>. A nice overview of all changes can be found at <a href=http://kernelnewbies.org/Linux_2_6_23 class=external-link target=_blank rel=noopener>Kernel Newbies</a>. Linus went on to describe his plan going forward
 <a class=heading-link href=#finally-yeah-it-got-delayed-not-because-of-any-huge-issues-but-because-of-various-bugfixes-trickling-in-and-causing-me-to-reset-my--linus-torvalds-said-announcing-the-2623-kernel-he-noted-few-changes-since-the-last-release-candidate-not-a-whole-lot-of-changes-since--rc9-although-there-source-level-changes-can-be-viewed-via-the-gitweb-interface-a-nice-overview-of-all-changes-can-be-found-at-kernel-newbies-linus-went-on-to-describe-his-plan-going-forward><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
-<span class=sr-only>Link to heading</span></a></h4><blockquote><p>&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;</p></blockquote><hr><div class=highlight><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>From: Linus Torvalds &lt;torvalds@...&gt;
+<span class=sr-only>Link to heading</span></a></h4><blockquote><p>&ldquo;I want this to be what people look at for a few days, but expect the x86 merge to go ahead after that. So far, all indications are still that it&rsquo;s going to be all smooth sailing, but hey, those indicators seem to always say that, and only after the fact do people notice any problems ;)&rdquo;</p></blockquote><hr><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-text data-lang=text><span class=line><span class=cl>From: Linus Torvalds &lt;torvalds@...&gt;
 </span></span><span class=line><span class=cl>Subject: Linux 2.6.23
 </span></span><span class=line><span class=cl>Date: Oct 9, 11:54 am 2007
 </span></span><span class=line><span class=cl>
@@ -223,9 +432,9 @@
 </span></span><span class=line><span class=cl> arch/mips/au1000/common/pci.c                     |    1 +
 </span></span><span class=line><span class=cl> arch/mips/au1000/mtx-1/board_setup.c              |    4 +-
 </span></span><span class=line><span class=cl> arch/mips/au1000/pb1000/board_setup.c             |    6 +-
-</span></span></code></pre></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+</span></span></code></pre></td></tr></table></div></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2007 -
 2026
 Jason Meridth
 ·
-Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/copy-code.min.d78256594c628b8732cc4c58629c0b8409a668e8b38efd5503cc8c2b6d2e9b45.js integrity="sha256-14JWWUxii4cyzExYYpwLhAmmaOizjv1VA8yMK20um0U="></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-4W46VMK7DQ"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-4W46VMK7DQ")</script></body></html>

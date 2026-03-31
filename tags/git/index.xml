@@ -2,33 +2,85 @@
 &lt;p&gt;If you are contributing to open source projects on GitHub, you need to fork the repository first. Then you can clone your forked repository to your local machine. You also need to set the upstream remote to the original repository so you can pull in changes from the open source project while having another remote pointed to your fork for pushing your changes and creating pull requests.&lt;/p&gt;</description></item><item><title>Get Repository Root Path</title><link>http://jmeridth.com/posts/get-repository-root-path/</link><pubDate>Mon, 04 Jul 2016 20:52:00 -0500</pubDate><guid>http://jmeridth.com/posts/get-repository-root-path/</guid><description>&lt;p&gt;I needed to find a way to get the path to the root of my Git repository. I found the answer in the following command:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git rev-parse --show-toplevel&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-&amp;gt;$ git rev-parse --show-toplevel
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-&amp;gt;$ git rev-parse --show-toplevel
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/Users/jmeridth/dev/jmeridth.github.io
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>When Git or SSH Protocols Blocked</title><link>http://jmeridth.com/posts/when-git-or-ssh-protocols-blocked/</link><pubDate>Tue, 26 Aug 2014 08:47:42 -0500</pubDate><guid>http://jmeridth.com/posts/when-git-or-ssh-protocols-blocked/</guid><description>&lt;p&gt;Recently I had issues connecting to &lt;a href="http://github.com/roaet" class="external-link" target="_blank" rel="noopener"&gt;Github&lt;/a&gt; because of some firewall restrictions outside my control. The firewall had outbound SSH (port 22) blocked. My co-worker &lt;a href="https://github.com" class="external-link" target="_blank" rel="noopener"&gt;Justin Hammond&lt;/a&gt; found a git config option that lets you force all git commands to use &lt;code&gt;https://&lt;/code&gt; (port 443) instead of &lt;code&gt;ssh://&lt;/code&gt; (port 22).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git config --global url.&lt;span class="s2"&gt;&amp;#34;https://&amp;#34;&lt;/span&gt;.insteadOf git://
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Worked like a charm. Thanks Justin. Hope this helps someone else.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>When Git or SSH Protocols Blocked</title><link>http://jmeridth.com/posts/when-git-or-ssh-protocols-blocked/</link><pubDate>Tue, 26 Aug 2014 08:47:42 -0500</pubDate><guid>http://jmeridth.com/posts/when-git-or-ssh-protocols-blocked/</guid><description>&lt;p&gt;Recently I had issues connecting to &lt;a href="http://github.com/roaet" class="external-link" target="_blank" rel="noopener"&gt;Github&lt;/a&gt; because of some firewall restrictions outside my control. The firewall had outbound SSH (port 22) blocked. My co-worker &lt;a href="https://github.com" class="external-link" target="_blank" rel="noopener"&gt;Justin Hammond&lt;/a&gt; found a git config option that lets you force all git commands to use &lt;code&gt;https://&lt;/code&gt; (port 443) instead of &lt;code&gt;ssh://&lt;/code&gt; (port 22).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git config --global url.&lt;span class="s2"&gt;&amp;#34;https://&amp;#34;&lt;/span&gt;.insteadOf git://
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Worked like a charm. Thanks Justin. Hope this helps someone else.&lt;/p&gt;
 &lt;p&gt;NB: Don&amp;rsquo;t use &lt;code&gt;--global&lt;/code&gt; if you don&amp;rsquo;t want this applied to all repositories. Without it only sets for the current repository you&amp;rsquo;re in.&lt;/p&gt;</description></item><item><title>How to Get The SHA of The Last Commit on a Branch With Git</title><link>http://jmeridth.com/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/</link><pubDate>Tue, 11 Mar 2014 02:30:23 -0500</pubDate><guid>http://jmeridth.com/posts/how-to-get-the-sha-of-the-last-commit-on-a-branch-with-git/</guid><description>&lt;p&gt;I&amp;rsquo;ve been asked this a few times and have had to do it lately a few times.&lt;/p&gt;
 &lt;p&gt;To get the SHA of the last commit from a specific branch, use &lt;a href="http://git-scm.com/docs/git-rev-parse" class="external-link" target="_blank" rel="noopener"&gt;&lt;code&gt;git rev-parse&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git rev-parse origin/master&lt;/code&gt; (remote branch)&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git rev-parse master&lt;/code&gt; (local branch)&lt;/p&gt;</description></item><item><title>Use Git Grep to Replace Strings in Files in Your Git Repository</title><link>http://jmeridth.com/posts/use-git-grep-to-replace-strings-in-files-in-your-git-repository/</link><pubDate>Mon, 11 Feb 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/use-git-grep-to-replace-strings-in-files-in-your-git-repository/</guid><description>&lt;p&gt;TL;DR&lt;/p&gt;
 &lt;p&gt;On Linux:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git grep -l &lt;span class="s1"&gt;&amp;#39;original_text&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs sed -i &lt;span class="s1"&gt;&amp;#39;s/original_text/new_text/g&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On Mac:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git grep -l &lt;span class="s1"&gt;&amp;#39;original_text&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs sed -i &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt; -e &lt;span class="s1"&gt;&amp;#39;s/original_text/new_text/g&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I needed to change a string in a bunch of files and I used the command above using git grep to do it. Worked like a charm.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;-l&lt;/code&gt; argument to git grep only returns the file names and not the location in the file like it usually does.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;-e&lt;/code&gt; argument is needed with the &lt;code&gt;sed&lt;/code&gt; portion on OSX as stated by &lt;a href="https://twitter.com/asmeurer/" class="external-link" target="_blank" rel="noopener"&gt;asmeurer&lt;/a&gt; in the comments&lt;/p&gt;</description></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</link><pubDate>Wed, 11 Jul 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</guid><description>&lt;p&gt;Whenever you do&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install git-core
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;on Ubuntu you will only get git version 1.7.5.x. I needed 1.7.6%2B.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git grep -l &lt;span class="s1"&gt;&amp;#39;original_text&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs sed -i &lt;span class="s1"&gt;&amp;#39;s/original_text/new_text/g&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;On Mac:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git grep -l &lt;span class="s1"&gt;&amp;#39;original_text&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; xargs sed -i &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt; -e &lt;span class="s1"&gt;&amp;#39;s/original_text/new_text/g&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I needed to change a string in a bunch of files and I used the command above using git grep to do it. Worked like a charm.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;-l&lt;/code&gt; argument to git grep only returns the file names and not the location in the file like it usually does.&lt;/p&gt;</description></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</link><pubDate>Wed, 11 Jul 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</guid><description>&lt;p&gt;Whenever you do&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install git-core
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;on Ubuntu you will only get git version 1.7.5.x. I needed 1.7.6%2B.&lt;/p&gt;
 &lt;p&gt;To do this you have to run the following commands:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install software-properties-common python-software-properties
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install software-properties-common python-software-properties
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo add-apt-repository ppa:git-core/ppa
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get update
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install git-core
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This should give you git version 1.7.11 (as of today)&lt;/p&gt;</description></item><item><title>Automatically Execute Mistyped Git Commands</title><link>http://jmeridth.com/posts/automatically-execute-mistyped-git-commands/</link><pubDate>Tue, 22 May 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/automatically-execute-mistyped-git-commands/</guid><description>&lt;p&gt;I use the command line with Git. I do this because I type faster than I use my mouse. It is a personal preference. Due to this, I sometimes fat finger Git commands. Yeah, it does happen. For example, I can type:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git chekcout -b new_branch_name
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notice the checkout command is mistyped (kc instead of ck). I misspell that and branch (usually brnach) often. Git will usually give notice this and give you a suggestion on which command you might have meant.&lt;/p&gt;</description></item><item><title>Git and Seeting What Commits Are Not In Another Branch</title><link>http://jmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/</link><pubDate>Tue, 22 May 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/</guid><description>&lt;p&gt;A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff&lt;code&gt;but I've started telling them to look at&lt;/code&gt;git cherry` (NOT git-cherry-pick).&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This should give you git version 1.7.11 (as of today)&lt;/p&gt;</description></item><item><title>Automatically Execute Mistyped Git Commands</title><link>http://jmeridth.com/posts/automatically-execute-mistyped-git-commands/</link><pubDate>Tue, 22 May 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/automatically-execute-mistyped-git-commands/</guid><description>&lt;p&gt;I use the command line with Git. I do this because I type faster than I use my mouse. It is a personal preference. Due to this, I sometimes fat finger Git commands. Yeah, it does happen. For example, I can type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git chekcout -b new_branch_name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Notice the checkout command is mistyped (kc instead of ck). I misspell that and branch (usually brnach) often. Git will usually give notice this and give you a suggestion on which command you might have meant.&lt;/p&gt;</description></item><item><title>Git and Seeting What Commits Are Not In Another Branch</title><link>http://jmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/</link><pubDate>Tue, 22 May 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-and-seeing-what-commits-are-not-in-another-branch/</guid><description>&lt;p&gt;A common question I get from co-workers is, “How do I see if I already merged my changes into my master branch?”. My usual suggestion was to use git diff&lt;code&gt;but I've started telling them to look at&lt;/code&gt;git cherry` (NOT git-cherry-pick).&lt;/p&gt;
 &lt;p&gt;From &lt;a href="http://git-scm.com/docs/git-cherry" class="external-link" target="_blank" rel="noopener"&gt;the new Git documentation&lt;/a&gt;, git-cherry finds commits not merged upstream.&lt;/p&gt;
 &lt;p&gt;I use it like this while on the master branch to see what commits are in master that are not on the feature-branch-name branch:&lt;/p&gt;</description></item><item><title>Do Not Issue Pull Requests From Your Master Branch</title><link>http://jmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/</link><pubDate>Fri, 30 Mar 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/do-not-issue-pull-requests-from-your-master-branch/</guid><description>&lt;p&gt;&lt;strong&gt;PROBLEM:&lt;/strong&gt; You do not want to issue pull requests from your fork’s master branch on &lt;a href="http://github.com" class="external-link" target="_blank" rel="noopener"&gt;Github.com&lt;/a&gt; to the parent repository because any new changes you add to the master branch will &lt;strong&gt;&lt;em&gt;automatically&lt;/em&gt;&lt;/strong&gt; show up in the pull request. That means changes you did not intend to be there, would now be there.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;SOLUTION:&lt;/strong&gt; Issue your pull requests from a feature/topic branch&lt;/p&gt;
@@ -48,13 +100,32 @@
 &lt;li&gt;On &lt;a href="http://github.com" class="external-link" target="_blank" rel="noopener"&gt;Github&lt;/a&gt; website&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The issue here is if you continue to work on your local master branch and push to your fork again, &lt;strong&gt;&lt;em&gt;BEFORE&lt;/em&gt;&lt;/strong&gt; the pull request is accepted and merged. Why is this an issue? It is an issue because any further commits on the branch that a pull request is based on will &lt;strong&gt;&lt;em&gt;AUTOMATICALLY&lt;/em&gt;&lt;/strong&gt; be added to the pull request. This usually ensures that you are requested to fix the pull request before it will be accepted.&lt;/p&gt;</description></item><item><title>git clone --mirror vs git clone --bare</title><link>http://jmeridth.com/posts/git-clone-mirror-vs-git-clone-bare/</link><pubDate>Fri, 30 Mar 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-clone-mirror-vs-git-clone-bare/</guid><description>&lt;p&gt;I setup &lt;a href="http://progit.org/book/ch4-6.html" class="external-link" target="_blank" rel="noopener"&gt;GitWeb&lt;/a&gt; at work recently. It is very fast and extremely useful. I noticed that the repositories the web view was looking at didn’t show acategory or other branches. Only the master branch. I had used&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone --bare git@host:repository.git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to get the code. This ensures that no working directory is created. Pretty much only the contents of the .git directory. In order to get the .git directory but also acategory, non-master branches, etc, I learned to use:&lt;/p&gt;</description></item><item><title>Git Achievements on Windows (Part 3)</title><link>http://jmeridth.com/posts/git-achievements-on-windows-part-2/</link><pubDate>Wed, 21 Mar 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-achievements-on-windows-part-2/</guid><description>&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/git-achievements-on-windows" class="external-link" target="_blank" rel="noopener"&gt;Part 1&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone --bare git@host:repository.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;to get the code. This ensures that no working directory is created. Pretty much only the contents of the .git directory. In order to get the .git directory but also acategory, non-master branches, etc, I learned to use:&lt;/p&gt;</description></item><item><title>Git Achievements on Windows (Part 3)</title><link>http://jmeridth.com/posts/git-achievements-on-windows-part-2/</link><pubDate>Wed, 21 Mar 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-achievements-on-windows-part-2/</guid><description>&lt;p&gt;&lt;a href="http://blog.jasonmeridth.com/git-achievements-on-windows" class="external-link" target="_blank" rel="noopener"&gt;Part 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I’m using Msysgit Bash CLI (up-to-date install instructions&lt;/p&gt;
 &lt;p&gt;I’ve forked the git-achievements github repository&lt;/p&gt;
 &lt;p&gt;notice it forks to a gh-pages branch, not a master branch&lt;/p&gt;
 &lt;p&gt;this allows github to fire jekyll off against your github account and generate your git-achievements page&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;jasonmeridth@JASON-LAPTOP /c/code
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;/span&gt;&lt;span class="lnt"&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;jasonmeridth@JASON-LAPTOP /c/code
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ git clone git@github.com:jmeridth/git-achievments.git
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Cloning into git-achievements...
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;remote: Counting objects: 1168, &lt;span class="k"&gt;done&lt;/span&gt;.
@@ -62,9 +133,29 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Receiving objects: 91% &lt;span class="o"&gt;(&lt;/span&gt;1063/1168&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Receiving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;1168/1168&lt;span class="o"&gt;)&lt;/span&gt;, 155.28 KiB, &lt;span class="k"&gt;done&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Resolving objects: 100% &lt;span class="o"&gt;(&lt;/span&gt;801/801&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;cloned repository locally into my C:code folder (resulting in /c/code/git-achievements by Git Bash CLI path terms)&lt;/p&gt;</description></item><item><title>Git-Achievements on Windows</title><link>http://jmeridth.com/posts/git-achievements-on-windows/</link><pubDate>Sat, 25 Sep 2010 02:30:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-achievements-on-windows/</guid><description>&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: _Needed to add newly clone git-achievements to your PATH env variable.  Otherwise it will push an index.html file to your current repo and not the git-achievements repo.  Thank you &lt;em&gt;&lt;em&gt;&lt;a href="http://twitter.com/adymitruk" class="external-link" target="_blank" rel="noopener"&gt;Adam_&lt;/a&gt;&lt;/em&gt; for finding that.&lt;/em&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;cloned repository locally into my C:code folder (resulting in /c/code/git-achievements by Git Bash CLI path terms)&lt;/p&gt;</description></item><item><title>Git-Achievements on Windows</title><link>http://jmeridth.com/posts/git-achievements-on-windows/</link><pubDate>Sat, 25 Sep 2010 02:30:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-achievements-on-windows/</guid><description>&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: _Needed to add newly clone git-achievements to your PATH env variable.  Otherwise it will push an index.html file to your current repo and not the git-achievements repo.  Thank you &lt;em&gt;&lt;em&gt;&lt;a href="http://twitter.com/adymitruk" class="external-link" target="_blank" rel="noopener"&gt;Adam_&lt;/a&gt;&lt;/em&gt; for finding that.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;IMPORTANT:&lt;/strong&gt; &lt;em&gt;Make sure you save your ~/.git-achievements-action.log and ~/.git-achievements.log files if you are transferring from your primary machine.  If you make these files mobile you will be able to use multiple machines.  I forgot mine and now have to start over with git-achievements.  Meh.  More fun.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Gotcha with Gitosis and python-setuptools</title><link>http://jmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</link><pubDate>Wed, 26 May 2010 04:58:00 -0500</pubDate><guid>http://jmeridth.com/posts/gotcha-with-gitosis-and-python-setuptools/</guid><description>&lt;p&gt;Today I decided to upgrade my slicehost slice from Intrepid Ibex to Lucid Lynx (Intrepid → Jaunty → Karmic → Lucid). Yeah, yeah, I’m a little behind. Anyways, It upgraded just fine. However when I was trying to push code to my gitosis instance (which I installed over a year ago), I got the following stack trace:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/code/gitosis-admin&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; git pull origin master
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/code/gitosis-admin&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; git pull origin master
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/usr/bin/gitosis-serve:5: UserWarning: Unbuild egg &lt;span class="k"&gt;for&lt;/span&gt; setuptools &lt;span class="o"&gt;[&lt;/span&gt;unknown version&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;/usr/lib/python2.6&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; from pkg_resources import load_entry_point
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Traceback &lt;span class="o"&gt;(&lt;/span&gt;most recent call last&lt;span class="o"&gt;)&lt;/span&gt;:
@@ -78,7 +169,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; raise DistributionNotFound&lt;span class="o"&gt;(&lt;/span&gt;req&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pkg_resources.DistributionNotFound: &lt;span class="nv"&gt;gitosis&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.2
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;fatal: The remote end hung up unexpectedly
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This told me that I had been using python-setuptools for python 2.5. A little googling and praying that I wouldn’t have to roll back to the snapshot I took before I started the upgrade (Thank God!), I found the solution. I went onto the gitosis slice, cloned the gitosis repository:&lt;/p&gt;</description></item><item><title>Gitosis and Gitweb - Part 3</title><link>http://jmeridth.com/posts/gitosis-and-gitweb-part-3/</link><pubDate>Wed, 26 May 2010 04:45:00 -0500</pubDate><guid>http://jmeridth.com/posts/gitosis-and-gitweb-part-3/</guid><description>&lt;p&gt;&lt;a href="http://jmeridth.com/posts/gitosis-and-gitweb-part-1" &gt;Gitosis and Gitweb – Part 1&lt;/a&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This told me that I had been using python-setuptools for python 2.5. A little googling and praying that I wouldn’t have to roll back to the snapshot I took before I started the upgrade (Thank God!), I found the solution. I went onto the gitosis slice, cloned the gitosis repository:&lt;/p&gt;</description></item><item><title>Gitosis and Gitweb - Part 3</title><link>http://jmeridth.com/posts/gitosis-and-gitweb-part-3/</link><pubDate>Wed, 26 May 2010 04:45:00 -0500</pubDate><guid>http://jmeridth.com/posts/gitosis-and-gitweb-part-3/</guid><description>&lt;p&gt;&lt;a href="http://jmeridth.com/posts/gitosis-and-gitweb-part-1" &gt;Gitosis and Gitweb – Part 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://jmeridth.com/posts/gitosis-and-gitweb-part-2" &gt;Gitosis and Gitweb – Part 2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;So we are setup, have a project, and have contributors via the first 2 parts.&lt;/p&gt;
 &lt;p&gt;I know that we are all enamored by the UI of &lt;a href="http://github.com" class="external-link" target="_blank" rel="noopener"&gt;GitHub.com&lt;/a&gt;. I am. Unfortunately you can’t get private repositories for free (In all fairness it’s only $7/mo. – a &lt;em&gt;very&lt;/em&gt; wise investment). I am aware of &lt;a href="http://gitorious.com" class="external-link" target="_blank" rel="noopener"&gt;Gitorious&lt;/a&gt; like I mentioned in the first part, but I have no experience with that. I will after this series and update this series if I find it better. Again, I like to use the simplest thing that works. (Of course, “simplest” is in the eye of the beholder)&lt;/p&gt;</description></item><item><title>Gitosis and Gitweb - Part 2 - Add Projects and Contributors</title><link>http://jmeridth.com/posts/gitosis-and-gitweb-part-2/</link><pubDate>Tue, 25 May 2010 03:02:00 -0500</pubDate><guid>http://jmeridth.com/posts/gitosis-and-gitweb-part-2/</guid><description>&lt;p&gt;&lt;a href="http://jmeridth.com/posts/gitosis-and-gitweb-part-1" &gt;Gitosis and Gitweb – Part 1&lt;/a&gt;&lt;/p&gt;
@@ -91,20 +184,71 @@
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;If we issue the “find .” command locally inside the gitosis-admin directory we will see the following:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/gitosis-admin&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; find .
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/gitosis-admin&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; find .
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;a bunch of files from .git folder&lt;span class="o"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;./gitosis.conf
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;./keydir
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;./keydir/user@local.pub
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We have the .git folder, a gitosis.conf file, and a keydir with a pub key file.&lt;/p&gt;</description></item><item><title>Gitosis and Gitweb - Part 1 - Setup</title><link>http://jmeridth.com/posts/gitosis-and-gitweb-part-1/</link><pubDate>Tue, 25 May 2010 02:42:00 -0500</pubDate><guid>http://jmeridth.com/posts/gitosis-and-gitweb-part-1/</guid><description>&lt;p&gt;I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is &lt;a href="http://github.com" class="external-link" target="_blank" rel="noopener"&gt;Github.com&lt;/a&gt;. If they say, “private” I still say Github. If they don&amp;rsquo;t &lt;a href="http://github.com/security" class="external-link" target="_blank" rel="noopener"&gt;&amp;ldquo;trust&amp;rdquo; Github&lt;/a&gt;, which they should - click the link, then my response is &lt;a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary" class="external-link" target="_blank" rel="noopener"&gt;Gitosis&lt;/a&gt; and &lt;a href="http://git.wiki.kernel.org/index.php/Gitweb" class="external-link" target="_blank" rel="noopener"&gt;Gitweb&lt;/a&gt;. This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.&lt;/p&gt;</description></item><item><title>My "Git Branching and Workflows" presentation at Austin Code Camp 2010</title><link>http://jmeridth.com/posts/my-git-branching-and-workflows-presentation-at-austin-code-camp-2010/</link><pubDate>Mon, 24 May 2010 13:40:00 -0500</pubDate><guid>http://jmeridth.com/posts/my-git-branching-and-workflows-presentation-at-austin-code-camp-2010/</guid><description>&lt;p&gt;Thanks to &lt;a href="http://www.drowningintechnicaldebt.com/ShawnWeisfeld/Default.aspx" class="external-link" target="_blank" rel="noopener"&gt;Shawn Weisfeld&lt;/a&gt; for recording this presentation.  Enjoy.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;We have the .git folder, a gitosis.conf file, and a keydir with a pub key file.&lt;/p&gt;</description></item><item><title>Gitosis and Gitweb - Part 1 - Setup</title><link>http://jmeridth.com/posts/gitosis-and-gitweb-part-1/</link><pubDate>Tue, 25 May 2010 02:42:00 -0500</pubDate><guid>http://jmeridth.com/posts/gitosis-and-gitweb-part-1/</guid><description>&lt;p&gt;I’ve had a number of people ask me where they should host their Git repositories. Of course, my default question back is, “Can the code be public or does it need to be private?”. Usually they say, “public”. Therefore, my repsonse is &lt;a href="http://github.com" class="external-link" target="_blank" rel="noopener"&gt;Github.com&lt;/a&gt;. If they say, “private” I still say Github. If they don&amp;rsquo;t &lt;a href="http://github.com/security" class="external-link" target="_blank" rel="noopener"&gt;&amp;ldquo;trust&amp;rdquo; Github&lt;/a&gt;, which they should - click the link, then my response is &lt;a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary" class="external-link" target="_blank" rel="noopener"&gt;Gitosis&lt;/a&gt; and &lt;a href="http://git.wiki.kernel.org/index.php/Gitweb" class="external-link" target="_blank" rel="noopener"&gt;Gitweb&lt;/a&gt;. This is by no means the only solution. I’m aware of other ones like Gitorious. I’ve never used Gitorious.&lt;/p&gt;</description></item><item><title>My "Git Branching and Workflows" presentation at Austin Code Camp 2010</title><link>http://jmeridth.com/posts/my-git-branching-and-workflows-presentation-at-austin-code-camp-2010/</link><pubDate>Mon, 24 May 2010 13:40:00 -0500</pubDate><guid>http://jmeridth.com/posts/my-git-branching-and-workflows-presentation-at-austin-code-camp-2010/</guid><description>&lt;p&gt;Thanks to &lt;a href="http://www.drowningintechnicaldebt.com/ShawnWeisfeld/Default.aspx" class="external-link" target="_blank" rel="noopener"&gt;Shawn Weisfeld&lt;/a&gt; for recording this presentation.  Enjoy.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The video was previously hosted on blip.tv, which is no longer available.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Seeing which Git branch I'm on via my console prompt (__git_ps1)</title><link>http://jmeridth.com/posts/seeing-which-git-branch-i-m-on-via-my-console-prompt-git-ps1/</link><pubDate>Sun, 23 May 2010 02:55:00 -0500</pubDate><guid>http://jmeridth.com/posts/seeing-which-git-branch-i-m-on-via-my-console-prompt-git-ps1/</guid><description>&lt;p&gt;I like knowing which Git branch I’m currently in. I use the git-ps1 function feature that comes with git-core. If you clone or download the git source:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git://git.kernel.org/pub/scm/git/git.git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There is a file in the contrib/completion folder called git-prompt.sh:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/code/git/contrib/completion&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; ls
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git://git.kernel.org/pub/scm/git/git.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;There is a file in the contrib/completion folder called git-prompt.sh:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/code/git/contrib/completion&lt;span class="o"&gt;(&lt;/span&gt;master&lt;span class="o"&gt;)&lt;/span&gt; &amp;gt; ls
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;total &lt;span class="m"&gt;96&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;-rwxr-xr-x &lt;span class="m"&gt;1&lt;/span&gt; user staff 44K Apr &lt;span class="m"&gt;14&lt;/span&gt; 15:26 git-prompt.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I copy this file to my $HOME folder as .git-prompt.sh and then reference it and the ps1 propt feature in my .bashrc file&lt;/p&gt;</description></item><item><title>Pro Git Cliff Notes</title><link>http://jmeridth.com/posts/pro-git-cliff-notes/</link><pubDate>Mon, 05 Apr 2010 04:17:00 -0500</pubDate><guid>http://jmeridth.com/posts/pro-git-cliff-notes/</guid><description>&lt;p&gt;These are my notes from reading Scott Chacon’s &lt;a href="http://progit.org/book" class="external-link" target="_blank" rel="noopener"&gt;Pro Git&lt;/a&gt; I highly suggest &lt;a href="http://tinyurl.com/amazonprogit" class="external-link" target="_blank" rel="noopener"&gt;buying this book&lt;/a&gt; if you are serious about using the Git version control tool. &lt;a href="http://progit.org/book/ch3-1.html" class="external-link" target="_blank" rel="noopener"&gt;pg 48&lt;/a&gt; A branch in Git is simply a lightweight movable pointer &lt;a href="http://progit.org/book/ch3-1.html" class="external-link" target="_blank" rel="noopener"&gt;pg 50&lt;/a&gt; a special pointer called HEAD…is a pointer to the local branch you’re currently on &lt;a href="http://progit.org/book/ch3-1.html" class="external-link" target="_blank" rel="noopener"&gt;pg 52&lt;/a&gt; Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline). &lt;a href="http://progit.org/book/ch3-2.html" class="external-link" target="_blank" rel="noopener"&gt;pg 53&lt;/a&gt; To create a branch and switch to it at the same time…git checkout command with the -b switch &lt;a href="http://progit.org/book/ch3-3.html" class="external-link" target="_blank" rel="noopener"&gt;pg 61&lt;/a&gt; To see the last commit on each branch, you can run git branch -v &lt;a href="http://progit.org/book/ch3-5.html" class="external-link" target="_blank" rel="noopener"&gt;pg 69&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Git tracking branches</title><link>http://jmeridth.com/posts/git-tracking-branches/</link><pubDate>Tue, 23 Mar 2010 21:36:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-tracking-branches/</guid><description>&lt;p&gt;I have encountered this message multiple times when dealing with Git:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/code/blog/armmer.github.com(master) $ git pull
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I copy this file to my $HOME folder as .git-prompt.sh and then reference it and the ps1 propt feature in my .bashrc file&lt;/p&gt;</description></item><item><title>Pro Git Cliff Notes</title><link>http://jmeridth.com/posts/pro-git-cliff-notes/</link><pubDate>Mon, 05 Apr 2010 04:17:00 -0500</pubDate><guid>http://jmeridth.com/posts/pro-git-cliff-notes/</guid><description>&lt;p&gt;These are my notes from reading Scott Chacon’s &lt;a href="http://progit.org/book" class="external-link" target="_blank" rel="noopener"&gt;Pro Git&lt;/a&gt; I highly suggest &lt;a href="http://tinyurl.com/amazonprogit" class="external-link" target="_blank" rel="noopener"&gt;buying this book&lt;/a&gt; if you are serious about using the Git version control tool. &lt;a href="http://progit.org/book/ch3-1.html" class="external-link" target="_blank" rel="noopener"&gt;pg 48&lt;/a&gt; A branch in Git is simply a lightweight movable pointer &lt;a href="http://progit.org/book/ch3-1.html" class="external-link" target="_blank" rel="noopener"&gt;pg 50&lt;/a&gt; a special pointer called HEAD…is a pointer to the local branch you’re currently on &lt;a href="http://progit.org/book/ch3-1.html" class="external-link" target="_blank" rel="noopener"&gt;pg 52&lt;/a&gt; Creating a new branch is as quick and simple as writing 41 bytes to a file (40 characters and a newline). &lt;a href="http://progit.org/book/ch3-2.html" class="external-link" target="_blank" rel="noopener"&gt;pg 53&lt;/a&gt; To create a branch and switch to it at the same time…git checkout command with the -b switch &lt;a href="http://progit.org/book/ch3-3.html" class="external-link" target="_blank" rel="noopener"&gt;pg 61&lt;/a&gt; To see the last commit on each branch, you can run git branch -v &lt;a href="http://progit.org/book/ch3-5.html" class="external-link" target="_blank" rel="noopener"&gt;pg 69&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Git tracking branches</title><link>http://jmeridth.com/posts/git-tracking-branches/</link><pubDate>Tue, 23 Mar 2010 21:36:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-tracking-branches/</guid><description>&lt;p&gt;I have encountered this message multiple times when dealing with Git:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;~/code/blog/armmer.github.com(master) $ git pull
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;You asked me to pull without telling me which branch you
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;want to merge with, and &amp;#39;branch.master.merge&amp;#39; in
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;your configuration file does not tell me, either. Please
@@ -124,24 +268,52 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; fetch =
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;See git-config(1) for details.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and I’ve been waiting for it again so that I can blog about it. What this means is that the local master branch of my github pages repository is not tracking a remote branch. The quickest way to get around this would be for me to explicitly state the remote name and branch:&lt;/p&gt;</description></item><item><title>Git reset, checkout &amp; "bare double dash", and revert</title><link>http://jmeridth.com/posts/git-reset-checkout-bare-double-dash-revert/</link><pubDate>Tue, 23 Mar 2010 21:29:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-reset-checkout-bare-double-dash-revert/</guid><description>&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: Please make sure to read Alexander&amp;rsquo;s comments on &lt;code&gt;git rebase --interactive&lt;/code&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;and I’ve been waiting for it again so that I can blog about it. What this means is that the local master branch of my github pages repository is not tracking a remote branch. The quickest way to get around this would be for me to explicitly state the remote name and branch:&lt;/p&gt;</description></item><item><title>Git reset, checkout &amp; "bare double dash", and revert</title><link>http://jmeridth.com/posts/git-reset-checkout-bare-double-dash-revert/</link><pubDate>Tue, 23 Mar 2010 21:29:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-reset-checkout-bare-double-dash-revert/</guid><description>&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: Please make sure to read Alexander&amp;rsquo;s comments on &lt;code&gt;git rebase --interactive&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: If you need to unstage a file prior to your first commit:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git rm --cached filename
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Thanks to &lt;a href="http://schambers.lostechies.com" class="external-link" target="_blank" rel="noopener"&gt;Sean Chambers&lt;/a&gt; for tweeting about &lt;a href="http://twitter.com/schambers/status/11005630400" class="external-link" target="_blank" rel="noopener"&gt;this&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git rm --cached filename
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Thanks to &lt;a href="http://schambers.lostechies.com" class="external-link" target="_blank" rel="noopener"&gt;Sean Chambers&lt;/a&gt; for tweeting about &lt;a href="http://twitter.com/schambers/status/11005630400" class="external-link" target="_blank" rel="noopener"&gt;this&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Some of the common questions I get are about how to reset or revert changes in Git. There are two typical scenarios you have to deal with. One is if you haven’t committed the code yet. The other is if you &lt;em&gt;have&lt;/em&gt; committed the code.&lt;/p&gt;</description></item><item><title>Refspec matches more than one</title><link>http://jmeridth.com/posts/refspec-matches-more-than-one/</link><pubDate>Sat, 27 Feb 2010 19:31:00 -0600</pubDate><guid>http://jmeridth.com/posts/refspec-matches-more-than-one/</guid><description>&lt;p&gt;I was trying to push to a canonical repository this morning and got the following error:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ git push origin master
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ git push origin master
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;error: src refspec master matches more than one.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;ssh://user@host/srv/git/repo&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This happened because I had accidentally created a master tag locally:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ git tag
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This happened because I had accidentally created a master tag locally:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ git tag
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;master
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tag1
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tag2
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tag3
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tag4
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once I deleted the tag locally:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tag -d master
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I was able to push again.&lt;/p&gt;</description></item><item><title>Suspicious Patch Lines</title><link>http://jmeridth.com/posts/suspicious-patch-lines/</link><pubDate>Sat, 27 Feb 2010 19:21:00 -0600</pubDate><guid>http://jmeridth.com/posts/suspicious-patch-lines/</guid><description>&lt;p&gt;DISCLAIMER: This is &lt;em&gt;only&lt;/em&gt; relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Once I deleted the tag locally:&lt;/p&gt;</description></item><item><title>Suspicious Patch Lines</title><link>http://jmeridth.com/posts/suspicious-patch-lines/</link><pubDate>Sat, 27 Feb 2010 19:21:00 -0600</pubDate><guid>http://jmeridth.com/posts/suspicious-patch-lines/</guid><description>&lt;p&gt;DISCLAIMER: This is &lt;em&gt;only&lt;/em&gt; relevant if you or someone contributing to your project are doing cross-platform development. If you are typically just developing on Windows, you should be able to keep the config options set to false.&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;
  The Problem
  &lt;a class="heading-link" href="#the-problem"&gt;
@@ -150,16 +322,31 @@
  &lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;While trying to commit changes to a file I have under source control with Git on a Windows box using cygwin, I received the following error:&lt;/p&gt;</description></item><item><title>git instaweb</title><link>http://jmeridth.com/posts/git-instaweb/</link><pubDate>Sun, 27 Sep 2009 00:53:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-instaweb/</guid><description>&lt;p&gt;I was reading &lt;a href="http://progit.org/book/ch4-6.html" class="external-link" target="_blank" rel="noopener"&gt;&amp;ldquo;Pro Git&amp;rdquo; by Scott Chacon&lt;/a&gt; and was on the section about &amp;ldquo;git instaweb&amp;rdquo;. This is where you can run gitweb, a cgi script that comes with git, locally or on a server. I have successfully gotten gitweb up for my personal git repos on my remote server. I use it all the time. I was curious if I could get it working locally, for friends who prefer a visual tool to see their git logs, commits, etc. I cd into a local repo (you have to cd into the .git folder of the app to get the desired view):&lt;/p&gt;</description></item><item><title>'git commit -a' and 'git add'</title><link>http://jmeridth.com/posts/git-commit-a-and-git-add/</link><pubDate>Thu, 10 Sep 2009 17:07:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-commit-a-and-git-add/</guid><description>&lt;p&gt;I&amp;rsquo;ve heard or read too many git blog posts/pod casts state that if you create a new file in your local Git repo and you want to shorten the steps on getting it added to the local repository, all you have to do is:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git commit -am &lt;span class="s2"&gt;&amp;#34;my commit message&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is &lt;em&gt;not&lt;/em&gt; true. If the file has never been added to the repo prior, then you still have to:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git add &amp;lt;file_name&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Why?&lt;/p&gt;</description></item><item><title>Git local pre-commit hook</title><link>http://jmeridth.com/posts/git-local-pre-commit-hook/</link><pubDate>Thu, 10 Sep 2009 16:47:21 -0500</pubDate><guid>http://jmeridth.com/posts/git-local-pre-commit-hook/</guid><description>&lt;p&gt;I&amp;rsquo;ve personally added a pre-commit hook to my local git repos. It&amp;rsquo;s like a personal CI before I push back to origin/master. I run my tests locally anyway before committing and pushing, so I thought I would automate it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git commit -am &lt;span class="s2"&gt;&amp;#34;my commit message&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This is &lt;em&gt;not&lt;/em&gt; true. If the file has never been added to the repo prior, then you still have to:&lt;/p&gt;</description></item><item><title>Git local pre-commit hook</title><link>http://jmeridth.com/posts/git-local-pre-commit-hook/</link><pubDate>Thu, 10 Sep 2009 16:47:21 -0500</pubDate><guid>http://jmeridth.com/posts/git-local-pre-commit-hook/</guid><description>&lt;p&gt;I&amp;rsquo;ve personally added a pre-commit hook to my local git repos. It&amp;rsquo;s like a personal CI before I push back to origin/master. I run my tests locally anyway before committing and pushing, so I thought I would automate it.&lt;/p&gt;
 &lt;p&gt;I open the .git/hooks/pre-commit file in my local repo (i.e, full path is something like /Users/jasonmeridth/code/rails/myapp/.git/hooks/pre-commit) and put the following:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/sh
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#!/bin/sh
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake db:migrate
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake db:test:prepare
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;rake
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For non-rails developers, this will run any database migrations on my _development database, then ensure the_test database has the same schema, and then runs the tests.&lt;/p&gt;</description></item><item><title>Git Post-receive hook with integrity post call</title><link>http://jmeridth.com/posts/git-post-receive-hook-with-integrity-post-call/</link><pubDate>Fri, 17 Jul 2009 05:01:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-post-receive-hook-with-integrity-post-call/</guid><description>&lt;p&gt;Using the following code:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For non-rails developers, this will run any database migrations on my _development database, then ensure the_test database has the same schema, and then runs the tests.&lt;/p&gt;</description></item><item><title>Git Post-receive hook with integrity post call</title><link>http://jmeridth.com/posts/git-post-receive-hook-with-integrity-post-call/</link><pubDate>Fri, 17 Jul 2009 05:01:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-post-receive-hook-with-integrity-post-call/</guid><description>&lt;p&gt;Using the following code:&lt;/p&gt;
 &lt;p&gt;This git post-receive hook script queries the latest commit, gets the revision changes, and then passes that payload (via json) to a net/https POST call. I setup our &lt;a href="http://www.integrityapp.com/" class="external-link" target="_blank" rel="noopener"&gt;Integrity CI server&lt;/a&gt; with a self-signed certificate and HTTP basic authentication.&lt;/p&gt;
 &lt;p&gt;The Net::HTTP::Post.new instantiation group handles populating the basic authentication information and putting the payload into the form data of the request. The Net::HTTP.new group handles telling the request that it will be via SSL (443) and to not verify the SSL certificate (since I&amp;rsquo;m using a self-signed certificate; otherwise, I&amp;rsquo;d get a warning and kill my automation process)&lt;/p&gt;</description></item><item><title>Git For Windows Developers – Git Series – Part 4</title><link>http://jmeridth.com/posts/git-for-windows-developers-git-series-part-4/</link><pubDate>Sat, 20 Jun 2009 04:15:00 -0500</pubDate><guid>http://jmeridth.com/posts/git-for-windows-developers-git-series-part-4/</guid><description>&lt;h2 id="rough-draft---not-ready-for-release-or-review"&gt;
  ROUGH DRAFT - NOT READY FOR RELEASE OR REVIEW
@@ -188,7 +375,23 @@
 &lt;p&gt;&lt;a href="http://jmeridth.com/posts/git-for-windows-developers-git-series-part-1" &gt;Git For Windows Developers - Git Series - Part 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://jmeridth.com/posts/git-for-windows-developers-git-series-part-2" &gt;Git For Windows Developers - Git Series - Part 2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://jmeridth.com/posts/git-for-windows-developers-git-series-part-3" &gt;Git For Windows Developers - Git Series - Part 3&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Adding a git post-receive hook to fire off Hudson CI server</title><link>http://jmeridth.com/posts/adding-a-git-post-receive-hook-to-fire-off-hudson-ci-server/</link><pubDate>Tue, 24 Mar 2009 18:07:00 -0500</pubDate><guid>http://jmeridth.com/posts/adding-a-git-post-receive-hook-to-fire-off-hudson-ci-server/</guid><description>&lt;p&gt;UPDATE: guard clause throws LocalJumpError. Changed to simple if block Context: I needed our hudson CI builds to auto-fire when a developer pushes their code changes to our canonical/upstream git repositories. In your .git/hooks/post-receive file place the file code (FULL CODE):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ruby" data-lang="ruby"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="ch"&gt;#!/usr/bin/env ruby&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ruby" data-lang="ruby"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="ch"&gt;#!/usr/bin/env ruby&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;STDIN&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;rev_old&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rev_new&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ref&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;input&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -200,11 +403,28 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="sb"&gt;`wget &lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="sb"&gt; &amp;gt; /dev/null 2&amp;gt;&amp;amp;1`&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;EXPLAINING EACH LINE: I avoid writing bash scripts in default bash if I can. This is for a Ruby on Rails app, so I decided to write it in Ruby.&lt;/p&gt;</description></item><item><title>Gitosis and a non-standard SSH port</title><link>http://jmeridth.com/posts/gitosis-and-a-non-standard-ssh-port/</link><pubDate>Fri, 13 Feb 2009 19:44:00 -0600</pubDate><guid>http://jmeridth.com/posts/gitosis-and-a-non-standard-ssh-port/</guid><description>&lt;p&gt;I recently installed &lt;a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary" class="external-link" target="_blank" rel="noopener"&gt;gitosis&lt;/a&gt;, a free way to host your own git repositories, and I am using a non-standard port (not 22). I tried to clone the gitosis-admin repository and it timed-out. Learned via &lt;a href="http://mechanicalrobotfish.com/posts/119-installing-git-server-using-gitosis" class="external-link" target="_blank" rel="noopener"&gt;this post&lt;/a&gt; that I needed to create a config file under my .ssh folder in my home directory that listed the Host and Port. Example ~/.ssh/config:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host git.mydomain.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;EXPLAINING EACH LINE: I avoid writing bash scripts in default bash if I can. This is for a Ruby on Rails app, so I decided to write it in Ruby.&lt;/p&gt;</description></item><item><title>Gitosis and a non-standard SSH port</title><link>http://jmeridth.com/posts/gitosis-and-a-non-standard-ssh-port/</link><pubDate>Fri, 13 Feb 2009 19:44:00 -0600</pubDate><guid>http://jmeridth.com/posts/gitosis-and-a-non-standard-ssh-port/</guid><description>&lt;p&gt;I recently installed &lt;a href="http://eagain.net/gitweb/?p=gitosis.git;a=summary" class="external-link" target="_blank" rel="noopener"&gt;gitosis&lt;/a&gt;, a free way to host your own git repositories, and I am using a non-standard port (not 22). I tried to clone the gitosis-admin repository and it timed-out. Learned via &lt;a href="http://mechanicalrobotfish.com/posts/119-installing-git-server-using-gitosis" class="external-link" target="_blank" rel="noopener"&gt;this post&lt;/a&gt; that I needed to create a config file under my .ssh folder in my home directory that listed the Host and Port. Example ~/.ssh/config:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Host git.mydomain.com
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Port 30000
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When I do this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone git-user@git.mydomain.com:gitosis-admin.git
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;it will then use my non-standard port to clone the gitosis repository. I hadn&amp;rsquo;t done this before. Good to know.&lt;/p&gt;</description></item><item><title>Personal CI history and Hudson CI as service on Ubuntu/Debian</title><link>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</link><pubDate>Fri, 16 Jan 2009 04:08:00 -0600</pubDate><guid>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</guid><description>&lt;p&gt;&lt;em&gt;UPDATE: CruiseControl.rb does have Git support from&lt;a href="//github.com/benburkert/cruisecontrolrb.git" class="external-link" target="_blank" rel="noopener"&gt;git://github.com/benburkert/cruisecontrolrb.git.&lt;/a&gt; Thank you Jeremy for the heads&amp;rsquo; up (comment below)&lt;/em&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;When I do this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git clone git-user@git.mydomain.com:gitosis-admin.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;it will then use my non-standard port to clone the gitosis repository. I hadn&amp;rsquo;t done this before. Good to know.&lt;/p&gt;</description></item><item><title>Personal CI history and Hudson CI as service on Ubuntu/Debian</title><link>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</link><pubDate>Fri, 16 Jan 2009 04:08:00 -0600</pubDate><guid>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</guid><description>&lt;p&gt;&lt;em&gt;UPDATE: CruiseControl.rb does have Git support from&lt;a href="//github.com/benburkert/cruisecontrolrb.git" class="external-link" target="_blank" rel="noopener"&gt;git://github.com/benburkert/cruisecontrolrb.git.&lt;/a&gt; Thank you Jeremy for the heads&amp;rsquo; up (comment below)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;CI == &lt;a href="http://martinfowler.com/articles/continuousIntegration.html" class="external-link" target="_blank" rel="noopener"&gt;Continous Integration&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I personally enjoy watching a team hear the Mortal Kombat voice yell &amp;ldquo;Fatality&amp;rdquo; when a build fails and see them all go to the web dashboard, be it CruiseControl.NET or TeamCity, and watch one of them say out loud what the problem was and claim the task of fixing it or checking with the developer who did the last check-in and give them a chance to fix it.  Sorry, I&amp;rsquo;m reminiscing about my development team at Wachovia (formerly World Savings).&lt;/p&gt;</description></item></channel></rss>

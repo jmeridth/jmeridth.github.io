@@ -3,20 +3,65 @@
 &lt;p&gt;&lt;img src="http://jmeridth.com/img/wat.png" alt="wat"&gt;&lt;/p&gt;</description></item><item><title>Docker Daemon Error When Running Docker Compose</title><link>http://jmeridth.com/posts/docker-daemon-error-when-running-docker-compose/</link><pubDate>Tue, 02 Jan 2018 12:11:00 -0600</pubDate><guid>http://jmeridth.com/posts/docker-daemon-error-when-running-docker-compose/</guid><description>&lt;p&gt;&lt;img src="http://jmeridth.com/img/why-docker-why-i-just-want-to-deploy.jpg" alt="docker why"&gt;&lt;/p&gt;
 &lt;p&gt;TL;DR Make sure you don&amp;rsquo;t have any old mounted volumes around if you see the error below.&lt;/p&gt;
 &lt;p&gt;I just got the following error when trying to run &lt;code&gt;docker-compose up -d&lt;/code&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ERROR: Couldn&lt;span class="s1"&gt;&amp;#39;t connect to Docker daemon at http+docker://localunixsocket
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;ERROR: Couldn&lt;span class="s1"&gt;&amp;#39;t connect to Docker daemon at http+docker://localunixsocket
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;- is it running?
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;If it&amp;#39;&lt;/span&gt;s at a non-standard location,
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;specify the URL with the DOCKER_HOST environment variable.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Please note I have a database using a mounted volume. The issue was that the previous mount was still present. Once I deleted that, &lt;code&gt;docker-compose up -d&lt;/code&gt; would work jut fine.&lt;/p&gt;</description></item><item><title>Ubuntu - set caps lock to escape</title><link>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</link><pubDate>Wed, 22 Nov 2017 10:05:00 -0600</pubDate><guid>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</guid><description>&lt;p&gt;I just got a new laptop and had to google again on how to set caps lock key to escape (I&amp;rsquo;m a Vim user).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install dconf-tools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Please note I have a database using a mounted volume. The issue was that the previous mount was still present. Once I deleted that, &lt;code&gt;docker-compose up -d&lt;/code&gt; would work jut fine.&lt;/p&gt;</description></item><item><title>Ubuntu - set caps lock to escape</title><link>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</link><pubDate>Wed, 22 Nov 2017 10:05:00 -0600</pubDate><guid>http://jmeridth.com/posts/ubuntu-set-caps-lock-to-escape/</guid><description>&lt;p&gt;I just got a new laptop and had to google again on how to set caps lock key to escape (I&amp;rsquo;m a Vim user).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install dconf-tools
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;dconf write /org/gnome/desktop/input-sources/xkb-options &lt;span class="s2"&gt;&amp;#34;[&amp;#39;caps:escape&amp;#39;]&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To know your options, use the following command:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;To know your options, use the following command:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;man xkeyboard-config&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;(MAN pages are your friend; man is short for manual)&lt;/p&gt;
 &lt;p&gt;You can also now use the &lt;code&gt;Dconf&lt;/code&gt; GUI editor if you must (SHAME! ;) )&lt;/p&gt;
 &lt;p&gt;Type &lt;code&gt;Dconf&lt;/code&gt; in Unity or Gnome app opener and go to the following location:&lt;/p&gt;</description></item><item><title>Information Shown After Logging Into Ubuntu</title><link>http://jmeridth.com/posts/information-shown-after-logging-into-ubuntu/</link><pubDate>Sun, 03 Jul 2016 08:58:00 -0500</pubDate><guid>http://jmeridth.com/posts/information-shown-after-logging-into-ubuntu/</guid><description>&lt;p&gt;Afer you log into an ubuntu instance you&amp;rsquo;ll usually see something like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-88-generic x86_64)
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-88-generic x86_64)
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; * Documentation: https://help.ubuntu.com/
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
@@ -38,12 +83,47 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Last login: Fri Jul 1 21:17:15 2016 from 1.2.3.4
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I have logged into many ubuntu servers in my time and today I finally looked up how the information that displays gets generated and displayed. I&amp;rsquo;ve used &lt;code&gt;/etc/motd&lt;/code&gt; aka &lt;code&gt;message of the day&lt;/code&gt; many times before but I noticed tha file doesn&amp;rsquo;t exist in a vanilla Ubuntu install. There are two main commands that are populating the information shown at login.&lt;/p&gt;</description></item><item><title>Getting a Canon MX450 Series Working With Ubuntu 14.04</title><link>http://jmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/</link><pubDate>Thu, 08 Jan 2015 21:03:55 -0600</pubDate><guid>http://jmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/</guid><description>&lt;p&gt;Today I needed to scan something on my Canon MX450 series printer from my laptop running Ubuntu 14.04 LTS. I had already setup the printer portion successfully with the built in network printer detection, but hadn&amp;rsquo;t done the scanning portion. I found out I needed to download a deb file and install something called scangearmp to get this to work. The download button can be found &lt;a href="http://support-sg.canon-asia.com/contents/SG/EN/0100517701.html" class="external-link" target="_blank" rel="noopener"&gt;here&lt;/a&gt;. As of this post I&amp;rsquo;ve download version 2.10 which was last updated on 14-Feb-2013, Issue Number 0100517701. Once downloaded issue the following commands:&lt;/p&gt;</description></item><item><title>Restarting Audio in Ubuntu After Issues</title><link>http://jmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/</link><pubDate>Thu, 08 Jan 2015 11:12:14 -0600</pubDate><guid>http://jmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/</guid><description>&lt;p&gt;The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pulseaudio -k &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo alsa force-reload
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Credit to: &lt;a href="http://askubuntu.com/a/230893" class="external-link" target="_blank" rel="noopener"&gt;http://askubuntu.com/a/230893&lt;/a&gt;&lt;/p&gt;</description></item><item><title>I Finally Have Linux As My Native OS</title><link>http://jmeridth.com/posts/i-finally-have-linux-as-my-native-os/</link><pubDate>Wed, 07 Jan 2015 17:27:13 -0600</pubDate><guid>http://jmeridth.com/posts/i-finally-have-linux-as-my-native-os/</guid><description>&lt;p&gt;I finally replaced OSX on my Mac with Ubuntu 14.04 LTS. Out of the box I&amp;rsquo;ve had no issues. Wireless, VPN, Terminal, Dropbox, Google Drive, LastPass, etc all work. I was spending more time in my &lt;a href="https://www.vagrantup.com/" class="external-link" target="_blank" rel="noopener"&gt;Vagrant&lt;/a&gt; VMs with OSX anyway. Loved &lt;a href="https://www.virtualbox.org/" class="external-link" target="_blank" rel="noopener"&gt;VirtualBox&lt;/a&gt; + Vagrant. Never had an issue. I just wasn&amp;rsquo;t using any portion of OSX. It is nice to troubleshoot any issues and tweak my setup. I&amp;rsquo;m getting used to Unity and may drop it for Gnome3 and Gnome-Do. We&amp;rsquo;ll see. Any new things I troubleshoot or find, I&amp;rsquo;ll post on.&lt;/p&gt;</description></item><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://jmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><description>&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install postgresql libpq-dev
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html" class="external-link" target="_blank" rel="noopener"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;</description></item><item><title>Set VIM as Default Editor</title><link>http://jmeridth.com/posts/set-vim-as-default-editor/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/set-vim-as-default-editor/</guid><description>&lt;p&gt;Environment: Ubuntu&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo update-alternatives --config editor
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I have logged into many ubuntu servers in my time and today I finally looked up how the information that displays gets generated and displayed. I&amp;rsquo;ve used &lt;code&gt;/etc/motd&lt;/code&gt; aka &lt;code&gt;message of the day&lt;/code&gt; many times before but I noticed tha file doesn&amp;rsquo;t exist in a vanilla Ubuntu install. There are two main commands that are populating the information shown at login.&lt;/p&gt;</description></item><item><title>Getting a Canon MX450 Series Working With Ubuntu 14.04</title><link>http://jmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/</link><pubDate>Thu, 08 Jan 2015 21:03:55 -0600</pubDate><guid>http://jmeridth.com/posts/getting-a-canon-mx450-series-working-with-ubuntu-1404/</guid><description>&lt;p&gt;Today I needed to scan something on my Canon MX450 series printer from my laptop running Ubuntu 14.04 LTS. I had already setup the printer portion successfully with the built in network printer detection, but hadn&amp;rsquo;t done the scanning portion. I found out I needed to download a deb file and install something called scangearmp to get this to work. The download button can be found &lt;a href="http://support-sg.canon-asia.com/contents/SG/EN/0100517701.html" class="external-link" target="_blank" rel="noopener"&gt;here&lt;/a&gt;. As of this post I&amp;rsquo;ve download version 2.10 which was last updated on 14-Feb-2013, Issue Number 0100517701. Once downloaded issue the following commands:&lt;/p&gt;</description></item><item><title>Restarting Audio in Ubuntu After Issues</title><link>http://jmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/</link><pubDate>Thu, 08 Jan 2015 11:12:14 -0600</pubDate><guid>http://jmeridth.com/posts/restarting-audio-in-ubuntu-after-issues/</guid><description>&lt;p&gt;The following command restarted audio for me in Ubuntu after my microphone on my headphones stopped working.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pulseaudio -k &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo alsa force-reload
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Credit to: &lt;a href="http://askubuntu.com/a/230893" class="external-link" target="_blank" rel="noopener"&gt;http://askubuntu.com/a/230893&lt;/a&gt;&lt;/p&gt;</description></item><item><title>I Finally Have Linux As My Native OS</title><link>http://jmeridth.com/posts/i-finally-have-linux-as-my-native-os/</link><pubDate>Wed, 07 Jan 2015 17:27:13 -0600</pubDate><guid>http://jmeridth.com/posts/i-finally-have-linux-as-my-native-os/</guid><description>&lt;p&gt;I finally replaced OSX on my Mac with Ubuntu 14.04 LTS. Out of the box I&amp;rsquo;ve had no issues. Wireless, VPN, Terminal, Dropbox, Google Drive, LastPass, etc all work. I was spending more time in my &lt;a href="https://www.vagrantup.com/" class="external-link" target="_blank" rel="noopener"&gt;Vagrant&lt;/a&gt; VMs with OSX anyway. Loved &lt;a href="https://www.virtualbox.org/" class="external-link" target="_blank" rel="noopener"&gt;VirtualBox&lt;/a&gt; + Vagrant. Never had an issue. I just wasn&amp;rsquo;t using any portion of OSX. It is nice to troubleshoot any issues and tweak my setup. I&amp;rsquo;m getting used to Unity and may drop it for Gnome3 and Gnome-Do. We&amp;rsquo;ll see. Any new things I troubleshoot or find, I&amp;rsquo;ll post on.&lt;/p&gt;</description></item><item><title>Install and Setup PostgreSQL on New Ubuntu VM</title><link>http://jmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/install-and-setup-postgresql-on-new-ubuntu-vm/</guid><description>&lt;p&gt;Install PostgresSQL and the dev package:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install postgresql libpq-dev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Reference &lt;a href="http://blog.jasonmeridth.com/postgresql-cheat-sheet.html" class="external-link" target="_blank" rel="noopener"&gt;Cheat Sheet&lt;/a&gt; after installation&lt;/p&gt;</description></item><item><title>Set VIM as Default Editor</title><link>http://jmeridth.com/posts/set-vim-as-default-editor/</link><pubDate>Wed, 06 Mar 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/set-vim-as-default-editor/</guid><description>&lt;p&gt;Environment: Ubuntu&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo update-alternatives --config editor
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;OUTPUT:
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are &lt;span class="m"&gt;4&lt;/span&gt; choices &lt;span class="k"&gt;for&lt;/span&gt; the alternative editor &lt;span class="o"&gt;(&lt;/span&gt;providing /usr/bin/editor&lt;span class="o"&gt;)&lt;/span&gt;.
@@ -58,29 +138,97 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Press enter to keep the current choice&lt;span class="o"&gt;[&lt;/span&gt;*&lt;span class="o"&gt;]&lt;/span&gt;, or &lt;span class="nb"&gt;type&lt;/span&gt; selection number: &lt;span class="m"&gt;3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor &lt;span class="o"&gt;(&lt;/span&gt;editor&lt;span class="o"&gt;)&lt;/span&gt; in manual mode
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://jmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><pubDate>Thu, 21 Feb 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</guid><description>&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo visudo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add or edit the following line to be:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;%sudo &lt;span class="nv"&gt;ALL&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;ALL&lt;span class="o"&gt;)&lt;/span&gt; NOPASSWD: ALL
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will prevent password prompts for everyone in the sudo group (%sudo) when issuing all commands (NOPASSWD: ALL)&lt;/p&gt;</description></item><item><title>Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks</title><link>http://jmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</link><pubDate>Tue, 05 Feb 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</guid><description>&lt;p&gt;TL;DR&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo dhclient -r &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&lt;/span&gt; sudo dhclient &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I add that command as an alias to my ~/.bashrc file&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;resetdhcp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sudo dhclient -r eth0 &amp;amp;amp;&amp;amp;amp; sudo dhclient eth0&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;then resourced it so I could use it in the bash session I was in&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/.bashrc
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I constantly have my Ubuntu VM (VirtualBox) running on my Windows laptop and dock/undock it between work and home. Obviously those are two different wireless networks. Well, I was unable to find a dhcp renewal command that would work until today (look above).&lt;/p&gt;</description></item><item><title>Testing Mail From the Command Line on Ubuntu</title><link>http://jmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</link><pubDate>Wed, 19 Sep 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</guid><description>&lt;p&gt;Install mailutils&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install mailutils
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Send some test piped into the mail command&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;testing&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; mail -s Test user@emailhost.com
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check the email address listed above&lt;/p&gt;</description></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</link><pubDate>Wed, 11 Jul 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</guid><description>&lt;p&gt;Whenever you do&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install git-core
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;on Ubuntu you will only get git version 1.7.5.x. I needed 1.7.6%2B.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>No More Password Prompts When Issuing Sudo Commands</title><link>http://jmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</link><pubDate>Thu, 21 Feb 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/no-more-password-prompts-when-issuing-sudo-commands/</guid><description>&lt;p&gt;Edit the sudoers file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo visudo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Add or edit the following line to be:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;%sudo &lt;span class="nv"&gt;ALL&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;ALL&lt;span class="o"&gt;)&lt;/span&gt; NOPASSWD: ALL
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This will prevent password prompts for everyone in the sudo group (%sudo) when issuing all commands (NOPASSWD: ALL)&lt;/p&gt;</description></item><item><title>Renew DHCP Lease on Ubuntu VM After Moving Between Wireless Networks</title><link>http://jmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</link><pubDate>Tue, 05 Feb 2013 00:00:00 -0600</pubDate><guid>http://jmeridth.com/posts/renew-dhcp-lease-on-ubuntu-vm-after-moving-between-wireless-networks/</guid><description>&lt;p&gt;TL;DR&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo dhclient -r &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&amp;amp;&lt;/span&gt;amp&lt;span class="p"&gt;;&lt;/span&gt; sudo dhclient &lt;span class="o"&gt;[&lt;/span&gt;eth0&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I add that command as an alias to my ~/.bashrc file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;resetdhcp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sudo dhclient -r eth0 &amp;amp;amp;&amp;amp;amp; sudo dhclient eth0&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;then resourced it so I could use it in the bash session I was in&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;source&lt;/span&gt; ~/.bashrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;I constantly have my Ubuntu VM (VirtualBox) running on my Windows laptop and dock/undock it between work and home. Obviously those are two different wireless networks. Well, I was unable to find a dhcp renewal command that would work until today (look above).&lt;/p&gt;</description></item><item><title>Testing Mail From the Command Line on Ubuntu</title><link>http://jmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</link><pubDate>Wed, 19 Sep 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/testing-mail-from-the-command-line-on-ubuntu/</guid><description>&lt;p&gt;Install mailutils&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install mailutils
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Send some test piped into the mail command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;testing&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; mail -s Test user@emailhost.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Check the email address listed above&lt;/p&gt;</description></item><item><title>Using Latest Version of Git on Ubuntu</title><link>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</link><pubDate>Wed, 11 Jul 2012 00:00:00 -0500</pubDate><guid>http://jmeridth.com/posts/using-latest-version-of-git-on-ubuntu/</guid><description>&lt;p&gt;Whenever you do&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install git-core
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;on Ubuntu you will only get git version 1.7.5.x. I needed 1.7.6%2B.&lt;/p&gt;
 &lt;p&gt;To do this you have to run the following commands:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install software-properties-common python-software-properties
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install software-properties-common python-software-properties
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo add-apt-repository ppa:git-core/ppa
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get update
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install git-core
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This should give you git version 1.7.11 (as of today)&lt;/p&gt;</description></item><item><title>Personal CI history and Hudson CI as service on Ubuntu/Debian</title><link>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</link><pubDate>Fri, 16 Jan 2009 04:08:00 -0600</pubDate><guid>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</guid><description>&lt;p&gt;&lt;em&gt;UPDATE: CruiseControl.rb does have Git support from&lt;a href="//github.com/benburkert/cruisecontrolrb.git" class="external-link" target="_blank" rel="noopener"&gt;git://github.com/benburkert/cruisecontrolrb.git.&lt;/a&gt; Thank you Jeremy for the heads&amp;rsquo; up (comment below)&lt;/em&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This should give you git version 1.7.11 (as of today)&lt;/p&gt;</description></item><item><title>Personal CI history and Hudson CI as service on Ubuntu/Debian</title><link>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</link><pubDate>Fri, 16 Jan 2009 04:08:00 -0600</pubDate><guid>http://jmeridth.com/posts/continuous-integration-for-a-ruby-project-or-net-java-etc/</guid><description>&lt;p&gt;&lt;em&gt;UPDATE: CruiseControl.rb does have Git support from&lt;a href="//github.com/benburkert/cruisecontrolrb.git" class="external-link" target="_blank" rel="noopener"&gt;git://github.com/benburkert/cruisecontrolrb.git.&lt;/a&gt; Thank you Jeremy for the heads&amp;rsquo; up (comment below)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;CI == &lt;a href="http://martinfowler.com/articles/continuousIntegration.html" class="external-link" target="_blank" rel="noopener"&gt;Continous Integration&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I personally enjoy watching a team hear the Mortal Kombat voice yell &amp;ldquo;Fatality&amp;rdquo; when a build fails and see them all go to the web dashboard, be it CruiseControl.NET or TeamCity, and watch one of them say out loud what the problem was and claim the task of fixing it or checking with the developer who did the last check-in and give them a chance to fix it.  Sorry, I&amp;rsquo;m reminiscing about my development team at Wachovia (formerly World Savings).&lt;/p&gt;</description></item><item><title>Gnome-Do (aka Quick Silver for Ubuntu)</title><link>http://jmeridth.com/posts/gnome-do-aka-quick-silver-for-ubuntu/</link><pubDate>Thu, 18 Sep 2008 16:21:00 -0500</pubDate><guid>http://jmeridth.com/posts/gnome-do-aka-quick-silver-for-ubuntu/</guid><description>&lt;p&gt;I&amp;rsquo;ve been using a MacBook Pro for about three months now.  Absolutely amazing.  No issues.&lt;/p&gt;
 &lt;p&gt;I use QuickSilver with a ctrl+space keystroke to bring it up.  If anyone has use Windows+R or Mac&amp;rsquo;s spotlight, this is equivalent with a little bit more indexing power (IMO).&lt;/p&gt;
