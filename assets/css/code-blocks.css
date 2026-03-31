@@ -11,9 +11,11 @@
   border-radius: 0;
 }
 
-/* Clip top corners via header, allow horizontal scroll on code */
-.highlight > pre,
-.highlight > div > pre {
+/* Reset nested margins/padding and allow horizontal scroll on code.
+   Scope to Chroma blocks to avoid affecting GitHub Gist embeds. */
+.highlight .chroma pre {
+  margin: 0;
+  padding: 0.5rem 1rem;
   overflow-x: auto;
 }
 
@@ -25,6 +27,7 @@
   padding: 0.4rem 1rem;
   background-color: #1a1a2e;
   border-bottom: 1px solid #2a2a3e;
+  border-radius: 0.8rem 0.8rem 0 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.2rem;
   user-select: none;
