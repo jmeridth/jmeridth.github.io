@@ -15,6 +15,8 @@ pagerSize = 20
 
 [markup.highlight]
 noClasses = false
+lineNos = true
+lineNumbersInTable = true
 
 [params]
 author = "Jason Meridth"
@@ -42,12 +44,12 @@ hideColorSchemeToggle = true
 # Series see also post count
 maxSeeAlsoItems = 5
 # Custom CSS
-customCSS = ["css/css_dark_mode_gist_embed_code.css"]
+customCSS = ["css/css_dark_mode_gist_embed_code.css", "css/code-blocks.css"]
 # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
 customSCSS = []
 
 # Custom JS
-customJS = []
+customJS = ["js/copy-code.js"]
 
 # Custom remote JS files
 customRemoteJS = []
