@@ -11,8 +11,9 @@
   border-radius: 0;
 }
 
-/* Reset nested margins/padding and allow horizontal scroll on code */
-.highlight pre {
+/* Reset nested margins/padding and allow horizontal scroll on code.
+   Scope to Chroma blocks to avoid affecting GitHub Gist embeds. */
+.highlight .chroma pre {
   margin: 0;
   padding: 0.5rem 1rem;
   overflow-x: auto;
