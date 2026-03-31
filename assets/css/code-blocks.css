@@ -11,9 +11,10 @@
   border-radius: 0;
 }
 
-/* Clip top corners via header, allow horizontal scroll on code */
-.highlight > pre,
-.highlight > div > pre {
+/* Reset nested margins/padding and allow horizontal scroll on code */
+.highlight pre {
+  margin: 0;
+  padding: 0.5rem 1rem;
   overflow-x: auto;
 }
 
