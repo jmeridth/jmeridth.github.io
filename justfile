@@ -4,6 +4,7 @@ run:
 
 lint:
     markdownlint-cli2 "content/**/*.md" --fix
+    actionlint
 
 htmltest:
     htmltest -c .htmltest.yml
