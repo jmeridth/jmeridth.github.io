@@ -213,3 +213,4 @@ IgnoreDirs:
   - "lib"
 IgnoreAltMissing: true
 CacheExpires: "6h"
+TestFilesConcurrently: true
