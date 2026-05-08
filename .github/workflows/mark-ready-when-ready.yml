@@ -32,6 +32,6 @@ jobs:
           egress-policy: audit
 
       - name: Mark ready when ready
-        uses: kenyonj/mark-ready-when-ready@0ef6176fc2ddef5bab6cb4ab9517a37f0c153ba4 # v1.2.0
+        uses: kenyonj/mark-ready-when-ready@164bebf98862a24419165413a00bab80107b25ad # v1.3.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
