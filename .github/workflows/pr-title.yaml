@@ -4,14 +4,19 @@ name: "Lint PR Title"
 on:
   pull_request:
     types: [opened, reopened, edited, synchronize]
-permissions:
-  contents: read
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   main:
     permissions:
-      contents: read
-      pull-requests: read
-      statuses: write
+      contents: read # Required by reusable workflow
+      pull-requests: read # Read PR title
+      statuses: write # Report lint status
     uses: github-community-projects/ospo-reusable-workflows/.github/workflows/pr-title.yaml@6d7a83e6fc8275128984b0ed3defa4b8cdc40f85
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -5,11 +5,10 @@ on:
   pull_request:
     types: [opened, edited, labeled, unlabeled, synchronize]
 
-permissions:
-  contents: read
+permissions: {}
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -17,10 +16,10 @@ jobs:
     name: Mark as ready after successful checks
     runs-on: ubuntu-latest
     permissions:
-      checks: read
-      contents: write
-      pull-requests: write
-      statuses: read
+      checks: read # Read check suite results
+      contents: write # Update PR branch
+      pull-requests: write # Mark PR as ready for review
+      statuses: read # Read commit statuses
     if: |
       contains(github.event.pull_request.labels.*.name, 'Mark Ready When Ready') &&
       github.event.pull_request.draft == true &&
