@@ -1,0 +1,15 @@
+/* Quotes page: left-aligned, attribution outside the blockquote and aligned
+   under the quote text (override the theme's centered figure default) */
+.quote {
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+
+.quote blockquote {
+  margin: 0;
+}
+
+.quote figcaption {
+  padding-left: calc(2rem + 2px);
+  margin-top: 0.5rem;
+}

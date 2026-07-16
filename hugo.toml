@@ -44,7 +44,7 @@ hideColorSchemeToggle = true
 # Series see also post count
 maxSeeAlsoItems = 5
 # Custom CSS
-customCSS = ["css/css_dark_mode_gist_embed_code.css", "css/code-blocks.css"]
+customCSS = ["css/css_dark_mode_gist_embed_code.css", "css/code-blocks.css", "css/quotes.css"]
 # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
 customSCSS = []
 
@@ -184,13 +184,18 @@ weight = 5
 url = "talks/"
 
 [[languages.en.menu.main]]
-name = "Contact Me"
+name = "Quotes"
 weight = 6
+url = "quotes/"
+
+[[languages.en.menu.main]]
+name = "Contact Me"
+weight = 7
 url = "contact/"
 
 [[languages.en.menu.main]]
 name = "RSS"
-weight = 7
+weight = 8
 url = "/index.xml"
 [languages.en.menu.main.params]
 icon = "fa-solid fa-rss"
