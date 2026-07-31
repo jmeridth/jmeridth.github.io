@@ -44,3 +44,23 @@ Be the change that you wish to see in the world.
 {{< quote author="Mark Twain" >}}
 If you tell the truth, you don't have to remember anything.
 {{< /quote >}}
+
+{{< quote author="Oscar Wilde" >}}
+Always forgive your enemies; nothing annoys them so much.
+{{< /quote >}}
+
+{{< quote author="Narcotics Anonymous" >}}
+Insanity is doing the same thing, over and over again, but expecting different results.
+{{< /quote >}}
+
+{{< quote author="Andre Gide, Autumn Leaves" >}}
+It is better to be hated for what you are than to be loved for what you are not.
+{{< /quote >}}
+
+{{< quote author="Stephen Chbosky, The Perks of Being a Wallflower" >}}
+We accept the love we think we deserve.
+{{< /quote >}}
+
+{{< quote author="William Shakespeare, As You Like It" >}}
+The fool doth think he is wise, but the wise man knows himself to be a fool.
+{{< /quote >}}
