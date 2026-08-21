@@ -17,6 +17,6 @@ jobs:
       contents: read # Required by reusable workflow
       pull-requests: read # Read PR title
       statuses: write # Report lint status
-    uses: github-community-projects/ospo-reusable-workflows/.github/workflows/pr-title.yaml@c444c51302c29dd18b5b904565195b0475a25ad0
+    uses: github-community-projects/ospo-reusable-workflows/.github/workflows/pr-title.yaml@4bf2f3062f44f0f2461de7c937d7695cf51549a0
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
