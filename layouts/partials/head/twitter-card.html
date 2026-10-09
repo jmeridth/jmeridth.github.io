@@ -1,0 +1,7 @@
+{{- /* Hugo's internal twitter_cards template switches to summary_large_image whenever an image exists, which crops the square avatar. Force the small thumbnail card. */ -}}
+<meta name="twitter:card" content="summary">
+{{- with or .Params.images site.Params.images }}
+<meta name="twitter:image" content="{{ index . 0 | absURL }}">
+{{- end }}
+<meta name="twitter:title" content="{{ .Title | default site.Title }}">
+<meta name="twitter:description" content="{{ .Description | default (.Summary | default site.Params.description) | plainify | htmlUnescape | truncate 200 }}">

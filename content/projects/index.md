@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+description: Open source projects I maintain, archived work, and a few domains I set up as inside jokes.
 permalink: /projects/
 icon: fa-solid fa-code
 ---
