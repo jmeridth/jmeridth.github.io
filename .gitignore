@@ -10,3 +10,4 @@
 tmp/
 docs/
 .worktrees/
+/.lycheecache

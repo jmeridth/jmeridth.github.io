@@ -1,0 +1,13 @@
+# Shared lychee settings for CI (.github/workflows/links.yaml) and `just links`.
+# Excluded URL patterns live in .lycheeignore.
+
+# Bot-blocking hosts answer 403/405/999 (LinkedIn) to working pages; 429 is rate limiting.
+accept = ["100..=103", "200..=299", "403", "405", "429", "999"]
+
+timeout = 20
+max_retries = 2
+no_progress = true
+
+# Reuse results between runs so the weekly scan doesn't re-hit every host.
+cache = true
+max_cache_age = "2d"
