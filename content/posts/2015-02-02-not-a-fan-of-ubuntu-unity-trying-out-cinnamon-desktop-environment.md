@@ -22,4 +22,4 @@ After that you will see a much more responsive UI.  And for you Windows users, i
 
 ![desktop](/img/screenshot.png)
 
-NOTE: To those that actually read this, I did try [gnome session fallback](http://packages.ubuntu.com/trusty/gnome-session-fallback) and had many issues with it.  I am also aware that there is an official [Ubuntu Gnome](http://ubuntugnome.org/) variant of Ubuntu now also.  Hadn't tried it.
+NOTE: To those that actually read this, I did try [gnome session fallback](https://web.archive.org/web/20150225001629/http://packages.ubuntu.com/trusty/gnome-session-fallback) and had many issues with it.  I am also aware that there is an official [Ubuntu Gnome](http://ubuntugnome.org/) variant of Ubuntu now also.  Hadn't tried it.

@@ -10,7 +10,7 @@ tags:
 
 Ubuntu 7.10 released yesterday.  Go here to download and help Canonical with beta testing.  I am downloading it at home and will load one of my "mutt" PCs tonight and start using it.  Instructions on how to insert bugs into the tracking system is at the bottom of [this](http://www.ubuntu.com/testing/gutsybeta) page.
 
-There is also [instructions](https://help.ubuntu.com/community/GutsyUpgrades) on how to upgrade from 7.04 (Feisty Fawn).
+There is also instructions on how to upgrade from 7.04 (Feisty Fawn).
 
 There are known caveats (problems) (listed at the bottom of [this](http://www.ubuntu.com/testing/gutsybeta) page).
 

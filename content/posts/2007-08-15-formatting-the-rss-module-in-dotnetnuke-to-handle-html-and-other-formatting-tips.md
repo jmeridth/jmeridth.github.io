@@ -54,7 +54,7 @@ Hope this helps someone else, like it helped me.
 
 I'm still trying to get the items in the for-each loop to be able to grab it's channeltitle while in the loop.  channel_title does not work.  Anyone have any ideas?
 
-Reference: [Setting up RSS News Feeds XSL Stylesheet, Tutorial](http://www.dnncreative.com/Home/RSSNewsFeedXSLStylesheet/tabid/162/Default.aspx)
+Reference: [Setting up RSS News Feeds XSL Stylesheet, Tutorial](https://web.archive.org/web/20070615212405/http://www.dnncreative.com/Home/RSSNewsFeedXSLStylesheet/tabid/162/Default.aspx)
 Thanks to Eric Hexter of the [Austin .NET Users Group](http://www.adnug.org) for pointing me in the right direction.
 
 ## Comments
