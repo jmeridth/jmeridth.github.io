@@ -2,7 +2,7 @@
    under the quote text. Scoped under .content to override the theme's
    `.content figure { margin: 0 }` rule (higher specificity than a bare class). */
 .content figure.quote {
-  margin: 0 0 4rem 0;
+  margin: 0 0 2.5rem 0;
   text-align: left;
 }
 
@@ -12,6 +12,11 @@
 
 .content figure.quote blockquote {
   margin: 0;
+  border-left-color: #1565c0;
+}
+
+body.colorscheme-dark .content figure.quote blockquote {
+  border-left-color: #42a5f5;
 }
 
 .content figure.quote figcaption {
