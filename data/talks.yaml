@@ -1,0 +1,36 @@
+# Talks rendered on /talks/ by the talks shortcode, grouped by year.
+# The shortcode sorts by date, newest first. `event_url` and each link are optional.
+talks:
+  - title: "Untangling the Threads: Understanding Argo Workflows with Workflow Tracing"
+    date: 2024-11-12
+    event: ArgoCon 2024
+    slides: /talks/20241112_untangling_the_threads_argocon_2024.pdf
+    video: https://youtu.be/F0-D99NqBjs
+
+  - title: Open Source Security and Community
+    date: 2024-10-24
+    event: Dev San Antonio
+    event_url: https://www.devsa.community/
+    slides: /talks/20241024_open_source_security_and_community.pdf
+    video: https://www.youtube.com/live/PPiWTIBGRCM?feature=shared&t=3050
+
+  - title: ArgoProj - Pull Requests Welcome
+    date: 2023-11-06
+    event: ArgoCon 2023
+    slides: /talks/20231106_pull_requests_welcome_argocon_2023.pdf
+    video: https://www.youtube.com/watch?v=INQQyrBkqjw
+
+  - title: Rake
+    date: 2010-05-09
+    event: Alamo Coders
+    slides: /talks/20100509_rake.pdf
+
+  - title: Selenium
+    date: 2010-03-19
+    event: Alamo Coders
+    slides: /talks/20100319_selenium.pdf
+
+  - title: Shoulda
+    date: 2010-03-19
+    event: Alamo Coders
+    slides: /talks/20100319_shoulda_mocha.pdf

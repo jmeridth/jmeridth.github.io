@@ -1,0 +1,25 @@
+{{- /* Renders data/talks.yaml grouped by year, newest first. */ -}}
+{{- $talks := sort site.Data.talks.talks "date" "desc" -}}
+{{- $years := slice -}}
+{{- range $talks }}{{ $years = $years | append (time.AsTime .date).Year }}{{ end -}}
+{{- range $years | uniq }}
+{{- $year := . }}
+<h2 id="{{ $year }}">{{ $year }}</h2>
+<ul class="talks">
+  {{- range $talks }}
+  {{- $date := time.AsTime .date }}
+  {{- if eq $date.Year $year }}
+  <li class="talk">
+    <span class="talk-title">{{ .title }}</span>
+    <span class="talk-meta">
+      {{- with .event_url }}<a href="{{ . }}">{{ end }}{{ .event }}{{ with .event_url }}</a>{{ end }} &middot; <time datetime="{{ $date.Format "2006-01-02" }}">{{ $date.Format "Jan 2, 2006" }}</time>
+    </span>
+    <span class="talk-links">
+      {{- with .slides }}<a class="talk-link" href="{{ . }}">Slides (PDF)</a>{{ end }}
+      {{- with .video }}<a class="talk-link" href="{{ . }}">Video</a>{{ end -}}
+    </span>
+  </li>
+  {{- end }}
+  {{- end }}
+</ul>
+{{- end }}
