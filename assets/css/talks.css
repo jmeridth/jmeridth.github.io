@@ -1,0 +1,52 @@
+/* Talks page: one compact block per talk with pill links that match the
+   tag pills. Overrides the default list bullets and indentation. */
+.content ul.talks {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content li.talk {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.talk-title {
+  font-weight: 700;
+}
+
+.talk-meta {
+  font-size: 0.9em;
+  opacity: 0.75;
+}
+
+.talk-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.content a.talk-link {
+  padding: 0.3rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  background-color: #e0e0e0;
+  font-size: 0.85em;
+  transition: border-color 0.15s ease;
+}
+
+.content a.talk-link:hover,
+.content a.talk-link:focus-visible {
+  border-color: #1565c0;
+}
+
+body.colorscheme-dark .content a.talk-link {
+  background-color: #424242;
+}
+
+body.colorscheme-dark .content a.talk-link:hover,
+body.colorscheme-dark .content a.talk-link:focus-visible {
+  border-color: #42a5f5;
+}
