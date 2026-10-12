@@ -7,7 +7,7 @@ tags:
 - personal
 ---
 
-![](http://www.dkimages.com/discover/previews/812/10089644.JPG)
+![](https://web.archive.org/web/20080816071755im_/http://www.dkimages.com/discover/previews/812/10089644.JPG)
 
 Cloverfield sucked.
 
