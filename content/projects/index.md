@@ -9,17 +9,16 @@ icon: fa-solid fa-code
 ### Projects that I currently maintain
 
 - [argoproj/argo-helm](https://github.com/argoproj/argo-helm): ArgoProj Helm Charts
-- [privateerproj/privateer](https://github.com/privateerproj/privateer): Plugin-based framework to validate deployed resources
+- [privateerproj/pvtr](https://github.com/privateerproj/pvtr): Plugin-based framework to validate deployed resources
 - [privateerproj/privateer-sdk](https://github.com/privateerproj/privateer-sdk): Privateer plugin SDK
-- [offs/security-insights](https://github.com/ossf/security-insights): Machine-readable specification for the attestation of security-relevant data
-- [offs/pvtr-github-repo-scanner](https://github.com/ossf/pvtr-github-repo-scanner): Privateer plugin to scan GitHub repositories for security hygiene
+- [ossf/security-insights](https://github.com/ossf/security-insights): Machine-readable specification for the attestation of security-relevant data
+- [ossf/pvtr-github-repo-scanner](https://github.com/ossf/pvtr-github-repo-scanner): Privateer plugin to scan GitHub repositories for security hygiene
 - [revanite-io/osps-baseline-action](https://github.com/revanite-io/osps-baseline-action): GitHub Action for running OSPS security assessments
 - [revanite-io/security-insights-action](https://github.com/revanite-io/security-insights-action): GitHub Action for validating a repository's security-insights.yml file against the official OSSF Security Insights CUE schema
 - [github-community-projects/contributors](https://github.com/github-community-projects/contributors): GitHub Action that given an organization or repository, produces information about the contributors over the specified time period.
 - [github-community-projects/cleanowners](https://github.com/github-community-projects/cleanowners): GitHub Action to suggest removal of non-organization members from CODEOWNERS files
-- [github-community-projects/evergreen](https://github.com/github-community-projects/evergreen): GitHub Action to enable automated security updates and open a issue/PR in repos in an org that have dependency files but no dependabot.yaml file
-- [github-community-projects/issue-metrics](https://github.com/github-community-projects/issue-metrics): About
-Gather metrics on issues/prs/discussions such as time to first response, count of issues opened, closed, etc.
+- [github-community-projects/evergreen](https://github.com/github-community-projects/evergreen): GitHub Action to enable automated security updates and open an issue/PR in repos in an org that have dependency files but no dependabot.yaml file
+- [github-community-projects/issue-metrics](https://github.com/github-community-projects/issue-metrics): Gather metrics on issues/prs/discussions such as time to first response, count of issues opened, closed, etc.
 - [github-community-projects/measure-innersource](https://github.com/github-community-projects/measure-innersource): GitHub Action for measuring InnerSource collaboration in a repository
 - [github-community-projects/ospo-reusable-workflows](https://github.com/github-community-projects/ospo-reusable-workflows): Centralized Reusable GitHub Actions
 - [github-community-projects/stale-repos](https://github.com/github-community-projects/stale-repos): Find stale repositories in a GitHub organization.
