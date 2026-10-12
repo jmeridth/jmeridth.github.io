@@ -1,0 +1,19 @@
+{{- /* One grid of repo cards. Expects a dict with `repos` and optional `more`. */ -}}
+<div class="project-cards">
+  {{- range .repos }}
+  <a class="project-card" href="https://github.com/{{ .repo }}">
+    <span class="project-card-name">{{ .repo }}</span>
+    <span class="project-card-desc">{{ .description }}</span>
+    {{- with .tags }}
+    <span class="project-card-tags">
+      {{- range . }}<span class="project-card-tag">{{ . }}</span>{{ end -}}
+    </span>
+    {{- end }}
+  </a>
+  {{- end }}
+  {{- with .more }}
+  <a class="project-card project-card-more" href="{{ .url }}">
+    <span class="project-card-name">{{ .label }} &rarr;</span>
+  </a>
+  {{- end }}
+</div>

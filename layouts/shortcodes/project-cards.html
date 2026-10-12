@@ -1,0 +1,16 @@
+{{- /* Renders data/projects.yaml as grouped repo cards. */ -}}
+
+{{- range site.Data.projects.groups }}
+<h3 id="{{ .name | anchorize }}">{{ .name }}</h3>
+{{- with .blurb }}
+<p>{{ . }}</p>
+{{- end }}
+{{- with .repos }}{{ partial "project-card-grid.html" (dict "repos" .) }}{{ end }}
+{{- range .subgroups }}
+<h4 id="{{ .name | anchorize }}">
+  {{- .name -}}
+  {{- with .org_url }} <a class="project-org-link" href="{{ . }}">{{ strings.TrimPrefix "https://" . }}</a>{{ end -}}
+</h4>
+{{ partial "project-card-grid.html" . }}
+{{- end }}
+{{- end }}
