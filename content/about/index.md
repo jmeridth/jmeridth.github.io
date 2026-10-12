@@ -5,7 +5,11 @@ permalink: /about/
 icon: fa-solid fa-user
 ---
 
-My name is Jason Meridth. I'm a father. I'm a nerd. I love [writing software](https://github.com/jmeridth). I tinker with hardware. A blog post I wrote a while ago talking about [my history in software development/programming](/posts/why-i-started-programming/).
+I'm Jason Meridth, a Staff+ software engineer with over three decades of experience designing, building, and scaling software systems. My work spans cloud-native infrastructure, distributed systems, application development, and container orchestration, with a focus on reliability, security, and developer experience.
+
+I maintain [open source projects](/projects/) across the CNCF and OpenSSF, including Argo Helm, Gemara, and Privateer. I've worked as an individual contributor, technical lead, and manager, and I spend a lot of time on community building and mentoring.
+
+Outside of work: I'm a father. I'm a nerd. I tinker with hardware. Here's how [I got started programming](/posts/why-i-started-programming/).
 
 Things that I'm currently passionate about:
 
