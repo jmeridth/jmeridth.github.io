@@ -8,7 +8,7 @@ tags:
 layout: post
 ---
 
-1. [An Open Letter to Scott Guthrie](http://elegantcode.com/?p=539)
+1. [An Open Letter to Scott Guthrie](https://web.archive.org/web/20070328183519/http://elegantcode.com/?p=539)
 2. [Free ASP.NET 2.0, LINQ, AJAX, etc. Videos](http://www.asp.net/learn/videos/default.aspx?tabid=63)
 
 Some new people I've added to my Google Reader/ Blog Roll:

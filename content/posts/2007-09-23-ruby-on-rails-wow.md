@@ -17,7 +17,7 @@ The speaker's comment at 11:18, "Yeah, it goes fast, don't blink." was priceless
 
 ## Comments
 
-**[Joey Beninghove](#108 "2007-09-23 20:21:49"):** Hehe, yep. There are lots of screencasts and presentations out there you can watch. Here are few more to wet your appetite: 2006 RailsConf: <http://www.scribemedia.org/?s=railsconf> 2006 RailsConf Europe: <http://skillsmatter.com/menu/368> Google Videos: <http://video.google.com/videosearch?q=%22ruby+on+rails%22> Skills Matter / RoR eXchange: <http://skillsmatter.com/menu/479> RailsCasts: <http://railscasts.com/> PeepCode ($$) : <http://peepcode.com/> There are many more, but those should get you started... :)
+**[Joey Beninghove](#108 "2007-09-23 20:21:49"):** Hehe, yep. There are lots of screencasts and presentations out there you can watch. Here are few more to wet your appetite: 2006 RailsConf: <http://www.scribemedia.org/?s=railsconf> 2006 RailsConf Europe: <http://skillsmatter.com/menu/368> Google Videos: <http://video.google.com/videosearch?q=%22ruby+on+rails%22> Skills Matter / RoR eXchange: <http://skillsmatter.com/menu/479> RailsCasts: <https://web.archive.org/web/20070922133919/http://railscasts.com/> PeepCode ($$) : <http://peepcode.com/> There are many more, but those should get you started... :)
 
 **[Joe Ocampo](#109 "2007-09-23 20:56:50"):** I knew once you saw the light you wouldn't be able to resist! lol
 

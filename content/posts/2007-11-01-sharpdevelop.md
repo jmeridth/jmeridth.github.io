@@ -13,7 +13,7 @@ tags:
 
 **_UPDATE: Be aware that SharpDevelop doesn't seem to support the Web Application Project support.  It will handle ASP.NET Web Site Creation (Normal 2.0 web site project) but is doesn't have the ability to handle the legacy (1.1-) way of site project layout._**
 
-**_UPDATE #2: Keyboard shortcuts can be found [here](http://wiki.sharpdevelop.net/KeyboardShortcuts.ashx). The trunk can be found [here](http://wiki.sharpdevelop.net/AccessingTheRepository.ashx) for version 3.0. _**
+**_UPDATE #2: Keyboard shortcuts can be found [here](https://web.archive.org/web/20071011230758/http://wiki.sharpdevelop.net/KeyboardShortcuts.ashx). The trunk can be found [here](https://web.archive.org/web/20071011231342/http://wiki.sharpdevelop.net/AccessingTheRepository.ashx) for version 3.0. _**
 
 I know Oren has [commented](http://www.ayende.com/Blog/archive/2007/09/21/ReSharper-for-Boo.aspx) on [SharpDevelop](http://www.icsharpcode.net/OpenSource/SD/) before because of it's Boo support, but I decided to dive into it further today and I'm thoroughly amazed.  I'm not a [Boo](http://boo.codehaus.org/) developer (not yet) so I can't comment to that support yet.  I have used it in the past for [WiX](http://wix.sourceforge.net/) project UI development, because I hate dealing with the XML files for the UI templates for WiX.
 

@@ -6,5 +6,12 @@ lint:
     markdownlint-cli2 "content/**/*.md" --fix
     actionlint
 
-htmltest:
-    htmltest -c .htmltest.yml
+# Check internal links (fast, offline)
+links:
+    hugo --minify --quiet --baseURL / -d public
+    lychee --config lychee.toml --offline --root-dir "$(pwd)/public" 'public/**/*.html'
+
+# Check internal and external links (slow; what the weekly CI scan reports)
+links-external:
+    hugo --minify --quiet --baseURL / -d public
+    lychee --config lychee.toml --root-dir "$(pwd)/public" 'public/**/*.html'

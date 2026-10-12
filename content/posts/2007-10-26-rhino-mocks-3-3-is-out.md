@@ -10,6 +10,6 @@ tags:
 
 Check out Oren's (Ayende Rahien) post [here](http://ayende.com/Blog/archive/2007/10/26/Rhino-Mocks-3.3.aspx).
 
-Download it [here](http://ayende.com/20/section.aspx/download/211).
+Download it [here](https://web.archive.org/web/20100113041202/http://ayende.com/20/section.aspx/download/211).
 
 The most significant change that I like is the ability to setup expectations on void methods with Expect.Call.  Check out Oren's other post about this [here](http://ayende.com/Blog/archive/2007/10/17/Rhino-Mocks-Void-methods-using-Expect.Call.aspx).

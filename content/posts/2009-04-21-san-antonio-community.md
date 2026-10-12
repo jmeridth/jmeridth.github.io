@@ -42,7 +42,7 @@ and switching off between the books. Following meeting will be back to Lean, mee
 
 ### SARuby (organizer TBD)
 
-<http://www.saruby.org>
+<https://web.archive.org/web/20071114015838/http://www.saruby.org/>
 
 There is now a SARuby group in San Antonio.  This month's meeting is Tuesday, April 28 @ 6:30 pm.  It is at Anderson Marketing Group (Thanks to [Nate](http://pixelnate.com/) for providing the location).  Map: <http://tinyurl.com/ckl43y>
 

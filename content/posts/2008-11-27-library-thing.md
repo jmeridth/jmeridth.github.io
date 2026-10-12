@@ -24,7 +24,7 @@ _**Special Note: They are in Beta and are a growing website.  If the visitor lo
 
 ## Comments
 
-**[Matt D.](#308 "2008-11-27 21:45:42"):** Also a cool program -- [Delicious Library](http://www.delicious-monster.com/) I got a license via MacHeist, and while it's not exactly what you're saying, it lets you keep a catalog of all of your books, movies and games and uses AWS to give you up to tdate information (and download cover/case art) for each and displays them on a virtual shelf.
+**[Matt D.](#308 "2008-11-27 21:45:42"):** Also a cool program -- [Delicious Library](https://web.archive.org/web/20081203115717/http://www.delicious-monster.com/) I got a license via MacHeist, and while it's not exactly what you're saying, it lets you keep a catalog of all of your books, movies and games and uses AWS to give you up to tdate information (and download cover/case art) for each and displays them on a virtual shelf.
 
 **[Jason Meridth](#309 "2008-11-27 22:24:20"):** @Matt D. Awesome. Looks very cool. I prefer free tools that run on the web, like delicious.com for bookmarks, etc. Mainly because I'm cheap. :) I actually have a Mac Book Pro, so I'll definitely check it out.
 

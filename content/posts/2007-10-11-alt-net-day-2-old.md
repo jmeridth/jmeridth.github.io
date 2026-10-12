@@ -12,7 +12,7 @@ I apologize for the delay of this post.  It was a great weekend and I learned a
 
 #### BREAKFAST
 
-I had a chance to meet with some developers while eating breakfast. I had an opportunity to speak with [Dru Sellers](http://www.drusellers.com), added [siteroot](http://www.castleproject.org/MonoRail/gettingstarted/firstcontroller.html) (it's equivalent to ~/ in ASP.NET, scroll down to "Creating the layout") to MonoRail, and [Chris Patterson](http://blog.phatboyg.com/).  They were both articulate, intelligent, and a blast to chat with.
+I had a chance to meet with some developers while eating breakfast. I had an opportunity to speak with [Dru Sellers](https://drusellers.com/), added [siteroot](http://www.castleproject.org/MonoRail/gettingstarted/firstcontroller.html) (it's equivalent to ~/ in ASP.NET, scroll down to "Creating the layout") to MonoRail, and [Chris Patterson](http://blog.phatboyg.com/).  They were both articulate, intelligent, and a blast to chat with.
 
 Here they are: (Chris on left, Dru on right)
 

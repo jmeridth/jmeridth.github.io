@@ -60,7 +60,7 @@ Add a little text to notify the user what is going on (always a good idea):
 puts "Run Hudson build for job_name_here application"
 ```
 
-And finally all the url with wget and feeding any response to [the black hole that is /dev/null](http://www.xaprb.com/blog/2006/06/06/what-does-devnull-21-mean/)
+And finally all the url with wget and feeding any response to [the black hole that is /dev/null](https://web.archive.org/web/20090318063039/http://www.xaprb.com/blog/2006/06/06/what-does-devnull-21-mean/)
 
 :
 
