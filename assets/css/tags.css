@@ -1,0 +1,26 @@
+/* Tags page: blue tag names with a blue border on hover, matching the
+   project cards. Overrides hugo-coder's gray-on-gray .taxonomy-element. */
+.taxonomy .taxonomy-element {
+  border: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.taxonomy .taxonomy-element a,
+.taxonomy .taxonomy-element a:active {
+  color: #1565c0;
+}
+
+.taxonomy .taxonomy-element:hover,
+.taxonomy .taxonomy-element:has(a:focus-visible) {
+  border-color: #1565c0;
+}
+
+body.colorscheme-dark .taxonomy .taxonomy-element a,
+body.colorscheme-dark .taxonomy .taxonomy-element a:active {
+  color: #42a5f5;
+}
+
+body.colorscheme-dark .taxonomy .taxonomy-element:hover,
+body.colorscheme-dark .taxonomy .taxonomy-element:has(a:focus-visible) {
+  border-color: #42a5f5;
+}
