@@ -44,7 +44,7 @@ hideColorSchemeToggle = true
 # Series see also post count
 maxSeeAlsoItems = 5
 # Custom CSS
-customCSS = ["css/css_dark_mode_gist_embed_code.css", "css/code-blocks.css", "css/quotes.css"]
+customCSS = ["css/css_dark_mode_gist_embed_code.css", "css/code-blocks.css", "css/quotes.css", "css/project-cards.css"]
 # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
 customSCSS = []
 

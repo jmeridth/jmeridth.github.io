@@ -1,0 +1,75 @@
+# Projects rendered on /projects/ by the project-cards shortcode.
+# OpenSSF Security & Compliance is listed first; the remaining groups
+# and all repos within a group are listed alphabetically. A group holds either
+# `repos` directly or `subgroups`, each with its own `repos`.
+# `more` adds a trailing link card for an org with repos not listed here.
+groups:
+  - name: OpenSSF Security & Compliance
+    blurb: Gemara defines the model, Privateer evaluates it, and Security Insights describes the project.
+    subgroups:
+      - name: Gemara
+        org_url: https://github.com/gemaraproj
+        repos:
+          - repo: gemaraproj/gemara
+            description: Minimizing rework for governance activities.
+            tags: [Go]
+          - repo: gemaraproj/go-gemara
+            description: Go SDK for parsing Gemara documents.
+            tags: [Go]
+        more:
+          label: The rest of the gemaraproj org
+          url: https://github.com/gemaraproj
+      - name: Privateer
+        org_url: https://github.com/privateerproj
+        repos:
+          - repo: ossf/pvtr-github-repo-scanner
+            description: Privateer plugin for scanning the security hygiene of a GitHub repository.
+            tags: [Go]
+          - repo: privateerproj/privateer-sdk
+            description: SDK that streamlines the creation of Privateer plugins.
+            tags: [Go]
+          - repo: privateerproj/pvtr
+            description: Plugin-based framework for security and compliance evaluations.
+            tags: [Go]
+      - name: Security Insights & OSPS Baseline
+        repos:
+          - repo: ossf/security-insights
+            description: Machine-readable specification for the attestation of security-relevant data.
+            tags: [CUE]
+          - repo: revanite-io/osps-baseline-action
+            description: GitHub Action for running OSPS Baseline security assessments.
+            tags: [Shell]
+          - repo: revanite-io/security-insights-action
+            description: GitHub Action that validates a repository's security-insights.yml against the official OpenSSF Security Insights CUE schema.
+            tags: [CUE]
+
+  - name: Argo
+    repos:
+      - repo: argoproj/argo-helm
+        description: ArgoProj Helm Charts.
+        tags: [Helm]
+
+  - name: GitHub OSPO Tooling
+    blurb: GitHub Actions for open source program offices (OSPOs) to measure and maintain their orgs.
+    repos:
+      - repo: github-community-projects/cleanowners
+        description: GitHub Action to suggest removal of non-organization members from CODEOWNERS files.
+        tags: [Python]
+      - repo: github-community-projects/contributors
+        description: GitHub Action that, given an organization or repository, produces information about the contributors over the specified time period.
+        tags: [Python]
+      - repo: github-community-projects/evergreen
+        description: GitHub Action to enable automated security updates and open an issue/PR in repos in an org that have dependency files but no dependabot.yaml file.
+        tags: [Python]
+      - repo: github-community-projects/issue-metrics
+        description: Gather metrics on issues/PRs/discussions such as time to first response, count of issues opened, closed, etc.
+        tags: [Python]
+      - repo: github-community-projects/measure-innersource
+        description: Measure InnerSource collaboration in a repository.
+        tags: [Python]
+      - repo: github-community-projects/ospo-reusable-workflows
+        description: Centralized reusable GitHub Actions workflows.
+        tags: [Shell]
+      - repo: github-community-projects/stale-repos
+        description: Find stale repositories in a GitHub organization.
+        tags: [Python]
