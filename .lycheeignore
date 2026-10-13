@@ -209,3 +209,6 @@ www\.webhost4life\.com
 www\.yugma\.com
 # Wayback snapshots are immutable; checking them only adds Internet Archive flakiness.
 web\.archive\.org
+# Live hosts that block GitHub-hosted runner IPs (432 / connection reset from CI, 200 locally).
+houston\.altnetconf\.com
+repo\.or\.cz
