@@ -14,7 +14,7 @@ This post is on TortoiseGit.  For those that may be unaware, there is a very po
 
 ![image](//lostechies.com/jasonmeridth/files/2011/03/image_thumb_63A7C954.png)
 
-**Note:**I personally think that it’s funny that Google Code seems to be the place this code is hosted.  Why?  Google Code only supports Subversion and Mercurial, currently.  I would assume a tool that is used for Git repository management would be stored in a Git repository.  Maybe it’s just me.  That’s why when I go to the “Source” tab on the interface above, I see that the TortoiseGit code is actually hosted at <http://repo.or.cz/w/TortoiseGit.git>.  When I click the link you will see a gitweb interface to the repository.  <http://repo.or.cz> is a public Git hosting website, kind of like http://[github.com](http://github.com).
+**Note:**I personally think that it’s funny that Google Code seems to be the place this code is hosted.  Why?  Google Code only supports Subversion and Mercurial, currently.  I would assume a tool that is used for Git repository management would be stored in a Git repository.  Maybe it’s just me.  That’s why when I go to the “Source” tab on the interface above, I see that the TortoiseGit code is actually hosted at <https://repo.or.cz/w/TortoiseGit.git>.  When I click the link you will see a gitweb interface to the repository.  <http://repo.or.cz> is a public Git hosting website, kind of like http://[github.com](http://github.com).
 
 I click on the “Downloads” tab and choose the the latest MSI file for your platform (32-bit or 64-bit).  If you don’t know, just choose the 32-bit.
 
