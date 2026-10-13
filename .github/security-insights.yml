@@ -1,11 +1,31 @@
 header:
   schema-version: 2.2.0
-  last-updated: "2026-02-21"
-  last-reviewed: "2026-02-21"
+  last-updated: "2026-10-12"
+  last-reviewed: "2026-10-12"
   url: https://github.com/jmeridth/jmeridth.github.io/blob/main/.github/security-insights.yml
   project-si-source: https://raw.githubusercontent.com/jmeridth/jmeridth.github.io/refs/heads/main/.github/security-insights.yml
   comment: |
     This file contains security insights for the jmeridth.github.io personal site.
+
+project:
+  name: jmeridth.github.io
+  homepage: https://jmeridth.com
+  administrators:
+    - name: Jason Meridth
+      affiliation: Chainguard
+      social: https://github.com/jmeridth
+      primary: true
+  repositories:
+    - name: jmeridth.github.io
+      url: https://github.com/jmeridth/jmeridth.github.io
+      comment: |
+        Hugo source for jmeridth.com. This is the project's only repository; it has no subprojects.
+  documentation:
+    detailed-guide: https://github.com/jmeridth/jmeridth.github.io/blob/main/README.md
+  vulnerability-reporting:
+    reports-accepted: true
+    bug-bounty-available: false
+    policy: https://github.com/jmeridth/.github/blob/main/.github/SECURITY.md
 
 repository:
   url: https://github.com/jmeridth/jmeridth.github.io
