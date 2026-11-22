@@ -1,6 +1,16 @@
 # Talks rendered on /talks/ by the talks shortcode, grouped by year.
 # The shortcode sorts by date, newest first. `event_url` and each link are optional.
 talks:
+  - title: "Demystifying an Argo Workflows Pod: And How We Stopped Needing an Init Container"
+    date: 2026-11-16
+    event: ArgoCon 2026
+    video: https://youtu.be/qlwYCCO51fM
+
+  - title: ArgoCon Project Update
+    date: 2026-11-16
+    event: ArgoCon 2026
+    video: https://youtu.be/xtAfXzKPqIk
+
   - title: "Untangling the Threads: Understanding Argo Workflows with Workflow Tracing"
     date: 2024-11-12
     event: ArgoCon 2024
