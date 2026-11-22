@@ -1,0 +1,28 @@
+---
+name: Setup Dart Sass
+description: >-
+  Install a pinned, checksum-verified Dart Sass release on a Linux x64 runner.
+  Hugo v0.170+ needs Dart Sass on PATH to compile the theme's SCSS.
+
+runs:
+  using: composite
+  steps:
+    - name: Install Dart Sass
+      shell: bash
+      env:
+        # Bump both together. SHA-256 is GitHub's digest for the release asset.
+        DART_SASS_VERSION: 1.108.2
+        DART_SASS_SHA256: 32d2eb5b83cbc180fce9657ff3c57401a9006c59eccfe0bfdde0aa755a66d42f
+      # Only a fixed RUNNER_TEMP path reaches GITHUB_PATH; no untrusted input.
+      run: | # zizmor: ignore[github-env]
+        set -euo pipefail
+        tarball="dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+        curl -fsSL -o "${RUNNER_TEMP}/${tarball}" \
+          "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/${tarball}"
+        echo "${DART_SASS_SHA256}  ${RUNNER_TEMP}/${tarball}" | sha256sum --check --strict
+        tar -xzf "${RUNNER_TEMP}/${tarball}" -C "${RUNNER_TEMP}"
+        echo "${RUNNER_TEMP}/dart-sass" >> "${GITHUB_PATH}"
+
+    - name: Show Dart Sass version
+      shell: bash
+      run: sass --version
